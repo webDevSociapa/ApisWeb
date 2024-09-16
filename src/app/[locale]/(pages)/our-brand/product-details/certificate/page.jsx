@@ -1,0 +1,125 @@
+import ImageBanner from "@/components/common/Layout/Banner";
+import Image from "next/image";
+import Banner from "@/assets/images/OurBrands/HoneyBack.png";
+import React from "react";
+import Ring1 from "@/assets/images/OurBrands/Ring-4.png";
+import GurrentyBadge from "@/assets/images/OurBrands/GurrentyBadge.png";
+
+const page = () => {
+  return (
+    <>
+      <div className="w-full relative h-full">
+        <ImageBanner banner={Banner} className="h-full w-full" />
+        <Image
+          src={GurrentyBadge}
+          className="hidden z-0 -bottom-[100px] right-0 lg:inline absolute h-[375px] w-[375px]"
+        />
+      </div>
+      <p className="font-bold text-[#84663C] md:text-[40px] text-[20px] w-[75%] capitalize text-center">
+        Bringing Purity and Responsibility with every jar we deliver
+      </p>
+      <div className="w-full flex flex-col items-center justify-center">
+        <div className="w-[90%] md:w-[50%]">
+          <p className="text-center text-base md:text-xl py-6 font-jost">
+            Please enter your batch code written on side of Apis Honey pack to
+            get your purity certificate.
+          </p>
+          <div className="px-10 flex flex-col gap-3 md:gap-6">
+            <div>
+              <p className="font-jost text-xs md:text-base pb-2">
+                Batch Number
+              </p>
+              <input
+                type="text"
+                className="border border-black outline-none w-full font-jost rounded-md p-1 md:p-2"
+              />
+            </div>
+            <div>
+              <p className="font-jost text-xs md:text-base pb-2">Name</p>
+              <input
+                type="text"
+                className="border border-black outline-none w-full font-jost rounded-md p-1 md:p-2"
+              />
+            </div>
+            <div>
+              <p className="font-jost text-xs md:text-base pb-2">
+                Phone Number:
+              </p>
+              <input
+                type="number"
+                className="border border-black outline-none w-full font-jost rounded-md p-1 md:p-2"
+              />
+            </div>
+            <button className="border mt-3 self-center  border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 w-max text-xs md:text-xl py-1 md:py-3 font-bold text-white">
+              Check Report
+            </button>
+          </div>
+        </div>
+        <div className="font-jost flex flex-col lg:flex-row gap-8 mt-8 md:mt-16 items-center justify-center">
+          <div className="w-[90%] md:w-[510px] shadow-lg p-3 md:p-6 border border-[#9F7B49] bg-[#FFFBF6] h-[206px]">
+            <div className="w-full flex items-center justify-center mb-4">
+              {/* <Image
+                src={Certi2}
+                alt="header-logo"
+                className="h-[18px] w-[50px] md:w-auto md:h-[82px] embla__slide__number"
+              /> */}
+            </div>
+            <p className="text-center text-sm md:text-xl">
+              Each batch of apis honey is 100% pure, free from adulterates or
+              Added sugar & passes all quality test parameters.
+            </p>
+          </div>
+          <div className="w-[90%] md:w-[510px] shadow-lg p-3 md:p-6 border border-[#9F7B49] bg-[#FFFBF6]">
+            <div className="w-full flex items-center justify-center mb-4">
+              {/* <Image
+                src={Certi1}
+                alt="header-logo"
+                className="h-[18px] w-[50px] md:w-auto md:h-[82px] embla__slide__number"
+              /> */}
+            </div>
+            <p className="text-center text-sm md:text-lg">
+              We do not collect any personal information unless you provide it
+              voluntarily. In case you opt to provide the details, it will only
+              be used to share promotional offers, discounts, product launch
+              information, and updates on the contact number timely.
+            </p>
+          </div>
+        </div>
+        <div
+          className="relative bg-[#FFFBF6] overflow-hidden flex flex-col items-center justify-center"
+          style={{ borderRadius: "0 0 0 150px" }}
+        >
+          <div className="w-[80%] md:w-[60%] mt-8  md:mt-16">
+            <p className="font-bold text-[#84663C] md:text-[30px] text-[15px] capitalize text-center">
+              9/10 Home Test Club Members recommend Apis Honey
+            </p>
+            <p className="text-center font-jost underline text-sm  md:text-xl text-[#454545] my-8">
+              According to the survey conducted in 9 cities (NCR, Mumbai,
+              Bangalore, Chennai, Kolkata, Hyderabad, Pune, Ahmedabad & Lucknow)
+              with 725 regular honey consumer members of the Home Tester Club
+              Between Apr'19- June'19. This may not be true representation of
+              the universe. Click for more detail
+            </p>
+            <iframe
+              className="rounded  w-full h-[400px]"
+              src="https://www.youtube.com/embed/JUVgptUaFU4?si=ILKh0XegYCLhwId-"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <div>
+              <Image
+                src={Ring1}
+                className="hidden z-0 lg:inline absolute -left-[160px] -bottom-[160px] h-[331px] w-[331px] rotate-animation"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default page;
