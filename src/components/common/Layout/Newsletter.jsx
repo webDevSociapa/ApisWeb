@@ -3,8 +3,35 @@
 import Image from 'next/image'
 import HoneyMug from '@/assets/images/heart-of-bavaria-section/honey-mug.png'
 import HoneyNest from '@/assets/images/heart-of-bavaria-section/honey-nest.png'
+import { headers } from 'next/headers'
 
 const Newsletter = () => {
+
+  const [formData,setFormData] = useState(emailAddress)
+  const[popupMessage,setPopupMessage] = useState("")
+
+
+  const handleChange =(e) =>{
+    setFormData(e.target.value)
+  }
+  const handleSubmit = async(e) =>{
+    e.preventDefault();
+    try{
+      const response =  await axios.post('/api/send-subscribe', formData,{
+        headers:{'Content-type': 'application/json'}
+      })
+      if(response.data.success){
+        setPopupMessage(" Thanks you! SuccessFully Subscribe our Email")
+        setFormData('')
+      }
+      else{
+        setPopupMessage("Failed to send Quary")
+      }
+    }
+    catch(error){
+      setPopupMessage("An error occurred")
+    }
+  }
   return (
     <div className="w-full py-10">
       <div className="relative h-[300px] md:h-[448px] bg-[#9F7B49] px-6 py-4">
@@ -39,16 +66,26 @@ const Newsletter = () => {
           <p className="text-center text-[12px] font-jost md:text-[20px] font-medium text-[#666666]">
             straight to your inbox.
           </p>
-          <div className="flex items-center pt-4 md:pt-10">
+         <form onClick={handleSubmit}>
+         <div className="flex items-center pt-4 md:pt-10">
             <input
               type="text"
               placeholder="Enter Your Email Address"
               className="h-[30px] font-jost md:h-[50px] h-full w-[170px] md:w-[350px] border border-[#9F7B49] px-2 py-1  md:px-4 md:py-2 text-xs md:text-base placeholder-[#666666] outline-none"
+              value={formData}
+              onChange={handleChange}
+              required
             />
             <button className="bg-[#9F7B49] px-2 py-[7px] md:px-3 md:py-[11px] md:text-xl text-xs  font-bold text-white">
               Suscribe
             </button>
           </div>
+         </form>
+         {popupMessage && (
+          <div className="mt-4 p-4 bg-green-100 text-green-700 rounded shadow">
+          {popupMessage}
+        </div>
+         )}
         </div>
       </div>
     </div>
