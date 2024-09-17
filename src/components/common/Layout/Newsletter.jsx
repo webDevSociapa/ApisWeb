@@ -1,6 +1,5 @@
 'use client'
-
-import {useState} from 'react';
+import React, { useState,useEffect } from 'react';
 import axios from 'axios';
 import Image from 'next/image'
 import HoneyMug from '@/assets/images/heart-of-bavaria-section/honey-mug.png'
@@ -34,24 +33,25 @@ const Newsletter = () => {
   };
 
   // Timer for message disappearance
-  // useEffect(() => {
-  //   if (messageInfo) {
-  //     const timer = setTimeout(() => {
-  //       setPopupMessage('');
-  //       setMessageInfo(false); // Reset the messageInfo state
-  //     }, 3000); // 3 seconds delay
+  useEffect(() => {
+    if (messageInfo) {
+      const timer = setTimeout(() => {
+        setPopupMessage('');
+        setMessageInfo(false); // Reset the messageInfo state
+      }, 3000); // 3 seconds delay
 
-  //     return () => clearTimeout(timer); // Clean up timer on component unmount or messageInfo change
-  //   }
-  // }, [messageInfo]); // Dependency on messageInfo
+      return () => clearTimeout(timer); // Clean up timer on component unmount or messageInfo change
+    }
+  }, [messageInfo]); // Dependency on messageInfo
 
-  // // Close the toast manually
-  // const closeToast = () => {
-  //   setPopupMessage('');
-  //   setMessageInfo(false);
-  // };
+  // Close the toast manually
+  const closeToast = () => {
+    setPopupMessage('');
+    setMessageInfo(false);
+  };
 
   return (
+  <>
     <div className="w-full py-10">
       <div className="relative h-[300px] md:h-[448px] bg-[#9F7B49] px-6 py-4">
         <Image
@@ -118,6 +118,7 @@ const Newsletter = () => {
         </div>
       </div>
     </div>
+  </>
   );
 }
 
