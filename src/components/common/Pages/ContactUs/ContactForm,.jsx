@@ -19,9 +19,10 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/send-mail.php', formData, {
+      const response = await axios.post('/api/send-mail', formData, {
         headers: { 'Content-Type': 'application/json' },
       });
+      
       if (response.data.success) {
         setPopupMessage('Query successfully sent!');
         setFormData({
