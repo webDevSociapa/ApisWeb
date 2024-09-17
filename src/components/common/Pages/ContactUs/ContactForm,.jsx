@@ -1,4 +1,5 @@
-import React, { useState,useEffect } from 'react';
+'use client'
+import React,{useState,useEffect } from 'react';
 import axios from 'axios';
 
 const ContactForm = () => {
@@ -55,8 +56,8 @@ const ContactForm = () => {
   const closeToast = () => {
     setPopupMessage('');
     setMessageInfo(false);
-  };
-
+  }
+  
   return (
   <>
     <div className="w-full bg-color py-12 px-4">
