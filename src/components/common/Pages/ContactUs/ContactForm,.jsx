@@ -1,5 +1,5 @@
 'use client
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import axios from 'axios';
 
 const ContactForm = () => {
@@ -42,21 +42,21 @@ const ContactForm = () => {
     }
   };
   
-  useEffect(() => {
-    if (messageInfo) {
-      const timer = setTimeout(() => {
-        setPopupMessage('');
-        setMessageInfo(false); // Reset the messageInfo state
-      }, 3000); // 3 seconds delay
+  // useEffect(() => {
+  //   if (messageInfo) {
+  //     const timer = setTimeout(() => {
+  //       setPopupMessage('');
+  //       setMessageInfo(false); // Reset the messageInfo state
+  //     }, 3000); // 3 seconds delay
 
-      return () => clearTimeout(timer); // Clean up timer on component unmount or messageInfo change
-    }
-  }, [messageInfo]); // Dependency on messageInfo
+  //     return () => clearTimeout(timer); // Clean up timer on component unmount or messageInfo change
+  //   }
+  // }, [messageInfo]); // Dependency on messageInfo
 
-  const closeToast = () => {
-    setPopupMessage('');
-    setMessageInfo(false);
-  };
+  // const closeToast = () => {
+  //   setPopupMessage('');
+  //   setMessageInfo(false);
+  // };
 
   return (
     <div className="w-full bg-color py-12 px-4">
