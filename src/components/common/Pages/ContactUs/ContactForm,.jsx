@@ -22,7 +22,6 @@ const ContactForm = () => {
       const response = await axios.post('/api/send-mail', formData, {
         headers: { 'Content-Type': 'application/json' },
       });
-      
       if (response.data.success) {
         setPopupMessage('Query successfully sent!');
         setFormData({
