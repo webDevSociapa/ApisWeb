@@ -116,6 +116,7 @@ const MHMOBILE = () => {
                 setSheetContent(<MobileSettings />);
                 setSheetClassName("!max-w-[400px]");
               }}
+                
             > */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -166,7 +167,7 @@ const MHMOBILE = () => {
                 onClick={() => setShowNav(false)}
                 className="flex text-[#3D3D3D] flex-col hover:font-bold"
               >
-                <span className="truncate">{path.name}</span>
+                <span className="truncate" onClick={tabUrlWithLocale}>{path.name}</span>
                 <div className={cn("mt-1 w-8 rounded-full")} />
               </a>
             );
