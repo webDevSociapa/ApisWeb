@@ -69,7 +69,7 @@ export default function Careers() {
                 <div className="p-3 pb-0 text-[#85673D] font-bold text-sm md:text-2xl pt-5">
                   <p>{itm.title}</p>
                 </div>
-              )}{" "}
+              )}
             </div>
           );
         })}

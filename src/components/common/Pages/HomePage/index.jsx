@@ -446,8 +446,8 @@ export default function HomePage() {
       </div>
 
       {/* Our Availability */}
-      <div className="availbility-bg">
-        <div className="blur-bg flex gap-2 md:gap-6 items-center justify-center flex-col py-2">
+      <div className="availbility-bg border-4">
+        <div className="blur-bg flex gap-2 md:gap-6 items-center justify-center flex-col py-2 m-0 p-0">
           <p className="uppercase font-medium text-[#202020] text-sm md:text-xl">
             Always here, always ready
           </p>
@@ -530,7 +530,7 @@ export default function HomePage() {
               <p className="font-medium text-center text-[#585858] text-sm mt-2  md:text-xl uppercase">
                 Our Tele-vision Commercial's
               </p>
-              <p className="text-bold text-center text-[#D7AD5F] text-[20px] md:text-[40px]">
+              <p className="text-bold text-center text-[#D7AD5F] text-[20px] md:text-[38px]">
                 TVC
               </p>
               <div>
@@ -543,7 +543,7 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row items-center w-full tvc-bg sm:justify-center gap-10 pt-5 md:mt-10 w-full">
+            <div className="flex flex-col sm:flex-row items-center w-full tvc-bg sm:justify-center gap-10 pt-5 md:mt-10 w-full xl:-mt-40 2xl:mt-10">
               <iframe
                 className="rounded md:h-[360px] h-auto md:w-[580px] max-w-[500px] min-h-[200px] w-auto"
                 src="https://www.youtube.com/embed/JUVgptUaFU4?si=ILKh0XegYCLhwId-"

@@ -21,33 +21,33 @@ import { useState } from "react";
 
 const SUSTAINABILITY_DATA = [
   {
-    img: Award,
+    video: 'https://www.youtube.com/embed/WrVpkXNKN0s?si=3KELcA1Kg-kkOWb8',
     title:
-      "Empowering communities through educational programs and health initiatives.",
+      "Celebrating Raksha Bandhan with the children of Mala Smriti Home.",
   },
   {
-    img: TrainingSession,
+    video: 'https://www.youtube.com/embed/xU4DUQ4d8GE?si=YZHloG_HDLK624eG',
     title:
-      "Promoting environmental sustainability with green practices and eco-friendly solutions.",
+      "ApisHoney, a natural sweetener, shudh aur sacha, sabke ke liye aacha...",
   },
   {
-    img: Engagements,
+    video: 'https://www.youtube.com/embed/o1A2uGBuVRs?si=gk_zkJN1CtIWlTPk',
     title:
-      "Supporting local causes with charitable contributions and dedicated volunteer efforts.",
+      "Sweet deal alert! Apis Organic Honey",
   },
   {
-    img: Celebrations,
-    title: "Celebrations Promoting environmental sustainability",
+    video: 'https://www.youtube.com/embed/GApcDNHtgnE?si=iq73ny88KY04wK2X',
+    title: "Celebrating Father’s Day",
   },
   {
-    img: TrainingSession,
+    video: 'https://www.youtube.com/embed/U6pkoQRrcNk?si=z7ZDd9KQWnBuouRO',
     title:
-      "Promoting environmental sustainability with green practices and eco-friendly solutions.",
+      "We celebrated mothers with Grihshobha",
   },
   {
-    img: Engagements,
+    video: 'https://www.youtube.com/embed/ulZAQ15RaZw?si=F72f00eu-uQCr2jJ',
     title:
-      "Supporting local causes with charitable contributions and dedicated volunteer efforts.",
+      "Mothers Day",
   },
 ];
 
@@ -70,8 +70,7 @@ export default function Sustainability() {
       setCurrentIndex(
         (prevIndex) =>
           (prevIndex - 1 + SUSTAINABILITY_DATA.length) %
-          SUSTAINABILITY_DATA.length
-      );
+          SUSTAINABILITY_DATA.length);
     }
   };
 
@@ -107,13 +106,20 @@ export default function Sustainability() {
                 <div className="embla__slide pointer-events-none" key={index}>
                   <div className="embla__slide__number pointer-events-none">
                     <div className="bg-[#EECB9A] w-[280px] sm:w-[320px] xl:w-auto rounded-xl flex flex-col h-[320px] md:h-[400px] p-2.5 px-1.5 justify-between border border-[#85673D]">
-                      <Image
-                        src={itm?.img}
-                        width={240}
-                        height={240}
-                        alt="header-logo"
-                        className="h-[240px] md:h-[300px] rounded-2xl w-full bg-opacity-40"
-                      />
+                    {itm.video ? (
+                  <iframe
+                    width="360"
+                    height="240"
+                    className="h-[240px] md:h-[300px] rounded-2xl w-full bg-opacity-40"
+                    src={itm.video}
+                    title={itm.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                    allowFullScreen
+                  ></iframe>
+                ) : (
+                  <p className="text-red-500">Video not available</p>
+                )}
                       <p className="text-xs md:text-base font-normal px-2.5 pb-2">
                         "{itm.title}"
                       </p>
