@@ -2,7 +2,6 @@
 
 import React from "react";
 import { useState } from "react";
-// import JourneyBanner from '@/assets/images/AboutUs/journeyBanner.png'
 import Image from "next/image";
 import JR2015 from '@/assets/images/AboutUs/1.jpg'
 import JR2016 from '@/assets/images/AboutUs/2.jpg'
