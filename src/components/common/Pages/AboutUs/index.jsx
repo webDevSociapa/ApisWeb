@@ -15,6 +15,7 @@ import AmitAnand from "@/assets/images/AboutUs/AmitAnand.png";
 import ImageBanner from "../../Layout/Banner";
 import { useState } from "react";
 import Link from "next/link";
+import Journey from "./Journey";
 
 export default function OurBrand() {
   const [activeTab, setActiveTab] = useState("vision");
@@ -79,7 +80,7 @@ export default function OurBrand() {
         </p>
       </section>
       <div className="relative mt-14 flex flex-col items-center justify-center w-full">
-        <ImageBanner banner={MissionBanner} />
+        <ImageBanner banner={MissionBanner} style={{height:"1300px"}} />
         <div className="w-full flex justify-end items-center absolute end-0 top-0">
           <div className="bg-opacity-80 p-2 md:p-8 rounded-md w-full flex flex-col">
             <div className="flex flex-row justify-between items-center gap-2 md:gap-10">
@@ -241,6 +242,17 @@ export default function OurBrand() {
           satisfaction. Join us as we continue to grow and inspire.
         </p>
       </div>
+      {/* <Link href={"/our-brand/product-details/recipies"}>
+          <button className="border border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white">
+            View All
+          </button>
+        </Link> */}
+        <Link href={"/about-us/journey"}>
+        <button type="submit" class="bg-[#9F7B49] px-2 py-[7px] md:px-3 md:py-[11px] md:text-xl text-xs font-bold text-white" onClick style={{fontFamily:"Literata"}}>Check Our Milestone</button>
+        </Link>
+
+      {/* <button type="submit" class="bg-[#9F7B49] px-2 py-[7px] md:px-3 md:py-[11px] md:text-xl text-xs font-bold text-white" onClick style={{fontFamily:"Literata"}}>Check Our Milestone</button> */}
+      {/* <div>Check Our Milestone</div> */}
     </>
   );
 }

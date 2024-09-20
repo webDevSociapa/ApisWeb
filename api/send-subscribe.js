@@ -17,7 +17,7 @@ export default async function (req, res) {
 
   const mailOptions = {
     from: email,
-    to: 'khanrobin7071@gmail.com', // Replace with the email address where you want to receive the subscription notifications
+    to: 'khanrobin7071@gmail.com',
     subject: 'New Newsletter Subscription',
     text: `New subscription from: ${email}`,
   };

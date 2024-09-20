@@ -131,286 +131,333 @@ const NEWS_DATA = [
     date:"09 JANUARY, 2024 / PRESS RELEASES",
     link:"https://www.youtube.com/watch?v=8A3SeOYH8ww"
   },
-  // {
-  //   img: apisNews5,
-  //   name: NewsName5,
-  //   desc: "Apis India launch of Hazelnut Chocolate spread",
-  //   date:"11 APRIL, 2023 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews6,
-  //   name: NewsName6,
-  //   desc: "A Perfect Blend of Nutrition & Taste by Apis",
-  //   date:" 06 APRIL, 2023 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews7,
-  //   name: NewsName6,
-  //   desc: "Apis India launches Peanut Butter in two variants",
-  //   date:"24 MARCH, 2023 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews8,
-  //   name: NewsName6,
-  //   desc: "Apis campaign for Ramadan speaks of personal",
-  //   date:" 23 MARCH, 2023 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews9,
-  //   name: NewsName6,
-  //   desc: "You Didn’t Know These Ways To Use Honey",
-  //   date:" 10 JANUARY, 2023 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews10,
-  //   name: NewsName6,
-  //   desc: "Apis India #ShuddhAurSaccha Campaign",
-  //   date:"14 DECEMBER, 2022 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews11,
-  //   name: NewsName6,
-  //   desc: "Pride of India Brands 2021",
-  //   date:" JANUARY, 2022 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews12,
-  //   name: NewsName6,
-  //   desc: "Pride of India Brands 2021",
-  //   date:"JANUARY, 2022 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews13,
-  //   name: NewsName6,
-  //   desc: "Afaqs",
-  //   date:"DECEMBER, 2021 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews14,
-  //   name: NewsName6,
-  //   desc: "Apis' Exclusive Interview",
-  //   date:"DECEMBER, 2021 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews15,
-  //   name: NewsName6,
-  //   desc: "Economic Times News",
-  //   date:"16/August, 2021 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews16,
-  //   name: NewsName6,
-  //   desc: "PTI News",
-  //   date:"23/APRIL, 2021 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews17,
-  //   name: NewsName6,
-  //   desc: "Campaign",
-  //   date:"23/APRIL, 2021 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews18,
-  //   name: NewsName6,
-  //   desc: "Afaqs",
-  //   date:"23/APRIL, 2021 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews19,
-  //   name: NewsName6,
-  //   desc: "FoodTechBiz Desk",
-  //   date:"Published on : 22 Apr, 2021"
-  // },
-  // {
-  //   img: apisNews20,
-  //   name: NewsName6,
-  //   desc: "Times Of India",
-  //   date:"Published on: 20 Apr, 2021"
-  // },
-  // {
-  //   img: apisNews21,
-  //   name: NewsName6,
-  //   desc: "Corperate Coverage Outlook Initiatives",
-  //   date:"Apis India Limited "
-  // },
-  // {
-  //   img: apisNews22,
-  //   name: NewsName6,
-  //   desc: "Times Of India.",
-  //   date:"feat. Mr. Amit Ananad, Managing Director, Apis India "
-  // },
-  // {
-  //   img: apisNews23,
-  //   name: NewsName6,
-  //   desc: "SMB Story",
-  //   date:"Feat. Mr. Pankaj Mishra, CEO, Apis India "
-  // },
-  // {
-  //   img: apisNews24,
-  //   name: NewsName6,
-  //   desc: "Forbes India ",
-  //   date:"Feat. Mr. Pankaj Mishra, CEO, Apis India "
-  // },
-  // {
-  //   img: apisNews25,
-  //   name: NewsName6,
-  //   desc: "Apis - RR Partnership ",
-  //   date:"Business Today "
-  // },
-  // {
-  //   img: apisNews26,
-  //   name: NewsName6,
-  //   desc: "Apis - RR Partnership ",
-  //   date:"Press Release"
-  // },
-  // {
-  //   img: apisNews27,
-  //   name: NewsName6,
-  //   desc: "Apis - RR Partnership ",
-  //   date:"Business Inc"
-  // },
-  // {
-  //   img: apisNews28,
-  //   name: NewsName6,
-  //   desc: "The most Admirable Brand 2019-20 ",
-  //   date:"Mr. Amit Anand, MD, Apis India "
-  // },
-  // {
-  //   img: apisNews29,
-  //   name: NewsName6,
-  //   desc: "Promising Brand Economic Times 2019 ",
-  //   date:"Mr. Pankaj Mishra, CEO, Apis India "
-  // },
-  // {
-  //   img: apisNews30,
-  //   name: NewsName6,
-  //   desc: "EMERGING FMCG BRAND, Times Of India ",
-  //   date:"Mr. Pankaj Mishra,CEO"
-  // },
-  // {
-  //   img: apisNews31,
-  //   name: NewsName6,
-  //   desc: "SME World 1 ",
-  //   date:"APRIL 01, 2017 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews32,
-  //   name: NewsName6,
-  //   desc: "SME World 2",
-  //   date:"APRIL 01, 2017 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews33,
-  //   name: NewsName6,
-  //   desc: "Hospitality Talk",
-  //   date:"MARCH, 2017 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews34,
-  //   name: NewsName6,
-  //   desc: "Hospitality Biz",
-  //   date:"FEBRUARY, 2017 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews35,
-  //   name: NewsName6,
-  //   desc: "Fhrai",
-  //   date:"FEBRUARY, 2017 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews36,
-  //   name: NewsName6,
-  //   desc: "Aviation Times - Promotion",
-  //   date:"FEBRUARY, 2017 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews37,
-  //   name: NewsName6,
-  //   desc: "Apis Progressive Grocer ",
-  //   date:"MARCH, 2017 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews38,
-  //   name: NewsName6,
-  //   desc: "Agri Business & Food Industry ",
-  //   date:"JUNE 06, 2017 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews39,
-  //   name: NewsName6,
-  //   desc: "Financial Chronicle ",
-  //   date:"MARCH 21, 2017 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews40,
-  //   name: NewsName6,
-  //   desc: "Business India, Corporate Reports",
-  //   date:" FEBRUARY 27, 2017 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews41,
-  //   name: NewsName6,
-  //   desc: "Himalaya-Vartha Prabha",
-  //   date:"JANUARY 28, 2017 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews42,
-  //   name: NewsName6,
-  //   desc: "Himalaya Suvarana Times Of Karnataka",
-  //   date:"JANUARY 28, 2017 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews43,
-  //   name: NewsName6,
-  //   desc: "Himalaya-Sanjevani",
-  //   date:"JANUARY 27, 2017 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews44,
-  //   name: NewsName6,
-  //   desc: "Himalaya-Sanjesamachara",
-  //   date:"JANUARY 27, 2017 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews45,
-  //   name: NewsName6,
-  //   desc: "Business India Edition",
-  //   date:"JANUARY, 2017 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews46,
-  //   name: NewsName6,
-  //   desc: "Economic Times",
-  //   date:"DECEMBER, 2016 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews47,
-  //   name: NewsName6,
-  //   desc: "India.com",
-  //   date:"DECEMBER, 2016 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews48,
-  //   name: NewsName6,
-  //   desc: "Business Standard",
-  //   date:" DECEMBER, 2016 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews48,
-  //   name: NewsName6,
-  //   desc: "India Live Today",
-  //   date:" DECEMBER, 2016 / PRESS RELEASES"
-  // },
-  // {
-  //   img: apisNews13,
-  //   name: NewsName6,
-  //   desc: "India Times",
-  //   date:" DECEMBER, 2016 / PRESS RELEASES"
-  // }
+  {
+      img: apisNews5,
+      name: NewsName5,
+      desc: "Apis India launch of Hazelnut Chocolate spread",
+      date:"11 APRIL, 2023 / PRESS RELEASES",
+      link:"https://www.ifttrade.com/news/Apis-India-expands-its-Spread-Category-with-the-launch-of-Hazelnut-Chocolate-spread"
+    },
+    {
+      img: apisNews6,
+      name: NewsName6,
+      desc: "A Perfect Blend of Nutrition & Taste by Apis",
+      date:" 06 APRIL, 2023 / PRESS RELEASES",
+      link:"https://biznewsdesk.com/business/a-perfect-blend-of-nutrition-tradition-taste-by-apis/"
+    },
+    {
+      img: apisNews7,
+      name: NewsName6,
+      desc: "Apis India launches Peanut Butter in two variants",
+      date:"24 MARCH, 2023 / PRESS RELEASES",
+      link:"https://lifeandmore.in/life-style/food/apis-india-launches-peanut-butter/"
+    },
+  {
+    img: apisNews8,
+    name: NewsName6,
+    desc: "Apis campaign for Ramadan speaks of personal",
+    date:" 23 MARCH, 2023 / PRESS RELEASES",
+    link:"https://www.exchange4media.com/advertising-news/apis-campaign-for-ramadan-speaks-of-personal-well-being-126132.html"
+  },
+  {
+    img: apisNews9,
+    name: NewsName6,
+    desc: "You Didn’t Know These Ways To Use Honey",
+    date:" 10 JANUARY, 2023 / PRESS RELEASES",
+    link:"https://www.slurrp.com/article/we-bet-you-didnt-know-these-creative-ways-to-use-honey-1672830183803"
+  },
+  {
+    img: apisNews10,
+    name: NewsName6,
+    desc: "Apis India #ShuddhAurSaccha Campaign",
+    date:"14 DECEMBER, 2022 / PRESS RELEASES",
+    link:"https://www.uniindia.com/apis-india-launches-shuddhaursaccha-campaign-promoting-its-honey-for-healthy-winters/press-releases/news/2878783.html"
+  },
+  {
+    img: apisNews11,
+    name: NewsName6,
+    desc: "Pride of India Brands 2021",
+    date:" JANUARY, 2022 / PRESS RELEASES",
+    link:"https://www.linkedin.com/posts/exchange4media_e4mprideofindia-activity-6922891424749215745-aYje?utm_source=linkedin_share&utm_medium=android_app"
+  },
+  {
+    img: apisNews12,
+    name: NewsName6,
+    desc: "Pride of India Brands 2021",
+    date:"JANUARY, 2022 / PRESS RELEASES",
+    link:"https://www.exchange4media.com/marketing-news/e4m-pride-of-india-brands-2021-series-to-tell-success-stories-of-top-smbs-118044.html"
+  },
+  {
+    img: apisNews13,
+    name: NewsName6,
+    desc: "Afaqs",
+    date:"DECEMBER, 2021 / PRESS RELEASES",
+    link:"https://www.afaqs.com/people-spotting/apis-india-appoints-sharad-vatss-as-marketing-and-sales-head"
+  },
+  {
+    img: apisNews14,
+    name: NewsName6,
+    desc: "Apis' Exclusive Interview",
+    date:"DECEMBER, 2021 / PRESS RELEASES",
+    link:"https://apisindia.com/pdf/ApisExclusiveInterview.pdf"
+  },
+  {
+    img: apisNews15,
+    name: NewsName6,
+    desc: "Economic Times News",
+    date:"16/August, 2021 / PRESS RELEASES",
+    link:"https://brandequity.economictimes.indiatimes.com/news/advertising/apis-india-ropes-in-milind-soman-as-the-brand-ambassador/85362992"
+  },
+  {
+    img: apisNews16,
+    name: NewsName6,
+    desc: "PTI News",
+    date:"23/APRIL, 2021 / PRESS RELEASES",
+    link:"https://www.ptinews.com/pressrelease/46509_press-subAPIS-India-Launches-Digital-Campaign-During-Ramadan----SehatKaSaath"
+  },
+  {
+    img: apisNews17,
+    name: NewsName6,
+    desc: "Campaign",
+    date:"23/APRIL, 2021 / PRESS RELEASES",
+    link:"https://www.campaignindia.in/video/for-ramadan-apis-india-highlights-the-beauty-of-bonding-over-food/469169#:~:text=FMCG%20brand%20Apis%20India%20has,led%20digital%20campaign%20for%20Ramadan.&text=Pankaj%20Mishra%2C%20CEO%2C%20Apis%20India,has%20been%20realised%20by%20all"
+  },
+  {
+    img: apisNews18,
+    name: NewsName6,
+    desc: "Afaqs",
+    date:"23/APRIL, 2021 / PRESS RELEASES",
+    link:"https://www.afaqs.com/companies/apis-india-launches-digital-campaign-during-ramadan"
+  },
+  {
+    img: apisNews19,
+    name: NewsName6,
+    desc: "FoodTechBiz Desk",
+    date:"Published on : 22 Apr, 2021",
+    link:"https://www.foodtechbiz.com/business-updates/apis-india-launches-digital-campaign-during-ramadan"
+  },
+  {
+    img: apisNews20,
+    name: NewsName6,
+    desc: "Times Of India",
+    date:"Published on: 20 Apr, 2021",
+    link:"https://timesofindia.indiatimes.com/business/india-business/sensex-nifty-extend-losses-in-choppy-trade-banking-it-stocks-drag/articleshow/82163654.cms"
+  },
+  {
+    img: apisNews21,
+    name: NewsName6,
+    desc: "Corperate Coverage Outlook Initiatives",
+    date:"Apis India Limited ",
+    link:"https://apisindia.com/media/Coporate%20Coverage_Dec_2020%20(2).pdf"
+  },
+  {
+    img: apisNews22,
+    name: NewsName6,
+    desc: "Times Of India.",
+    date:"feat. Mr. Amit Ananad, Managing Director, Apis India",
+    link:"https://timesofindia.indiatimes.com/business/india-business/after-a-sweet-start-with-apis-honey-apis-india-limited-is-in-expansion-mode-of-its-fmcg-portfolio/articleshow/78905307.cms?utm_source=whatsapp&utm_medium=social&utm_campaign=TOIMobile"
+  },
+  {
+    img: apisNews23,
+    name: NewsName6,
+    desc: "SMB Story",
+    date:"Feat. Mr. Pankaj Mishra, CEO, Apis India",
+    link:"https://yourstory.com/smbstory/honey-brand-apis-dabur-patanjali-business"
+  },
+  {
+    img: apisNews24,
+    name: NewsName6,
+    desc: "Forbes India ",
+    date:"Feat. Mr. Pankaj Mishra, CEO, Apis India ",
+    link:"https://www.forbesindia.com/article/brand-connect/pankaj-mishra-ceo-apis-india-driving-growth-and-expansion/62931/1"
+  },
+  {
+    img: apisNews25,
+    name: NewsName6,
+    desc: "Apis - RR Partnership ",
+    date:"Business Today ",
+    link:"https://www.businesstoday.in/latest/corporate/story/unique-digital-experiences-first-time-advertisers-ipl-2020-different-273470-2020-09-19"
+  },
+  {
+    img: apisNews26,
+    name: NewsName6,
+    desc: "Apis - RR Partnership ",
+    date:"Press Release",
+    link:"https://apisindiafoodforum.com/posts/apis-honey-announces-partnership-with-rajasthan-royals-for-upcoming-ipl-2020/"
+  },
+  {
+    img: apisNews27,
+    name: NewsName6,
+    desc: "Apis - RR Partnership ",
+    date:"Business Inc",
+    link:"https://apisindia.com/media/APIS%20-%20RR.jpeg"
+  },
+  {
+    img: apisNews28,
+    name: NewsName6,
+    desc: "The most Admirable Brand 2019-20 ",
+    date:"Mr. Amit Anand, MD, Apis India ",
+    link:"https://www.youtube.com/watch?v=J0LitwjNpKs"
+  },
+  {
+    img: apisNews29,
+    name: NewsName6,
+    desc: "Promising Brand Economic Times 2019 ",
+    date:"Mr. Pankaj Mishra, CEO, Apis India ",
+    link:"https://www.youtube.com/watch?v=ts9T-KK26Io"
+  },
+  {
+    img: apisNews30,
+    name: NewsName6,
+    desc: "EMERGING FMCG BRAND, Times Of India ",
+    date:"Mr. Pankaj Mishra,CEO",
+    link:"https://apisindia.com/pdf/11.pdf"
+  },
+  {
+    img: apisNews31,
+    name: NewsName6,
+    desc: "SME World 1 ",
+    date:"APRIL 01, 2017 / PRESS RELEASES",
+    link:"https://apisindia.com/pdf/22.pdf"
+  },
+  {
+    img: apisNews32,
+    name: NewsName6,
+    desc: "SME World 2",
+    date:"APRIL 01, 2017 / PRESS RELEASES",
+    link:"https://apisindia.com/pdf/33.pdf"
+  },
+  {
+    img: apisNews33,
+    name: NewsName6,
+    desc: "Hospitality Talk",
+    date:"MARCH, 2017 / PRESS RELEASES",
+    link:"https://apisindia.com/media/Hospitality%20Talk.jpg"
+  },
+  {
+    img: apisNews34,
+    name: NewsName6,
+    desc: "Hospitality Biz",
+    date:"FEBRUARY, 2017 / PRESS RELEASES",
+    link:"https://apisindia.com/pdf/Hospitality%20Biz.pdf"
+  },
+  {
+    img: apisNews35,
+    name: NewsName6,
+    desc: "Fhrai",
+    date:"FEBRUARY, 2017 / PRESS RELEASES",
+    link:"https://apisindia.com/pdf/FHRAI_Feb-2017.pdf"
+  },
+  {
+    img: apisNews36,
+    name: NewsName6,
+    desc: "Aviation Times - Promotion",
+    date:"FEBRUARY, 2017 / PRESS RELEASES",
+    link:"https://apisindia.com/pdf/Aviation-Times-Promotion-page-3.pdf"
+  },
+  {
+    img: apisNews37,
+    name: NewsName6,
+    desc: "Apis Progressive Grocer ",
+    date:"MARCH, 2017 / PRESS RELEASES",
+    link:"https://apisindia.com/pdf/Apis-Progressive-Grocer.pdf"
+  },
+  {
+    img: apisNews38,
+    name: NewsName6,
+    desc: "Agri Business & Food Industry ",
+    date:"JUNE 06, 2017 / PRESS RELEASES",
+    link:"https://apisindia.com/pdf/1.pdf"
+  },
+  {
+    img: apisNews39,
+    name: NewsName6,
+    desc: "Financial Chronicle ",
+    date:"MARCH 21, 2017 / PRESS RELEASES",
+    link:"https://apisindia.com/pdf/corporate.pdf"
+  },
+  {
+    img: apisNews40,
+    name: NewsName6,
+    desc: "Business India, Corporate Reports",
+    date:" FEBRUARY 27, 2017 / PRESS RELEASES",
+    link:"https://apisindia.com/pdf/Business-India-Corporate-Report.pdf"
+  },
+  {
+    img: apisNews41,
+    name: NewsName6,
+    desc: "Himalaya-Vartha Prabha",
+    date:"JANUARY 28, 2017 / PRESS RELEASES",
+    link:"https://apisindia.com/pdf/Himalaya-Vartha-Prabha-28th-Jan-2017-Pg3.pdf"
+  },
+  {
+    img: apisNews42,
+    name: NewsName6,
+    desc: "Himalaya Suvarana Times Of Karnataka",
+    date:"JANUARY 28, 2017 / PRESS RELEASES",
+    link:"https://apisindia.com/pdf/2.pdf"
+  },
+  {
+    img: apisNews43,
+    name: NewsName6,
+    desc: "Himalaya-Sanjevani",
+    date:"JANUARY 27, 2017 / PRESS RELEASES",
+    link:"https://apisindia.com/pdf/Himalaya-Sanjevani-27th-Jan-2017-Pg7.pdf"
+  },
+  {
+    img: apisNews44,
+    name: NewsName6,
+    desc: "Himalaya-Sanjesamachara",
+    date:"JANUARY 27, 2017 / PRESS RELEASES",
+    link:"https://apisindia.com/pdf/Himalaya-Sanjesamachara-27th-Jan-2017-Pg4.pdf"
+  },
+  {
+    img: apisNews45,
+    name: NewsName6,
+    desc: "Business India Edition",
+    date:"JANUARY, 2017 / PRESS RELEASES",
+    link:"https://apisindia.com/pdf/Business-India-January-Edition.pdf"
+  },
+  {
+    img: apisNews46,
+    name: NewsName6,
+    desc: "Economic Times",
+    date:"DECEMBER, 2016 / PRESS RELEASES",
+    link:"https://apisindia.com/pdf/Press-Economic-Times.pdf"
+  },
+  {
+    img: apisNews47,
+    name: NewsName6,
+    desc: "India.com",
+    date:"DECEMBER, 2016 / PRESS RELEASES",
+    link:"https://apisindia.com/pdf/indiapress.pdf"
+  },
+  {
+    img: apisNews48,
+    name: NewsName6,
+    desc: "Business Standard",
+    date:" DECEMBER, 2016 / PRESS RELEASES",
+    link:"https://apisindia.com/pdf/businessstandardspress.pdf"
+  },
+  {
+    img: apisNews48,
+    name: NewsName6,
+    desc: "India Live Today",
+    date:" DECEMBER, 2016 / PRESS RELEASES",
+    link:"https://apisindia.com/pdf/indialivetodaypress.pdf"
+  },
+  {
+    img: apisNews13,
+    name: NewsName6,
+    desc: "India Times",
+    date:" DECEMBER, 2016 / PRESS RELEASES",
+    link:"https://apisindia.com/pdf/indiatimespress.pdf"
+  }
 ];
 
 
 export default function Media() {
+  const OPTIONS = { loop: true };
   // const [isModalOpen, setIsModalOpen] = useState(false); // Manage modal visibility state
   // const [selectedItem, setSelectedItem] = useState(null); // Track the selected news item
 
@@ -425,6 +472,10 @@ export default function Media() {
   //   setIsModalOpen(false);
   //   setSelectedItem(null);
   // };
+
+    // const handleClick = (itm) => {
+    //   window.open(itm.link, itm.link); // Opens the link in a new tab
+    // };
 
   return (
     <>
@@ -444,16 +495,23 @@ export default function Media() {
 
       {/* News Items Grid */}
       <div className="w-full py-6 md:py-14 flex items-center justify-center flex-wrap gap-x-8 gap-y-10 md:gap-y-24">
-        {NEWS_DATA.map((itm, index) => (
-          <div
-            key={index}
-            className="flex cursor-pointer flex-col gap-1 w-[280px] md:w-[340px] 2xl:w-[383px]"
+      <EmblaCarousel options={OPTIONS}>
+      {NEWS_DATA.map((itm, index) => (
+          <div key={index} className="embla__slide flex cursor-pointer flex-col gap-1 w-[280px] md:w-[340px] 2xl:w-[383px] mb-8" 
             // onClick={() => openModal(itm)} // Open modal on click
           >
-            <div className="h-[260px] md:h-[370px] 2xl:h-[409px]">
+           <a
+           key={index}
+           href={itm.link}
+           target="_blank"
+           >
+
+           <div className="h-[260px] md:h-[370px] 2xl:h-[409px]">
               <Image
                 src={itm.img}
                 alt="News Image"
+                width={440}
+                height={440}
                 className="h-[260px] md:h-[370px] 2xl:h-[409px]"
               />
             </div>
@@ -462,19 +520,23 @@ export default function Media() {
             </div>
             <div className="text-xs md:text-base pt-1">{itm.desc}</div>
             <span>{itm.date}</span>
-            <div className="relative border-b-2 mt-2 md:mt-4 border-[#000000] w-[120px] cursor-pointer text-xs" onClick={`${itm.link}`}>
+            {/*  */}
+            <div className="relative border-b-2 mt-2 md:mt-4 border-[#000000] w-[220px] cursor-pointer text-xs">
               Read More
               <div className="absolute -end-6 top-1.5 md:-end-10 md:top-0 d-0 w-[20px] h-[20px] md:h-[33px] md:w-[33px] rounded-full border border-black bg-[#FFFBF6] hover:bg-[#9F7B49] hover:border-none"></div>
             </div>
+           </a>
           </div>
         ))}
+      </EmblaCarousel>
+
       </div>
       <div className="w-full bg-[#FFF9F0] flex flex-col items-center justify-center py-4 md:py-14">
         <p className="font-medium text-center text-[#585858] text-sm  md:text-xl">
           DISCOVER OUR LATEST EVENTS
         </p>
         <p className="font-bold text-[20px] text-center text-[#9F7B49] md:text-[40px]">
-          Media Gallery{" "}
+          Media Gallery
         </p>
         <p className="font-medium mt-2 text-center text-xs md:text-lg text-[#666666]">
           Intentions may lay the foundation, but it's our actions that build the
@@ -486,11 +548,11 @@ export default function Media() {
               <div className="embla__slide" key={index}>
                 <div className="embla__slide__number">
                   <div>
-                    <div className="mx-3 border ">
+                    <div className="mx-3 border">
                       <Image
                         src={itm?.img}
                         alt="header-logo"
-                        className="w-[180px] md:w-[300px] h-[200px] md:h-[345px]"
+                        className="w-[250px] md:w-[400px] h-[250px] md:h-[345px]"
                       />
                     </div>
                     <div className="py-3 text-sm md:text-xl text-[#3A3A3A] border border-[#9F7B49] font-normal text-center truncate">

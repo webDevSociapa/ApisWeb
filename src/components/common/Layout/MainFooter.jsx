@@ -115,7 +115,7 @@ const MainFooter = () => {
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div className="flex flex-col md:flex-row md:items-center justify-center gap-4 text-sm font-normal md:justify-start lg:gap-8">
               <span className="cursor-pointer text-sm text-[#9F7B49] hover:text-activeGreen-500">
-                Copyryihts Reserved By ApisIndia.com
+                Copy Right Reserved By ApisIndia.com
               </span>
               <span className="cursor-pointer text-sm text-[#9F7B49] hover:text-activeGreen-500">
                 Disclaimer

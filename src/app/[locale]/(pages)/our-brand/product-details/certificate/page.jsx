@@ -24,7 +24,8 @@ const page = () => {
             Please enter your batch code written on side of Apis Honey pack to
             get your purity certificate.
           </p>
-          <div className="px-10 flex flex-col gap-3 md:gap-6">
+         <form action="/generate-pdf" mehtod="POST">
+         <div className="px-10 flex flex-col gap-3 md:gap-6">
             <div>
               <p className="font-jost text-xs md:text-base pb-2">
                 Batch Number
@@ -54,6 +55,7 @@ const page = () => {
               Check Report
             </button>
           </div>
+         </form>
         </div>
         <div className="font-jost flex flex-col lg:flex-row gap-8 mt-8 md:mt-16 items-center justify-center">
           <div className="w-[90%] md:w-[510px] shadow-lg p-3 md:p-6 border border-[#9F7B49] bg-[#FFFBF6] h-[206px]">

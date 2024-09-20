@@ -102,6 +102,12 @@ input[type="password"]:-webkit-autofill:active {
   justify-content: center;
   flex-direction: column;
 }
+@media (min-width: 1540px) {
+  .embla__slide {
+    flex: 0 0 var(--slide-size-sm);
+    padding-left: 20px;
+  }
+}
 @media (min-width: 1140px) {
   .embla__slide {
     flex: 0 0 var(--slide-size-sm);
@@ -347,6 +353,7 @@ input[type="password"]:-webkit-autofill:active {
   align-items: center;
   justify-content: center;
   background-repeat: no-repeat;
+  margin: auto;
   background-size: 100% 100%;
   /* margin-right: 50px; */
 }
@@ -364,6 +371,8 @@ input[type="password"]:-webkit-autofill:active {
   width: 100%;
   background-repeat: no-repeat;
   border-radius: 60px;
+  background-size: cover !important;
+
   /* margin-right: 50px; */
 }
 @media (max-width: 768px) {
@@ -569,4 +578,12 @@ input[type="password"]:-webkit-autofill:active {
     100% 100%,
     0% 100%
   );
+}
+
+
+/* JOURNEY BANER */
+
+.journey_banner {
+  border: 2px solid black;
+  background-image: url("@/assets/images/AboutUs/journeyBanner.png");
 }

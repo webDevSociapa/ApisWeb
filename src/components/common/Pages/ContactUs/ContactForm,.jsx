@@ -142,7 +142,7 @@ const ContactForm = () => {
             ></textarea>
           </div>
           <div className="text-center">
-            <button type="submit" className="bg-orange-500 text-white py-2 px-4 rounded">Submit</button>
+            <button type="submit" className="bg-orange-500 text-white py-2 px-4 rounded" style={{backgroundColor:"rgb(159 123 73 / var(--tw-bg-opacity))"}}>Submit</button>
           </div>
         </form>
       </div>
