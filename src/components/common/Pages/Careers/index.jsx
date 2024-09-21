@@ -9,6 +9,7 @@ import Engagements from "@/assets/images/Careers/Engagements.png";
 import TrainingSession from "@/assets/images/Careers/Training&Session.png";
 import ImageBanner from "../../Layout/Banner";
 import Image from "next/image";
+import Link from "next/link";
 
 const CAREER_DATA = [
   {
@@ -47,7 +48,8 @@ export default function Careers() {
           are embraced with enthusiasm.
         </p>
       </div>
-      <div className="flex mt-7 md:mt-14 flex-wrap items-center justify-center gap-5  md:gap-10">
+     <Link href={"/careers/careerGallary"}>
+     <div className="flex mt-7 md:mt-14 flex-wrap items-center justify-center gap-5  md:gap-10">
         {CAREER_DATA.map((itm) => {
           return (
             <div className="border p-2 md:p-3 px-1 border-[#85673D]">
@@ -117,6 +119,7 @@ export default function Careers() {
           </div>
         </div> */}
       </div>
+     </Link>
       <div className="w-full mt-14 flex flex-col items-center justify-center">
         <div className="bg-[#9F7B49] flex flex-col items-center justify-center w-[96%] p-2 md:p-5">
           <div className="bg-[#FFFBF6] w-full py-6 md:py-12 overflow-hidden flex flex-col items-center gap-6 md:gap-12 justify-center relative">

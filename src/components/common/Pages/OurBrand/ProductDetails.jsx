@@ -11,13 +11,13 @@ import Ring4 from "@/assets/images/OurBrands/Ring-4.png";
 import Comma from "@/assets/images/OurBrands/Comma.png";
 import Apple from "@/assets/images/OurBrands/Apple.png";
 import Berry from "@/assets/images/OurBrands/Berry.png";
-import Shield from "@/assets/images/OurBrands/Shield.png";
+import HoneyShield from "@/assets/images/OurBrands/honeyShield.png";
 import HandDrawnHoney from "@/assets/images/OurBrands/HandDrawnHoney.png";
 import TrustSlide1 from "@/assets/images/home-banner-section/trust-slide-1.png";
 import TrustSlide2 from "@/assets/images/home-banner-section/trust-slide-2.png";
 import TrustSlide3 from "@/assets/images/home-banner-section/trust-slide-3.png";
 import Image from "next/image";
-
+import CheckReportBanner from '@/assets/images/OurBrands/checkReportBanner.png'
 import AmazonLogo from "@/assets/images/home-banner-section/amazon.png";
 import JioMart from "@/assets/images/home-banner-section/jiomart.png";
 import JioMart2 from "@/assets/images/home-banner-section/jio-mart.png";
@@ -30,6 +30,9 @@ import Glimpse3 from "@/assets/images/OurBrands/Glimpse-3.png";
 import Content from "@/assets/images/OurBrands/Content.png";
 import Rectangle1 from "@/assets/images/OurBrands/Rectangle-1.png";
 import Rectangle2 from "@/assets/images/OurBrands/Rectangle-2.png";
+import Skin from '@/assets/images/OurBrands/skin.png';
+import Sustain from "@/assets/images/OurBrands/sustain.png";
+import AidsDigestion from "@/assets/images/OurBrands/AidsDigestion.png"
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { PRODUCT_DATA } from "@/lib/constants";
@@ -134,7 +137,7 @@ const HEALTH_BENEFITS = [
     id: 1,
     title: "Boosts Immunity",
     desc: "Honey is packed with antioxidants that boost your immune system and help fight off illnesses. Regular consumption of honey can strengthen your body’s defenses and promote overall health.",
-    img: Shield,
+    img: HoneyShield,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
   },
@@ -142,7 +145,7 @@ const HEALTH_BENEFITS = [
     id: 2,
     title: "Skin Elixir",
     desc: "Honey is packed with antioxidants that boost your immune system and help fight off illnesses. Regular consumption of honey can strengthen your body’s defenses and promote overall health.",
-    img: Shield,
+    img: Skin,
     shadowClass: "shadow-custom-darkGreen",
     color: "bg-[#39412D]",
   },
@@ -150,7 +153,7 @@ const HEALTH_BENEFITS = [
     id: 3,
     title: "Sustainability",
     desc: "Honey is packed with antioxidants that boost your immune system and help fight off illnesses. Regular consumption of honey can strengthen your body’s defenses and promote overall health.",
-    img: Shield,
+    img: Sustain,
     shadowClass: "shadow-custom-rama",
     color: "bg-[#416E7C]",
   },
@@ -158,7 +161,7 @@ const HEALTH_BENEFITS = [
     id: 4,
     title: "Aids Digestion",
     desc: "Honey is packed with antioxidants that boost your immune system and help fight off illnesses. Regular consumption of honey can strengthen your body’s defenses and promote overall health.",
-    img: Shield,
+    img: AidsDigestion,
     shadowClass: "shadow-custom-pink",
     color: "bg-[#E09384]",
   },
@@ -225,7 +228,7 @@ const ProductDetails = () => {
         <p className="w-[90%] text-[20px] md:text-[40px] font-bold text-center text-[#84663C]">
           Purity is our presence in food
         </p>
-        <p className="text-[#454545] w-[90%] text-sm md:text-2xl text-center mt-4 font-jost md:mt-8">
+        <p className="text-[#454545] w-[80%] text-sm md:text-2xl text-center mt-4 font-jost md:mt-8">
           {selectedProduct.product_desc}
         </p>
       </div>
@@ -243,6 +246,12 @@ const ProductDetails = () => {
           </button>
         </Link>
       </div>
+      {/* <div>
+        <Image src={CheckReportBanner}
+        height={100}
+        
+        />
+      </div> */}
       <div className="w-[90%] border border-[#AE844A] rounded-[10px] flex mt-8 md:mt-20 items-center flex-col gap-4 md:gap-12 ">
         <div className="bg-white rounded-[10px] w-full h-[23px] md:h-[65px] flex items-center justify-between px-3 md:pt-2 pt-1 avaibility">
           <EmblaCarousel options={OPTIONS} autoScroll>
@@ -352,7 +361,7 @@ const ProductDetails = () => {
               return (
                 <div className="flex flex-col w-1/2 items-center justify-center">
                   <div
-                    className={` h-[110px] flex items-center justify-center w-[110px] border-2 border-[#9F7B49] rounded-full`}
+                    className={` h-[110px] flex items-center justify-center w-[110px] border-2 border-[#9F7B49] rounded-full border-4`}
                     // onClick={() => setSelectedContent(itm.id)}
                   >
                     <Image
@@ -404,7 +413,7 @@ const ProductDetails = () => {
         <p className="text-[#9F7B49] text-center w-[90%] text-[20px] md:text-[40px] font-bold">
           ORGANIC HONEY LAUNCH
         </p>
-        <p className=" w-[90%] text-center text-sm md:text-[22px] left-4 md:leading-7 mt-2 md:mt-6">
+        <p className=" w-[90%] text-center text-sm md:text-[22px] left-4 md:leading-7 mt-2 md:mt-6 xl:w-[45%] sm:w-[90%] md:w-[80%]">
           Launch Event was organized on 9th Jan, 2024 at The Lalit, New Delhi.
           Sanya Malhotra and our Managing Director Mr. Amit Anand Unveiled Our
           New Organic Honey.
@@ -466,8 +475,8 @@ const ProductDetails = () => {
       </div>
       <div className="w-full relative flex flex-col justify-center items-center">
         <div className="flex flex-col gap-4 sm:gap-10 px-4 lg:px-36 pb-0 pt-6 md:py-6">
-          <div className="flex flex-col items-center justify-center gap-4 md:gap-14">
-            <p className="text-center text-[14px] md:text-[22px] uppercase text-[#585858]">
+          <div className="flex flex-col items-center justify-center gap-4 md:gap-5">
+            <p className="text-center text-[14px] md:text-[22px] uppercase text-[#585858]" style={{paddingTop:"30px"}}>
               day-to-day choices that weave the most profound stories of
               character & growth.
             </p>

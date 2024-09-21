@@ -26,6 +26,10 @@ export default function OurBrand() {
       id: 4,
       title: "Beverage",
     },
+    {
+      id: 5,
+      title: "Recipes",
+    },
   ];
 
   const [selectedBrand, setSelectedBrand] = useState(BRAND_DATA[0].id);

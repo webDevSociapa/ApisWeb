@@ -11,6 +11,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import ImageBanner from "../../Layout/Banner";
 import CustomDropdown from "../../CustomDropdown";
+// import DSD from "@/assets/images/Investors/Outcome-of-Board-Meeting091123"
 
 const INVESTER_TABS = [
   {
@@ -46,14 +47,19 @@ const INVESTER_TABS = [
 ];
 
 const WORLD_APPERIENCE = [
-  " Donsectetur ltrngreices, nunc nisl.pdf",
-  " Honsectetur ltrices, nunc hvbnl nisl.pdf ",
-  " Monsect mnbvcetur ltrices, nunc nisl.pdf ",
-  " Ronsecfvr bymfgbtetur lices, nunc nisl.pdf ",
-  " Donsectetur ltrngreices, nunc nisl.pdf",
-  " Honsectetur ltrices, nunc hvbnl nisl.pdf ",
-  " Monsect mnbvcetur ltrices, nunc nisl.pdf ",
-  " Ronsecfvr bymfgbtetur lices, nunc nisl.pdf ",
+
+  {id:1,name:"Covering Letter January-04-2021", file:"Outcome-of-Board-Meeting091123.pdf"},
+  {id:2,name:"Covering Letter January-04-2021", file: "Covering_Letter_2021"},
+  {id:3,name:"Disclosure under Reg.30 Appt of Director January-15-2021", file: "Outcome-of-Board-Meeting091123"}
+
+  // "Covering Letter January-04-2021",
+  // " Honsectetur ltrices, nunc hvbnl nisl.pdf ",
+  // " Monsect mnbvcetur ltrices, nunc nisl.pdf ",
+  // " Ronsecfvr bymfgbtetur lices, nunc nisl.pdf ",
+  // " Donsectetur ltrngreices, nunc nisl.pdf",
+  // " Honsectetur ltrices, nunc hvbnl nisl.pdf ",
+  // " Monsect mnbvcetur ltrices, nunc nisl.pdf ",
+  // " Ronsecfvr bymfgbtetur lices, nunc nisl.pdf ",
 ];
 
 export default function Investors() {
@@ -138,23 +144,28 @@ export default function Investors() {
           />
         </div>
         <div className="flex flex-wrap w-full  gap-4">
-          {WORLD_APPERIENCE.map((itm) => {
-            return (
-              <div className="border w-full border-[#AE844A] rounded-[20px] bg-[#FFFBF6] py-3 px-4">
-                <div className="flex items-center justify-between">
-                  <p className="text-black text-xs md:text-lg">{itm}</p>
-                  <div className="me-4">
-                    <div className="h-[20px] w-[20px] md:h-[40px] md:w-[40px] border border-[#AE844A] rounded-full flex items-center justify-center cursor-pointer text-[#AE844A] hover:text-white hover:bg-[#AE844A]">
-                      <FontAwesomeIcon
-                        icon={faArrowRight}
-                        className="text-xs md:text-xl"
-                      />
-                    </div>
-                  </div>
+        {WORLD_APPERIENCE.map((itm, index) => (
+            <div
+              key={index}
+              className="border w-full border-[#AE844A] rounded-[20px] bg-[#FFFBF6] py-3 px-4"
+            >
+              <div className="flex items-center justify-between">
+                <p className="text-black text-xs md:text-lg">{itm.name}</p>
+                <div className="me-4">
+                  <a
+                    href={`@/assets/pdf/${itm.file}`}
+                    target='_blank'
+                    download={itm.file}
+                    className="h-[20px] w-[20px] md:h-[40px] md:w-[40px] border border-[#AE844A] rounded-full flex items-center justify-center cursor-pointer text-[#AE844A] hover:text-white hover:bg-[#AE844A]">
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className="text-xs md:text-xl"
+                    />
+                  </a>
                 </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </div>

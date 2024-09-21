@@ -103,19 +103,20 @@ export default function Sustainability() {
           <div className="embla__viewport w-full" ref={emblaRef}>
             <div className="embla__container py-8 md:py-20">
               {SUSTAINABILITY_DATA.map((itm, index) => (
-                <div className="embla__slide pointer-events-none" key={index}>
-                  <div className="embla__slide__number pointer-events-none">
+                <div className="embla__slide" key={index}>
+                  <div className="embla__slide__number">
                     <div className="bg-[#EECB9A] w-[280px] sm:w-[320px] xl:w-auto rounded-xl flex flex-col h-[320px] md:h-[400px] p-2.5 px-1.5 justify-between border border-[#85673D]">
                     {itm.video ? (
                   <iframe
-                    width="360"
+                    width="100%"
                     height="240"
-                    className="h-[240px] md:h-[300px] rounded-2xl w-full bg-opacity-40"
+                    className="h-[240px] md:h-[300px]  rounded-2xl w-full bg-opacity-40 border-4"
                     src={itm.video}
                     title={itm.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                    allowFullScreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                    style={{aspectRatio:"16/9"}}
                   ></iframe>
                 ) : (
                   <p className="text-red-500">Video not available</p>
@@ -146,6 +147,7 @@ export default function Sustainability() {
             <p
               key={index}
               // onClick={() => handleNumberClick(index)}
+              
               className={`text-base md:text-3xl  border-black px-2 md:px-6 ${index === currentIndex ? "font-bold" : "font-normal text-gray-600"} ${index === 0 ? "" : "border-l"}`}
               aria-label={`Go to slide ${index + 1}`}
             >

@@ -19,7 +19,6 @@ const CustomDropdown = ({ options, selectedOption, setSelectedOption }) => {
       <div className="dropdown-header text-sm md:text-xl bg-[#AE844A]" onClick={handleToggle}>
         {selectedOption || "Select an option"}
         <span className={`arrow ${isOpen ? "open" : ""}`}>
-          {" "}
           <FontAwesomeIcon icon={faChevronDown} className="text-sm md:text-xl" />
         </span>
       </div>
