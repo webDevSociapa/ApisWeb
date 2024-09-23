@@ -1,5 +1,6 @@
-const nodemailer = require('nodemailer');
-const mongoose = require('mongoose');
+import connectToDb from '../../../lib/db'; // Your MongoDB connection function
+import nodemailer from 'nodemailer';
+import mongoose from 'mongoose';
 
 // MongoDB schema and model
 const contactSchema = new mongoose.Schema({
@@ -12,17 +13,7 @@ const contactSchema = new mongoose.Schema({
 
 const Contact = mongoose.models.Contact || mongoose.model('Contact', contactSchema);
 
-// Connect to MongoDB
-const connectToDb = async () => {
-  if (mongoose.connection.readyState === 1) return;
-  
-  await mongoose.connect('mongodb+srv://webdev:<hGLLhqLzS3Ar4UnA>@apisindia.38dfp.mongodb.net/', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
-};
-
-export default async function (req, res) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ success: false, message: 'Invalid request method.' });
   }
@@ -36,15 +27,9 @@ export default async function (req, res) {
     return res.status(500).json({ success: false, message: 'Failed to connect to the database.' });
   }
 
-  // Create a new contact entry
+  // Save the contact form data to MongoDB
   try {
-    const newContact = new Contact({
-      fullName,
-      cityLocation,
-      emailAddress,
-      phoneNumber,
-      message,
-    });
+    const newContact = new Contact({ fullName, cityLocation, emailAddress, phoneNumber, message });
     await newContact.save();
   } catch (error) {
     return res.status(500).json({ success: false, message: 'Failed to save data to the database.' });
@@ -54,21 +39,21 @@ export default async function (req, res) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'khanrobin7071@gmail.com',
-      pass: 'hgvu hwmq lnfh xqxa',
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
     },
   });
 
   const mailOptions = {
     from: emailAddress,
-    to: 'khanrobin7071@gmail.com', // Replace with your email
+    to: 'khanrobin7071@gmail.com',
     subject: 'New Message from Contact Form',
     text: `
       Full Name: ${fullName}
       City Location: ${cityLocation}
       Email Address: ${emailAddress}
       Phone Number: ${phoneNumber}
-
+      
       Message:
       ${message}
     `,
@@ -77,9 +62,9 @@ export default async function (req, res) {
   // Send the email
   try {
     await transporter.sendMail(mailOptions);
-    res.status(200).json({ success: true });
+    return res.status(200).json({ success: true, message: 'Email sent successfully.' });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ success: false, message: 'Failed to send email.' });
+    console.error('Email sending failed:', error);
+    return res.status(500).json({ success: false, message: 'Failed to send email.' });
   }
 }
