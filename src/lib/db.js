@@ -1,18 +1,2 @@
-const mongoose = require('mongoose');
-
-const connectToDb = async () => {
-  if (mongoose.connection.readyState === 1) return;
-
-  try {
-    await mongoose.connect(process.env.MONGODB_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-    console.log('Connected to MongoDB');
-  } catch (error) {
-    console.error('Failed to connect to MongoDB', error);
-    throw new Error('MongoDB connection failed');
-  }
-};
-
-module.exports = connectToDb;
+// const {username,password} = p rocess.env;
+// export const connectionStl = "mongodb+srv://webdev:<rWCtZ7Yq08NhDIyf>@apis-project.bn5ur.mongodb.net/apis_db?retryWrites=true&w=majority&appName=Apis-Project"
