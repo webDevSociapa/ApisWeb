@@ -17,7 +17,7 @@ const Newsletter = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/send-subscribe', { email: formData }, {
+      const response = await axios.post('/api/subscribeNews', { email: formData }, {
         headers: { 'Content-Type': 'application/json' },
       });
       if (response.data.success) {

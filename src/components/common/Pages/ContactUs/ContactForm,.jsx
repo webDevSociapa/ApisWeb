@@ -21,7 +21,7 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/send-mail', formData, {
+      const response = await axios.post('/api/sendMail', formData, {
         headers: { 'Content-Type': 'application/json' },
       });
       if (response.data.success) {
