@@ -32,7 +32,21 @@ import Rectangle1 from "@/assets/images/OurBrands/Rectangle-1.png";
 import Rectangle2 from "@/assets/images/OurBrands/Rectangle-2.png";
 import Skin from '@/assets/images/OurBrands/skin.png';
 import Sustain from "@/assets/images/OurBrands/sustain.png";
+import Minrella from '@/assets/images/OurBrands/minrella.png'
+import VitaminSource from '@/assets/images/OurBrands/vitaminSource.png'
+import Ingrediant from '@/assets/images/OurBrands/ingrediant.png'
+import EnergyBoost from '@/assets/images/OurBrands/energyBoost.png'
 import AidsDigestion from "@/assets/images/OurBrands/AidsDigestion.png"
+import Psychology from "@/assets/images/OurBrands/psychology.png"
+import FiberRich from "@/assets/images/OurBrands/fiberRich.png"
+import Nutrient from "@/assets/images/OurBrands/nutrient.png"
+import LowClories from "@/assets/images/OurBrands/lowClories.png"
+import Digestive from "@/assets/images/OurBrands/digestive.png"
+import Versatile from "@/assets/images/OurBrands/versatile.png"
+import VersatileMeals from "@/assets/images/OurBrands/versatileMile.png"
+import NoArtificial from "@/assets/images/OurBrands/noArtificial.png"
+import Calcium from "@/assets/images/OurBrands/calcium.png"
+import Delious from "@/assets/images/OurBrands/delious.png"
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { PRODUCT_DATA } from "@/lib/constants";
@@ -167,6 +181,178 @@ const HEALTH_BENEFITS = [
   },
 ];
 
+const HEALTH_JAM = [
+  {
+    id: 1,
+    title: "Benifits",
+    desc: "Jam is an excellent option for a quick energy boost due to its high sugar content. The sugars in jam, primarily glucose and fructose, are simple carbohydrates that are rapidly absorbed into the bloodstream. This leads to a quick rise in blood sugar levels, providing a rapid source of energy.",
+    img: EnergyBoost,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "Benifits",
+    desc: "Jam is an excellent option for a quick energy boost due to its high sugar content. The sugars in jam, primarily glucose and fructose, are simple carbohydrates that are rapidly absorbed into the bloodstream. This leads to a quick rise in blood sugar levels, providing a rapid source of energy.",
+    img: Ingrediant,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 3,
+    title: "Benifits",
+    desc: "Jam is an excellent option for a quick energy boost due to its high sugar content. The sugars in jam, primarily glucose and fructose, are simple carbohydrates that are rapidly absorbed into the bloodstream. This leads to a quick rise in blood sugar levels, providing a rapid source of energy.",
+    img: VitaminSource,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 4,
+    title: "Benifits",
+    desc: "Jam is an excellent option for a quick energy boost due to its high sugar content. The sugars in jam, primarily glucose and fructose, are simple carbohydrates that are rapidly absorbed into the bloodstream. This leads to a quick rise in blood sugar levels, providing a rapid source of energy.",
+    img: Minrella,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+]
+const HEALTH_FLAKES = [
+  {
+    id: 1,
+    title: "Fiber-Rich",
+    desc: "Flakes, particularly whole grain varieties, are high in dietary fiber. Fiber aids digestion by promoting regular bowel movements and can help prevent constipation. It also supports heart health by reducing cholesterol levels and stabilizing blood sugar.",
+    img: Psychology,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "Low Calories",
+    desc: "Flakes, particularly whole grain varieties, are high in dietary fiber. Fiber aids digestion by promoting regular bowel movements and can help prevent constipation. It also supports heart health by reducing cholesterol levels and stabilizing blood sugar.",
+    img: FiberRich,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 3,
+    title: "Nutrient Dense",
+    desc: "Flakes, particularly whole grain varieties, are high in dietary fiber. Fiber aids digestion by promoting regular bowel movements and can help prevent constipation. It also supports heart health by reducing cholesterol levels and stabilizing blood sugar.",
+    img: Nutrient,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 4,
+    title: "Heart Health",
+    desc: "Flakes, particularly whole grain varieties, are high in dietary fiber. Fiber aids digestion by promoting regular bowel movements and can help prevent constipation. It also supports heart health by reducing cholesterol levels and stabilizing blood sugar.",
+    img: LowClories,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+]
+const HEALTH_VERNACALLI = [
+  {
+    id: 1,
+    title: "Fiber-Rich",
+    desc: "Vermicelli, a type of thin rice or wheat noodle, is typically low in calories, making it a suitable option for weight management. It provides a filling meal without adding excessive caloric intake.",
+    img: LowClories,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "Low Calories",
+    desc: "Vermicelli, a type of thin rice or wheat noodle, is typically low in calories, making it a suitable option for weight management. It provides a filling meal without adding excessive caloric intake.",
+    img: Digestive,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 3,
+    title: "Nutrient Dense",
+    desc: "Vermicelli, a type of thin rice or wheat noodle, is typically low in calories, making it a suitable option for weight management. It provides a filling meal without adding excessive caloric intake.",
+    img: EnergyBoost,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 4,
+    title: "Heart Health",
+    desc: "Vermicelli, a type of thin rice or wheat noodle, is typically low in calories, making it a suitable option for weight management. It provides a filling meal without adding excessive caloric intake.",
+    img: Versatile,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+]
+
+const HEALTH_MACRONI = [
+  {
+    id: 1,
+    title: "Fiber-Rich",
+    desc: "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
+    img: EnergyBoost,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "Low Calories",
+    desc: "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
+    img: Digestive,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 3,
+    title: "Nutrient Dense",
+    desc: "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
+    img: Nutrient,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 4,
+    title: "Heart Health",
+    desc: "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
+    img: VersatileMeals,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+]
+const HEALTH_SPEARD = [
+  {
+    id: 1,
+    title: "Fiber-Rich",
+    desc: "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
+    img: Calcium,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "Low Calories",
+    desc: "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
+    img: FiberRich,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 3,
+    title: "Nutrient Dense",
+    desc: "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
+    img: Delious,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 4,
+    title: "Heart Health",
+    desc: "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
+    img: NoArtificial,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+]
+
 const RECIPIES_DATA = [
   {
     img: Apple,
@@ -196,16 +382,44 @@ const RECIPIES_DATA = [
 
 const ProductDetails = () => {
   const searchParams = useSearchParams();
+  const [healthBenefit,sethealthBenefit] = useState()
   const [selectedContent, setSelectedContent] = useState(HEALTH_BENEFITS[0].id);
-  const selectedObj = HEALTH_BENEFITS.find((itm) => itm.id === selectedContent);
   const selectedBrand = PRODUCT_DATA.find(
     (itm) => itm.id == searchParams.get("brand_id")
   );
   const selectedProduct = selectedBrand.products.find(
     (itm) => itm.id == searchParams.get("product_id")
   );
+  
+  const renderBenefits = (benefits) => {
+    // sethealthBenefit(benefits)
+    return benefits.map((itm) => (
+      <div key={itm.id} className="flex flex-col w-1/2 items-center justify-center">
+        <div
+          className={`h-[110px] flex items-center justify-center w-[110px] border-2 border-[#9F7B49] rounded-full`}
+        >
+          <Image
+            src={itm?.img}
+            width={65}
+            height={65}
+            alt="header-logo"
+            className="h-[65px] w-[65px]"
+          />
+        </div>
+        <p className="text-center text-xs md:text-base my-4">
+          {itm?.title}
+        </p>
+      </div>
+    ));
+  };
 
-  console.log(selectedBrand, selectedProduct);
+  // const selectedObj = renderBenefits(`${}`).find((itm) => itm.id === selectedContent);
+
+
+  // console.log(renderBenefits(benefits),"renderBenefits");
+
+
+   if (!selectedBrand || !selectedProduct) return <p>Product or Brand not found</p>;
 
   return (
     <div className="relative flex flex-col items-center justify-center w-full">
@@ -357,27 +571,25 @@ const ProductDetails = () => {
         </p>
         <div className="w-full flex flex-col lg:flex-row">
           <div className="w-full lg:w-1/2 flex flex-wrap">
-            {HEALTH_BENEFITS.map((itm) => {
-              return (
-                <div className="flex flex-col w-1/2 items-center justify-center">
-                  <div
-                    className={` h-[110px] flex items-center justify-center w-[110px] border-2 border-[#9F7B49] rounded-full border-4`}
-                    // onClick={() => setSelectedContent(itm.id)}
-                  >
-                    <Image
-                      src={itm?.img}
-                      width={65}
-                      height={65}
-                      alt="header-logo"
-                      className="h-[65px]  w-[65px]"
-                    />
-                  </div>
-                  <p className="text-center text-xs md:text-base my-4">
-                    {itm?.title}
-                  </p>
-                </div>
-              );
-            })}
+          {selectedBrand.id === 1 && selectedProduct.id === 1 ? (
+        // Render HEALTH_BENEFITS if selectedBrand.id = 1 and selectedProduct.id = 1
+        renderBenefits(HEALTH_BENEFITS)
+      ) : selectedBrand.id === 2 && selectedProduct.id === 1 ?(
+        // Render HEALTH_JAM if selectedProduct.id = 1, 2, or 3
+        renderBenefits(HEALTH_JAM)
+      ): selectedBrand.id === 2 && selectedProduct.id === 2? (
+        renderBenefits(HEALTH_FLAKES)
+        // selectedProduct.id === 1 || selectedProduct.id === 2 || selectedProduct.id === 3
+      // ): selectedBrand.id === 2 && selectedProduct.id === 3 ? (
+      //   renderBenefits(HEALTH_BENEFITS)
+       ): selectedBrand.id === 2 && selectedProduct.id === 3 ? (
+        renderBenefits(HEALTH_VERNACALLI)
+      ) : selectedBrand.id === 2 && selectedProduct.id === 4 ? (
+        renderBenefits(HEALTH_MACRONI)
+      ): selectedBrand.id === 2 && selectedProduct.id === 5 ? (
+        renderBenefits(HEALTH_SPEARD)
+      ):"HELLO"
+      }
           </div>
           <div className="w-full lg:w-1/2 mt-20 lg:mt-0 px-0 md:px-8 flex justify-center items-center">
             <div
@@ -395,10 +607,10 @@ const ProductDetails = () => {
                 className="h-[135px] absolute hidden lg:inline -top-7 -right-7 z-0 ms w-[185px]"
               />
               <p className="z-20 absolute w-full text-center text-lg md:text-[24px] left-6 font-bold">
-                {selectedObj?.title}
+                {/* {selectedObj?.title} */}
               </p>
               <p className="z-20 absolute font-jost w-[90%] text-center text-xs md:text-base top-12 left-6 md:left-12">
-                {selectedObj?.desc}
+                {/* {selectedObj?.desc} */}
               </p>
               <div className="w-1/2 relative px-14 flex flex-col gap-8 items-center mt-12"></div>
             </div>
