@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Banner from "@/assets/images/OurBrands/OrganicHoney.png";
 import ImageBanner from "../../Layout/Banner";
 import EmblaCarousel from "../../Carousel/Carousel";
@@ -47,6 +47,14 @@ import VersatileMeals from "@/assets/images/OurBrands/versatileMile.png"
 import NoArtificial from "@/assets/images/OurBrands/noArtificial.png"
 import Calcium from "@/assets/images/OurBrands/calcium.png"
 import Delious from "@/assets/images/OurBrands/delious.png"
+import SkinCare from "@/assets/images/OurBrands/skinCare.png"
+import WeightLoss from "@/assets/images/OurBrands/weightLoss.png"
+import WoundHealing from "@/assets/images/OurBrands/woundHealing.png"
+import ProteinSource from "@/assets/images/OurBrands/proteinSource.png"
+import BoneStrength from "@/assets/images/OurBrands/BoneStrength.png"
+import HarmoneBalance from "@/assets/images/OurBrands/HarmoneBalance.png"
+import MoodEnhance from "@/assets/images/OurBrands/moodEnhance.png"
+import BrainFunction from "@/assets/images/OurBrands/BrainFunction.png"
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { PRODUCT_DATA } from "@/lib/constants";
@@ -150,6 +158,7 @@ const HEALTH_BENEFITS = [
   {
     id: 1,
     title: "Boosts Immunity",
+    name:"Boosts Immunity",
     desc: "Honey is packed with antioxidants that boost your immune system and help fight off illnesses. Regular consumption of honey can strengthen your body’s defenses and promote overall health.",
     img: HoneyShield,
     shadowClass: "shadow-custom-yellow",
@@ -158,6 +167,7 @@ const HEALTH_BENEFITS = [
   {
     id: 2,
     title: "Skin Elixir",
+    name:"Boosts Immunity",
     desc: "Honey is packed with antioxidants that boost your immune system and help fight off illnesses. Regular consumption of honey can strengthen your body’s defenses and promote overall health.",
     img: Skin,
     shadowClass: "shadow-custom-darkGreen",
@@ -166,6 +176,7 @@ const HEALTH_BENEFITS = [
   {
     id: 3,
     title: "Sustainability",
+    name:"Boosts Immunity",
     desc: "Honey is packed with antioxidants that boost your immune system and help fight off illnesses. Regular consumption of honey can strengthen your body’s defenses and promote overall health.",
     img: Sustain,
     shadowClass: "shadow-custom-rama",
@@ -174,8 +185,47 @@ const HEALTH_BENEFITS = [
   {
     id: 4,
     title: "Aids Digestion",
+    name:"Boosts Immunity",
     desc: "Honey is packed with antioxidants that boost your immune system and help fight off illnesses. Regular consumption of honey can strengthen your body’s defenses and promote overall health.",
     img: AidsDigestion,
+    shadowClass: "shadow-custom-pink",
+    color: "bg-[#E09384]",
+  },
+];
+const HEALTH_DATE = [
+  {
+    id: 1,
+    title: "Nutrient Dense",
+    name:"Benefits",
+    desc: "Dates are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
+    img: Nutrient,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "Digestive Health",
+    name:"Benefits",
+    desc: "Dates are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
+    img: Digestive,
+    shadowClass: "shadow-custom-darkGreen",
+    color: "bg-[#39412D]",
+  },
+  {
+    id: 3,
+    title: "Energy Boost",
+    name:"Benefits",
+    desc: "Dates are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
+    img: EnergyBoost,
+    shadowClass: "shadow-custom-rama",
+    color: "bg-[#416E7C]",
+  },
+  {
+    id: 4,
+    title: "Heart Health",
+    name:"Benefits",
+    desc: "Dates are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
+    img: Psychology,
     shadowClass: "shadow-custom-pink",
     color: "bg-[#E09384]",
   },
@@ -184,7 +234,8 @@ const HEALTH_BENEFITS = [
 const HEALTH_JAM = [
   {
     id: 1,
-    title: "Benifits",
+    title: "Energy Boost",
+    name:"Benefits",
     desc: "Jam is an excellent option for a quick energy boost due to its high sugar content. The sugars in jam, primarily glucose and fructose, are simple carbohydrates that are rapidly absorbed into the bloodstream. This leads to a quick rise in blood sugar levels, providing a rapid source of energy.",
     img: EnergyBoost,
     shadowClass: "shadow-custom-yellow",
@@ -192,7 +243,8 @@ const HEALTH_JAM = [
   },
   {
     id: 2,
-    title: "Benifits",
+    title: "Versatile Ingredient",
+    name:"Benefits",
     desc: "Jam is an excellent option for a quick energy boost due to its high sugar content. The sugars in jam, primarily glucose and fructose, are simple carbohydrates that are rapidly absorbed into the bloodstream. This leads to a quick rise in blood sugar levels, providing a rapid source of energy.",
     img: Ingrediant,
     shadowClass: "shadow-custom-yellow",
@@ -200,7 +252,8 @@ const HEALTH_JAM = [
   },
   {
     id: 3,
-    title: "Benifits",
+    title: "Vitamin Source",
+    name:"Benefits",
     desc: "Jam is an excellent option for a quick energy boost due to its high sugar content. The sugars in jam, primarily glucose and fructose, are simple carbohydrates that are rapidly absorbed into the bloodstream. This leads to a quick rise in blood sugar levels, providing a rapid source of energy.",
     img: VitaminSource,
     shadowClass: "shadow-custom-yellow",
@@ -208,7 +261,8 @@ const HEALTH_JAM = [
   },
   {
     id: 4,
-    title: "Benifits",
+    title: "Contain Minerals",
+    name:"Benefits",
     desc: "Jam is an excellent option for a quick energy boost due to its high sugar content. The sugars in jam, primarily glucose and fructose, are simple carbohydrates that are rapidly absorbed into the bloodstream. This leads to a quick rise in blood sugar levels, providing a rapid source of energy.",
     img: Minrella,
     shadowClass: "shadow-custom-yellow",
@@ -219,22 +273,27 @@ const HEALTH_FLAKES = [
   {
     id: 1,
     title: "Fiber-Rich",
-    desc: "Flakes, particularly whole grain varieties, are high in dietary fiber. Fiber aids digestion by promoting regular bowel movements and can help prevent constipation. It also supports heart health by reducing cholesterol levels and stabilizing blood sugar.",
-    img: Psychology,
-    shadowClass: "shadow-custom-yellow",
-    color: "bg-[#FFC660]",
-  },
-  {
-    id: 2,
-    title: "Low Calories",
+    name:"Benefits",
     desc: "Flakes, particularly whole grain varieties, are high in dietary fiber. Fiber aids digestion by promoting regular bowel movements and can help prevent constipation. It also supports heart health by reducing cholesterol levels and stabilizing blood sugar.",
     img: FiberRich,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
   },
   {
+    id: 2,
+    title: "Low Calories",
+    name:"Benefits",
+
+    desc: "Flakes, particularly whole grain varieties, are high in dietary fiber. Fiber aids digestion by promoting regular bowel movements and can help prevent constipation. It also supports heart health by reducing cholesterol levels and stabilizing blood sugar.",
+    img: Psychology,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
     id: 3,
     title: "Nutrient Dense",
+    name:"Benefits",
+
     desc: "Flakes, particularly whole grain varieties, are high in dietary fiber. Fiber aids digestion by promoting regular bowel movements and can help prevent constipation. It also supports heart health by reducing cholesterol levels and stabilizing blood sugar.",
     img: Nutrient,
     shadowClass: "shadow-custom-yellow",
@@ -243,6 +302,8 @@ const HEALTH_FLAKES = [
   {
     id: 4,
     title: "Heart Health",
+    name:"Benefits",
+
     desc: "Flakes, particularly whole grain varieties, are high in dietary fiber. Fiber aids digestion by promoting regular bowel movements and can help prevent constipation. It also supports heart health by reducing cholesterol levels and stabilizing blood sugar.",
     img: LowClories,
     shadowClass: "shadow-custom-yellow",
@@ -252,7 +313,8 @@ const HEALTH_FLAKES = [
 const HEALTH_VERNACALLI = [
   {
     id: 1,
-    title: "Fiber-Rich",
+    title: "Low Calories",
+    name:"Benefits",
     desc: "Vermicelli, a type of thin rice or wheat noodle, is typically low in calories, making it a suitable option for weight management. It provides a filling meal without adding excessive caloric intake.",
     img: LowClories,
     shadowClass: "shadow-custom-yellow",
@@ -260,7 +322,8 @@ const HEALTH_VERNACALLI = [
   },
   {
     id: 2,
-    title: "Low Calories",
+    title: "Digestive Health",
+    name:"Benefits",
     desc: "Vermicelli, a type of thin rice or wheat noodle, is typically low in calories, making it a suitable option for weight management. It provides a filling meal without adding excessive caloric intake.",
     img: Digestive,
     shadowClass: "shadow-custom-yellow",
@@ -268,7 +331,8 @@ const HEALTH_VERNACALLI = [
   },
   {
     id: 3,
-    title: "Nutrient Dense",
+    title: "Energy Source",
+    name:"Benefits",
     desc: "Vermicelli, a type of thin rice or wheat noodle, is typically low in calories, making it a suitable option for weight management. It provides a filling meal without adding excessive caloric intake.",
     img: EnergyBoost,
     shadowClass: "shadow-custom-yellow",
@@ -276,7 +340,8 @@ const HEALTH_VERNACALLI = [
   },
   {
     id: 4,
-    title: "Heart Health",
+    title: "Versatile Use",
+    name:"Benefits",
     desc: "Vermicelli, a type of thin rice or wheat noodle, is typically low in calories, making it a suitable option for weight management. It provides a filling meal without adding excessive caloric intake.",
     img: Versatile,
     shadowClass: "shadow-custom-yellow",
@@ -287,7 +352,9 @@ const HEALTH_VERNACALLI = [
 const HEALTH_MACRONI = [
   {
     id: 1,
-    title: "Fiber-Rich",
+    title: "Energy Boost",
+    name:"Benefits",
+
     desc: "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
     img: EnergyBoost,
     shadowClass: "shadow-custom-yellow",
@@ -295,7 +362,8 @@ const HEALTH_MACRONI = [
   },
   {
     id: 2,
-    title: "Low Calories",
+    title: "Digestive Health",
+    name:"Benefits",
     desc: "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
     img: Digestive,
     shadowClass: "shadow-custom-yellow",
@@ -303,7 +371,8 @@ const HEALTH_MACRONI = [
   },
   {
     id: 3,
-    title: "Nutrient Dense",
+    title: "Nutrient Rich",
+    name:"Benefits",
     desc: "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
     img: Nutrient,
     shadowClass: "shadow-custom-yellow",
@@ -311,7 +380,8 @@ const HEALTH_MACRONI = [
   },
   {
     id: 4,
-    title: "Heart Health",
+    title: "Versatile Meals",
+    name:"Benefits",
     desc: "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
     img: VersatileMeals,
     shadowClass: "shadow-custom-yellow",
@@ -322,7 +392,9 @@ const HEALTH_SPEARD = [
   {
     id: 1,
     title: "Fiber-Rich",
-    desc: "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
+    name:"Benefits",
+
+    desc: "Aside from being a flavor-filled chocolaty spread, it is also a source of calcium &amp; iron. As such, Apis Chocolate Spread also carries the benefits drawn from these minerals. The spread can be used in addition to any healthy meal for more satisfaction.",
     img: Calcium,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
@@ -330,7 +402,9 @@ const HEALTH_SPEARD = [
   {
     id: 2,
     title: "Low Calories",
-    desc: "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
+    name:"Benefits",
+
+    desc: "Aside from being a flavor-filled chocolaty spread, it is also a source of calcium &amp; iron. As such, Apis Chocolate Spread also carries the benefits drawn from these minerals. The spread can be used in addition to any healthy meal for more satisfaction.",
     img: FiberRich,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
@@ -338,7 +412,9 @@ const HEALTH_SPEARD = [
   {
     id: 3,
     title: "Nutrient Dense",
-    desc: "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
+    name:"Benefits",
+
+    desc: "Aside from being a flavor-filled chocolaty spread, it is also a source of calcium &amp; iron. As such, Apis Chocolate Spread also carries the benefits drawn from these minerals. The spread can be used in addition to any healthy meal for more satisfaction.",
     img: Delious,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
@@ -346,13 +422,181 @@ const HEALTH_SPEARD = [
   {
     id: 4,
     title: "Heart Health",
-    desc: "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
+    name:"Benefits",
+
+    desc: "Aside from being a flavor-filled chocolaty spread, it is also a source of calcium &amp; iron. As such, Apis Chocolate Spread also carries the benefits drawn from these minerals. The spread can be used in addition to any healthy meal for more satisfaction.",
     img: NoArtificial,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
   },
 ]
+const COOKING_PASTE = [
+  {
+    id: 1,
+    title: "As a Skin Care Solution",
+    name:"Benefits",
+    desc: "Honey has been used for aesthetic purposes especially to return vigour and beauty to skin. When applied together with milk, honey creates a smooth, flawless skin. Real honey is also used for softening hair texture and for glowing skin.",
+    img: SkinCare,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "For Weight Loss",
+    name:"Benefits",
 
+    desc: "Honey has been used for aesthetic purposes especially to return vigour and beauty to skin. When applied together with milk, honey creates a smooth, flawless skin. Real honey is also used for softening hair texture and for glowing skin.",
+    img: WeightLoss,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 3,
+    title: "For Wound Healing",
+    name:"Benefits",
+
+    desc: "Honey has been used for aesthetic purposes especially to return vigour and beauty to skin. When applied together with milk, honey creates a smooth, flawless skin. Real honey is also used for softening hair texture and for glowing skin.",
+    img: WoundHealing,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 4,
+    title: "Energy and performance",
+    name:"Benefits",
+
+    desc: "Honey has been used for aesthetic purposes especially to return vigour and beauty to skin. When applied together with milk, honey creates a smooth, flawless skin. Real honey is also used for softening hair texture and for glowing skin.",
+    img: EnergyBoost,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+]
+const SOYA_CHUNK = [
+  {
+    id: 1,
+    title: "Protein Source",
+    name:"Benefits",
+
+    desc: "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
+    img: ProteinSource,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "Heart Health",
+    name:"Benefits",
+
+    desc: "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
+    img: Psychology,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 3,
+    title: "Bone Strength",
+    name:"Benefits",
+
+    desc: "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
+    img: BoneStrength,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 4,
+    title: "Hormone Balance",
+    name:"Benefits",
+
+    desc: "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
+    img: HarmoneBalance,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+]
+const SAFFRON = [
+  {
+    id: 1,
+    title: "Mood Enhancement",
+    name:"Benefits",
+
+    desc: "Saffron contains compounds like crocin and safranal, which have been shown to positively affect mood and may help alleviate symptoms of depression and anxiety. Regular consumption can contribute to improved emotional well-being.",
+    img: MoodEnhance,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "Antioxidant Properties",
+    name:"Benefits",
+
+    desc: "Saffron contains compounds like crocin and safranal, which have been shown to positively affect mood and may help alleviate symptoms of depression and anxiety. Regular consumption can contribute to improved emotional well-being.",
+    img: Calcium,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 3,
+    title: "Digestive Health",
+    name:"Benefits",
+
+    desc: "Saffron contains compounds like crocin and safranal, which have been shown to positively affect mood and may help alleviate symptoms of depression and anxiety. Regular consumption can contribute to improved emotional well-being.",
+    img: Digestive,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 4,
+    title: "Skin Benefits",
+    name:"Benefits",
+
+    desc: "Saffron contains compounds like crocin and safranal, which have been shown to positively affect mood and may help alleviate symptoms of depression and anxiety. Regular consumption can contribute to improved emotional well-being.",
+    img: SkinCare,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+]
+const GREEN_TEA = [
+  {
+    id: 1,
+    title: "Antioxidant Boost",
+    name:"Benefits",
+
+    desc: "Green tea is rich in antioxidants, particularly catechins like EGCG, which help combat oxidative stress and neutralize harmful free radicals. These antioxidants support overall health by reducing inflammation and protecting cells from damage.",
+    img: Calcium,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "Heart Health",
+    name:"Benefits",
+
+    desc: "Green tea is rich in antioxidants, particularly catechins like EGCG, which help combat oxidative stress and neutralize harmful free radicals. These antioxidants support overall health by reducing inflammation and protecting cells from damage.",
+    img: Psychology,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 3,
+    title: "Metabolism Aid",
+    name:"Benefits",
+
+    desc: "Green tea is rich in antioxidants, particularly catechins like EGCG, which help combat oxidative stress and neutralize harmful free radicals. These antioxidants support overall health by reducing inflammation and protecting cells from damage.",
+    img: Digestive,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 4,
+    title:"Brain Function",
+    name:"Benefits",
+
+    desc: "Green tea is rich in antioxidants, particularly catechins like EGCG, which help combat oxidative stress and neutralize harmful free radicals. These antioxidants support overall health by reducing inflammation and protecting cells from damage.",
+    img: BrainFunction,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+]
 const RECIPIES_DATA = [
   {
     img: Apple,
@@ -379,20 +623,19 @@ const RECIPIES_DATA = [
     descreption: "Nature's golden nectar, pure and organic",
   },
 ];
-
 const ProductDetails = () => {
   const searchParams = useSearchParams();
   const [healthBenefit,sethealthBenefit] = useState()
-  const [selectedContent, setSelectedContent] = useState(HEALTH_BENEFITS[0].id);
+  const [selectedContent, setSelectedContent] = useState(null); // Hold the selected health benefit content
+  // const [selectedContent, setSelectedContent] = useState(HEALTH_BENEFITS[0].id);
   const selectedBrand = PRODUCT_DATA.find(
     (itm) => itm.id == searchParams.get("brand_id")
   );
   const selectedProduct = selectedBrand.products.find(
     (itm) => itm.id == searchParams.get("product_id")
   );
-  
+  console.log("selectedContent",selectedContent);
   const renderBenefits = (benefits) => {
-    // sethealthBenefit(benefits)
     return benefits.map((itm) => (
       <div key={itm.id} className="flex flex-col w-1/2 items-center justify-center">
         <div
@@ -412,14 +655,48 @@ const ProductDetails = () => {
       </div>
     ));
   };
+  useEffect(() => {
+    // When the component mounts, set the initial content from the first benefit
+    let benefits = null;
+
+    if (selectedBrand?.id === 1 && selectedProduct?.id === 1) {
+      benefits = HEALTH_BENEFITS;
+    } else if (selectedBrand?.id === 1 && selectedProduct?.id === 2) {
+      benefits = HEALTH_DATE;
+    } else if (selectedBrand?.id === 2 && selectedProduct?.id === 1) {
+      benefits = HEALTH_JAM;
+    } else if (selectedBrand?.id === 2 && selectedProduct?.id === 2) {
+      benefits = HEALTH_FLAKES;
+    } else if (selectedBrand?.id === 2 && selectedProduct?.id === 3) {
+      benefits = HEALTH_VERNACALLI;
+    } else if (selectedBrand?.id === 2 && selectedProduct?.id === 4) {
+      benefits = HEALTH_MACRONI;
+    } else if (selectedBrand?.id === 2 && selectedProduct?.id === 5) {
+      benefits = HEALTH_SPEARD;
+    } else if(selectedBrand?.id === 3 && selectedProduct?.id === 1) {
+      benefits = COOKING_PASTE;
+    } else if(selectedBrand?.id === 3 && selectedProduct?.id === 2) {
+      benefits = SOYA_CHUNK;
+    }
+    else if(selectedBrand?.id === 3 && selectedProduct?.id === 3) {
+      benefits = SAFFRON;
+    }
+    else if(selectedBrand?.id === 4 && selectedProduct?.id === 1) {
+      benefits = GREEN_TEA;
+    }
+
+    // Set the first health benefit as the selected content on page render
+    if (benefits && benefits.length > 0) {
+      setSelectedContent(benefits[0]);
+    }
+  }, [selectedBrand, selectedProduct]); // Re-run when selectedBrand or selectedProduct changes
+
+  if (!selectedBrand || !selectedProduct) return <p>Product or Brand not found</p>;
 
   // const selectedObj = renderBenefits(`${}`).find((itm) => itm.id === selectedContent);
 
 
   // console.log(renderBenefits(benefits),"renderBenefits");
-
-
-   if (!selectedBrand || !selectedProduct) return <p>Product or Brand not found</p>;
 
   return (
     <div className="relative flex flex-col items-center justify-center w-full">
@@ -571,25 +848,30 @@ const ProductDetails = () => {
         </p>
         <div className="w-full flex flex-col lg:flex-row">
           <div className="w-full lg:w-1/2 flex flex-wrap">
-          {selectedBrand.id === 1 && selectedProduct.id === 1 ? (
-        // Render HEALTH_BENEFITS if selectedBrand.id = 1 and selectedProduct.id = 1
-        renderBenefits(HEALTH_BENEFITS)
-      ) : selectedBrand.id === 2 && selectedProduct.id === 1 ?(
-        // Render HEALTH_JAM if selectedProduct.id = 1, 2, or 3
-        renderBenefits(HEALTH_JAM)
-      ): selectedBrand.id === 2 && selectedProduct.id === 2? (
-        renderBenefits(HEALTH_FLAKES)
-        // selectedProduct.id === 1 || selectedProduct.id === 2 || selectedProduct.id === 3
-      // ): selectedBrand.id === 2 && selectedProduct.id === 3 ? (
-      //   renderBenefits(HEALTH_BENEFITS)
-       ): selectedBrand.id === 2 && selectedProduct.id === 3 ? (
-        renderBenefits(HEALTH_VERNACALLI)
-      ) : selectedBrand.id === 2 && selectedProduct.id === 4 ? (
-        renderBenefits(HEALTH_MACRONI)
-      ): selectedBrand.id === 2 && selectedProduct.id === 5 ? (
-        renderBenefits(HEALTH_SPEARD)
-      ):"HELLO"
-      }
+          {selectedBrand?.id === 1 && selectedProduct?.id === 1 ? (
+            renderBenefits(HEALTH_BENEFITS)
+          ) : selectedBrand?.id === 1 && selectedProduct?.id === 2 ? (
+            renderBenefits(HEALTH_DATE)
+          ) : selectedBrand?.id === 2 && selectedProduct?.id === 1 ? (
+            renderBenefits(HEALTH_JAM)
+          ) : selectedBrand?.id === 2 && selectedProduct?.id === 2 ? (
+            renderBenefits(HEALTH_FLAKES)
+          ) : selectedBrand?.id === 2 && selectedProduct?.id === 3 ? (
+            renderBenefits(HEALTH_VERNACALLI)
+          ) : selectedBrand?.id === 2 && selectedProduct?.id === 4 ? (
+            renderBenefits(HEALTH_MACRONI)
+          ) : selectedBrand?.id === 2 && selectedProduct?.id === 5 ? (
+            renderBenefits(HEALTH_SPEARD)
+          ) : selectedBrand?.id === 3 && selectedProduct?.id === 1 ? (
+            renderBenefits(COOKING_PASTE)
+          ): selectedBrand?.id === 3 && selectedProduct?.id === 2 ? (
+            renderBenefits(SOYA_CHUNK)
+          ): selectedBrand?.id === 3 && selectedProduct?.id === 3 ? (
+            renderBenefits(SAFFRON)
+          ) : selectedBrand?.id === 4 && selectedProduct?.id === 1 ? (
+            renderBenefits(GREEN_TEA)
+          ):""
+          }
           </div>
           <div className="w-full lg:w-1/2 mt-20 lg:mt-0 px-0 md:px-8 flex justify-center items-center">
             <div
@@ -607,10 +889,10 @@ const ProductDetails = () => {
                 className="h-[135px] absolute hidden lg:inline -top-7 -right-7 z-0 ms w-[185px]"
               />
               <p className="z-20 absolute w-full text-center text-lg md:text-[24px] left-6 font-bold">
-                {/* {selectedObj?.title} */}
+                {selectedContent?.name}
               </p>
               <p className="z-20 absolute font-jost w-[90%] text-center text-xs md:text-base top-12 left-6 md:left-12">
-                {/* {selectedObj?.desc} */}
+                {selectedContent?.desc}
               </p>
               <div className="w-1/2 relative px-14 flex flex-col gap-8 items-center mt-12"></div>
             </div>
