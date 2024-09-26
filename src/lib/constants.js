@@ -82,6 +82,10 @@ export const PATH_DATA = [
     name: "Sustainability",
   },
   {
+    url: "/our-blog",
+    name: "Our Blog",
+  },
+  {
     url: "/contact-us",
     name: "Contact Us",
   },
@@ -345,5 +349,6 @@ export const PRODUCT_DATA = [
         secondary_color: "",
       },
     ],
-  },
+  }
+
 ];

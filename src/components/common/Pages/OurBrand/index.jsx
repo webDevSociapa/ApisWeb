@@ -8,7 +8,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { PRODUCT_DATA } from "@/lib/constants";
 export default function OurBrand() {
-  
+
   const BRAND_DATA = [
     {
       id: 1,
@@ -33,6 +33,7 @@ export default function OurBrand() {
   ];
 
   const [selectedBrand, setSelectedBrand] = useState(BRAND_DATA[0].id);
+
 
   return (
     <div className="relative">
@@ -60,7 +61,13 @@ export default function OurBrand() {
                 return (
                   <p
                     className={`text-xs md:text-xl 2xl:text-2xl cursor-pointer text-black ${selectedBrand === brand.id ? "font-bold" : "font-normal"}`}
-                    onClick={() => setSelectedBrand(brand.id)}
+                    onClick={() => {
+                      if (brand.title === "Recipes") {
+                        window.location.href = "/our-brand/recipes"; // redirect to /our-brand/recipes
+                      } else {
+                        setSelectedBrand(brand.id);
+                      }
+                    }}
                   >
                     {brand.title}
                   </p>

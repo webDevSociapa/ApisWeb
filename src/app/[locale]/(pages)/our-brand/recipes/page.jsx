@@ -57,169 +57,191 @@ const page = () => {
     //   time: "Prep 10 min",
     //   descreption: "Nature's golden nectar, pure and organic",
     // },
-    // {
-    //   img: Berry,
-    //   title: "Honey Berry Fruit Pan Cake",
+    {
+      video: "https://www.youtube.com/embed/OAh6X5RIPvg?si=VRG5Bw7_k2356Syd",
+      // title:"Himalaya Honey",
+      title: "Paneer in Apis Honey Lemon Sauce",
+      name:"Himalaya Honey",
+      time: "Prep 10 min",
+      descreption: "Nature's golden nectar, pure and organic",
+    },
+    {
+      video: "https://www.youtube.com/embed/DXdbIOnI4fs?si=cwgqH9g70o0vhAAD",
+      title: "Apis Honey Chilli Idli",
+      time: "Prep 10 min",
+      name:"Himalaya Honey",
+      descreption: "Nature's golden nectar, pure and organic",
+    },
+    {
+      img: "https://www.youtube.com/embed/8xAEZMjoI7U?si=BCtDVosB050LS1Ci",
+      title: "Apis Honey & Dates Sweet and Sour Dip",
+      time: "Prep 10 min",
+      name:"Himalaya Honey",
+      descreption: "Nature's golden nectar, pure and organic",
+    },
+    {
+        video: "https://www.youtube.com/embed/RAEruyy_4fc?si=QNkw-Eh_MI7uuKG7",
+        title: "Apis Honey Chilli Potato",
+        name:"Himalaya Honey",
+        time: "Prep 10 min",
+        descreption: "Nature's golden nectar, pure and organic",
+    },
+    {
+        video: "https://www.youtube.com/embed/S8g2Uq2MNlw?si=yq34TnOsgk-k4MOl",
+        title: "Apis Honey & Dates Fruit Cake",
+        name:"Himalaya Honey",
+        name:"",
+        time: "Prep 10 min",
+        descreption: "Nature's golden nectar, pure and organic",
+    },
+    //   img: MIXEDFRUIT,
+      {
+        video: "https://www.youtube.com/embed/i10MOtI-8PE?si=HY2taGRb-MeK66Un",
+        title: "Honey Modak Recipe - Ganesh Chaturthi Special",
+        name:"Himalaya Honey",
+
+        time: "Prep 10 min",
+        descreption: "Honey Muffin Recipe",
+      },
+    //   img: MIXEDFRUIT,
+    //   title: "Apis Jam Recipe Ideas",
+    //   name:"",
     //   time: "Prep 10 min",
     //   descreption: "Nature's golden nectar, pure and organic",
+    //   type:"1"
+
     // },
     // {
-    //   img: Apple,
-    //   title: "Honey Apple Fruit Chat",
+    //   img: JAMFILLED,
+    //   title: "Apis Jam Recipe Ideas",
+    //   name:"",
     //   time: "Prep 10 min",
     //   descreption: "Nature's golden nectar, pure and organic",
-    // },
-    // {
-    //   img: Berry,
-    //   title: "Honey Apple Fruit Chat",
-    //   time: "Prep 10 min",
-    //   descreption: "Nature's golden nectar, pure and organic",
+    //   type:"1"
+
     // },
     {
-      img: HOMEJAM,
-      title: "Apis Jam Recipe Ideas",
-      name:"",
+      video: "https://www.youtube.com/embed/WEHMLMu00A4?si=IpcbraTVQr9_D-_x",
+      title: "Apis Soya Chunks Kebab Recipe | Kebab Recipes | Seekh Kebab",
       time: "Prep 10 min",
-      descreption: "Nature's golden nectar, pure and organic",
-    },
-    {
-      img: MIXEDFRUIT,
-      title: "Apis Jam Recipe Ideas",
-      name:"",
-      time: "Prep 10 min",
-      descreption: "Nature's golden nectar, pure and organic",
-      type:"1"
+      name:"Soya Chunks Kebab",
+      descreption: "Apis Soya Chunks Kebab Recipe | Kebab Recipes | Seekh Kebab",
 
     },
     {
-      img: JAMFILLED,
-      title: "Apis Jam Recipe Ideas",
-      name:"",
+      video: "https://www.youtube.com/embed/XDzOMTZy_n0?si=ShwydgtGqI1ynaE9",
+      title: "Apis Recipes : Honey BBQ Chicken Recipe",
       time: "Prep 10 min",
-      descreption: "Nature's golden nectar, pure and organic",
-      type:"1"
+      name:"Himalaya Honey",
+      descreption: "Apis Recipes : Honey BBQ Chicken Recipe",
 
     },
     {
-      img: RICEPUDDING,
-      title: "Apis Jam Recipe Ideas",
-      name:"",
+      video: "https://www.youtube.com/embed/9VRrtyF0OEA?si=WbZwBC44wQnpI7pn",
+      title: "Apis Dates Halwa | khajoor ka halwa",
       time: "Prep 10 min",
-      descreption: "Nature's golden nectar, pure and organic",
+      name:"Himalaya Honey",
+      descreption: "Apis Dates Halwa | khajoor ka halwa | डेट्स (खजूर) हलवा रेसिपी | With Apis Honey | No Sugar",
+    },
+    {
+      video: "https://www.youtube.com/embed/NeL3kvnYyXQ?si=u1soO1g7rznNRBAU",
+      title: "Apis Recipes | Honey Glazed Carrots",
+      time: "Prep 10 min",
+      descreption: "Apis Recipes | Honey Glazed Carrots",
 
     },
     {
-      img: BriDate,
-      title: "Apis Dates Recipe Ideas",
-      name:"",
+      video: "https://www.youtube.com/embed/hf4P8aFybvQ?si=zeR0fknIV7KgkDCH",
+      title: "Honey Muffin Recipe",
+      name:"Himalaya Honey",
+      time: "Prep 10 min",
+      descreption: "Honey Muffin Recipe",
+    },
+    {
+      img: "https://www.youtube.com/embed/1-pxUwrb1jY?si=08r_VNFeS0p-kbp7",
+      title: "Honey Peanut Butter Sandwich Recipe",
+      name:"Himalaya Honey",
+      time: "Prep 10 min",
+      descreption: "Honey Chocolate Tart Recipe",
+    },
+    {
+      img: "https://www.youtube.com/embed/1-pxUwrb1jY?si=AniM7DGGcWsHqMLS",
+      title: "Honey Chocolate Tart Recipe",
+      name:"Himalaya Honey",
+
       time: "Prep 10 min",
       descreption: "Nature's golden nectar, pure and organic",
+      descreption: "Honey Chocolate Tart Recipe",
 
     },
     {
-      img: WalnutCake,
-      title: "Apis Dates Recipe Ideas",
-      name:"",
-      time: "Prep 10 min",
-      descreption: "Nature's golden nectar, pure and organic",
-    },
-    {
-      img: Otmeal,
-      title: "Apis Dates Recipe Ideas",
-      name:"",
-      time: "Prep 10 min",
-      descreption: "Nature's golden nectar, pure and organic",
+      img: "https://www.youtube.com/embed/jIcuAKg2O88?si=0LTbXtYGURxaySPj",
+      title: "Honey Chicken Wings Recipe - Apis",
+      name:"Himalaya Honey",
 
-    },
-    {
-      img: Chocolate,
-      title: "Apis Dates Recipe Ideas",
-      name:"",
-      time: "Prep 10 min",
-      descreption: "Nature's golden nectar, pure and organic",
-    },
-    {
-      img: GreenBeans,
-      title: "Ginger Garlic Recipe Ideas",
-      name:"",
-      time: "Prep 10 min",
-      descreption: "Nature's golden nectar, pure and organic",
-    },
-    {
-      img: SpicyLentil,
-      title: "Ginger Garlic Recipe Ideas",
-      name:"",
       time: "Prep 10 min",
       descreption: "Nature's golden nectar, pure and organic",
 
     },
     {
-      img: GingerApis,
-      title: "Ginger Garlic Recipe Ideas",
-      name:"",
+      img: "https://www.youtube.com/embed/kGOJpsTJNI8?si=O87ESoR3CvnLWqqR",
+      title: "Lemon Honey Dhokla Recipe - Apis Himalaya Honey",
+      name:"Himalaya Honey",
       time: "Prep 10 min",
-      descreption: "Nature's golden nectar, pure and organic",
+      descreption: "Lemon Honey Dhokla Recipe - Apis Himalaya Honey",
 
     },
     {
-      img: ChickenCurry,
-      title: "Ginger Garlic Recipe Ideas",
-      name:"",
+      img: "https://www.youtube.com/embed/nqjVqM4IVMc?si=w7eJU292rmcAf1XX",
+      title: "Apis Chocoflakes Chocolate Cluster Recipe",
+      name:"Chocho Flakes",
       time: "Prep 10 min",
-      descreption: "Nature's golden nectar, pure and organic",
-
+      descreption: "Apis Chocoflakes Chocolate Cluster Recipe",
+      type:"4"
     },
     {
-      img: TeaLeaf,
-      title: "Green Tea Ideas",
-      name:"",
+      img: "https://www.youtube.com/embed/sp7PAZwkvqc?si=AcuSlmnUaZ38mqnm",
+      title: "Apis Himalaya Honey Chicken Thighs Recipe",
+      name:"Himalaya Honey",
+      time: "Prep 10 min",
+      descreption: "Apis Himalaya Honey Chicken Thighs Recipe",
+      type:"4"
+    },
+    {
+      img: "https://www.youtube.com/embed/UaKnrJ7jxUA?si=mWn1ppflQj1BT6nr",
+      title: "Apis Cornflakes Paneer Nuggets Recipe",
+      name:"Corn Flakes",
       time: "Prep 10 min",
       descreption: "Nature's golden nectar, pure and organic",
       type:"4"
     },
     {
-      img: GreenTreePeach,
-      title: "Green Tea Ideas",
-      name:"",
+      img: "https://www.youtube.com/embed/LJIVoHMoEfo?si=Hv-wWlfnVSoJQALl",
+      title: "Apis Cornflakes Recipe",
+      name:"Himalaya Honey",
       time: "Prep 10 min",
-      descreption: "Nature's golden nectar, pure and organic",
+      descreption: "Apis Cornflakes Recipe",
       type:"4"
     },
     {
-      img: StrawBerry,
-      title: "Green Tea Ideas",
+      img: "https://www.youtube.com/embed/ZKam7KXIJaE?si=lvYKoIIVkm07Utd0",
+      title: "Apis Dates Gujiya Recipe",
       name:"",
       time: "Prep 10 min",
-      descreption: "Nature's golden nectar, pure and organic",
-      type:"4"
-    },
-    {
-      img: LemonyTea,
-      title: "Green Tea Ideas",
-      name:"",
-      time: "Prep 10 min",
-      descreption: "Nature's golden nectar, pure and organic",
-      type:"4"
-    },
-    {
-      img: MacaroniSalad,
-      title: "Macroni Recipes Ideas",
-      name:"",
-      time: "Prep 10 min",
-      descreption: "Nature's golden nectar, pure and organic",
+      descreption: "Apis Dates Gujiya Recipe",
       type:"5"
     },
     {
       img: MasalaMacaroni,
-      title: "Macroni Recipes Ideas",
-      name:"",
+      title: "Apis Honey Chilli Eggs - Recipe",
+      name:"Himalaya Honey",
       time: "Prep 10 min",
       descreption: "Nature's golden nectar, pure and organic",
       type:"5"
     },
     {
       img: AchaariPaneer,
-      title: "Pickles Recipe Ideas",
+      title: "Dates Pie Recipe - Apis",
       name:"",
       time: "Prep 10 min",
       descreption: "Nature's golden nectar, pure and organic",
@@ -227,7 +249,7 @@ const page = () => {
     },
     {
       img: AchaariChicken,
-      title: "Pickles Recipe Ideas",
+      title: "Honey Chilli Lotus Stem by Neha Deepak Shah ",
       name:"",
       time: "Prep 10 min",
       descreption: "Nature's golden nectar, pure and organic",
@@ -235,7 +257,7 @@ const page = () => {
     },
     {
       img: AchaariParatha,
-      title: "Pickles Recipe Ideas",
+      title: "Healthy Fruit Dessert with Apis Himalaya Honey",
       name:"",
       time: "Prep 10 min",
       descreption: "Nature's golden nectar, pure and organic",
@@ -243,7 +265,7 @@ const page = () => {
     },
     {
       img: Gobi,
-      title: "Pickles Recipe Ideas",
+      title: "Apis Jam Quick Recipe",
       name:"",
       time: "Prep 10 min",
       descreption: "Nature's golden nectar, pure and organic",
@@ -251,7 +273,7 @@ const page = () => {
     },
     {
       img: LemonHoney,
-      title: "Value Added Honey Recipe Ideas",
+      title: "Oats Apis Honey Ladoos!",
       name:"",
       time: "Prep 10 min",
       descreption: "Nature's golden nectar, pure and organic",
@@ -259,7 +281,7 @@ const page = () => {
     },
     {
       img: GingerHoney,
-      title: "Value Added Honey Recipe Ideas",
+      title: "Honey Glazed Paneer Tikka",
       name:"",
       time: "Prep 10 min",
       descreption: "Nature's golden nectar, pure and organic",
@@ -267,7 +289,7 @@ const page = () => {
     },
     {
       img: TulsiHoney,
-      title: "Value Added Honey Recipe Ideas",
+      title: "Exquisite flavours of Apis Vermicelli!",
       name:"",
       time: "Prep 10 min",
       descreption: "Nature's golden nectar, pure and organic",
@@ -275,7 +297,7 @@ const page = () => {
     },
     {
       img: LycheeHoney,
-      title: "Value Added Honey Recipe Ideas",
+      title: "Craft a luscious yet healthy treat with Apis Honey and Vermicelli",
       name:"",
       time: "Prep 10 min",
       descreption: "Nature's golden nectar, pure and organic",
@@ -283,7 +305,7 @@ const page = () => {
     },
     {
       img: HoneyBeetSalad,
-      title: "Honey Recipe Ideas",
+      title: "Introducing our delightful Honey Glazed Veg Salad",
       name:"",
       time: "Prep 10 min",
       descreption: "Nature's golden nectar, pure and organic",
@@ -291,7 +313,7 @@ const page = () => {
     },
     {
       img: HotHoney,
-      title: "Honey Recipe Ideas",
+      title: "Immerse yourself in a world of delectable flavors!",
       name:"",
       time: "Prep 10 min",
       descreption: "Nature's golden nectar, pure and organic",
@@ -300,7 +322,7 @@ const page = () => {
     },
     {
       img: HoneyApple,
-      title: "Honey Recipe Ideas",
+      title: "Ramadan Special Sheer Khurma",
       name:"",
       time: "Prep 10 min",
       descreption: "Nature's golden nectar, pure and organic",
@@ -309,7 +331,7 @@ const page = () => {
     },
     {
       img: ChickenSweet,
-      title: "Honey Recipe Ideas",
+      title: "Ramadhan Special Dates Laddu Recipe",
       name:"",
 
       time: "Prep 10 min",
@@ -318,7 +340,7 @@ const page = () => {
     },
     {
       img: SoyaCurry,
-      title: "Soya Chunks Recipe Ideas",
+      title: "Apis Dates Laddu Recipe",
       name:"Apis Soya Chunks Curry Recipe",
       time: "Prep 10 min",
       descreption: "Nature's golden nectar, pure and organic",
@@ -326,7 +348,7 @@ const page = () => {
     },
     {
       img: SoyaFriedRice,
-      title: "Soya Chunks Recipe Ideas",
+      title: "Sheer Khurma Recipe",
       name:"",
       time: "Prep 10 min",
       descreption: "Nature's golden nectar, pure and organic",
@@ -334,7 +356,7 @@ const page = () => {
     },
     {
       img: SoyaChunks,
-      title: "Soya Chunks Recipe Ideas",
+      title: "Ramadan Special Recipe",
       name:"",
       time: "Prep 10 min",
       descreption: "Nature's golden nectar, pure and organic",
@@ -342,7 +364,71 @@ const page = () => {
     },
     {
       img: SoyaChilli,
-      title: "Soya Chunks Recipe Ideas",
+      title: "Switch to natural sweetener with Apis Honey today!",
+      name:"",
+      time: "Prep 10 min",
+      descreption: "Nature's golden nectar, pure and organic",
+      type:"9"
+    },
+    {
+      img: SoyaChilli,
+      title: "Honey Cinnamon Lassi Recipe using Apis Honey",
+      name:"",
+      time: "Prep 10 min",
+      descreption: "Nature's golden nectar, pure and organic",
+      type:"9"
+    },
+    {
+      img: SoyaChilli,
+      title: "Mango Lassi using Apis Honey",
+      name:"",
+      time: "Prep 10 min",
+      descreption: "Nature's golden nectar, pure and organic",
+      type:"9"
+    },
+    {
+      img: SoyaChilli,
+      title: "apis breakfast",
+      name:"",
+      time: "Prep 10 min",
+      descreption: "Nature's golden nectar, pure and organic",
+      type:"9"
+    },
+    {
+      img: SoyaChilli,
+      title: "Switch to natural sweetener organic honey",
+      name:"",
+      time: "Prep 10 min",
+      descreption: "Nature's golden nectar, pure and organic",
+      type:"9"
+    },
+    {
+      img: SoyaChilli,
+      title: "Honey Cinnamon Lassi Recipe using Apis Honey",
+      name:"",
+      time: "Prep 10 min",
+      descreption: "Nature's golden nectar, pure and organic",
+      type:"9"
+    },
+    {
+      img: SoyaChilli,
+      title: "Apis Organic Honey Switch To Natural Sweetener",
+      name:"",
+      time: "Prep 10 min",
+      descreption: "Nature's golden nectar, pure and organic",
+      type:"9"
+    },
+    {
+      img: SoyaChilli,
+      title: "Mango Lassi using Apis Honey",
+      name:"",
+      time: "Prep 10 min",
+      descreption: "Nature's golden nectar, pure and organic",
+      type:"9"
+    },
+    {
+      img: SoyaChilli,
+      title: "Apis Honey & Dates Kheer Recipe",
       name:"",
       time: "Prep 10 min",
       descreption: "Nature's golden nectar, pure and organic",
@@ -364,21 +450,25 @@ const page = () => {
   // ];
 
   const RECEIPE_DATA = [
-    "Honey Recipe Ideas",
-    "Value Added Honey Recipe Ideas",
-    "Pickles Recipe Ideas",
-    "Apis Jam Recipe Ideas",
-    "Apis Dates Recipe Ideas",
-    "Ginger Garlic Recipe Ideas",
-    "Green Tea Ideas",
-    "Macroni Recipes Ideas",
-    "Soya Chunks Recipe"
+    "Himalaya Honey",
+    "Soya Chunks Kebab",
+    "Chocho Flakes",
+    "Corn Flakes",
+    "Arebian Pearls apis Dates",
+    "apis jam Fruit Blast",
+    "Apis Seviyan Vermicelli",
+    "Royal Zahidi Dates",
+    "Organic Honey",
+    "Ginger Garlic"
+
   ];
 
   // const [selectedReceipeType, setSelectedReceipeType] = useState(
   //   RECEIPE_TYPE_DATA[0]
   // );
   const [selectedReceipe, setSelectedReceipe] = useState(RECEIPE_DATA[0]);  
+  console.log("Apis Dates Gujiya Recipe", selectedReceipe);
+  
 
   return (
     <>
@@ -386,7 +476,7 @@ const page = () => {
       <p className="font-bold text-[#84663C] md:text-[40px] text-[20px] w-[75%] capitalize text-center">
         make your dine complete with our recipes
       </p>
-      <p className="text-center w-[55%] font-jost text-sm  md:text-xl text-[#454545] my-8">
+      <p className="text-center w-[55%] font-jost text-sm  md:text-xl text-[#454545] my-8 rgba(0, 0, 0, 1)">
         Explore a world of delicious possibilities with Apis India! Our curated
         recipes, crafted using the finest Apis honey and other natural products,
         are perfect for every palate. Whether you're whipping up a quick snack
@@ -441,36 +531,35 @@ const page = () => {
           })}
         </div>
       </div>
-      <div className="w-[90%] gap-10 py-10 flex items-center justify-center media-apis">
-          <EmblaCarousel options={OPTIONS}>
-          {RECIPIES_DATA.filter((itm) => itm.title === selectedReceipe).map((itm, index) => {
-              return (
-                <div className="embla__slide">
-                  <div className="w-full">
-                    <div className="w-full">
-                      <Image
-                        src={itm.img}
-                        alt="header-logo"
-                        className="bg-opacity-40 w-full max-h-[363px] max-w-[514px]"
-                      />
-                    </div>
-                    <div className="border-2 max-w-[514px] bg-white border-[hsl(35,37%,45%)] mt-4 lg:mt-6 flex flex-col gap-1 lg:gap-3 py-3 px-2 lg:px-4">
-                      <p className="text-sm lg:text-xl font-bold text-[#373737]">
-                        {itm?.title}
-                      </p>
-                      <p className="text-sm lg:text-xl font-normal text-[#373737]">
-                        {itm?.time}
-                      </p>
-                      <p className="text-[#666666] text-xs lg:text-sm">
-                        {itm?.descreption}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </EmblaCarousel>
+      <div className="w-[90%] mx-auto gap-10 py-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-center justify-center media-apis">
+  {RECIPIES_DATA.filter((itm) => itm.name === selectedReceipe).map((itm, index) => {
+    return (
+      <div className="embla__slide" key={index}>
+        <div className="w-full">
+          <div className="w-full">
+            <iframe
+              src={itm.video}
+              height={400}
+              alt="header-logo"
+              className="bg-opacity-40 w-full max-h-[363px] max-w-[514px] rounded-tr-[50px] rounded-bl-[50px]"
+            />
+          </div>
+          <div className="border-2 max-w-[514px] bg-white border-[hsl(35,37%,45%)] mt-4 lg:mt-6 flex flex-col gap-1 lg:gap-3 py-3 px-2 lg:px-4">
+            <p className="text-sm lg:text-xl font-bold text-[#373737]">
+              {itm?.title}
+            </p>
+            <p className="text-sm lg:text-xl font-normal text-[#373737]">
+              {itm?.time}
+            </p>
+            <p className="text-[#666666] text-xs lg:text-sm">
+              {itm?.descreption}
+            </p>
+          </div>
         </div>
+      </div>
+    );
+  })}
+</div>
     </>
   );
 };
