@@ -49,13 +49,13 @@ const OurBlogPage = () => {
                 </p>
             </div>
 
-            <div className="w-[80%] grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 mx-auto px-4 xl: w-[60%]">
+            <div className="w-[80%] grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 mx-auto px-4 xl:w-[65%] border-dotted">
                 {BlogData.map((blog, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden p-3 divide-rgba(159, 123, 73, 1)" style={{border:"1px solid #9F7B49"}}>
                         <Image
                             src={blog.img}
                             alt={blog.title}
-                            className="rounded-t-lg object-cover xl:w-[600] md:w-[600]"
+                            className="rounded-t-lg object-cover xl:w-[600] md:w-[00]"
                             width={600}
                             height={400}
                         />

@@ -49,7 +49,7 @@ export default function Careers() {
         </p>
       </div>
      <Link href={"/careers/careerGallary"}>
-     <div className="flex mt-7 md:mt-14 flex-wrap items-center justify-center gap-5  md:gap-10">
+     <div className="flex mt-7 md:mt-14 flex-wrap items-center justify-center gap-5  md:gap-10 w-[80%] m-auto">
         {CAREER_DATA.map((itm) => {
           return (
             <div className="border p-2 md:p-3 px-1 border-[#85673D]">

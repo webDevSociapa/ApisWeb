@@ -600,10 +600,10 @@ export default function Media() {
           </div>
         </div>
       </div>
-      {/* <div className="relative flex w-full bg-[#FFF9F0]">
+      <div className="relative flex w-full bg-[#FFF9F0]">
         <Image
           src={Ring1}
-          className="hidden md:inline absolute left-0 top-0 h-[300px] w-[298px] rotate-animation"
+          className="hidden md:inline absolute left-0 top-0 h-[300px] w-[298px] rotate-animation border-4"
         />
         <div className="w-1/3"></div>
         <div class="relative w-2/3 flex items-center justify-center">
@@ -620,7 +620,7 @@ export default function Media() {
             </p>
           </div>
         </div>
-      </div> */}
+      </div>
 
 
       {/* Modal Section */}
