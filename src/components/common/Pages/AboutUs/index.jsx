@@ -242,6 +242,23 @@ export default function OurBrand() {
           satisfaction. Join us as we continue to grow and inspire.
         </p>
       </div>
+
+      <div className="about-grid" style={{ '--n-rows': 4, '--n-cols': 6 }}>
+      <div className="about-hex-cell about-offset"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=650&fm=jpg" alt="Image 1"/></div>
+      <div className="about-hex-cell"><img src="https://images.unsplash.com/photo-1497733942558-e74c87ef89db?w=650&fm=jpg" alt="Image 2"/></div>
+      <div className="about-hex-cell"><img src="https://images.unsplash.com/photo-1540744276164-9dc898353c7b?w=650&fm=jpg" alt="Image 3"/></div>
+      <div className="about-hex-cell"><img src="https://images.unsplash.com/photo-1469975692758-66d107a536cb?w=650&fm=jpg" alt="Image 4"/></div>
+      {/* <div className="about-hex-cell about-offset"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=650&fm=jpg" alt="Image 1"/></div> */}
+      {/* i need similiar  */}
+
+      <div className="about-hex-cell"><img src="https://images.unsplash.com/photo-1490845060161-85f9ce08a9f4?w=650&fm=jpg" alt="Image 5"/></div>
+      {/* <div className="about-hex-cell"><img src="https://images.unsplash.com/photo-1490845060161-85f9ce08a9f4?w=650&fm=jpg" alt="Image 5"/></div>
+      <div className="about-hex-cell"><img src="https://images.unsplash.com/photo-1490845060161-85f9ce08a9f4?w=650&fm=jpg" alt="Image 5"/></div> */}
+      {/* {/* <div className="about-hex-cell"><img src="https://images.unsplash.com/photo-1541673504494-8bcc1a340180?w=650&fm=jpg" alt="Image 6"/></div> */}
+      {/* <div className="about-hex-cell"><img src="https://images.unsplash.com/photo-1515937350506-3e7b51a95339?w=650&fm=jpg" alt="Image 7"/></div> */}
+      {/* <div className="about-hex-cell about-offset"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=650&fm=jpg" alt="Image 1"/></div> */}
+
+    </div>
       {/* <Link href={"/our-brand/product-details/recipies"}>
           <button className="border border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white">
             View All
@@ -260,3 +277,6 @@ export default function OurBrand() {
 OurBrand.propTypes = {
   initialData: PropTypes.object,
 };
+
+
+

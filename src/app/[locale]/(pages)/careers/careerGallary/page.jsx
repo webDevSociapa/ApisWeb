@@ -33,7 +33,7 @@ export default function Album() {
         <div className="bg flex flex-wrap justify-between mx-auto w-full max-w-[1320px] p-2 pt-20">
           <div className="img-cont flex flex-col w-full md:w-1/3 h-full">
             <img
-              className="w-full mb-5"
+              className="w-full mb-5 w-[450px] h-[246px]"
               src={CareerGallery5.src}
             />
             <img
@@ -65,7 +65,7 @@ export default function Album() {
               src={CareerGallery7.src}
             />
             <img
-              className="w-full mb-5"
+              className="w-full mb-5 h-[350px]"
               src={CareerGallery8.src}
             />
             {/* <img
