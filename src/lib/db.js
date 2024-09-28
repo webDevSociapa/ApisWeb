@@ -1,2 +1,0 @@
-// const {username,password} = p rocess.env;
-// export const connectionStl = "mongodb+srv://webdev:<rWCtZ7Yq08NhDIyf>@apis-project.bn5ur.mongodb.net/apis_db?retryWrites=true&w=majority&appName=Apis-Project"

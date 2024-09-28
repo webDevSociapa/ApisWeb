@@ -24,8 +24,10 @@ const ContactForm = () => {
       const response = await axios.post('/api/sendMail', formData, {
         headers: { 'Content-Type': 'application/json' },
       });
+      console.log("response",response,response.data.success);
       
-      if (response.data.success) {
+      
+      if (response.data.status) {
         setPopupMessage("Thank you! We've received your query. Our team will be in touch with you shortly!");
         setMessageInfo(true);
         setFormData({
