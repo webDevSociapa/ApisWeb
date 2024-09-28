@@ -4,31 +4,37 @@ import PropTypes from "prop-types";
 import Banner from "@/assets/images/Careers/Careers.png";
 import Ring1 from "@/assets/images/OurBrands/Ring-4.png";
 import Award from "@/assets/images/Careers/Award.png";
-import Celebrations from "@/assets/images/Careers/Celebrations.png";
+// import Celebrations from "@/assets/images/Careers/Celebrations.png";
 import Engagements from "@/assets/images/Careers/Engagements.png";
-import TrainingSession from "@/assets/images/Careers/Training&Session.png";
+// import TrainingSession from "@/assets/images/Careers/Training&Session.png";
+import CareerGallery3 from '@/assets/images/Careers/cgallary3.png'
+import BirthDayCelebration from '@/assets/images/Careers/birthdayCelebration.png'
+import Engage from '@/assets/images/Careers/engage.png';
+import Celebrations from '@/assets/images/Careers/celebrationss.png'
+import TrainningSession from '@/assets/images/Careers/trainningSession.png'
+import CareerGallery1 from '@/assets/images/Careers/cgallary1.png'
 import ImageBanner from "../../Layout/Banner";
 import Image from "next/image";
 import Link from "next/link";
 
 const CAREER_DATA = [
   {
-    img: Award,
+    img: CareerGallery3,
     title: "Employ Award",
     type: 0,
   },
   {
-    img: TrainingSession,
+    img: TrainningSession,
     title: "Training & Sessions",
     type: 0,
   },
   {
-    img: Engagements,
+    img: Engage,
     title: "Engagements",
     type: 1,
   },
   {
-    img: Celebrations,
+    img: BirthDayCelebration,
     title: "Celebrations",
     type: 1,
   },

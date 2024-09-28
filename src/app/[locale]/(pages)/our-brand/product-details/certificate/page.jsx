@@ -51,7 +51,7 @@ const page = () => {
                 className="border border-black outline-none w-full font-jost rounded-md p-1 md:p-2"
               />
             </div>
-            <button className="border mt-3 self-center  border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 w-max text-xs md:text-xl py-1 md:py-3 font-bold text-white">
+            <button className="border mt-3 self-center  border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 w-max text-xs md:text-xl py-1 md:py-3 font-bold text-white" type="submit">
               Check Report
             </button>
           </div>

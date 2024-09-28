@@ -17,7 +17,7 @@ import TrustSlide1 from "@/assets/images/home-banner-section/trust-slide-1.png";
 import TrustSlide2 from "@/assets/images/home-banner-section/trust-slide-2.png";
 import TrustSlide3 from "@/assets/images/home-banner-section/trust-slide-3.png";
 import Image from "next/image";
-import CheckReportBanner from '@/assets/images/OurBrands/checkReportBanner.png'
+import CheckReportBanner from '@/assets/images/OurBrands/ProductBanner.png'
 import AmazonLogo from "@/assets/images/home-banner-section/amazon.png";
 import JioMart from "@/assets/images/home-banner-section/jiomart.png";
 import JioMart2 from "@/assets/images/home-banner-section/jio-mart.png";
@@ -737,13 +737,8 @@ const ProductDetails = () => {
           </button>
         </Link>
       </div>
-      {/* <div>
-        <Image src={CheckReportBanner}
-        height={100}
-        
-        />
-      </div> */}
-      <div className="w-[90%] border border-[#AE844A] rounded-[10px] flex mt-8 md:mt-20 items-center flex-col gap-4 md:gap-12 ">
+      
+      <div className="w-[90%] border border-[#AE844A] rounded-[10px] flex mt-8 md:mt-20 items-center flex-col gap-4 md:gap-12">
         <div className="bg-white rounded-[10px] w-full h-[23px] md:h-[65px] flex items-center justify-between px-3 md:pt-2 pt-1 avaibility">
           <EmblaCarousel options={OPTIONS} autoScroll>
             {AVAILABILITY_SLIDE.map((img) => {
@@ -761,6 +756,18 @@ const ProductDetails = () => {
           </EmblaCarousel>
         </div>
       </div>
+     {/* <a href={'/about-us'}> */}
+     <div className="w-[80%]">
+        <Image src={CheckReportBanner}
+        height={340}
+        // width={1335}
+        className="mt-8 w-[100%]"
+        />
+        <a href={'/our-brand/product-details/certificate'}>
+        <button className="absolute left-[65%] top-[30%] border mt-2 border-[#9F7B49] bg-[#9F7B49] px-2 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white">Check Report</button>
+        </a>
+      </div>
+     {/* </a> */}
 
       <p className="text-[20px] md:text-[40px] py-4 md:py-10 font-bold text-[#9F7B49]">
         Content

@@ -20,7 +20,9 @@ const Newsletter = () => {
       const response = await axios.post('/api/subscribeNews', { email: formData }, {
         headers: { 'Content-Type': 'application/json' },
       });
-      if (response.data.success) {
+      console.log("respmse",response);
+      
+      if (response.status) {
         setPopupMessage('Thank you! Successfully subscribed to our email.');
         setMessageInfo(true);
         setFormData('');

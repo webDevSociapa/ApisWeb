@@ -1,83 +1,68 @@
+import { MongoClient } from "mongodb";
 import nodemailer from 'nodemailer';
-import mongoose from 'mongoose';
+import { NextResponse } from "next/server";
 
-// MongoDB schema and model
-const contactSchema = new mongoose.Schema({
-  fullName: String,
-  cityLocation: String,
-  emailAddress: String,
-  phoneNumber: String,
-  message: String,
-});
-
-const apis_db = mongoose.models.apis_db || mongoose.model('apis_db', contactSchema);
-
-// Connect to the database 
-// const connectToDb = async () => {
-  
-// };
-
-// Handle POST requests
 export async function POST(req) {
   try {
-    const { fullName, cityLocation, emailAddress, phoneNumber, message } = await req.json();
+    const body = await req.json();
+    
+    const { fullName, cityLocation, emailAddress, phoneNumber, message } = body;
 
-    // Connect to the database
-    if (mongoose.connection.readyState === 1) return;
-  try {
-    await mongoose.connect("mongodb+srv://webdev:<rWCtZ7Yq08NhDIyf>@apis-project.bn5ur.mongodb.net/apis_db?retryWrites=true&w=majority&appName=Apis-Project", {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-    console.log('Connected to MongoDB');
-  } catch (error) {
-    throw new Error('MongoDB connection failed');
-  }
+    // MongoDB connection
+    const uri = "mongodb+srv://webdev:2OmPVj8DUdEaU1wR@apisindia.38dfp.mongodb.net";
+    const client = new MongoClient(uri);
+    console.log("uri",uri);
+    
 
-    // Save the contact form data to MongoDB
-    const newContact = new Contact({
-      fullName,
-      cityLocation,
-      emailAddress,
-      phoneNumber,
-      message,
-    });
-    await newContact.save();
+    try {
+      // Connect to the database and insert form data
+      const database = client.db('newApis');
+      const formData = database.collection('newApis01');
+      const data = await formData.insertOne(body);
+      console.log("data12",data);
+      
 
-    // Setup email transport and options
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: 'khanrobin7071@gmail.com', 
-        pass: 'hgvu hwmq lnfh xqxa',
-      },
-    });
+      // Setup Nodemailer to send an email
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: 'khanrobin7071@gmail.com', // Your email
+          pass: 'hgvu hwmq lnfh xqxa', // Your app-specific password
+        },
+      });
 
-    const mailOptions = {
-      from: emailAddress,
-      to: 'khanrobin7071@gmail.com',
-      subject: 'New Message from Contact Form',
-      text: `
-        Full Name: ${fullName}
-        City Location: ${cityLocation}
-        Email Address: ${emailAddress}
-        Phone Number: ${phoneNumber}
+      const mailOptions = {
+        from: emailAddress, // Sender email (user's email)
+        to: 'khanrobin7071@gmail.com', // Your email to receive the message
+        subject: 'New Message from Contact Form',
+        text: `
+          Full Name: ${fullName}
+          City Location: ${cityLocation}
+          Email Address: ${emailAddress}
+          Phone Number: ${phoneNumber}
 
-        Message:
-        ${message}
-      `,
-    };
+          Message:
+          ${message}
+        `,
+      };
 
-    // Send the email
-    await transporter.sendMail(mailOptions);
+      // Send email
+      await transporter.sendMail(mailOptions);
 
-    return new Response(JSON.stringify({ success: true, message: 'Email sent successfully' }), {
-      status: 200,
-    });
+      // Return success response after saving and sending email
+      return NextResponse.json(
+        { message: 'Message sent and email delivered successfully',status: 200 , body},
+        // { status: 200 }
+      );
+
+    } finally {
+      await client.close();
+    }
   } catch (error) {
     console.error('Error handling POST request:', error);
-    return new Response(JSON.stringify({ success: false, message: 'Failed to send email' }), {
-      status: 500,
-    });
+    return NextResponse.json(
+      { message: error.message },
+      { status: 500 }
+    );
   }
 }

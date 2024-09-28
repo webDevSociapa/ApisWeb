@@ -1,32 +1,65 @@
-const nodemailer = require('nodemailer');
+import { MongoClient } from "mongodb";
+import nodemailer from 'nodemailer';
+import { NextResponse } from "next/server";
 
-export default async function (req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ success: false, message: 'Invalid request method.' });
-  }
-
-  const { email } = req.body;
-
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: 'khanrobin7071@gmail.com', 
-        pass: 'hgvu hwmq lnfh xqxa',
-      },
-  });
-
-  const mailOptions = {
-    from: email,
-    to: 'khanrobin7071@gmail.com',
-    subject: 'New Newsletter Subscription',
-    text: `New subscription from: ${email}`,
-  };
+export  async function POST (req, res) {
 
   try {
+    const body = await req.json();
+    
+    const {email} = body;
+
+    // MongoDB connection
+    const uri = "mongodb+srv://webdev:2OmPVj8DUdEaU1wR@apisindia.38dfp.mongodb.net";
+    const client = new MongoClient(uri);
+    console.log("uri",uri);
+
+
+  try {
+    // Connect to the database and insert form data
+    const database = client.db('subscribeEmail');
+    const formData = database.collection('subscribeEmail_01');
+    const data = await formData.insertOne(body);
+    console.log("data12",data);
+    
+
+    // Setup Nodemailer to send an email
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: 'khanrobin7071@gmail.com', // Your email
+        pass: 'hgvu hwmq lnfh xqxa', // Your app-specific password
+      },
+    });
+
+    const mailOptions = {
+      from: email, // Sender email (user's email)
+      to: 'khanrobin7071@gmail.com', // Your email to receive the message
+      subject: 'New Message from Contact Form',
+      text: `
+        Email Address: ${email}`,
+    };
+
     await transporter.sendMail(mailOptions);
-    res.status(200).json({ success: true });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ success: false, message: 'Failed to send email.' });
+
+    // Return success response after saving and sending email
+    return NextResponse.json(
+      { message: 'Email Subscribe successfully',status: 200, body},
+      // { status: 200 }
+    );
+
+  } finally {
+    await client.close();
   }
+} catch (error) {
+  console.error('Error handling POST request:', error);
+  return NextResponse.json(
+    { message: error.message },
+    { status: 500 }
+  );
 }
+}
+
+
+
+
