@@ -1046,7 +1046,7 @@ const ProductDetails = () => {
             })}
           </EmblaCarousel>
         </div>
-        <Link href={"/our-brand/product-details/recipies"}>
+        <Link href={"/our-brand/recipes"}>
           <button className="border border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white">
             View All
           </button>

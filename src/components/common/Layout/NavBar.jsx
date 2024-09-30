@@ -12,7 +12,7 @@ const NavBar = ({ className, linkClass }) => {
   const locale = routerPath.split('/')[1];
 
   return (
-    <nav className={cn(className, 'h-full gap-x-8')}>
+    <nav className={cn(className, 'h-full gap-x-8 border-8')}>
       {PATH_DATA.map((path) => {
         const tabUrlWithLocale = `/${locale}${path.url}`;
 

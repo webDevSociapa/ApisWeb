@@ -21,8 +21,8 @@ export async function POST(req) {
       const data = await formData.insertOne(body);
       console.log("data12",data);
       
-
       // Setup Nodemailer to send an email
+      
       const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -48,6 +48,7 @@ export async function POST(req) {
 
       // Send email
       await transporter.sendMail(mailOptions);
+      
 
       // Return success response after saving and sending email
       return NextResponse.json(
