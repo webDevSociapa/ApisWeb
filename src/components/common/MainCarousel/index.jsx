@@ -31,7 +31,7 @@ export default class Carasol extends Component {
             src={'https://api.luxorpen.com/v1/HomePageBanner1.mp4'}
           />
         </div>
-        <div className="carousel_banner home-shadow " style={this.state.imageStyle}>
+        <div className="carousel_banner home-shadow" style={this.state.imageStyle}>
           <video
             autoPlay={true}
             muted

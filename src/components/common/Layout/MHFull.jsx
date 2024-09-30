@@ -11,7 +11,7 @@ const MHFull = () => {
       {/* Menu till 1024 */}
 
       {/* logo + Nav */}
-      <div className="flex items-center justify-center gap-16 xl:gap-60">
+      <div className="flex items-center justify-center gap-16 xl: gap-60">
         <Link href={'/'} className="mb-0.5">
           <Image
             src={Logo}

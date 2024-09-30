@@ -118,7 +118,9 @@ input[type="password"]:-webkit-autofill:active {
 @media (min-width: 768px) {
   .media-apis .embla__slide {
     flex: 0 0 50%;
-    align-items:normal;
+    /* align-items:normal; */
+    padding-left: 10px;
+    margin-left: 30px;
     /* padding-left: 0px; */
     /* margin-left: 30px; */
   }
@@ -236,6 +238,7 @@ input[type="password"]:-webkit-autofill:active {
 .home-story-bg {
   background-image: url("../assets/images/home-banner-section/home-story-bg.png");
   height: 942px;
+  background-size:cover;
   /* height: auto; */
   width: 100%;
   background-repeat: no-repeat;
@@ -344,7 +347,7 @@ input[type="password"]:-webkit-autofill:active {
 }
 
 .availbility-bg {
-  background-image: url("../assets/images/home-banner-section/availibility.png");
+  background-image: url("../assets/images/home-banner-section/honey-bee.png");
   height: 832px;
   /* height: auto; */
   width: 100%;
@@ -384,7 +387,7 @@ input[type="password"]:-webkit-autofill:active {
 .tvc-bg {
   background-image: url("../assets/images/home-banner-section/tvc-bg.png");
   height: 751px;
-  background-size: cover; /* Ensures the background image covers the entire container */
+  /* background-size: cover; */
   background-position: center;
   /* padding-top: 50px; */
   /* height: auto; */
