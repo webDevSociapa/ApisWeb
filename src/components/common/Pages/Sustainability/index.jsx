@@ -10,7 +10,7 @@ import Banner from "@/assets/images/Careers/Careers.png";
 import Award from "@/assets/images/Careers/Award.png";
 import Celebrations from "@/assets/images/Careers/Celebrations.png";
 import Engagements from "@/assets/images/Careers/Engagements.png";
-import TrainingSession from "@/assets/images/Careers/Training&Session.png";
+// import TrainingSession from "@/assets/images/Careers/Training&Session.png";
 import ImageBanner from "../../Layout/Banner";
 import {
   NextButton,
