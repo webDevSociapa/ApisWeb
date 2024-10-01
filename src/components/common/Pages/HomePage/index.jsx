@@ -358,10 +358,10 @@ export default function HomePage() {
       {/* API Media */}
       <div className="relative w-full flex items-center flex-col justify-center">
         
-        <p className="text-xs md:text-base text-center text-[#585858] px-4 uppercase font-jost text-medium">
-           Stay updated with the latest news, events, and media coverage of <br/> APIS India.
+        <p className="text-xs md:text-base text-center text-[#585858] px-4 uppercase font-jost text-medium sm: text-[14px] font-jost font-normal">
+           Stay updated with the latest news, events, and media coverage of  APIS India.
         </p>
-        <p className="text-[20px] md:text-[40px] my-4 md:my-2 font-bold text-[#9F7B49]">
+        <p className="text-[20px] md:text-[40px]  md:my-0 font-bold text-[#9F7B49] sm: my-0 xl: my-0">
           Apis Media
         </p>
         <div className="media-apis w-[90%] z-10 my-6 md:my-16 flex items-center justify-center">
@@ -416,7 +416,7 @@ export default function HomePage() {
 
       {/* Our Presence */}
       <div className="pb-10 lg:pb-32 pt-5">
-        <p className="text-xs md:text-lg font-medium text-[#585858] text-center uppercase font-jost text-medium">
+        <p className="text-xs md:text-lg font-medium text-[#585858] text-center uppercase font-jost text-medium sm: px-4">
           Presence is about showing up fully, authentically, and with an open
           heart, ready to
         </p>
@@ -492,20 +492,20 @@ export default function HomePage() {
       {/* Our Availability */}
       <div className="availbility-bg border-4">
         <div className="blur-bg flex gap-2 md:gap-6 items-center justify-center flex-col py-2 m-0 p-0">
-          <p className="uppercase font-medium text-[#202020] text-sm md:text-xl font-jost text-medium text-[22px] sm: text-[10px] font-medium">
+          <p className="uppercase font-medium text-[#202020] text-sm md:text-xl font-jost text-medium text-[22px] sm: text-[10px] font-medium font-jost">
             Always here, always ready
           </p>
           <p className="text-bold text-[#D7AD5F] text-[20px] md:text-[40px] font-literata font-semibold">
             Our Availability
           </p>
-          <div className="font-medium text-center text-white text-xs md:text-lg w-10/12 text-medium text-[24px] font-medium font-jost sm: text-[12px]">
+          <div className="font-medium text-center text-white text-xs md:text-lg w-10/12 text-medium text-[24px] font-medium font-jost sm: text-[10px] text-medium">
             Apis products are widely available to ensure you can enjoy our
             natural and premium offerings wherever you are. You can find our
             range of honey, organic honey, muesli, pickles, and more at leading
             supermarkets, grocery stores, and health food shops across the
             country.
           </div>
-          <div className="font-medium text-center text-white text-xs md:text-lg w-10/12 text-[24px] font-medium font-jost text-medium text-[12px]">
+          <div className="font-medium text-center text-white text-xs md:text-lg w-10/12 text-[24px] font-medium font-jost text-medium sm: text-[10px] font-jost text-medium">
             Additionally, our products are conveniently accessible online
             through major e-commerce platforms, making it easy to have your
             favorite Apis products delivered right to your doorstep. Whether you
@@ -578,7 +578,7 @@ export default function HomePage() {
                 TVC
               </p>
               <div>
-                <p className="font-medium text-xs md:text-lg text-center text-[#666666] font-jost text-medium text-[22px]">
+                <p className="font-medium text-xs md:text-lg text-center text-[#666666] font-jost text-medium text-[22px] sm: px-4">
                   Catch the latest Apis India commercials showcasing the pure
                   and natural essence of
                 </p>

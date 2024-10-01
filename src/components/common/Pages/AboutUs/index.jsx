@@ -16,6 +16,8 @@ import ImageBanner from "../../Layout/Banner";
 import { useState } from "react";
 import Link from "next/link";
 import Journey from "./Journey";
+import AboutusLogo from '@/assets/images/AboutUs/aboutusLogo.png';
+import AboutStreak from '@/assets/images/AboutUs/aboutStreak.png'
 
 export default function OurBrand() {
   const [activeTab, setActiveTab] = useState("vision");
@@ -64,6 +66,18 @@ export default function OurBrand() {
           </div>
         </div>
       </div>
+      {/* <div className="">
+        <div className="static top-0">
+        <Image 
+        src={AboutusLogo}
+        />
+        </div>
+       <div className="absolute top-180">
+       <Image 
+        src={AboutStreak}
+        />
+       </div>
+      </div> */}
       <section className="p-4 text-center">
         <h2 className="text-[#9F7B49] text-center font-literata text-[20px] md:text-[40px] font-bold">
           Purely Crafted Natural Flavors
@@ -80,7 +94,7 @@ export default function OurBrand() {
         </p>
       </section>
       <div className="relative mt-14 flex flex-col items-center justify-center w-full">
-        <ImageBanner banner={MissionBanner} style={{height:"1300px"}} />
+        <Image src={MissionBanner} width={1440} className="object-cover w-full h-100"/>
         <div className="w-full flex justify-end items-center absolute end-0 top-0">
           <div className="bg-opacity-80 p-2 md:p-8 rounded-md w-full flex flex-col">
             <div className="flex flex-row justify-between items-center gap-2 md:gap-10">
@@ -103,7 +117,7 @@ export default function OurBrand() {
                 Values
               </button>
             </div>
-            <p className="text-white mt-4 xs:mt-12 md:mt-20 self-center text-[#373737] text-center font-jost w-[90%] lg:w-[70%] text-xs sm:text-base md:text-3xl font-medium">
+            <p className="text-white mt-12 xs:mt-12 md:mt-20 self-center text-[#373737] text-center font-jost w-[90%] lg:w-[70%] text-xs sm:text-base md:text-3xl font-medium">
               {renderContent()}
             </p>
           </div>
@@ -112,7 +126,7 @@ export default function OurBrand() {
           <Image
             src={Curv}
             alt="Banner Image"
-            className="object-cover hidden lg:inline  h-[260px] w-full md:h-[443px] cursor-pointer"
+            className="object-cover hidden lg:inline  h-[260px] w-full  cursor-pointer xl: w-[2000px] h-[460px]"
           />
           <div className="relative">
             <div className="lg:absolute z-10 bottom-[124px] left-0 right-0 flex gap-4 flex-wrap justify-around items-center mt-10 text-center p-4">
@@ -135,98 +149,82 @@ export default function OurBrand() {
         </div>
       </div>
       <div>
-        <div className="w-full manager-back-1-bg flex relative items-center flex-col justify-between bg-vimal">
+  <div className="w-full manager-back-1-bg flex flex-col items-center justify-between bg-vimal relative">
+    <Image
+      src={ManBack1}
+      className="hidden lg:inline z-0 -top-8 absolute left-1/2 h-[600px] w-full transform -translate-x-1/2"
+    />
+    <p className="font-bold z-10 text-[20px] md:text-[40px] text-center text-[#9F7B49]">
+      Our Directors
+    </p>
+    <div className="flex flex-col md:flex-row items-center justify-between mt-4 md:mt-0">
+      <div className="w-full md:w-1/2 flex items-center justify-center">
+        <div className="relative w-[300px] md:w-[440px] flex justify-center items-center">
           <Image
-            src={ManBack1}
-            className="hidden z-0 lg:inline -top-8 absolute left-1/2 h-[600px] w-full transform -translate-x-1/2"
+            src={VimalAnand}
+            alt="Banner Image"
+            className="object-cover h-[240px] w-[240px] md:h-[416px] md:w-[342px] z-50 cursor-pointer"
           />
-          <p className="font-bold z-10 text-[20px] md:text-[40px] text-center text-[#9F7B49]">
-            Our Directors
-          </p>
-          <div className="flex mt-4 md:mt-0 flex-col md:flex-row items-center justify-between">
-            <div className="w-full md:w-1/2 flex items-center justify-center">
-              <div className="relative w-[440px] flex justify-center items-center">
-                <Image
-                  src={VimalAnand}
-                  alt="Banner Image"
-                  className="object-cover  h-[260px] w-[290px] z-50 md:w-[342px] md:h-[416px] z-10 cursor-pointer"
-                />
-                <Image
-                  src={Frame1}
-                  alt="Banner Image"
-                  className="object-cover hidden md:inline absolute -top-8 z-20 h-[260px] left-6 w-[290px] md:w-[420px] md:h-[460px] cursor-pointer"
-                />
-                <Image
-                  src={Ring1}
-                  className="hidden lg:inline z-10 absolute -left-14 -bottom-28 h-[331px] w-[331px] rotate-animation"
-                />
-              </div>
-            </div>
-            <div className="w-full mt-4 md:mt-0 md:w-1/2 z-10  flex flex-col md:gap-4 gap-2 items-center justify-center">
-              <h3 className="text-center text-2xl font-bold text-[#9F7B49]">
-                VIMAL ANAND
-              </h3>
-              <p className="text-center text-lg text-[#373737] font-normal">
-                Managing Director
-              </p>
-              <p className="text-center font-jost text-[#373737] font-medium w-[70%]">
-                Driven by his passion and conviction, Mr. Vimal Anand has
-                received formal training in beekeeping and Honey processing from
-                the University of Warmia Olystyn Poland. Gradually he built a
-                global presence & a robust structure supported by a
-                state-of-the-art production factory to cater to the global
-                markets. His undeterred leadership and vision have led the
-                company to reach its heights today, becoming a leading player in
-                the world's organized honey trade.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="w-full flex-col md:flex-row manager-back-2-bg relative flex items-end pb-8 justify-between">
           <Image
-            src={ManBack2}
-            className="hidden z-0 lg:inline top-0 absolute left-1/2 h-[600px] w-full transform -translate-x-1/2"
+            src={Frame1}
+            alt="Banner Image"
+            className="object-cover hidden md:inline absolute -top-8 z-20 h-[260px] left-6 w-[290px] md:w-[420px] md:h-[460px] cursor-pointer"
           />
-          <div className="w-full mt-8 md:w-1/2 z-10 flex flex-col gap-4 items-center justify-center">
-            <h3 className="text-center text-2xl font-bold text-[#9F7B49]">
-              AMIT ANAND
-            </h3>
-            <p className="text-center text-lg text-[#373737] font-normal">
-              Managing Director
-            </p>
-            <p className="text-center font-jost text-[#373737] font-medium w-[70%]">
-              A Delhi University Graduate from Kirori Mal College in Commerce,
-              he spearheads key functions of Overall Plant Management; Human
-              Resources; and Finance. The Managing Director of the company and
-              the younger one of the two siblings, he has played the perfect
-              foil to the elder in initiating the GREEN FIELD initiative of the
-              factory in Roorkee. Leading from the front in all factory
-              operations a person with hands-on expertise in executing all
-              details at the plant level
-            </p>
-          </div>
-          <div className="w-full mt-4 md:mt-0 md:w-1/2 flex items-center justify-center">
-            <div className="relative w-[440px] flex justify-center items-center">
-              <Image
-                src={AmitAnand}
-                alt="Banner Image"
-                className="object-cover z-50 absolute h-[260px] w-[290px] md:w-[342px] md:h-[416px] z-10 cursor-pointer"
-              />
-              <Image
-                src={Frame2}
-                alt="Banner Image"
-                className="object-cover -top-10 z-10 h-[260px] left-0 w-[290px] md:w-[420px] md:h-[460px] cursor-pointer"
-              />
-              <div>
-                <Image
-                  src={Ring1}
-                  className="hidden z-0 lg:inline absolute -left-20 -top-6 h-[331px] w-[331px] rotate-animation"
-                />
-              </div>
-            </div>
-          </div>
+          <Image
+            src={Ring1}
+            className="hidden lg:inline z-10 absolute -left-14 -bottom-28 h-[331px] w-[331px] rotate-animation"
+          />
         </div>
       </div>
+      <div className="w-full mt-4 md:mt-0 md:w-1/2 z-10 flex flex-col gap-2 items-center justify-center">
+        <h3 className="text-center font-bold text-[#9F7B49] text-[18px] md:text-[24px] font-literata">
+          VIMAL ANAND
+        </h3>
+        <p className="text-center text-[#373737] font-normal text-[16px] md:text-[19px] font-literata">
+          Managing Director
+        </p>
+        <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost text-justify">
+          Driven by his passion and conviction, Mr. Vimal Anand has received formal training in beekeeping and Honey processing from the University of Warmia Olystyn Poland. Gradually he built a global presence & a robust structure supported by a state-of-the-art production factory to cater to the global markets.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div className="w-full flex-col md:flex-row manager-back-2-bg relative flex items-end pb-8 justify-between">
+    <Image
+      src={ManBack2}
+      className="hidden lg:inline z-0 top-0 absolute left-1/2 h-[600px] w-full transform -translate-x-1/2"
+    />
+    <div className="w-full mt-8 md:w-1/2 z-10 flex flex-col gap-2 items-center justify-center">
+      <h3 className="text-center font-bold text-[#9F7B49] text-[18px] md:text-[24px] font-literata">
+        AMIT ANAND
+      </h3>
+      <p className="text-center text-[#373737] font-normal text-[16px] md:text-[19px] font-literata">
+        Managing Director
+      </p>
+      <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost text-justify">
+      A Delhi University Graduate from Kirori Mal College in Commerce, he spearheads key functions of Overall Plant Management; Human Resources; and Finance. The Managing Director of the company and the younger one of the two siblings, he has played the perfect foil to the elder in initiating the GREEN FIELD initiative of the factory in Roorkee. Leading from the front in all factory operations a person with hands-on expertise in executing all details at the plant level.
+      </p>
+    </div>
+    <div className="w-full mt-4 md:mt-0 md:w-1/2 flex items-center justify-center">
+      <div className="relative w-[300px] md:w-[440px] flex justify-center items-center">
+        <Image
+          src={AmitAnand}
+          alt="Banner Image"
+          className="object-cover z-50 absolute h-[240px] w-[240px] md:h-[416px] md:w-[342px] cursor-pointer"
+        />
+        <Image
+          src={Frame2}
+          alt="Banner Image"
+          className="object-cover -top-10 z-10 h-[240px] left-0 w-[240px] md:w-[420px] md:h-[460px] cursor-pointer"
+        />
+        <Image
+          src={Ring1}
+          className="hidden lg:inline z-0 absolute -left-20 -top-6 h-[331px] w-[331px] rotate-animation"
+        />
+      </div>
+    </div>
+  </div>
+</div>
       <div className="my-16">
         <p className="text-center text-[14px] font-jost md:text-[22px] uppercase text-[#585858]">
           Celebrating a Legacy of Quality and Growth
@@ -236,7 +234,7 @@ export default function OurBrand() {
             Journey
           </h3>
         </Link>
-        <p className="mt-4 text-customDarkGray text-center font-jost text-sm md:text-xl font-medium max-w-4xl mx-auto">
+        <p className="mt-4 text-customDarkGray text-center font-jost text-sm md:text-xl font-medium max-w-4xl mx-auto sm: px-4">
           From humble beginnings to a leading FMCG brand, Apis India’s journey
           is defined by a commitment to quality, innovation, and customer
           satisfaction. Join us as we continue to grow and inspire.
@@ -249,7 +247,6 @@ export default function OurBrand() {
       <div className="about-hex-cell"><img src="https://images.unsplash.com/photo-1540744276164-9dc898353c7b?w=650&fm=jpg" alt="Image 3"/></div>
       <div className="about-hex-cell"><img src="https://images.unsplash.com/photo-1469975692758-66d107a536cb?w=650&fm=jpg" alt="Image 4"/></div>
       {/* <div className="about-hex-cell about-offset"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=650&fm=jpg" alt="Image 1"/></div> */}
-      {/* i need similiar  */}
 
       <div className="about-hex-cell"><img src="https://images.unsplash.com/photo-1490845060161-85f9ce08a9f4?w=650&fm=jpg" alt="Image 5"/></div>
       {/* <div className="about-hex-cell"><img src="https://images.unsplash.com/photo-1490845060161-85f9ce08a9f4?w=650&fm=jpg" alt="Image 5"/></div>
