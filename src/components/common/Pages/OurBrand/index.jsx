@@ -39,7 +39,7 @@ export default function OurBrand() {
     <div className="relative">
       <ImageBanner banner={Banner} />
       <div className="flex w-full flex-col items-center">
-        <div className="font-medium z-10 text-center w-[70%] text-sm md:text-2xl text-[#373737]">
+        {/* <div className="font-medium z-10 text-center w-[70%] text-sm md:text-2xl text-[#373737]">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
           ab illo inventore{" "}
@@ -48,7 +48,7 @@ export default function OurBrand() {
           Amed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
           ab illo inventore{" "}
-        </div>
+        </div> */}
       </div>
       <div className="bg-[#FFFBF6] flex flex-col items-center h-[98%] border-b border-[#9F7B49] bg-opacity-80 lg:absolute  left-[3%] lg:w-[94%] top-0">
         <div className="flex flex-col w-[96%] my-4 md:mt-8">

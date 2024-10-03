@@ -75,15 +75,16 @@ export default function HomePage() {
       title:"Soya Chunk"
     },
     {
-      img: TrustSlide8,
-      content: "Muesli: a healthy, oat-based cereal.",
-      title:"Muesli"
-    },
-    {
       img: TrustSlide9,
       content: "Lemon honey green tea: refreshing, antioxidant-rich blend.",
       title:"Lemon Honey Green Tea"
     },
+    {
+      img: TrustSlide8,
+      content: "Muesli: a healthy, oat-based cereal.",
+      title:"Muesli"
+    }
+  
    
     // {
     //   img: TrustSlide1,
@@ -170,7 +171,7 @@ export default function HomePage() {
     <>
       {/* nature page */}
       <div className="relative w-full overflow-hidden bg-buyer-bg-yellow-2 smhome-shadow">
-  <div className="home-bg flex w-full flex-col justify-center">
+     <div className="home-bg flex w-full flex-col justify-center">
     <div className="absolute end-0 h-full bg-black">
       <Carasol />
     </div>

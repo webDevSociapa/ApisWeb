@@ -15,12 +15,69 @@ import AmitAnand from "@/assets/images/AboutUs/AmitAnand.png";
 import ImageBanner from "../../Layout/Banner";
 import { useState } from "react";
 import Link from "next/link";
+import Polygon1 from '@/assets/images/AboutUs/Polygon5.png';
+import Polygon2 from '@/assets/images/AboutUs/Polygon6.png';
+import Polygon3 from '@/assets/images/AboutUs/Polygon7.png';
+import Polygon4 from '@/assets/images/AboutUs/Polygon8.png';
+import Polygon5 from '@/assets/images/AboutUs/Polygon9.png';
+import Polygon6 from '@/assets/images/AboutUs/Polygon10 (2).png';
+import Polygon7 from '@/assets/images/AboutUs/Polygon11.png';
+import Polygon8 from '@/assets/images/AboutUs/Polygon12.png';
+import Polygon9 from '@/assets/images/AboutUs/Polygon13.png';
+import Polygon10 from '@/assets/images/AboutUs/Polygon15.png';
+import Polygon11 from '@/assets/images/AboutUs/Polygon15.png';
+import Polygon12 from '@/assets/images/AboutUs/Polygon16.png';
+import Polygon13 from '@/assets/images/AboutUs/Polygon18.png';
+import Polygon14 from '@/assets/images/AboutUs/Polygon19.png';
+import Polygon15 from '@/assets/images/AboutUs/Polygon22.png';
+// import style from '@/components/common/Pages/AboutUs/aboutus.css'
 import Journey from "./Journey";
 import AboutusLogo from '@/assets/images/AboutUs/aboutusLogo.png';
 import AboutStreak from '@/assets/images/AboutUs/aboutStreak.png'
 
 export default function OurBrand() {
   const [activeTab, setActiveTab] = useState("vision");
+
+  const ImageDataJourney = [
+    { image: Polygon1 },
+    { image: Polygon2 },
+    { image: Polygon3 },
+    { image: Polygon4 },
+    { image: Polygon5 },
+    { image: Polygon6 },
+    { image: Polygon7 },
+  ]
+  const ImageDataJourney1 = [
+    { image: Polygon5 },
+    { image: Polygon6 },
+    { image: Polygon7 },
+    { image: Polygon8 },
+    { image: Polygon9 },
+    { image: Polygon5 },
+    { image: Polygon6 },
+  ]
+  const ImageDataJourney2 = [
+     
+    { image: Polygon10 },
+    { image: Polygon11 },
+    { image: Polygon12 },
+    { image: Polygon13 },
+    { image: Polygon5 },
+    { image: Polygon6 },
+    { image: Polygon7 },
+  ]
+  const ImageDataJourney3 = [
+    { image: Polygon14 },
+    { image: Polygon13 },
+    { image: Polygon5 },
+    { image: Polygon6 },
+    { image: Polygon7 },
+    { image: Polygon7 },
+   
+    // { image: Polygon4 },
+    
+    { image: Polygon15 },
+  ]
 
   const renderContent = () => {
     switch (activeTab) {
@@ -94,7 +151,7 @@ export default function OurBrand() {
         </p>
       </section>
       <div className="relative mt-14 flex flex-col items-center justify-center w-full">
-        <Image src={MissionBanner} width={1440} className="object-cover w-full h-100"/>
+        <Image src={MissionBanner} width={1440} className="object-cover w-full h-100" />
         <div className="w-full flex justify-end items-center absolute end-0 top-0">
           <div className="bg-opacity-80 p-2 md:p-8 rounded-md w-full flex flex-col">
             <div className="flex flex-row justify-between items-center gap-2 md:gap-10">
@@ -149,82 +206,82 @@ export default function OurBrand() {
         </div>
       </div>
       <div>
-  <div className="w-full manager-back-1-bg flex flex-col items-center justify-between bg-vimal relative">
-    <Image
-      src={ManBack1}
-      className="hidden lg:inline z-0 -top-8 absolute left-1/2 h-[600px] w-full transform -translate-x-1/2"
-    />
-    <p className="font-bold z-10 text-[20px] md:text-[40px] text-center text-[#9F7B49]">
-      Our Directors
-    </p>
-    <div className="flex flex-col md:flex-row items-center justify-between mt-4 md:mt-0">
-      <div className="w-full md:w-1/2 flex items-center justify-center">
-        <div className="relative w-[300px] md:w-[440px] flex justify-center items-center">
+        <div className="w-full manager-back-1-bg flex flex-col items-center justify-between bg-vimal relative">
           <Image
-            src={VimalAnand}
-            alt="Banner Image"
-            className="object-cover h-[240px] w-[240px] md:h-[416px] md:w-[342px] z-50 cursor-pointer"
+            src={ManBack1}
+            className="hidden lg:inline z-0 -top-8 absolute left-1/2 h-[600px] w-full transform -translate-x-1/2"
           />
+          <p className="font-bold z-10 text-[20px] md:text-[40px] text-center text-[#9F7B49]">
+            Our Directors
+          </p>
+          <div className="flex flex-col md:flex-row items-center justify-between mt-4 md:mt-0">
+            <div className="w-full md:w-1/2 flex items-center justify-center">
+              <div className="relative w-[300px] md:w-[440px] flex justify-center items-center">
+                <Image
+                  src={VimalAnand}
+                  alt="Banner Image"
+                  className="object-cover h-[240px] w-[240px] md:h-[416px] md:w-[342px] z-50 cursor-pointer"
+                />
+                <Image
+                  src={Frame1}
+                  alt="Banner Image"
+                  className="object-cover hidden md:inline absolute -top-8 z-20 h-[260px] left-6 w-[290px] md:w-[420px] md:h-[460px] cursor-pointer"
+                />
+                <Image
+                  src={Ring1}
+                  className="hidden lg:inline z-10 absolute -left-14 -bottom-28 h-[331px] w-[331px] rotate-animation"
+                />
+              </div>
+            </div>
+            <div className="w-full mt-4 md:mt-0 md:w-1/2 z-10 flex flex-col gap-2 items-center justify-center">
+              <h3 className="text-center font-bold text-[#9F7B49] text-[18px] md:text-[24px] font-literata">
+                VIMAL ANAND
+              </h3>
+              <p className="text-center text-[#373737] font-normal text-[16px] md:text-[19px] font-literata">
+                Managing Director
+              </p>
+              <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost text-justify">
+                Driven by his passion and conviction, Mr. Vimal Anand has received formal training in beekeeping and Honey processing from the University of Warmia Olystyn Poland. Gradually he built a global presence & a robust structure supported by a state-of-the-art production factory to cater to the global markets.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="w-full flex-col md:flex-row manager-back-2-bg relative flex items-end pb-8 justify-between">
           <Image
-            src={Frame1}
-            alt="Banner Image"
-            className="object-cover hidden md:inline absolute -top-8 z-20 h-[260px] left-6 w-[290px] md:w-[420px] md:h-[460px] cursor-pointer"
+            src={ManBack2}
+            className="hidden lg:inline z-0 top-0 absolute left-1/2 h-[600px] w-full transform -translate-x-1/2"
           />
-          <Image
-            src={Ring1}
-            className="hidden lg:inline z-10 absolute -left-14 -bottom-28 h-[331px] w-[331px] rotate-animation"
-          />
+          <div className="w-full mt-8 md:w-1/2 z-10 flex flex-col gap-2 items-center justify-center">
+            <h3 className="text-center font-bold text-[#9F7B49] text-[18px] md:text-[24px] font-literata">
+              AMIT ANAND
+            </h3>
+            <p className="text-center text-[#373737] font-normal text-[16px] md:text-[19px] font-literata">
+              Managing Director
+            </p>
+            <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost text-justify">
+              A Delhi University Graduate from Kirori Mal College in Commerce, he spearheads key functions of Overall Plant Management; Human Resources; and Finance. The Managing Director of the company and the younger one of the two siblings, he has played the perfect foil to the elder in initiating the GREEN FIELD initiative of the factory in Roorkee. Leading from the front in all factory operations a person with hands-on expertise in executing all details at the plant level.
+            </p>
+          </div>
+          <div className="w-full mt-4 md:mt-0 md:w-1/2 flex items-center justify-center">
+            <div className="relative w-[300px] md:w-[440px] flex justify-center items-center">
+              <Image
+                src={AmitAnand}
+                alt="Banner Image"
+                className="object-cover z-50 absolute h-[240px] w-[240px] md:h-[416px] md:w-[342px] cursor-pointer"
+              />
+              <Image
+                src={Frame2}
+                alt="Banner Image"
+                className="object-cover -top-10 z-10 h-[240px] left-0 w-[240px] md:w-[420px] md:h-[460px] cursor-pointer"
+              />
+              <Image
+                src={Ring1}
+                className="hidden lg:inline z-0 absolute -left-20 -top-6 h-[331px] w-[331px] rotate-animation"
+              />
+            </div>
+          </div>
         </div>
       </div>
-      <div className="w-full mt-4 md:mt-0 md:w-1/2 z-10 flex flex-col gap-2 items-center justify-center">
-        <h3 className="text-center font-bold text-[#9F7B49] text-[18px] md:text-[24px] font-literata">
-          VIMAL ANAND
-        </h3>
-        <p className="text-center text-[#373737] font-normal text-[16px] md:text-[19px] font-literata">
-          Managing Director
-        </p>
-        <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost text-justify">
-          Driven by his passion and conviction, Mr. Vimal Anand has received formal training in beekeeping and Honey processing from the University of Warmia Olystyn Poland. Gradually he built a global presence & a robust structure supported by a state-of-the-art production factory to cater to the global markets.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div className="w-full flex-col md:flex-row manager-back-2-bg relative flex items-end pb-8 justify-between">
-    <Image
-      src={ManBack2}
-      className="hidden lg:inline z-0 top-0 absolute left-1/2 h-[600px] w-full transform -translate-x-1/2"
-    />
-    <div className="w-full mt-8 md:w-1/2 z-10 flex flex-col gap-2 items-center justify-center">
-      <h3 className="text-center font-bold text-[#9F7B49] text-[18px] md:text-[24px] font-literata">
-        AMIT ANAND
-      </h3>
-      <p className="text-center text-[#373737] font-normal text-[16px] md:text-[19px] font-literata">
-        Managing Director
-      </p>
-      <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost text-justify">
-      A Delhi University Graduate from Kirori Mal College in Commerce, he spearheads key functions of Overall Plant Management; Human Resources; and Finance. The Managing Director of the company and the younger one of the two siblings, he has played the perfect foil to the elder in initiating the GREEN FIELD initiative of the factory in Roorkee. Leading from the front in all factory operations a person with hands-on expertise in executing all details at the plant level.
-      </p>
-    </div>
-    <div className="w-full mt-4 md:mt-0 md:w-1/2 flex items-center justify-center">
-      <div className="relative w-[300px] md:w-[440px] flex justify-center items-center">
-        <Image
-          src={AmitAnand}
-          alt="Banner Image"
-          className="object-cover z-50 absolute h-[240px] w-[240px] md:h-[416px] md:w-[342px] cursor-pointer"
-        />
-        <Image
-          src={Frame2}
-          alt="Banner Image"
-          className="object-cover -top-10 z-10 h-[240px] left-0 w-[240px] md:w-[420px] md:h-[460px] cursor-pointer"
-        />
-        <Image
-          src={Ring1}
-          className="hidden lg:inline z-0 absolute -left-20 -top-6 h-[331px] w-[331px] rotate-animation"
-        />
-      </div>
-    </div>
-  </div>
-</div>
       <div className="my-16">
         <p className="text-center text-[14px] font-jost md:text-[22px] uppercase text-[#585858]">
           Celebrating a Legacy of Quality and Growth
@@ -241,29 +298,60 @@ export default function OurBrand() {
         </p>
       </div>
 
-      <div className="about-grid" style={{ '--n-rows': 4, '--n-cols': 6 }}>
-      <div className="about-hex-cell about-offset"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=650&fm=jpg" alt="Image 1"/></div>
-      <div className="about-hex-cell"><img src="https://images.unsplash.com/photo-1497733942558-e74c87ef89db?w=650&fm=jpg" alt="Image 2"/></div>
-      <div className="about-hex-cell"><img src="https://images.unsplash.com/photo-1540744276164-9dc898353c7b?w=650&fm=jpg" alt="Image 3"/></div>
-      <div className="about-hex-cell"><img src="https://images.unsplash.com/photo-1469975692758-66d107a536cb?w=650&fm=jpg" alt="Image 4"/></div>
-      {/* <div className="about-hex-cell about-offset"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=650&fm=jpg" alt="Image 1"/></div> */}
 
-      <div className="about-hex-cell"><img src="https://images.unsplash.com/photo-1490845060161-85f9ce08a9f4?w=650&fm=jpg" alt="Image 5"/></div>
-      {/* <div className="about-hex-cell"><img src="https://images.unsplash.com/photo-1490845060161-85f9ce08a9f4?w=650&fm=jpg" alt="Image 5"/></div>
-      <div className="about-hex-cell"><img src="https://images.unsplash.com/photo-1490845060161-85f9ce08a9f4?w=650&fm=jpg" alt="Image 5"/></div> */}
-      {/* {/* <div className="about-hex-cell"><img src="https://images.unsplash.com/photo-1541673504494-8bcc1a340180?w=650&fm=jpg" alt="Image 6"/></div> */}
-      {/* <div className="about-hex-cell"><img src="https://images.unsplash.com/photo-1515937350506-3e7b51a95339?w=650&fm=jpg" alt="Image 7"/></div> */}
-      {/* <div className="about-hex-cell about-offset"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=650&fm=jpg" alt="Image 1"/></div> */}
 
-    </div>
+      <div classNamelass="relative h-screen sm: w-[100px]">
+        <div className="flex flex-wrap -ml-12 -mt-0 sm: ">
+          {ImageDataJourney.map((itm, index) => (
+            <Image
+              src={itm.image}
+              class="hexagon_jorney"
+            />
+            // <div
+            //   key={index}
+            //   class="hexagon_jorney"
+            //   style={{ backgroundImage: `url(${itm.image})` }}
+            // ></div>
+          ))}
+        </div>
+        <div className="flex flex-wrap -ml-12 -mt-8 even:ml-0" style={{ marginLeft: "36px" }}>
+          {ImageDataJourney1.map((itm, index) => (
+            <Image
+              src={itm.image}
+              class="hexagon_jorney"
+            />
+          ))}
+        </div>
+        <div className="flex flex-wrap -ml-12 -mt-8 even:ml-0">
+          {ImageDataJourney2.map((itm, index) => (
+            <Image
+              src={itm.image}
+              class="hexagon_jorney"
+            />
+          ))}
+        </div>
+        <div className="flex flex-wrap -ml-12 -mt-8 even:ml-0" style={{ marginLeft: "36px" }}>
+          {ImageDataJourney3.map((itm, index) => (
+            <Image
+              src={itm.image}
+              class="hexagon_jorney"
+            />
+          ))}
+        </div>
+      </div>
+
+
+
+
       {/* <Link href={"/our-brand/product-details/recipies"}>
           <button className="border border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white">
             View All
           </button>
+          ""
         </Link> */}
-        <Link href={"/about-us/journey"}>
-        <button type="submit" class="bg-[#9F7B49] px-2 py-[7px] md:px-3 md:py-[11px] md:text-xl text-xs font-bold text-white" onClick style={{fontFamily:"Literata"}}>Check Our Milestone</button>
-        </Link>
+      <Link href={"/about-us/journey"}>
+        <button type="submit" class="bg-[#9F7B49] px-2 py-[7px] md:px-3 md:py-[11px] md:text-xl text-xs font-bold text-white" onClick style={{ fontFamily: "Literata" }}>Check Our Milestone</button>
+      </Link>
 
       {/* <button type="submit" class="bg-[#9F7B49] px-2 py-[7px] md:px-3 md:py-[11px] md:text-xl text-xs font-bold text-white" onClick style={{fontFamily:"Literata"}}>Check Our Milestone</button> */}
       {/* <div>Check Our Milestone</div> */}
