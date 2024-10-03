@@ -659,3 +659,36 @@ input[type="password"]:-webkit-autofill:active {
   opacity: 1;
 }
 
+
+.hexagon_jorney:hover {
+  @apply bg-green-500 duration-0;
+}
+
+.hexagon_jorney::before {
+  content: '';
+  @apply absolute top-0 left-0 w-1/2 h-full pointer-events-none bg-white/5;
+}
+
+.hexagon_jorney {
+  width: 150px; /* Adjust size for desktop */
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(
+    50% 0%, 
+    100% 25%, 
+    100% 75%, 
+    50% 100%, 
+    0% 75%, 
+    0% 25%
+  );
+}
+
+@media (max-width: 640px) {
+  .hexagon_jorney {
+    width: 80px; /* Adjust size for mobile */
+    height: 80px;
+  }
+}
+
+
