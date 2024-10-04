@@ -699,3 +699,9 @@ input[type="password"]:-webkit-autofill:active {
     .workCultureApis{
       padding: 0px 70px;
     }
+
+@media(max-width: 600px){
+  .workCultureApis{
+    padding: 0px 10px !important;
+  } 
+}
