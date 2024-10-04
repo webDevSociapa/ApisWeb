@@ -39,6 +39,7 @@ import AutoScrollCarousel from "../../AutoScrollCarousel";
 import Carasol from "../../MainCarousel";
 import { NEWS_DATA } from "@/lib/constants";
 import FlowerRun from '@/assets/images/home-banner-section/flowerRun.gif'
+import ReactAngle from '@/assets/images/home-banner-section/reactangle1.png'
 
 export default function HomePage() {
   const OPTIONS = { loop: true };
@@ -62,30 +63,30 @@ export default function HomePage() {
     {
       img: TrustSlide5,
       content: "Almond and honey is a nourishing blend used in skincare.",
-      title:"Almond and Honey"
+      title: "Almond and Honey"
     },
     {
       img: TrustSlide6,
       content: "Creamy peanut butter is a smooth peanut spread.",
-      title:"Peanut Butter Creamy"
+      title: "Peanut Butter Creamy"
     },
     {
       img: TrustSlide7,
       content: "Soya chunks are protein-rich, plant-based meat alternatives.",
-      title:"Soya Chunk"
+      title: "Soya Chunk"
     },
-    {
-      img: TrustSlide9,
-      content: "Lemon honey green tea: refreshing, antioxidant-rich blend.",
-      title:"Lemon Honey Green Tea"
-    },
+    // {
+    //   img: TrustSlide9,
+    //   content: "Lemon honey green tea: refreshing, antioxidant-rich blend.",
+    //   title:"Lemon Honey Green Tea"
+    // },
     {
       img: TrustSlide8,
       content: "Muesli: a healthy, oat-based cereal.",
-      title:"Muesli"
+      title: "Muesli"
     }
-  
-   
+
+
     // {
     //   img: TrustSlide1,
     //   content: "Nature`s golden nectar, pure and organic.",
@@ -165,35 +166,35 @@ export default function HomePage() {
     },
   ];
 
-  
+
 
   return (
     <>
       {/* nature page */}
       <div className="relative w-full overflow-hidden bg-buyer-bg-yellow-2 smhome-shadow">
-     <div className="home-bg flex w-full flex-col justify-center">
-    <div className="absolute end-0 h-full bg-black">
-      <Carasol />
-    </div>
-    <div className="relative me-4 md:me-10 flex flex-col items-start justify-center px-8 sm:px-4 sm:py-16">
-      {/* Line 1 */}
-      <p className="text-end text-[24px] md:text-[60px] font-bold text-[#ffffff] shadow-white">
-        <span className="text-shadow">CHASING</span>
-        <span className="text-shadow"> THE</span>
-      </p>
-      {/* Line 2 */}
-      <p className="text-end text-[24px] md:text-[60px] font-bold text-[#ffffff]">
-        <span className="text-shadow">NATURAL</span>
-        <span className="text-shadow"> FLAVOURS</span>
-      </p>
-      {/* Line 3 */}
-      <p className="text-end text-[24px] md:text-[60px] font-bold text-[#ffffff]">
-        <span className="text-shadow">OF</span>
-        <span className="text-shadow"> EXCELLENCE</span>
-      </p>
-    </div>
-  </div>
-</div>
+        <div className="home-bg flex w-full flex-col justify-center">
+          <div className="absolute end-0 h-full bg-black">
+            <Carasol />
+          </div>
+          <div className="relative me-4 md:me-10 flex flex-col items-start justify-center px-8 sm:px-4 sm:py-16">
+            {/* Line 1 */}
+            <p className="text-end text-[24px] md:text-[60px] font-bold text-[#ffffff] shadow-white">
+              <span className="text-shadow">CHASING</span>
+              <span className="text-shadow"> THE</span>
+            </p>
+            {/* Line 2 */}
+            <p className="text-end text-[24px] md:text-[60px] font-bold text-[#ffffff]">
+              <span className="text-shadow">NATURAL</span>
+              <span className="text-shadow"> FLAVOURS</span>
+            </p>
+            {/* Line 3 */}
+            <p className="text-end text-[24px] md:text-[60px] font-bold text-[#ffffff]">
+              <span className="text-shadow">OF</span>
+              <span className="text-shadow"> EXCELLENCE</span>
+            </p>
+          </div>
+        </div>
+      </div>
 
 
 
@@ -204,7 +205,7 @@ export default function HomePage() {
             <p className="text-center text-[14px] md:text-[22px] uppercase text-[#585858] xl: font-[22px] font-medium font-jost">
               Bringing Freshness to Your Table With Flavorful Products
             </p>
-            <h3 className="text-[20px] md:text-[40px] font-bold text-[#9F7B49] md:mt-[-30px]">
+            <h3 className="text-[20px] md:text-[40px] font-bold text-[#9F7B49] md:mt-[-35px] sm: mt-[-15px]">
               The Trust Is In Apis
             </h3>
             <div className="text-center text-[16px] md:text-[24px] font-medium text-[#fffff] font-jost">
@@ -213,7 +214,7 @@ export default function HomePage() {
               which is greatly valued & trusted for its efficacy and superior
               quality.
             </div>
-            <p className="text-center text-[16px] md:text-[24px] font-medium text-[#fffff]" style={{fontFamily:"jost"}}>
+            <p className="text-center text-[16px] md:text-[24px] font-medium text-[#fffff]" style={{ fontFamily: "jost" }}>
               We are ISO 22000 certified by Intertek which is a documented
               procedure that applies to food Safety Management System framed by
               International body. From producing honey off our own hives to
@@ -222,11 +223,11 @@ export default function HomePage() {
             </p>
           </div>
           <div>
-            <p className="text-center text-[14px] md:text-[22px] uppercase text-[#585858] mt-[20] text-medium" style={{fontFamily:"jost"}}>
+            <p className="text-center text-[14px] md:text-[22px] uppercase text-[#585858] mt-[20] text-medium" style={{ fontFamily: "jost" }}>
               day-to-day choices that weave the most profound stories of
               character & growth.
             </p>
-            <h3 className="text-center text-[20px] md:text-[40px] font-bold text-[#9F7B49] mt-4 md:mt-4">
+            <h3 className="text-center text-[20px] md:text-[40px] font-bold text-[#9F7B49] mt-0 md:mt-0">
               The Taste Is What Makes Difference
             </h3>
           </div>
@@ -244,11 +245,11 @@ export default function HomePage() {
                     className="h-[240px] w-auto max-w-max bg-opacity-40"
                   />
                 </div>
-                <div className="border-2 border-[hsl(35,37%,45%)] mt-4 lg:mt-10 flex flex-col gap-1 lg:gap-3 py-3 lg:py-6 px-2 lg:px-4">
-                  <p className="text-sm  lg:text-xl font-bold text-[#373737]">
+                <div className="border-2 border-[hsl(35,37%,45%)] mt-4 lg:mt-10 flex flex-col gap-1 lg:gap-3 p-3 lg:p-6 w-full sm:w-[80%] h-[80%] md:w-[70%] h-[70%] lg:w-[100%] h-[60%] xl:w-[90%] h-[50%] mx-auto overflow-none">
+                  <p className="text-sm sm:text-base lg:text-xl font-bold text-[#373737] mb-2 line-clamp-1">
                     {itm?.title}
                   </p>
-                  <p className="text-[#666666] text-xs lg:text-sm">
+                  <p className="text-[#666666] text-xs sm:text-sm lg:text-base  line-clamp-3 sm:line-clamp-none">
                     {itm?.content}
                   </p>
                 </div>
@@ -275,7 +276,7 @@ export default function HomePage() {
       {/* Day to day story */}
       <div className="px-0 md:px-2 w-full mb-12">
         <div className="home-story-bg py-8 flex flex-col items-center">
-          <p className="uppercase text-sm text-center text-[22px] md:text-lg font-medium text-[#585858] font-medium" style={{fontFamily:"jost"}}>
+          <p className="uppercase text-sm text-center text-[22px] md:text-lg font-medium text-[#585858] font-medium" style={{ fontFamily: "jost" }}>
             day-to-day choices that weave the most profound stories
           </p>
           <p className="uppercase text-sm md:text-lg font-medium text-[#585858]">
@@ -288,13 +289,17 @@ export default function HomePage() {
             <div className="home-green-bg relative mt-10 lg:mt-20">
               <div className="w-full h-full flex flex-col lg:flex-row">
                 <div className="lg:w-1/2 h-full">
-                  <div className="lg:w-1/2 border-3 border-solid border-gradient lg:absolute -top-12 left-6 h-[500px] lg:h-[760px] hover-border-4"></div>
+                  <div className="lg:w-1/2  lg:absolute -top-12 left-6 h-[500px] lg:h-[760px]"></div>
                   <Image
                     src={HoneyImg}
                     // width={266}
                     height={720}
                     alt="header-logo"
-                    className="h-[500px] w-full lg:h-[720px] lg:w-1/2  absolute top-0 lg:-top-7 lg:rounded-tl-[40px] lg:rounded-tr-[250px] lg:rounded-br-[40px] lg:rounded-bl-[250px] rounded-tl-[5px] rounded-tr-[100px] rounded-br-[5px] rounded-bl-[100px] left-0 lg:left-5"
+                    className="h-[500px] w-full lg:h-[720px] lg:w-1/2  absolute top-0 lg:rounded-tl-[40px] lg:rounded-tr-[250px] lg:rounded-br-[40px] lg:rounded-bl-[250px] rounded-tl-[5px] rounded-tr-[100px] rounded-br-[5px] rounded-bl-[100px]"
+                  />
+                  <Image
+                    src={ReactAngle}
+                    className="h-[500px] w-full lg:h-[720px] lg:w-1/2  absolute top-0 lg:rounded-tl-[40px] lg:rounded-tr-[250px] lg:rounded-br-[40px] lg:rounded-bl-[250px] rounded-tl-[5px] robin rounded-tr-[100px] rounded-br-[5px] rounded-bl-[100px]"
                   />
                 </div>
                 <div className="lg:w-1/2 flex items-center justify-center flex-col py-10 lg:pb-0 overflow-hidden">
@@ -302,8 +307,8 @@ export default function HomePage() {
                     <p className="text-white font-bold text-[30px] mb-2">
                       Organic Honey
                     </p>
-                    <p className="text-xs text-white text-center text-[19px]" style={{fontFamily:"Jost"}}>
-                    Nature's golden nectar, pure and organic
+                    <p className="text-xs text-white text-center text-[19px]" style={{ fontFamily: "Jost" }}>
+                      Nature's golden nectar, pure and organic
                     </p>
                     {/* <p className="text-xs text-white text-center">
                     pure and organic
@@ -332,7 +337,7 @@ export default function HomePage() {
                       className="h-[125px] hidden md:inline absolute bottom-0 rotate-12 -right-10 xs:right-10"
                     />
                   </div>
-                  <div className="text-center text-xs text-white w-[65%] text-[17px]" style={{fontFamily:"Jost",lineHeight:"24px"}}>
+                  <div className="text-center text-xs text-white w-[65%] text-[20px]" style={{ fontFamily: "Jost", lineHeight: "24px" }}>
                     Organic honey is a delightful concoction that not only
                     pleases the taste buds but also offers a plethora of health
                     benefits. Unlike conventional honey, which may contain
@@ -357,43 +362,43 @@ export default function HomePage() {
 
 
       {/* API Media */}
-      <div className="relative w-full flex items-center flex-col justify-center">
-        
+      <div className="relative w-full flex items-center flex-col justify-center xl: mt-20">
+
         <p className="text-xs md:text-base text-center text-[#585858] px-4 uppercase font-jost text-medium sm: text-[14px] font-jost font-normal">
-           Stay updated with the latest news, events, and media coverage of  APIS India.
+          Stay updated with the latest news, events, and media coverage of  APIS India.
         </p>
         <p className="text-[20px] md:text-[40px]  md:my-0 font-bold text-[#9F7B49] sm: my-0 xl: my-0">
           Apis Media
         </p>
-        <div className="media-apis w-[90%] z-10 my-6 md:my-16 flex items-center justify-center">
-        <EmblaCarousel options={OPTIONS}>
+        <div className="media-apis w-[90%] z-10 my-4 md:my-10 flex items-center justify-center">
+          <EmblaCarousel options={OPTIONS}>
             {NEWS_DATA.map((itm, index) => (
               <div
                 className="embla__slide flex items-center justify-center cursor-pointer"
                 key={index}
               >
-              <a
-                key={index}
-                href={itm.link}
-                target="_blank"
-              >
-                <div className="border border-[#85673D] embla__slide__number w-[272px] md:w-[495px] h-[350px] md:!h-[590px] p-2 pb-0 flex-col !rounded-none bg-[#fff]">
-                  <Image
-                    src={itm?.img}
-                    // width={495}
-                    // height={443}
-                    alt="header-logo"
-                    className="h-full w-full w-auto max-w-max bg-opacity-40"
-                  />
-                  <div className="p-4">
-                    <p className="font-bold text-[#85673D] text-sm md:text-xl mb-1">
-                     {itm.desc}
-                    </p>
-                    <p className="text-[#525252] text-xs md:text-lg">
-                      {itm.date}
-                    </p>
+                <a
+                  key={index}
+                  href={itm.link}
+                  target="_blank"
+                >
+                  <div className="border border-[#85673D] embla__slide__number w-[272px] md:w-[495px] h-[350px] md:!h-[590px] p-2 pb-0 flex-col !rounded-none bg-[#fff]">
+                    <Image
+                      src={itm?.img}
+                      // width={495}
+                      // height={443}
+                      alt="header-logo"
+                      className="h-full w-full w-auto max-w-max bg-opacity-40"
+                    />
+                    <div className="p-4">
+                      <p className="font-bold text-[#85673D] text-sm md:text-xl mb-1">
+                        {itm.desc}
+                      </p>
+                      <p className="text-[#525252] text-xs md:text-lg">
+                        {itm.date}
+                      </p>
+                    </div>
                   </div>
-                </div>
                 </a>
               </div>
             ))}
@@ -411,12 +416,12 @@ export default function HomePage() {
           width={640}
           height={640}
           alt="header-logo"
-          className="h-[640px] hidden lg:inline w-[640px] absolute -top-12 right-0 rotate-180 font-small opacity-50	" style={{transform:"rotate(216deg)"}}
+          className="h-[640px] hidden lg:inline w-[640px] absolute -top-12 right-0 rotate-180 font-small opacity-50	" style={{ transform: "rotate(216deg)" }}
         />
       </div>
 
       {/* Our Presence */}
-      <div className="pb-10 lg:pb-32 pt-5">
+      <div className="pb-10 lg:pb-32 pt-5 md: mt-[60px]">
         <p className="text-xs md:text-lg font-medium text-[#585858] text-center uppercase font-jost text-medium sm: px-4">
           Presence is about showing up fully, authentically, and with an open
           heart, ready to
@@ -424,7 +429,7 @@ export default function HomePage() {
         <p className="text-xs md:text-lg text-center font-medium text-[#585858] uppercase font-jost text-medium">
           embrace the moment with all its beauty and challenges.
         </p>
-        <p className="text-[20px] md:text-[40px] font-bold text-[#9F7B49] pt-2 pb-5 md:pt-3 md:pb-10 text-center font-literata">
+        <p className="text-[20px] md:text-[40px] font-bold text-[#9F7B49] pt-0 pb-5 md:pt-0 md:pb-10 text-center font-literata">
           Our Presence
         </p>
         <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 md:gap-20 xl:gap-6 items-center justify-center">
@@ -491,9 +496,9 @@ export default function HomePage() {
       </div>
 
       {/* Our Availability */}
-      <div className="availbility-bg border-4">
+      <div className="availbility-bg">
         <div className="blur-bg flex gap-2 md:gap-6 items-center justify-center flex-col py-2 m-0 p-0">
-          <p className="uppercase font-medium text-[#202020] text-sm md:text-xl font-jost text-medium text-[22px] sm: text-[10px] font-medium font-jost">
+          <p className="uppercase font-medium text-[#fff] text-sm md:text-xl font-jost text-medium text-[22px] sm: text-[10px] font-bold font-jost">
             Always here, always ready
           </p>
           <p className="text-bold text-[#D7AD5F] text-[20px] md:text-[40px] font-literata font-semibold">
@@ -542,10 +547,10 @@ export default function HomePage() {
         <p className="font-medium text-center text-[#585858] text-sm  md:text-xl font-medium text-[22px] font-jost">
           DISCOVER OUR LATEST STORIES
         </p>
-        <p className="text-bold text-[20px] text-center text-[#D7AD5F] md:text-[40px] font-semibold text-[20px] font-literata">
+        <p className="text-bold text-[20px] text-center text-[#9F7B49] md:text-[40px] font-bold text-[20px] font-literata">
           Latest @Apis
         </p>
-        <p className="font-medium text-center text-xs md:text-lg text-[#666666] font-medium text-[22px] font-jost">
+        <p className="font-medium text-center text-xs md:text-lg text-[#666666] font-medium text-[22px] font-jost sm: -px-4">
           Discover the newest trends, products, and innovations from APIS India.
         </p>
         <div className="py-6 md:py-10 w-[90%] flex items-center justify-center">
@@ -571,11 +576,11 @@ export default function HomePage() {
         </div>
         <div className="w-full">
           <div className="md:tvc-bg relative !w-full">
-            <div className="flex flex-col gap-2 md:gap-4">
+            <div className="flex flex-col gap-2 md:gap-0 sm: gap-0">
               <p className="font-medium text-center text-[#585858] text-sm mt-10  md:text-xl uppercase text-medium font-jost text-medium">
                 Our Tele-vision Commercial's
               </p>
-              <p className="text-bold text-center text-[#D7AD5F] text-[20px] md:text-[38px] font-literata text-medium">
+              <p className="text-center text-[#9F7B49] text-[20px] md:text-[40px] font-literata font-bold">
                 TVC
               </p>
               <div>
@@ -627,14 +632,14 @@ export default function HomePage() {
       <div className="work-palace flex items-center justify-center px-4 py-4 lg:px-48 lg:py-48">
         <div className="h-full bg-[#FFF9F0] p-4">
           <div className="flex h-full items-center justify-center bg-white p-3">
-            <div className="bg-white flex flex-col gap-2  md:gap-4">
-              <p className="text-center text-[12px] md:text-xl font-medium text-[#585858] font-jost text-medium  sm: text-[12px] text-medium">
+            <div className="bg-white flex flex-col gap-2 md:gap-4">
+              <p className="text-center text-[22px] md:text-xl font-medium text-[#585858] font-jost text-medium  sm: text-[12px] text-medium">
                 BE AMOUNG US
               </p>
-              <p className="text-center text-[20px] md:text-[40px] font-bold text-[#9F7B49] font-literata text-semibold xl:text-[40px] sm:text-[20px]">
+              <p className="text-center text-[20px] md:text-[40px] font-bold text-[#9F7B49] font-literata text-semibold xl:text-[40px] sm:text-[20px] xl:-mt-[16px]">
                 Work Place Culture
               </p>
-              <p className="text-center text-[12px] md:text-xl font-medium text-[#666666] font-jost font-medium text-justify sm:text-[15px] px-15">
+              <p className="text-center text-[12px] md:text-xl font-medium text-[#666666] font-jost font-medium text-justify sm:text-[15px] workCultureApis">
                 At Apis India, we cultivate a collaborative and innovative
                 environment where every team member is encouraged to thrive. We
                 believe in the power of teamwork and the importance of
@@ -644,7 +649,7 @@ export default function HomePage() {
                 empowered to contribute their best, driving our collective
                 success and growth.
               </p>
-              <div className="flex justify-around mt-6">
+              <div className="flex justify-center gap-10 mt-6">
                 <button className="border border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white">
                   Join US
                 </button>

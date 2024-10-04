@@ -45,6 +45,16 @@ const Journey = () => {
         minHeight: "34vh" // Ensure height for mobile is 34vh
       }}
     >
+{/* 
+<div
+  className="w-full flex h-full xl:h-[100vh] md:h-[50vh] sm:bg-[length:100%_90%] bg-[length:100%_100%] bg-no-repeat bg-center"
+  style={{
+    backgroundImage: `url(${selectedData.img.src})`,
+    marginTop: "20px",
+    minHeight: "34vh", // Ensure height for mobile is 34vh
+  }}
+> */}
+
       <div className="sidebar p-2 absolute py-4 grid gap-2 xl:w-[350px] xl:h-[550px] sm:w-[80px] md:w-[120px]">
         {JOURNEY_DATA.map((itm, ind) => {
           return (

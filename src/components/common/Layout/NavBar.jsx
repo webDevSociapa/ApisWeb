@@ -20,8 +20,8 @@ const NavBar = ({ className, linkClass }) => {
   const handleNavigateToOurBrand = () => {
     const ourBrandPath = `/${locale}/our-brand`; // Our Brand page path
     router.push(ourBrandPath); // Navigate to the page when clicked
-    setHovered(false); // Close hover on click
-    setHoverContent(false); // Close hover content on click
+    // setHovered(false); // Close hover on click
+    // setHoverContent(false); // Close hover content on click
   };
 
   const handleMouseEnter = () => setHovered(true); // Show hover content
