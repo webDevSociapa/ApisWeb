@@ -35,13 +35,12 @@ const Journey = () => {
   }
 
   return (
-    <div className="w-full flex h-full" 
-      style={{ 
+    <div className="w-full flex h-full xl: h-[100vh] md: h-[50vh] sm: bg-contain" style={{ 
         backgroundImage: `url(${selectedData.img.src})`, 
         backgroundRepeat: "no-repeat", 
         backgroundPosition: "center", 
         backgroundSize: "100% 100%", 
-        height: "100vh", 
+        // height: "100vh", 
         marginTop: "20px",
         minHeight: "34vh" // Ensure height for mobile is 34vh
       }}
@@ -62,6 +61,7 @@ const Journey = () => {
       </div>
 
       {/* <div className="p-3 absolute bottom-10 left-10 text-white">
+      
         <h1 className="text-4xl font-semibold">{selectedData.title}</h1>
         <p className="text-2xl mt-2">{selectedData.desc}</p>
       </div> */}
