@@ -7,6 +7,7 @@ import InstaImg from '@/assets/images/social/insta.png'
 import LinkImg from '@/assets/images/social/link-din.png'
 import UtubeImg from '@/assets/images/social/utube.png'
 import Xcom from '@/assets/images/social/xcom.png'
+import FbHover from '@/assets/images/home-banner-section/fbhover.webp'
 
 const BrewerLoginHeader = () => {
   return (
@@ -19,15 +20,27 @@ const BrewerLoginHeader = () => {
           </p>
         </marquee>
         <div className="flex items-center hidden lg:inline-flex justify-center gap-5">
-          <a href={'https://www.facebook.com/apisindialtd'} target="_blank">
-            <Image
-              src={FbImg}
-              alt="FbImg"
-              height={21}
-              width={20}
-              className="h-[21px] w-[20px] cursor-pointer object-contain object-center"
-            />
-          </a>
+        <a
+  href="https://www.facebook.com/apisindialtd"
+  target="_blank"
+  className="flex items-center justify-center group"
+>
+  <Image
+    src={FbImg} 
+    alt="FbImg"
+    height={21}
+    width={20}
+    className="h-[21px] w-[20px] cursor-pointer object-contain object-center group-hover:hidden"
+  />
+  <Image
+    src={FbHover} // This is the colored version for hover
+    alt="FbImgHover"
+    height={21}
+    width={20}
+    className="h-[31px] w-[30px] cursor-pointer object-contain object-center hidden group-hover:block"
+  />
+</a>
+
           <a href={'https://x.com/apis_india'} target="_blank">
             <Image
               src={Xcom}
