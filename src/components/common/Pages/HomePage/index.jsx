@@ -274,8 +274,8 @@ export default function HomePage() {
       </div>
 
       {/* Day to day story */}
-      <div className="px-0 md:px-2 w-full mb-12">
-        <div className="home-story-bg py-8 flex flex-col items-center">
+      <div className="px-0 md:px-2 w-full mb-12 xl:-mt-10 2xl:-mt-10">
+      <div className="home-story-bg py-8 flex flex-col items-center">
           <p className="uppercase text-sm text-center text-[22px] md:text-lg font-medium text-[#585858] font-medium" style={{ fontFamily: "jost" }}>
             day-to-day choices that weave the most profound stories
           </p>
@@ -362,9 +362,9 @@ export default function HomePage() {
 
 
       {/* API Media */}
-      <div className="relative w-full flex items-center flex-col justify-center xl: mt-20">
+      <div className="relative w-full flex items-center flex-col justify-center">
 
-        <p className="text-xs md:text-base text-center text-[#585858] px-4 uppercase font-jost text-medium sm: text-[14px] font-jost font-normal">
+        <p className="text-xs md:text-base text-center text-[#585858] px-4 uppercase font-jost text-medium sm: text-[14px] font-jost font-normal sm: mt-0px">
           Stay updated with the latest news, events, and media coverage of  APIS India.
         </p>
         <p className="text-[20px] md:text-[40px]  md:my-0 font-bold text-[#9F7B49] sm: my-0 xl: my-0">
@@ -382,7 +382,7 @@ export default function HomePage() {
                   href={itm.link}
                   target="_blank"
                 >
-                  <div className="border border-[#85673D] embla__slide__number w-[272px] md:w-[495px] h-[350px] md:!h-[590px] p-2 pb-0 flex-col !rounded-none bg-[#fff]">
+                  <div className="border border-[#85673D] embla__slide__number w-[210px] md:w-[495px] h-[350px] md:!h-[590px] p-2 pb-0 flex-col !rounded-none bg-[#fff]">
                     <Image
                       src={itm?.img}
                       // width={495}
@@ -421,7 +421,7 @@ export default function HomePage() {
       </div>
 
       {/* Our Presence */}
-      <div className="pb-10 lg:pb-32 pt-5 md: mt-[60px]">
+      <div className="pb-10 lg:pb-32 pt-5">
         <p className="text-xs md:text-lg font-medium text-[#585858] text-center uppercase font-jost text-medium sm: px-4">
           Presence is about showing up fully, authentically, and with an open
           heart, ready to
