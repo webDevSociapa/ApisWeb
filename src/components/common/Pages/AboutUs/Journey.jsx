@@ -40,8 +40,8 @@ const Journey = () => {
       style={{ 
         backgroundImage: `url(${selectedData.img.src})`, 
         marginTop: "20px",
-        backgroundSize:"100% 100%",
-        height: "55vh", // Default height for mobile
+        backgroundSize:"100% 110%",
+        height: "60vh", // Default height for mobile
       }}
     >
        <style jsx>{`
@@ -58,15 +58,16 @@ const Journey = () => {
     backgroundImage: `url(${selectedData.img.src})`,
     marginTop: "20px",
     minHeight: "34vh", // Ensure height for mobile is 34vh
+    ? in hovered showiing tostup data-already  mobile view amnd sekhtop view full responsiveness
   }}
 > */}
 
-      <div className="sidebar p-0 absolute py-4 grid gap-2 xl:w-[350px] xl:h-[550px] sm:w-[80px] md:w-[120px]">
+      <div className="sidebar p-0 absolute py-4 xl:px-2 grid gap-2 xl:w-[350px] xl:h-[550px] sm:w-[80px] md:w-[120px]">
         {JOURNEY_DATA.map((itm, ind) => {
           return (
             <button
               key={ind}
-              className={`tablinks shadow-xl border border-[#9F7B49] text-xl rounded-[15px] ${selectedIndex === ind ? "bg-[#9F7B49] text-white font-bold" : "bg-[#FFF9F0E5] text-black"} 
+              className={`tablinks shadow-xl border border-[#9F7B49] text-xl  rounded-[15px] ${selectedIndex === ind ? "bg-[#9F7B49] text-white font-bold" : "bg-[#FFF9F0E5] text-black"} 
                 xl:w-[350px] xl:h-[70px] md:w-[120px] md:h-[50px] sm:h-[40px] px-2`}
               onClick={() => openCity(ind)}
             >

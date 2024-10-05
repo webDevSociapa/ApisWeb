@@ -39,22 +39,20 @@ export default function OurBrand() {
   const [activeTab, setActiveTab] = useState("vision");
 
   const ImageDataJourney = [
-    { image: AmitAnand },
-    { image: AmitAnand },
-    { image: AmitAnand },
-    { image: AmitAnand },
-    { image: AmitAnand },
-    { image: AmitAnand },
-    { image: AmitAnand },
+    { image: Polygon12 },
+    { image: Polygon12 },
+    { image: Polygon12 },
+    { image: Polygon12 },
+    { image: Polygon12 },
+    
    
   ]
   const ImageDataJourney1 = [
-    { image: AmitAnand },
-    { image: AmitAnand },
-    { image: AmitAnand },
-    { image: AmitAnand },
-    { image: AmitAnand },
-    { image: AmitAnand },
+    { image: Polygon12 },
+    { image: Polygon12 },
+    { image: Polygon12 },
+    { image: Polygon12 },
+    { image: Polygon12 },
   ]
   // const ImageDataJourney2 = [
      
@@ -300,7 +298,7 @@ export default function OurBrand() {
 
 
 
-      <div classNamelass="relative h-screen">
+      {/* <div classNamelass="relative h-screen">
         <div className="flex flex-wrap -ml-12 -mt-0 sm: ">
           {ImageDataJourney.map((itm, index) => (
             <Image
@@ -314,7 +312,7 @@ export default function OurBrand() {
             // ></div>
           ))}
         </div>
-        <div className="flex flex-wrap -ml-12 -mt-8 even:ml-0" style={{ marginLeft: "36px" }}>
+        <div className="flex flex-wrap -ml-12 -mt-8 even:ml-0" style={{ marginLeft: "57px" }}>
           {ImageDataJourney1.map((itm, index) => (
             <Image
               src={itm.image}
@@ -330,7 +328,7 @@ export default function OurBrand() {
             />
           ))}
         </div>
-        <div className="flex flex-wrap -ml-12 -mt-8 even:ml-0" style={{ marginLeft: "36px" }}>
+        <div className="flex flex-wrap -ml-30 -mt-8 even:ml-0" style={{ marginLeft: "57px" }}>
           {ImageDataJourney.map((itm, index) => (
             <Image
               src={itm.image}
@@ -338,7 +336,7 @@ export default function OurBrand() {
             />
           ))}
         </div>
-      </div> 
+      </div>  */}
 
   
 
@@ -353,7 +351,7 @@ export default function OurBrand() {
           ""
         </Link> */}
       <Link href={"/about-us/journey"}>
-        <button type="submit" class="bg-[#9F7B49] px-2 py-[7px] md:px-3 md:py-[11px] md:text-xl text-xs font-bold text-white" onClick style={{ fontFamily: "Literata" }}>Check Our Milestone</button>
+        <button type="submit" class="bg-[#9F7B49] px-2 py-[7px] md:px-3 mt-2 md:py-[11px] md:text-xl text-xs font-bold text-white" onClick style={{ fontFamily: "Literata" }}>Check Our Milestone</button>
       </Link>
 
       {/* <button type="submit" class="bg-[#9F7B49] px-2 py-[7px] md:px-3 md:py-[11px] md:text-xl text-xs font-bold text-white" onClick style={{fontFamily:"Literata"}}>Check Our Milestone</button> */}
