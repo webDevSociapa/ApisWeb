@@ -39,7 +39,7 @@ const NavBar = ({ className, linkClass }) => {
             key={path.url}
             onMouseEnter={() => handleMouseEnter(path.name)}
             onMouseLeave={handleMouseLeave}
-            className="relative"
+            // className="relative"
           >
             {path.name !== 'Our Brand' ? (
               <Link href={tabUrlWithLocale} className={cn(linkClass)}>
@@ -64,7 +64,7 @@ const NavBar = ({ className, linkClass }) => {
               <div
                 className="absolute top-full left-0 w-full bg-white z-1000"
               >
-                {/* <OurBrand onClick={handleNavigateToOurBrand} /> */}
+                <OurBrand onClick={handleNavigateToOurBrand} />
               </div>
             )}
           </div>
