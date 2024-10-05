@@ -300,7 +300,7 @@ export default function OurBrand() {
 
 
 
-      <div classNamelass="relative h-screen sm: w-[100px]">
+      {/* <div classNamelass="relative h-screen sm: w-[100px]">
         <div className="flex flex-wrap -ml-12 -mt-0 sm: ">
           {ImageDataJourney.map((itm, index) => (
             <Image
@@ -338,7 +338,7 @@ export default function OurBrand() {
             />
           ))}
         </div>
-      </div>
+      </div> */}
 
 
 
