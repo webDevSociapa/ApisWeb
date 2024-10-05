@@ -14,31 +14,21 @@ const NavBar = ({ className, linkClass }) => {
   const router = useRouter();
   const locale = routerPath.split('/')[1];
 
-  const [hovered, setHovered] = useState(false); // State to track hover
-  const [hoverContent, setHoverContent] = useState(false); // Track hover on content
+  const [hoveredItem, setHoveredItem] = useState(null);
+
+  const handleMouseEnter = (itemName) => {
+    setHoveredItem(itemName);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredItem(null);
+  };
 
   const handleNavigateToOurBrand = () => {
-    const ourBrandPath = `/${locale}/our-brand`; // Our Brand page path
-    router.push(ourBrandPath); // Navigate to the page when clicked
-    // setHovered(false); // Close hover on click
-    // setHoverContent(false); // Close hover content on click
+    const ourBrandPath = `/${locale}/our-brand`;
+    router.push(ourBrandPath);
   };
 
-  const handleMouseEnter = () => setHovered(true); // Show hover content
-  const handleMouseLeave = () => {
-    if (!hoverContent) setHovered(false); // Hide only if not hovering on content
-  };
-
-  const handleContentEnter = () => setHoverContent(true); // Keep content open when hovering on it
-  const handleContentLeave = () => {
-    setHoverContent(false); // Stop tracking hover on content
-    setHovered(false); // Hide hover when mouse leaves content
-  };
-
-  const handleContentClick =()=>{
-    setHovered(false);
-    setHoverContent(false);
-  }
   return (
     <nav className={cn(className, 'h-full gap-x-8')}>
       {PATH_DATA.map((path) => {
@@ -47,9 +37,9 @@ const NavBar = ({ className, linkClass }) => {
         return (
           <div
             key={path.url}
-            onMouseEnter={path.name === 'Our Brand' ? handleMouseEnter : undefined}
-            onMouseLeave={path.name === 'Our Brand' ? handleMouseLeave : undefined}
-            // className="relative"
+            onMouseEnter={() => handleMouseEnter(path.name)}
+            onMouseLeave={handleMouseLeave}
+            className="relative"
           >
             {path.name !== 'Our Brand' ? (
               <Link href={tabUrlWithLocale} className={cn(linkClass)}>
@@ -70,15 +60,11 @@ const NavBar = ({ className, linkClass }) => {
               </div>
             )}
 
-            {/* Conditionally render hover content for Our Brand */}
-            {path.name === 'Our Brand' && hovered && (
+            {path.name === 'Our Brand' && hoveredItem === 'Our Brand' && (
               <div
-                className="absolute top-full left-0 w-full bg-white z-50"
-                onMouseEnter={handleContentEnter} // Keep hover active when mouse is on hover content
-                onMouseLeave={handleContentLeave} // Hide hover content when mouse leaves both
-                // onClick={handleContentClick}
+                className="absolute top-full left-0 w-full bg-white z-1000"
               >
-                <OurBrand onClick={handleNavigateToOurBrand} /> {/* Show OurBrand component */}
+                {/* <OurBrand onClick={handleNavigateToOurBrand} /> */}
               </div>
             )}
           </div>

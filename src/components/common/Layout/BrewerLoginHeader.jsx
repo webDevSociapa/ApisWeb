@@ -8,6 +8,10 @@ import LinkImg from '@/assets/images/social/link-din.png'
 import UtubeImg from '@/assets/images/social/utube.png'
 import Xcom from '@/assets/images/social/xcom.png'
 import FbHover from '@/assets/images/home-banner-section/fbhover.webp'
+import TwitterHover from '@/assets/images/home-banner-section/twitterHover.png'
+import YouTubeHover from '@/assets/images/home-banner-section/youtubeHover.jpg'
+import LinkedinHover from '@/assets/images/home-banner-section/lnkedinHover.png'
+import InstaHover from '@/assets/images/home-banner-section/instaHover.png'
 
 const BrewerLoginHeader = () => {
   return (
@@ -41,46 +45,84 @@ const BrewerLoginHeader = () => {
   />
 </a>
 
-          <a href={'https://x.com/apis_india'} target="_blank">
-            <Image
-              src={Xcom}
-              height={21}
-              width={20}
-              alt="Xcom"
-              className="h-[21px] w-[20px] cursor-pointer object-contain object-center"
-            />
-          </a>
+
+<a
+  href={'https://x.com/apis_india'}
+  target="_blank"
+  className="flex items-center justify-center group"
+>
+  <Image
+    src={Xcom} 
+    alt="XImg"
+    height={21}
+    width={20}
+    className="h-[21px] w-[20px] cursor-pointer object-contain object-center group-hover:hidden"
+  />
+  <Image
+    src={TwitterHover} // This is the colored version for hover
+    alt="XImgHover"
+    height={21}
+    width={20}
+    className="h-[31px] w-[30px] cursor-pointer object-contain object-center hidden group-hover:block"
+  />
+</a>
           <a
             href={'https://www.youtube.com/channel/UCbSF_MEdOdshf3QvglvBflQ'}
             target="_blank"
+            className="flex items-center justify-center group"
+
           >
             <Image
               src={UtubeImg}
               alt="UtubeImg"
               height={20}
               width={27}
-              className="h-[20px] w-[27px] cursor-pointer object-contain object-center"
-            />
+              className="h-[21px] w-[20px] cursor-pointer object-contain object-center group-hover:hidden"
+              />
+            <Image
+              src={YouTubeHover}
+              alt="UtubeImg"
+              height={20}
+              width={27}
+              className="h-[31px] w-[30px] cursor-pointer object-contain object-center hidden group-hover:block"
+              />
           </a>
-          <a href={'https://www.instagram.com/apisindialtd/'} target="_blank">
+          <a href={'https://www.instagram.com/apisindialtd/'} target="_blank"
+            className="flex items-center justify-center group"
+          >
             <Image
               src={InstaImg}
               width={21}
               height={21}
               alt="InstaImg"
-              className="h-[21px] w-[21px] cursor-pointer object-contain object-center"
+              className="h-[21px] w-[20px] cursor-pointer object-contain object-center group-hover:hidden"
+            />
+            <Image
+              src={InstaHover}
+              width={21}
+              height={21}
+              alt="InstaImg"
+              className="h-[31px] w-[30px] cursor-pointer object-contain object-center hidden group-hover:block"
             />
           </a>
           <a
             href={'https://www.linkedin.com/showcase/apisindia/'}
             target="_blank"
+            className="flex items-center justify-center group"
           >
             <Image
               src={LinkImg}
               alt="LinkImg"
               height={21}
               width={21}
-              className="h-[21px] w-[21px] cursor-pointer object-contain object-center"
+              className="h-[21px] w-[20px] cursor-pointer object-contain object-center group-hover:hidden"
+            />
+            <Image
+              src={LinkedinHover}
+              alt="LinkImg"
+              height={21}
+              width={21}
+              className="h-[41px] w-[40px] cursor-pointer object-contain object-center hidden group-hover:block"
             />
           </a>
         </div>

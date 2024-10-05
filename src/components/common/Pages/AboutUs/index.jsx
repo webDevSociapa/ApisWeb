@@ -39,45 +39,45 @@ export default function OurBrand() {
   const [activeTab, setActiveTab] = useState("vision");
 
   const ImageDataJourney = [
-    { image: Polygon1 },
-    { image: Polygon2 },
-    { image: Polygon3 },
-    { image: Polygon4 },
-    { image: Polygon5 },
-    { image: Polygon6 },
-    { image: Polygon7 },
+    { image: AmitAnand },
+    { image: AmitAnand },
+    { image: AmitAnand },
+    { image: AmitAnand },
+    { image: AmitAnand },
+    { image: AmitAnand },
+    { image: AmitAnand },
+   
   ]
   const ImageDataJourney1 = [
-    { image: Polygon5 },
-    { image: Polygon6 },
-    { image: Polygon7 },
-    { image: Polygon8 },
-    { image: Polygon9 },
-    { image: Polygon5 },
-    { image: Polygon6 },
+    { image: AmitAnand },
+    { image: AmitAnand },
+    { image: AmitAnand },
+    { image: AmitAnand },
+    { image: AmitAnand },
+    { image: AmitAnand },
   ]
-  const ImageDataJourney2 = [
+  // const ImageDataJourney2 = [
      
-    { image: Polygon10 },
-    { image: Polygon11 },
-    { image: Polygon12 },
-    { image: Polygon13 },
-    { image: Polygon5 },
-    { image: Polygon6 },
-    { image: Polygon7 },
-  ]
-  const ImageDataJourney3 = [
-    { image: Polygon14 },
-    { image: Polygon13 },
-    { image: Polygon5 },
-    { image: Polygon6 },
-    { image: Polygon7 },
-    { image: Polygon7 },
+  //   { image: Polygon10 },
+  //   { image: Polygon11 },
+  //   { image: Polygon12 },
+  //   { image: Polygon13 },
+  //   { image: Polygon5 },
+  //   { image: Polygon6 },
+  //   { image: Polygon7 },
+  // ]
+  // const ImageDataJourney3 = [
+  //   { image: Polygon14 },
+  //   { image: Polygon13 },
+  //   { image: Polygon5 },
+  //   { image: Polygon6 },
+  //   { image: Polygon7 },
+  //   { image: Polygon7 },
    
-    // { image: Polygon4 },
+  //   // { image: Polygon4 },
     
-    { image: Polygon15 },
-  ]
+  //   { image: Polygon15 },
+  // ]
 
   const renderContent = () => {
     switch (activeTab) {
@@ -258,7 +258,7 @@ export default function OurBrand() {
             <p className="text-center text-[#373737] font-normal text-[16px] md:text-[19px] font-literata">
               Managing Director
             </p>
-            <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost text-justify">
+            <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost">
               A Delhi University Graduate from Kirori Mal College in Commerce, he spearheads key functions of Overall Plant Management; Human Resources; and Finance. The Managing Director of the company and the younger one of the two siblings, he has played the perfect foil to the elder in initiating the GREEN FIELD initiative of the factory in Roorkee. Leading from the front in all factory operations a person with hands-on expertise in executing all details at the plant level.
             </p>
           </div>
@@ -300,7 +300,7 @@ export default function OurBrand() {
 
 
 
-      {/* <div classNamelass="relative h-screen sm: w-[100px]">
+      <div classNamelass="relative h-screen">
         <div className="flex flex-wrap -ml-12 -mt-0 sm: ">
           {ImageDataJourney.map((itm, index) => (
             <Image
@@ -323,7 +323,7 @@ export default function OurBrand() {
           ))}
         </div>
         <div className="flex flex-wrap -ml-12 -mt-8 even:ml-0">
-          {ImageDataJourney2.map((itm, index) => (
+          {ImageDataJourney.map((itm, index) => (
             <Image
               src={itm.image}
               class="hexagon_jorney"
@@ -331,14 +331,17 @@ export default function OurBrand() {
           ))}
         </div>
         <div className="flex flex-wrap -ml-12 -mt-8 even:ml-0" style={{ marginLeft: "36px" }}>
-          {ImageDataJourney3.map((itm, index) => (
+          {ImageDataJourney.map((itm, index) => (
             <Image
               src={itm.image}
               class="hexagon_jorney"
             />
           ))}
         </div>
-      </div> */}
+      </div> 
+
+  
+
 
 
 
