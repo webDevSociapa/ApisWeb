@@ -670,26 +670,16 @@ input[type="password"]:-webkit-autofill:active {
 }
 
 .hexagon_jorney {
-  width: 150px; /* Adjust size for desktop */
-  height: 150px;
-  background-size: cover;
-  background-position: center;
-  clip-path: polygon(
-    50% 0%, 
-    100% 25%, 
-    100% 75%, 
-    50% 100%, 
-    0% 75%, 
-    0% 25%
-  );
+  width: 200px; /* Adjust size for desktop */
+  height: 200px;
+  margin-left: 30px;
+  /* background-size: cover; */
+  /* background-position: center; */
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  
 }
 
-@media (max-width: 640px) {
-  .hexagon_jorney {
-    width: 80px; /* Adjust size for mobile */
-    height: 80px;
-  }
-}
+
 
 .robin:hover {
   top: 20px;
@@ -704,4 +694,24 @@ input[type="password"]:-webkit-autofill:active {
   .workCultureApis{
     padding: 0px 10px !important;
   } 
+}
+
+.apiMediaSection{
+  margin-top: 30px;
+}
+
+@media(max-width: 500px){
+  .apiMediaSection{
+    margin-top: -30px;
+  }
+}
+
+.tvcSectionResponsive{
+  margin-top: 60px;
+}
+
+@media(max-width: 500px){
+  .tvcSectionResponsive{
+    margin-top: 0px;
+  }
 }

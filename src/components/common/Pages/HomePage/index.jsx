@@ -42,7 +42,7 @@ import FlowerRun from '@/assets/images/home-banner-section/flowerRun.gif'
 import ReactAngle from '@/assets/images/home-banner-section/reactangle1.png'
 
 export default function HomePage() {
-  const OPTIONS = { loop: true };
+  const OPTIONS = { slidesToScroll: 1, align: 'start' }
   const SLIDE_COUNT = 6;
   const SLIDES = [
     {
@@ -362,7 +362,7 @@ export default function HomePage() {
 
 
       {/* API Media */}
-      <div className="relative w-full flex items-center flex-col justify-center">
+      <div className="relative w-full flex items-center flex-col justify-center apiMediaSection">
 
         <p className="text-xs md:text-base text-center text-[#585858] px-4 uppercase font-jost text-medium sm: text-[14px] font-jost font-normal sm: mt-0px">
           Stay updated with the latest news, events, and media coverage of  APIS India.
@@ -370,12 +370,12 @@ export default function HomePage() {
         <p className="text-[20px] md:text-[40px]  md:my-0 font-bold text-[#9F7B49] sm: my-0 xl: my-0">
           Apis Media
         </p>
-        <div className="media-apis w-[90%] z-10 my-4 md:my-10 flex items-center justify-center">
-          <EmblaCarousel options={OPTIONS}>
+        <div className="media-apis w-full max-w-7xl z-10 my-4 md:my-10">
+        <EmblaCarousel options={OPTIONS}>
             {NEWS_DATA.map((itm, index) => (
               <div
-                className="embla__slide flex items-center justify-center cursor-pointer"
-                key={index}
+              className="embla__slide flex-[0_0_50%] min-width-0 px-2"
+              key={index}
               >
                 <a
                   key={index}
@@ -574,10 +574,10 @@ export default function HomePage() {
             ))}
           </EmblaCarousel>
         </div>
-        <div className="w-full">
+        <div className="w-full tvcSectionResponsive">
           <div className="md:tvc-bg relative !w-full">
-            <div className="flex flex-col gap-2 md:gap-0 sm: gap-0">
-              <p className="font-medium text-center text-[#585858] text-sm mt-10  md:text-xl uppercase text-medium font-jost text-medium">
+            <div className="flex flex-col gap-0 md:gap-0 sm: gap-0">
+              <p className="font-medium text-center text-[#585858] text-sm  md:text-xl uppercase text-medium font-jost text-medium">
                 Our Tele-vision Commercial's
               </p>
               <p className="text-center text-[#9F7B49] text-[20px] md:text-[40px] font-literata font-bold">
