@@ -71,6 +71,15 @@ const MHMOBILE = () => {
               className="h-[21px] w-[20px] cursor-pointer object-contain object-center"
             />
           </button>
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <Link href="/" className="flex items-center">
+              <Image
+                src={Logo}
+                alt="Logo"
+                className="object-contain w-[120px] h-[55px] object-center"
+              />
+            </Link>
+          </div>
         </>
         // </Button>
       )}

@@ -34,6 +34,9 @@ import Polygon15 from '@/assets/images/AboutUs/Polygon22.png';
 import Journey from "./Journey";
 import AboutusLogo from '@/assets/images/AboutUs/aboutusLogo.png';
 import AboutStreak from '@/assets/images/AboutUs/aboutStreak.png'
+import Hexagonal from "../../Pages/AboutUs/Hexagonal";
+import HexagonalPage from "../../Pages/AboutUs/Hexagonal";
+import HexaGonalPage from "../../Pages/AboutUs/Hexagonal";
 
 export default function OurBrand() {
   const [activeTab, setActiveTab] = useState("vision");
@@ -296,9 +299,11 @@ export default function OurBrand() {
         </p>
       </div>
 
+      {/* <HexaGonalPage /> */}
 
 
-      {/* <div classNamelass="relative h-screen">
+
+       {/* <div classNamelass="relative h-screen">
         <div className="flex flex-wrap -ml-12 -mt-0 sm: ">
           {ImageDataJourney.map((itm, index) => (
             <Image

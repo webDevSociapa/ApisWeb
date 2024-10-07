@@ -1,11 +1,41 @@
+'use client'
 import ImageBanner from "@/components/common/Layout/Banner";
 import Image from "next/image";
 import Banner from "@/assets/images/OurBrands/HoneyBack.png";
-import React from "react";
+import React, { useState } from "react";
 import Ring1 from "@/assets/images/OurBrands/Ring-4.png";
 import GurrentyBadge from "@/assets/images/OurBrands/GurrentyBadge.png";
+import { useRouter } from 'next/navigation';
 
 const page = () => {
+  const [batchNumber, setBatchNumber] = useState('');
+  const [name, setName] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const router = useRouter();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('/api/checkReport', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ batch_number:batchNumber }),
+      });
+      console.log(response,"response");
+      
+      if (response.ok) {
+        const data = await response.json();
+        router.push(`/generate-pdf?batchNumber=${batchNumber}`);
+      } else {
+        // Handle error
+        console.error('Failed to check report');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
   return (
     <>
       <div className="w-full relative h-full">
@@ -24,38 +54,50 @@ const page = () => {
             Please enter your batch code written on side of Apis Honey pack to
             get your purity certificate.
           </p>
-         <form action="/generate-pdf" mehtod="POST">
-         <div className="px-10 flex flex-col gap-3 md:gap-6">
-            <div>
-              <p className="font-jost text-xs md:text-base pb-2">
-                Batch Number
-              </p>
-              <input
-                type="text"
-                className="border border-black outline-none w-full font-jost rounded-md p-1 md:p-2"
-              />
+          <form onSubmit={handleSubmit}>
+            <div className="px-10 flex flex-col gap-3 md:gap-6">
+              <div>
+                <p className="font-jost text-xs md:text-base pb-2">
+                  Batch Number
+                </p>
+                <input
+                  type="text"
+                  value={batchNumber}
+                  onChange={(e) => setBatchNumber(e.target.value)}
+                  className="border border-black outline-none w-full font-jost rounded-md p-1 md:p-2"
+                  required
+                />
+              </div>
+              <div>
+                <p className="font-jost text-xs md:text-base pb-2">Name</p>
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="border border-black outline-none w-full font-jost rounded-md p-1 md:p-2"
+                  required
+                />
+              </div>
+              <div>
+                <p className="font-jost text-xs md:text-base pb-2">
+                  Phone Number:
+                </p>
+                <input
+                  type="tel"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  className="border border-black outline-none w-full font-jost rounded-md p-1 md:p-2"
+                  required
+                />
+              </div>
+              <button
+                className="border mt-3 self-center border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 w-max text-xs md:text-xl py-1 md:py-3 font-bold text-white"
+                type="submit"
+              >
+                Check Report
+              </button>
             </div>
-            <div>
-              <p className="font-jost text-xs md:text-base pb-2">Name</p>
-              <input
-                type="text"
-                className="border border-black outline-none w-full font-jost rounded-md p-1 md:p-2"
-              />
-            </div>
-            <div>
-              <p className="font-jost text-xs md:text-base pb-2">
-                Phone Number:
-              </p>
-              <input
-                type="number"
-                className="border border-black outline-none w-full font-jost rounded-md p-1 md:p-2"
-              />
-            </div>
-            <button className="border mt-3 self-center  border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 w-max text-xs md:text-xl py-1 md:py-3 font-bold text-white" type="submit">
-              Check Report
-            </button>
-          </div>
-         </form>
+          </form>
         </div>
         <div className="font-jost flex flex-col lg:flex-row gap-8 mt-8 md:mt-16 items-center justify-center">
           <div className="w-[90%] md:w-[510px] shadow-lg p-3 md:p-6 border border-[#9F7B49] bg-[#FFFBF6] h-[206px]">
