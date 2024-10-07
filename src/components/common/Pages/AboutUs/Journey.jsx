@@ -50,6 +50,17 @@ const Journey = () => {
             height: 90vh !important;
           }
         }
+        @media (max-width: 1285px) {
+          div {
+            height: 65vh !important;
+          }
+        }
+        @media (max-width: 500px) {
+          div {
+            height: 55vh !important;
+            margin-left: 2px;
+          }
+        }
       `}</style>
 {/* 
 <div
@@ -62,13 +73,13 @@ const Journey = () => {
   }}
 > */}
 
-      <div className="sidebar p-0 absolute py-4 xl:px-2 grid gap-2 xl:w-[350px] xl:h-[550px] sm:w-[80px] md:w-[120px]">
+      <div className="sidebar p-0 absolute py-4 xl:px-2 grid gap-1 xl:w-[350px] xl:h-[550px] sm:w-[160px] md:w-[120px]">
         {JOURNEY_DATA.map((itm, ind) => {
           return (
             <button
               key={ind}
               className={`tablinks shadow-xl border border-[#9F7B49] text-xl  rounded-[15px] ${selectedIndex === ind ? "bg-[#9F7B49] text-white font-bold" : "bg-[#FFF9F0E5] text-black"} 
-                xl:w-[350px] xl:h-[70px] md:w-[120px] md:h-[50px] sm:h-[40px] px-2`}
+                xl:w-[350px] xl:h-[70px] md:w-[250px] md:h-[50px] px-2`}
               onClick={() => openCity(ind)}
             >
               {itm.year}

@@ -715,3 +715,14 @@ input[type="password"]:-webkit-autofill:active {
     margin-top: 0px;
   }
 }
+
+@media(max-width: 1230px){
+  .logoMidScreen{
+    width: 120px;
+    height: 55px;
+    margin-top: 10px;
+    margin-right: 20px;
+    padding: 0px 14px;
+    /* border: 2px solid red; */
+  }
+}

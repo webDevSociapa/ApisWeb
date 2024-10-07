@@ -176,7 +176,7 @@ export default function HomePage() {
           <div className="absolute end-0 h-full bg-black">
             <Carasol />
           </div>
-          <div className="relative me-4 md:me-10 flex flex-col items-start justify-center px-8 sm:px-4 sm:py-16">
+          <div className="relative me-4 md:me-10 flex flex-col items-start justify-center px-3 sm:px-14 sm:py-16">
             {/* Line 1 */}
             <p className="text-end text-[24px] md:text-[60px] font-bold text-[#ffffff] shadow-white">
               <span className="text-shadow">CHASING</span>
@@ -409,14 +409,14 @@ export default function HomePage() {
           width={640}
           height={640}
           alt="header-logo"
-          className="h-[640px] z-0 hidden lg:inline w-[640px] absolute -bottom-28 left-0 rotate-45 opacity-50"
+          className="h-[640px] z-0 hidden lg:inline w-[640px] absolute -bottom-28 left-0 rotate-90 opacity-50" style={{transform: "rotate(40deg)"}}
         />
         <Image
           src={FlowerRun}
           width={640}
           height={640}
           alt="header-logo"
-          className="h-[640px] hidden lg:inline w-[640px] absolute -top-12 right-0 rotate-180 font-small opacity-50	" style={{ transform: "rotate(216deg)" }}
+          className="h-[640px] hidden lg:inline w-[640px] absolute -top-12 right-0 -rotate-136 font-small opacity-40" style={{transform: "rotate(-136deg)"}}
         />
       </div>
 

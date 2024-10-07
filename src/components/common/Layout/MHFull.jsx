@@ -7,7 +7,7 @@ import NavBar from './NavBar'
 
 const MHFull = () => {
   return (
-    <div className="w-full px-4 sm:px-8 flex items-center justify-between">
+    <div className="w-full flex items-center justify-between">
       {/* logo */}
       <div className="w-[120px]">
         <Link href={'/'}>
@@ -16,7 +16,7 @@ const MHFull = () => {
             width={100}
             height={55}
             alt="header-logo"
-            className="w-[120px] h-[55px] object-contain object-center"
+            className="w-[120px] h-[55px] object-contain object-center logoMidScreen"
           />
         </Link>
       </div>

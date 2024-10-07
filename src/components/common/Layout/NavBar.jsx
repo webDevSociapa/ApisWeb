@@ -15,18 +15,31 @@ const NavBar = ({ className, linkClass }) => {
   const locale = routerPath.split('/')[1];
 
   const [hoveredItem, setHoveredItem] = useState(null);
+  const [isOurBrandHovered, setIsOurBrandHovered] = useState(false);
 
   const handleMouseEnter = (itemName) => {
     setHoveredItem(itemName);
+    if (itemName === 'Our Brand') {
+      setIsOurBrandHovered(true);
+    }
   };
 
   const handleMouseLeave = () => {
     setHoveredItem(null);
   };
 
+  const handleOurBrandContentMouseEnter = () => {
+    setIsOurBrandHovered(true);
+  };
+
+  const handleOurBrandContentMouseLeave = () => {
+    setIsOurBrandHovered(false);
+  };
+
   const handleNavigateToOurBrand = () => {
     const ourBrandPath = `/${locale}/our-brand`;
     router.push(ourBrandPath);
+    
   };
 
   return (
@@ -39,7 +52,6 @@ const NavBar = ({ className, linkClass }) => {
             key={path.url}
             onMouseEnter={() => handleMouseEnter(path.name)}
             onMouseLeave={handleMouseLeave}
-            // className="relative"
           >
             {path.name !== 'Our Brand' ? (
               <Link href={tabUrlWithLocale} className={cn(linkClass)}>
@@ -60,11 +72,13 @@ const NavBar = ({ className, linkClass }) => {
               </div>
             )}
 
-            {path.name === 'Our Brand' && hoveredItem === 'Our Brand' && (
+            {path.name === 'Our Brand' && isOurBrandHovered && (
               <div
                 className="absolute top-full left-0 w-full bg-white z-1000"
+                onMouseEnter={handleOurBrandContentMouseEnter}
+                onMouseLeave={handleOurBrandContentMouseLeave}
               >
-                <OurBrand onClick={handleNavigateToOurBrand} />
+                <OurBrand onClick={handleNavigateToOurBrand}  />
               </div>
             )}
           </div>
