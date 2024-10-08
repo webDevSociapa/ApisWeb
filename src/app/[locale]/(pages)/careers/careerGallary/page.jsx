@@ -9,7 +9,7 @@ import CareerGallery10 from '@/assets/images/Careers/cgallary10.png';
 
 const TABS = [
   { id: 1, title: "Employee Award", content: [CareerGallery5, CareerGallery2, CareerGallery1,CareerGallery4, CareerGallery3, CareerGallery10] },
-  { id: 2, title: "Training & Sessions", content: [CareerGallery5, CareerGallery2, CareerGallery1,CareerGallery4, CareerGallery3, CareerGallery10] },
+  { id: 2, title: "Meet & Greet", content: [CareerGallery5, CareerGallery2, CareerGallery1,CareerGallery4, CareerGallery3, CareerGallery10] },
   { id: 3, title: "Engagements", content: [CareerGallery5, CareerGallery2, CareerGallery1,CareerGallery4, CareerGallery3, CareerGallery10] },
   { id: 4, title: "Celebrations", content: [CareerGallery4, CareerGallery3, CareerGallery10] },
 ];
@@ -56,7 +56,7 @@ export default function Album({searchParams }) {
 
       {/* Display Active Tab Title */}
       {currentTab && (
-        <p className="text-center mt-10 font-bold text-[#9F7B49] text-lg text:[26px]">{currentTab.title}</p>
+        <p className="text-center mt-10 font-bold text-[#9F7B49] text-3xl py-4 sm:py-4 sm: mt-2">{currentTab.title}</p>
       )}
 
       {/* Gallery */}
