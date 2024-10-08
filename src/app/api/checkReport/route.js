@@ -1,5 +1,8 @@
 import { MongoClient } from "mongodb";
 import { NextResponse } from "next/server";
+import { jsPDF } from "jspdf";
+import fs from 'fs/promises';
+import path from 'path';
 
 export async function POST(req) {
     try {
@@ -22,14 +25,23 @@ export async function POST(req) {
                 { "landing_enquiry.batch_number": batch_number },
                 { projection: { "landing_enquiry.$": 1 } }
             );
+            console.log("DS25FD050",batchData);
+            
 
             if (batchData && batchData.landing_enquiry && batchData.landing_enquiry.length > 0) {
                 const specificBatchData = batchData.landing_enquiry[0];
                 console.log("Specific batch data found:", specificBatchData);
-                return NextResponse.json(
-                    { message: 'Batch data found successfully', data: specificBatchData },
-                    { status: 200 },
-                );
+
+                // Create PDF with fixed images and batch data
+                const pdf = await createPDF(specificBatchData);
+
+                return new NextResponse(pdf, {
+                    status: 200,
+                    headers: {
+                        'Content-Type': 'application/pdf',
+                        'Content-Disposition': `attachment; filename="batch_${batch_number}.pdf"`,
+                    },
+                });
             } else {
                 console.log("No batch data found for batch number:", batch_number);
                 return NextResponse.json(
@@ -55,3 +67,57 @@ export async function POST(req) {
         );
     }
 }
+
+async function createPDF(batchData) {
+    const doc = new jsPDF({
+        orientation: 'portrait',
+        unit: 'mm',
+        format: [210, 297] // Standard A4 size
+    });
+
+    // Add fixed images to PDF, one per page
+    const imagePaths = [
+        path.join(process.cwd(), 'public', 'apispdf03.jpg'),
+        path.join(process.cwd(), 'public', 'apispdf01.jpg'),
+        path.join(process.cwd(), 'public', 'apispdf02.jpg'),
+    ];
+
+    for (let i = 0; i < imagePaths.length; i++) {
+        if (i > 0) {
+            doc.addPage();
+        }
+        const imageData = await fs.readFile(imagePaths[i]);
+        doc.addImage(imageData, 'JPEG', 10, 10, 190, 277); // Full page image with margins
+
+        // Add batch number and report numbers only to the first page
+        if (i === 0) {
+            console.log(batchData, "batchData");
+            doc.setFontSize(8);
+            doc.setFont(undefined, 'normal');
+            const batchText = `${batchData.batch_number}`;
+            const reportNo = `${batchData.report_no}`;
+            const reportNo1 = `${batchData.report_no1}`;
+            const textWidth = doc.getStringUnitWidth(batchText) * doc.internal.getFontSize() / doc.internal.scaleFactor;
+            const textX = (doc.internal.pageSize.width - textWidth) / 2 - 20;
+            const textWidth1 = doc.getStringUnitWidth(reportNo) * doc.internal.getFontSize() / doc.internal.scaleFactor;
+            const textX1 = (doc.internal.pageSize.width - textWidth1) / 2 + 10;
+            const textWidth2 = doc.getStringUnitWidth(reportNo1) * doc.internal.getFontSize() / doc.internal.scaleFactor;
+            const textX2 = (doc.internal.pageSize.width - textWidth2) / 2 - 10;
+            
+            // Position each piece of text on separate lines
+            doc.text(batchText, textX, 135);
+            doc.text(batchText, textX, 225);
+            doc.text(reportNo, textX1, 215);
+            doc.text(reportNo1, textX2, 219);
+        }
+    }
+
+    // Add other batch data to the last page
+    
+
+    // Convert PDF to buffer
+    const pdfBuffer = doc.output('arraybuffer');
+    return Buffer.from(pdfBuffer);
+}
+
+export { POST };

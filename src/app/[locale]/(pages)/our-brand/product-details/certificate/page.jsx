@@ -21,12 +21,11 @@ const page = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ batch_number:batchNumber }),
+        body: JSON.stringify({ batch_number: batchNumber }),
       });
-      console.log(response,"response");
+      console.log(response,"responseData");
       
       if (response.ok) {
-        const data = await response.json();
         router.push(`/generate-pdf?batchNumber=${batchNumber}`);
       } else {
         // Handle error
@@ -34,6 +33,7 @@ const page = () => {
       }
     } catch (error) {
       console.error('Error:', error);
+      // You might want to set an error state here and display it to the user
     }
   };
   return (
