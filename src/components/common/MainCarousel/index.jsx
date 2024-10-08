@@ -28,7 +28,7 @@ export default class Carasol extends Component {
             muted
             className={"video-img1"}
             loop
-            src={'https://api.luxorpen.com/v1/HomePageBanner1.mp4'}
+            src={'https://luxor-pen-prod.s3.ap-south-1.amazonaws.com/Main+Banner+Video+2.mp4'}
           />
         </div>
         <div className="carousel_banner home-shadow" style={this.state.imageStyle}>
@@ -37,7 +37,7 @@ export default class Carasol extends Component {
             muted
             className={"video-img1"}
             loop
-            src={'https://api.luxorpen.com/v1/HomePageBanner2.mp4'}
+            src={'https://api.luxorpen.com/v1/HomePageBanner1.mp4'}
           />
         </div>
         {/* <div className="carousel_banner" style={this.state.imageStyle}>

@@ -1,5 +1,10 @@
 'use client'
 
+import ImageBanner from '@/components/common/Layout/Banner';
+import Image from 'next/image';
+import GurrentyBadge from "@/assets/images/OurBrands/GurrentyBadge.png";
+import Banner from "@/assets/images/OurBrands/HoneyBack.png";
+
 import { useSearchParams } from 'next/navigation';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
@@ -60,19 +65,28 @@ export default function GeneratePDF() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-2xl font-bold mb-4">Generate PDF for Batch {batchNumber}</h1>
+    <>
+     <div className=''>
+     <div className="w-full relative">
+        <ImageBanner banner={Banner} className="h-full w-full" />
+        <Image
+          src={GurrentyBadge}
+          className="hidden z-0 -bottom-[100px] right-0 lg:inline absolute h-[375px] w-[375px]"
+        />
+      </div>
+      <div className="w-full flex flex-col items-center justify-center mt-[70px]">
+      <h1 className="text-2xl font-bold mb-4">Your batch of Apis Honey is 100% compliant on all Quality parameters. Please download your purity certificate.{batchNumber}</h1>
       <div className="space-x-4">
         <button
           onClick={() => handlePDFAction('view')}
-          className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-[#835415] hover:bg-[#835415] text-white font-bold py-2 px-4 rounded"
           disabled={isLoading}
         >
           {isLoading ? 'Processing...' : 'View PDF'}
         </button>
         <button
           onClick={() => handlePDFAction('download')}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-[#835415] hover:bg-[#835415] text-white font-bold py-2 px-4 rounded"
           disabled={isLoading}
         >
           {isLoading ? 'Processing...' : 'Download PDF'}
@@ -81,10 +95,12 @@ export default function GeneratePDF() {
           onClick={handleBack}
           className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
         >
-          Back
+          Check Again
         </button>
       </div>
       {error && <p className="text-red-500 mt-4">{error}</p>}
     </div>
+     </div>
+    </>
   );
 }

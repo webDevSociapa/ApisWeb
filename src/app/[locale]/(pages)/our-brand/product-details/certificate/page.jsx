@@ -11,10 +11,14 @@ const page = () => {
   const [batchNumber, setBatchNumber] = useState('');
   const [name, setName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
   const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setMessage('');
+    setError('');
     try {
       const response = await fetch('/api/checkReport', {
         method: 'POST',
@@ -23,19 +27,21 @@ const page = () => {
         },
         body: JSON.stringify({ batch_number: batchNumber }),
       });
-      console.log(response,"responseData");
+      console.log('response', response);
       
       if (response.ok) {
+        setMessage("Batch Number is valid");
         router.push(`/generate-pdf?batchNumber=${batchNumber}`);
       } else {
         // Handle error
-        console.error('Failed to check report');
+        setError('Batch number not found. Please check and try again.');
       }
     } catch (error) {
       console.error('Error:', error);
-      // You might want to set an error state here and display it to the user
+      setError('An error occurred. Please try again later.');
     }
   };
+
   return (
     <>
       <div className="w-full relative h-full">
@@ -96,8 +102,14 @@ const page = () => {
               >
                 Check Report
               </button>
+              {error && (
+                <p className="text-red-500 text-center mt-2">{error}</p>
+              )}
             </div>
           </form>
+          {message && (
+            <p className="text-green-500 text-center mt-2">{message}</p>
+          )}
         </div>
         <div className="font-jost flex flex-col lg:flex-row gap-8 mt-8 md:mt-16 items-center justify-center">
           <div className="w-[90%] md:w-[510px] shadow-lg p-3 md:p-6 border border-[#9F7B49] bg-[#FFFBF6] h-[206px]">
@@ -162,6 +174,7 @@ const page = () => {
           </div>
         </div>
       </div>
+      
     </>
   );
 };
