@@ -119,5 +119,3 @@ async function createPDF(batchData) {
     const pdfBuffer = doc.output('arraybuffer');
     return Buffer.from(pdfBuffer);
 }
-
-export { POST };
