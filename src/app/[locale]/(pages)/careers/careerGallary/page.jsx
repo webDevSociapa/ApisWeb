@@ -1,23 +1,60 @@
 "use client"
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import CareerGallery5 from '@/assets/images/Careers/cgallary5.png';
 import CareerGallery2 from '@/assets/images/Careers/cgallary2.png';
 import CareerGallery1 from '@/assets/images/Careers/cgallary1.png';
 import CareerGallery4 from '@/assets/images/Careers/cgallary4.png';
 import CareerGallery3 from '@/assets/images/Careers/cgallary3.png';
 import CareerGallery10 from '@/assets/images/Careers/cgallary10.png';
+import BirthdayCelebration from '@/assets/images/Careers/birthdayCelebration.png';
+import BirthdayCelebration1 from '@/assets/images/Careers/birthdayCelebration2.jpg';
+import BirthdayCelebration2 from '@/assets/images/Careers/birthdayCelebration3.jpg';
+import { useSearchParams } from "next/navigation";
 
 const TABS = [
-  { id: 1, title: "Employee Award", content: [CareerGallery5, CareerGallery2, CareerGallery1,CareerGallery4, CareerGallery3, CareerGallery10] },
-  { id: 2, title: "Meet & Greet", content: [CareerGallery5, CareerGallery2, CareerGallery1,CareerGallery4, CareerGallery3, CareerGallery10] },
-  { id: 3, title: "Engagements", content: [CareerGallery5, CareerGallery2, CareerGallery1,CareerGallery4, CareerGallery3, CareerGallery10] },
-  { id: 4, title: "Celebrations", content: [CareerGallery4, CareerGallery3, CareerGallery10] },
+  { id: 1, title: "Employee Award", content: [CareerGallery5, CareerGallery2, CareerGallery1, CareerGallery4, CareerGallery3, CareerGallery10] },
+  { id: 2, title: "Meet & Greet", content: [CareerGallery5, CareerGallery2, CareerGallery1, CareerGallery4, CareerGallery3, CareerGallery10] },
+  { id: 3, title: "Engagements", content: [CareerGallery5, CareerGallery2, CareerGallery1, CareerGallery4, CareerGallery3, CareerGallery10] },
+  { id: 4, title: "Celebrations", content: [BirthdayCelebration, BirthdayCelebration1, BirthdayCelebration2] },
 ];
 
-export default function Album({searchParams }) {
-  console.log(searchParams.name,"name");
+// Modal component
+const Modal = ({ image, onClose }) => {
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+      <div className="relative max-w-4xl w-full">
+        <button
+          onClick={onClose}
+          className="absolute top-2 right-2 text-white text-xl bg-black bg-opacity-50 rounded-full w-8 h-8 flex items-center justify-center"
+        >
+          &times;
+        </button>
+        <Image
+          src={image}
+          alt="Modal image"
+          width={1200}
+          height={800}
+          className="w-full h-auto object-contain"
+        />
+      </div>
+    </div>
+  );
+};
+
+export default function Album() {
+  const searchParams = useSearchParams()
+  const gallery = searchParams.get("gallery");
+  const title = searchParams.get("title");
   
-  const [activeTab, setActiveTab] = useState(1);
+  const [activeTab, setActiveTab] = useState(parseInt(gallery) || 1);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  useEffect(() => {
+    if (gallery) {
+      setActiveTab(parseInt(gallery));
+    }
+  }, [gallery]);
 
   const handleTabClick = (tabId) => {
     setActiveTab(tabId);
@@ -25,23 +62,28 @@ export default function Album({searchParams }) {
 
   const currentTab = TABS.find(tab => tab.id === activeTab);
 
+  const handleImageClick = (image) => {
+    setSelectedImage(image);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
   return (
     <>
       <div className="flex flex-col items-center justify-center">
         <p className="font-bold text-[20px] md:text-[40px] text-center text-[#9F7B49]">
           Life @Apis
         </p>
-        {/* */}
-        <p className="text-sm w-[95%]  md:text-xl md:w-[70%] md:leading-8 mt-3  md:mt-6 text-center">
+        <p className="text-sm w-[95%] md:text-xl md:w-[70%] md:leading-8 mt-3 md:mt-6 text-center">
           At Apis India, we foster a collaborative and innovative work culture
           where every team member's ideas are valued, and growth opportunities
           are embraced with enthusiasm.
         </p>
       </div>
 
-      {/* Tabs */}
-      {/*  */}
-      <div className="flex justify-center mt-4 space-x-4 w-[100%] sm:w-[80%] text-nowrap">
+      {/* <div className="flex justify-center mt-4 space-x-4 w-[100%] sm:w-[80%] text-nowrap overflow-x-auto">
         {TABS.map((tab) => (
           <div
             key={tab.id}
@@ -52,21 +94,30 @@ export default function Album({searchParams }) {
             {tab.title}
           </div>
         ))}
-      </div>
+      </div> */}
 
-      {/* Display Active Tab Title */}
       {currentTab && (
-        <p className="text-center mt-10 font-bold text-[#9F7B49] text-3xl py-4 sm:py-4 sm: mt-2">{currentTab.title}</p>
+        <p className="text-center mt-10 font-bold text-[#9F7B49] text-3xl py-4 sm:py-4 sm:mt-2">{currentTab.title}</p>
       )}
 
-      {/* Gallery */}
-      <div className="flex flex-wrap justify-center mx-auto w-full max-w-[1320px] p-2 pt-0">
-        {currentTab?.content.map((image, index) => (
-          <div key={index} className="w-full md:w-1/3 p-0">
-            <img className="w-full h-auto" src={image.src} alt={`Gallery image ${index + 1}`} />
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8 px-4">
+        {currentTab && currentTab.content.map((image, index) => (
+          <div key={index} className="aspect-square overflow-hidden cursor-pointer"
+               onClick={() => handleImageClick(image)}>
+            <Image 
+              src={image} 
+              alt={`Gallery image ${index + 1}`} 
+              width={300} 
+              height={300} 
+              className="w-full h-full object-cover transition-transform duration-300 hover:scale-110" 
+            />
           </div>
         ))}
       </div>
+
+      {/* {selectedImage && (
+        <Modal image={selectedImage} onClose={closeModal} />
+      )} */}
     </>
   );
 }

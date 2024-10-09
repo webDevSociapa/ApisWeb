@@ -55,6 +55,7 @@ import BoneStrength from "@/assets/images/OurBrands/BoneStrength.png"
 import HarmoneBalance from "@/assets/images/OurBrands/HarmoneBalance.png"
 import MoodEnhance from "@/assets/images/OurBrands/moodEnhance.png"
 import BrainFunction from "@/assets/images/OurBrands/BrainFunction.png"
+import HimalayaHoney from "@/assets/images/OurBrands/himalayaHoney.png"
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { PRODUCT_DATA } from "@/lib/constants";
@@ -634,6 +635,8 @@ const ProductDetails = () => {
   const selectedProduct = selectedBrand.products.find(
     (itm) => itm.id == searchParams.get("product_id")
   );
+
+
   console.log("selectedContent",selectedContent);
   const renderBenefits = (benefits) => {
     return benefits.map((itm) => (
@@ -757,16 +760,39 @@ const ProductDetails = () => {
         </div>
       </div>
      {/* <a href={'/about-us'}> */}
-     <div className="w-[80%]">
-        <Image src={CheckReportBanner}
+     {selectedBrand?.id === 1 && selectedProduct?.id === 1 ?  (
+      <div className="w-[80%] relative">
+      <Image 
+        src={CheckReportBanner}
         height={340}
-        // width={1335}
-        className="mt-8 w-[100%]"
-        />
-        <a href={'/our-brand/product-details/certificate'}>
-        <button className="absolute left-[65%] top-[30%] border mt-2 border-[#9F7B49] bg-[#9F7B49] px-2 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white">Check Report</button>
+        className="mt-8 w-full"
+        alt="Check Report Banner"
+      />
+      <div className="absolute left-[31%] bottom-[15%]  sm: left-[70%] md:-2 transform -translate-x-1/2 md:left-[70%] lg:left-[70%] chckReportBtn">
+        <a href='/our-brand/product-details/certificate'>
+          <button className="border border-[#9F7B49] bg-[#9F7B49] px-2 sm: px-0 md:px-6 lg:px-12 text-xs sm:text-sm md:text-base py-1 sm:py-2 md:py-3 font-bold text-white whitespace-nowrap">
+            Check Report
+          </button>
         </a>
       </div>
+    </div>
+     ): selectedBrand?.id === 3 && selectedProduct?.id === 2 ? (
+      <div className="w-[80%] relative">
+      <Image 
+        src={HimalayaHoney}
+        height={340}
+        className="mt-8 w-full"
+        alt="Check Report Banner"
+      />
+      <div className="absolute left-[31%] bottom-[15%]  sm: left-[70%] md:-2 transform -translate-x-1/2 md:left-[70%] lg:left-[70%] chckReportBtn">
+        <a href='/our-brand/product-details/certificate'>
+          <button className="border border-[#9F7B49] bg-[#9F7B49] px-2 sm: px-0 md:px-6 lg:px-12 text-xs sm:text-sm md:text-base py-1 sm:py-2 md:py-3 font-bold text-white whitespace-nowrap">
+            Check Report
+          </button>
+        </a>
+      </div>
+    </div>
+     ): null}
      {/* </a> */}
 
       <p className="text-[20px] md:text-[40px] py-4 md:py-10 font-bold text-[#9F7B49]">

@@ -27,7 +27,7 @@ input[type="password"]:-webkit-autofill:active {
   height: 650px;
   width: 100%;
   margin-right: 50px;
-  background-size: contain;
+  /* background-size: contain; */
 }
 @media (max-width: 768px) {
   .home-bg {
@@ -725,7 +725,17 @@ input[type="password"]:-webkit-autofill:active {
     height: 55px;
     margin-top: 10px;
     margin-right: 20px;
-    padding: 0px 14px;
+    /* padding: 0px 2px; */
+    /* border: 2px solid red; */
+  }
+}
+@media(max-width: 1080px){
+  .logoMidScreen{
+    width: 120px !important;
+    height: 55px !important;
+    /* margin-top: 10px;
+    margin-right: 20px; */
+    /* padding: 0px 2px; */
     /* border: 2px solid red; */
   }
 }
@@ -733,3 +743,55 @@ input[type="password"]:-webkit-autofill:active {
 .carousel-status{
   display: none;
 }
+
+.flowerrun1{
+  width: 350px;
+  height: 350px;
+  margin-left: 100px;
+
+}
+.flowerrun2{
+  width: 350px;
+  height: 350px;
+  margin-right: 100px;
+
+}
+
+@media(max-width: 1200px){
+  .navbarmidScreen{
+    /* border: 2px solid; */
+    /* padding: 0px 2px !important; */
+    margin-left: 30px;
+    align-items: center;
+    
+  }
+}
+
+@media(max-width: 1230px){
+  .searchIconMidScreen{
+    margin-top: 10px;
+  }
+}
+
+ @media(max-width: 885px){
+  .chckReportBtn{
+    margin-bottom: -20px;
+    padding: 2px;
+    /* border: 3px solid; */
+  }
+
+ }
+
+ .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.gallery-item {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+
