@@ -7,14 +7,15 @@ import NavBar from './NavBar'
 
 const MHFull = () => {
   return (
-    <div className="w-full flex items-center justify-between">
+    <div className="w-full flex flex-col md:flex-row items-center justify-between">
       {/* logo */}
-      <div className="w-[120px]">
+      {/*  */}
+      <div className="w-[120px] mb-4 md:mb-0">
         <Link href={'/'}>
           <Image
             src={Logo}
-            width={100}
-            height={55}
+            // width={100}
+            // height={55}
             alt="header-logo"
             className="w-[120px] h-[55px] object-contain object-center logoMidScreen"
           />
@@ -22,12 +23,12 @@ const MHFull = () => {
       </div>
 
       {/* NavBar - centered */}
-      <div className="flex-grow flex justify-center">
+      <div className="flex-grow flex justify-center md: justify-center order-first md:order-none mb-4 md:mb-0 navbarmidScreen">
         <NavBar className="flex items-center justify-center" />
       </div>
 
       {/* Search icon */}
-      <div className="w-[120px] flex justify-end">
+      <div className="w-[120px] flex justify-center md:justify-end searchIconMidScreen">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"

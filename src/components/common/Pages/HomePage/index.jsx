@@ -209,7 +209,7 @@ export default function HomePage() {
               The Trust Is In Apis
             </h3>
             <div className="text-center text-[16px] md:text-[24px] font-medium text-[#fffff] font-jost">
-              We endeavor to strive together with passion, unity of purpose, and
+             We endeavor to strive together with passion, unity of purpose, and
               unconventional thinking, to be a dynamic front running brand,
               which is greatly valued & trusted for its efficacy and superior
               quality.
@@ -232,7 +232,7 @@ export default function HomePage() {
             </h3>
           </div>
         </div>
-        <div className="pb-6 md:pb-40 z-10 w-[90%] flex items-center justify-center">
+        <div className="pb-6 md:pb-20 z-10 w-[90%] flex items-center justify-center">
           <EmblaCarousel options={OPTIONS}>
             {SLIDES.map((itm, index) => (
               <div className="embla__slide" key={index}>
@@ -362,7 +362,8 @@ export default function HomePage() {
 
 
       {/* API Media */}
-      <div className="relative w-full flex items-center flex-col justify-center apiMediaSection">
+      {/*   */}
+      <div className="relative w-full flex items-center flex-col justify-center apiMediaSection overflow-hidden">
 
         <p className="text-xs md:text-base text-center text-[#585858] px-4 uppercase font-jost text-medium sm: text-[14px] font-jost font-normal sm: mt-0px">
           Stay updated with the latest news, events, and media coverage of  APIS India.
@@ -408,15 +409,17 @@ export default function HomePage() {
           src={FlowerRun}
           width={640}
           height={640}
-          alt="header-logo"
-          className="h-[640px] z-0 hidden lg:inline w-[640px] absolute -bottom-28 left-0 rotate-90 opacity-50" style={{transform: "rotate(40deg)"}}
+          alt="Flower decoration"
+          className="h-[640px] z-0 hidden lg:block w-[640px] absolute -bottom-28 -left-28 opacity-50"
+          style={{transform: "rotate(40deg)"}}
         />
         <Image
           src={FlowerRun}
           width={640}
           height={640}
-          alt="header-logo"
-          className="h-[640px] hidden lg:inline w-[640px] absolute -top-12 right-0 -rotate-136 font-small opacity-40" style={{transform: "rotate(-136deg)"}}
+          alt="Flower decoration"
+          className="h-[640px] hidden lg:block w-[640px] absolute -top-12 -right-28 opacity-40"
+          style={{transform: "rotate(-136deg)"}}
         />
       </div>
 
