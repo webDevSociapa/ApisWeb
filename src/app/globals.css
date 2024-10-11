@@ -435,7 +435,7 @@ input[type="password"]:-webkit-autofill:active {
   font-family: Literata;
   font-style: normal;
   font-weight: 700;
-  text-decoration-line: underline;
+  /* text-decoration-line: underline; */
   text-transform: capitalize;
 }
 .control-arrow,
@@ -700,7 +700,7 @@ input[type="password"]:-webkit-autofill:active {
 }
 
 .apiMediaSection{
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 
 @media(max-width: 500px){
@@ -759,6 +759,8 @@ input[type="password"]:-webkit-autofill:active {
 
 @media(max-width: 1200px){
   .navbarmidScreen{
+    display: flex;
+    flex-direction: row;
     /* border: 2px solid; */
     /* padding: 0px 2px !important; */
     margin-left: 30px;
@@ -795,3 +797,34 @@ input[type="password"]:-webkit-autofill:active {
 }
 
 
+/* In your global CSS file */
+
+.carousel-container {
+  position: relative;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 1; /* Ensure the pills are above the carousel */
+}
+
+.scroll-pill {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.scroll-pill.active {
+  width: 34px;
+  padding: 5px;
+  background-color: #9F7B49;
+  border-radius: 4px;
+}

@@ -10,7 +10,7 @@ const MHFull = () => {
     <div className="w-full flex flex-col md:flex-row items-center justify-between">
       {/* logo */}
       {/*  */}
-      <div className="w-[120px] mb-4 md:mb-0">
+      <div className="w-[120px] mb-4 md:mb-0 md: [120px] md: [100px]">
         <Link href={'/'}>
           <Image
             src={Logo}
@@ -23,8 +23,8 @@ const MHFull = () => {
       </div>
 
       {/* NavBar - centered */}
-      <div className="flex-grow flex justify-center md: justify-center order-first md:order-none mb-4 md:mb-0 navbarmidScreen">
-        <NavBar className="flex items-center justify-center" />
+      <div className="flex-grow flex justify-center md: justify-center md:order-none mb-4 md:mb-0 navbarmidScreen">
+        <NavBar className="flex items-center" />
       </div>
 
       {/* Search icon */}

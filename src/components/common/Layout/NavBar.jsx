@@ -39,7 +39,11 @@ const NavBar = ({ className, linkClass }) => {
   const handleNavigateToOurBrand = () => {
     const ourBrandPath = `/${locale}/our-brand`;
     router.push(ourBrandPath);
-    
+  };
+
+  // Add this new function to check if the current path is Our Brand
+  const isOurBrandActive = () => {
+    return routerPath.includes('/our-brand');
   };
 
   return (
@@ -65,8 +69,14 @@ const NavBar = ({ className, linkClass }) => {
                 </div>
               </Link>
             ) : (
-              <div className="mt-3 flex flex-col items-center cursor-pointer">
-                <span className="font-medium text-[#3D3D3D] hoverHeader w-max">
+              <div 
+                className="mt-3 flex flex-col items-center cursor-pointer"
+                onClick={handleNavigateToOurBrand}
+              >
+                <span className={cn(
+                  "font-medium text-[#3D3D3D] w-max",
+                  isOurBrandActive() ? 'font-bold uppercase' : 'hoverHeader'
+                )}>
                   {path.name}
                 </span>
               </div>

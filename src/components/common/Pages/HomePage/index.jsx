@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useState, useEffect } from 'react';
 import PropTypes from "prop-types";
 import News1 from "@/assets/images/home-banner-section/news-1.png";
 import Fruit from "@/assets/images/home-banner-section/fruit.png";
@@ -43,6 +44,8 @@ import ReactAngle from '@/assets/images/home-banner-section/reactangle1.png'
 
 export default function HomePage() {
   const OPTIONS = { slidesToScroll: 1, align: 'start' }
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = [TrustSlide1, TrustSlide2];
   const SLIDE_COUNT = 6;
   const SLIDES = [
     {
@@ -166,6 +169,14 @@ export default function HomePage() {
     },
   ];
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(timer);
+  }, []);
+
 
 
   return (
@@ -209,7 +220,7 @@ export default function HomePage() {
               The Trust Is In Apis
             </h3>
             <div className="text-center text-[16px] md:text-[24px] font-medium text-[#fffff] font-jost">
-             We endeavor to strive together with passion, unity of purpose, and
+              We endeavor to strive together with passion, unity of purpose, and
               unconventional thinking, to be a dynamic front running brand,
               which is greatly valued & trusted for its efficacy and superior
               quality.
@@ -223,20 +234,20 @@ export default function HomePage() {
             </p>
           </div>
           <div>
-            <p className="text-center text-[14px] md:text-[22px] uppercase text-[#585858] mt-[20] text-medium" style={{ fontFamily: "jost" }}>
-              day-to-day choices that weave the most profound stories of
-              character & growth.
+
+            <p className="text-center text-[14px] md:text-[22px] uppercase text-[#585858] mt-[20] text-medium font-jost">
+              day-to-day choices that weave the most profound stories of character & growth.
             </p>
             <h3 className="text-center text-[20px] md:text-[40px] font-bold text-[#9F7B49] mt-0 md:mt-0">
               The Taste Is What Makes Difference
             </h3>
           </div>
         </div>
-        <div className="pb-6 md:pb-20 z-10 w-[90%] flex items-center justify-center">
+        <div className="pb-6 md:pb-20 z-10 w-[70%] flex items-center justify-center">
           <EmblaCarousel options={OPTIONS}>
             {SLIDES.map((itm, index) => (
               <div className="embla__slide" key={index}>
-                <div className="embla__slide__number !h-[240px] w-full">
+                <div className="embla__slide__number !h-[240px] w-full" style={{marginTop:"-30px"}}>
                   <Image
                     src={itm?.img}
                     width={240}
@@ -245,11 +256,11 @@ export default function HomePage() {
                     className="h-[240px] w-auto max-w-max bg-opacity-40"
                   />
                 </div>
-                <div className="border-2 border-[hsl(35,37%,45%)] mt-4 lg:mt-10 flex flex-col gap-1 lg:gap-3 p-3 lg:p-6 w-full sm:w-[80%] h-[80%] md:w-[70%] h-[70%] lg:w-[100%] h-[60%] xl:w-[90%] h-[50%] mx-auto overflow-none">
-                  <p className="text-sm sm:text-base lg:text-xl font-bold text-[#373737] mb-2 line-clamp-1">
+                <div className="border-2 border-[hsl(35,37%,45%)] mt-4 lg:mt-10 flex flex-col gap-1 lg:gap-3 p-1.5 w-full sm:w-[50%] h-[60%] md:w-[90%] h-[45%]  xl:w-[90%] h-[30%] mx-auto overflow-none md:py-2">
+                  <p className="text-sm sm:text-base lg:text-xl font-bold text-[#373737] mb-2">
                     {itm?.title}
                   </p>
-                  <p className="text-[#666666] text-xs sm:text-sm lg:text-base  line-clamp-3 sm:line-clamp-none">
+                  <p className="text-[#666666] text-xs sm:text-sm lg:text-base line-clamp-3 sm:line-clamp-none font-jost">
                     {itm?.content}
                   </p>
                 </div>
@@ -274,8 +285,8 @@ export default function HomePage() {
       </div>
 
       {/* Day to day story */}
-      <div className="px-0 md:px-2 w-full mb-12 xl:-mt-10 2xl:-mt-10">
-      <div className="home-story-bg py-8 flex flex-col items-center">
+      <div className="px-0 md:px-2 w-full mb-12 xl:-mt-15 2xl:-mt-15">
+        <div className="home-story-bg py-8 flex flex-col items-center">
           <p className="uppercase text-sm text-center text-[22px] md:text-lg font-medium text-[#585858] font-medium" style={{ fontFamily: "jost" }}>
             day-to-day choices that weave the most profound stories
           </p>
@@ -286,7 +297,7 @@ export default function HomePage() {
             Products that make a difference
           </p>
           <div className="px-0 lg:px-2 w-full">
-            <div className="home-green-bg relative mt-10 lg:mt-20">
+            <div className="home-green-bg relative mt-5 lg:mt-8">
               <div className="w-full h-full flex flex-col lg:flex-row">
                 <div className="lg:w-1/2 h-full">
                   <div className="lg:w-1/2  lg:absolute -top-12 left-6 h-[500px] lg:h-[760px]"></div>
@@ -323,7 +334,7 @@ export default function HomePage() {
                       className="h-[330px]"
                     />
                     <Image
-                      src={TrustSlide1}
+                      src={TrustSlide2}
                       // width={266}
                       height={253}
                       alt="header-logo"
@@ -337,7 +348,7 @@ export default function HomePage() {
                       className="h-[125px] hidden md:inline absolute bottom-0 rotate-12 -right-10 xs:right-10"
                     />
                   </div>
-                  <div className="text-center text-xs text-white w-[65%] text-[20px]" style={{ fontFamily: "Jost", lineHeight: "24px" }}>
+                  <div className="text-center text-xs text-white w-[65%] text-[20px] font-jost font-normal">
                     Organic honey is a delightful concoction that not only
                     pleases the taste buds but also offers a plethora of health
                     benefits. Unlike conventional honey, which may contain
@@ -363,65 +374,67 @@ export default function HomePage() {
 
       {/* API Media */}
       {/*   */}
-      <div className="relative w-full flex items-center flex-col justify-center apiMediaSection overflow-hidden">
-
-        <p className="text-xs md:text-base text-center text-[#585858] px-4 uppercase font-jost text-medium sm: text-[14px] font-jost font-normal sm: mt-0px">
-          Stay updated with the latest news, events, and media coverage of  APIS India.
-        </p>
-        <p className="text-[20px] md:text-[40px]  md:my-0 font-bold text-[#9F7B49] sm: my-0 xl: my-0">
-          Apis Media
-        </p>
-        <div className="media-apis w-full max-w-7xl z-10 my-4 md:my-10">
-        <EmblaCarousel options={OPTIONS}>
-            {NEWS_DATA.map((itm, index) => (
-              <div
-              className="embla__slide flex-[0_0_50%] min-width-0 px-2"
-              key={index}
-              >
-                <a
-                  key={index}
-                  href={itm.link}
-                  target="_blank"
-                >
-                  <div className="border border-[#85673D] embla__slide__number w-[210px] md:w-[495px] h-[350px] md:!h-[590px] p-2 pb-0 flex-col !rounded-none bg-[#fff]">
-                    <Image
-                      src={itm?.img}
-                      // width={495}
-                      // height={443}
-                      alt="header-logo"
-                      className="h-full w-full w-auto max-w-max bg-opacity-40"
-                    />
-                    <div className="p-4">
-                      <p className="font-bold text-[#85673D] text-sm md:text-xl mb-1">
-                        {itm.desc}
-                      </p>
-                      <p className="text-[#525252] text-xs md:text-lg">
-                        {itm.date}
-                      </p>
-                    </div>
-                  </div>
-                </a>
+      <div className="relative w-full flex items-center flex-col justify-center apiMediaSection overflow-hidden py-8">
+  <p className="text-[14px] md:text-base text-center text-[#585858] px-4 uppercase font-jost font-normal">
+    Stay updated with the latest news, events, and media coverage of APIS India.
+  </p>
+  <p className="text-[20px] md:text-[40px] font-bold text-[#9F7B49] my-2 md:my-4">
+    Apis Media
+  </p>
+  <div className="media-apis w-full max-w-7xl z-10 my-4 md:my-10">
+    <EmblaCarousel options={{ ...OPTIONS, slidesToScroll: 1, containScroll: 'trimSnaps' }}>
+      {NEWS_DATA.map((itm, index) => (
+        <div
+          className="embla__slide px-1 sm:px-2 md:px-4"
+          key={index}
+        >
+          <a
+            href={itm.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <div className="border border-[#85673D] w-[210px] sm:w-[300px] md:w-[400px] h-[350px] md:h-[590px] flex flex-col !rounded-none bg-[#fff] overflow-hidden">
+              <div className="relative flex-grow">
+                <Image
+                  src={itm?.img}
+                  alt={itm.desc}
+                  // layout="fill"
+                  objectFit="cover"
+                  className="w-full h-full"
+                />
               </div>
-            ))}
-          </EmblaCarousel>
+              <div className="p-4">
+                <p className="font-bold text-[#85673D] text-sm md:text-xl mb-1 line-clamp-2">
+                  {itm.desc}
+                </p>
+                <p className="text-[#525252] text-xs md:text-lg">
+                  {itm.date}
+                </p>
+              </div>
+            </div>
+          </a>
         </div>
-        <Image
-          src={FlowerRun}
-          width={640}
-          height={640}
-          alt="Flower decoration"
-          className="h-[640px] z-0 hidden lg:block w-[640px] absolute -bottom-28 -left-28 opacity-50"
-          style={{transform: "rotate(40deg)"}}
-        />
-        <Image
-          src={FlowerRun}
-          width={640}
-          height={640}
-          alt="Flower decoration"
-          className="h-[640px] hidden lg:block w-[640px] absolute -top-12 -right-28 opacity-40"
-          style={{transform: "rotate(-136deg)"}}
-        />
-      </div>
+      ))}
+    </EmblaCarousel>
+  </div>
+  <Image
+    src={FlowerRun}
+    width={640}
+    height={640}
+    alt="Flower decoration"
+    className="h-[640px] z-0 hidden lg:block w-[640px] absolute -bottom-28 -left-28 opacity-50"
+    style={{ transform: "rotate(40deg)" }}
+  />
+  <Image
+    src={FlowerRun}
+    width={640}
+    height={640}
+    alt="Flower decoration"
+    className="h-[640px] hidden lg:block w-[640px] absolute -top-12 -right-28 opacity-40"
+    style={{ transform: "rotate(-136deg)" }}
+  />
+</div>
 
       {/* Our Presence */}
       <div className="pb-10 lg:pb-32 pt-5">

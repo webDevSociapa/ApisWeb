@@ -25,7 +25,7 @@ const MainHeader = () => {
   return (
     <header
       className={cn(
-        'sticky top-[53px] sm:top-[60px] z-[100] flex h-16 sm:h-20 w-full items-center justify-between bg-white px-4 shadow lg:px-8'
+        'sticky top-[32px] sm:top-[32px] z-[100] flex h-16 sm:h-20 w-full items-center justify-between bg-white px-4 shadow lg:px-8'
       )}
     >
       {showMobileData ? <MHMOBILE /> : <MHFull />}
