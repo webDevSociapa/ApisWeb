@@ -7,8 +7,8 @@ import ImageBanner from "../../Layout/Banner";
 import { useState } from "react";
 import Link from "next/link";
 import { PRODUCT_DATA } from "@/lib/constants";
-export default function OurBrand() {
 
+export default function OurBrand({ onProductClick }) {
   const BRAND_DATA = [
     {
       id: 1,
@@ -34,6 +34,12 @@ export default function OurBrand() {
 
   const [selectedBrand, setSelectedBrand] = useState(BRAND_DATA[0].id);
 
+  const handleProductClick = (event) => {
+    // Call the onProductClick prop to close the hover content
+    if (onProductClick) {
+      onProductClick(event);
+    }
+  };
 
   return (
     <div className="relative">
@@ -88,6 +94,7 @@ export default function OurBrand() {
                   <Link
                   key={itm.id}
                   href={`/our-brand/product-details?brand_id=${selectedBrand}&product_id=${itm?.id}`}
+                  onClick={handleProductClick}
                 >
                   <div className="h-[80px] w-[120px] md:h-[140px] md:w-[200px] flex items-center justify-center rounded-[20px] flex-col bg-white border border-[#9F7B49] cursor-pointer">
                     <Image
@@ -111,5 +118,5 @@ export default function OurBrand() {
 }
 
 OurBrand.propTypes = {
-  initialData: PropTypes.object,
+  onProductClick: PropTypes.func,
 };

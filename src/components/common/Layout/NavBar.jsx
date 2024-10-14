@@ -14,18 +14,17 @@ const NavBar = ({ className, linkClass }) => {
   const router = useRouter();
   const locale = routerPath.split('/')[1];
 
-  const [hoveredItem, setHoveredItem] = useState(null);
   const [isOurBrandHovered, setIsOurBrandHovered] = useState(false);
 
   const handleMouseEnter = (itemName) => {
-    setHoveredItem(itemName);
     if (itemName === 'Our Brand') {
       setIsOurBrandHovered(true);
     }
   };
 
   const handleMouseLeave = () => {
-    setHoveredItem(null);
+    // This will be called when leaving any menu item, but we'll only close
+    // Our Brand content when the mouse leaves its content
   };
 
   const handleOurBrandContentMouseEnter = () => {
@@ -39,7 +38,17 @@ const NavBar = ({ className, linkClass }) => {
   const handleNavigateToOurBrand = () => {
     const ourBrandPath = `/${locale}/our-brand`;
     router.push(ourBrandPath);
-    
+  };
+
+  const isOurBrandActive = () => {
+    return routerPath.includes('/our-brand');
+  };
+
+  const handleOurBrandContentClick = (event) => {
+    // Close the hover content
+    setIsOurBrandHovered(false);
+    // Navigate to the clicked product
+    // The navigation is handled by the Link component in OurBrand
   };
 
   return (
@@ -65,8 +74,14 @@ const NavBar = ({ className, linkClass }) => {
                 </div>
               </Link>
             ) : (
-              <div className="mt-3 flex flex-col items-center cursor-pointer">
-                <span className="font-medium text-[#3D3D3D] hoverHeader w-max">
+              <div 
+                className="mt-3 flex flex-col items-center cursor-pointer"
+                onClick={handleNavigateToOurBrand}
+              >
+                <span className={cn(
+                  "font-medium text-[#3D3D3D] w-max",
+                  isOurBrandActive() ? 'font-bold uppercase' : 'hoverHeader'
+                )}>
                   {path.name}
                 </span>
               </div>
@@ -78,7 +93,7 @@ const NavBar = ({ className, linkClass }) => {
                 onMouseEnter={handleOurBrandContentMouseEnter}
                 onMouseLeave={handleOurBrandContentMouseLeave}
               >
-                <OurBrand onClick={handleNavigateToOurBrand}  />
+                <OurBrand onProductClick={handleOurBrandContentClick} />
               </div>
             )}
           </div>
