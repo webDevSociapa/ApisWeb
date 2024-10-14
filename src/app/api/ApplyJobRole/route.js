@@ -19,8 +19,7 @@ export async function POST(req){
             const bytes = await resume.arrayBuffer();
             const buffer = Buffer.from(bytes);
             const fileName = `${Date.now()}-${resume.name}`;
-            const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
-            
+            const uploadsDir = path.join(process.cwd(), 'public', 'uploads');            
             // Create the uploads directory if it doesn't exist
             try {
                 await mkdir(uploadsDir, { recursive: true });
@@ -31,8 +30,8 @@ export async function POST(req){
             const filePath = path.join(uploadsDir, fileName);
             await writeFile(filePath, buffer);
             
-            // Create a URL that can be accessed externally
-            resumeUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/uploads/${fileName}`;
+            // Create a URL that works both locally and in production
+            resumeUrl = `/uploads/${fileName}`;
         }
 
         const body = {
@@ -60,6 +59,9 @@ export async function POST(req){
                 },
               });
               
+              const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+              const fullResumeUrl = `${baseUrl}${resumeUrl}`;
+
               const mailOptions = {
                 from: emailAddress,
                 to: 'khanrobin7071@gmail.com',
@@ -69,7 +71,7 @@ export async function POST(req){
                   <p><strong>Full Name:</strong> ${fullName}</p>
                   <p><strong>Email Address:</strong> ${emailAddress}</p>
                   <p><strong>Phone Number:</strong> ${phoneNumber}</p>
-                  <p><strong>Resume:</strong> <a href="${resumeUrl}">View Resume</a></p>
+                  <p><strong>Resume:</strong> <a href="${fullResumeUrl}">View Resume</a></p>
                 `,
               };
               
