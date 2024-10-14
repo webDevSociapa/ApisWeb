@@ -828,3 +828,18 @@ input[type="password"]:-webkit-autofill:active {
   background-color: #9F7B49;
   border-radius: 4px;
 }
+
+
+
+@media (min-width: 850px) and (max-width: 1100px) {
+  .media-image {
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  .apismedis {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+

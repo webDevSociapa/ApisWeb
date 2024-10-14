@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from 'react';
 import PropTypes from "prop-types";
 import News1 from "@/assets/images/home-banner-section/news-1.png";
 import Fruit from "@/assets/images/home-banner-section/fruit.png";
@@ -41,11 +40,14 @@ import Carasol from "../../MainCarousel";
 import { NEWS_DATA } from "@/lib/constants";
 import FlowerRun from '@/assets/images/home-banner-section/flowerRun.gif'
 import ReactAngle from '@/assets/images/home-banner-section/reactangle1.png'
+import Link from "next/link";
+import { useRouter } from 'next/navigation';
+
 
 export default function HomePage() {
+  const router = useRouter();
+
   const OPTIONS = { slidesToScroll: 1, align: 'start' }
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = [TrustSlide1, TrustSlide2];
   const SLIDE_COUNT = 6;
   const SLIDES = [
     {
@@ -128,12 +130,12 @@ export default function HomePage() {
     },
   ];
   const AVAILABILITY_SLIDE = [
-    { img: AmazonLogo },
-    { img: JioMart },
-    { img: BigBasket },
-    { img: BlinkIt },
-    { img: JioMart2 },
-    { img: DMart },
+    { img: AmazonLogo, path:"https://www.amazon.in/s?k=apis&crid=2CJFWNXIDZI1V&sprefix=apis%2Caps%2C429&ref=nb_sb_noss_1" },
+    { img: JioMart, path:"https://www.jiomart.com/search/apis" },
+    { img: BigBasket, path:"https://www.bigbasket.com/ps/?q=apis&nc=as" },
+    { img: BlinkIt, path:"https://blinkit.com/s/?q=apis" },
+    { img: JioMart2, path:"https://www.jiomart.com/search/apis/in/prod_mart_master_vertical?prod_mart_master_vertical%5BhierarchicalMenu%5D%5Bcategory_tree.level0%5D%5B0%5D=Category" },
+    { img: DMart, path:"https://www.dmart.in/search?searchTerm=apis" },
   ];
 
   const MEDIA_SLIDES = [
@@ -169,13 +171,14 @@ export default function HomePage() {
     },
   ];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-    }, 3000); // Change slide every 3 seconds
+  const handleJoinUs = () => {
+    router.push('/careers#join-us');
+  };
 
-    return () => clearInterval(timer);
-  }, []);
+  const handleLifeAtApis = () => {
+    router.push('/careers#life-at-apis');
+  };
+
 
 
 
@@ -243,11 +246,11 @@ export default function HomePage() {
             </h3>
           </div>
         </div>
-        <div className="pb-6 md:pb-20 z-10 w-[70%] flex items-center justify-center">
+        <div className="pb-1 md:pb-20 z-10 w-[80%] flex items-center justify-center">
           <EmblaCarousel options={OPTIONS}>
             {SLIDES.map((itm, index) => (
               <div className="embla__slide" key={index}>
-                <div className="embla__slide__number !h-[240px] w-full" style={{marginTop:"-30px"}}>
+                <div className="embla__slide__number !h-[240px] w-full">
                   <Image
                     src={itm?.img}
                     width={240}
@@ -285,7 +288,8 @@ export default function HomePage() {
       </div>
 
       {/* Day to day story */}
-      <div className="px-0 md:px-2 w-full mb-12 xl:-mt-15 2xl:-mt-15">
+      {/* a */}
+      <div className="px-0 md:px-2 w-full mb-12 sm: mt-10">
         <div className="home-story-bg py-8 flex flex-col items-center">
           <p className="uppercase text-sm text-center text-[22px] md:text-lg font-medium text-[#585858] font-medium" style={{ fontFamily: "jost" }}>
             day-to-day choices that weave the most profound stories
@@ -334,7 +338,7 @@ export default function HomePage() {
                       className="h-[330px]"
                     />
                     <Image
-                      src={TrustSlide2}
+                      src={TrustSlide1}
                       // width={266}
                       height={253}
                       alt="header-logo"
@@ -374,34 +378,34 @@ export default function HomePage() {
 
       {/* API Media */}
       {/*   */}
-      <div className="relative w-full flex items-center flex-col justify-center apiMediaSection overflow-hidden py-8">
-  <p className="text-[14px] md:text-base text-center text-[#585858] px-4 uppercase font-jost font-normal">
+      <div className="relative w-full flex items-center flex-col justify-center apiMediaSection overflow-hidden">
+  <p className="text-xs md:text-base text-center text-[#585858] px-4 uppercase font-jost text-medium sm:text-[14px] font-jost font-normal sm:mt-0">
     Stay updated with the latest news, events, and media coverage of APIS India.
   </p>
-  <p className="text-[20px] md:text-[40px] font-bold text-[#9F7B49] my-2 md:my-4">
+  <p className="text-[20px] md:text-[40px] md:my-0 font-bold text-[#9F7B49] sm:my-0 xl:my-0">
     Apis Media
   </p>
-  <div className="media-apis w-full max-w-7xl z-10 my-4 md:my-10">
-    <EmblaCarousel options={{ ...OPTIONS, slidesToScroll: 1, containScroll: 'trimSnaps' }}>
+  <div className="media-apis w-full max-w-7xl z-10 my-4 md:my-10 px-4 sm:px-0">
+    <EmblaCarousel options={OPTIONS} className="embla-close-arrows relative">
       {NEWS_DATA.map((itm, index) => (
         <div
-          className="embla__slide px-1 sm:px-2 md:px-4"
+          className="embla__slide flex-[0_0_280px] md:flex-[0_0_495px] min-w-0 px-2"
           key={index}
         >
           <a
+            key={index}
             href={itm.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="block"
           >
-            <div className="border border-[#85673D] w-[210px] sm:w-[300px] md:w-[400px] h-[350px] md:h-[590px] flex flex-col !rounded-none bg-[#fff] overflow-hidden">
-              <div className="relative flex-grow">
+            <div className="border border-[#85673D] embla__slide__number md:w-[495px]  md:h-[590px]  p-2 pb-0 flex flex-col !rounded-none bg-[#fff] apismedis">
+              <div className="relative w-full h-[320px] md:h-[443px] overflow-hidden">
                 <Image
                   src={itm?.img}
-                  alt={itm.desc}
-                  // layout="fill"
+                  alt="header-logo"
+                  layout="fill"
                   objectFit="cover"
-                  className="w-full h-full"
+                  className="bg-opacity-40"
                 />
               </div>
               <div className="p-4">
@@ -437,7 +441,7 @@ export default function HomePage() {
 </div>
 
       {/* Our Presence */}
-      <div className="pb-10 lg:pb-32 pt-5">
+      <div className="pb-10 lg:pb-32 pt-10">
         <p className="text-xs md:text-lg font-medium text-[#585858] text-center uppercase font-jost text-medium sm: px-4">
           Presence is about showing up fully, authentically, and with an open
           heart, ready to
@@ -517,10 +521,10 @@ export default function HomePage() {
           <p className="uppercase font-medium text-[#fff] text-sm md:text-xl font-jost text-medium text-[22px] sm: text-[10px] font-bold font-jost">
             Always here, always ready
           </p>
-          <p className="text-bold text-[#D7AD5F] text-[20px] md:text-[40px] font-literata font-semibold">
+          <p className="text-bold text-[#D7AD5F] text-[20px] md:text-[40px] font-literata font-semibold" style={{marginTop:"-20px"}}>
             Our Availability
           </p>
-          <div className="font-medium text-center text-white text-xs md:text-lg w-10/12 text-medium text-[24px] font-medium font-jost sm: text-[10px] text-medium">
+          <div className="font-medium text-center text-white text-xs md:text-lg w-10/12 text-medium text-[24px] font-medium font-jost sm: text-[10px] text-medium w-[80%]">
             Apis products are widely available to ensure you can enjoy our
             natural and premium offerings wherever you are. You can find our
             range of honey, organic honey, muesli, pickles, and more at leading
@@ -540,12 +544,14 @@ export default function HomePage() {
                 {AVAILABILITY_SLIDE.map((img) => {
                   return (
                     <div className="embla__slide w-[55px] md:w-auto">
+                      <Link href={img?.path} target="_blank">
                       <Image
                         src={img?.img}
                         height={60}
                         alt="header-logo"
                         className="h-[18px] w-[50px] md:w-auto md:h-[60px] embla__slide__number"
                       />
+                   </Link>
                     </div>
                   );
                 })}
@@ -666,12 +672,22 @@ export default function HomePage() {
                 success and growth.
               </p>
               <div className="flex justify-center gap-10 mt-6">
-                <button className="border border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white">
+                          {/* <Link href="/careers"> */}
+
+                <button className="border border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white"
+                  onClick={handleJoinUs}
+                >
                   Join US
                 </button>
-                <button className="border border-[#9F7B49] bg-white px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-[#9F7B49] hover:text-white  hover:bg-[#9F7B49]">
+                {/* </Link> */}
+                {/* <Link href="/careers" passHref> */}
+
+                <button className="border border-[#9F7B49] bg-white px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-[#9F7B49] hover:text-white  hover:bg-[#9F7B49]"
+                  onClick={handleLifeAtApis}
+                >
                   Life @apis
                 </button>
+                {/* </Link> */}
               </div>
             </div>
           </div>
