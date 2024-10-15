@@ -21,6 +21,7 @@ export default class Carasol extends Component {
 
   render() {
     const totalSlides = 2; // Update this number based on your total slides
+    // 
 
     return (
      <>
@@ -56,16 +57,16 @@ export default class Carasol extends Component {
               />
             </div>
           </Carousel> 
-        </div>
-        {/* Moved the scroll-indicator below the carousel */}
-        <div className="scroll-indicator">
-          {[...Array(totalSlides)].map((_, index) => (
-            <div
-              key={index}
-              className={`scroll-pill ${index === this.state.currentSlide ? 'active' : ''}`}
-              onClick={() => this.updateCurrentSlide(index)}
-            />
-          ))}
+          {/* Moved the scroll-indicator inside the carousel-container */}
+          <div className="scroll-indicator">
+            {[...Array(totalSlides)].map((_, index) => (
+              <div
+                key={index}
+                className={`scroll-pill ${index === this.state.currentSlide ? 'active' : ''}`}
+                onClick={() => this.updateCurrentSlide(index)}
+              />
+            ))}
+          </div>
         </div>
       </div>
      </>

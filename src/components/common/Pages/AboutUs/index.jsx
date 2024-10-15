@@ -180,12 +180,12 @@ export default function OurBrand() {
             </p>
           </div>
         </div>
-        <div className="lg:absolute bottom-4">
+        <div className="lg:absolute bottom-4 w-full">
           <Image
             src={Curv}
             alt="Banner Image"
-            className="object-cover hidden lg:inline  h-[260px] w-full  cursor-pointer xl: w-[2000px] h-[460px]"
-          />
+            className="object-cover hidden lg:inline w-full h-auto max-h-[460px]"
+            />
           <div className="relative">
             <div className="lg:absolute z-10 bottom-[124px] left-0 right-0 flex gap-4 flex-wrap justify-around items-center mt-10 text-center p-4">
               {LEGACY_DATA.map((itm) => {
@@ -283,7 +283,7 @@ export default function OurBrand() {
           </div>
         </div>
       </div>
-      <div className="my-16">
+      <div className="my-10">
         <p className="text-center text-[14px] font-jost md:text-[22px] uppercase text-[#585858]">
           Celebrating a Legacy of Quality and Growth
         </p>
@@ -299,7 +299,7 @@ export default function OurBrand() {
         </p>
       </div>
 
-      {/* <HexaGonalPage /> */}
+      <HexaGonalPage />
 
 
 

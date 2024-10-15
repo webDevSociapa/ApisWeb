@@ -14,41 +14,40 @@ const NavBar = ({ className, linkClass }) => {
   const router = useRouter();
   const locale = routerPath.split('/')[1];
 
-  const [isOurBrandHovered, setIsOurBrandHovered] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState(null);
+  const [isOurBrandContentHovered, setIsOurBrandContentHovered] = useState(false);
 
   const handleMouseEnter = (itemName) => {
-    if (itemName === 'Our Brand') {
-      setIsOurBrandHovered(true);
-    }
+    setHoveredItem(itemName);
   };
 
   const handleMouseLeave = () => {
-    // This will be called when leaving any menu item, but we'll only close
-    // Our Brand content when the mouse leaves its content
+    setHoveredItem(null);
   };
 
   const handleOurBrandContentMouseEnter = () => {
-    setIsOurBrandHovered(true);
+    setIsOurBrandContentHovered(true);
   };
 
   const handleOurBrandContentMouseLeave = () => {
-    setIsOurBrandHovered(false);
+    setIsOurBrandContentHovered(false);
+  };
+
+  const handleOurBrandContentClick = () => {
+    // Close the hover content
+    setHoveredItem(null);
+    setIsOurBrandContentHovered(false);
   };
 
   const handleNavigateToOurBrand = () => {
     const ourBrandPath = `/${locale}/our-brand`;
     router.push(ourBrandPath);
+    // Close the hover content when navigating
+    handleOurBrandContentClick();
   };
 
   const isOurBrandActive = () => {
     return routerPath.includes('/our-brand');
-  };
-
-  const handleOurBrandContentClick = (event) => {
-    // Close the hover content
-    setIsOurBrandHovered(false);
-    // Navigate to the clicked product
-    // The navigation is handled by the Link component in OurBrand
   };
 
   return (
@@ -87,7 +86,7 @@ const NavBar = ({ className, linkClass }) => {
               </div>
             )}
 
-            {path.name === 'Our Brand' && isOurBrandHovered && (
+            {path.name === 'Our Brand' && (hoveredItem === 'Our Brand' || isOurBrandContentHovered) && (
               <div
                 className="absolute top-full left-0 w-full bg-white z-1000"
                 onMouseEnter={handleOurBrandContentMouseEnter}
