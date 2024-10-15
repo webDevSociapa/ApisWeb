@@ -66,14 +66,14 @@ const JOB_OPENINGS = [
     skills: "1-Having good exp. in FMCG Food Industry\n2- Handled SAMT, MT & Ecommerce.\n3- National & Regional level exp.\n4- Must have Job stability\n5- Exp. of handling respective location",
   },
   {
-    position: "SO & KAE- MT",
-    location: "Bangalore",
-    territory: "Bangalore",
-    experience: "4- 15 Yrs",
-    relevantExp: "2+ yrs in MT & Ecommerce",
-    ctc: "4.5- 6.5 LPA",
-    education: "Graduate/ MBA",
-    skills: "1-Having good exp. in FMCG Food Industry\n2- Handled SAMT, MT & Ecommerce.\n3- National & Regional level exp.\n4- Must have Job stability\n5- Exp. of handling respective location",
+    position: "ASM",
+    location: "Mumbai",
+    territory: "Mumbai",
+    experience: "6 - 20 Yrs",
+    relevantExp: "5+ Yrs in Core GT",
+    ctc: "6-9 LPA",
+    education: "Graduate",
+    skills: "1-Having good exp. in FMCG Food Industry\n2-Handled GT (Retail- Provision Store/General Trade/Superstore/Mart).\n3-Must have Job stability.\n4-Exp. of handling whole Mumba",
   },
   {
     position: "SO & KAE- MT",
@@ -155,6 +155,8 @@ export default function Careers() {
 
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
+    console.log("files",files);
+    
     setFormData(prevData => ({
       ...prevData,
       [name]: type === 'file' ? files[0] : value
