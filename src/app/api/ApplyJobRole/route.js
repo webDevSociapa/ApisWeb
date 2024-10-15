@@ -1,9 +1,6 @@
 import { MongoClient } from "mongodb";
 import { NextResponse } from "next/server";
 import nodemailer from 'nodemailer';
-import { writeFile, mkdir } from 'fs/promises';
-import path from 'path';
-
 
 export async function POST(req){
     try{
@@ -14,24 +11,13 @@ export async function POST(req){
         const phoneNumber = formData.get('phoneNumber');
         const resume = formData.get('resume');
 
-        let resumeUrl = '';
+        let resumeFileName = '';
+        let resumeBase64 = '';
         if (resume && resume.name) {
             const bytes = await resume.arrayBuffer();
             const buffer = Buffer.from(bytes);
-            const fileName = `${Date.now()}-${resume.name}`;
-            const uploadsDir = path.join(process.cwd(), 'public', 'uploads');            
-            // Create the uploads directory if it doesn't exist
-            try {
-                await mkdir(uploadsDir, { recursive: true });
-            } catch (err) {
-                if (err.code !== 'EEXIST') throw err;
-            }
-
-            const filePath = path.join(uploadsDir, fileName);
-            await writeFile(filePath, buffer);
-            
-            // Create a URL that works both locally and in production
-            resumeUrl = `/uploads/${fileName}`;
+            resumeFileName = resume.name;
+            resumeBase64 = buffer.toString('base64');
         }
 
         const body = {
@@ -39,7 +25,7 @@ export async function POST(req){
             fullName,
             emailAddress,
             phoneNumber,
-            resumeUrl
+            resumeFileName
         };
 
         const uri = "mongodb+srv://webdev:2OmPVj8DUdEaU1wR@apisindia.38dfp.mongodb.net";
@@ -54,14 +40,11 @@ export async function POST(req){
             const transporter = nodemailer.createTransport({
                 service: 'gmail',
                 auth: {
-                  user: 'khanrobin7071@gmail.com', // Your email
-                  pass: 'hgvu hwmq lnfh xqxa', // Your app-specific password
+                  user: 'khanrobin7071@gmail.com',
+                  pass: 'hgvu hwmq lnfh xqxa',
                 },
               });
               
-              const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-              const fullResumeUrl = `${baseUrl}${resumeUrl}`;
-
               const mailOptions = {
                 from: emailAddress,
                 to: 'khanrobin7071@gmail.com',
@@ -71,8 +54,15 @@ export async function POST(req){
                   <p><strong>Full Name:</strong> ${fullName}</p>
                   <p><strong>Email Address:</strong> ${emailAddress}</p>
                   <p><strong>Phone Number:</strong> ${phoneNumber}</p>
-                  <p><strong>Resume:</strong> <a href="${fullResumeUrl}">View Resume</a></p>
+                  <p><strong>Resume:</strong> ${resumeFileName}</p>
                 `,
+                attachments: resumeBase64 ? [
+                  {
+                    filename: resumeFileName,
+                    content: resumeBase64,
+                    encoding: 'base64'
+                  }
+                ] : []
               };
               
               await transporter.sendMail(mailOptions);
@@ -91,5 +81,4 @@ export async function POST(req){
         console.log("error", error);
         return NextResponse.json({ message: error.message }, { status: 500 });
     }       
-
-    }
+}
