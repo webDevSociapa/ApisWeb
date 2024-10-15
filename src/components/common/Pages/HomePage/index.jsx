@@ -71,12 +71,12 @@ export default function HomePage() {
       title: "Almond and Honey"
     },
     {
-      img: TrustSlide6,
+      img: TrustSlide7,
       content: "Creamy peanut butter is a smooth peanut spread.",
       title: "Peanut Butter Creamy"
     },
     {
-      img: TrustSlide7,
+      img: TrustSlide6,
       content: "Soya chunks are protein-rich, plant-based meat alternatives.",
       title: "Soya Chunk"
     },
@@ -238,7 +238,7 @@ export default function HomePage() {
           </div>
           <div>
 
-            <p className="text-center text-[14px] md:text-[22px] uppercase text-[#585858] mt-[20] text-medium font-jost">
+            <p className="text-center text-[14px] md:text-[22px] uppercase text-[#585858] mt-[20]  text-medium font-jost">
               day-to-day choices that weave the most profound stories of character & growth.
             </p>
             <h3 className="text-center text-[20px] md:text-[40px] font-bold text-[#9F7B49] mt-0 md:mt-0">
@@ -289,8 +289,8 @@ export default function HomePage() {
 
       {/* Day to day story */}
       {/* a */}
-      <div className="px-0 md:px-2 w-full mb-12 sm: mt-10">
-        <div className="home-story-bg py-8 flex flex-col items-center">
+      <div className="px-0 md:px-2 w-full mb-12 mt-6 md:mt-0">
+          <div className="home-story-bg py-8 flex flex-col items-center">
           <p className="uppercase text-sm text-center text-[22px] md:text-lg font-medium text-[#585858] font-medium" style={{ fontFamily: "jost" }}>
             day-to-day choices that weave the most profound stories
           </p>
@@ -435,13 +435,13 @@ export default function HomePage() {
     width={640}
     height={640}
     alt="Flower decoration"
-    className="h-[640px] hidden lg:block w-[640px] absolute -top-12 -right-28 opacity-40"
+    className="h-[640px] hidden lg:block w-[640px] absolute -top-12 -right-20 opacity-40"
     style={{ transform: "rotate(-136deg)" }}
   />
 </div>
 
       {/* Our Presence */}
-      <div className="pb-10 lg:pb-32 pt-10">
+      <div className="pb-10 lg:pb-32 pt-10 md: pt-6">
         <p className="text-xs md:text-lg font-medium text-[#585858] text-center uppercase font-jost text-medium sm: px-4">
           Presence is about showing up fully, authentically, and with an open
           heart, ready to
@@ -516,13 +516,12 @@ export default function HomePage() {
       </div>
 
       {/* Our Availability */}
-      <div className="availbility-bg">
+      <div className="availbility-bg md:-mt-[20px] mt-[10px]">
         <div className="blur-bg flex gap-2 md:gap-6 items-center justify-center flex-col py-2 m-0 p-0">
           <p className="uppercase font-medium text-[#fff] text-sm md:text-xl font-jost text-medium text-[22px] sm: text-[10px] font-bold font-jost">
             Always here, always ready
           </p>
-          <p className="text-bold text-[#D7AD5F] text-[20px] md:text-[40px] font-literata font-semibold" style={{marginTop:"-20px"}}>
-            Our Availability
+          <p className="text-bold text-[#D7AD5F] text-[20px] sm:text-[28px] md:text-[34px] lg:text-[40px] font-literata font-semibold mt-[-5px] sm:mt-[-7px] md:mt-[-10px] lg:mt-[-12px]">            Our Availability
           </p>
           <div className="font-medium text-center text-white text-xs md:text-lg w-10/12 text-medium text-[24px] font-medium font-jost sm: text-[10px] text-medium w-[80%]">
             Apis products are widely available to ensure you can enjoy our
@@ -565,7 +564,7 @@ export default function HomePage() {
       </div>
 
       {/* Latest @Apis */}
-      <div className="w-full flex flex-col items-center justify-center py-4 md:py-14">
+      <div className="w-full flex flex-col items-center justify-center py-4 md:py-8 sm: py-8">
         <p className="font-medium text-center text-[#585858] text-sm  md:text-xl font-medium text-[22px] font-jost">
           DISCOVER OUR LATEST STORIES
         </p>

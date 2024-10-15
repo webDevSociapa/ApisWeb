@@ -434,7 +434,7 @@ input[type="password"]:-webkit-autofill:active {
   color: #835415;
   font-family: Literata;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   /* text-decoration-line: underline; */
   text-transform: capitalize;
 }
@@ -705,17 +705,17 @@ input[type="password"]:-webkit-autofill:active {
 
 @media(max-width: 500px){
   .apiMediaSection{
-    margin-top: -30px;
+    margin-top: -40px;
   }
 }
 
 .tvcSectionResponsive{
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 @media(max-width: 500px){
   .tvcSectionResponsive{
-    margin-top: 0px;
+    margin-top: 15px;
   }
 }
 
