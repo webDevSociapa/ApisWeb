@@ -23,12 +23,12 @@ const MHFull = () => {
       </div>
 
       {/* NavBar - centered */}
-      <div className="flex-grow flex justify-center md: justify-center md:order-none mb-4 md:mb-0 navbarmidScreen">
+      <div className="flex-grow flex justify-center md: justify-center md:order-none mb-4 md:mb-0">
         <NavBar className="flex items-center" />
       </div>
 
       {/* Search icon */}
-      <div className="w-[120px] flex justify-center md:justify-end searchIconMidScreen">
+      {/* <div className="w-[120px] flex justify-center md:justify-end searchIconMidScreen">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -41,7 +41,7 @@ const MHFull = () => {
             fill="#3D3D3D"
           />
         </svg>
-      </div>
+      </div> */}
     </div>
   )
 }

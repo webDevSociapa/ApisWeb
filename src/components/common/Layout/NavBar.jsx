@@ -15,39 +15,37 @@ const NavBar = ({ className, linkClass }) => {
   const locale = routerPath.split('/')[1];
 
   const [hoveredItem, setHoveredItem] = useState(null);
-  const [isOurBrandContentHovered, setIsOurBrandContentHovered] = useState(false);
 
   const handleMouseEnter = (itemName) => {
     setHoveredItem(itemName);
   };
 
   const handleMouseLeave = () => {
-    setHoveredItem(null);
+    // Do nothing when leaving a menu item
   };
 
   const handleOurBrandContentMouseEnter = () => {
-    setIsOurBrandContentHovered(true);
+    setHoveredItem('Our Brand');
   };
 
   const handleOurBrandContentMouseLeave = () => {
-    setIsOurBrandContentHovered(false);
-  };
-
-  const handleOurBrandContentClick = () => {
-    // Close the hover content
     setHoveredItem(null);
-    setIsOurBrandContentHovered(false);
   };
 
   const handleNavigateToOurBrand = () => {
     const ourBrandPath = `/${locale}/our-brand`;
     router.push(ourBrandPath);
-    // Close the hover content when navigating
-    handleOurBrandContentClick();
   };
 
   const isOurBrandActive = () => {
     return routerPath.includes('/our-brand');
+  };
+
+  const handleOurBrandContentClick = (event) => {
+    // Close the hover content
+    setHoveredItem(null);
+    // Navigate to the clicked product
+    // The navigation is handled by the Link component in OurBrand
   };
 
   return (
@@ -86,7 +84,7 @@ const NavBar = ({ className, linkClass }) => {
               </div>
             )}
 
-            {path.name === 'Our Brand' && (hoveredItem === 'Our Brand' || isOurBrandContentHovered) && (
+            {path.name === 'Our Brand' && hoveredItem === 'Our Brand' && (
               <div
                 className="absolute top-full left-0 w-full bg-white z-1000"
                 onMouseEnter={handleOurBrandContentMouseEnter}

@@ -13,7 +13,7 @@ import Frame1 from "@/assets/images/AboutUs/Frame1.png";
 import Frame2 from "@/assets/images/AboutUs/Frame2.png";
 import AmitAnand from "@/assets/images/AboutUs/AmitAnand.png";
 import ImageBanner from "../../Layout/Banner";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Polygon1 from '@/assets/images/AboutUs/Polygon5.png';
 import Polygon2 from '@/assets/images/AboutUs/Polygon6.png';
@@ -80,6 +80,62 @@ export default function OurBrand() {
   //   { image: Polygon15 },
   // ]
 
+  const [counts, setCounts] = useState({
+    productRanges: 0,
+    yearsOfLegacy: 0,
+    newCustomers: 0,
+    numberOfOutlets: 0
+  });
+
+  const LEGACY_DATA = [
+    {
+      count: 2580,
+      title: "Product Ranges",
+      key: "productRanges"
+    },
+    {
+      count: 580,
+      title: "Years Of Legacy",
+      key: "yearsOfLegacy"
+    },
+    {
+      count: 280,
+      title: "New Customer",
+      key: "newCustomers"
+    },
+    {
+      count: 6580,
+      title: "Number Of Outlets",
+      key: "numberOfOutlets"
+    },
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCounts(prevCounts => {
+        const newCounts = { ...prevCounts };
+        let allReached = true;
+        
+        LEGACY_DATA.forEach(item => {
+          if (newCounts[item.key] < item.count) {
+            newCounts[item.key] += Math.ceil((item.count - newCounts[item.key]) / 10);
+            allReached = false;
+          } else {
+            newCounts[item.key] = item.count;
+          }
+        });
+
+        if (allReached) {
+          clearInterval(interval);
+        }
+
+        return newCounts;
+      });
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const renderContent = () => {
     switch (activeTab) {
       case "vision":
@@ -92,25 +148,6 @@ export default function OurBrand() {
         return "";
     }
   };
-
-  const LEGACY_DATA = [
-    {
-      count: "2580+",
-      title: "Product Ranges",
-    },
-    {
-      count: "580+",
-      title: "Years Of Legacy",
-    },
-    {
-      count: "280+",
-      title: "New Customer",
-    },
-    {
-      count: "6580+",
-      title: "Number Of Outlets",
-    },
-  ];
 
   return (
     <>
@@ -184,24 +221,22 @@ export default function OurBrand() {
           <Image
             src={Curv}
             alt="Banner Image"
-            className="object-cover hidden lg:inline w-full h-auto max-h-[460px]"
+            className="object-cover hidden lg:inline w-full h-auto max-h-[670px]"
             />
           <div className="relative">
-            <div className="lg:absolute z-10 bottom-[124px] left-0 right-0 flex gap-4 flex-wrap justify-around items-center mt-10 text-center p-4">
-              {LEGACY_DATA.map((itm) => {
-                return (
-                  <div className="w-[130px] lg:w-[200px] xl:w-[275px] h-[110px] xl:h-[170px] flex-shrink-0 border rounded-[1.875rem] border-[#9F7B49] bg-transparent shadow-md flex items-center justify-center">
-                    <div className="flex gap-3 items-center justify-center flex-col">
-                      <p className="text-[14px] lg:text-[20px] xl:text-[34px] text-center spaced-words font-bold ms-4 text-[#9F7B49]">
-                        {itm.count}
-                      </p>
-                      <p className="text-[#131313] text-[12px] lg:text-base xl:text-[24px] font-semibold">
-                        {itm?.title}
-                      </p>
-                    </div>
+            <div className="lg:absolute z-10 bottom-[124px] left-0 right-0 flex gap-4 flex-wrap justify-around items-center mt-10 text-center p-4 2xl: py-10 curvonLegacyData">
+              {LEGACY_DATA.map((item) => (
+                <div key={item.key} className="w-[130px] lg:w-[200px] xl:w-[275px] h-[110px] xl:h-[170px] flex-shrink-0 border rounded-[1.875rem] border-[#9F7B49] bg-transparent shadow-md flex items-center justify-center">
+                  <div className="flex gap-3 items-center justify-center flex-col">
+                    <p className="text-[14px] lg:text-[20px] xl:text-[34px] text-center spaced-words font-bold ms-4 text-[#9F7B49]">
+                      {counts[item.key]}+
+                    </p>
+                    <p className="text-[#131313] text-[12px] lg:text-base xl:text-[24px] font-semibold">
+                      {item.title}
+                    </p>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -259,7 +294,7 @@ export default function OurBrand() {
             <p className="text-center text-[#373737] font-normal text-[16px] md:text-[19px] font-literata">
               Managing Director
             </p>
-            <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost">
+            <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost text-justify">
               A Delhi University Graduate from Kirori Mal College in Commerce, he spearheads key functions of Overall Plant Management; Human Resources; and Finance. The Managing Director of the company and the younger one of the two siblings, he has played the perfect foil to the elder in initiating the GREEN FIELD initiative of the factory in Roorkee. Leading from the front in all factory operations a person with hands-on expertise in executing all details at the plant level.
             </p>
           </div>
@@ -368,6 +403,7 @@ export default function OurBrand() {
 OurBrand.propTypes = {
   initialData: PropTypes.object,
 };
+
 
 
 
