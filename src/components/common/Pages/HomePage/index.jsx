@@ -24,6 +24,8 @@ import TrustSlide6 from '@/assets/images/home-banner-section/soya-chunk.png';
 import TrustSlide7 from '@/assets/images/home-banner-section/Peanut-Butter-Creamy.png';
 import TrustSlide8 from '@/assets/images/home-banner-section/Muesli-front.png';
 import TrustSlide9 from '@/assets/images/home-banner-section/Vector-smart.png';
+import ChocolateImg  from '@/assets/images/home-banner-section/ChocolateImg.png'
+import ChocolateBox from '@/assets/images/home-banner-section/ChocolateBox.png'
 // import HoneyBee from '@/assets/images/home-banner-section/honey-bee.png'
 // import TrustSlide10 from '@/assets/images/home-banner-section/Muesli-front.png';
 
@@ -42,6 +44,9 @@ import FlowerRun from '@/assets/images/home-banner-section/flowerRun.gif'
 import ReactAngle from '@/assets/images/home-banner-section/reactangle1.png'
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { useState, useEffect } from 'react';
 
 
 export default function HomePage() {
@@ -130,12 +135,12 @@ export default function HomePage() {
     },
   ];
   const AVAILABILITY_SLIDE = [
-    { img: AmazonLogo, path:"https://www.amazon.in/s?k=apis&crid=2CJFWNXIDZI1V&sprefix=apis%2Caps%2C429&ref=nb_sb_noss_1" },
-    { img: JioMart, path:"https://www.jiomart.com/search/apis" },
-    { img: BigBasket, path:"https://www.bigbasket.com/ps/?q=apis&nc=as" },
-    { img: BlinkIt, path:"https://blinkit.com/s/?q=apis" },
-    { img: JioMart2, path:"https://www.jiomart.com/search/apis/in/prod_mart_master_vertical?prod_mart_master_vertical%5BhierarchicalMenu%5D%5Bcategory_tree.level0%5D%5B0%5D=Category" },
-    { img: DMart, path:"https://www.dmart.in/search?searchTerm=apis" },
+    { img: AmazonLogo, path: "https://www.amazon.in/s?k=apis&crid=2CJFWNXIDZI1V&sprefix=apis%2Caps%2C429&ref=nb_sb_noss_1" },
+    { img: JioMart, path: "https://www.jiomart.com/search/apis" },
+    { img: BigBasket, path: "https://www.bigbasket.com/ps/?q=apis&nc=as" },
+    { img: BlinkIt, path: "https://blinkit.com/s/?q=apis" },
+    { img: JioMart2, path: "https://www.jiomart.com/search/apis/in/prod_mart_master_vertical?prod_mart_master_vertical%5BhierarchicalMenu%5D%5Bcategory_tree.level0%5D%5B0%5D=Category" },
+    { img: DMart, path: "https://www.dmart.in/search?searchTerm=apis" },
   ];
 
   const MEDIA_SLIDES = [
@@ -178,6 +183,49 @@ export default function HomePage() {
   const handleLifeAtApis = () => {
     router.push('/careers#life-at-apis');
   };
+
+  const [currentProduct, setCurrentProduct] = useState(0);
+  const products = [
+    {
+      name: 'Organic Honey',
+      description: "Nature's golden nectar, pure and organic",
+      image: HoneyImg,
+      productImage: TrustSlide1,
+      bgColor: 'home-green-bg',
+      desc: "Organic honey is a delightful concoction that not only pleases the taste buds but also offers a plethora of health benefits. Unlike conventional honey, which may contain traces of pesticides and other chemicals, organic honey is produced without the use of synthetic pesticides or fertilizers. This ensures that the bees and their environment remain free from harmful substances."
+    },
+    {
+      name: 'Chocolate Spread',
+      description: "Indulgent and rich, perfect for any treat",
+      image: ChocolateImg,
+      productImage: ChocolateBox,
+      bgColor: 'home-choco-bg',
+      desc: "The chocolate spread from Apis will make you smile in no time. The great mixture of ingredients is what makes it so enticing and fun to eat with anything. You can enhance the flavours of various foods just by adding ApisChocolate Spread to them, which will make them even more delectable."
+    },
+    
+  ];
+  const productsData  = [
+    {
+      name: 'Organic Honey',
+      description: "Nature's golden nectar, pure and organic",
+      image: HoneyImg,
+      productImage: TrustSlide1,
+      bgColor: 'home-green-bg',
+    },
+    {
+      name: 'Chocolate Spread',
+      description: "Indulgent and rich, perfect for any treat",
+      image: ChocolateImg,
+    }
+  ]
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentProduct((prev) => (prev + 1) % products.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
 
 
 
@@ -286,11 +334,10 @@ export default function HomePage() {
           className="absolute -left-10 z-0 bottom-0 h-[80px] md:h-[300px] w-[140px] md:w-[252px] object-contain object-center"
         />
       </div>
-
       {/* Day to day story */}
       {/* a */}
       <div className="px-0 md:px-2 w-full mb-12 mt-6 md:mt-0">
-          <div className="home-story-bg py-8 flex flex-col items-center">
+        <div className="home-story-bg py-8 flex flex-col items-center">
           <p className="uppercase text-sm text-center text-[22px] md:text-lg font-medium text-[#585858] font-medium" style={{ fontFamily: "jost" }}>
             day-to-day choices that weave the most profound stories
           </p>
@@ -300,78 +347,65 @@ export default function HomePage() {
           <p className="font-bold capitalize text-center text-[20px] md:text-[40px] text-[#9F7B49]">
             Products that make a difference
           </p>
-          <div className="px-0 lg:px-2 w-full">
-            <div className="home-green-bg relative mt-5 lg:mt-8">
-              <div className="w-full h-full flex flex-col lg:flex-row">
-                <div className="lg:w-1/2 h-full">
-                  <div className="lg:w-1/2  lg:absolute -top-12 left-6 h-[500px] lg:h-[760px]"></div>
-                  <Image
-                    src={HoneyImg}
-                    // width={266}
-                    height={720}
-                    alt="header-logo"
-                    className="h-[500px] w-full lg:h-[720px] lg:w-1/2  absolute top-0 lg:rounded-tl-[40px] lg:rounded-tr-[250px] lg:rounded-br-[40px] lg:rounded-bl-[250px] rounded-tl-[5px] rounded-tr-[100px] rounded-br-[5px] rounded-bl-[100px]"
-                  />
-                  <Image
-                    src={ReactAngle}
-                    className="h-[500px] w-full lg:h-[720px] lg:w-1/2  absolute top-0 lg:rounded-tl-[40px] lg:rounded-tr-[250px] lg:rounded-br-[40px] lg:rounded-bl-[250px] rounded-tl-[5px] robin rounded-tr-[100px] rounded-br-[5px] rounded-bl-[100px]"
-                  />
-                </div>
-                <div className="lg:w-1/2 flex items-center justify-center flex-col py-10 lg:pb-0 overflow-hidden">
-                  <div>
-                    <p className="text-white font-bold text-[30px] mb-2">
-                      Organic Honey
-                    </p>
-                    <p className="text-xs text-white text-center text-[19px]" style={{ fontFamily: "Jost" }}>
-                      Nature's golden nectar, pure and organic
-                    </p>
-                    {/* <p className="text-xs text-white text-center">
-                    pure and organic
-                    </p> */}
-                  </div>
-                  <div className="flex relative md:me-28">
+            <div className="px-0 lg:px-2 w-full">
+              <div className={`${products[currentProduct].bgColor} relative mt-5 lg:mt-8`}>
+                <div className="w-full h-full flex flex-col lg:flex-row">
+                  <div className="lg:w-1/2 h-full">
+                    <div className="lg:w-1/2 lg:absolute -top-12 left-6 h-[500px] lg:h-[760px]"></div>
                     <Image
-                      src={TrustSlide1}
-                      // width={266}
-                      height={330}
-                      alt="header-logo"
-                      className="h-[330px]"
+                      src={products[currentProduct].image}
+                      height={720}
+                      alt="product-image"
+                      className="h-[500px] w-full lg:h-[720px] lg:w-1/2 absolute top-0 lg:rounded-tl-[40px] lg:rounded-tr-[250px] lg:rounded-br-[40px] lg:rounded-bl-[250px] rounded-tl-[5px] rounded-tr-[100px] rounded-br-[5px] rounded-bl-[100px]"
                     />
                     <Image
-                      src={TrustSlide1}
-                      // width={266}
-                      height={253}
-                      alt="header-logo"
-                      className="h-[253px] hidden md:inline absolute bottom-0 rotate-45 -right-32"
-                    />
-                    <Image
-                      src={HoneyBee}
-                      // width={266}
-                      height={125}
-                      alt="header-logo"
-                      className="h-[125px] hidden md:inline absolute bottom-0 rotate-12 -right-10 xs:right-10"
+                      src={ReactAngle}
+                      className="h-[500px] w-full lg:h-[720px] lg:w-1/2 absolute top-0 lg:rounded-tl-[40px] lg:rounded-tr-[250px] lg:rounded-br-[40px] lg:rounded-bl-[250px] rounded-tl-[5px] robin rounded-tr-[100px] rounded-br-[5px] rounded-bl-[100px]"
                     />
                   </div>
-                  <div className="text-center text-xs text-white w-[65%] text-[20px] font-jost font-normal">
-                    Organic honey is a delightful concoction that not only
-                    pleases the taste buds but also offers a plethora of health
-                    benefits. Unlike conventional honey, which may contain
-                    traces of pesticides and other chemicals, organic honey is
-                    produced without the use of synthetic pesticides or
-                    fertilizers. This ensures that the bees and their
-                    environment remain free from harmful substances.
+                  <div className="lg:w-1/2 flex items-center justify-center flex-col py-10 lg:pb-0 overflow-hidden">
+                    <div>
+                      <p className="text-white font-bold text-[30px] mb-2">
+                        {products[currentProduct].name}
+                      </p>
+                      <p className="text-xs text-white text-center text-[19px]" style={{ fontFamily: "Jost" }}>
+                        {products[currentProduct].description}
+                      </p>
+                    </div>
+                    <div className="flex relative md:me-28">
+                      <Image
+                        src={products[currentProduct].productImage}
+                        height={330}
+                        alt="product-slide"
+                        className="h-[330px]"
+                      />
+                      
+                      {products[currentProduct].name === 'Organic Honey' && (
+                        <Image
+                          src={HoneyBee}
+                          height={125}
+                          alt="honey-bee"
+                          className="h-[125px] hidden md:inline absolute bottom-0 rotate-12 -right-10 xs:right-10"
+                        />
+                      )}
+                    </div>
+                    <div className="text-center text-xs text-white w-[65%] text-[20px] font-jost font-normal">
+                    {products[currentProduct].desc}
+
+                      {/* Product description */}
+                    </div>
                   </div>
                 </div>
+                {products[currentProduct].name === 'Organic Honey' && (
+                  <Image
+                    src={HoneyDhar}
+                    height={1058}
+                    alt="honey-dhar"
+                    className="hidden xl:inline h-[1058px] absolute -top-52 -right-4"
+                  />
+                )}
               </div>
-              <Image
-                src={HoneyDhar}
-                // width={266}
-                height={1058}
-                alt="header-logo"
-                className="hidden xl:inline h-[1058px] absolute -top-52 -right-4"
-              />
             </div>
-          </div>
         </div>
       </div>
 
@@ -379,66 +413,66 @@ export default function HomePage() {
       {/* API Media */}
       {/*   */}
       <div className="relative w-full flex items-center flex-col justify-center apiMediaSection overflow-hidden">
-  <p className="text-xs md:text-base text-center text-[#585858] px-4 uppercase font-jost text-medium sm:text-[14px] font-jost font-normal sm:mt-0">
-    Stay updated with the latest news, events, and media coverage of APIS India.
-  </p>
-  <p className="text-[20px] md:text-[40px] md:my-0 font-bold text-[#9F7B49] sm:my-0 xl:my-0">
-    Apis Media
-  </p>
-  <div className="media-apis w-full max-w-7xl z-10 my-4 md:my-10 px-4 sm:px-0">
-    <EmblaCarousel options={OPTIONS} className="embla-close-arrows relative">
-      {NEWS_DATA.map((itm, index) => (
-        <div
-          className="embla__slide flex-[0_0_280px] md:flex-[0_0_495px] min-w-0 px-2"
-          key={index}
-        >
-          <a
-            key={index}
-            href={itm.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="border border-[#85673D] embla__slide__number md:w-[495px]  md:h-[590px]  p-2 pb-0 flex flex-col !rounded-none bg-[#fff] apismedis">
-              <div className="relative w-full h-[320px] md:h-[443px] overflow-hidden">
-                <Image
-                  src={itm?.img}
-                  alt="header-logo"
-                  layout="fill"
-                  objectFit="cover"
-                  className="bg-opacity-40"
-                />
+        <p className="text-xs md:text-base text-center text-[#585858] px-4 uppercase font-jost text-medium sm:text-[14px] font-jost font-normal">
+          Stay updated with the latest news, events, and media coverage of APIS India.
+        </p>
+        <p className="text-[20px] md:text-[40px] md:my-0 font-bold text-[#9F7B49] sm:my-0 xl:my-0">
+          Apis Media
+        </p>
+        <div className="media-apis w-full max-w-7xl z-10 my-4 md:my-10 px-4 sm:px-0">
+          <EmblaCarousel options={OPTIONS} className="embla-close-arrows relative">
+            {NEWS_DATA.map((itm, index) => (
+              <div
+                className="embla__slide flex-[0_0_280px] md:flex-[0_0_495px] min-w-0 px-2"
+                key={index}
+              >
+                <a
+                  key={index}
+                  href={itm.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="border border-[#85673D] embla__slide__number md:w-[460px] h-auto md:h-[590px] p-2 pb-0 flex flex-col !rounded-none bg-[#fff] apismedis">
+                    <div className="relative w-full h-[200px] sm:h-[280px] md:h-[443px] overflow-hidden">
+                      <Image
+                        src={itm?.img}
+                        alt="header-logo"
+                        // layout="fill"
+                        // objectFit="cover"
+                        className="bg-opacity-40 w-full h-full"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <p className="font-bold text-[#85673D] text-sm md:text-xl mb-1 line-clamp-2">
+                        {itm.desc}
+                      </p>
+                      <p className="text-[#525252] text-xs md:text-lg">
+                        {itm.date}
+                      </p>
+                    </div>
+                  </div>
+                </a>
               </div>
-              <div className="p-4">
-                <p className="font-bold text-[#85673D] text-sm md:text-xl mb-1 line-clamp-2">
-                  {itm.desc}
-                </p>
-                <p className="text-[#525252] text-xs md:text-lg">
-                  {itm.date}
-                </p>
-              </div>
-            </div>
-          </a>
+            ))}
+          </EmblaCarousel>
         </div>
-      ))}
-    </EmblaCarousel>
-  </div>
-  <Image
-    src={FlowerRun}
-    width={640}
-    height={640}
-    alt="Flower decoration"
+        <Image
+          src={FlowerRun}
+          width={640}
+          height={640}
+          alt="Flower decoration"
     className="h-[640px] z-0 hidden lg:block w-[640px] absolute -bottom-28 -left-28 opacity-50"
-    style={{ transform: "rotate(40deg)" }}
-  />
-  <Image
-    src={FlowerRun}
-    width={640}
-    height={640}
-    alt="Flower decoration"
+          style={{ transform: "rotate(40deg)" }}
+        />
+        <Image
+          src={FlowerRun}
+          width={640}
+          height={640}
+          alt="Flower decoration"
     className="h-[640px] hidden lg:block w-[640px] absolute -top-12 -right-20 opacity-40"
-    style={{ transform: "rotate(-136deg)" }}
-  />
-</div>
+          style={{ transform: "rotate(-136deg)" }}
+        />
+      </div>
 
       {/* Our Presence */}
       <div className="pb-10 lg:pb-32 pt-10 md: pt-6">
@@ -521,36 +555,36 @@ export default function HomePage() {
           <p className="uppercase font-medium text-[#fff] text-sm md:text-xl font-jost text-medium text-[22px] sm: text-[10px] font-bold font-jost">
             Always here, always ready
           </p>
-          <p className="text-bold text-[#D7AD5F] text-[20px] sm:text-[28px] md:text-[34px] lg:text-[40px] font-literata font-semibold mt-[-5px] sm:mt-[-7px] md:mt-[-10px] lg:mt-[-12px]">            Our Availability
+          <p className="text-bold text-[#D7AD5F] text-[20px] sm:text-[28px] md:text-[34px] lg:text-[40px] font-literata font-semibold mt-[-5px] sm:mt-[-7px] md:mt-[-8px] lg:mt-[-22px]">Our Availability
           </p>
-          <div className="font-medium text-center text-white text-xs md:text-lg w-10/12 text-medium text-[24px] font-medium font-jost sm: text-[10px] text-medium w-[80%]">
+          <div className="font-medium text-center text-white text-xs md:text-lg w-10/12 text-[24px] font-medium font-jost sm: text-[10px] text-medium  2xl: w-[70%] ">
             Apis products are widely available to ensure you can enjoy our
             natural and premium offerings wherever you are. You can find our
             range of honey, organic honey, muesli, pickles, and more at leading
             supermarkets, grocery stores, and health food shops across the
             country.
           </div>
-          <div className="font-medium text-center text-white text-xs md:text-lg w-10/12 text-[24px] font-medium font-jost text-medium sm: text-[10px] font-jost text-medium">
+          <div className="font-medium text-center text-white text-xs md:text-lg w-10/12 text-[24px] font-medium font-jost text-medium sm: text-[10px] font-jost text-medium 2xl: w-[70%] ">
             Additionally, our products are conveniently accessible online
             through major e-commerce platforms, making it easy to have your
             favorite Apis products delivered right to your doorstep. Whether you
             prefer shopping in-store or online, Apis is always within reach,
             ready to bring the goodness of nature to your table.
           </div>
-          <div className="w-full flex items-center flex-col gap-4 md:gap-12 m">
+          <div className="w-full flex items-center justify-center flex-col gap-4 md:gap-12 m">
             <div className="mt-2 md:mt-20 bg-white w-full h-[23px] md:h-[65px] flex items-center justify-between px-3 md:pt-2 pt-1 avaibility">
               <EmblaCarousel options={OPTIONS} autoScroll>
                 {AVAILABILITY_SLIDE.map((img) => {
                   return (
                     <div className="embla__slide w-[55px] md:w-auto">
                       <Link href={img?.path} target="_blank">
-                      <Image
-                        src={img?.img}
-                        height={60}
-                        alt="header-logo"
-                        className="h-[18px] w-[50px] md:w-auto md:h-[60px] embla__slide__number"
-                      />
-                   </Link>
+                        <Image
+                          src={img?.img}
+                          height={60}
+                          alt="header-logo"
+                          className="h-[18px] w-[50px] md:w-auto md:h-[60px] embla__slide__number"
+                        />
+                      </Link>
                     </div>
                   );
                 })}
@@ -614,7 +648,7 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row items-center w-full tvc-bg sm:justify-center gap-10 pt-5 md:-mt-20 w-full xl:-mt-40 sm:mt-0">
+            <div className="flex flex-col sm:flex-row items-center w-full tvc-bg sm:justify-center gap-10 pt-5 md:-mt-[150px] w-full xl:-mt-40 sm:mt-0 tvcyoutubeVideo">
               <iframe
                 className="rounded md:h-[360px] h-auto md:w-[580px] max-w-[500px] min-h-[200px] w-auto"
                 src="https://www.youtube.com/embed/JUVgptUaFU4?si=ILKh0XegYCLhwId-"
@@ -671,8 +705,7 @@ export default function HomePage() {
                 success and growth.
               </p>
               <div className="flex justify-center gap-10 mt-6">
-                          {/* <Link href="/careers"> */}
-
+                {/* <Link href="/careers"> */}
                 <button className="border border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white"
                   onClick={handleJoinUs}
                 >

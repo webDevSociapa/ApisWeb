@@ -474,13 +474,7 @@ export const NEWS_DATA = [
     date: " 10 JANUARY, 2023 / PRESS RELEASES",
     link: "https://www.slurrp.com/article/we-bet-you-didnt-know-these-creative-ways-to-use-honey-1672830183803"
   },
-  {
-    img: apisNews10,
-    name: NewsName6,
-    desc: "Apis India #ShuddhAurSaccha Campaign",
-    date: "14 DECEMBER, 2022 / PRESS RELEASES",
-    link: "https://www.uniindia.com/apis-india-launches-shuddhaursaccha-campaign-promoting-its-honey-for-healthy-winters/press-releases/news/2878783.html"
-  },
+ 
   {
     img: apisNews11,
     name: NewsName6,
@@ -515,6 +509,13 @@ export const NEWS_DATA = [
     desc: "Economic Times News",
     date: "16/August, 2021 / PRESS RELEASES",
     link: "https://brandequity.economictimes.indiatimes.com/news/advertising/apis-india-ropes-in-milind-soman-as-the-brand-ambassador/85362992"
+  },
+  {
+    img: apisNews10,
+    name: NewsName6,
+    desc: "Apis India #ShuddhAurSaccha Campaign",
+    date: "14 DECEMBER, 2022 / PRESS RELEASES",
+    link: "https://www.uniindia.com/apis-india-launches-shuddhaursaccha-campaign-promoting-its-honey-for-healthy-winters/press-releases/news/2878783.html"
   },
   {
     img: apisNews16,
