@@ -6,6 +6,8 @@ import React, { useState } from "react";
 import Ring1 from "@/assets/images/OurBrands/Ring-4.png";
 import GurrentyBadge from "@/assets/images/OurBrands/GurrentyBadge.png";
 import { useRouter } from 'next/navigation';
+import PureHoneyIcon1 from "@/assets/images/OurBrands/pureHoneyIcon1.png";
+import PureHoneyIcon2 from "@/assets/images/OurBrands/pureHoneyIcon2.png";
 
 const page = () => {
   const [batchNumber, setBatchNumber] = useState('');
@@ -112,28 +114,28 @@ const page = () => {
           )}
         </div>
         <div className="font-jost flex flex-col lg:flex-row gap-8 mt-8 md:mt-16 items-center justify-center">
-          <div className="w-[90%] md:w-[510px] shadow-lg p-3 md:p-6 border border-[#9F7B49] bg-[#FFFBF6] h-[206px]">
-            <div className="w-full flex items-center justify-center mb-4">
-              {/* <Image
-                src={Certi2}
-                alt="header-logo"
-                className="h-[18px] w-[50px] md:w-auto md:h-[82px] embla__slide__number"
-              /> */}
+          <div className="w-[90%] md:w-[510px] shadow-lg p-3 md:p-6 border border-[#9F7B49] bg-[#FFFBF6] h-[300px] flex flex-col">
+            <div className="w-full flex items-center justify-center mb-4 h-[82px]">
+              <Image
+                src={PureHoneyIcon1}
+                alt="Pure Honey Icon 1"
+                className="h-full w-auto"
+              />
             </div>
-            <p className="text-center text-sm md:text-xl">
+            <p className="text-center text-sm md:text-xl flex-grow flex items-center justify-center">
               Each batch of apis honey is 100% pure, free from adulterates or
               Added sugar & passes all quality test parameters.
             </p>
           </div>
-          <div className="w-[90%] md:w-[510px] shadow-lg p-3 md:p-6 border border-[#9F7B49] bg-[#FFFBF6]">
-            <div className="w-full flex items-center justify-center mb-4">
-              {/* <Image
-                src={Certi1}
-                alt="header-logo"
-                className="h-[18px] w-[50px] md:w-auto md:h-[82px] embla__slide__number"
-              /> */}
+          <div className="w-[90%] md:w-[510px] shadow-lg p-3 md:p-6 border border-[#9F7B49] bg-[#FFFBF6] h-[300px] flex flex-col">
+            <div className="w-full flex items-center justify-center mb-4 h-[82px]">
+              <Image
+                src={PureHoneyIcon2}
+                alt="Pure Honey Icon 2"
+                className="h-full w-auto"
+              />
             </div>
-            <p className="text-center text-sm md:text-lg">
+            <p className="text-center text-sm md:text-lg flex-grow flex items-center justify-center">
               We do not collect any personal information unless you provide it
               voluntarily. In case you opt to provide the details, it will only
               be used to share promotional offers, discounts, product launch
@@ -158,7 +160,7 @@ const page = () => {
             </p>
             <iframe
               className="rounded  w-full h-[400px]"
-              src="https://www.youtube.com/embed/JUVgptUaFU4?si=ILKh0XegYCLhwId-"
+              src="https://www.youtube.com/embed/190uqQHhazY?si=hHakkU8ZNvdxri0d"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

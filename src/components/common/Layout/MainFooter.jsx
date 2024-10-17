@@ -37,7 +37,7 @@ const MainFooter = () => {
               />
             </Link>
           </div>
-          <div className="my-4 md:my-10 flex w-full flex-col gap-4 md:gap-10 border-s border-[#000000] px-4 md:px-10">
+          <div className="my-4 md:my-10 flex w-full flex-col gap-4 md:gap-10 border-s border-[#000000] px-4 md:px-10 max-[800px]:border-s-0">
             <div className="flex flex-wrap items-center gap-x-6 md:gap-x-12 gap-y-2  md:gap-y-4 whitespace-nowrap">
               {PATH_DATA.map((path) => {
                 const tabUrlWithLocale = `/${locale}${path.url}`;

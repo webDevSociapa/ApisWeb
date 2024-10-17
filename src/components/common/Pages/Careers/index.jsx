@@ -109,6 +109,7 @@ const JOB_OPENINGS = [
 ];
 
 export default function Careers() {
+  const router = useRouter()
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState(null);
   // const [phone, setPhone] = useState("");
@@ -200,10 +201,10 @@ export default function Careers() {
     <>
       <ImageBanner banner={Banner} />
       <div id="life-at-apis" className="flex flex-col items-center justify-center">
-        <p className="font-bold text-[20px] md:text-[40px] text-center text-[#9F7B49]">
+        <p className="font-bold text-[20px] md:text-[40px] text-center text-[#9F7B49] font-literata">
           Life @Apis
         </p>
-        <p className="text-sm w-[95%]  md:text-xl md:w-[70%] md:leading-8 mt-3  md:mt-6 text-center">
+        <p className="text-sm w-[95%]  md:text-xl md:w-[70%] md:leading-8 mt-3  md:mt-6 text-center font-jost">
           At Apis India, we foster a collaborative and innovative work culture
           where every team member's ideas are valued, and growth opportunities
           are embraced with enthusiasm.
@@ -215,7 +216,7 @@ export default function Careers() {
           <div key={index} className="border p-2 md:p-3 px-1 border-[#85673D]" onClick={() => handleImageClick(itm)}>
             {itm.type === 1 && (
               <div className="p-3 pt-0 text-[#85673D] font-bold text-sm md:text-2xl pb-5">
-                <p>{itm.title}</p>
+                <p className="font-jost">{itm.title}</p>
               </div>
             )}
             <div>
@@ -229,7 +230,7 @@ export default function Careers() {
             </div>
             {itm.type === 0 && (
               <div className="p-3 pb-0 text-[#85673D] font-bold text-sm md:text-2xl pt-5">
-                <p>{itm.title}</p>
+                <p className="font-jost">{itm.title}</p>
               </div>
             )}
           </div>
@@ -289,7 +290,7 @@ export default function Careers() {
                 </tbody>
               </table>
             </div>
-            <Image src={Ring1} className="hidden md:inline absolute  -left-20 -bottom-22 h-[300px] w-[298px] rotate-animation opacity-30" />
+            {/* <Image src={Ring1} className="hidden md:inline absolute  -left-20 -bottom-22 h-[300px] w-[298px] rotate-animation opacity-30" /> */}
           </div>
         </div>
       </div>

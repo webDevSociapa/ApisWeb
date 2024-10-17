@@ -7,6 +7,16 @@ import CareerGallery1 from '@/assets/images/Careers/cgallary1.png';
 import CareerGallery4 from '@/assets/images/Careers/cgallary4.png';
 import CareerGallery3 from '@/assets/images/Careers/cgallary3.png';
 import CareerGallery10 from '@/assets/images/Careers/cgallary10.png';
+import HrMeet1 from '@/assets/images/Careers/hrMeet1.jpg';
+import HrMeet2 from '@/assets/images/Careers/hrMeet2.jpg';
+import HrMeet3 from '@/assets/images/Careers/hrMeet3.jpg';
+import Engagement1 from '@/assets/images/Careers/engageMent1.webp';
+import Engagement2 from '@/assets/images/Careers/engagement02.webp';
+import Engagement3 from '@/assets/images/Careers/engagement03.webp';
+import Engagement4 from '@/assets/images/Careers/engagement04.webp';
+import Engagement5 from '@/assets/images/Careers/engagement05.webp';
+import Engagement6 from '@/assets/images/Careers/engagement06.webp';
+
 import BirthdayCelebration from '@/assets/images/Careers/birthdayCelebration.png';
 import BirthdayCelebration1 from '@/assets/images/Careers/birthdayCelebration2.jpg';
 import BirthdayCelebration2 from '@/assets/images/Careers/birthdayCelebration3.jpg';
@@ -14,8 +24,8 @@ import { useSearchParams } from "next/navigation";
 
 const TABS = [
   { id: 1, title: "Employee Award", content: [CareerGallery5, CareerGallery2, CareerGallery1, CareerGallery4, CareerGallery3, CareerGallery10] },
-  { id: 2, title: "Meet & Greet", content: [CareerGallery5, CareerGallery2, CareerGallery1, CareerGallery4, CareerGallery3, CareerGallery10] },
-  { id: 3, title: "Engagements", content: [CareerGallery5, CareerGallery2, CareerGallery1, CareerGallery4, CareerGallery3, CareerGallery10] },
+  { id: 2, title: "Meet & Greet", content: [HrMeet1,HrMeet2 ,HrMeet3 ,] },
+  { id: 3, title: "Engagements", content: [Engagement1, Engagement2, Engagement3, Engagement4, Engagement6,Engagement6,Engagement6] },
   { id: 4, title: "Celebrations", content: [BirthdayCelebration, BirthdayCelebration1, BirthdayCelebration2] },
 ];
 
@@ -73,10 +83,10 @@ export default function Album() {
   return (
     <>
       <div className="flex flex-col items-center justify-center">
-        <p className="font-bold text-[20px] md:text-[40px] text-center text-[#9F7B49]">
+        <p className="font-bold text-[20px] md:text-[40px] text-center text-[#9F7B49] font-literata">
           Life @Apis
         </p>
-        <p className="text-sm w-[95%] md:text-xl md:w-[70%] md:leading-8 mt-3 md:mt-6 text-center">
+        <p className="text-sm w-[95%] md:text-xl md:w-[70%] md:leading-8 mt-3 md:mt-6 text-center font-jost">
           At Apis India, we foster a collaborative and innovative work culture
           where every team member's ideas are valued, and growth opportunities
           are embraced with enthusiasm.
@@ -97,7 +107,7 @@ export default function Album() {
       </div> */}
 
       {currentTab && (
-        <p className="text-center mt-10 font-bold text-[#9F7B49] text-3xl py-4 sm:py-4 sm:mt-2">{currentTab.title}</p>
+        <p className="text-center mt-10 font-bold text-[#9F7B49] text-3xl py-4 sm:py-4 sm:mt-2 font-literata">{currentTab.title}</p>
       )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8 px-4">

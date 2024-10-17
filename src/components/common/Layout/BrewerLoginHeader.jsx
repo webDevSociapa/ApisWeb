@@ -18,7 +18,7 @@ const BrewerLoginHeader = () => {
     <header className="sticky top-0 z-[100] flex w-full">
       <div className="flex w-full items-center justify-between gap-2 bg-[#FFFBF6] px-2 sm:px-8 py-4 text-xl font-bold leading-[30px] text-[#835415] h-[25px]">
         <marquee>
-          <p className="HeaderMarquee text-sm sm:text-xl">
+          <p className="HeaderMarquee text-sm sm:text-sm">
             We Here At Apis Keep quality on top preference as we believe your
             trust is our presence.
           </p>

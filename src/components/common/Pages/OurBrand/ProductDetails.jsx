@@ -600,29 +600,34 @@ const GREEN_TEA = [
 ]
 const RECIPIES_DATA = [
   {
-    img: Apple,
-    title: "Honey Apple Fruit Chat",
+    video: "https://www.youtube.com/embed/8xAEZMjoI7U?si=BCtDVosB050LS1Ci",
+    title: "Apis Honey & Dates Sweet and Sour Dip",
     time: "Prep 10 min",
+    name:"Himalaya Honey",
     descreption: "Nature's golden nectar, pure and organic",
   },
   {
-    img: Berry,
-    title: "Honey Berry Fruit Pan Cake",
+    video: "https://www.youtube.com/embed/S8g2Uq2MNlw?si=yq34TnOsgk-k4MOl",
+    title: "Apis Honey & Dates Fruit Cake",
+    name:"Arebian Pearls apis Dates",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-  },
-  {
-    img: Apple,
-    title: "Honey Apple Fruit Chat",
-    time: "Prep 10 min",
-    descreption: "Nature's golden nectar, pure and organic",
-  },
-  {
-    img: Berry,
-    title: "Honey Apple Fruit Chat",
-    time: "Prep 10 min",
-    descreption: "Nature's golden nectar, pure and organic",
-  },
+},
+{
+  video: "https://www.youtube.com/embed/NeL3kvnYyXQ?si=u1soO1g7rznNRBAU",
+  title: "Apis Recipes | Honey Glazed Carrots",
+  time: "Prep 10 min",
+  descreption: "Apis Recipes | Honey Glazed Carrots",
+
+}, 
+{
+  video: "https://www.youtube.com/embed/ng5x3ntnvAM?si=No7g71v_dE0uolVx",
+  title: "Apis Jam Recipe",
+  name:"apis jam Fruit Blast",
+  time: "Prep 10 min",
+  descreption: "Nature's golden nectar, pure and organic",
+  type:"6"
+},
 ];
 const ProductDetails = () => {
   const searchParams = useSearchParams();
@@ -734,7 +739,7 @@ const ProductDetails = () => {
           alt="header-logo"
           className="h-[180px] mt-8 w-auto md:h-[280px]"
         />
-        <Link href={"/our-brand/product-details/certificate"}>
+        <Link href={"https://www.amazon.in/s?k=organic+honey+apis&crid=219JTIFPTZQV0&sprefix=organic+honey+apis%2Caps%2C209&ref=nb_sb_noss_1"} target="_blank">
           <button className="border mt-8 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white">
             Available on
           </button>
@@ -761,7 +766,7 @@ const ProductDetails = () => {
       </div>
      {/* <a href={'/about-us'}> */}
      {selectedBrand?.id === 1 && selectedProduct?.id === 1 ?  (
-      <div className="w-[80%] relative">
+      <div className="w-[80%] relative 2xl:mt-8">
       <Image 
         src={CheckReportBanner}
         height={340}
@@ -840,7 +845,7 @@ const ProductDetails = () => {
           <div className="w-full lg:w-1/2 relative md:px-14 px-2 flex flex-col gap-4 md:gap-8 items-center mt-12">
             <p className="text-xl md:text-[30px] relative text-center font-light">
               Look what our customer say
-              {/* <Image
+              <Image
                 src={Comma}
                 width={60}
                 height={60}
@@ -853,7 +858,7 @@ const ProductDetails = () => {
                 height={60}
                 alt="header-logo"
                 className="h-[60px] hidden lg:inline -top-2 absolute -right-24 w-[60px]"
-              /> */}
+              />
             </p>
             <p className="text-sm font-jost font-light md:text-xl text-center font-light">
               “{selectedProduct.customer_says}”
@@ -921,7 +926,7 @@ const ProductDetails = () => {
                 alt="header-logo"
                 className="h-[135px] absolute hidden lg:inline -top-7 -right-7 z-0 ms w-[185px]"
               />
-              <p className="z-20 absolute w-full text-center text-lg md:text-[24px] left-6 font-bold">
+              <p className="z-20 absolute w-full text-center text-lg md:text-[24px] left-6 font-bold font-jost">
                 {selectedContent?.name}
               </p>
               <p className="z-20 absolute font-jost w-[90%] text-center text-xs md:text-base top-12 left-6 md:left-12">
@@ -940,7 +945,7 @@ const ProductDetails = () => {
         <p className="text-[#9F7B49] text-center w-[90%] text-[20px] md:text-[40px] font-bold">
           ORGANIC HONEY LAUNCH
         </p>
-        <p className=" w-[90%] text-center text-sm md:text-[22px] left-4 md:leading-7 mt-2 md:mt-6 xl:w-[45%] sm:w-[90%] md:w-[80%]">
+        <p className=" w-[90%] text-center text-sm md:text-[22px] left-4 md:leading-7 mt-2 md:mt-6 xl:w-[45%] sm:w-[90%] md:w-[80%] font-jost">
           Launch Event was organized on 9th Jan, 2024 at The Lalit, New Delhi.
           Sanya Malhotra and our Managing Director Mr. Amit Anand Unveiled Our
           New Organic Honey.
@@ -965,7 +970,7 @@ const ProductDetails = () => {
           </div>
         </div>
         <div className="w-full py-6 md:py-20 bg-[#FFF9F0] flex flex-col items-center justify-center">
-          <p className="text-sm text-center md:text-[22px] font-medium text-[#585858]">
+          <p className="text-sm text-center md:text-[22px] font-medium text-[#585858] font-jost">
             Get to know more about Apis from our customers
           </p>
           <Link href={"/our-brand/product-details/blog"}>
@@ -973,7 +978,7 @@ const ProductDetails = () => {
               Our Social Reviews
             </p>
           </Link>
-          <p className="text-sm md:text-[22px] font-medium text-center text-[#585858]">
+          <p className="text-sm md:text-[22px] font-medium text-center text-[#585858] font-jost">
             Intentions may lay the foundation, but it's our actions that build
             the world we live in.
           </p>
@@ -985,7 +990,7 @@ const ProductDetails = () => {
                     <iframe
                       width="300px"
                       height="385px"
-                      className="rounded w-full sm:w-[300px] w-[170px] h-[260px] sm:h-[385px]"
+                      className="rounded w-full sm:w-[300px] w-[170px] h-[260px] sm:h-[385px] border  border-[#9F7B49]"
                       src={itm?.video}
                       title="YouTube video player"
                       frameborder="0"
@@ -1049,20 +1054,21 @@ const ProductDetails = () => {
                 <div className="embla__slide">
                   <div className="w-full">
                     <div className="w-full">
-                      <Image
-                        src={itm.img}
-                        alt="header-logo"
-                        className="bg-opacity-40 w-full max-h-[363px] max-w-[514px]"
-                      />
+                    <iframe
+              src={itm.video}
+              height={400}
+              alt="header-logo"
+              className="bg-opacity-40 w-full max-h-[363px] max-w-[514px] rounded-tl-[50px] rounded-br-[50px] rounded-tr-[25px]"
+            />
                     </div>
                     <div className="border-2 max-w-[514px] bg-white border-[hsl(35,37%,45%)] mt-4 lg:mt-6 flex flex-col gap-1 lg:gap-3 py-3 px-2 lg:px-4">
-                      <p className="text-sm lg:text-xl font-bold text-[#373737]">
+                      <p className="text-sm lg:text-xl font-bold text-[#373737] font-jost">
                         {itm?.title}
                       </p>
-                      <p className="text-sm lg:text-xl font-normal text-[#373737]">
+                      <p className="text-sm lg:text-xl font-normal text-[#373737] font-jost">
                         {itm?.time}
                       </p>
-                      <p className="text-[#666666] text-xs lg:text-sm">
+                      <p className="text-[#666666] text-xs lg:text-sm font-jost">
                         {itm?.descreption}
                       </p>
                     </div>
