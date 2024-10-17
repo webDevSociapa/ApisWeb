@@ -483,7 +483,7 @@ export default function HomePage() {
         <p className="text-xs md:text-lg text-center font-medium text-[#585858] uppercase font-jost text-medium">
           embrace the moment with all its beauty and challenges.
         </p>
-        <p className="text-[20px] md:text-[40px] font-bold text-[#9F7B49] pt-0 pb-5 md:pt-0 md:pb-10 text-center font-literata">
+        <p className="text-[20px] md:text-[40px] font-bold text-[#9F7B49] pt-0 pb-5 md:pt-0  text-center font-literata">
           Our Presence
         </p>
         <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 md:gap-20 xl:gap-6 items-center justify-center">
@@ -598,7 +598,7 @@ export default function HomePage() {
       </div>
 
       {/* Latest @Apis */}
-      <div className="w-full flex flex-col items-center justify-center py-4 md:py-8 sm: py-8">
+      <div className="w-full flex flex-col items-center justify-center py-4 md:py-8 sm: py-8 2xl: mt-8">
         <p className="font-medium text-center text-[#585858] text-sm  md:text-xl font-medium text-[22px] font-jost">
           DISCOVER OUR LATEST STORIES
         </p>

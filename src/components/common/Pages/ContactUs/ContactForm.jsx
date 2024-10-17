@@ -63,12 +63,12 @@ const ContactForm = () => {
   }
   
   return (
-  <>
-    <div className="w-full bg-color py-12 px-4">
+    <div className="w-full bg-[#EECB9A] py-12 px-4">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-center text-4xl font-bold text-black mb-4">Share Your Views For Apis</h2>
-        <p className="text-center text-xl text-black mb-8">Enter the following details and share your views</p>
-         {popupMessage && (
+        <h2 className="text-center text-3xl font-bold text-black mb-2">Share Your Views For Apis</h2>
+        <p className="text-center text-lg text-black mb-8">Enter the following details and share your views</p>
+        
+        {popupMessage && (
             <div id="toast-success" className="flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow mt-5" role="alert">
               <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg bg-white">
                 <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#835415" viewBox="0 0 20 20">
@@ -85,73 +85,74 @@ const ContactForm = () => {
             </div>
           )}
         <form className="space-y-6" onSubmit={handleSubmit}>
-          {/* Form fields */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-black text-base font-normal">Full Name</label>
+              <label className="block text-black text-sm font-normal mb-1">Full Name</label>
               <input
                 type="text"
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleChange}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border-[1px] border-[#000000] rounded bg-transparent"
                 required
               />
             </div>
             <div>
-              <label className="block text-black text-base font-normal">City Location</label>
+              <label className="block text-black text-sm font-normal mb-1">City Location</label>
               <input
                 type="text"
                 name="cityLocation"
                 value={formData.cityLocation}
                 onChange={handleChange}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border-[1px] border-[#000000] rounded bg-transparent"
                 required
               />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-black text-base font-normal">Email Address</label>
+              <label className="block text-black text-sm font-normal mb-1">Email Address</label>
               <input
                 type="email"
                 name="emailAddress"
                 value={formData.emailAddress}
                 onChange={handleChange}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border-[1px] border-[#000000] rounded bg-transparent"
                 required
               />
             </div>
             <div>
-              <label className="block text-black text-base font-normal">Phone Number</label>
+              <label className="block text-black text-sm font-normal mb-1">Phone Number</label>
               <input
                 type="tel"
                 name="phoneNumber"
                 value={formData.phoneNumber}
                 onChange={handleChange}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border-[1px] border-[#000000] rounded bg-transparent"
                 required
               />
             </div>
           </div>
           <div>
-            <label className="block text-black text-base font-normal">Message for Apis</label>
+            <label className="block text-black text-sm font-normal mb-1">Message for Apis</label>
             <textarea
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded h-32"
+              className="w-full p-2 border-[1px] border-[#000000] rounded bg-transparent h-32 placeholder-black placeholder-opacity-60"
               placeholder="Write complete message here"
               required
             ></textarea>
           </div>
           <div className="text-center">
-            <button type="submit" className="bg-orange-500 text-white py-2 px-4 rounded" style={{backgroundColor:"rgb(159 123 73 / var(--tw-bg-opacity))"}}>Submit</button>
+            <button type="submit" className="bg-[#AE844A] text-white py-2 px-8 rounded font-literata text-base	font-medium	color:[#fffff] font-semibold hover:bg-[#AE844A]">
+              Submit
+            </button>
           </div>
         </form>
       </div>
     </div>
-  </>
   );
 };
+
 export default ContactForm;

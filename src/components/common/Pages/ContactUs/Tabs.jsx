@@ -69,7 +69,7 @@ const Tabs = () => {
             height={344}
             className="w-full md:w-auto h-auto object-cover border border-stone-500 rounded"
           />
-         <div className="w-full md:w-1/2 mt-4 md:mt-0 text-left"> {/* Ensures left alignment on larger screens */}
+         <div className="w-full md:w-1/2 mt-4 md:mt-0 text-left xl: ml-3"> {/* Ensures left alignment on larger screens */}
             <div className="mb-6">
               <h3 className="text-[#9F7B49] text-xl font-bold mb-2">Head office</h3>
               <p className="text-black text-sm leading-relaxed">

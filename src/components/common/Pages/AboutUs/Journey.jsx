@@ -50,11 +50,7 @@ const Journey = () => {
             height: 90vh !important;
           }
         }
-        @media (max-width: 1285px) {
-          div {
-            height: 65vh !important;
-          }
-        }
+       
         @media (max-width: 500px) {
           div {
             height: 55vh !important;
@@ -73,7 +69,7 @@ const Journey = () => {
   }}
 > */}
 
-      <div className="sidebar p-0 absolute py-4 xl:px-2 grid gap-1 xl:w-[350px] xl:h-[550px] sm:w-[160px] md:w-[120px]">
+      <div className="sidebar p-0 absolute py-4 xl:px-2 grid xl:w-[350px] xl:h-[550px] sm:w-[160px] md:w-[120px]">
         {JOURNEY_DATA.map((itm, ind) => {
           return (
             <button

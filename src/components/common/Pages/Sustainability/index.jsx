@@ -76,6 +76,7 @@ export default function Sustainability() {
 
   const handleNumberClick = (index) => {
     setCurrentIndex(index);
+    emblaApi.scrollTo(index); // Add this line to scroll the carousel
   };
 
   return (
@@ -85,7 +86,7 @@ export default function Sustainability() {
         <p className="text-[20px] text-center md:text-[40px] font-bold text-[#9F7B49]">
           CSR @Apis
         </p>
-        <p className="w-[96%] md:w-[75%] text-sm md:text-xl text-center">
+        <p className="w-[96%] md:w-[75%] text-sm md:text-xl text-center font-jost">
           At Apis India, our Corporate Social Responsibility (CSR) initiatives
           reflect our commitment to making a positive impact on society and the
           environment. We actively support various community development
@@ -110,7 +111,7 @@ export default function Sustainability() {
                   <iframe
                     width="100%"
                     height="240"
-                    className="h-[240px] md:h-[300px]  rounded-2xl w-full bg-opacity-40 border-4"
+                    className="h-[240px] md:h-[300px]  rounded-2xl w-full bg-opacity-40 "
                     src={itm.video}
                     title={itm.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -146,9 +147,10 @@ export default function Sustainability() {
           {SUSTAINABILITY_DATA.map((_, index) => (
             <p
               key={index}
-              // onClick={() => handleNumberClick(index)}
-              
-              className={`text-base md:text-3xl  border-black px-2 md:px-6 ${index === currentIndex ? "font-bold" : "font-normal text-gray-600"} ${index === 0 ? "" : "border-l"}`}
+              onClick={() => handleNumberClick(index)} // Add this onClick handler
+              className={`text-base md:text-3xl border-black px-2 md:px-6 cursor-pointer ${
+                index === currentIndex ? "font-bold" : "font-normal text-gray-600"
+              } ${index === 0 ? "" : "border-l"}`}
               aria-label={`Go to slide ${index + 1}`}
             >
               {index + 1}

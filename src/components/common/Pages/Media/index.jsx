@@ -75,10 +75,10 @@ export default function Media() {
       {/* Banner Section */}
       <ImageBanner banner={Banner} />
       <div className="flex flex-col items-center justify-center">
-        <p className="font-bold text-[20px] md:text-[40px] text-center text-[#9F7B49]">
+        <p className="font-bold text-[20px] md:text-[40px] text-center text-[#9F7B49] font-literata">
           Apis in the news
         </p>
-        <p className="text-sm w-[95%]  md:text-xl md:w-[70%] md:leading-8 mt-3  md:mt-6 text-center">
+        <p className="text-sm w-[95%]  md:text-xl md:w-[70%] md:leading-8 mt-3  md:mt-6 text-center font-jost">
           Apis India has consistently shined in the news, with press releases
           highlighting our commitment to quality, innovation, and
           sustainability. Our brand’s achievements and initiatives capture media
@@ -108,9 +108,9 @@ export default function Media() {
                     className="h-[260px] md:h-[370px] 2xl:h-[409px]"
                   />
                 </div>
-                <div className="w-[140px] md:w-[180px]">
+                {/* <div className="w-[140px] md:w-[180px]">
                   <Image src={itm.name} alt="News Name" />
-                </div>
+                </div> */}
                 <div className="text-xs md:text-base pt-1">{itm.desc}</div>
                 <span>{itm.date}</span>
                 {/*  */}
@@ -125,13 +125,13 @@ export default function Media() {
 
       </div>
       <div className="w-full bg-[#FFF9F0] flex flex-col items-center justify-center py-4 md:py-14">
-        <p className="font-medium text-center text-[#585858] text-sm  md:text-xl">
+        <p className="font-medium text-center text-[#585858] text-sm  md:text-xl font-jost">
           DISCOVER OUR LATEST EVENTS
         </p>
-        <p className="font-bold text-[20px] text-center text-[#9F7B49] md:text-[40px]">
+        <p className="font-bold text-[20px] text-center text-[#9F7B49] md:text-[40px] font-literata">
           Media Gallery
         </p>
-        <p className="font-medium mt-2 text-center text-xs md:text-lg text-[#666666]">
+        <p className="font-medium mt-2 text-center text-xs md:text-lg text-[#666666] font-jost">
           Intentions may lay the foundation, but it's our actions that build the
           world we live in.
         </p>
@@ -148,7 +148,7 @@ export default function Media() {
                         className="w-[250px] md:w-[400px] h-[250px] md:h-[345px]"
                       />
                     </div>
-                    <div className="py-3 text-sm md:text-xl text-[#3A3A3A] border border-[#9F7B49] font-normal text-center truncate">
+                    <div className="py-3 text-sm md:text-xl text-[#3A3A3A] border border-[#9F7B49] font-normal bg-[#fff] text-center truncate font-jost">
                       {itm?.title}
                     </div>
                   </div>

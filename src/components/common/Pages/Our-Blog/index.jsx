@@ -7,6 +7,9 @@ import Blog1 from '@/assets/images/our-blog/Blog01.jpg';
 import Blog2 from '@/assets/images/our-blog/blog02.jpg';
 import Blog3 from '@/assets/images/our-blog/blog03.jpg';
 import Blog4 from '@/assets/images/our-blog/blog04.jpg';
+import Blog5 from '@/assets/images/our-blog/blog05.jpg';
+import Blog6 from '@/assets/images/our-blog/blog06.jpg';
+import Blog7 from '@/assets/images/our-blog/blog07.jpg';
 import { useRouter } from 'next/navigation';
 import { NextButton, PrevButton } from '../../Carousel/EmblaCarouselArrowButtons';
 import Link from 'next/link';
@@ -44,7 +47,7 @@ const BlogData = [
         id: 5,
         title: "Embrace the Spirit of Ramadan with Apis",
         desc: "Preparations amongst the Islamic community have begun as the month of Ramadan approaches. The holiest month in the Islamic calendar, Ramadan is considered as a time of worship, self-reflection and devotion to the Almighty. Ramadan is a time for spiritual reflection, self-improvement and celebration. As the holy month approaches, it’s a great opportunity to focus […]",
-        img: Blog1,
+        img: Blog5,
         date: "April 12, 2023"
     },
     
@@ -52,14 +55,14 @@ const BlogData = [
         id: 6,
         title: "The Sweetest Superfood: Exploring the Health Benefits of Dates",
         desc: "Dates are the fruit of the date palm trees. Grown in many tropical regions around the world, dates are majorly consumed as a staple in the Islamic community.  As the holy month of Ramadan approaches, Muslims around the world have started to prepare for a time of spiritual reflection and prayer. During this month, they […]",
-        img: Blog3,
+        img: Blog6,
         date: "23-07-2022"
     },
     {
         id: 7,
         title: "Apis campaign for Ramadan speaks of personal well-being",
         desc: "Apis India has launched a campaign during the holy month of Ramadan. The campaign, titled “Ibaadat Ke Iss Mahine Rakhein Sehat Ka Saath”, aims to promote individual well-being by blending the spiritual and personal aspects of Ramadan through Apis India’s range of dates clubbed with other relevant products consumed in the month of Ramadan. Beyond […]",
-        img: Blog4,
+        img: Blog7,
         date: "23-07-2022"
     },
     // Add more blog entries as needed...
@@ -86,11 +89,11 @@ const BlogCard = ({ blog, onClick }) => (
             />
         </div>
         <div className="p-0">
-            <p className="font-semibold text-xl mb-2 p-0">
+            <p className="font-semibold text-xl mb-2 p-0 font-jost">
                 {blog.title}
             </p>
             <span className="text-gray-500 text-sm">{blog.date}</span>
-            <p className="text-gray-700 mt-4 text-justify line-clamp-5 p-0">
+            <p className="text-gray-700 mt-4 text-justify line-clamp-5 p-0 font-jost">
                 {blog.desc}
             </p>
         </div>
@@ -125,7 +128,7 @@ const OurBlogPage = () => {
                 <p className="font-bold text-[20px] md:text-[40px] text-center text-[#9F7B49]">
                     The Blog
                 </p>
-                <p className="text-sm w-[95%] md:text-xl md:w-[70%] md:leading-8 mt-3 md:mt-6 text-center">
+                <p className="text-sm w-[95%] md:text-xl md:w-[70%] md:leading-8 mt-3 md:mt-6 text-center font-jost">
                     Welcome to the Apis India blog, your go-to resource for all things related to health, nutrition, and culinary inspiration. Here, we share expert tips, delicious recipes, and the latest trends to help you make the most of our premium products. Our blog is designed to inform and inspire. Stay tuned for regular updates that will keep you engaged and empowered on your journey to better health and wellness with Apis India.
                 </p>
             </div>

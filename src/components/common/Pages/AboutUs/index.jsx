@@ -124,11 +124,9 @@ export default function OurBrand() {
             newCounts[item.key] = item.count;
           }
         });
-
         if (allReached) {
           clearInterval(interval);
         }
-
         return newCounts;
       });
     }, 50);
@@ -231,7 +229,7 @@ export default function OurBrand() {
                     <p className="text-[14px] lg:text-[20px] xl:text-[34px] text-center spaced-words font-bold ms-4 text-[#9F7B49]">
                       {counts[item.key]}+
                     </p>
-                    <p className="text-[#131313] text-[12px] lg:text-base xl:text-[24px] font-semibold">
+                    <p className="text-[#131313] text-[12px] lg:text-base xl:text-[24px] font-semibold font-jost">
                       {item.title}
                     </p>
                   </div>
