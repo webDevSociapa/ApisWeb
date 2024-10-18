@@ -837,7 +837,7 @@ input[type="password"]:-webkit-autofill:active {
 
 
 
-@media (min-width: 850px) and (max-width: 1100px) {
+@media (min-width: 850px) and (max-width: 1200px) {
   .media-image {
     width: 100% !important;
     height: auto !important;

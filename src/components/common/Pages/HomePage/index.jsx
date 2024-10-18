@@ -301,10 +301,10 @@ export default function HomePage() {
                 <div className="embla__slide__number !h-[240px] w-full">
                   <Image
                     src={itm?.img}
-                    width={228}
-                    height={240} // Changed height to 240 to match the fixed height
+                    width={240}
+                    height={228}
                     alt="header-logo"
-                    className="h-[240px] w-auto max-w-max bg-opacity-40 object-cover" // Added object-cover to maintain aspect ratio
+                    className="h-[240px] w-auto max-w-max bg-opacity-40"
                   />
                 </div>
                 <div className="border-2 border-[hsl(35,37%,45%)] mt-4 lg:mt-10 flex flex-col gap-1 lg:gap-3 p-1.5 w-full sm:w-[50%] h-[60%] md:w-[90%] h-[45%]  xl:w-[90%] h-[30%] mx-auto overflow-none md:py-2">
