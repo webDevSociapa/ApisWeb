@@ -903,3 +903,12 @@ input[type="password"]:-webkit-autofill:active {
   }
 }
 
+/* Updated CSS for centering the background image */
+.bg-cricle-home {
+  background-image: url('../assets/images/Media/ringCircle.png');
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center; /* Center the background image */
+}
+ 

@@ -32,7 +32,7 @@ const NavBar = ({ className, linkClass }) => {
     setHoveredItem(null);
   };
 
-  const handleNavigateToOurBrand = () => {
+  const handleNavigateToOurBrand = () => {    
     const ourBrandPath = `/${locale}/our-brand`;
     router.push(ourBrandPath);
   };

@@ -11,6 +11,13 @@ import AsianExpo from "@/assets/images/Media/AsianExpo.png";
 import WomenDay from "@/assets/images/Media/WomenDay.png";
 import { NEWS_DATA } from '@/lib/constants';
 import HoneyMugMedia from '@/assets/images/Media/honey_mug.png';
+import styles from './media.module.css'; // Importing the CSS module
+import Campaign from '@/assets/images/Media/campaign.png'
+import handhoney from '@/assets/images/Media/handhoney.png'
+import jam from '@/assets/images/Media/jam.png'
+import honey from '@/assets/images/Media/honey.png'
+import RingCircle from '@/assets/images/Media/ringCircle.png'
+
 // import News1 from "@/assets/images/Media/News1.png";
 // import News2 from "@/assets/images/Media/News2.png";
 // import News3 from "@/assets/images/Media/News3.png";
@@ -193,9 +200,59 @@ export default function Media() {
           </div>
         </div>
       </div>
-    
 
 
+      <div className="flex flex-wrap justify-center mt-[120px] gap-10 w-full bg-[#FFF9F0]">
+        <div className='grid grid-cols-2 divide-x bg-cricle-home' style={{ gap: "200px" }}>
+          <div className="flex flex-col items-center gap-10 grid grid-cols-1 divide-y">
+            <div className="w-[470px] h-[282px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#FFF9F0] to-[#9198e5] shadow-[19px_24px_5px_#DBB79E] relative">
+              <Image src={honey} alt="Honey" className="bg-transparent p-[9px] mt-0" />
+            </div>
+            <div className="w-[470px] h-[282px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#FFF9F0] to-[#9198e5] shadow-[19px_24px_5px_#DBB79E] relative mt-4">
+              <Image src={jam} alt="Jam" className="bg-transparent p-[9px] mt-0" />
+            </div>
+            <div className="">
+              {/* <div className="relative flex w-full bg-[#FFF9F0] mt-10 border-2 h-[800px]"> */}
+
+  {/* </div> */}
+            </div>
+          </div>
+          <div className="text-center mt-8">
+            <h4 className="uppercase font-semibold text-[34px] text-jost">Our Campaigns</h4>
+            <p className="w-[502px] text-[17px] leading-[31.79px] mt-4 font-jost">
+              Dive into Apis India’s successful campaigns that reflect our dedication to creativity and impact.
+              Each campaign is crafted to resonate with our audience and showcase our brand’s strengths.
+            </p>
+            <div className='w-[470px] h-[500px] p-[31px]'>
+              <div className='absolute p-2'>
+                <Image
+                  src={Ring1}
+                  className="rotate-animation"
+                />
+              </div>
+              <div className="m-12"> {/* Added margin-top to create space below Ring1 */}
+                <Image
+                  src={handhoney}
+                  className="w-[250px]"
+                />
+              </div>
+            </div>
+            <div className="w-[470px] h-[282px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#FFF9F0] to-[#BABDBD33] shadow-[19px_24px_5px_#DBB79E] relative mb-4 mt-6"> {/* Added mt-6 for margin-top */}
+              <Image src={Campaign} alt="Campaign" className="bg-transparent p-[9px] mt-0" />
+            </div>
+          </div>
+        </div>
+        
+        
+
+
+        {/* <div className="relative mx-[160px] border-[7px] border-dotted border-[#9F7B49] rounded-full mb-[67px] mt-8">
+    <Image src={handhoney} alt="handhoney" className="w-[39%] mt-[35px]" />
+    <div className="absolute top-[-20px] left-[132px] right-[146px] bottom-[-17px] rounded-full border-[7px] border-dotted border-[#9F7B49]"></div>
+  </div> */}
+
+
+      </div>
       {/* Modal Section */}
     </>
   );
@@ -207,65 +264,3 @@ Media.propTypes = {
 
 
 
-{/* <div className="relative flex w-full bg-[#FFF9F0] mt-10 border-2 h-[800px]">
-<div>
-  <Image
-    src={Ring1}
-    className="hidden md:inline absolute left-0 top-0 h-[300px] w-[298px] rotate-animation border-4"
-  /></div>
-<div className="w-1/3"></div>
-<div class="relative w-2/3 flex items-center justify-center">
-  <div class="absolute inset-0 border-4 border-[#9F7B49] border-dashed rounded-full rotate-6 h-[700px] scale-x-125"></div>
-
-  <div class="relative w-2/3 text-center text-sm md:text-xl md:leading-8">
-    <p class="font-bold text-[20px] md:text-[40px] text-[#9F7B49]">
-      Our Campaigns
-    </p>
-    <p class="mt-6">
-      Dive into Apis India’s successful campaigns that reflect our
-      dedication to creativity and impact. Each campaign is crafted to
-      resonate with our audience and showcase our brand’s strengths.
-    </p>
-    <div className='absolute border-4 mx-80'>
-      <div className = "border-2 item-center px-8">
-        <Image
-          src={Ring1}
-          className="hidden md:inline absolute left-0 top-0 h-[320px] border-4 item-center"
-        />
-      </div>
-
-      <div className='mt-10 px-[33px]'>
-        <Image
-          src={HoneyMugMedia}
-          width={200}
-          className='flex item-center'
-        />
-         <div className="w-full lg:w-1/2 mt-20 lg:mt-0 px-0 md:px-8 flex justify-center items-center">
-    <div
-      className={`relative 2xl:rounded-tl-[157px] 2xl:rounded-tr-[71px] 2xl:rounded-br-[122px] 2xl:rounded-bl-0
-    rounded-tl-[60px] rounded-tr-[30px] rounded-br-[60px] rounded-bl-0 h-[175px] md:h-[250px] w-[280px] md:w-[380px]`}
-    >
-      <div
-        className="bg-custom-radial-gradient  absolute bottom-4 md:bottom-8 left-4   md:left-8 backdrop-blur-lg 2xl:rounded-tl-[157px] 2xl:rounded-tr-[71px] 2xl:rounded-br-[122px] 2xl:rounded-bl-0
-    rounded-tl-[60px] rounded-tr-[30px] rounded-br-[60px] rounded-bl-0 h-[175px] md:h-[250px] w-[280px] md:w-[380px]"
-      ></div>
-      <Image
-        src={Ring2}
-        height={200}
-        alt="header-logo"
-        className="h-[135px] absolute hidden lg:inline -top-7 -right-7 z-0 ms w-[185px]"
-      />
-      <p className="z-20 absolute w-full text-center text-lg md:text-[24px] left-6 font-bold">
-        {selectedContent?.name}
-      </p>
-      <p className="z-20 absolute font-jost w-[90%] text-center text-xs md:text-base top-12 left-6 md:left-12">
-        {selectedContent?.desc}
-      </p>
-      <div className="w-1/2 relative px-14 flex flex-col gap-8 items-center mt-12"></div>
-    </div>
-  </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div> */}

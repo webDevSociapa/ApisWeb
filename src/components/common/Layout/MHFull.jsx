@@ -23,7 +23,7 @@ const MHFull = () => {
       </div>
 
       {/* NavBar - centered */}
-      <div className="flex-grow flex justify-center md: justify-center md:order-none mb-4 md:mb-0 customNavbarResponsive">
+      <div className="flex-grow flex justify-center md: justify-center md:order-none mb-4 customNavbarResponsive">
         <NavBar className="flex items-center" />
       </div>
 
