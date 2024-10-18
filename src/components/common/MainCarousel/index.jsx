@@ -29,10 +29,10 @@ export default class Carasol extends Component {
         <div className="carousel-container">
           <Carousel
             ref={(el) => (this.carouselRef = el)}
-            autoPlay={true}
+            autoPlay={true} // Ensures the carousel plays automatically
             showThumbs={false}
-            infiniteLoop={true}
-            interval={4000}
+            infiniteLoop={true} // Allows the carousel to loop infinitely
+            interval={4000} // Sets the interval to 4 seconds
             onChange={this.updateCurrentSlide}
             showArrows={false}
             showStatus={false}
@@ -43,8 +43,8 @@ export default class Carasol extends Component {
                 autoPlay={true}
                 muted
                 className={"video-img1"}
-                loop
-                src={'https://luxor-pen-prod.s3.ap-south-1.amazonaws.com/Main+Banner+Video+2.mp4'}
+                loop // Ensures the video loops continuously
+                src={'https://luxor-pen-prod.s3.ap-south-1.amazonaws.com/Main+Banner+Video.mp4'}
               />
             </div>
             <div className="carousel_banner home-shadow" style={this.state.imageStyle}>
@@ -52,7 +52,7 @@ export default class Carasol extends Component {
                 autoPlay={true}
                 muted
                 className={"video-img1"}
-                loop
+                loop // Ensures the video loops continuously
                 src={'https://api.luxorpen.com/v1/HomePageBanner1.mp4'}
               />
             </div>

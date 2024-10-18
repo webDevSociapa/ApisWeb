@@ -58,7 +58,7 @@ const Tabs = () => {
         ))} */}
       </div>
       <div>
-        <h1 className="text-[#545454] text-3xl font-bold mb-10 pt-0 capitalize" style={{ color: 'rgb(159, 123, 73)', marginBottom:"75px" }}>
+        <h1 className="text-[#545454] text-3xl font-bold mb-10 -pt-10 capitalize" style={{ color: 'rgb(159, 123, 73)', marginBottom:"75px" }}>
           {tabContent[activeTab].title}
         </h1>
         <div className="flex flex-col md:flex-row justify-center items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">

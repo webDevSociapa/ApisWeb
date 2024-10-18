@@ -302,7 +302,7 @@ export default function HomePage() {
                   <Image
                     src={itm?.img}
                     width={240}
-                    height={240}
+                    height={228}
                     alt="header-logo"
                     className="h-[240px] w-auto max-w-max bg-opacity-40"
                   />
@@ -324,7 +324,7 @@ export default function HomePage() {
           width={266}
           height={234}
           alt="header-logo"
-          className="absolute right-0 -top-0 h-[50px] w-[50px] md:h-[234px] md:w-[266px] object-contain object-center"
+          className="absolute right-0 -top-0 h-[50px] w-[50px] md:h-[210px] md:w-[266px] object-contain object-center"
         />
         <Image
           src={TrustLower}
@@ -339,11 +339,12 @@ export default function HomePage() {
       <div className="px-0 md:px-2 w-full mb-12 mt-6 md:mt-0">
         <div className="home-story-bg py-8 flex flex-col items-center">
           <p className="uppercase text-sm text-center text-[22px] md:text-lg font-medium text-[#585858] font-medium" style={{ fontFamily: "jost" }}>
-            day-to-day choices that weave the most profound stories
-          </p>
-          <p className="uppercase text-sm md:text-lg font-medium text-[#585858]">
+          Find Your Favorite Choices Of A Hearty Meal
+          Products That Make A Difference
+                    </p>
+          {/* <p className="uppercase text-sm md:text-lg font-medium text-[#585858] font-jost">
             of character & growth.
-          </p>
+          </p> */}
           <p className="font-bold capitalize text-center text-[20px] md:text-[40px] text-[#9F7B49]">
             Products that make a difference
           </p>
@@ -364,7 +365,7 @@ export default function HomePage() {
                     />
                   </div>
                   <div className="lg:w-1/2 flex items-center justify-center flex-col py-10 lg:pb-0 overflow-hidden">
-                    <div>
+                    <div className=" md: -ml-[50px] 2xl: -ml-[80px]">
                       <p className="text-white font-bold text-[30px] mb-2">
                         {products[currentProduct].name}
                       </p>

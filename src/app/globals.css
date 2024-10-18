@@ -837,7 +837,7 @@ input[type="password"]:-webkit-autofill:active {
 
 
 
-@media (min-width: 850px) and (max-width: 1100px) {
+@media (min-width: 850px) and (max-width: 1200px) {
   .media-image {
     width: 100% !important;
     height: auto !important;
@@ -903,3 +903,12 @@ input[type="password"]:-webkit-autofill:active {
   }
 }
 
+/* Updated CSS for centering the background image */
+.bg-cricle-home {
+  background-image: url('../assets/images/Media/ringCircle.png');
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center; /* Center the background image */
+}
+ 
