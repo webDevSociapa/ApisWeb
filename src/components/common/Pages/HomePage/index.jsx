@@ -47,13 +47,16 @@ import { useRouter } from 'next/navigation';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useState, useEffect } from 'react';
-import OrganicHoney from '@/assets/images/home-banner-section/honey_organic.png'
-import ChocolateSpread from '@/assets/images/home-banner-section/chocolate _spread.png'
+import ClassicDates from '@/assets/images/home-banner-section/classicDates01.png'
+import ChocolateSpread from '@/assets/images/home-banner-section/chocoFlakes01.png'
 import Vermicelli from '@/assets/images/home-banner-section/vermicillie.png'
-import AlmondHoney from '@/assets/images/home-banner-section/almondHoney.png'
-import PeanutButter from '@/assets/images/home-banner-section/peanutButter.png'
-import SoyaChunks from '@/assets/images/home-banner-section/soyaChunks.png'
-import Muesli from '@/assets/images/home-banner-section/muesli.png'
+import AlmondHoney from '@/assets/images/home-banner-section/cornFlakes01.png'
+import Saffron from '@/assets/images/home-banner-section/saffron01.png'
+import SoyaChunks from '@/assets/images/home-banner-section/soyaChunks01.png'
+import Muesli from '@/assets/images/home-banner-section/muesli01.png'
+import OrganicHoneyGreenCard from '@/assets/images/home-banner-section/organicHoneyGreenCard1.png'
+import HoneyStick from '@/assets/images/home-banner-section/stickHoney.png'
+
 
 
 export default function HomePage() {
@@ -63,46 +66,43 @@ export default function HomePage() {
   const SLIDE_COUNT = 6;
   const SLIDES = [
     {
-      img: OrganicHoney,
-      content: "Nature`s golden nectar, pure and organic",
-      title: "Organic Honey",
+      img: Muesli,
+      content: "Muesli Crafted with wholesome ingredients for a nourishing start to your day",
+      title: "Muesli"
     },
+
     {
       img:  ChocolateSpread,
-      content: "Spread the joy with rich, velvety chocolate",
-      title: "Chocolate Spread",
+      content: "Apis Choco Flakes are crispy cereal flakes coated in rich chocolate for a delightful breakfast.",
+      title: "Choco Flakes",
     },
-    {
-      img: Vermicelli,
-      content: "Delightful strands of culinary tradition for meals",
-      title: "Vermicelli",
-    },
+  
     {
       img: AlmondHoney,
-      content: "Almond and honey is a nourishing blend used in skincare.",
-      title: "Almond and Honey"
+      content: "Apis Corn Flakes are a crunchy, nutritious breakfast cereal made from premium corn.",
+      title: "Corn Flakes"
     },
     {
-      img: PeanutButter,
-      content: "Creamy peanut butter is a smooth peanut spread.",
-      title: "Peanut Butter Creamy"
+      img: Saffron,
+      content: "Apis Saffron is a high-quality spice prized for its rich aroma, color, and health benefits.",
+      title: "Saffron"
     },
     {
       img: SoyaChunks,
       content: "Soya chunks are protein-rich, plant-based meat alternatives.",
       title: "Soya Chunk"
     },
+    {
+      img: ClassicDates,
+      content: "Apis Classic Dates are sweet, nutrient-rich fruits ideal for snacking and adding flavor to dishes.",
+      title: "Classic Dates"
+    },
     // {
     //   img: TrustSlide9,
     //   content: "Lemon honey green tea: refreshing, antioxidant-rich blend.",
     //   title:"Lemon Honey Green Tea"
     // },
-    {
-      img: Muesli,
-      content: "Muesli: a healthy, oat-based cereal.",
-      title: "Muesli"
-    }
-
+   
 
     // {
     //   img: TrustSlide1,
@@ -197,7 +197,7 @@ export default function HomePage() {
       name: 'Organic Honey',
       description: "Nature's golden nectar, pure and organic",
       image: HoneyImg,
-      productImage: TrustSlide1,
+      productImage: OrganicHoneyGreenCard,
       bgColor: 'home-green-bg',
       desc: "Organic honey is a delightful concoction that not only pleases the taste buds but also offers a plethora of health benefits. Unlike conventional honey, which may contain traces of pesticides and other chemicals, organic honey is produced without the use of synthetic pesticides or fertilizers. This ensures that the bees and their environment remain free from harmful substances."
     },
@@ -226,13 +226,13 @@ export default function HomePage() {
     }
   ]
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentProduct((prev) => (prev + 1) % products.length);
-    }, 3000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentProduct((prev) => (prev + 1) % products.length);
+  //   }, 3000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
 
 
@@ -301,6 +301,8 @@ export default function HomePage() {
             </h3>
           </div>
         </div>
+
+        <kink></kink>
         <div className="pb-1 md:pb-20 z-10 w-[80%] flex items-center justify-center">
           <EmblaCarousel options={OPTIONS}>
             {SLIDES.map((itm, index) => (
@@ -308,13 +310,13 @@ export default function HomePage() {
                 <div className="embla__slide__number !h-[240px] w-full">
                   <Image
                     src={itm?.img}
-                    width={250}
-                    height={440}
+                    width={350}
+                    // height={440}
                     alt="header-logo"
-                    className="h-[300px] w-auto max-w-max bg-opacity-40"
+                    className="h-[250px] w-auto max-w-max bg-opacity-40"
                   />
                 </div>
-                <div className="border-2 border-[hsl(35,37%,45%)] mt-4 lg:mt-10 flex flex-col gap-1 lg:gap-3 p-1.5 w-full sm:w-[50%] h-[60%] md:w-[90%] h-[45%]  xl:w-[90%] h-[30%] mx-auto overflow-none md:py-2">
+                <div className="border-[2px] border-[hsl(35,37%,45%)] mt-4 lg:mt-10 flex flex-col gap-1 lg:gap-3 p-1.5 w-full sm:w-[50%] h-[60%] md:w-[90%] h-[45%]  xl:w-[90%] h-[30%] mx-auto overflow-none md:py-2">
                   <p className="text-sm sm:text-base lg:text-xl font-bold text-[#373737] mb-2">
                     {itm?.title}
                   </p>
@@ -359,28 +361,28 @@ export default function HomePage() {
               <div className={`${products[currentProduct].bgColor} relative mt-5 lg:mt-8`}>
                 <div className="w-full h-full flex flex-col lg:flex-row">
                   <div className="lg:w-1/2 h-full">
-                    <div className="lg:w-1/2 lg:absolute -top-12 left-6 h-[500px] lg:h-[760px]"></div>
+                    <div className="lg:absolute -top-12 left-6 h-[500px] lg:h-[760px]"></div>
                     <Image
                       src={products[currentProduct].image}
                       height={720}
                       alt="product-image"
-                      className="h-[500px] w-full lg:h-[720px] lg:w-1/2 absolute top-0 lg:rounded-tl-[40px] lg:rounded-tr-[250px] lg:rounded-br-[40px] lg:rounded-bl-[250px] rounded-tl-[5px] rounded-tr-[100px] rounded-br-[5px] rounded-bl-[100px]"
+                      className="h-[500px] w-[45%] w-full lg:h-[650px] lg:w-[42%] absolute -top-4 lg:rounded-tl-[40px] lg:rounded-tr-[250px] lg:rounded-br-[40px] lg:rounded-bl-[250px] rounded-tl-[5px] rounded-tr-[100px] rounded-br-[5px] rounded-bl-[100px]"
                     />
                     <Image
                       src={ReactAngle}
-                      className="h-[500px] w-full lg:h-[720px] lg:w-1/2 absolute top-0 lg:rounded-tl-[40px] lg:rounded-tr-[250px] lg:rounded-br-[40px] lg:rounded-bl-[250px] rounded-tl-[5px] robin rounded-tr-[100px] rounded-br-[5px] rounded-bl-[100px]"
+                      className="h-[500px] w-full lg:h-[650px] lg:w-[42%] absolute -top-4 lg:rounded-tl-[40px] lg:rounded-tr-[250px] lg:rounded-br-[40px] lg:rounded-bl-[250px] rounded-tl-[5px] robin rounded-tr-[100px] rounded-br-[5px] rounded-bl-[100px]"
                     />
                   </div>
-                  <div className="lg:w-1/2 flex items-center justify-center flex-col py-10 lg:pb-0 overflow-hidden">
-                    <div className=" md: -ml-[50px] 2xl: -ml-[80px]">
+                  <div className="lg:w-[38%] flex items-center justify-center flex-col py-10 overflow-hidden">
+                    <div className="md: -ml-[50px] 2xl: -ml-[80px] text-center"> {/* Added text-center class */}
                       <p className="text-white font-bold text-[30px] mb-2">
                         {products[currentProduct].name}
                       </p>
-                      <p className="text-xs text-white text-center text-[19px]" style={{ fontFamily: "Jost" }}>
+                      <p className="text-white text-center text-[19px] font-normal font-jost leading-6">
                         {products[currentProduct].description}
                       </p>
                     </div>
-                    <div className="flex relative md:me-28">
+                    <div className="flex relative md:me-24 item-center justify-center"> {/* Added justify-center class */}
                       <Image
                         src={products[currentProduct].productImage}
                         height={330}
@@ -393,23 +395,21 @@ export default function HomePage() {
                           src={HoneyBee}
                           height={125}
                           alt="honey-bee"
-                          className="h-[125px] hidden md:inline absolute bottom-0 rotate-12 -right-10 xs:right-10"
+                          className="h-[125px] hidden md:inline absolute bottom-0 rotate-12 -right-20 xs:right-[24px]"
                         />
                       )}
                     </div>
-                    <div className="text-center text-xs text-white w-[65%] text-[20px] font-jost font-normal">
+                    <div className="text-center text-white xl:w-[80%] text-[17px] font-jost font-normal leading-6">
                     {products[currentProduct].desc}
-
-                      {/* Product description */}
                     </div>
                   </div>
                 </div>
                 {products[currentProduct].name === 'Organic Honey' && (
                   <Image
-                    src={HoneyDhar}
-                    height={1058}
+                    src={HoneyStick}
+                    // height={965}
                     alt="honey-dhar"
-                    className="hidden xl:inline h-[1058px] absolute -top-52 -right-4"
+                    className="hidden xl:inline h-[616] absolute top-[91px] -right-[28px]"
                   />
                 )}
               </div>
