@@ -47,6 +47,13 @@ import { useRouter } from 'next/navigation';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useState, useEffect } from 'react';
+import OrganicHoney from '@/assets/images/home-banner-section/honey_organic.png'
+import ChocolateSpread from '@/assets/images/home-banner-section/chocolate _spread.png'
+import Vermicelli from '@/assets/images/home-banner-section/vermicillie.png'
+import AlmondHoney from '@/assets/images/home-banner-section/almondHoney.png'
+import PeanutButter from '@/assets/images/home-banner-section/peanutButter.png'
+import SoyaChunks from '@/assets/images/home-banner-section/soyaChunks.png'
+import Muesli from '@/assets/images/home-banner-section/muesli.png'
 
 
 export default function HomePage() {
@@ -56,32 +63,32 @@ export default function HomePage() {
   const SLIDE_COUNT = 6;
   const SLIDES = [
     {
-      img: TrustSlide1,
+      img: OrganicHoney,
       content: "Nature`s golden nectar, pure and organic",
       title: "Organic Honey",
     },
     {
-      img: TrustSlide2,
+      img:  ChocolateSpread,
       content: "Spread the joy with rich, velvety chocolate",
       title: "Chocolate Spread",
     },
     {
-      img: TrustSlide3,
+      img: Vermicelli,
       content: "Delightful strands of culinary tradition for meals",
       title: "Vermicelli",
     },
     {
-      img: TrustSlide5,
+      img: AlmondHoney,
       content: "Almond and honey is a nourishing blend used in skincare.",
       title: "Almond and Honey"
     },
     {
-      img: TrustSlide7,
+      img: PeanutButter,
       content: "Creamy peanut butter is a smooth peanut spread.",
       title: "Peanut Butter Creamy"
     },
     {
-      img: TrustSlide6,
+      img: SoyaChunks,
       content: "Soya chunks are protein-rich, plant-based meat alternatives.",
       title: "Soya Chunk"
     },
@@ -91,7 +98,7 @@ export default function HomePage() {
     //   title:"Lemon Honey Green Tea"
     // },
     {
-      img: TrustSlide8,
+      img: Muesli,
       content: "Muesli: a healthy, oat-based cereal.",
       title: "Muesli"
     }
@@ -301,10 +308,10 @@ export default function HomePage() {
                 <div className="embla__slide__number !h-[240px] w-full">
                   <Image
                     src={itm?.img}
-                    width={240}
-                    height={228}
+                    width={250}
+                    height={440}
                     alt="header-logo"
-                    className="h-[240px] w-auto max-w-max bg-opacity-40"
+                    className="h-[300px] w-auto max-w-max bg-opacity-40"
                   />
                 </div>
                 <div className="border-2 border-[hsl(35,37%,45%)] mt-4 lg:mt-10 flex flex-col gap-1 lg:gap-3 p-1.5 w-full sm:w-[50%] h-[60%] md:w-[90%] h-[45%]  xl:w-[90%] h-[30%] mx-auto overflow-none md:py-2">
@@ -433,7 +440,7 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="border border-[#85673D] embla__slide__number md:w-[460px] h-auto md:h-[590px] p-2 pb-0 flex flex-col !rounded-none bg-[#fff] apismedis">
+                  <div className="border border-[#85673D] embla__slide__number md:w-[460px] h-auto md:h-[590px] p-2 pb-0 flex flex-col !rounded-none bg-[#fff] apismedis" style={{ maxWidth: '90%', margin: '0 auto' }}>
                     <div className="relative w-full h-[200px] sm:h-[280px] md:h-[443px] overflow-hidden">
                       <Image
                         src={itm?.img}
