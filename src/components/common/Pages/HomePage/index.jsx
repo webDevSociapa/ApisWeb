@@ -63,6 +63,7 @@ export default function HomePage() {
   const router = useRouter();
 
   const OPTIONS = { slidesToScroll: 1, align: 'start' }
+  const OPTIONS1 = { loop: true }
   const SLIDE_COUNT = 6;
   const SLIDES = [
     {
@@ -399,7 +400,7 @@ export default function HomePage() {
                         />
                       )}
                     </div>
-                    <div className="text-center text-white xl:w-[80%] text-[17px] font-jost font-normal leading-6">
+                    <div className="text-center text-white xl:w-[75%] text-[17px] font-jost font-normal leading-6">
                     {products[currentProduct].desc}
                     </div>
                   </div>
@@ -409,7 +410,7 @@ export default function HomePage() {
                     src={HoneyStick}
                     // height={965}
                     alt="honey-dhar"
-                    className="hidden xl:inline h-[616] absolute top-[91px] -right-[28px]"
+                    className="hidden xl:inline h-[550] absolute top-[91px] -right-[10px]"
                   />
                 )}
               </div>
@@ -581,7 +582,7 @@ export default function HomePage() {
           </div>
           <div className="w-full flex items-center justify-center flex-col gap-4 md:gap-12 m">
             <div className="mt-2 md:mt-20 bg-white w-full h-[23px] md:h-[65px] flex items-center justify-between px-3 md:pt-2 pt-1 avaibility">
-              <EmblaCarousel options={OPTIONS} autoScroll>
+              <EmblaCarousel options={OPTIONS1} autoScroll>
                 {AVAILABILITY_SLIDE.map((img) => {
                   return (
                     <div className="embla__slide w-[55px] md:w-auto">
@@ -640,9 +641,9 @@ export default function HomePage() {
         <div className="w-full tvcSectionResponsive">
           <div className="md:tvc-bg relative !w-full">
             <div className="flex flex-col gap-0 md:gap-0 sm: gap-0">
-              <p className="font-medium text-center text-[#585858] text-sm  md:text-xl uppercase text-medium font-jost text-medium">
+              {/* <p className="font-medium text-center text-[#585858] text-sm  md:text-xl uppercase text-medium font-jost text-medium">
                 Our Tele-vision Commercial's
-              </p>
+              </p> */}
               <p className="text-center text-[#9F7B49] text-[20px] md:text-[40px] font-literata font-bold">
                 TVC
               </p>
@@ -659,7 +660,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row items-center w-full tvc-bg sm:justify-center gap-10 pt-5 md:-mt-[150px] w-full xl:-mt-40 sm:mt-0 tvcyoutubeVideo">
               <iframe
                 className="rounded md:h-[360px] h-auto md:w-[580px] max-w-[500px] min-h-[200px] w-auto"
-                src="https://www.youtube.com/embed/JUVgptUaFU4?si=ILKh0XegYCLhwId-"
+                src="https://www.youtube.com/embed/fFesUk0sBII?si=q-QGdxRPqVK8W82S"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -668,7 +669,7 @@ export default function HomePage() {
               ></iframe>
               <iframe
                 className="rounded hidden lg:inline md:h-[360px] h-auto md:w-[580px] max-w-[500px] min-h-[200px]"
-                src="https://www.youtube.com/embed/8HEUabT5LJs?si=SOVN0tBFUyLRzEbp"
+                src="https://www.youtube.com/embed/6PqRMIjAEUw?si=q5neKZV8zh5OyZOx"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

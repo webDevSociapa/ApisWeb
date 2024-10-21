@@ -154,7 +154,7 @@ const MHMOBILE = () => {
           "h-screen p-4 -top-[56px] sm:-top-[64px] left-0 absolute bg-[#FFFBF6] w-[200px] border"
         )}
       >
-        <div>
+        {/* <div>
           <Link href={"/"} className="mb-0.5 flex items-center justify-center">
             <Image
               src={Logo}
@@ -164,7 +164,7 @@ const MHMOBILE = () => {
               className="object-contain w-[120px] h-[55px] object-center"
             />
           </Link>
-        </div>
+        </div> */}
         <nav className={cn("mt-6 flex flex-col gap-3")}>
           {PATH_DATA.map((path) => {
             const tabUrlWithLocale = `/${locale}${path.url}`;
