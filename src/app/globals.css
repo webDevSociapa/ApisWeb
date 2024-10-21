@@ -238,7 +238,7 @@ input[type="password"]:-webkit-autofill:active {
 
 .home-story-bg {
   background-image: url("../assets/images/home-banner-section/home-story-bg.png");
-  height: 942px;
+  height: 842px;
   background-size:cover;
   /* height: auto; */
   width: 100%;
@@ -914,3 +914,80 @@ input[type="password"]:-webkit-autofill:active {
   background-position: center; /* Center the background image */
 }
  
+.campaignmedia{
+  background-image: url('../assets/images/Media/campaignBg.png') !important;
+  background-size: 100% 100%;
+  height: 1262px;
+}
+
+.videoHoney{
+  border: 4px solid;
+  height: 600px;
+  border-top-right-radius: 40px;
+  width: 670px;
+}
+
+@media (max-width: 1500px) {
+  .aboutStrek {
+  top: 520px;
+  width: 250px;
+  }
+  .aboutslogo{
+    top: 620px;
+    width: 200px;
+    right: -1%;
+  }
+}
+@media(max-width: 891px){
+  .aboutStrek {
+    top: 220px !important;
+    width: 80px !important;
+    right: 2%;
+
+    }
+
+    .aboutslogo{
+      top: 280px !important;
+      width: 50px !important;
+      right: -2%;
+    }
+}
+@media(max-width: 1280px){
+  .aboutStrek {
+    top: 520px;
+    width: 150px !important;
+    }
+
+    .aboutslogo{
+      top: 580px;
+      width: 100px !important;
+      right: -1%;
+    }
+}
+@media(max-width: 1089px){
+  .aboutStrek {
+    top: 420px;
+    width: 150px !important;
+    }
+
+    .aboutslogo{
+      top: 480px;
+      width: 100px !important;
+      right: 1%;
+    }
+}
+
+@media(max-width: 500px){
+  .aboutStrek {
+    top: 200px;
+    width: 70px !important;
+    }
+
+    .aboutslogo{
+      top: 220px;
+      width: 40px !important;
+      right: 3%;
+    }
+}
+
+

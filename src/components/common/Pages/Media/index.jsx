@@ -1,5 +1,5 @@
 "use client"; // Ensure this component is a Client Component
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from "next/image";
 import PropTypes from "prop-types";
 import Ring1 from "@/assets/images/OurBrands/Ring-4.png";
@@ -17,7 +17,7 @@ import handhoney from '@/assets/images/Media/handhoney.png'
 import jam from '@/assets/images/Media/jam.png'
 import honey from '@/assets/images/Media/honey.png'
 import RingCircle from '@/assets/images/Media/ringCircle.png'
-
+import CampaingMedia from '@/assets/images/Media/campaignBg.png'
 // import News1 from "@/assets/images/Media/News1.png";
 // import News2 from "@/assets/images/Media/News2.png";
 // import News3 from "@/assets/images/Media/News3.png";
@@ -58,24 +58,20 @@ const LATEST_SLIDES = [
 
 export default function Media() {
   const OPTIONS = { loop: true };
-  // const [isModalOpen, setIsModalOpen] = useState(false); // Manage modal visibility state
-  // const [selectedItem, setSelectedItem] = useState(null); // Track the selected news item
+  const [isMobile, setIsMobile] = useState(false); // State to track if the screen is mobile
 
-  // Function to open modal and set the selected item
-  // const openModal = (item) => {
-  //   setSelectedItem(item);
-  //   setIsModalOpen(true);
-  // };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 500); // Update state based on window width
+    };
 
-  // // Function to close modal and reset selected item
-  // const closeModal = () => {
-  //   setIsModalOpen(false);
-  //   setSelectedItem(null);
-  // };
+    handleResize(); // Check initial size
+    window.addEventListener('resize', handleResize); // Add event listener
 
-  // const handleClick = (itm) => {
-  //   window.open(itm.link, itm.link); // Opens the link in a new tab
-  // };
+    return () => {
+      window.removeEventListener('resize', handleResize); // Cleanup on unmount
+    };
+  }, []);
 
   return (
     <>
@@ -129,7 +125,6 @@ export default function Media() {
             </div>
           ))}
         </EmblaCarousel>
-
       </div>
       <div className="w-full bg-[#FFF9F0] flex flex-col items-center justify-center py-4 md:py-14">
         <p className="font-medium text-center text-[#585858] text-sm  md:text-xl font-jost">
@@ -202,13 +197,15 @@ export default function Media() {
       </div>
 
 
-      <div className="flex flex-wrap justify-center mt-[120px] gap-10 w-full bg-[#FFF9F0]">
-        <div className='grid grid-cols-2 divide-x bg-cricle-home' style={{ gap: "200px" }}>
+      <div className="flex flex-wrap justify-center mt-[120px] gap-10 w-full campaignmedia ">
+        
+        
+      <div className='grid grid-cols-1 md:grid-cols-2 divide-x' >
           <div className="flex flex-col items-center gap-10 grid grid-cols-1 divide-y">
-            <div className="w-[470px] h-[282px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#FFF9F0] to-[#9198e5] shadow-[19px_24px_5px_#DBB79E] relative">
+            <div className="w-full md:w-[470px] h-[282px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#FFF9F0] to-[#9198e5] shadow-[19px_24px_5px_#DBB79E] relative">
               <Image src={honey} alt="Honey" className="bg-transparent p-[9px] mt-0" />
             </div>
-            <div className="w-[470px] h-[282px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#FFF9F0] to-[#9198e5] shadow-[19px_24px_5px_#DBB79E] relative mt-4">
+            <div className="w-full md:w-[470px] h-[282px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#FFF9F0] to-[#9198e5] shadow-[19px_24px_5px_#DBB79E] relative md:-mt-[220px] mt-[10px]">
               <Image src={jam} alt="Jam" className="bg-transparent p-[9px] mt-0" />
             </div>
             <div className="">
@@ -219,11 +216,11 @@ export default function Media() {
           </div>
           <div className="text-center mt-8">
             <h4 className="uppercase font-semibold text-[34px] text-jost">Our Campaigns</h4>
-            <p className="w-[502px] text-[17px] leading-[31.79px] mt-4 font-jost">
+            <p className="w-full md:w-[502px] text-[17px] leading-[31.79px] mt-4 font-jost">
               Dive into Apis India’s successful campaigns that reflect our dedication to creativity and impact.
               Each campaign is crafted to resonate with our audience and showcase our brand’s strengths.
             </p>
-            <div className='w-[470px] h-[500px] p-[31px]'>
+            <div className='w-full md:w-[470px] h-[500px] p-[31px]'>
               <div className='absolute p-2'>
                 <Image
                   src={Ring1}
@@ -237,11 +234,30 @@ export default function Media() {
                 />
               </div>
             </div>
-            <div className="w-[470px] h-[282px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#FFF9F0] to-[#BABDBD33] shadow-[19px_24px_5px_#DBB79E] relative mb-4 mt-6"> {/* Added mt-6 for margin-top */}
+            <div className="w-full md:w-[470px] h-[282px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#FFF9F0] to-[#9198e5] shadow-[19px_24px_5px_#DBB79E] relative md:mt-[60px] mt-[20px]">
               <Image src={Campaign} alt="Campaign" className="bg-transparent p-[9px] mt-0" />
             </div>
           </div>
         </div>
+        {isMobile && ( // Only render if isMobile is true
+        <div className="flex flex-col items-center">
+          <EmblaCarousel options={{ loop: true, autoplay: true, autoplayDelay: 3000 }}>
+            <div className="flex flex-col items-center gap-4">
+              {/* Render the images in the carousel */}
+              <div className="w-full h-[282px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#FFF9F0] to-[#9198e5] shadow-[19px_24px_5px_#DBB79E]">
+                <Image src={honey} alt="Honey" className="bg-transparent p-[9px] mt-0" />
+              </div>
+              <div className="w-full h-[282px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#FFF9F0] to-[#9198e5] shadow-[19px_24px_5px_#DBB79E]">
+                <Image src={jam} alt="Jam" className="bg-transparent p-[9px] mt-0" />
+              </div>
+              <div className="w-full h-[282px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#FFF9F0] to-[#9198e5] shadow-[19px_24px_5px_#DBB79E]">
+                <Image src={Campaign} alt="Campaign" className="bg-transparent p-[9px] mt-0" />
+              </div>
+            </div>
+          </EmblaCarousel>
+        </div>
+      )}
+
         
         
 
@@ -253,6 +269,9 @@ export default function Media() {
 
 
       </div>
+      {/* Carousel for Mobile View */}
+     
+
       {/* Modal Section */}
     </>
   );
@@ -261,6 +280,13 @@ export default function Media() {
 Media.propTypes = {
   initialData: PropTypes.object,
 };
+
+
+
+
+
+
+
 
 
 

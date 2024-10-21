@@ -149,7 +149,12 @@ export default function OurBrand() {
 
   return (
     <>
+    
       <ImageBanner banner={Banner} />
+<div className="static">
+    <Image src={AboutStreak} className="absolute top-[580px] right-4 aboutStrek" /> {/* Adjusted top value */}
+    <Image src={AboutusLogo} className="absolute top-[720px] right-4 aboutslogo"/>
+</div>
       <div className="bg-white text-gray-800">
         <div className="relative w-full">
           <div className="inset-0 flex items-center justify-center">
