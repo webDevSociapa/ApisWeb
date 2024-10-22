@@ -56,7 +56,6 @@ const page = () => {
   //   RECEIPE_TYPE_DATA[0]
   // );
   const [selectedReceipe, setSelectedReceipe] = useState(RECEIPE_DATA[0]);  
-  console.log("Apis Dates Gujiya Recipe", selectedReceipe);
 
   const [visibleRecipes, setVisibleRecipes] = useState(6); // Number of recipes to show initially
   const observerRef = useRef(); // Create a ref for the observer

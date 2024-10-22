@@ -4,7 +4,7 @@ import Image from "next/image";
 import PropTypes from "prop-types";
 import Banner from "@/assets/images/OurBrands/OurBrands.png";
 import ImageBanner from "../../Layout/Banner";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { PRODUCT_DATA } from "@/lib/constants";
 
@@ -40,6 +40,11 @@ export default function OurBrand({ onProductClick }) {
       onProductClick(event);
     }
   };
+
+
+  useEffect(()=>{
+    window.scroll(0,0)
+  },[])
 
   return (
     <div className="relative">

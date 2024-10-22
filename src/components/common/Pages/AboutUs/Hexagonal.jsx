@@ -95,7 +95,9 @@ export default function HexagonalPage() {
             </div>
             <div className={`${styles['hex-bottom4']} ${styles.mt2}`}>
               <div className={styles.imageWrapper}>
-                <Image src={Polygon8} alt="John Doe" className={styles.imgData} />
+                <Image src={Polygon13} alt="John Doe" className={styles.imgData} />
+                <span className={styles.tooltip}>Honey 
+                Production Plant</span>
               </div>
               
             </div>
@@ -188,18 +190,7 @@ export default function HexagonalPage() {
               </div> */}
             </div>
           </div>
-          <div className={`${styles.row} ${styles.row10}`}>
-            <div className={styles['hex-bottom9']}>
-              <div className={styles.imageWrapper}>
-                <Image src={Polygon13} alt="John Doe" className={styles.imgData} />
-                <span className={styles.tooltip}>Honey 
-                Production Plant</span>
-              </div>
-              {/* <div className={styles.middle}>
-                <div className={styles.text}>John Doe</div>
-              </div> */}
-            </div>
-          </div>
+          
         </div>
       </div>
     </>

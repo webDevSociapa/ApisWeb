@@ -50,12 +50,12 @@ import { useState, useEffect } from 'react';
 import ClassicDates from '@/assets/images/home-banner-section/classicDates01.png'
 import ChocolateSpread from '@/assets/images/home-banner-section/chocoFlakes01.png'
 import Vermicelli from '@/assets/images/home-banner-section/vermicillie.png'
-import AlmondHoney from '@/assets/images/home-banner-section/cornFlakes01.png'
-import Saffron from '@/assets/images/home-banner-section/saffron01.png'
-import SoyaChunks from '@/assets/images/home-banner-section/soyaChunks01.png'
-import Muesli from '@/assets/images/home-banner-section/muesli01.png'
-import OrganicHoneyGreenCard from '@/assets/images/home-banner-section/organicHoneyGreenCard1.png'
-import HoneyStick from '@/assets/images/home-banner-section/stickHoney.png'
+  import AlmondHoney from '@/assets/images/home-banner-section/cornFlakes01.png'
+  import Saffron from '@/assets/images/home-banner-section/saffron01.png'
+  import SoyaChunks from '@/assets/images/home-banner-section/soyaChunks01.png'
+  import Muesli from '@/assets/images/home-banner-section/muesli01.png'
+  import OrganicHoneyGreenCard from '@/assets/images/home-banner-section/organicHoneyGreenCard1.png'
+  import HoneyStick from '@/assets/images/home-banner-section/stickHoney.png'
 
 
 
@@ -67,11 +67,20 @@ export default function HomePage() {
   const SLIDE_COUNT = 6;
   const SLIDES = [
     {
+      img: TrustSlide1,
+      content: "Organic honey is a natural, nutrient-rich sweetener with health benefits, perfect for enhancing flavor in foods and beverages.",
+      title: "Organic Honey"
+    },
+    {
+      img: ClassicDates,
+      content: "Apis Classic Dates are sweet, nutrient-rich fruits ideal for snacking and adding flavor to dishes.",
+      title: "Classic Dates"
+    },
+    {
       img: Muesli,
       content: "Muesli Crafted with wholesome ingredients for a nourishing start to your day",
       title: "Muesli"
     },
-
     {
       img:  ChocolateSpread,
       content: "Apis Choco Flakes are crispy cereal flakes coated in rich chocolate for a delightful breakfast.",
@@ -93,11 +102,7 @@ export default function HomePage() {
       content: "Soya chunks are protein-rich, plant-based meat alternatives.",
       title: "Soya Chunk"
     },
-    {
-      img: ClassicDates,
-      content: "Apis Classic Dates are sweet, nutrient-rich fruits ideal for snacking and adding flavor to dishes.",
-      title: "Classic Dates"
-    },
+    
     // {
     //   img: TrustSlide9,
     //   content: "Lemon honey green tea: refreshing, antioxidant-rich blend.",
@@ -235,7 +240,9 @@ export default function HomePage() {
   //   return () => clearInterval(interval);
   // }, []);
 
-
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[])
 
 
   return (
@@ -246,27 +253,25 @@ export default function HomePage() {
           <div className="absolute end-0 h-full bg-black">
             <Carasol />
           </div>
-          <div className="relative me-4 md:me-10 flex flex-col items-start justify-center px-3 sm:px-14 sm:py-16">
+          <div className="relative me-4 md:me-10 flex flex-col items-end justify-center px-3 sm:px-14 sm:py-16">
             {/* Line 1 */}
             <p className="text-end text-[24px] md:text-[60px] font-bold text-[#ffffff] shadow-white">
               <span className="text-shadow">CHASING</span>
-              <span className="text-shadow"> THE</span>
+              <span className="text-shadow">  THE</span>
             </p>
             {/* Line 2 */}
             <p className="text-end text-[24px] md:text-[60px] font-bold text-[#ffffff]">
               <span className="text-shadow">NATURAL</span>
-              <span className="text-shadow"> FLAVOURS</span>
+              <span className="text-shadow">  FLAVOURS</span>
             </p>
             {/* Line 3 */}
             <p className="text-end text-[24px] md:text-[60px] font-bold text-[#ffffff]">
               <span className="text-shadow">OF</span>
-              <span className="text-shadow"> EXCELLENCE</span>
+              <span className="text-shadow">EXCELLENCE</span>
             </p>
           </div>
         </div>
       </div>
-
-
 
       {/* The trust in api */}
       <div className="w-full relative flex flex-col justify-center items-center">
@@ -303,7 +308,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        <kink></kink>
         <div className="pb-1 md:pb-20 z-10 w-[80%] flex items-center justify-center">
           <EmblaCarousel options={OPTIONS}>
             {SLIDES.map((itm, index) => (
@@ -375,20 +379,20 @@ export default function HomePage() {
                     />
                   </div>
                   <div className="lg:w-[38%] flex items-center justify-center flex-col py-10 overflow-hidden">
-                    <div className="md: -ml-[50px] 2xl: -ml-[80px] text-center"> {/* Added text-center class */}
+                    <div className="text-center"> {/* Removed unnecessary classes for centering */}
                       <p className="text-white font-bold text-[30px] mb-2">
                         {products[currentProduct].name}
                       </p>
-                      <p className="text-white text-center text-[19px] font-normal font-jost leading-6">
+                      <p className="text-white text-[19px] font-normal font-jost leading-6">
                         {products[currentProduct].description}
                       </p>
                     </div>
-                    <div className="flex relative md:me-24 item-center justify-center"> {/* Added justify-center class */}
+                    <div className="flex relative items-center justify-center"> {/* Removed md:me-24 and item-center */}
                       <Image
                         src={products[currentProduct].productImage}
                         height={330}
                         alt="product-slide"
-                        className="h-[330px]"
+                        className="h-[330px] mx-auto" 
                       />
                       
                       {products[currentProduct].name === 'Organic Honey' && (
@@ -400,8 +404,8 @@ export default function HomePage() {
                         />
                       )}
                     </div>
-                    <div className="text-center text-white xl:w-[75%] text-[17px] font-jost font-normal leading-6">
-                    {products[currentProduct].desc}
+                    <div className="text-center text-white xl:w-[75%] px-3 text-[17px] font-jost font-normal leading-6">
+                      {products[currentProduct].desc}
                     </div>
                   </div>
                 </div>
@@ -470,7 +474,7 @@ export default function HomePage() {
           width={640}
           height={640}
           alt="Flower decoration"
-    className="h-[640px] z-0 hidden lg:block w-[640px] absolute -bottom-28 -left-28 opacity-50"
+          className="h-[640px] z-0 hidden lg:block w-[640px] absolute -bottom-28 -left-28 opacity-50"
           style={{ transform: "rotate(40deg)" }}
         />
         <Image
@@ -478,7 +482,7 @@ export default function HomePage() {
           width={640}
           height={640}
           alt="Flower decoration"
-    className="h-[640px] hidden lg:block w-[640px] absolute -top-12 -right-20 opacity-40"
+          className="h-[640px] hidden lg:block w-[640px] absolute -top-12 -right-20 opacity-40"
           style={{ transform: "rotate(-136deg)" }}
         />
       </div>
@@ -599,9 +603,11 @@ export default function HomePage() {
                 })}
               </EmblaCarousel>
             </div>
+            <Link href={"https://www.amazon.in/s?k=apis&crid=2CJFWNXIDZI1V&sprefix=apis%2Caps%2C429&ref=nb_sb_noss_1"}>
             <button className="border border-[#9F7B49] bg-[#9F7B49] px-2 md:px-12 text-[10px] md:text-base py-1 md:py-3 font-bold text-white">
               Explore More
             </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -741,3 +747,4 @@ export default function HomePage() {
 HomePage.propTypes = {
   initialData: PropTypes.object,
 };
+

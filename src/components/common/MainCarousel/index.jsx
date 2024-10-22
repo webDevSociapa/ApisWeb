@@ -7,17 +7,15 @@ export default class Carasol extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      imageStyle: {
-        width: "100%",
-      },
-      currentSlide: 0,
+      currentSlide: 0, // Tracks the current slide index
     };
+    this.carouselRef = React.createRef(); // Create a reference for the carousel
   }
 
   updateCurrentSlide = (index) => {
     this.setState({ currentSlide: index });
-    this.carouselRef.moveTo(index);
-  }
+    this.carouselRef.current.moveTo(index);
+  };
 
   render() {
     const totalSlides = 2; // Update this number based on your total slides
@@ -32,7 +30,7 @@ export default class Carasol extends Component {
             autoPlay={true} // Ensures the carousel plays automatically
             showThumbs={false}
             infiniteLoop={true} // Allows the carousel to loop infinitely
-            interval={4000} // Sets the interval to 4 seconds
+            interval={3000} // Sets the interval to 4 seconds
             onChange={this.updateCurrentSlide}
             showArrows={false}
             showStatus={false}
@@ -40,7 +38,7 @@ export default class Carasol extends Component {
           >
             <div className="carousel_banner" style={this.state.imageStyle}>
               <video
-                autoPlay={true}
+               autoPlay
                 muted
                 className={"video-img1"}
                 loop // Ensures the video loops continuously
@@ -49,7 +47,7 @@ export default class Carasol extends Component {
             </div>
             <div className="carousel_banner home-shadow" style={this.state.imageStyle}>
               <video
-                autoPlay={true}
+                autoPlay
                 muted
                 className={"video-img1"}
                 loop // Ensures the video loops continuously

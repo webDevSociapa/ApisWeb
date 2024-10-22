@@ -111,11 +111,11 @@ img.small {
   }
 }
 
-@media(max-width: 1500px){
+/* @media(max-width: 1500px){
   .row8{
     margin: 1px 3px 13px !important;
   }
-}
+} */
 
 @media only screen and (min-width: 690px) and (max-width: 1010px) {
   .row1 { margin-top: 164px; }

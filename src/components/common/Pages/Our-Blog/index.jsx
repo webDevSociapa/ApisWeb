@@ -126,14 +126,14 @@ const OurBlogPage = () => {
             <ImageBanner banner={Banner} />
             <div className="flex flex-col items-center justify-center mt-10">
                 <p className="font-bold text-[20px] md:text-[40px] text-center text-[#9F7B49]">
-                    The Blog
+                    The Blogs
                 </p>
                 <p className="text-sm w-[95%] md:text-xl md:w-[70%] md:leading-8 mt-3 md:mt-6 text-center font-jost">
                     Welcome to the Apis India blog, your go-to resource for all things related to health, nutrition, and culinary inspiration. Here, we share expert tips, delicious recipes, and the latest trends to help you make the most of our premium products. Our blog is designed to inform and inspire. Stay tuned for regular updates that will keep you engaged and empowered on your journey to better health and wellness with Apis India.
                 </p>
             </div>
 
-            <div className="w-[80%] grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 mx-auto px-4 xl:w-[65%] border-dotted">
+            <div className="w-[100%] grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 mx-auto px-4 xl:w-[65%] border-dotted">
                 {currentItems.map((blog) => (
                     <BlogCard key={blog.id} blog={blog} onClick={handleImageClick} />
                 ))}
