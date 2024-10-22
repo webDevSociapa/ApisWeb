@@ -91,6 +91,7 @@ const NavBar = ({ className, linkClass }) => {
                 onMouseLeave={handleOurBrandContentMouseLeave}
               >
                 <OurBrand onProductClick={handleOurBrandContentClick} />
+                
               </div>
             )}
           </div>

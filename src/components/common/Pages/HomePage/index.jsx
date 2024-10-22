@@ -67,6 +67,11 @@ export default function HomePage() {
   const SLIDE_COUNT = 6;
   const SLIDES = [
     {
+      img: ClassicDates,
+      content: "Apis Classic Dates are sweet, nutrient-rich fruits ideal for snacking and adding flavor to dishes.",
+      title: "Classic Dates"
+    },
+    {
       img: Muesli,
       content: "Muesli Crafted with wholesome ingredients for a nourishing start to your day",
       title: "Muesli"
@@ -93,11 +98,7 @@ export default function HomePage() {
       content: "Soya chunks are protein-rich, plant-based meat alternatives.",
       title: "Soya Chunk"
     },
-    {
-      img: ClassicDates,
-      content: "Apis Classic Dates are sweet, nutrient-rich fruits ideal for snacking and adding flavor to dishes.",
-      title: "Classic Dates"
-    },
+    
     // {
     //   img: TrustSlide9,
     //   content: "Lemon honey green tea: refreshing, antioxidant-rich blend.",
@@ -246,27 +247,25 @@ export default function HomePage() {
           <div className="absolute end-0 h-full bg-black">
             <Carasol />
           </div>
-          <div className="relative me-4 md:me-10 flex flex-col items-start justify-center px-3 sm:px-14 sm:py-16">
+          <div className="relative me-4 md:me-10 flex flex-col items-end justify-center px-3 sm:px-14 sm:py-16">
             {/* Line 1 */}
             <p className="text-end text-[24px] md:text-[60px] font-bold text-[#ffffff] shadow-white">
               <span className="text-shadow">CHASING</span>
-              <span className="text-shadow"> THE</span>
+              <span className="text-shadow">  THE</span>
             </p>
             {/* Line 2 */}
             <p className="text-end text-[24px] md:text-[60px] font-bold text-[#ffffff]">
               <span className="text-shadow">NATURAL</span>
-              <span className="text-shadow"> FLAVOURS</span>
+              <span className="text-shadow">  FLAVOURS</span>
             </p>
             {/* Line 3 */}
             <p className="text-end text-[24px] md:text-[60px] font-bold text-[#ffffff]">
               <span className="text-shadow">OF</span>
-              <span className="text-shadow"> EXCELLENCE</span>
+              <span className="text-shadow">  EXCELLENCE</span>
             </p>
           </div>
         </div>
       </div>
-
-
 
       {/* The trust in api */}
       <div className="w-full relative flex flex-col justify-center items-center">
@@ -470,7 +469,7 @@ export default function HomePage() {
           width={640}
           height={640}
           alt="Flower decoration"
-    className="h-[640px] z-0 hidden lg:block w-[640px] absolute -bottom-28 -left-28 opacity-50"
+          className="h-[640px] z-0 hidden lg:block w-[640px] absolute -bottom-28 -left-28 opacity-50"
           style={{ transform: "rotate(40deg)" }}
         />
         <Image
@@ -478,7 +477,7 @@ export default function HomePage() {
           width={640}
           height={640}
           alt="Flower decoration"
-    className="h-[640px] hidden lg:block w-[640px] absolute -top-12 -right-20 opacity-40"
+          className="h-[640px] hidden lg:block w-[640px] absolute -top-12 -right-20 opacity-40"
           style={{ transform: "rotate(-136deg)" }}
         />
       </div>
@@ -741,3 +740,4 @@ export default function HomePage() {
 HomePage.propTypes = {
   initialData: PropTypes.object,
 };
+

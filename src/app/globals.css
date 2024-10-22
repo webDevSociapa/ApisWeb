@@ -121,7 +121,7 @@ input[type="password"]:-webkit-autofill:active {
     flex: 0 0 50%;
     /* align-items:normal; */
     padding-left: 10px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     /* padding-left: 0px; */
     /* margin-left: 30px; */
   }
@@ -991,3 +991,22 @@ input[type="password"]:-webkit-autofill:active {
 }
 
 
+.audit-committee {
+  position: relative;
+  padding: 16px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.audit-committee::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px dashed #AE844A; /* Dashed border */
+  border-radius: 8px;
+  pointer-events: none; /* Prevent interaction with the border */
+}

@@ -1596,3 +1596,1274 @@ export const NEWS_DATA = [
   "Ginger Garlic"
 
 ];
+
+
+ export const WORLD_APPERIENCE = [
+  { "id": 1, "name": "Outcome of Board Meeting : November-09-2023", "path": "https://apisindia.com/pdf/2023/Outcome-of-Board-Meeting091123.pdf"},
+  { "id": 2, "name": "Notice of Board Meeting : October-31-2023", "path": "https://apisindia.com/pdf/2023/Notice-of-Board-Meeting311023.pdf"},
+  { "id": 3, "name": "Outcome of Board Metting : August-13-2022", "path": "https://apisindia.com/pdf/2022/Outcome-of-board-meeting-082022.pdf"},
+  { "id": 4, "name": "Covering Letter January-04-2021", "path": "https://apisindia.com/pdf/2020/Covering_Letter_2021.pdf"},
+  { "id": 5, "name": "Disclosure under Reg.30 Appt of Director January-15-2021", "path": "https://apisindia.com/pdf/2020/DISCLOSURE-UNDER-REG-30-APPT-OF-DIRECTOR.pdf"},
+  { "id": 6, "name": "Notice of BM in Newspaper February-03-21", "path": "https://apisindia.com/pdf/2020/NOTICE_OF_BM_IN_NEWSPAPAR-2021.pdf"},
+  { "id": 7, "name": "Outcome of the Board Meeting February-13-21", "path": "https://apisindia.com/pdf/2020/Outcome_of_the_Board_Meeting--2021.pdf"},
+  { "id": 8, "name": "Notice of Board Meeting Stock Exchange February-02-21", "path": "https://apisindia.com/pdf/2020/Notice_of_Board_Meeting_Stock_Exchange-2021.pdf"},
+  { "id": 9, "name": "Outcome of Board Meeting : 15th September, 2020", "path": "https://apisindia.com/pdf/2020/Outcome%20of%20the%20Board%20Meeting%20-%2015ht%20September.pdf"},
+  { "id": 10, "name": "FINANCIAL RESULTS (2019-2020) Q1 Results", "path": "https://apisindia.com/pdf/AGM%20Results.pdf" },
+  { "id": 11, "name": "Q2 Results", "path": "https://apisindia.com/pdf/newupdates/Outcome%20of%20Board%20Meeting.pdf"},
+  { "id": 12, "name": "Q3 Results", "path": "https://apisindia.com/pdf/newupdates/Outcome_of_the_Board_Meeting.pdf" },
+  { "id": 13, "name": "Q4 Results", "path": "https://apisindia.com/pdf/2020/Outcome%20of%20Board%20Meeting-final.pdf"},
+  { "id": 14, "name": "Outcome of Board Meeting : Date 14th Feb, 2020", "path": "https://apisindia.com/pdf/newupdates/Outcome_of_the_Board_Meeting.pdf"},
+  { "id": 15, "name": "Outcome of Board Meeting, 14th Nov., 2019", "path": "https://apisindia.com/pdf/newupdates/Outcome%20of%20Board%20Meeting.pdf" },
+  { "id": 16, "name": "Outcome of 37th General Meeting", "path": "https://apisindia.com/pdf/AGM%20Results.pdf" },
+  { "id": 17, "name": "Outcome + Audited Financial Results: 31st March 2019", "path": "https://apisindia.com/pdf/Outcome_of_the_Board_Meeting_final.pdf" },
+  { "id": 18, "name": "FINANCIAL RESULTS (AUDITED RESULTS - 2018-2019) Q1 Results", "path": "https://apisindia.com/investorelation-pdf/2019/Results-June.pdf" },
+  { "id": 19, "name": "Q2 Results", "path": "https://apisindia.com/investorelation-pdf/2019/Results_September.pdf" },
+  { "id": 20, "name": "Q3 Results", "path": "https://apisindia.com/investorelation-pdf/2019/Results_December.pdf" },
+  { "id": 21, "name": "Revised Final Financial Results 2017-18", "path": "https://apisindia.com/investorelation-pdf/2018/Revised-Fianncial-Results_31%20March_2018.pdf" },
+  { "id": 27, "name": "Audited Final Financial Report 2016-2017", "path": "https://apisindia.com/investorelation-pdf/2016/AUDITED-Financial-Report-2016-17.pdf" },
+  { "id": 22, "name": "FINANCIAL RESULTS AUDITED APRIL 2017 Q1 LLR ApisIndia", "path": "https://apisindia.com/investorelation-pdf/2016/Q1_LLR_apisIndia.pdf" },
+  { "id": 23, "name": "Q1 UFR June 2016", "path": "https://apisindia.com/investorelation-pdf/2016/Q1_UFR_JUNE2016.pdf" },
+  { "id": 24, "name": "Q2 Results", "path": "https://apisindia.com/investorelation-pdf/2016/Q2.pdf" },
+  { "id": 25, "name": "Q2 UFR September 2016", "path": "https://apisindia.com/investorelation-pdf/2016/Q2_UFR_September_2016.pdf" },
+  { "id": 31, "name": "Q4 Audited FR March 2016", "path": "https://apisindia.com/investorelation-pdf/2015/Q4_Audited-FR_March-2016.pdf" },
+  { "id": 26, "name": "Q3 Report of UAFR, Dec 2016", "path": "https://apisindia.com/investorelation-pdf/2016/Q3-Report-of-UAFR-(Dec-2016).pdf" },
+  { "id": 28, "name": "FINANCIAL RESULTS (AUDITED MARCH 2015-16) Q1 UFR June 2015", "path": "https://apisindia.com/investorelation-pdf/2015/Q1-UFR_June-2015.pdf" },
+  { "id": 29, "name": "Q2 September 2015", "path": "https://apisindia.com/investorelation-pdf/2015/Q2_September-2015.pdf" },
+  { "id": 30, "name": "Q3 December 2015", "path": "https://apisindia.com/investorelation-pdf/2015/Q3_December-2015.pdf" },
+  { "id": 32, "name": "FINANCIAL RESULTS (AUDITED MARCH 2014-15) Q1 UFR June 2014", "path": "https://apisindia.com/investorelation-pdf/2014/Q1_UFR_June-2014.pdf" },
+  { "id": 35, "name": "Q4 Audited FR March 2015", "path": "https://apisindia.com/investorelation-pdf/2014/Q4_Audited-FR_March2015.pdf" },
+  { "id": 33, "name": "Q2 UFR September 2014", "path": "https://apisindia.com/investorelation-pdf/2014/Q2_UFR_September-2014.pdf" },
+  { "id": 34, "name": "Q3 UFR December 2014", "path": "https://apisindia.com/investorelation-pdf/2014/Q3_UFR_December-2014.pdf" },
+  { "id": 39, "name": "Q4 Financial Audited Result March, 2014", "path": "https://apisindia.com/investorelation-pdf/2013/Q4_Financial-Audited-Result_March-2014.pdf"},
+  { "id": 36, "name": "FINANCIAL RESULTS (AUDITED MARCH 2013-14) Q1 UFR June 2013", "path": "https://apisindia.com/investorelation-pdf/2013/Q1_UFR_June-2013.pdf" },
+  { "id": 37, "name": "Q2 UFR Sep 2013", "path": "https://apisindia.com/investorelation-pdf/2013/Q2_UFR_Sep_2013.pdf"},
+  { "id": 38, "name": "Q3 Limited Review report Q3 (11th Feb, 2013)", "path": "https://apisindia.com/investorelation-pdf/2013/Q3_Limited-Review-report-Q3-(11th=Feb-2013.pdf"},
+];
+
+
+export const CORPORATE_GOVERNANACE = [
+  {
+    id: 1,
+    name: "PERFORMANCE EVALUATION POLICY",
+    path: "https://apisindia.com/pdf/PERFORMANCE-EVALUATION-POLICY.pdf"
+  },
+  {
+    id: 2,
+    name: "POLICY FOR DETERMINING MATERIAL SUBSIDIARY",
+    path: "https://apisindia.com/pdf/POLICY-FOR-DETERMINING-MATERIAL-SUBSIDIARY.pdf"
+  },
+  {
+    id: 3,
+    name: "FAMILIARISATION PROGRAMME FOR INDEPENDENT DIRECTORS",
+    path: "https://apisindia.com/pdf/Familiarisation-Programme-for-Independent-Directors.pdf"
+  },
+  {
+    id: 4,
+    name: "POLICY FOR DETERMINATION OF MATERIALITY",
+    path: "https://apisindia.com/pdf/Policy-for-Determination-of-Materiality.pdf"
+  },
+  {
+    id: 5,
+    name: "RISK MANAGEMENT POLICY",
+    path: "https://apisindia.com/pdf/Risk-Management-Policy-.pdf"
+  },
+  {
+    id: 6,
+    name: "RELATED PARTY TRANSACTION POLICY",
+    path: "https://apisindia.com/pdf/Related_Party_Policy.pdf"
+  },
+  {
+    id: 7,
+    name: "APIS INDIA CSR POLICY",
+    path: "https://apisindia.com/pdf/APIS-INDIA-LMITED-CSR-Policy-[165606].pdf"
+  },
+  {
+    id: 8,
+    name: "NOMINATION AND REMUNERATION POLICY",
+    path: "https://apisindia.com/pdf/NOMINATION-AND-REMUNERATION-POLICY-(for-apis-2016)-[165604].pdf"
+  },
+  {
+    id: 9,
+    name: "POLICY ON PREVENTION OF S.H.W",
+    path: "https://apisindia.com/pdf/Policy-on-S.H.W-[165601].pdf"
+  },
+  {
+    id: 10,
+    name: "VIGIL MECHANISM POLICY",
+    path: "https://apisindia.com/pdf/vigil_mechanism_policy.pdf"
+  },
+  {
+    id: 11,
+    name: "WEBSITE CONTENT ARCHIVAL POLICY",
+    path: "https://apisindia.com/pdf/Website_content_archival_policy.pdf"
+  },
+  {
+    id: 12,
+    name: "COMPOSITION OF COMMITTEES OF BOARD OF DIRECTORS",
+    path: "https://apisindia.com/pdf/Code_of_conduct.PDF"
+  },
+  {
+    id: 13,
+    name: "TERM AND CONDITION OF INDEPENDENT DIRECTORS",
+    path: "https://apisindia.com/pdf/Term-and-condition-of-Independent-Directors.pdf"
+  }
+];
+
+
+// src/data/codeOfConduct.js
+
+export const CODE_OF_CONDUCT = [
+  {
+    id: 1,
+    name: "CODE OF CONDUCT AND PROCEDURE FOR FAIR DISCLOSURE OF UNPUBLISHED PRICE SENSITIVE INFORMATION",
+    path: "https://apisindia.com/pdf/PERFORMANCE-EVALUATION-POLICY.pdf"
+  },
+  {
+    id: 2,
+    name: "CODE OF CONDUCT FOR REGULATING AND MONITORING TRADING BY INSIDERS",
+    path: "https://apisindia.com/pdf/Code-of-Conduct-for-Regulating-and-Monitoring-Trading-by-Insiders.pdf"
+  },
+  {
+    id: 3,
+    name: "Code of Conduct for Board of Directors and Senior Management of ‘APIS India Limited’",
+    path: "https://apisindia.com/pdf/Code_of_conduct.PDF"
+  }
+];
+
+
+// src/data/annualReports.js
+
+export const ANNUAL_REPORTS = [
+  {
+    id: 1,
+    name: "MGT-7 2022-2023",
+    path: "https://apisindia.com/pdf/2023/MGT-7-23.pdf"
+  },
+  {
+    id: 2,
+    name: "ANNUAL REPORT 2022-2023",
+    path: "https://apisindia.com/pdf/Annual-Report-2023.pdf"
+  },
+  {
+    id: 3,
+    name: "ANNUAL REPORT 2021-2022",
+    path: "https://apisindia.com/pdf/Annual%20Report%202021-22.pdf"
+  },
+  {
+    id: 4,
+    name: "MGT-7 2021-2022",
+    path: "https://apisindia.com/pdf/2022/MGT-7.pdf"
+  },
+  {
+    id: 5,
+    name: "ANNUAL REPORT 2020-2021",
+    path: "https://apisindia.com/pdf/2022/Annual-Report-2020-21-Final.pdf"
+  },
+  {
+    id: 6,
+    name: "ANNUAL REPORT 2019-20",
+    path: "https://apisindia.com/pdf/2020/Annual%20Report-2020.pdf"
+  },
+  {
+    id: 7,
+    name: "ANNUAL REPORT 2018 - 2019",
+    path: "https://apisindia.com/pdf/report/Annual%20Report%20Final%202018-19.pdf"
+  },
+  {
+    id: 8,
+    name: "ANNUAL REPORT 2017 - 2018",
+    path: "https://apisindia.com/pdf/report/ANNUAL-REPORT.pdf"
+  },
+  {
+    id: 9,
+    name: "ANNUAL REPORT 2016 - 2017",
+    path: "https://apisindia.com/pdf/report/Annual-Report-APIS-2017.pdf"
+  },
+  {
+    id: 10,
+    name: "ANNUAL REPORT 2015 - 2016",
+    path: "https://apisindia.com/pdf/report/Final-Annual-Report-2015-16-(1).pdf"
+  },
+  {
+    id: 11,
+    name: "ANNUAL REPORT 2014 - 2015",
+    path: "https://apisindia.com/pdf/report/Annual-Report-2014-2015.pdf"
+  },
+  {
+    id: 12,
+    name: "ANNUAL REPORT 2013 - 2014",
+    path: "https://apisindia.com/pdf/report/Annual-Report-2013-14.pdf"
+  },
+  {
+    id: 13,
+    name: "ANNUAL REPORT 2012 - 2013",
+    path: "https://apisindia.com/pdf/report/Annual-Report-2012-13.pdf"
+  },
+  {
+    id: 14,
+    name: "ANNUAL REPORT 2011 - 2012",
+    path: "https://apisindia.com/pdf/report/Annual-Report-2011-12.pdf"
+  },
+  {
+    id: 15,
+    name: "ANNUAL REPORT 2010 - 2011",
+    path: "https://apisindia.com/pdf/report/Annual-Report-2010-2011.pdf"
+  },
+  {
+    id: 16,
+    name: "ANNUAL REPORT 2009 - 2010",
+    path: "https://apisindia.com/pdf/report/Annual-Report-2009-2010.pdf"
+  },
+  {
+    id: 17,
+    name: "ANNUAL REPORT 2008 - 2009",
+    path: "https://apisindia.com/pdf/report/Annual-Report-2009-2010.pdf"
+  }
+];
+
+// src/data/subsidiaryFinancials.js
+
+export const FINANCIALS = [
+  {
+    id: 1,
+    name: "APIS Subsidiary Financials - Anantadrishti",
+    path: "https://apisindia.com/pdf/newupdates/Balance%20Sheet_Anantadrishti_2018.pdf"
+  },
+  {
+    id: 2,
+    name: "Balance Sheet - 31.03.2019 - Anantadrishti",
+    path: "https://apisindia.com/pdf/newupdates/Balance%20Sheet_Anantadrishti_Anantadrishti_2019.pdf"
+  },
+  {
+    id: 3,
+    name: "Balance Sheet - 31.03.2020 - Anantadrishti - Consolidated",
+    path: "https://apisindia.com/pdf/newupdates/Anantadrishti/Consolidated%20Balance%20Sheet.pdf"
+  },
+  {
+    id: 4,
+    name: "Balance Sheet - 31.03.2020 - Anantadrishti - Standalone",
+    path: "https://apisindia.com/pdf/newupdates/Anantadrishti/Standalone%20Balance%20Sheet.pdf"
+  },
+  {
+    id: 5,
+    name: "Balance Sheet - 31.03.2023 - Anantadrishti",
+    path: "https://apisindia.com/pdf/newupdates/Anantadrishti/Balance-Sheet-Anantadrishti-Smart.pdf"
+  },
+  {
+    id: 6,
+    name: "Balance Sheet - 31.03.2023 - Kapil Anand Agro - Standalone",
+    path: "https://apisindia.com/pdf/newupdates/Balalnce-Sheet-Kapil-Anand-Agro.pdf"
+  },
+  {
+    id: 7,
+    name: "Balance Sheet - 31.03.2023 - NFTPL",
+    path: "https://apisindia.com/pdf/newupdates/Balance-Sheet-NFTPL-2023.pdf"
+  }
+];
+
+
+// src/data/boardMeetingAndFinancialResults.js
+
+export const BOARD_MEETING_FINACIALRESULTS = [
+  {
+    id: 1,
+    name: "Outcome of Board Meeting : November-09-2023",
+    path: "https://apisindia.com/pdf/2023/Outcome-of-Board-Meeting091123.pdf"
+  },
+  {
+    id: 2,
+    name: "Notice of Board Meeting : October-31-2023",
+    path: "https://apisindia.com/pdf/2023/Notice-of-Board-Meeting311023.pdf"
+  },
+  {
+    id: 3,
+    name: "Outcome of Board Meeting : August-13-2022",
+    path: "https://apisindia.com/pdf/2022/Outcome-of-board-meeting-082022.pdf"
+  },
+  {
+    id: 4,
+    name: "Covering Letter January-04-2021",
+    path: "https://apisindia.com/pdf/2020/Covering_Letter_2021.pdf"
+  },
+  {
+    id: 5,
+    name: "Disclosure under Reg.30 Appt of Director January-15-2021",
+    path: "https://apisindia.com/pdf/2020/DISCLOSURE-UNDER-REG-30-APPT-OF-DIRECTOR.pdf"
+  },
+  {
+    id: 6,
+    name: "Notice of BM in Newspaper February-03-21",
+    path: "https://apisindia.com/pdf/2020/NOTICE_OF_BM_IN_NEWSPAPAR-2021.pdf"
+  },
+  {
+    id: 7,
+    name: "Outcome of the Board Meeting February-13-21",
+    path: "https://apisindia.com/pdf/2020/Outcome_of_the_Board_Meeting--2021.pdf"
+  },
+  {
+    id: 8,
+    name: "Notice of Board Meeting Stock Exchange February-02-21",
+    path: "https://apisindia.com/pdf/2020/Notice_of_Board_Meeting_Stock_Exchange-2021.pdf"
+  },
+  {
+    id: 9,
+    name: "Outcome of Board Meeting : Date 15th September, 2020",
+    path: "https://apisindia.com/pdf/2020/Outcome%20of%20the%20Board%20Meeting%20-%2015ht%20September.pdf"
+  },
+  {
+    id: 10,
+    name: "FINANCIAL RESULTS (2019-2020) - Results",
+    path: "https://apisindia.com/pdf/AGM%20Results.pdf"
+  },
+  {
+    id: 11,
+    name: "FINANCIAL RESULTS (2019-2020) - Q2 Results",
+    path: "https://apisindia.com/pdf/newupdates/Outcome%20of%20Board%20Meeting.pdf"
+  },
+  {
+    id: 12,
+    name: "FINANCIAL RESULTS (2019-2020) - Q3 Results",
+    path: "https://apisindia.com/pdf/newupdates/Outcome_of_the_Board_Meeting.pdf"
+  },
+  {
+    id: 13,
+    name: "FINANCIAL RESULTS (2019-2020) - Q4 Results",
+    path: "https://apisindia.com/pdf/2020/Outcome%20of%20Board%20Meeting-final.pdf"
+  },
+  {
+    id: 14,
+    name: "Outcome of Board Meeting : Date 14th Feb, 2020",
+    path: "https://apisindia.com/pdf/newupdates/Outcome_of_the_Board_Meeting.pdf"
+  },
+  {
+    id: 15,
+    name: "Outcome of Board Meeting, 14th Nov., 2019",
+    path: "https://apisindia.com/pdf/newupdates/Outcome%20of%20Board%20Meeting.pdf"
+  },
+  {
+    id: 16,
+    name: "Results of 37th Annual General Meeting - 30th September, 2019",
+    path: "https://apisindia.com/pdf/AGM%20Results.pdf"
+  },
+  {
+    id: 17,
+    name: "Outcome of Board Meeting (May 30, 2019) & Financial Results (31st March, 2019)",
+    path: "https://apisindia.com/pdf/Outcome_of_the_Board_Meeting_final.pdf"
+  },
+  {
+    id: 18,
+    name: "FINANCIAL RESULTS (AUDITED RESULTS - 2018-2019) - Q1 Results",
+    path: "https://apisindia.com/pdf/Outcome_of_the_Board_Meeting_final.pdf"
+  },
+  {
+    id: 19,
+    name: "FINANCIAL RESULTS (AUDITED RESULTS - 2018-2019) - Q2 Results",
+    path: "https://apisindia.com/investorelation-pdf/2019/Results_September.pdf"
+  },
+  {
+    id: 20,
+    name: "FINANCIAL RESULTS (AUDITED RESULTS - 2018-2019) - Q3 Results",
+    path: "https://apisindia.com/investorelation-pdf/2019/Results_December.pdf"
+  },
+  {
+    id: 21,
+    name: "FINANCIAL RESULTS (AUDITED RESULTS - 2017-2018) - Q1 Results",
+    path: "https://apisindia.com/investorelation-pdf/2018/Results-June.pdf"
+  },
+  {
+    id: 22,
+    name: "FINANCIAL RESULTS (AUDITED RESULTS - 2017-2018) - Q2 Results",
+    path: "https://apisindia.com/investorelation-pdf/2018/Results_September.pdf"
+  },
+  {
+    id: 23,
+    name: "FINANCIAL RESULTS (AUDITED RESULTS - 2017-2018) - Q3 Results",
+    path: "https://apisindia.com/investorelation-pdf/2018/Results_December.pdf"
+  },
+  {
+    id: 24,
+    name: "FINANCIAL RESULTS (AUDITED RESULTS - 2017-2018) - Revised Final Financial Results 2017-18",
+    path: "https://apisindia.com/investorelation-pdf/2018/Revised-Fianncial-Results_31%20March_2018.pdf"
+  },
+  {
+    id: 25,
+    name: "FINANCIAL RESULTS AUDITED APRIL 2017 - Q1 LLR ApisIndia",
+    path: "https://apisindia.com/investorelation-pdf/2016/Q1_LLR_apisIndia.pdf"
+  },
+  {
+    id: 26,
+    name: "FINANCIAL RESULTS AUDITED APRIL 2017 - Q1 UFR June 2016",
+    path: "https://apisindia.com/investorelation-pdf/2016/Q1_UFR_JUNE2016.pdf"
+  },
+  {
+    id: 27,
+    name: "FINANCIAL RESULTS AUDITED APRIL 2017 - Q2 Results",
+    path: "https://apisindia.com/investorelation-pdf/2016/Q2.pdf"
+  },
+  {
+    id: 28,
+    name: "FINANCIAL RESULTS AUDITED APRIL 2017 - Q2 UFR September 2016",
+    path: "https://apisindia.com/investorelation-pdf/2016/Q2_UFR_September_2016.pdf"
+  },
+  {
+    id: 29,
+    name: "FINANCIAL RESULTS AUDITED APRIL 2017 - Q3 Report of UAFR, Dec 2016",
+    path: "https://apisindia.com/investorelation-pdf/2016/Q3-Report-of-UAFR-(Dec-2016).pdf"
+  },
+  {
+    id: 30,
+    name: "FINANCIAL RESULTS AUDITED APRIL 2017 - Audited Final Financial Report 2016-2017",
+    path: "https://apisindia.com/investorelation-pdf/2016/AUDITED-Financial-Report-2016-17.pdf"
+  },
+  {
+    id: 31,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2015-16) - Q1 UFR June 2015",
+    path: "https://apisindia.com/investorelation-pdf/2015/Q1-UFR_June-2015.pdf"
+  },
+  {
+    id: 32,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2015-16) - Q2 September 2015",
+    path: "https://apisindia.com/investorelation-pdf/2015/Q2_September-2015.pdf"
+  },
+  {
+    id: 33,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2015-16) - Q3 December 2015",
+    path: "https://apisindia.com/investorelation-pdf/2015/Q3_December-2015.pdf"
+  },
+  {
+    id: 34,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2015-16) - Q4 Audited FR March 2016",
+    path: "https://apisindia.com/investorelation-pdf/2015/Q4_Audited-FR_March-2016.pdf"
+  },
+  {
+    id: 35,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2014-15) - Q1 UFR June 2014",
+    path: "https://apisindia.com/investorelation-pdf/2014/Q1_UFR_June-2014.pdf"
+  },
+  {
+    id: 36,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2014-15) - Q2 UFR September 2014",
+    path: "https://apisindia.com/investorelation-pdf/2014/Q2_UFR_September-2014.pdf"
+  },
+  {
+    id: 37,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2014-15) - Q3 UFR December 2014",
+    path: "https://apisindia.com/investorelation-pdf/2014/Q3_UFR_December-2014.pdf"
+  },
+  {
+    id: 38,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2014-15) - Q4 Audited FR March 2015",
+    path: "https://apisindia.com/investorelation-pdf/2014/Q4_Audited-FR_March2015.pdf"
+  },
+  {
+    id: 39,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2013-14) - Q1 UFR June 2013",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 40,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2013-14) - Q2 UFR Sep 2013",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 41,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2013-14) - Q3 Limited Review report Q3 (11th Feb, 2013)",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 42,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2013-14) - Q4 Financial Audited Result March, 2014",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 43,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2012-13) - Q1 UFR June 2012",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 44,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2012-13) - Q2 UFR Sep 2012",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 45,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2012-13) - Q3 UAFR 31st Dec 2012",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 46,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2012-13) - Q4 AFR 31st March 2013",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 47,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2011-12) - Q1 UFR June 2011",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 48,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2011-12) - Q2 UFR September 2011",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 49,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2011-12) - Q3 UFR December 2011",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 50,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2011-12) - Q4 AFR March 2012",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 51,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2010-11) - Q1 UFR June 2010",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 52,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2010-11) - Q2 UFR September 2010",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 53,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2010-11) - Q3 UFR December 2010",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 54,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2010-11) - Q4 AFR March 2011",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 55,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2009-10) - Q1 UFR June 2009",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 56,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2009-10) - Q2 UFR September 2009",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 57,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2009-10) - Q3 UFR December 2009",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 58,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2009-10) - Q4 AFR March 2010",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 59,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2009-10) - Q4 UFR March 2010",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 60,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2008-09) - Q2 UAFR Sep 2008",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 61,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2008-09) - Q3 UAFR Dec 2008",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 62,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2008-09) - Q4 AFR March 2008",
+    path: "View/Download" // Placeholder for actual URL
+  },
+  {
+    id: 63,
+    name: "FINANCIAL RESULTS (AUDITED MARCH 2008-09) - Q4 Audited Financial Result March 2009",
+    path: "View/Download" // Placeholder for actual URL
+  }
+];
+
+
+export const shareholdingPatterns = [
+  {
+    id: 1,
+    year: "2016-17",
+    name: "Shareholding Pattern for the Quarter ended June, 2016",
+    path: "https://apisindia.com/pdf/Q1_SHP_June2015.pdf"
+  },
+  {
+    id: 2,
+    year: "2015-16",
+    name: "Shareholding Pattern for the Quarter ended June, 2015",
+    path: "https://apisindia.com/pdf/Q1_SHP_June2015.pdf"
+  },
+  {
+    id: 3,
+    year: "2015-16",
+    name: "Shareholding Pattern for the Quarter ended September, 2015",
+    path: "https://apisindia.com/pdf/Q2_share-holding-pattern_Sep-2015.pdf"
+  },
+  {
+    id: 4,
+    year: "2015-16",
+    name: "Shareholding Pattern for the Quarter ended December, 2015",
+    path: "https://apisindia.com/pdf/Q3_shareholding-pattern_Dec-2015.pdf"
+  },
+  {
+    id: 5,
+    year: "2015-16",
+    name: "Shareholding Pattern for the Quarter ended March, 2016",
+    path: "https://apisindia.com/pdf/Shareholding-Q4.pdf"
+  },
+  {
+    id: 6,
+    year: "2014-15",
+    name: "Shareholding Pattern for the Quarter ended June, 2014",
+    path: "https://apisindia.com/pdf/Q1_SHP_June2014.pdf"
+  },
+  {
+    id: 7,
+    year: "2014-15",
+    name: "Shareholding Pattern for the Quarter ended September, 2014",
+    path: "https://apisindia.com/pdf/Q2_SHP_Sep14.pdf"
+  },
+  {
+    id: 8,
+    year: "2014-15",
+    name: "Shareholding Pattern for the Quarter ended December, 2014",
+    path: "https://apisindia.com/pdf/Q3_SHP_Dec14.pdf"
+  },
+  {
+    id: 9,
+    year: "2014-15",
+    name: "Shareholding Pattern for the Quarter ended March, 2015",
+    path: "https://apisindia.com/pdf/Q4_SHP_March15.pdf"
+  },
+  {
+    id: 10,
+    year: "2013-14, 2012-13, 2011-12, 2010-09, 2009-08",
+    name: "Shareholding Pattern for the Quarter ended September, 2013",
+    path: "https://apisindia.com/pdf/September-2013.xlsx"
+  },
+  {
+    id: 11,
+    year: "2013-14",
+    name: "Shareholding Pattern for the Quarter ended December, 2013",
+    path: "https://apisindia.com/pdf/December-2013.xlsx"
+  },
+  {
+    id: 12,
+    year: "2012-13",
+    name: "Shareholding Pattern for the Quarter ended March, 2012",
+    path: "https://apisindia.com/pdf/march2012.pdf"
+  },
+  {
+    id: 13,
+    year: "2013-14",
+    name: "Shareholding Pattern for the Quarter ended March, 2013",
+    path: "https://apisindia.com/pdf/march2013.xlsx"
+  },
+  {
+    id: 14,
+    year: "2013-14",
+    name: "Shareholding Pattern for the Quarter ended June, 2013",
+    path: "https://apisindia.com/pdf/June-2013.xlsx"
+  },
+  {
+    id: 15,
+    year: "2011-12",
+    name: "Shareholding Pattern for the Quarter ended June, 2011",
+    path: "https://apisindia.com/pdf/shareholding-pattern-june-2011.pdf"
+  },
+  {
+    id: 16,
+    year: "2011-12",
+    name: "Shareholding Pattern for the Quarter ended September, 2011",
+    path: "https://apisindia.com/pdf/Shareholding-Pattern_Sep2011.pdf"
+  },
+  {
+    id: 17,
+    year: "2011-12",
+    name: "Shareholding Pattern for the Quarter ended December, 2011",
+    path: "https://apisindia.com/pdf/shareholding-pattern-dec2011.pdf"
+  },
+  {
+    id: 18,
+    year: "2010-11",
+    name: "Shareholding Pattern for the Quarter ended December, 2010",
+    path: "https://apisindia.com/pdf/SHP_Dec2010.pdf"
+  },
+  {
+    id: 19,
+    year: "2011-12",
+    name: "Shareholding Pattern for the Quarter ended December, 2011",
+    path: "https://apisindia.com/pdf/december2011.pdf"
+  },
+  {
+    id: 20,
+    year: "2011-12",
+    name: "Shareholding Pattern for the Quarter ended March, 2011",
+    path: "https://apisindia.com/pdf/Shareholding-PatternMar11.pdf"
+  },
+  {
+    id: 21,
+    year: "2010-11",
+    name: "Shareholding Pattern for the Quarter ended March, 2010",
+    path: "https://apisindia.com/pdf/Apis-India_Cl35_March2010.pdf"
+  },
+  {
+    id: 22,
+    year: "2010-11",
+    name: "Shareholding Pattern for the Quarter ended June, 2010",
+    path: "https://apisindia.com/pdf/Apis-India_Cl35_June2010.pdf"
+  },
+  {
+    id: 23,
+    year: "2010-11",
+    name: "Shareholding Pattern for the Quarter ended September, 2010",
+    path: "https://apisindia.com/pdf/Apis-India_Cl35_Sept.2010.pdf"
+  },
+  {
+    id: 24,
+    year: "2009-10",
+    name: "Shareholding Pattern for the Quarter ended June, 2009",
+    path: "https://apisindia.com/pdf/Share-holding-Pattern-Clause-35-June-09.pdf"
+  },
+  {
+    id: 25,
+    year: "2009-10",
+    name: "Shareholding Pattern for the Quarter ended September, 2009",
+    path: "https://apisindia.com/pdf/Cl-35-sep-2009.pdf"
+  },
+  {
+    id: 26,
+    year: "2009-10",
+    name: "Shareholding Pattern for the Quarter ended December, 2009",
+    path: "https://apisindia.com/pdf/Cl-35Dec-2009.pdf"
+  }
+];
+
+
+// src/data/corporateDisclosures.js
+
+export const corporateDisclosures = [
+  {
+    id: 1,
+    name: "Outcome of Board Meeting",
+    path: "https://apisindia.com/pdf/2024/Outcome-of-Board-Meeting0624.pdf"
+  },
+  {
+    id: 2,
+    name: "Intimation of Product Launch under",
+    path: "https://apisindia.com/pdf/2023/Corporate-Annoucement-Product-Launch210124.pdf"
+  },
+  {
+    id: 3,
+    name: "Proceedings of the 41st Annual General Meeting",
+    path: "https://apisindia.com/pdf/2023/AGM-Proceedings.pdf"
+  },
+  {
+    id: 4,
+    name: "Disclosure of Voting Results of the 41st Annual General Meeting",
+    path: "https://apisindia.com/pdf/2023/Voting-Results.pdf"
+  },
+  {
+    id: 5,
+    name: "Newspaper Advertisement under Section 160 of the Companies Act",
+    path: "https://apisindia.com/pdf/2023/Notice-under-Section-160.pdf"
+  },
+  {
+    id: 6,
+    name: "Intimation under Reg.30-Credit Rating",
+    path: "https://apisindia.com/pdf/2023/Intimation-under-Reg-30-Credit-Rating-16082023.pdf"
+  },
+  {
+    id: 7,
+    name: "Outcome of Board Meeting",
+    path: "https://apisindia.com/pdf/2023/Outcome-of-Board-Meeting-14082023.pdf"
+  },
+  {
+    id: 8,
+    name: "Postal Ballot Notice",
+    path: "https://apisindia.com/pdf/2023/Postal-Ballot-NoticeAugust1423.pdf"
+  },
+  {
+    id: 9,
+    name: "Notice of Board Meeting",
+    path: "https://apisindia.com/pdf/2023/Notice-of-Board-Meeting-02082023.pdf"
+  },
+  {
+    id: 10,
+    name: "Postal Ballot Notice",
+    path: "https://apisindia.com/pdf/2023/Postal-Ballot-NoticeJuly1523.pdf"
+  },
+  {
+    id: 11,
+    name: "Submission of Newspaper Cutting",
+    path: "https://apisindia.com/pdf/2023/Newspaper-Advertisement.pdf"
+  },
+  {
+    id: 12,
+    name: "Outcome of Board Meeting",
+    path: "https://apisindia.com/pdf/2023/Outcome-of-Board-Meeting2023.pdf"
+  },
+  {
+    id: 13,
+    name: "Submission of Annual Secretarial Compliance Report",
+    path: "https://apisindia.com/pdf/2023/Annual-Secretarial-Compliance-Report.pdf"
+  },
+  {
+    id: 14,
+    name: "Intimation of closure of trading window",
+    path: "https://apisindia.com/pdf/2022/Intimation_of_closure_of_trading_window.pdf"
+  },
+  {
+    id: 15,
+    name: "Outcome of Board Meeting",
+    path: "https://apisindia.com/pdf/2022/Outcome_of_Board_Meeting-FINAL.pdf"
+  },
+  {
+    id: 16,
+    name: "Postal Ballot Notice",
+    path: "https://apisindia.com/pdf/2022/Postal-Ballot-Notice.pdf"
+  },
+  {
+    id: 17,
+    name: "Intimation of closure of trading window",
+    path: "https://apisindia.com/pdf/2022/Intimation_of_closure_of_trading_window.pdf"
+  },
+  {
+    id: 18,
+    name: "Intimation under Reg.30-Credit Rating",
+    path: "https://apisindia.com/pdf/2022/Intimation-under-Reg.30-Credit-Rating.pdf"
+  },
+  {
+    id: 19,
+    name: "Disclosure Calendar of Event of Postal Ballot",
+    path: "https://apisindia.com/pdf/2022/Disclosure_Calender_of_Event_of_Postal_Ballot.pdf"
+  },
+  {
+    id: 20,
+    name: "Intimation under Reg.30 Appointment of Director",
+    path: "https://apisindia.com/pdf/2022/Intimation_under_Reg.30-Appointment_of_Director.pdf"
+  },
+  {
+    id: 21,
+    name: "FORM ISR-4- Request For Issue Of Duplicate Certificate and Other Service Request",
+    path: "https://apisindia.com/pdf/2022/Form-ISR-4.pdf"
+  },
+  {
+    id: 22,
+    name: "Intimation To Shareholders Holding Shares in Physical Mode",
+    path: "https://apisindia.com/pdf/2022/Intimation-to-Physical-Shareholder.pdf"
+  },
+  {
+    id: 23,
+    name: "Intimation under Reg.30 Newspaper Advertisement Results",
+    path: "https://apisindia.com/pdf/2022/Intimation-under-Reg.30-Newspeper-Advertisement.pdf"
+  },
+  {
+    id: 24,
+    name: "Outcome of the Board Meeting",
+    path: "https://apisindia.com/pdf/2022/Outcome_of_the_Board_Meeting.pdf"
+  },
+  {
+    id: 25,
+    name: "Intimation under Reg.30 Newspaper Advertisement Results",
+    path: "https://apisindia.com/pdf/2021/Intimation_under_Reg.30-Newspeper_Advertisement-Results.pdf"
+  },
+  {
+    id: 26,
+    name: "Intimation of Book Closure-AGM-Dividend Payment",
+    path: "https://apisindia.com/pdf/2021/Intimaton%20of%20Book%20Clsoure-AGM-Dividend%20Payment.pdf"
+  },
+  {
+    id: 27,
+    name: "Outcome Of The Board Meeting",
+    path: "https://apisindia.com/pdf/2021/Outcome_of_the_Board_Meeting.pdf"
+  },
+  {
+    id: 28,
+    name: "Intimation For Appointment Of Statutory Auditor",
+    path: "https://apisindia.com/pdf/2021/Outcome_of_the_Board_Meeting.pdf"
+  },
+  {
+    id: 29,
+    name: "Intimation For Penalty",
+    path: "https://apisindia.com/pdf/2021/Intimation_for_panelty.pdf"
+  },
+  {
+    id: 30,
+    name: "Covering Letter",
+    path: "https://apisindia.com/pdf/2021/Covering_Letter.pdf"
+  },
+  {
+    id: 31,
+    name: "Revised Outcome of Board Meeting Final",
+    path: "https://apisindia.com/pdf/2021/Revised%20Outcome_of_Board_Meeting-FINAL.pdf"
+  },
+  {
+    id: 32,
+    name: "Covering Letter",
+    path: "https://apisindia.com/pdf/2020/Covering_Letter_2021.pdf"
+  },
+  {
+    id: 33,
+    name: "Disclosure under Reg.30 Appt of Director",
+    path: "https://apisindia.com/pdf/2020/DISCLOSURE-UNDER-REG-30-APPT-OF-DIRECTOR.pdf"
+  },
+  {
+    id: 34,
+    name: "Notice of BM in Newspaper",
+    path: "https://apisindia.com/pdf/2020/NOTICE_OF_BM_IN_NEWSPAPAR-2021.pdf"
+  },
+  {
+    id: 35,
+    name: "Outcome of the Board Meeting",
+    path: "https://apisindia.com/pdf/2020/Outcome_of_the_Board_Meeting--2021.pdf"
+  },
+  {
+    id: 36,
+    name: "Notice of Board Meeting Stock Exchange",
+    path: "https://apisindia.com/pdf/2020/Notice_of_Board_Meeting_Stock_Exchange-2021.pdf"
+  },
+  {
+    id: 37,
+    name: "Covering Letter",
+    path: "https://apisindia.com/pdf/2020/Covering_Letter_November-13-2020.pdf"
+  },
+  {
+    id: 38,
+    name: "Intimation under Reg.30 Newspaper Advertisement-November-03-2020",
+    path: "https://apisindia.com/pdf/2020/Intimation_under_Reg.30-Newspeper_Advertisement-November-03-2020.pdf"
+  },
+  {
+    id: 39,
+    name: "Notice of Board Meeting Stock Exchange-November-02-2020",
+    path: "https://apisindia.com/pdf/2020/Notice_of_Board_Meeting_Stock_Exchange-November-02-2020.pdf"
+  },
+  {
+    id: 40,
+    name: "Outcome of the Board Meeting-November-12-2020",
+    path: "https://apisindia.com/pdf/2020/Outcome-of-the-Board-Meeting-November-12-2020.pdf"
+  },
+  {
+    id: 41,
+    name: "Voting Results - Annual General Meetings - 30th September",
+    path: "https://apisindia.com/pdf/newupdates/Voting%20Results%20-%20Annual%20General%20Meeting%20-%2030th%20September.pdf"
+  },
+  {
+    id: 42,
+    name: "Proceeding of the AGM",
+    path: "https://apisindia.com/pdf/newupdates/Proceeding%20of%20the%20AGM.pdf"
+  },
+  {
+    id: 43,
+    name: "Notice of Closure of Trading Window - 30th September",
+    path: "https://apisindia.com/pdf/newupdates/Proceeding%20of%20the%20AGM.pdf"
+  },
+  {
+    id: 44,
+    name: "Intimation under Reg.30-Newspaper Advertisement -16th September",
+    path: "https://apisindia.com/pdf/2020/Intimaton%20under%20Reg.30-Newspaper%20Publicaiton.pdf"
+  },
+  {
+    id: 45,
+    name: "Outcome of the Board Meeting : 15th September 2020",
+    path: "https://apisindia.com/pdf/2020/Outcome%20of%20the%20Board%20Meeting%20-%2015ht%20September.pdf"
+  },
+  {
+    id: 46,
+    name: "Intimation under Reg.30-Newspaper Advertisement -5th September",
+    path: "https://apisindia.com/pdf/2020/Intimation%20udner%20Reg.30-%205th%20September.pdf"
+  },
+  {
+    id: 47,
+    name: "Intimation under Reg.30-Newspaper Advertisement",
+    path: "https://apisindia.com/pdf/2020/Intimation_under_Reg.30-Newspeper_Advertisement.pdf"
+  },
+  {
+    id: 48,
+    name: "Notice of Board Meeting Stock Exchange - 2nd September",
+    path: "https://apisindia.com/pdf/2020/Notice_of_Board_Meeting_Stock_Exchange%20-%202nd%20September.pdf"
+  },
+  {
+    id: 49,
+    name: "Outcome of Board Meeting - 31st July, 2020",
+    path: "https://apisindia.com/pdf/2020/Outcome%20of%20Board%20Meeting-final.pdf"
+  },
+  {
+    id: 50,
+    name: "Covering Letter - June, 27, 20",
+    path: "https://apisindia.com/pdf/2020/Covering%20Letter.pdf"
+  },
+  {
+    id: 51,
+    name: "Notice of Board Meeting Stock Exchange",
+    path: "https://apisindia.com/pdf/2020/Notice_of_Board_Meeting_Stock_Exchange.pdf"
+  },
+  {
+    id: 52,
+    name: "Intimation Under Reg.30 -Newspaper Advertisement",
+    path: "https://apisindia.com/pdf/2020/Intimation_under_Reg.30-Newspeper_Advertisement_sw.pdf"
+  },
+  {
+    id: 53,
+    name: "Covering Letter - May 29, 20",
+    path: "https://apisindia.com/pdf/2020/Covering_Letter.pdf"
+  },
+  {
+    id: 54,
+    name: "Disclosure under Reg.30 commencement of operations",
+    path: "https://apisindia.com/pdf/2020/Disclosure_under_Reg.30_commencement_of_operations.pdf"
+  },
+  {
+    id: 55,
+    name: "Notice of Closure of Trading Window",
+    path: "https://apisindia.com/pdf/newupdates/Notice_of_Closure_of_Trading_Window.pdf"
+  },
+  {
+    id: 56,
+    name: "Letter to BSE Lockdown - Covid 19 Impact",
+    path: "https://apisindia.com/pdf/newupdates/Letter%20to%20BSE_Lockdown.pdf"
+  },
+  {
+    id: 57,
+    name: "Outcome of Board Meeting : Date 14th Feb, 2020",
+    path: "https://apisindia.com/pdf/newupdates/Outcome_of_the_Board_Meeting.pdf"
+  },
+  {
+    id: 58,
+    name: "Intimation of Notice of Board Meeting",
+    path: "https://apisindia.com/pdf/newupdates/Intimaton%20of%20Notice%20of%20Board%20Meeting.pdf"
+  },
+  {
+    id: 59,
+    name: "Intimation under Reg.30-Newspaper Advertisement",
+    path: "https://apisindia.com/pdf/newupdates/Intimation%20under%20Reg.30-Newspeper%20Advertisement.pdf"
+  },
+  {
+    id: 60,
+    name: "Outcome of Board Meeting, 14th Nov., 2019",
+    path: "https://apisindia.com/pdf/newupdates/Outcome%20of%20Board%20Meeting.pdf"
+  },
+  {
+    id: 61,
+    name: "Notice_of_Board_Meeting SE_sw",
+    path: "https://apisindia.com/pdf/newupdates/Notice_of_Board_Meeting-SE_sw.pdf"
+  },
+  {
+    id: 62,
+    name: "Intimation under Reg-30 sw",
+    path: "https://apisindia.com/pdf/newupdates/Intimation_under_Reg-30_sw.pdf"
+  },
+  {
+    id: 63,
+    name: "Results of 37th Annual General Meeting - 30th September, 2019",
+    path: "https://apisindia.com/pdf/AGM%20Results.pdf"
+  },
+  {
+    id: 64,
+    name: "Notice Of Board Meeting - 2nd August 2019",
+    path: "https://apisindia.com/pdf/Notice%20of%20Board%20Meeting%20July%202019.pdf"
+  },
+  {
+    id: 65,
+    name: "Disclosure of Related party transactions under_Reg_23(9)",
+    path: "https://apisindia.com/pdf/Disclousre-of-Related-party-transactions-under_Reg_23(9).pdf"
+  },
+  {
+    id: 66,
+    name: "Intimation to Board Meeting : May 2019",
+    path: "https://apisindia.com/pdf/Intimation_to_Board_Meeting_to_SE.pdf"
+  },
+  {
+    id: 67,
+    name: "Intimation under Reg.30 Newspaper Advertisement",
+    path: "https://apisindia.com/pdf/Intimation_to_Board_Meeting_to_SE.pdf"
+  },
+  {
+    id: 68,
+    name: "Outcome of the Board Meeting final : May 2019",
+    path: "https://apisindia.com/pdf/Outcome_of_the_Board_Meeting_final.pdf"
+  },
+  {
+    id: 69,
+    name: "Intimation under Reg.30",
+    path: "https://apisindia.com/pdf/Outcome_of_the_Board_Meeting_final.pdf"
+  },
+  {
+    id: 70,
+    name: "Outcome Of The Board Meeting : February 2019",
+    path: "https://apisindia.com/pdf/Outcome_of_the_Board_Meeting%20Feb%2014.pdf"
+  },
+  {
+    id: 71,
+    name: "Intimation under Reg.30 Newspaper Advertisement",
+    path: "https://apisindia.com/pdf/Intimation_under_Reg.30-Newspeper_Advertisement-sw.pdf"
+  },
+  {
+    id: 72,
+    name: "Intimation under Reg.30 Newspaper Advertisement",
+    path: "https://apisindia.com/pdf/Intimation-under-Reg-30-Newspeper-Advertisement.pdf"
+  },
+  {
+    id: 73,
+    name: "Outcome Of The Board Meeting : November 2018",
+    path: "https://apisindia.com/pdf/OUTCOME-OF-THE-BOARD-MEETING.pdf"
+  },
+  {
+    id: 74,
+    name: "Notice of Board Meeting Stock Exchange",
+    path: "https://apisindia.com/pdf/Notice_of_Board_Meeting_Stock_Exchange.pdf"
+  },
+  {
+    id: 75,
+    name: "May 22, 2018 Notice of Closure of Trading Window Of The Company",
+    path: "https://apisindia.com/pdf/Notice-of-Board-Meeting.pdf"
+  },
+  {
+    id: 76,
+    name: "Intimation Under Reg.30 Newspaper Advertisement",
+    path: "https://apisindia.com/pdf/Intimation_under_Reg.30-Newspeper_Advertisement_sw.pdf"
+  },
+  {
+    id: 77,
+    name: "Outcome of Board Meeting - 2018",
+    path: "https://apisindia.com/pdf/Outcome-of-the-Board-Meeting.pdf"
+  },
+  {
+    id: 78,
+    name: "January 31, 2017 BM Notice of 3rd Quarter (Dec 2016)",
+    path: "https://apisindia.com/pdf/BM_notice_3rd%20Quater_Dec_2016...pdf"
+  },
+  {
+    id: 79,
+    name: "Annual General Meeting - September 28, 2012 - Outcome of 30th Annual General Meeting",
+    path: "https://apisindia.com/pdf/Annual-Report-2013-14.pdf"
+  },
+  {
+    id: 80,
+    name: "Annual General Meeting - August 30, 2012 - Notice of 30th Annual General Meeting",
+    path: "https://apisindia.com/pdf/Annual-Report-Covering-Letter-2012-13.pdf"
+  },
+  {
+    id: 81,
+    name: "Annual General Meeting - September 30, 2011 – Outcome of 29th Annual General Meeting",
+    path: "https://apisindia.com/pdf/Annual-Report-2010-2011.pdf"
+  },
+  {
+    id: 82,
+    name: "Annual General Meeting - September 03, 2011 – Notice of 29th Annual General Meeting",
+    path: "View / Download" // Placeholder for actual URL
+  },
+  {
+    id: 83,
+    name: "Annual General Meeting - September 30, 2010 - Outcome of 28th Annual General Meeting",
+    path: "https://apisindia.com/pdf/Annual-Report-2008-2009.pdf"
+  },
+  {
+    id: 84,
+    name: "Annual General Meeting - September 03, 2010 - Notice of 28th Annual General Meeting",
+    path: "https://apisindia.com/pdf/Annual-Report-2008-2009.pdf"
+  },
+  {
+    id: 85,
+    name: "Extra – Ordinary Meeting - October 26, 2010 – Outcome",
+    path: "https://apisindia.com/pdf/Outcome-of-E26102010.pdf"
+  },
+  {
+    id: 86,
+    name: "Extra – Ordinary Meeting - September 29, 2010 – Notice",
+    path: "https://apisindia.com/pdf/Notice-EGM26102010.pdf"
+  },
+  {
+    id: 87,
+    name: "Extra – Ordinary Meeting - May 19, 2010 – Outcome",
+    path: "https://apisindia.com/pdf/Outcome-of-EGM19052010.pdf"
+  },
+  {
+    id: 88,
+    name: "Extra – Ordinary Meeting - April 19, 2010 – Notice",
+    path: "https://apisindia.com/pdf/Notice-EGM19052010.pdf"
+  },
+  {
+    id: 89,
+    name: "Extra – Ordinary Meeting - March 24, 2010 – Outcome",
+    path: "https://apisindia.com/pdf/Outcome_of_EGM_24032010.pdf"
+  },
+  {
+    id: 90,
+    name: "Extra – Ordinary Meeting - March 17, 2010 – Notice",
+    path: "https://apisindia.com/pdf/Notice_EGM_24032010.pdf"
+  },
+  {
+    id: 91,
+    name: "Others - July 12, 2012 – Result of Postal Ballot",
+    path: "https://apisindia.com/pdf/result-of-postal-ballot2012.pdf"
+  }
+];
+
+// src/data/financials.js
+
+export const financialsSheet = {
+  associates: [
+    {
+      id: 1,
+      name: "Balance Sheet - 31.03.2018 APIS Pure Foodstuff LLC",
+      path: "https://apisindia.com/pdf/newupdates/Balance%20Sheet_31.03.2018_APIS%20Pure%20Foodstuff%20LLC.pdf"
+    },
+    {
+      id: 2,
+      name: "Balance Sheet - 31.03.2019 APIS Pure Foodstuff LLC",
+      path: "https://apisindia.com/pdf/newupdates/Balance%20Sheet_APIS%20PURE_INR.pdf"
+    },
+    {
+      id: 3,
+      name: "Balance Sheet - 31.03.2020 APIS Pure Foodstuff LLC",
+      path: "https://apisindia.com/pdf/newupdates/Balance%20Sheet%20Apis%20Pure%20Food%20Stuff%202020%20.pdf"
+    },
+    {
+      id: 4,
+      name: "Balance Sheet - 31.03.2023 APIS Pure Foodstuff LLC",
+      path: "https://apisindia.com/pdf/newupdates/Balance-Sheet-2023-In-INR.pdf"
+    }
+  ],
+  subsidiaryFinancials: [
+    {
+      id: 1,
+      name: "Balance Sheet - 31.03.2018 - Anantadrishti",
+      path: "https://apisindia.com/pdf/newupdates/Balance%20Sheet_Anantadrishti_2018.pdf"
+    },
+    {
+      id: 2,
+      name: "Balance Sheet - 31.03.2019 - Anantadrishti",
+      path: "https://apisindia.com/pdf/newupdates/Balance%20Sheet_Anantadrishti_Anantadrishti_2019.pdf"
+    },
+    {
+      id: 3,
+      name: "Balance Sheet - 31.03.2020 - Anantadrishti - Consolidated",
+      path: "https://apisindia.com/pdf/newupdates/Anantadrishti/Consolidated%20Balance%20Sheet.pdf"
+    },
+    {
+      id: 4,
+      name: "Balance Sheet - 31.03.2020 - Anantadrishti - Standalone",
+      path: "https://apisindia.com/pdf/newupdates/Anantadrishti/Standalone%20Balance%20Sheet.pdf"
+    },
+    {
+      id: 5,
+      name: "Balance Sheet - 31.03.2023 - Anantadrishti",
+      path: "https://apisindia.com/pdf/newupdates/Anantadrishti/Balance-Sheet-Anantadrishti-Smart.pdf"
+    },
+    {
+      id: 6,
+      name: "Balance Sheet - 31.03.2023 - Kapil Anand Agro - Standalone",
+      path: "https://apisindia.com/pdf/newupdates/Balalnce-Sheet-Kapil-Anand-Agro.pdf"
+    },
+    {
+      id: 7,
+      name: "Balance Sheet - 31.03.2023 - NFTPL",
+      path: "https://apisindia.com/pdf/newupdates/Balance-Sheet-NFTPL-2023.pdf"
+    }
+  ]
+};
+
