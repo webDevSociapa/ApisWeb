@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import ImageBanner from '../../Layout/Banner';
-import Banner from '@/assets/images/our-blog/blogMain.png';
+import Banner from '@/assets/images/our-blog/blogBannerMain1.png';
 import Image from 'next/image';
 import Blog1 from '@/assets/images/our-blog/Blog01.jpg';
 import Blog2 from '@/assets/images/our-blog/blog02.jpg';
