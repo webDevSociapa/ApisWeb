@@ -220,8 +220,8 @@ export default function Media() {
               Dive into Apis India’s successful campaigns that reflect our dedication to creativity and impact.
               Each campaign is crafted to resonate with our audience and showcase our brand’s strengths.
             </p>
-            <div className='w-full md:w-[470px] h-[500px] p-[31px]'>
-              <div className='absolute p-2'>
+            <div className='w-full md:w-[470px] h-[500px] p-[50px] flex flex-col items-center relative'> {/* Changed to flex-col for mobile layout */}
+              <div className='absolute flex justify-center'> {/* Centering the Ring1 image */}
                 <Image
                   src={Ring1}
                   className="rotate-animation"
@@ -240,7 +240,7 @@ export default function Media() {
           </div>
         </div>
         {isMobile && ( // Only render if isMobile is true
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center mb-4"> {/* Added margin-bottom for spacing */}
           <EmblaCarousel options={{ loop: true, autoplay: true, autoplayDelay: 3000 }}>
             <div className="flex flex-col items-center gap-4">
               {/* Render the images in the carousel */}
@@ -280,6 +280,9 @@ export default function Media() {
 Media.propTypes = {
   initialData: PropTypes.object,
 };
+
+
+
 
 
 
