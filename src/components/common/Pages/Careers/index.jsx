@@ -23,10 +23,11 @@ import { useState, useRef, useEffect } from "react";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import axios from "axios";
+import employeAward from '@/assets/images/Careers/employeAward.png'
 
 const CAREER_DATA = [
   {     
-    img: CareerGallery3,
+    img: employeAward,
     title: "Employ Award",
     type: 0,
     gallery: 1
@@ -216,7 +217,7 @@ export default function Careers() {
           <div key={index} className="border p-2 md:p-3 px-1 border-[#85673D]" onClick={() => handleImageClick(itm)}>
             {itm.type === 1 && (
               <div className="p-3 pt-0 text-[#85673D] font-bold text-sm md:text-2xl pb-5">
-                <p className="font-jost">{itm.title}</p>
+                <p>{itm.title}</p>
               </div>
             )}
             <div>

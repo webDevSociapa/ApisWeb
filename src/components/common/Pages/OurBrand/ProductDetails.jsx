@@ -60,14 +60,22 @@ import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { PRODUCT_DATA } from "@/lib/constants";
 import Link from "next/link";
+import AlmondHoney from '@/assets/images/home-banner-section/cornFlakes01.png'
+import Saffron from '@/assets/images/home-banner-section/saffron01.png'
+import SoyaChunks from '@/assets/images/home-banner-section/soyaChunks01.png'
+import Muesli from '@/assets/images/home-banner-section/muesli01.png'
+import ClassicDates from '@/assets/images/home-banner-section/classicDates01.png'
+import ChocolateSpread from '@/assets/images/home-banner-section/chocoFlakes01.png'
+
+
 
 const AVAILABILITY_SLIDE = [
-  { img: AmazonLogo },
-  { img: JioMart },
-  { img: BigBasket },
-  { img: BlinkIt },
-  { img: JioMart2 },
-  { img: DMart },
+  { img: AmazonLogo, path: "https://www.amazon.in/s?k=apis&crid=2CJFWNXIDZI1V&sprefix=apis%2Caps%2C429&ref=nb_sb_noss_1" },
+  { img: JioMart, path: "https://www.jiomart.com/search/apis" },
+  { img: BigBasket, path: "https://www.bigbasket.com/ps/?q=apis&nc=as" },
+  { img: BlinkIt, path: "https://blinkit.com/s/?q=apis" },
+  { img: JioMart2, path: "https://www.jiomart.com/search/apis/in/prod_mart_master_vertical?prod_mart_master_vertical%5BhierarchicalMenu%5D%5Bcategory_tree.level0%5D%5B0%5D=Category" },
+  { img: DMart, path: "https://www.dmart.in/search?searchTerm=apis" },
 ];
 
 const OPTIONS = { loop: true };
@@ -75,36 +83,64 @@ const OPTIONS = { loop: true };
 const SLIDES = [
   {
     img: TrustSlide1,
-    content: "Nature`s golden nectar, pure and organic",
-    title: "Organic Honey",
+    content: "Organic honey is a natural, nutrient-rich sweetener with health benefits, perfect for enhancing flavor in foods and beverages.",
+    title: "Organic Honey"
   },
   {
-    img: TrustSlide2,
-    content: "Spread the joy with rich, velvety chocolate",
-    title: "Chocolate Spread",
+    img: ClassicDates,
+    content: "Apis Classic Dates are sweet, nutrient-rich fruits ideal for snacking and adding flavor to dishes.",
+    title: "Classic Dates"
   },
   {
-    img: TrustSlide3,
-    content: "Delightful strands of culinary tradition for meals",
-    title: "Vermicelli",
+    img: Muesli,
+    content: "Muesli Crafted with wholesome ingredients for a nourishing start to your day",
+    title: "Muesli"
   },
   {
-    img: TrustSlide1,
-    content: "Nature`s golden nectar, pure and organic.",
-    title: "Organic Honey",
+    img:  ChocolateSpread,
+    content: "Apis Choco Flakes are crispy cereal flakes coated in rich chocolate for a delightful breakfast.",
+    title: "Choco Flakes",
   },
-  {
-    img: TrustSlide2,
-    content: "Spread the joy with rich, velvety chocolate",
-    title: "Chocolate Spread",
-  },
-  {
-    img: TrustSlide3,
-    content: "Delightful strands of culinary tradition for meals",
-    title: "Vermicelli",
-  },
-];
 
+  {
+    img: AlmondHoney,
+    content: "Apis Corn Flakes are a crunchy, nutritious breakfast cereal made from premium corn.",
+    title: "Corn Flakes"
+  },
+  {
+    img: Saffron,
+    content: "Apis Saffron is a high-quality spice prized for its rich aroma, color, and health benefits.",
+    title: "Saffron"
+  },
+  {
+    img: SoyaChunks,
+    content: "Soya chunks are protein-rich, plant-based meat alternatives.",
+    title: "Soya Chunk"
+  },
+  
+  // {
+  //   img: TrustSlide9,
+  //   content: "Lemon honey green tea: refreshing, antioxidant-rich blend.",
+  //   title:"Lemon Honey Green Tea"
+  // },
+ 
+
+  // {
+  //   img: TrustSlide1,
+  //   content: "Nature`s golden nectar, pure and organic.",
+  //   title: "Organic Honey",
+  // },
+  // {
+  //   img: TrustSlide2,
+  //   content: "Spread the joy with rich, velvety chocolate",
+  //   title: "Chocolate Spread",
+  // },
+  // {
+  //   img: TrustSlide3,
+  //   content: "Delightful strands of culinary tradition for meals",
+  //   title: "Vermicelli",
+  // },
+];
 const GLIMPSES_SLIDES = [
   {
     img: Glimpse1,
@@ -752,12 +788,14 @@ const ProductDetails = () => {
             {AVAILABILITY_SLIDE.map((img) => {
               return (
                 <div className="embla__slide w-[55px] md:w-auto">
-                  <Image
+                                        <Link href={img?.path} target="_blank">
+                                        <Image
                     src={img?.img}
                     height={60}
                     alt="header-logo"
                     className="h-[18px] w-[50px] md:w-auto md:h-[60px] embla__slide__number"
                   />
+</Link>
                 </div>
               );
             })}

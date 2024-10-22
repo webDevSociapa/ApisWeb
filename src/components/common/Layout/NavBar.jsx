@@ -32,9 +32,9 @@ const NavBar = ({ className, linkClass }) => {
     setHoveredItem(null);
   };
 
-  const handleNavigateToOurBrand = () => {    
-    const ourBrandPath = `/${locale}/our-brand`;
-    router.push(ourBrandPath);
+  const handleNavigateToOurBrand = (event) => {    
+    event.preventDefault(); // Prevent default navigation
+    setHoveredItem('Our Brand'); // Show hover content
   };
 
   const isOurBrandActive = () => {

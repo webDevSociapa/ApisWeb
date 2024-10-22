@@ -940,15 +940,29 @@ input[type="password"]:-webkit-autofill:active {
 }
 @media(max-width: 891px){
   .aboutStrek {
-    top: 220px !important;
+    top: 320px !important;
     width: 80px !important;
     right: 2%;
 
     }
 
     .aboutslogo{
-      top: 280px !important;
+      top: 380px !important;
       width: 50px !important;
+      right: -2%;
+    }
+}
+@media(max-width: 694px){
+  .aboutStrek {
+    top: 220px !important;
+    width: 60px !important;
+    right: 2%;
+
+    }
+
+    .aboutslogo{
+      top: 280px !important;
+      width: 45px !important;
       right: -2%;
     }
 }
@@ -979,14 +993,26 @@ input[type="password"]:-webkit-autofill:active {
 
 @media(max-width: 500px){
   .aboutStrek {
-    top: 200px;
+    top: 220px !important;
     width: 70px !important;
     }
 
     .aboutslogo{
-      top: 220px;
+      top: 250px !important;
       width: 40px !important;
-      right: 3%;
+      right: 2%;
+    }
+}
+@media(max-width: 400px){
+  .aboutStrek {
+    top: 200px !important;
+    width: 70px !important;
+    }
+
+    .aboutslogo{
+      top: 230px !important;
+      width: 40px !important;
+      right: 2%;
     }
 }
 

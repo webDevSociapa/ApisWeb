@@ -147,6 +147,10 @@ export default function OurBrand() {
     }
   };
 
+  useEffect(()=>{
+    window.scroll(0,0);
+  },[])
+
   return (
     <>
     
@@ -335,9 +339,10 @@ export default function OurBrand() {
           is defined by a commitment to quality, innovation, and customer
           satisfaction. Join us as we continue to grow and inspire.
         </p>
+        <HexaGonalPage />
+
       </div>
 
-      <HexaGonalPage />
 
 
 

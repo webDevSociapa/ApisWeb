@@ -26,9 +26,9 @@ const SUSTAINABILITY_DATA = [
       "Celebrating Raksha Bandhan with the children of Mala Smriti Home.",
   },
   {
-    video: 'https://www.youtube.com/embed/xU4DUQ4d8GE?si=YZHloG_HDLK624eG',
+    video: 'https://www.youtube.com/embed/pdy5gJ36egw?si=XkMlb7RXfhCyegaQ',
     title:
-      "ApisHoney, a natural sweetener, shudh aur sacha, sabke ke liye aacha...",
+      "It was a pleasure to associate with Lotus Petal Foundation",
   },
   {
     video: 'https://www.youtube.com/embed/o1A2uGBuVRs?si=gk_zkJN1CtIWlTPk',
@@ -45,9 +45,9 @@ const SUSTAINABILITY_DATA = [
       "We celebrated mothers with Grihshobha",
   },
   {
-    video: 'https://www.youtube.com/embed/ulZAQ15RaZw?si=F72f00eu-uQCr2jJ',
+    video: 'https://www.youtube.com/embed/Vn6jwbZqfhA?si=iPz3NjklLnXpIBTI',
     title:
-      "Mothers Day",
+      "Apis Shapes The Future",
   },
 ];
 
