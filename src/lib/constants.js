@@ -94,6 +94,11 @@ import apisNews49 from "@/assets/images/Media/apisnews49.jpg"
  import Blog5 from '@/assets/images/our-blog/blog05.jpg';
  import Blog6 from '@/assets/images/our-blog/blog06.jpg';
  import Blog7 from '@/assets/images/our-blog/blog07.jpg';
+ import Thumbnail_ApisLatest from '@/assets/images/home-banner-section/thumbnail_apisLatest.jpeg'
+ import Thumbnail_ApisLatest2 from '@/assets/images/home-banner-section/thumbnail_apisLatest2.jpeg'
+ import Thumbnail_ApisLatest3 from '@/assets/images/home-banner-section/thumbnail_apisLatest3.jpeg'
+ import Thumbnail_ApisLatest4 from '@/assets/images/home-banner-section/thumbnail_apisLatest4.jpeg'
+ import Thumbnail_ApisLatest5 from '@/assets/images/home-banner-section/thumbnail_apisLatest5.jpeg'
 //  import Blog8 from '@/assets/images/our-blog/blog08.png';
 //  import Blog5 from '@/assets/images/our-blog/Blog0.jpg';
 
@@ -432,20 +437,20 @@ export const NEWS_DATA = [
     img: apisNews2,
     name: NewsName2,
     desc: "Apis India aims Rs 500 cr revenue in FY25",
-    date: " 09 JANUARY, 2024 / PRESS RELEASES",
+    date: "09 JANUARY, 2024 / PRESS RELEASES",
     link: "https://www.business-standard.com/companies/news/apis-india-to-expand-product-portfolio-aims-rs-500-cr-revenue-in-fy25-124010900680_1.html"
   },
   {
     img: apisNews3,
     name: NewsName3,
-    desc: "Organic Honey from Apis India",
-    date: " 10 JANUARY, 2024 / PRESS RELEASES",
+    desc: "Organic Honey from Apis India             ",
+    date: "10 JANUARY, 2024 / PRESS RELEASES",
     link: "https://bwhotelier.com/article/organic-honey-from-apis-india-505447"
   },
   {
     img: apisNews4,
     name: NewsName4,
-    desc: "Product launch from APIS India",
+    desc: "Product launch from APIS India             ",
     date: "09 JANUARY, 2024 / PRESS RELEASES",
     link: "https://www.youtube.com/watch?v=8A3SeOYH8ww"
   },
@@ -460,7 +465,7 @@ export const NEWS_DATA = [
     img: apisNews6,
     name: NewsName6,
     desc: "A Perfect Blend of Nutrition & Taste by Apis",
-    date: " 06 APRIL, 2023 / PRESS RELEASES",
+    date: "06 APRIL, 2023 / PRESS RELEASES",
     link: "https://biznewsdesk.com/business/a-perfect-blend-of-nutrition-tradition-taste-by-apis/"
   },
   {
@@ -474,14 +479,14 @@ export const NEWS_DATA = [
     img: apisNews8,
     name: NewsName6,
     desc: "Apis campaign for Ramadan speaks of personal",
-    date: " 23 MARCH, 2023 / PRESS RELEASES",
+    date: "23 MARCH, 2023 / PRESS RELEASES",
     link: "https://www.exchange4media.com/advertising-news/apis-campaign-for-ramadan-speaks-of-personal-well-being-126132.html"
   },
   {
     img: apisNews9,
     name: NewsName6,
     desc: "You Didn’t Know These Ways To Use Honey",
-    date: " 10 JANUARY, 2023 / PRESS RELEASES",
+    date: "10 JANUARY, 2023 / PRESS RELEASES",
     link: "https://www.slurrp.com/article/we-bet-you-didnt-know-these-creative-ways-to-use-honey-1672830183803"
   },
  
@@ -489,48 +494,48 @@ export const NEWS_DATA = [
     img: apisNews11,
     name: NewsName6,
     desc: "Pride of India Brands 2021",
-    date: " JANUARY, 2022 / PRESS RELEASES",
+    date: "JANUARY, 2022 / PRESS RELEASES",
     link: "https://www.linkedin.com/posts/exchange4media_e4mprideofindia-activity-6922891424749215745-aYje?utm_source=linkedin_share&utm_medium=android_app"
   },
   {
     img: apisNews12,
     name: NewsName6,
-    desc: "Pride of India Brands 2021",
+    desc: "Pride of India Brands 2021                    ",
     date: "JANUARY, 2022 / PRESS RELEASES",
     link: "https://www.exchange4media.com/marketing-news/e4m-pride-of-india-brands-2021-series-to-tell-success-stories-of-top-smbs-118044.html"
   },
   {
     img: apisNews13,
     name: NewsName6,
-    desc: "Afaqs",
+    desc: "Afaqs                                      ",
     date: "DECEMBER, 2021 / PRESS RELEASES",
     link: "https://www.afaqs.com/people-spotting/apis-india-appoints-sharad-vatss-as-marketing-and-sales-head"
   },
   {
     img: apisNews14,
     name: NewsName6,
-    desc: "Apis' Exclusive Interview",
+    desc: "Apis' Exclusive Interview                   ",
     date: "DECEMBER, 2021 / PRESS RELEASES",
     link: "https://apisindia.com/pdf/ApisExclusiveInterview.pdf"
   },
   {
     img: apisNews15,
     name: NewsName6,
-    desc: "Economic Times News",
+    desc: "Economic Times News                                ",
     date: "16/August, 2021 / PRESS RELEASES",
     link: "https://brandequity.economictimes.indiatimes.com/news/advertising/apis-india-ropes-in-milind-soman-as-the-brand-ambassador/85362992"
   },
   {
     img: apisNews10,
     name: NewsName6,
-    desc: "Apis India #ShuddhAurSaccha Campaign",
+    desc: "Apis India #ShuddhAurSaccha Campaign                 ",
     date: "14 DECEMBER, 2022 / PRESS RELEASES",
     link: "https://www.uniindia.com/apis-india-launches-shuddhaursaccha-campaign-promoting-its-honey-for-healthy-winters/press-releases/news/2878783.html"
   },
   {
     img: apisNews16,
     name: NewsName6,
-    desc: "PTI News",
+    desc: "PTI News                                             ",
     date: "23/APRIL, 2021 / PRESS RELEASES",
     link: "https://www.ptinews.com/pressrelease/46509_press-subAPIS-India-Launches-Digital-Campaign-During-Ramadan----SehatKaSaath"
   },
@@ -2867,3 +2872,56 @@ export const financialsSheet = {
   ]
 };
 
+export const LATEST_SLIDES = [
+  {
+    video:
+      "https://www.youtube.com/embed/U0P5fV9IF1c?si=pDY2Wt5HVtS0Hffe&amp;start=1",
+      img:
+    Thumbnail_ApisLatest,
+  },
+  {
+    video:
+      "https://www.youtube.com/embed/mDAY0a94MZU?si=BeiAtbDMKqXN9lJF&amp;start=1",
+      img:
+    Thumbnail_ApisLatest2,
+  },
+  {
+    video:
+      "https://www.youtube.com/embed/W-JTHS3025w?si=tcTpC8J1Cddo0ybE&amp;start=1",
+      img:
+    Thumbnail_ApisLatest3,
+  },
+  {
+    video:
+      "https://www.youtube.com/embed/kGOJpsTJNI8?si=TUKuH3NxLa3kEz9j&amp;start=1",
+      img:
+    Thumbnail_ApisLatest4,
+  },
+  {
+    video: "https://www.youtube.com/embed/NDDaneL4K8s?si=Tx_7ZixWDpHJzQHf",
+    img:
+    Thumbnail_ApisLatest5,
+  },
+];
+export const LATEST_SLIDES_IMAGES = [
+  {
+    img:
+    Thumbnail_ApisLatest,
+  },
+  {
+    img:
+    Thumbnail_ApisLatest2,
+  },
+  {
+    img:
+    Thumbnail_ApisLatest3,
+  },
+  {
+    img:
+    Thumbnail_ApisLatest4,
+  },
+  {
+    img:
+    Thumbnail_ApisLatest5,
+  },
+];
