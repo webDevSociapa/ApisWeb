@@ -196,8 +196,6 @@ export default function Media() {
         </div>
       </div>
 
-
-     
       {/* Carousel for Mobile View */}
      
 
