@@ -196,8 +196,11 @@ export default function Media() {
         </div>
       </div>
 
+<<<<<<< HEAD
 
      
+=======
+>>>>>>> 49768e6eb4e872ca816578fbc2b4b6c8d7451cfd
       {/* Carousel for Mobile View */}
      
 
