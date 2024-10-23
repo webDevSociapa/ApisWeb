@@ -430,7 +430,7 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="border border-[#85673D] embla__slide__number md:w-[460px] h-auto md:h-[590px] p-2 pb-0 flex flex-col !rounded-none bg-[#fff] apismedis" style={{ maxWidth: '90%', margin: '0 auto' }}>
+                  <div className="border border-[#85673D] embla__slide__number1 md:w-[460px] h-auto md:h-[590px] p-2 pb-0 flex flex-col !rounded-none bg-[#fff] apismedis" style={{ maxWidth: '90%', margin: '0 auto' }}>
                     <div className="relative w-full h-[200px] sm:h-[280px] md:h-[443px] overflow-hidden">
                       <Image
                         src={itm?.img}
