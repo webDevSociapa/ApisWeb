@@ -99,6 +99,9 @@ import apisNews49 from "@/assets/images/Media/apisnews49.jpg"
  import Thumbnail_ApisLatest3 from '@/assets/images/home-banner-section/thumbnail_apisLatest3.jpeg'
  import Thumbnail_ApisLatest4 from '@/assets/images/home-banner-section/thumbnail_apisLatest4.jpeg'
  import Thumbnail_ApisLatest5 from '@/assets/images/home-banner-section/thumbnail_apisLatest5.jpeg'
+ import MediaImage02 from '@/assets/images/home-banner-section/mediaImage02.jpeg'
+ import MediaImage01 from '@/assets/images/home-banner-section/mediaImage01.jpeg'
+
 //  import Blog8 from '@/assets/images/our-blog/blog08.png';
 //  import Blog5 from '@/assets/images/our-blog/Blog0.jpg';
 
@@ -427,33 +430,20 @@ export const PRODUCT_DATA = [
 
 export const NEWS_DATA = [
   {
-    img: apisNews1,
+    img: MediaImage01,
     name: NewsName1,
     desc: "Apis India Unveils New Product to Drive Fitness.",
     date: " 04 JANUARY, 2024 / PRESS RELEASES",
     link: "https://smestreet.in/infocus/apis-india-unveils-new-product-to-drive-fitness-and-wellness-revolution-2318097"
   },
   {
-    img: apisNews2,
+    img: MediaImage02,
     name: NewsName2,
     desc: "Apis India aims Rs 500 cr revenue in FY25",
     date: "09 JANUARY, 2024 / PRESS RELEASES",
     link: "https://www.business-standard.com/companies/news/apis-india-to-expand-product-portfolio-aims-rs-500-cr-revenue-in-fy25-124010900680_1.html"
   },
-  {
-    img: apisNews3,
-    name: NewsName3,
-    desc: "Organic Honey from Apis India             ",
-    date: "10 JANUARY, 2024 / PRESS RELEASES",
-    link: "https://bwhotelier.com/article/organic-honey-from-apis-india-505447"
-  },
-  {
-    img: apisNews4,
-    name: NewsName4,
-    desc: "Product launch from APIS India             ",
-    date: "09 JANUARY, 2024 / PRESS RELEASES",
-    link: "https://www.youtube.com/watch?v=8A3SeOYH8ww"
-  },
+  
   {
     img: apisNews5,
     name: NewsName5,
@@ -467,6 +457,21 @@ export const NEWS_DATA = [
     desc: "A Perfect Blend of Nutrition & Taste by Apis",
     date: "06 APRIL, 2023 / PRESS RELEASES",
     link: "https://biznewsdesk.com/business/a-perfect-blend-of-nutrition-tradition-taste-by-apis/"
+  },
+
+  {
+    img: apisNews3,
+    name: NewsName3,
+    desc: "Organic Honey from Apis India             ",
+    date: "10 JANUARY, 2024 / PRESS RELEASES",
+    link: "https://bwhotelier.com/article/organic-honey-from-apis-india-505447"
+  },
+  {
+    img: apisNews4,
+    name: NewsName4,
+    desc: "Product launch from APIS India             ",
+    date: "09 JANUARY, 2024 / PRESS RELEASES",
+    link: "https://www.youtube.com/watch?v=8A3SeOYH8ww"
   },
   {
     img: apisNews7,
