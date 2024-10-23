@@ -16,40 +16,27 @@ import DubaiUnit from "@/assets/images/home-banner-section/dubai-unit.png";
 import News2 from "@/assets/images/home-banner-section/news-2.png";
 import TrustSlide1 from "@/assets/images/home-banner-section/trust-slide-1.png";
 import HoneyBee from "@/assets/images/home-banner-section/honey-bee.png";
-import TrustSlide2 from "@/assets/images/home-banner-section/trust-slide-2.png";
-import TrustSlide3 from "@/assets/images/home-banner-section/trust-slide-3.png";
-import TrustSlide4 from '@/assets/images/home-banner-section/trust-Section4.png'
-import TrustSlide5 from '@/assets/images/home-banner-section/Almond-and-Honey1.png';
-import TrustSlide6 from '@/assets/images/home-banner-section/soya-chunk.png';
-import TrustSlide7 from '@/assets/images/home-banner-section/Peanut-Butter-Creamy.png';
-import TrustSlide8 from '@/assets/images/home-banner-section/Muesli-front.png';
-import TrustSlide9 from '@/assets/images/home-banner-section/Vector-smart.png';
+
 import ChocolateImg  from '@/assets/images/home-banner-section/ChocolateImg.png'
 import ChocolateBox from '@/assets/images/home-banner-section/ChocolateBox.png'
 // import HoneyBee from '@/assets/images/home-banner-section/honey-bee.png'
 // import TrustSlide10 from '@/assets/images/home-banner-section/Muesli-front.png';
 
-import HoneyMug from "@/assets/images/heart-of-bavaria-section/honey-mug.png";
-import HoneyNest from "@/assets/images/heart-of-bavaria-section/honey-nest.png";
 import TrustUpper from "@/assets/images/home-banner-section/trust-upper.png";
 import HoneyDhar from "@/assets/images/home-banner-section/honey-dhar.png";
 import TrustLower from "@/assets/images/home-banner-section/trust-lower.png";
 import EmblaCarousel from "../../Carousel/Carousel";
 import HoneyImg from "@/assets/images/home-banner-section/honey-img.png";
-import MediaPan from "@/assets/images/home-banner-section/media-pan.png";
-import AutoScrollCarousel from "../../AutoScrollCarousel";
 import Carasol from "../../MainCarousel";
 import { NEWS_DATA } from "@/lib/constants";
 import FlowerRun from '@/assets/images/home-banner-section/flowerRun.gif'
 import ReactAngle from '@/assets/images/home-banner-section/reactangle1.png'
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
-import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useState, useEffect } from 'react';
 import ClassicDates from '@/assets/images/home-banner-section/classicDates01.png'
 import ChocolateSpread from '@/assets/images/home-banner-section/chocoFlakes01.png'
-import Vermicelli from '@/assets/images/home-banner-section/vermicillie.png'
   import AlmondHoney from '@/assets/images/home-banner-section/cornFlakes01.png'
   import Saffron from '@/assets/images/home-banner-section/saffron01.png'
   import SoyaChunks from '@/assets/images/home-banner-section/soyaChunks01.png'
@@ -186,9 +173,7 @@ export default function HomePage() {
 
 
 
-  const openModal = (video) => {
-    console.log("video",video);
-    
+  const openModal = (video) => {    
     setCurrentVideo(video);
     setIsModalOpen(true);
   };
@@ -240,7 +225,6 @@ export default function HomePage() {
 
   //   return () => clearInterval(interval);
   // }, []);
-
   useEffect(()=>{
     window.scrollTo(0,0);
   },[])
@@ -456,14 +440,14 @@ export default function HomePage() {
                         className="bg-opacity-40 w-full h-full"
                       />
                     </div>
-                    <div className="p-4">
-                      <p className="font-bold text-[#85673D] text-sm md:text-xl mb-1 line-clamp-2">
-                        {itm.desc}
-                      </p>
-                      <p className="text-[#525252] text-xs md:text-lg">
-                        {itm.date}
-                      </p>
-                    </div>
+                    <div className="p-4 text-left"> {/* Ensure text is left-aligned */}
+                <p className="font-bold text-[#85673D] text-sm md:text-xl mb-1 line-clamp-2 overflow-hidden">
+                  {itm.desc}
+                </p>
+                <p className="text-[#525252] text-xs md:text-lg">
+                  {itm.date}
+                </p>
+              </div>
                   </div>
                 </a>
               </div>
@@ -724,6 +708,12 @@ export default function HomePage() {
           className="container-fluid p-0"
           style={{ position: "relative", left: "88px" }}
         ></div>
+      </div>
+
+      <div>
+        <video
+        src={""}
+        />
       </div>
 
       {/* Work Place Culture */}
