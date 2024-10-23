@@ -56,6 +56,9 @@ import Vermicelli from '@/assets/images/home-banner-section/vermicillie.png'
   import Muesli from '@/assets/images/home-banner-section/muesli01.png'
   import OrganicHoneyGreenCard from '@/assets/images/home-banner-section/organicHoneyGreenCard1.png'
   import HoneyStick from '@/assets/images/home-banner-section/stickHoney.png'
+  import { LATEST_SLIDES,LATEST_SLIDES_IMAGES } from "@/lib/constants";
+  import Tvc_Apis01 from '@/assets/images/home-banner-section/tvc_apis01.jpeg'
+  import Tvc_Apis02 from '@/assets/images/home-banner-section/tvc_apis02.jpeg'
 
 
 
@@ -126,27 +129,7 @@ export default function HomePage() {
     //   title: "Vermicelli",
     // },
   ];
-  const LATEST_SLIDES = [
-    {
-      video:
-        "https://www.youtube.com/embed/U0P5fV9IF1c?si=pDY2Wt5HVtS0Hffe&amp;start=1",
-    },
-    {
-      video:
-        "https://www.youtube.com/embed/mDAY0a94MZU?si=BeiAtbDMKqXN9lJF&amp;start=1",
-    },
-    {
-      video:
-        "https://www.youtube.com/embed/W-JTHS3025w?si=tcTpC8J1Cddo0ybE&amp;start=1",
-    },
-    {
-      video:
-        "https://www.youtube.com/embed/kGOJpsTJNI8?si=TUKuH3NxLa3kEz9j&amp;start=1",
-    },
-    {
-      video: "https://www.youtube.com/embed/NDDaneL4K8s?si=Tx_7ZixWDpHJzQHf",
-    },
-  ];
+ 
   const AVAILABILITY_SLIDE = [
     { img: AmazonLogo, path: "https://www.amazon.in/s?k=apis&crid=2CJFWNXIDZI1V&sprefix=apis%2Caps%2C429&ref=nb_sb_noss_1" },
     { img: JioMart, path: "https://www.jiomart.com/search/apis" },
@@ -198,6 +181,24 @@ export default function HomePage() {
   };
 
   const [currentProduct, setCurrentProduct] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false); // State to control modal visibility
+  const [currentVideo, setCurrentVideo] = useState(''); // State to hold the current video URL
+
+
+
+  const openModal = (video) => {
+    console.log("video",video);
+    
+    setCurrentVideo(video);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setCurrentVideo('');
+  };
+
+
   const products = [
     {
       name: 'Organic Honey',
@@ -626,24 +627,47 @@ export default function HomePage() {
         <div className="py-6 md:py-10 w-[90%] flex items-center justify-center">
           <EmblaCarousel options={OPTIONS}>
             {LATEST_SLIDES.map((itm, index) => (
-              <div className="embla__slide" key={index}>
+          <div className="embla__slide" key={index}> {/* Open modal on click */}
                 <div className="embla__slide__number !h-[246px] w-full">
-                  <iframe
-                    width="360px"
-                    height="246px"
+                  <Image
+                   width={350}
+                   height={346}
                     className="rounded w-full sm:w-[360px] sm:h-[246px]"
-                    src={itm?.video}
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
+                    src={itm.img}
+                    // title="YouTube video player"
+                    // frameborder="0"
+                    onClick={() => openModal(itm.video)}
+                    // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    // referrerpolicy="strict-origin-when-cross-origin"
+                    // allowfullscreen
+                    />
                 </div>
               </div>
             ))}
           </EmblaCarousel>
         </div>
+       {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50" onClick={closeModal}> {/* Close modal on overlay click */}
+          <div className="bg-white p-4 rounded-lg w-11/12 md:w-3/4 lg:w-1/2" onClick={(e) => e.stopPropagation()}> {/* Prevent closing on content click */}
+          <div className="flex justify-end mb-2"> {/* Added flex container to align button to the right */}
+            <button className="text-end text-xl" onClick={closeModal}>X</button> {/* Close button */}
+            </div>
+            <iframe
+              width="450px"
+              height="450px"
+              src={currentVideo}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="rounded-lg w-full"
+            ></iframe>
+          </div>
+        </div>
+      )}
+       
+
         <div className="w-full tvcSectionResponsive">
           <div className="md:tvc-bg relative !w-full">
             <div className="flex flex-col gap-0 md:gap-0 sm: gap-0">
@@ -664,25 +688,29 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row items-center w-full tvc-bg sm:justify-center gap-10 pt-5 md:-mt-[150px] w-full xl:-mt-40 sm:mt-0 tvcyoutubeVideo">
-              <iframe
+              <Image
                 className="rounded md:h-[360px] h-auto md:w-[580px] max-w-[500px] min-h-[200px] w-auto"
-                src="https://www.youtube.com/embed/fFesUk0sBII?si=q-QGdxRPqVK8W82S"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-              <iframe
+                src={Tvc_Apis01}
+                onClick={() => openModal('https://www.youtube.com/embed/fFesUk0sBII?si=q-QGdxRPqVK8W82S')}
+
+                // title="YouTube video player"
+                // frameborder="0"
+                // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                // referrerpolicy="strict-origin-when-cross-origin"
+                // allowfullscreen
+             />
+              <Image
                 className="rounded hidden lg:inline md:h-[360px] h-auto md:w-[580px] max-w-[500px] min-h-[200px]"
-                src="https://www.youtube.com/embed/6PqRMIjAEUw?si=q5neKZV8zh5OyZOx"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
+                src={Tvc_Apis02}
+                onClick={() => openModal('https://www.youtube.com/embed/6PqRMIjAEUw?si=q5neKZV8zh5OyZOx')}
+                // title="YouTube video player"
+                // frameborder="0"
+                // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                // referrerpolicy="strict-origin-when-cross-origin"
+                // allowfullscreen
+              />
             </div>
+            
             <Image
               src={Fruit}
               // width={601}

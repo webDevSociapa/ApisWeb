@@ -94,6 +94,11 @@ import apisNews49 from "@/assets/images/Media/apisnews49.jpg"
  import Blog5 from '@/assets/images/our-blog/blog05.jpg';
  import Blog6 from '@/assets/images/our-blog/blog06.jpg';
  import Blog7 from '@/assets/images/our-blog/blog07.jpg';
+ import Thumbnail_ApisLatest from '@/assets/images/home-banner-section/thumbnail_apisLatest.jpeg'
+ import Thumbnail_ApisLatest2 from '@/assets/images/home-banner-section/thumbnail_apisLatest2.jpeg'
+ import Thumbnail_ApisLatest3 from '@/assets/images/home-banner-section/thumbnail_apisLatest3.jpeg'
+ import Thumbnail_ApisLatest4 from '@/assets/images/home-banner-section/thumbnail_apisLatest4.jpeg'
+ import Thumbnail_ApisLatest5 from '@/assets/images/home-banner-section/thumbnail_apisLatest5.jpeg'
 //  import Blog8 from '@/assets/images/our-blog/blog08.png';
 //  import Blog5 from '@/assets/images/our-blog/Blog0.jpg';
 
@@ -2867,3 +2872,56 @@ export const financialsSheet = {
   ]
 };
 
+export const LATEST_SLIDES = [
+  {
+    video:
+      "https://www.youtube.com/embed/U0P5fV9IF1c?si=pDY2Wt5HVtS0Hffe&amp;start=1",
+      img:
+    Thumbnail_ApisLatest,
+  },
+  {
+    video:
+      "https://www.youtube.com/embed/mDAY0a94MZU?si=BeiAtbDMKqXN9lJF&amp;start=1",
+      img:
+    Thumbnail_ApisLatest2,
+  },
+  {
+    video:
+      "https://www.youtube.com/embed/W-JTHS3025w?si=tcTpC8J1Cddo0ybE&amp;start=1",
+      img:
+    Thumbnail_ApisLatest3,
+  },
+  {
+    video:
+      "https://www.youtube.com/embed/kGOJpsTJNI8?si=TUKuH3NxLa3kEz9j&amp;start=1",
+      img:
+    Thumbnail_ApisLatest4,
+  },
+  {
+    video: "https://www.youtube.com/embed/NDDaneL4K8s?si=Tx_7ZixWDpHJzQHf",
+    img:
+    Thumbnail_ApisLatest5,
+  },
+];
+export const LATEST_SLIDES_IMAGES = [
+  {
+    img:
+    Thumbnail_ApisLatest,
+  },
+  {
+    img:
+    Thumbnail_ApisLatest2,
+  },
+  {
+    img:
+    Thumbnail_ApisLatest3,
+  },
+  {
+    img:
+    Thumbnail_ApisLatest4,
+  },
+  {
+    img:
+    Thumbnail_ApisLatest5,
+  },
+];

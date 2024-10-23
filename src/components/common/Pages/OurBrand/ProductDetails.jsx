@@ -66,6 +66,7 @@ import SoyaChunks from '@/assets/images/home-banner-section/soyaChunks01.png'
 import Muesli from '@/assets/images/home-banner-section/muesli01.png'
 import ClassicDates from '@/assets/images/home-banner-section/classicDates01.png'
 import ChocolateSpread from '@/assets/images/home-banner-section/chocoFlakes01.png'
+import { LATEST_SLIDES } from "@/lib/constants";
 
 
 
@@ -169,27 +170,27 @@ const GLIMPSES_SLIDES = [
   },
 ];
 
-const LATEST_SLIDES = [
-  {
-    video:
-      "https://www.youtube.com/embed/U0P5fV9IF1c?si=pDY2Wt5HVtS0Hffe&amp;start=1",
-  },
-  {
-    video:
-      "https://www.youtube.com/embed/mDAY0a94MZU?si=BeiAtbDMKqXN9lJF&amp;start=1",
-  },
-  {
-    video:
-      "https://www.youtube.com/embed/W-JTHS3025w?si=tcTpC8J1Cddo0ybE&amp;start=1",
-  },
-  {
-    video:
-      "https://www.youtube.com/embed/kGOJpsTJNI8?si=TUKuH3NxLa3kEz9j&amp;start=1",
-  },
-  {
-    video: "https://www.youtube.com/embed/NDDaneL4K8s?si=Tx_7ZixWDpHJzQHf",
-  },
-];
+// const LATEST_SLIDES = [
+//   {
+//     video:
+//       "https://www.youtube.com/embed/U0P5fV9IF1c?si=pDY2Wt5HVtS0Hffe&amp;start=1",
+//   },
+//   {
+//     video:
+//       "https://www.youtube.com/embed/mDAY0a94MZU?si=BeiAtbDMKqXN9lJF&amp;start=1",
+//   },
+//   {
+//     video:
+//       "https://www.youtube.com/embed/W-JTHS3025w?si=tcTpC8J1Cddo0ybE&amp;start=1",
+//   },
+//   {
+//     video:
+//       "https://www.youtube.com/embed/kGOJpsTJNI8?si=TUKuH3NxLa3kEz9j&amp;start=1",
+//   },
+//   {
+//     video: "https://www.youtube.com/embed/NDDaneL4K8s?si=Tx_7ZixWDpHJzQHf",
+//   },
+// ];
 
 const HEALTH_BENEFITS = [
   {
@@ -677,6 +678,23 @@ const ProductDetails = () => {
     (itm) => itm.id == searchParams.get("product_id")
   );
 
+  const [isModalOpen, setIsModalOpen] = useState(false); // State to control modal visibility
+  const [currentVideo, setCurrentVideo] = useState(''); // State to hold the current video URL
+
+
+
+  const openModal = (video) => {
+    console.log("video",video);
+    
+    setCurrentVideo(video);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setCurrentVideo('');
+  };
+
 
   console.log("selectedContent",selectedContent);
   const renderBenefits = (benefits) => {
@@ -1025,17 +1043,20 @@ const ProductDetails = () => {
               {LATEST_SLIDES.map((itm, index) => (
                 <div className="embla__slide" key={index}>
                   <div className="embla__slide__number">
-                    <iframe
-                      width="300px"
-                      height="385px"
-                      className="rounded w-full sm:w-[300px] w-[170px] h-[260px] sm:h-[385px] border  border-[#9F7B49]"
-                      src={itm?.video}
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerpolicy="strict-origin-when-cross-origin"
-                      allowfullscreen
-                    ></iframe>
+                    <Image
+                    width={350}
+                    height={346}
+                      // width="300px"
+                      // height="385px"
+                      className="rounded w-full sm:w-[360px] sm:h-[246px]"
+                      src={itm?.img}
+                      onClick={()=>openModal(itm.video)}
+                      // title="YouTube video player"
+                      // frameborder="0"
+                      // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      // referrerpolicy="strict-origin-when-cross-origin"
+                      // allowfullscreen
+                    />
                   </div>
                 </div>
               ))}
@@ -1043,6 +1064,26 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50" onClick={closeModal}> {/* Close modal on overlay click */}
+          <div className="bg-white p-4 rounded-lg w-11/12 md:w-3/4 lg:w-1/2" onClick={(e) => e.stopPropagation()}> {/* Prevent closing on content click */}
+          <div className="flex justify-end mb-2"> {/* Added flex container to align button to the right */}
+            <button className="text-end text-xl" onClick={closeModal}>X</button> {/* Close button */}
+            </div>
+            <iframe
+              width="450px"
+              height="450px"
+              src={currentVideo}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="rounded-lg w-full"
+            ></iframe>
+          </div>
+        </div>
+      )}
       <div className="w-full relative flex flex-col justify-center items-center">
         <div className="flex flex-col gap-4 sm:gap-10 px-4 lg:px-36 pb-0 pt-6 md:py-6">
           <div className="flex flex-col items-center justify-center gap-4 md:gap-5">

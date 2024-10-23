@@ -23,7 +23,7 @@ const DUMMY_DATA = {
   },
   2: {
     "Board Associates": auditCommitteeMembers,
-    "Board Subsidiary Financials": ["Board Subsidiary Financials Data"]
+    "Board Subsidiary Financials": []
   },
   3: {
     "Corporate Associates": CORPORATE_GOVERNANACE,
@@ -70,10 +70,12 @@ export default function Investors() {
   }, [selectedTab]);
 
   const getDataForSelectedType = () => {
-    return DUMMY_DATA[selectedTab]?.[selectedType] || ["No data available"];
+    if (selectedTab === 2 && selectedType === "Board Committees") {
+        return <AuditCommittee />;
+    }
+    return DUMMY_DATA[selectedTab]?.[selectedType] || []; 
   };
 
- 
   const AuditCommittee =() =>{
     return (
       <div className="audit-committee">
@@ -105,8 +107,15 @@ export default function Investors() {
         {INVESTER_TABS.map((itm) => (
           <p
             key={itm.id}
-            className={`w-full flex items-center relative justify-center min-w-max cursor-pointer text-sm md:text-lg 2xl:text-xl border border-[#AE844A] ${selectedTab === itm.id ? "bg-[#AE844A] font-bold text-white shadow-[0px_4px_6px_rgba(0,0,0,0.2)]" : "text-[#3F3F3F] bg-[#FFFBF6]"}`}
-            onClick={() => setSelectedTab(itm.id)}
+            className={`w-full flex items-center relative justify-center min-w-max cursor-pointer text-sm md:text-lg 2xl:text-xl border border-[#AE844A] ${selectedTab === itm.id ? "bg-[#AE844A] font-bold text-white shadow-[0px_4px_6px rgba(0,0,0,0.2)]" : "text-[#3F3F3F] bg-[#FFFBF6]"}`}
+            onClick={() => {
+              setSelectedTab(itm.id);
+              if (itm.id === 2) { // If the second tab is clicked
+                setSelectedType("Board Associates"); // Set the type to "Board Associates"
+              } else {
+                setSelectedType(INVESTER_TABS.find(tab => tab.id === itm.id)?.types[0]); // Set to the first type of the selected tab
+              }
+            }}
           >
             <span className="p-2 px-3 md:p-4 md:px-5">{itm.title}</span>
             <div className={`${selectedTab === itm.id ? "shadow-md" : ""} h-full absolute w-full`} />
@@ -140,33 +149,38 @@ export default function Investors() {
 
         {/* Content based on selected type */}
         <div className="p-4 md:p-8 py-4 md:py-16 md:!pb-10 w-full">
-          <p className="font-bold text-[#9F7B49] md:text-[40px] text-[20px] mb-4">
-            Data for {selectedType}
-          </p>
-          <div className="flex flex-wrap w-full gap-4">
-            {getDataForSelectedType().map((item, index) => (
-              <div
-                key={index}
-                className="border w-full border-[#AE844A] rounded-[20px] bg-[#FFFBF6] py-3 px-4"
-              >
-                <div className="flex items-center justify-between">
-                  {/* Rendering specific object properties */}
-                  <p className="text-black text-xs md:text-lg">{item.name || item}</p> 
-                  <div className="me-4">
-                    <a
-                      href={item.path || "#"} 
-                      className="h-[20px] w-[20px] md:h-[40px] md:w-[40px] border border-[#AE844A] rounded-full flex items-center justify-center cursor-pointer text-[#AE844A] hover:text-white hover:bg-[#AE844A]"
-                    >
-                      <FontAwesomeIcon
-                        icon={faArrowRight}
-                        className="text-xs md:text-xl"
-                      />
-                    </a>
+          {selectedTab === 2 ? ( // Check if the active tab is "Board Committees"
+            <AuditCommittee /> // Render the AuditCommittee component
+          ) : (
+            <>
+              <p className="font-bold text-[#9F7B49] md:text-[40px] text-[20px] mb-4">
+                Data for {selectedType}
+              </p>
+              <div className="flex flex-wrap w-full gap-4">
+                {getDataForSelectedType().map((item, index) => (
+                  <div
+                    key={index}
+                    className="border w-full border-[#AE844A] rounded-[20px] bg-[#FFFBF6] py-3 px-4"
+                  >
+                    <div className="flex items-center justify-between">
+                      <p className="text-black text-xs md:text-lg">{item.name || "No Name"}</p> 
+                      <div className="me-4">
+                        <a
+                          href={item.path || "#"} 
+                          className="h-[20px] w-[20px] md:h-[40px] md:w-[40px] border border-[#AE844A] rounded-full flex items-center justify-center cursor-pointer text-[#AE844A] hover:text-white hover:bg-[#AE844A]"
+                        >
+                          <FontAwesomeIcon
+                            icon={faArrowRight}
+                            className="text-xs md:text-xl"
+                          />
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </>
+          )}
         </div>
       </div>
     </div>
