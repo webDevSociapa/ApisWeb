@@ -18,6 +18,9 @@ import jam from '@/assets/images/Media/jam.png'
 import honey from '@/assets/images/Media/honey.png'
 import RingCircle from '@/assets/images/Media/ringCircle.png'
 import CampaingMedia from '@/assets/images/Media/campaignBg.png'
+import mediaGallery001 from '@/assets/images/Media/mediaGallery001.png'
+import mediaGallery002 from '@/assets/images/Media/mediaGallery002.png'
+import mediaGallery003 from '@/assets/images/Media/mediaGallery003.png'
 // import News1 from "@/assets/images/Media/News1.png";
 // import News2 from "@/assets/images/Media/News2.png";
 // import News3 from "@/assets/images/Media/News3.png";
@@ -31,27 +34,27 @@ import EmblaCarousel from "../../Carousel/Carousel";
 
 const LATEST_SLIDES = [
   {
-    img: WomenDay,
+    img: mediaGallery001,
     title: "Women's Day Celebration",
   },
   {
-    img: AsianExpo,
+    img: mediaGallery002,
     title: "Asian Expo 2019",
   },
   {
-    img: Ahar,
+    img: mediaGallery003,
     title: "Aahar 2019",
   },
   {
-    img: WomenDay,
+    img: mediaGallery001,
     title: "Women's Day Celebration",
   },
   {
-    img: AsianExpo,
+    img: mediaGallery002,
     title: "Asian Expo 2019",
   },
   {
-    img: Ahar,
+    img: mediaGallery003,
     title: "Aahar 2019",
   },
 ];

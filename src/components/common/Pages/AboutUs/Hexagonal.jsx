@@ -67,7 +67,6 @@ export default function HexagonalPage() {
             <div className={`${styles['hex-bottom2']} ${styles.mt2}`}>
               <div className={styles.imageWrapper}>
                 <Image src={Polygon5} alt="John Doe" className={styles.imgData} />
-                <span className={styles.tooltip}>John Doe</span>
               </div>
               
             </div>
