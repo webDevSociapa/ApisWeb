@@ -56,14 +56,41 @@ const LATEST_SLIDES = [
   },
 ];
 
+// src/components/common/Pages/Media/index.jsx
+
+const IMAGE_DATA = [
+  {
+    src: honey,
+    alt: "Honey",
+    name:"Apis Honey",
+    colorShadow: 'CDB699'
+  },
+  {
+    src: jam,
+    alt: "Jam",
+    name:"Apis Jam",
+    colorShadow: 'E0C4B2'
+
+  },
+  {
+    src: Campaign,
+    alt: "Campaign",
+    name:"Apis Campaigns",
+    colorShadow: 'F5D5AC'
+
+  },
+];
+
+
 export default function Media() {
   const OPTIONS = { loop: true };
   const [isMobile, setIsMobile] = useState(false); // State to track if the screen is mobile
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 500); // Update state based on window width
+      setIsMobile(window.innerWidth < 768); // Update state based on window width
     };
+
 
     handleResize(); // Check initial size
     window.addEventListener('resize', handleResize); // Add event listener
@@ -72,6 +99,9 @@ export default function Media() {
       window.removeEventListener('resize', handleResize); // Cleanup on unmount
     };
   }, []);
+
+console.log("isMobile",);
+
 
   return (
     <>
@@ -196,8 +226,109 @@ export default function Media() {
         </div>
       </div>
 
+
+      <div className="flex flex-wrap justify-center mt-[120px] gap-10 w-full campaignmedia">
+      {!isMobile ? <div className='grid grid-cols-1 md:grid-cols-2 xl: -mx-4'>      
+            <div className="flex flex-col items-center gap-14 grid grid-cols-1 divide-y">
+              <div className="w-full md:w-[470px] h-[382px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#CDB699] to-[#CDB699] shadow-[2px_2px_2px_#CDB699] relative">
+                <p className='text-center font-literata font-semibold text-[30px]'>Apis Honey </p>
+                <Image src={honey} alt="Honey" className="bg-transparent p-[9px] mt-0" />
+              </div>
+              <div className="w-full md:w-[470px] h-[382px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#E0C4B2] to-[#E0C4B2] shadow-[2px_2px_2px_#E0C4B2] relative md:-mt-[140px] mt-[10px]">
+              <p className='text-center font-literata font-semibold text-[30px]'>Apis Jam </p>
+
+                <Image src={jam} alt="Jam" className="bg-transparent p-[9px] mt-0" />
+              </div>
+              <div className="">
+                {/* <div className="relative flex w-full bg-[#FFF9F0] mt-10 border-2 h-[800px]"> */}
+  
+    {/* </div> */}
+              </div>
+            </div>
+            <div className="text-center mt-8 px-14">
+              <h4 className="uppercase font-semibold text-[34px] font-literata">Our Campaigns</h4>
+              <p className="w-full md:w-[502px] text-[17px] leading-[31.79px] mt-4 font-jost px-20">
+                Dive into Apis India’s successful campaigns that reflect our dedication to creativity and impact.
+                Each campaign is crafted to resonate with our audience and showcase our brand’s strengths.
+              </p>
+              <div className='w-full md:w-[470px] h-[500px] p-[50px] flex flex-col items-center relative'> {/* Changed to flex-col for mobile layout */}
+                  <div className='absolute flex justify-center'> {/* Centering the Ring1 image */}
+                  <Image
+                    src={Ring1}
+                    className="rotate-animation"
+                  />
+                </div>
+                <div className="m-12"> {/* Added margin-top to create space below Ring1 */}
+                  <Image
+                    src={handhoney}
+                    className="w-[250px]"
+                  />
+                </div>
+              </div>
+              <div className="w-full md:w-[470px] h-[382px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#F5D5AC] to-[#F5D5AC] shadow-[2px_2px_2px_#F5D5AC] relative md:mt-[60px] mt-[20px] -ml-[25px]">
+              <p className='text-center font-literata font-semibold text-[30px]'>Apis Campaigns </p>
+
+                <Image src={Campaign} alt="Campaign" className="bg-transparent p-[9px] mt-0" />
+              </div>
+            </div>
+          </div> :
+          <>
+            <div className="text-center mt-8">
+              <h4 className="uppercase font-semibold text-[34px] text-literata color-[#9F7B49]">Our Campaigns</h4>
+              <p className="w-full md:w-[502px] text-[17px] leading-[31.79px] px-8 mt-4 font-jost">
+                Dive into Apis India’s successful campaigns that reflect our dedication to creativity and impact.
+                Each campaign is crafted to resonate with our audience and showcase our brand’s strengths.
+              </p>
+              {/* <div className='w-full md:w-[470px] h-[500px] p-[50px] flex flex-col items-center relative RingMobileView'>
+                <div className='absolute flex justify-center'> 
+                  <Image
+                    src={Ring1}
+                    className="rotate-animation RingMobileViewImage"
+                  />
+                </div>
+                <div className="m-12"> 
+                  <Image
+                    src={handhoney}
+                    className="w-[250px] handhoneyMobileView"
+                  />
+                </div>
+              </div> */}
+            </div>
+            <div className="flex flex-col items-center w-full"> {/* Added w-full for full width */}
+              <EmblaCarousel options={{ loop: true, autoplay: true, autoplayDelay: 3000 }}>
+                {IMAGE_DATA.map((item, index) => (
+                  <div className="embla__slide" key={index}> {/* Open modal on click */}
+                    <div className="embla__slide__number h-full w-full flex items-center justify-center"> {/* Full height and centered */}
+
+                    <div
+                        key={index}
+                        className="w-full h-full p-4 rounded-[72px_36px_34px_0] flex flex-col items-center justify-center" // Changed to flex-col for vertical alignment
+                        style={{
+                          background: `linear-gradient(to right, #${item.colorShadow}, #${item.colorShadow})`,
+                          boxShadow: `2px 2px 2px #${item.colorShadow}`
+                        }}
+                      >
+                        <p className='text-center font-literata font-semibold text-[22px]'>{item.name}</p>
+                        <Image src={item.src} alt={item.alt} className="bg-transparent p-4" /> {/* Image below the text */}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </EmblaCarousel>
+            </div>
+          </>
+        
+  
+          
+          
+              }
+  
+        
+  
+  
+
       {/* Carousel for Mobile View */}
-     
+     </div>
 
       {/* Modal Section */}
     </>
@@ -207,6 +338,7 @@ export default function Media() {
 Media.propTypes = {
   initialData: PropTypes.object,
 };
+
 
 
 

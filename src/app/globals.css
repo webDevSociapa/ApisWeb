@@ -931,6 +931,7 @@ input[type="password"]:-webkit-autofill:active {
   height: 1262px;
 }
 
+
 .videoHoney{
   border: 4px solid;
   height: 600px;
@@ -1058,4 +1059,38 @@ input[type="password"]:-webkit-autofill:active {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2 !important; /* Limit to 2 lines */
   overflow: hidden;
+}
+
+@media(max-width: 768px){
+  .campaignmedia{
+    background-color: #FFF9F0 !important;
+    background-image: none !important;
+    background-size: 100% 100% !important;
+    height: 500px !important;
+  }
+}
+@media(min-width: 465px) and (max-width: 768px){
+  .campaignmedia{
+    background-color: #FFF9F0 !important;
+    background-image: none !important;
+    background-size: 100% 100% !important;
+    height: 650px !important;
+  }
+}
+
+.RingMobileView{
+  height: 400px;
+  width: 400px;
+  margin: auto;
+}
+.RingMobileViewImage{
+  width: 200px;
+  height: 200px;
+}
+
+.handhoneyMobileView{
+  width: 248px;
+  height: 202px;
+  margin-top: -49px;
+  padding: 20px
 }

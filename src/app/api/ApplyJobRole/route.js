@@ -35,7 +35,6 @@ export async function POST(req){
             const database = client.db('JobRole');
             const formDataCollection = database.collection('JobRole01');
             const data = await formDataCollection.insertOne(body);
-            console.log("data12", data);
             
             const transporter = nodemailer.createTransport({
                 service: 'gmail',
