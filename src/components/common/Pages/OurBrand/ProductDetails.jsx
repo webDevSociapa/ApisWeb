@@ -684,7 +684,6 @@ const ProductDetails = () => {
 
 
   const openModal = (video) => {
-    console.log("video",video);
     
     setCurrentVideo(video);
     setIsModalOpen(true);

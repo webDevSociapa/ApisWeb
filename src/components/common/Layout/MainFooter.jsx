@@ -22,6 +22,7 @@ const MainFooter = () => {
   const routerPath = usePathname();
   const locale = routerPath.split("/")[1];
 
+
   return (
     <footer className="bottom-0 z-10 w-full bg-[#FFF9F0]">
       <div className="mx-auto flex w-full flex-col">
@@ -45,7 +46,7 @@ const MainFooter = () => {
                 return (
                   <Link
                     key={path.url}
-                    href={tabUrlWithLocale}
+                    href={path.url === "/our-brand" ? "#" : tabUrlWithLocale}
                     className={cn(
                       "w-fit text-sm md:text-lg font-bold text-[#9F7B49] lg:text-base lg:leading-3"
                     )}
@@ -95,7 +96,7 @@ const MainFooter = () => {
                   />
                 </div>
                 <div className="text-sm md:text-base xl:text-lg">
-                  <p>Toll free number for apis Customer Service: </p>
+                  <p>Toll free number for Apis Customer Service: </p>
                   <p>+91-11-43206666</p>
                 </div>
               </div>

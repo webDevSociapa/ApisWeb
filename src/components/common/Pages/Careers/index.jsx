@@ -157,7 +157,6 @@ export default function Careers() {
 
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
-    console.log("files",files);
     
     setFormData(prevData => ({
       ...prevData,

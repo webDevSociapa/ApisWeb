@@ -68,7 +68,7 @@ export default function HomePage() {
     },
     {
       img: Muesli,
-      content: "Muesli Crafted with wholesome ingredients for a nourishing start to your day",
+      content: "Muesli crafted with wholesome ingredients for a nourishing start to your day",
       title: "Muesli"
     },
     {
@@ -126,39 +126,6 @@ export default function HomePage() {
     { img: DMart, path: "https://www.dmart.in/search?searchTerm=apis" },
   ];
 
-  const MEDIA_SLIDES = [
-    {
-      img: News1,
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      title: "Organic Honey",
-    },
-    {
-      img: News2,
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      title: "Chocolate Spread",
-    },
-    {
-      img: News1,
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      title: "Organic Honey",
-    },
-    {
-      img: News2,
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      title: "Chocolate Spread",
-    },
-    {
-      img: News1,
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      title: "Organic Honey",
-    },
-    {
-      img: News2,
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      title: "Chocolate Spread",
-    },
-  ];
-
   const handleJoinUs = () => {
     router.push('/careers#join-us');
   };
@@ -203,21 +170,7 @@ export default function HomePage() {
     },
     
   ];
-  const productsData  = [
-    {
-      name: 'Organic Honey',
-      description: "Nature's golden nectar, pure and organic",
-      image: HoneyImg,
-      productImage: TrustSlide1,
-      bgColor: 'home-green-bg',
-    },
-    {
-      name: 'Chocolate Spread',
-      description: "Indulgent and rich, perfect for any treat",
-      image: ChocolateImg,
-    }
-  ]
-
+ 
   // useEffect(() => {
   //   const interval = setInterval(() => {
   //     setCurrentProduct((prev) => (prev + 1) % products.length);
@@ -252,7 +205,7 @@ export default function HomePage() {
             {/* Line 3 */}
             <p className="text-end text-[24px] md:text-[60px] font-bold text-[#ffffff]">
               <span className="text-shadow">OF</span>
-              <span className="text-shadow">EXCELLENCE</span>
+              <span className="text-shadow"> EXCELLENCE</span>
             </p>
           </div>
         </div>
@@ -276,7 +229,7 @@ export default function HomePage() {
             </div>
             <p className="text-center text-[16px] md:text-[24px] font-medium text-[#fffff]" style={{ fontFamily: "jost" }}>
               We are ISO 22000 certified by Intertek which is a documented
-              procedure that applies to food Safety Management System framed by
+              procedure that applies to Food Safety Management System framed by
               International body. From producing honey off our own hives to
               marketing the finished retail packs around the globe, we offer the
               consumer a quality product every time.
@@ -288,7 +241,7 @@ export default function HomePage() {
               day-to-day choices that weave the most profound stories of character & growth.
             </p>
             <h3 className="text-center text-[20px] md:text-[40px] font-bold text-[#9F7B49] mt-0 md:mt-0">
-              The Taste Is What Makes Difference
+               Taste is What Makes the Difference
             </h3>
           </div>
         </div>
@@ -338,8 +291,7 @@ export default function HomePage() {
       <div className="px-0 md:px-2 w-full mb-12 mt-6 md:mt-0">
         <div className="home-story-bg py-8 flex flex-col items-center">
           <p className="uppercase text-sm text-center text-[22px] md:text-lg font-medium text-[#585858] font-medium" style={{ fontFamily: "jost" }}>
-          Find Your Favorite Choices Of A Hearty Meal
-          Products That Make A Difference
+          Find Your Favorite Choices Of A Hearty Meals
                     </p>
           {/* <p className="uppercase text-sm md:text-lg font-medium text-[#585858] font-jost">
             of character & growth.
@@ -411,10 +363,10 @@ export default function HomePage() {
       {/* API Media */}
       {/*   */}
       <div className="relative w-full flex items-center flex-col justify-center apiMediaSection overflow-hidden">
-        <p className="text-xs md:text-base text-center text-[#585858] px-4 uppercase font-jost text-medium sm:text-[14px] font-jost font-normal">
-          Stay updated with the latest news, events, and media coverage of APIS India.
+      <p className="text-xs md:text-lg text-center text-[#585858] text-[22px] px-4 uppercase font-jost text-medium font-jost font-normal">          
+        Stay updated with the latest news, events, and media coverage of APIS India.
         </p>
-        <p className="text-[20px] md:text-[40px] md:my-0 font-bold text-[#9F7B49] sm:my-0 xl:my-0">
+        <p className="text-[20px] md:text-[40px] font-bold text-[#9F7B49]">
           Apis Media
         </p>
         <div className="media-apis w-full max-w-7xl z-10 my-4 md:my-10 px-4 sm:px-0">
@@ -440,7 +392,7 @@ export default function HomePage() {
                         className="bg-opacity-40 w-full h-full"
                       />
                     </div>
-                    <div className="p-4 text-left"> {/* Ensure text is left-aligned */}
+                    <div className="py-2"> {/* Ensure text is left-aligned */}
                 <p className="font-bold text-[#85673D] text-sm md:text-xl mb-1 line-clamp-2 overflow-hidden">
                   {itm.desc}
                 </p>
@@ -588,7 +540,7 @@ export default function HomePage() {
                 })}
               </EmblaCarousel>
             </div>
-            <Link href={"https://www.amazon.in/s?k=apis&crid=2CJFWNXIDZI1V&sprefix=apis%2Caps%2C429&ref=nb_sb_noss_1"}>
+            <Link href={"https://www.amazon.in/s?k=apis&crid=2CJFWNXIDZI1V&sprefix=apis%2Caps%2C429&ref=nb_sb_noss_1"} target="_blank">
             <button className="border border-[#9F7B49] bg-[#9F7B49] px-2 md:px-12 text-[10px] md:text-base py-1 md:py-3 font-bold text-white">
               Explore More
             </button>
@@ -722,7 +674,7 @@ export default function HomePage() {
           <div className="flex h-full items-center justify-center bg-white p-3">
             <div className="bg-white flex flex-col gap-2 md:gap-4">
               <p className="text-center text-[22px] md:text-xl font-medium text-[#585858] font-jost text-medium  sm: text-[12px] text-medium">
-                BE AMOUNG US
+                BE AMONG US
               </p>
               <p className="text-center text-[20px] md:text-[40px] font-bold text-[#9F7B49] font-literata text-semibold xl:text-[40px] sm:text-[20px] xl:-mt-[16px]">
                 Work Place Culture

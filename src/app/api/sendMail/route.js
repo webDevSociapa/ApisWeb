@@ -11,7 +11,6 @@ export async function POST(req) {
     // MongoDB connection
     const uri = "mongodb+srv://webdev:2OmPVj8DUdEaU1wR@apisindia.38dfp.mongodb.net";
     const client = new MongoClient(uri);
-    console.log("uri",uri);
     
 
     try {
@@ -19,7 +18,6 @@ export async function POST(req) {
       const database = client.db('newApis');
       const formData = database.collection('newApis01');
       const data = await formData.insertOne(body);
-      console.log("data12",data);
       
       // Setup Nodemailer to send an email
       
