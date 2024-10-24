@@ -162,19 +162,19 @@ export default function OurBrand() {
           <div className="bg-opacity-80 p-2 md:p-8 rounded-md w-full flex flex-col">
             <div className="flex flex-row justify-between items-center gap-2 md:gap-10">
               <button
-                className={`text-white text-center text-shadow-lg font-literata font-bold leading-normal ${activeTab === "vision" ? " text-lg md:text-4xl text-shadow" : "text-sm md:text-3xl"}`}
+                className={`text-white text-center text-shadow-lg font-literata font-bold leading-normal ${activeTab === "vision" ? " text-lg md:text-4xl text-shadow underline" : "text-sm md:text-3xl"}`}
                 onClick={() => setActiveTab("vision")}
               >
                 Vision
               </button>
               <button
-                className={`text-white text-center text-shadow-lg font-literata font-bold leading-normal ${activeTab === "mission" ? "text-lg md:text-4xl text-shadow" : "text-sm md:text-3xl"}`}
+                className={`text-white text-center text-shadow-lg font-literata font-bold leading-normal ${activeTab === "mission" ? "text-lg md:text-4xl text-shadow underline" : "text-sm md:text-3xl"}`}
                 onClick={() => setActiveTab("mission")}
               >
                 Mission
               </button>
               <button
-                className={`text-white text-center text-shadow-lg font-literata font-bold leading-normal ${activeTab === "values" ? "text-lg md:text-4xl text-shadow" : "text-sm md:text-3xl"}`}
+                className={`text-white text-center text-shadow-lg font-literata font-bold leading-normal ${activeTab === "values" ? "text-lg md:text-4xl text-shadow underline" : "text-sm md:text-3xl"}`}
                 onClick={() => setActiveTab("values")}
               >
                 Values
@@ -245,7 +245,7 @@ export default function OurBrand() {
                 Managing Director
               </p>
               <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost text-justify">
-                Driven by his passion and conviction, Mr. Vimal Anand has received formal training in beekeeping and Honey processing from the University of Warmia Olystyn Poland. Gradually he built a global presence & a robust structure supported by a state-of-the-art production factory to cater to the global markets.
+                Driven by his passion and conviction, Mr. Vimal Anand has received formal training in beekeeping and Honey processing from the University of Warmia Olystyn Poland. Gradually, he built a global presence & a robust structure supported by a state-of-the-art production factory to cater to the global markets.
               </p>
             </div>
           </div>
@@ -263,7 +263,7 @@ export default function OurBrand() {
               Managing Director
             </p>
             <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost text-justify">
-              A Delhi University Graduate from Kirori Mal College in Commerce, he spearheads key functions of Overall Plant Management; Human Resources; and Finance. The Managing Director of the company and the younger one of the two siblings, he has played the perfect foil to the elder in initiating the GREEN FIELD initiative of the factory in Roorkee. Leading from the front in all factory operations a person with hands-on expertise in executing all details at the plant level.
+              A Delhi University Graduate from Kirori Mal College in Commerce, he spearheads key functions of Overall Plant Management; Human Resources; and Finance. The Managing Director of the company and the younger one of the two siblings, he has played the perfect foil to the elder in initiating the GREEN FIELD initiative of the factory in Roorkee. Leading from the front in all factory operations, a person with hands-on expertise in executing all details at the plant level.
             </p>
           </div>
           <div className="w-full mt-4 md:mt-0 md:w-1/2 flex items-center justify-center">

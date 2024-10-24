@@ -439,7 +439,7 @@ export const NEWS_DATA = [
   {
     img: MediaImage02,
     name: NewsName2,
-    desc: "Apis India aims Rs 500 cr revenue in FY25",
+    desc: "Apis India aims Rs 500 CR revenue in FY25",
     date: "09 JANUARY, 2024 / PRESS RELEASES",
     link: "https://www.business-standard.com/companies/news/apis-india-to-expand-product-portfolio-aims-rs-500-cr-revenue-in-fy25-124010900680_1.html"
   },

@@ -9,7 +9,6 @@ import {Blog_Data} from '@/lib/constants'
 
 
 
-console.log("BlogData",Blog_Data);
 
 
 // This should be replaced with your actual blog data or API call
@@ -21,11 +20,9 @@ const BlogDetailPage = () => {
     useEffect(() => {
         // In a real application, you would fetch the blog data from an API here
         const blogPost = Blog_Data?.find(post => post.id === parseInt(id));
-        console.log("blogpost",blogPost);
         setBlog(blogPost);
     }, [id]);
 
-    console.log(blog,"blogblog");
     
 
     if (!blog) {
