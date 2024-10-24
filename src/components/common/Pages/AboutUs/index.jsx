@@ -41,45 +41,6 @@ import HexaGonalPage from "../../Pages/AboutUs/Hexagonal";
 export default function OurBrand() {
   const [activeTab, setActiveTab] = useState("vision");
 
-  const ImageDataJourney = [
-    { image: Polygon12 },
-    { image: Polygon12 },
-    { image: Polygon12 },
-    { image: Polygon12 },
-    { image: Polygon12 },
-    
-   
-  ]
-  const ImageDataJourney1 = [
-    { image: Polygon12 },
-    { image: Polygon12 },
-    { image: Polygon12 },
-    { image: Polygon12 },
-    { image: Polygon12 },
-  ]
-  // const ImageDataJourney2 = [
-     
-  //   { image: Polygon10 },
-  //   { image: Polygon11 },
-  //   { image: Polygon12 },
-  //   { image: Polygon13 },
-  //   { image: Polygon5 },
-  //   { image: Polygon6 },
-  //   { image: Polygon7 },
-  // ]
-  // const ImageDataJourney3 = [
-  //   { image: Polygon14 },
-  //   { image: Polygon13 },
-  //   { image: Polygon5 },
-  //   { image: Polygon6 },
-  //   { image: Polygon7 },
-  //   { image: Polygon7 },
-   
-  //   // { image: Polygon4 },
-    
-  //   { image: Polygon15 },
-  // ]
-
   const [counts, setCounts] = useState({
     productRanges: 0,
     yearsOfLegacy: 0,
@@ -156,8 +117,8 @@ export default function OurBrand() {
     
       <ImageBanner banner={Banner} />
 <div className="static">
-    <Image src={AboutStreak} className="absolute top-[580px] right-4 aboutStrek" /> {/* Adjusted top value */}
-    <Image src={AboutusLogo} className="absolute top-[720px] right-4 aboutslogo"/>
+    <Image src={AboutStreak} className="absolute top-[500px] right-4 aboutStrek" /> {/* Adjusted top value */}
+    <Image src={AboutusLogo} className="absolute top-[680px] right-4 aboutslogo"/>
 </div>
       <div className="bg-white text-gray-800">
         <div className="relative w-full">
