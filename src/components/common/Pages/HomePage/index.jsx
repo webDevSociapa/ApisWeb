@@ -606,7 +606,7 @@ export default function HomePage() {
 
         <div className="w-full tvcSectionResponsive">
           <div className="md:tvc-bg relative !w-full">
-            <div className="flex flex-col gap-0 md:gap-0 sm: gap-0 md: -m-[18px]">
+            <div className="flex flex-col gap-0 md:gap-0 sm: gap-0 md: -mt-[18px]">
               {/* <p className="font-medium text-center text-[#585858] text-sm  md:text-xl uppercase text-medium font-jost text-medium">
                 Our Tele-vision Commercial's
               </p> */}
@@ -662,14 +662,8 @@ export default function HomePage() {
         ></div>
       </div>
 
-      <div>
-        <video
-        src={""}
-        />
-      </div>
-
       {/* Work Place Culture */}
-      <div className="work-palace flex items-center justify-center px-4 py-4 lg:px-48 lg:py-48">
+      <div className="work-palace flex items-center justify-center px-4 py-4 lg:px-48 lg:py-40">
         <div className="h-full bg-[#FFF9F0] p-4">
           <div className="flex h-full items-center justify-center bg-white p-3">
             <div className="bg-white flex flex-col gap-2 md:gap-4">

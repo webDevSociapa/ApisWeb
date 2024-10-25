@@ -1092,3 +1092,13 @@ input[type="password"]:-webkit-autofill:active {
   margin-top: -49px;
   padding: 20px
 }
+
+
+.video-imgHome{
+  width: 620px !important;
+  height: 100vh !important;
+  border-top-left-radius: 40px !important;
+  border-top-right-radius: 250px !important;
+  border-bottom-left-radius: 250px !important;
+  border-bottom-right-radius: 40px !important;
+}

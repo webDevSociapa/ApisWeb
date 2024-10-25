@@ -290,11 +290,9 @@ export default function OurBrand() {
         <p className="text-center text-[14px] font-jost md:text-[22px] uppercase text-[#585858]">
           Celebrating a Legacy of Quality and Growth
         </p>
-        <Link target="_blank" href="/about-us/journey">
           <h3 className="text-center text-[20px] md:text-[40px] font-bold text-[#9F7B49] mt-2">
             Journey
           </h3>
-        </Link>
         <p className="mt-4 text-customDarkGray text-center font-jost text-sm md:text-xl font-medium max-w-4xl mx-auto sm: px-4">
           From humble beginnings to a leading FMCG brand, Apis India’s journey
           is defined by a commitment to quality, innovation, and customer
