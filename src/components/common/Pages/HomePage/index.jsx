@@ -126,13 +126,13 @@ export default function HomePage() {
     { img: DMart, path: "https://www.dmart.in/search?searchTerm=apis" },
   ];
 
-  const handleJoinUs = () => {
-    router.push('/careers#join-us');
-  };
+  // const handleJoinUs = () => {
+  //   router.push('/careers#join-us');
+  // };
 
-  const handleLifeAtApis = () => {
-    router.push('/careers#life-at-apis');
-  };
+  // const handleLifeAtApis = () => {
+  //   router.push('/careers#life-at-apis');
+  // };
 
   const [currentProduct, setCurrentProduct] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false); // State to control modal visibility
@@ -690,21 +690,20 @@ export default function HomePage() {
                 success and growth.
               </p>
               <div className="flex justify-center gap-10 mt-6">
-                {/* <Link href="/careers"> */}
+                <Link href="/careers#join-us">
                 <button className="border border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white"
-                  onClick={handleJoinUs}
+                  // onClick={handleJoinUs}
                 >
                   Join US
                 </button>
-                {/* </Link> */}
-                {/* <Link href="/careers" passHref> */}
-
+                </Link>
+                <Link href="/careers#life-at-apis">
+               
                 <button className="border border-[#9F7B49] bg-white px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-[#9F7B49] hover:text-white  hover:bg-[#9F7B49]"
-                  onClick={handleLifeAtApis}
                 >
                   Life @apis
                 </button>
-                {/* </Link> */}
+                </Link>
               </div>
             </div>
           </div>

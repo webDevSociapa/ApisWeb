@@ -3,21 +3,12 @@ import React, { useState, useEffect } from 'react'
 import Image from "next/image";
 import PropTypes from "prop-types";
 import Ring1 from "@/assets/images/OurBrands/Ring-4.png";
-import HoneyMug from "@/assets/images/heart-of-bavaria-section/honey-mug.png";
-import HoneyNest from "@/assets/images/heart-of-bavaria-section/honey-nest.png";
 import Banner from "@/assets/images/Media/media.png";
-import Ahar from "@/assets/images/Media/Ahar.png";
-import AsianExpo from "@/assets/images/Media/AsianExpo.png";
-import WomenDay from "@/assets/images/Media/WomenDay.png";
 import { NEWS_DATA } from '@/lib/constants';
-import HoneyMugMedia from '@/assets/images/Media/honey_mug.png';
-import styles from './media.module.css'; // Importing the CSS module
 import Campaign from '@/assets/images/Media/campaign.png'
 import handhoney from '@/assets/images/Media/handhoney.png'
 import jam from '@/assets/images/Media/jam.png'
 import honey from '@/assets/images/Media/honey.png'
-import RingCircle from '@/assets/images/Media/ringCircle.png'
-import CampaingMedia from '@/assets/images/Media/campaignBg.png'
 import mediaGallery001 from '@/assets/images/Media/mediaGallery001.png'
 import mediaGallery002 from '@/assets/images/Media/mediaGallery002.png'
 import mediaGallery003 from '@/assets/images/Media/mediaGallery003.png'
@@ -94,6 +85,8 @@ export default function Media() {
       setIsMobile(window.innerWidth < 768); // Update state based on window width
     };
 
+    window.scroll(0,0)
+
 
     handleResize(); // Check initial size
     window.addEventListener('resize', handleResize); // Add event listener
@@ -103,7 +96,6 @@ export default function Media() {
     };
   }, []);
 
-console.log("isMobile",);
 
 
   return (
@@ -249,11 +241,10 @@ console.log("isMobile",);
               </div>
             </div>
             <div className="text-center mt-8 px-14">
-              <h4 className="uppercase font-semibold text-[34px] font-literata">Our Campaigns</h4>
-              <p className="w-full md:w-[502px] text-[17px] leading-[31.79px] mt-4 font-jost px-20">
-                Dive into Apis India’s successful campaigns that reflect our dedication to creativity and impact.
-                Each campaign is crafted to resonate with our audience and showcase our brand’s strengths.
-              </p>
+              <h4 className="uppercase font-semibold text-[34px] font-literata text-[#9F7B49]">Our Campaigns</h4>
+              <p className="w-full md:w-[502px] max-w-[502px] text-[17px] leading-[31.79px] mt-4 font-jost px-20">
+                Dive into Apis India’s successful campaigns that reflect our dedication to creativity and impact. Each campaign is crafted to resonate with our audience and showcase our brand’s strengths.
+</p>
               <div className='w-full md:w-[470px] h-[500px] p-[50px] flex flex-col items-center relative'> {/* Changed to flex-col for mobile layout */}
                   <div className='absolute flex justify-center'> {/* Centering the Ring1 image */}
                   <Image
@@ -277,7 +268,7 @@ console.log("isMobile",);
           </div> :
           <>
             <div className="text-center mt-8">
-              <h4 className="uppercase font-semibold text-[34px] text-literata color-[#9F7B49]">Our Campaigns</h4>
+              <h4 className="uppercase font-semibold text-[34px] text-literata text-[#9F7B49]">Our Campaigns</h4>
               <p className="w-full md:w-[502px] text-[17px] leading-[31.79px] px-8 mt-4 font-jost">
                 Dive into Apis India’s successful campaigns that reflect our dedication to creativity and impact.
                 Each campaign is crafted to resonate with our audience and showcase our brand’s strengths.

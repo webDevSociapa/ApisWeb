@@ -49,7 +49,7 @@ export async function POST(req){
                 to: 'khanrobin7071@gmail.com',
                 subject: 'New Job Application',
                 html: `
-                  <p><strong>Selected Job:</strong> ${selectJob}</p>
+                  <p><strong>Applying Job:</strong> ${selectJob}</p>
                   <p><strong>Full Name:</strong> ${fullName}</p>
                   <p><strong>Email Address:</strong> ${emailAddress}</p>
                   <p><strong>Phone Number:</strong> ${phoneNumber}</p>

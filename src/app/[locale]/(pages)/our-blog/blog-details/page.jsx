@@ -29,6 +29,8 @@ const BlogDetailPage = () => {
         return <div>Loading...</div>;
     }
 
+   
+
     return (
         <>
             {/* <ImageBanner banner={Banner} /> */}

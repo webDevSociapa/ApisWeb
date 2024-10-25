@@ -83,7 +83,7 @@ export default function Sustainability() {
     <>
       <ImageBanner banner={Banner} />
       <div className="w-full flex flex-col items-center justify-center gap-4 md:gap-10">
-        <p className="text-[20px] text-center md:text-[40px] font-bold text-[#9F7B49]">
+        <p className="text-[20px] text-center md:text-[40px] font-bold text-[#9F7B49] font-literata">
           CSR @Apis
         </p>
         <p className="w-[96%] md:w-[75%] text-sm md:text-xl text-center font-jost">
