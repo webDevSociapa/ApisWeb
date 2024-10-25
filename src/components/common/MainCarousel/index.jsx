@@ -42,7 +42,8 @@ export default class Carasol extends Component {
                 muted
                 className={"video-img1"}
                 loop // Ensures the video loops continuously
-                src={'https://luxor-pen-prod.s3.ap-south-1.amazonaws.com/Main+Banner+Video.mp4'}
+                src={'https://luxor-pen-prod.s3.ap-south-1.amazonaws.com/Main+Banner+Video+02.mp4'}
+                
               />
             </div>
             <div className="carousel_banner home-shadow" style={this.state.imageStyle}>
