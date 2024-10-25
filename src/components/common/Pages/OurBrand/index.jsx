@@ -74,15 +74,16 @@ export default function OurBrand({ onProductClick }) {
                   <p
                     key={brand.id}
                     className={`text-xs md:text-xl cursor-pointer text-black ${selectedBrand === brand.id ? "font-bold" : "font-normal"}`}
-                    onClick={() => {
-                      if (brand.title === "Recipes") {
-                        window.location.href = "/our-brand/recipes"; // redirect to /our-brand/recipes
-                      } else {
-                        setSelectedBrand(brand.id);
-                      }
-                    }}
                   >
-                    {brand.title}
+                    {brand.title === "Recipes" ? (
+                      <Link href="/our-brand/recipes" onClick={handleProductClick}>
+                        {brand.title}
+                      </Link>
+                    ) : (
+                      <span onClick={() => setSelectedBrand(brand.id)}>
+                        {brand.title}
+                      </span>
+                    )}
                   </p>
                 );
               })}
