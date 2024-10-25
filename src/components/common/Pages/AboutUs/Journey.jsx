@@ -74,7 +74,7 @@ const Journey = () => {
           return (
             <button
               key={ind}
-              className={`tablinks shadow-xl border border-[#9F7B49] text-xl  rounded-[15px] ${selectedIndex === ind ? "bg-[#9F7B49] text-white font-bold" : "bg-[#FFF9F0E5] text-black"} 
+              className={`tablinks shadow-xl border border-[#9F7B49] text-xl scroll-auto rounded-[15px] ${selectedIndex === ind ? "bg-[#9F7B49] text-white font-bold" : "bg-[#FFF9F0E5] text-black"} 
                 xl:w-[350px] xl:h-[70px] md:w-[250px] md:h-[50px] px-2`}
               onClick={() => openCity(ind)}
             >
