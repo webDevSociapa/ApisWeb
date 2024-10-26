@@ -680,6 +680,10 @@ const ProductDetails = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentVideo, setCurrentVideo] = useState(''); // State to hold the current video URL
+  const [hoveredId, setHoveredId] = useState(false); // State to track the hovered item
+
+  console.log("hoveredId",hoveredId);
+  
 
 
 
@@ -687,6 +691,11 @@ const ProductDetails = () => {
     
     setCurrentVideo(video);
     setIsModalOpen(true);
+  };
+
+  const handleImageClick = (content) => {
+    setSelectedContent(content);
+    setHoveredId(content.id)
   };
 
   const closeModal = () => {
@@ -698,16 +707,21 @@ const ProductDetails = () => {
   const renderBenefits = (benefits) => {
     return benefits.map((itm) => (
       <div key={itm.id} className="flex flex-col w-1/2 items-center justify-center">
-        <div
+        {/* <div
           className={`h-[110px] flex items-center justify-center w-[110px] border-2 border-[#9F7B49] rounded-full`}
-        >
+        > */}
+          <div
+      className={`h-[110px] flex items-center justify-center w-[110px] border-2 border-[#9F7B49] rounded-full 
+                  ${hoveredId ===  itm.id ? 'shadow-lg' : ''} transition-shadow duration-200`} // Change shadow based on state
+    >
           <Image
             src={itm?.img}
             width={65}
             height={65}
             alt="header-logo"
-            className="h-[65px] w-[65px]"
-          />
+            className="h-[65px] w-[65px] cursor-pointer"
+            onClick={() => handleImageClick(itm)} // Set the clicked item as the selected content
+            />
         </div>
         <p className="text-center text-xs md:text-base my-4">
           {itm?.title}
@@ -986,12 +1000,17 @@ const ProductDetails = () => {
                 {selectedContent?.name}
               </p> }
              
-             {selectedBrand?.id === 1 && selectedProduct?.id === 2 ?  <p className="z-20 absolute  w-[90%] text-center text-xs  md:text-base top-12 left-6 md:left-12  text-[#fff] font-jost text-[22px] font-normal">
-
-                {selectedContent?.desc}
-              </p> :  <p className="z-20 absolute font-jost w-[90%] text-center text-xs md:text-base top-12 left-6 md:left-12">
-                {selectedContent?.desc}
-              </p>}
+              {selectedContent && (
+        <p
+          className={`z-20 absolute w-[90%] text-center text-xs md:text-base top-12 left-6 md:left-12 ${
+            selectedBrand?.id === 1 && selectedProduct?.id === 2
+              ? "text-[#fff] font-normal text-[22px] font-jost"
+              : "font-normal"
+          }`}
+        >
+          {selectedContent.desc}
+        </p>
+      )}
               <div className="w-1/2 relative px-14 flex flex-col gap-8 items-center mt-12"></div>
             </div>
           </div>

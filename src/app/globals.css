@@ -1104,3 +1104,17 @@ input[type="password"]:-webkit-autofill:active {
   padding: 20px
 }
 
+/* .productDiffBg{
+  width: 840px !important;
+  margin-top: -10px;
+  margin-left: -40px;
+}
+
+@media(max-width: 1400px){
+  .productDiffBg{
+    width: 600px !important;
+    height: 850px !important;
+    margin-top: -50px;
+    margin-left: -40px;
+  }
+} */

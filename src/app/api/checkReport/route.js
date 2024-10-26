@@ -25,7 +25,6 @@ export async function POST(req) {
                 { "landing_enquiry.batch_number": batch_number },
                 { projection: { "landing_enquiry.$": 1 } }
             );
-            console.log("DS25FD050",batchData);
             
 
             if (batchData && batchData.landing_enquiry && batchData.landing_enquiry.length > 0) {
