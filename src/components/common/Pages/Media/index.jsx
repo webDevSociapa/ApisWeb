@@ -109,7 +109,7 @@ console.log("isMobile",);
       <ImageBanner banner={Banner} />
       <div className="flex flex-col items-center justify-center">
         <p className="font-bold text-[20px] md:text-[40px] text-center text-[#9F7B49] font-literata">
-          Apis in the news
+          Apis in the News
         </p>
         <p className="text-sm w-[95%]  md:text-xl md:w-[70%] md:leading-8 mt-3  md:mt-6 text-center font-jost">
           Apis India has consistently shined in the news, with press releases
@@ -197,7 +197,7 @@ console.log("isMobile",);
               TVC
             </p>
             <div>
-              <p className="text-sm md:text-xl md:leading-8 text-center">
+              <p className="text-sm md:text-xl md:leading-8 text-center font-jost">
                 Intentions may lay the foundation, but it's our actions that
                 build the world we live in.
               </p>
@@ -246,7 +246,7 @@ console.log("isMobile",);
               </div>
             </div>
             <div className="text-center mt-8 px-14">
-              <h4 className="uppercase font-semibold text-[34px] font-literata">Our Campaigns</h4>
+              <h4 className="font-semibold text-[34px] font-literata color-[#9F7B49]">Our Campaigns</h4>
               <p className="w-full md:w-[502px] text-[17px] leading-[31.79px] mt-4 font-jost px-20">
                 Dive into Apis India’s successful campaigns that reflect our dedication to creativity and impact.
                 Each campaign is crafted to resonate with our audience and showcase our brand’s strengths.
@@ -274,7 +274,7 @@ console.log("isMobile",);
           </div> :
           <>
             <div className="text-center mt-8">
-              <h4 className="uppercase font-semibold text-[34px] text-literata color-[#9F7B49]">Our Campaigns</h4>
+              <h4 className="font-semibold text-[34px] text-literata color-[#9F7B49]">Our Campaigns</h4>
               <p className="w-full md:w-[502px] text-[17px] leading-[31.79px] px-8 mt-4 font-jost">
                 Dive into Apis India’s successful campaigns that reflect our dedication to creativity and impact.
                 Each campaign is crafted to resonate with our audience and showcase our brand’s strengths.

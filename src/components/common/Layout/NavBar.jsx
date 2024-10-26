@@ -58,6 +58,7 @@ const NavBar = ({ className, linkClass }) => {
             key={path.url}
             onMouseEnter={() => handleMouseEnter(path.name)}
             onMouseLeave={handleMouseLeave}
+            className="navabarMobileView"
           >
             {path.name !== 'Our Brand' ? (
               <Link href={tabUrlWithLocale} className={cn(linkClass)}>

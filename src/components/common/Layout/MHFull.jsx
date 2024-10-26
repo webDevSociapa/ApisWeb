@@ -10,7 +10,7 @@ const MHFull = () => {
     <div className="w-full flex flex-col md:flex-row items-center justify-between">
       {/* logo */}
       {/*  */}
-      <div className="w-[120px] mb-4 md:mb-0 md: [120px] md: [100px]">
+      <div className="mb-4 md:mb-0">
         <Link href={'/'}>
           <Image
             src={Logo}

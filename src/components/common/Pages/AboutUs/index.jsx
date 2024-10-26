@@ -139,7 +139,7 @@ export default function OurBrand() {
       case "vision":
         return "To inspire consumers with products that enable living a healthier and fitter lifestyle through continuous product innovation.";
       case "mission":
-        return "To bring the finest organic products, crafted with care and sustainability, ensuring every item purchased is free from artificial additives and harmful chemicals.";
+        return "We relentlessly will continue to pursue exceptional value for our customers, fueled by innovation and unwavering ethical practices.We champion responsible business practices, driving profitability and will continue to secure the well-being of our customers and stakeholders.We cultivate a thriving workplace and upkeep high standards that promote a strong sense of belonging, hence empowering our people to achieve their life and our business goals.";
       case "values":
         return "Believing in the power of nature to nourish and enhance well-being, committing to quality and sustainability.";
       default:

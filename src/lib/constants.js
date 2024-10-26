@@ -50,7 +50,7 @@ import apisNews9 from "@/assets/images/Media/apisnews9.webp"
 import apisNews10 from "@/assets/images/Media/apisnews10.webp"
 import apisNews11 from "@/assets/images/Media/apisnews11.jpg"
 import apisNews12 from "@/assets/images/Media/apisnews12.jpeg"
-import apisNews13 from "@/assets/images/Media/apisnews13.jpg"
+import apisnews13New from "@/assets/images/Media/apisnews13.jpg"
 import apisNews14 from "@/assets/images/Media/apisnews14.jpg"
 import apisNews15 from "@/assets/images/Media/apisnews15.jpg"
 import apisNews16 from "@/assets/images/Media/apisnews16.jpg"
@@ -101,6 +101,7 @@ import apisNews49 from "@/assets/images/Media/apisnews49.jpg"
  import Thumbnail_ApisLatest5 from '@/assets/images/home-banner-section/thumbnail_apisLatest5.jpeg'
  import MediaImage02 from '@/assets/images/home-banner-section/mediaImage02.jpeg'
  import MediaImage01 from '@/assets/images/home-banner-section/mediaImage01.jpeg'
+ import NewCookingPaste from '@/assets/images/OurBrands/newCookingPaste.png'
 
 //  import Blog8 from '@/assets/images/our-blog/blog08.png';
 //  import Blog5 from '@/assets/images/our-blog/Blog0.jpg';
@@ -212,7 +213,7 @@ export const PRODUCT_DATA = [
           "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor without any additives or preservatives. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
         product_img_1: DatesProduct,
         customer_says:
-          "I recently tried APIs Dates, and I’m absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It’s clear that APIs prioritizes purity, as there are no additives or preservatives, just pure, high-quality dates. The texture is perfect—soft and moist, making them a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I’m enjoying a product that’s both nutritious and free from artificial ingredients. APIs Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+          "I recently tried Apis Dates, and I’m absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It’s clear that APIs prioritizes purity, as there are no additives or preservatives, just pure, high-quality dates. The texture is perfect—soft and moist, making them a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I’m enjoying a product that’s both nutritious and free from artificial ingredients. APIs Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
         health_benefits:
           "Dates are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
         primary_color: "",
@@ -239,7 +240,7 @@ export const PRODUCT_DATA = [
           "Just as our honey exemplifies nature's finest, our jams uphold the same unwavering commitment to quality. We carefully select the freshest fruits, ensuring that each jar delivers a burst of genuine flavor without artificial additives or preservatives. Our meticulous process preserves the natural taste and nutritional benefits of the fruit, offering a delightful and wholesome experience with every spoonful. When you choose APIs jams, you’re savoring purity in its most authentic form, making each bite a true celebration of natural goodness.",
         product_img_1: JamProduct,
         customer_says:
-          "I recently tried APIs Jam, and I’m absolutely delighted with the experience! The flavor is truly exceptional—rich, vibrant, and bursting with genuine fruit goodness. You can taste the quality in every spoonful, with no artificial aftertaste or additives. The texture is perfectly smooth, making it a versatile addition to everything from toast to desserts. I also appreciate the thoughtful packaging that preserves freshness and highlights the commitment to purity. APIs Jam has quickly become a staple in my kitchen, and I wholeheartedly recommend it to anyone looking for a premium, authentic jam that delivers on both taste and quality.",
+          "I recently tried Apis Jam, and I’m absolutely delighted with the experience! The flavor is truly exceptional—rich, vibrant, and bursting with genuine fruit goodness. You can taste the quality in every spoonful, with no artificial aftertaste or additives. The texture is perfectly smooth, making it a versatile addition to everything from toast to desserts. I also appreciate the thoughtful packaging that preserves freshness and highlights the commitment to purity. APIs Jam has quickly become a staple in my kitchen, and I wholeheartedly recommend it to anyone looking for a premium, authentic jam that delivers on both taste and quality.",
         health_benefits:
           "Jam is an excellent option for a quick energy boost due to its high sugar content. The sugars in jam, primarily glucose and fructose, are simple carbohydrates that are rapidly absorbed into the bloodstream. This leads to a quick rise in blood sugar levels, providing a rapid source of energy.",
         primary_color: "",
@@ -281,7 +282,7 @@ export const PRODUCT_DATA = [
           "Purity is deeply embedded in our vermicelli. We prioritize selecting the finest ingredients and employing meticulous processes to ensure that every strand embodies true quality. Our vermicelli is crafted without artificial additives or preservatives, allowing its natural flavor and texture to shine through in every dish. This commitment to purity means that you experience a clean, wholesome taste and consistent quality that enhances your culinary creations. When you choose APIs Vermicelli, you’re not just getting a product; you’re embracing a philosophy where purity is our guiding principle, ensuring excellence in every bite.",
         product_img_1: VermiProduct,
         customer_says:
-          "I recently tried APIs Vermicelli, and I am thoroughly impressed! The texture is perfectly light and airy, making it a fantastic base for both savory and sweet dishes. It cooks evenly and retains its shape beautifully, which is a testament to its high quality. I appreciate that APIs Vermicelli is made with care, resulting in a clean, wholesome taste without any artificial additives. Whether used in a traditional dish or a creative recipe, it adds a wonderful touch to every meal. APIs Vermicelli has quickly become a pantry staple for me, and I highly recommend it to anyone seeking top-notch, versatile pasta.",
+          "I recently tried Apis Vermicelli, and I am thoroughly impressed! The texture is perfectly light and airy, making it a fantastic base for both savory and sweet dishes. It cooks evenly and retains its shape beautifully, which is a testament to its high quality. I appreciate that APIs Vermicelli is made with care, resulting in a clean, wholesome taste without any artificial additives. Whether used in a traditional dish or a creative recipe, it adds a wonderful touch to every meal. APIs Vermicelli has quickly become a pantry staple for me, and I highly recommend it to anyone seeking top-notch, versatile pasta.",
         health_benefits:
           "Vermicelli, a type of thin rice or wheat noodle, is typically low in calories, making it a suitable option for weight management. It provides a filling meal without adding excessive caloric intake.",
         primary_color: "",
@@ -322,7 +323,7 @@ export const PRODUCT_DATA = [
           "At APIs, purity is the cornerstone of our spreads. We meticulously select high-quality ingredients to ensure that every jar reflects our commitment to natural, unadulterated flavors. Our spreads are crafted without artificial additives, preservatives, or unnecessary fillers, preserving the authentic taste and nutritional value of the ingredients. This dedication to purity means each spread offers a wholesome, rich flavor that enhances your meals with genuine goodness. Whether enjoyed on toast, as a cooking ingredient, or as a dip, APIs Spreads bring a touch of pure excellence to every bite, embodying our promise of quality and integrity in every jar.",
         product_img_1: SpreadProduct,
         customer_says:
-          "I recently started using APIs Spread, and I’m thoroughly impressed with its quality! The flavor is incredibly rich and authentic, without any artificial aftertaste or fillers. It’s clear that APIs prioritizes purity, as the spread has a natural taste and smooth texture that enhances every meal. Whether I use it on toast, in sandwiches, or as a dip, it consistently adds a delightful touch of flavor. The absence of artificial additives makes it a healthier choice that I can feel good about. APIs Spread has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for a premium, delicious spread.",
+          "I recently started using Apis Spread, and I’m thoroughly impressed with its quality! The flavor is incredibly rich and authentic, without any artificial aftertaste or fillers. It’s clear that APIs prioritizes purity, as the spread has a natural taste and smooth texture that enhances every meal. Whether I use it on toast, in sandwiches, or as a dip, it consistently adds a delightful touch of flavor. The absence of artificial additives makes it a healthier choice that I can feel good about. APIs Spread has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for a premium, delicious spread.",
         health_benefits:
           "Aside from being a flavor-filled chocolaty spread, it is also a source of calcium &amp; iron. As such, Apis Chocolate Spread also carries the benefits drawn from these minerals. The spread can be used in addition to any healthy meal for more satisfaction.",
         primary_color: "",
@@ -337,7 +338,7 @@ export const PRODUCT_DATA = [
       {
         id: 1,
         name: "Cooking Paste",
-        img: CoolingPaste,
+        img: NewCookingPaste,
         back_img: HoneyBg,
         rect_color: "bg-[#FFC660]",
         title_color: "text-[#9F7B49]",
@@ -368,7 +369,7 @@ export const PRODUCT_DATA = [
           "Purity is the cornerstone of our soya chunks. We start with premium soybeans, ensuring that each chunk is packed with natural goodness and robust flavor. Our production process is designed to preserve the integrity of the soybeans, avoiding any artificial additives or preservatives. This commitment to purity means that every bite of APIs Soya Chunks offers a clean, wholesome taste and a satisfying texture that holds up perfectly in various dishes. Whether you’re incorporating them into a savory stir-fry or a hearty stew, APIs Soya Chunks reflect our dedication to delivering pure, high-quality ingredients in every bite.",
         product_img_1: SoyaChunksProduct,
         customer_says:
-          "I recently tried APIs Soya Chunks, and I’m thoroughly impressed! The chunks are of excellent quality, with a firm texture that holds up beautifully in various dishes. They’re easy to prepare and absorb flavors exceptionally well, making them a versatile addition to my meals. I appreciate that they are made from high-quality soybeans without any unnecessary additives or preservatives. The taste is clean and satisfying, making them a fantastic meat alternative. APIs Soya Chunks have quickly become a staple in my kitchen, and I highly recommend them to anyone seeking a nutritious, delicious, and pure option for their recipes.",
+          "I recently tried Apis Soya Chunks, and I’m thoroughly impressed! The chunks are of excellent quality, with a firm texture that holds up beautifully in various dishes. They’re easy to prepare and absorb flavors exceptionally well, making them a versatile addition to my meals. I appreciate that they are made from high-quality soybeans without any unnecessary additives or preservatives. The taste is clean and satisfying, making them a fantastic meat alternative. APIs Soya Chunks have quickly become a staple in my kitchen, and I highly recommend them to anyone seeking a nutritious, delicious, and pure option for their recipes.",
         health_benefits:
           "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
         primary_color: "",
@@ -510,7 +511,7 @@ export const NEWS_DATA = [
     link: "https://www.exchange4media.com/marketing-news/e4m-pride-of-india-brands-2021-series-to-tell-success-stories-of-top-smbs-118044.html"
   },
   {
-    img: apisNews13,
+    img: apisnews13New,
     name: NewsName6,
     desc: "Afaqs                                      ",
     date: "DECEMBER, 2021 / PRESS RELEASES",
@@ -776,7 +777,7 @@ export const NEWS_DATA = [
     link: "https://apisindia.com/pdf/indialivetodaypress.pdf"
   },
   {
-    img: apisNews13,
+    img: apisnews13New,
     name: NewsName6,
     desc: "India Times",
     date: " DECEMBER, 2016 / PRESS RELEASES",
@@ -1532,7 +1533,7 @@ export const NEWS_DATA = [
   },
   {
     video: "https://www.youtube.com/embed/H4DMfIObK3U?si=C7VEIJxvupBY0wYw",
-    title: "apis breakfast",
+    title: "Apis breakfast",
     name:"Himalaya Honey",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
@@ -2929,4 +2930,38 @@ export const LATEST_SLIDES_IMAGES = [
     img:
     Thumbnail_ApisLatest5,
   },
+];
+
+ export const Corporate_Annoucement = [
+  { sNo: 1, name: "Outcome of Board Meeting", path: "/pdf/2024/Outcome_of_Board_Meeting_0624.pdf" },
+  { sNo: 2, name: "Intimation of Product Launch under", path: "/pdf/2023/Corporate_Announcement_Product_Launch_210124.pdf" },
+  { sNo: 3, name: "Proceedings of the 41st Annual General Meeting", path: "/pdf/2023/AGM_Proceedings.pdf" },
+  { sNo: 4, name: "Disclosure of Voting Results of the 41st Annual General Meeting", path: "/pdf/2023/Voting_Results.pdf" },
+  { sNo: 5, name: "Newspaper Advertisement under Section 160 of the Companies Act", path: "/pdf/2023/Notice_Under_Section_160.pdf" },
+  { sNo: 6, name: "Intimation under Reg.30-Credit Rating", path: "/pdf/2023/Intimation_Under_Reg_30_Credit_Rating_16082023.pdf" },
+  { sNo: 7, name: "Outcome of Board Meeting", path: "/pdf/2023/Outcome_of_Board_Meeting_14082023.pdf" },
+  { sNo: 8, name: "Postal Ballot Notice", path: "/pdf/2023/Postal_Ballot_Notice_August_1423.pdf" },
+  { sNo: 9, name: "Notice of Board Meeting", path: "/pdf/2023/Notice_of_Board_Meeting_02082023.pdf" },
+  { sNo: 10, name: "Postal Ballot Notice", path: "/pdf/2023/Postal_Ballot_Notice_July_1523.pdf" },
+  { sNo: 11, name: "Submission of Newspaper Cutting", path: "/pdf/2023/Newspaper_Advertisement.pdf" },
+  { sNo: 12, name: "Outcome of Board Meeting", path: "/pdf/2023/Outcome_of_Board_Meeting_2023.pdf" },
+  { sNo: 13, name: "Submission of Annual Secretarial Compliance Report", path: "/pdf/2023/Annual_Secretarial_Compliance_Report.pdf" },
+  { sNo: 14, name: "Intimation of closure of trading window", path: "/pdf/2022/Intimation_of_Closure_of_Trading_Window.pdf" },
+  { sNo: 15, name: "Outcome of Board Meeting", path: "/pdf/2022/Outcome_of_Board_Meeting_FINAL.pdf" },
+  { sNo: 16, name: "Postal Ballot Notice", path: "/pdf/2022/Postal_Ballot_Notice.pdf" },
+  { sNo: 17, name: "Intimation of closure of trading window", path: "/pdf/2022/Intimation_of_Closure_of_Trading_Window_2.pdf" },
+  { sNo: 18, name: "Intimation under Reg.30-Credit Rating", path: "/pdf/2022/Intimation_Under_Reg_30_Credit_Rating.pdf" },
+  { sNo: 19, name: "Disclosure Calendar of Event of Postal Ballot", path: "/pdf/2022/Disclosure_Calendar_of_Event_of_Postal_Ballot.pdf" },
+  { sNo: 20, name: "Intimation under Reg.30 Appointment of Director", path: "/pdf/2022/Intimation_Under_Reg_30_Appointment_of_Director.pdf" },
+  { sNo: 21, name: "FORM ISR-4- Request For Issue Of Duplicate Certificate and Other Service Request", path: "/pdf/2022/Form_ISR_4.pdf" },
+  { sNo: 22, name: "Intimation To Shareholders Holding Shares in Physical Mode", path: "/pdf/2022/Intimation_to_Physical_Shareholder.pdf" },
+  { sNo: 23, name: "Intimation under Reg.30 Newspaper Advertisement Results", path: "/pdf/2022/Intimation_Under_Reg_30_Newspaper_Advertisement.pdf" },
+  { sNo: 24, name: "Outcome of the Board Meeting", path: "/pdf/2022/Outcome_of_the_Board_Meeting.pdf" },
+  { sNo: 25, name: "Intimation under Reg.30 Newspaper Advertisement Results", path: "/pdf/2021/Intimation_Under_Reg_30_Newspaper_Advertisement_Results.pdf" },
+  { sNo: 26, name: "Intimation of Book Closure-AGM-Dividend Payment", path: "/pdf/2021/Intimation_of_Book_Closure_AGM_Dividend_Payment.pdf" },
+  { sNo: 27, name: "Outcome of the Board Meeting", path: "/pdf/2021/Outcome_of_the_Board_Meeting_2.pdf" },
+  { sNo: 28, name: "Intimation For Appointment Of Statutory Auditor", path: "/pdf/2021/Appointment_of_Statutory_Auditor.pdf" },
+  { sNo: 29, name: "Intimation For Penalty", path: "/pdf/2021/Intimation_for_Penalty.pdf" },
+  { sNo: 30, name: "Covering Letter", path: "/pdf/2021/Covering_Letter.pdf" },
+  // Continue adding entries as needed
 ];

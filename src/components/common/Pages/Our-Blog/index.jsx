@@ -89,10 +89,10 @@ const BlogCard = ({ blog, onClick }) => (
             />
         </div>
         <div className="p-0">
-            <p className="font-semibold text-xl mb-2 p-0 font-jost">
+            <p className="font-semibold text-xl mb-2 p-0 font-jost font-literata">
                 {blog.title}
             </p>
-            <span className="text-gray-500 text-sm">{blog.date}</span>
+            <span className="text-gray-500 text-sm font-jost">{blog.date}</span>
             <p className="text-gray-700 mt-4 text-justify line-clamp-5 p-0 font-jost">
                 {blog.desc}
             </p>

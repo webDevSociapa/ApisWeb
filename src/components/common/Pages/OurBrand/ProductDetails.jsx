@@ -115,7 +115,7 @@ const SLIDES = [
   },
   {
     img: SoyaChunks,
-    content: "Soya chunks are protein-rich, plant-based meat alternatives.",
+    content: "Soya chunks are protein-rich, plant-based meat alternatives, packed with nutrients",
     title: "Soya Chunk"
   },
   
@@ -206,7 +206,7 @@ const HEALTH_BENEFITS = [
     id: 2,
     title: "Skin Elixir",
     name:"Boosts Immunity",
-    desc: "Honey is packed with antioxidants that boost your immune system and help fight off illnesses. Regular consumption of honey can strengthen your body’s defenses and promote overall health.",
+    desc: "Honey acts as a natural skin elixir, offering deep hydration and antibacterial benefits for a glowing complexion. Its soothing properties help heal skin irritations and maintain a healthy, radiant appearance.",
     img: Skin,
     shadowClass: "shadow-custom-darkGreen",
     color: "bg-[#39412D]",
@@ -215,7 +215,7 @@ const HEALTH_BENEFITS = [
     id: 3,
     title: "Sustainability",
     name:"Boosts Immunity",
-    desc: "Honey is packed with antioxidants that boost your immune system and help fight off illnesses. Regular consumption of honey can strengthen your body’s defenses and promote overall health.",
+    desc: "Apis India’s honey is a testament to sustainable beekeeping practices that support environmental health and local communities. By choosing our honey, you contribute to eco-friendly methods that protect both nature and livelihoods.",
     img: Sustain,
     shadowClass: "shadow-custom-rama",
     color: "bg-[#416E7C]",
@@ -224,7 +224,7 @@ const HEALTH_BENEFITS = [
     id: 4,
     title: "Aids Digestion",
     name:"Boosts Immunity",
-    desc: "Honey is packed with antioxidants that boost your immune system and help fight off illnesses. Regular consumption of honey can strengthen your body’s defenses and promote overall health.",
+    desc: "Honey aids digestion by soothing the digestive tract and promoting healthy gut bacteria. It can help alleviate digestive discomfort and support smoother, more balanced digestion for better overall wellness.",
     img: AidsDigestion,
     shadowClass: "shadow-custom-pink",
     color: "bg-[#E09384]",
@@ -244,7 +244,7 @@ const HEALTH_DATE = [
     id: 2,
     title: "Digestive Health",
     name:"Benefits",
-    desc: "Dates are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
+    desc: "High in dietary fiber, dates aid in digestion by promoting regular bowel movements and preventing constipation. Fiber also supports a healthy gut microbiome, which is crucial for overall digestive health.",
     img: Digestive,
     shadowClass: "shadow-custom-darkGreen",
     color: "bg-[#39412D]",
@@ -253,7 +253,7 @@ const HEALTH_DATE = [
     id: 3,
     title: "Energy Boost",
     name:"Benefits",
-    desc: "Dates are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
+    desc: "Dates provide a quick source of natural energy due to their high carbohydrate content, primarily from natural sugars like glucose and fructose. They make an excellent snack for an instant energy boost and sustained vitality.",
     img: EnergyBoost,
     shadowClass: "shadow-custom-rama",
     color: "bg-[#416E7C]",
@@ -262,7 +262,7 @@ const HEALTH_DATE = [
     id: 4,
     title: "Heart Health",
     name:"Benefits",
-    desc: "Dates are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
+    desc: "The potassium and magnesium in dates help regulate blood pressure and support cardiovascular health. Additionally, their high fiber content helps lower cholesterol levels, reducing the risk of heart disease and stroke.",
     img: Psychology,
     shadowClass: "shadow-custom-pink",
     color: "bg-[#E09384]",
@@ -274,7 +274,7 @@ const HEALTH_JAM = [
     id: 1,
     title: "Energy Boost",
     name:"Benefits",
-    desc: "Jam is an excellent option for a quick energy boost due to its high sugar content. The sugars in jam, primarily glucose and fructose, are simple carbohydrates that are rapidly absorbed into the bloodstream. This leads to a quick rise in blood sugar levels, providing a rapid source of energy.",
+    desc: "Jam provides a quick source of energy due to its high sugar content, making it a great option for a quick pick-me-up during the day or before physical activities.",
     img: EnergyBoost,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
@@ -283,7 +283,7 @@ const HEALTH_JAM = [
     id: 2,
     title: "Versatile Ingredient",
     name:"Benefits",
-    desc: "Jam is an excellent option for a quick energy boost due to its high sugar content. The sugars in jam, primarily glucose and fructose, are simple carbohydrates that are rapidly absorbed into the bloodstream. This leads to a quick rise in blood sugar levels, providing a rapid source of energy.",
+    desc: "Jam can be used in a variety of dishes, from breakfast spreads to baking, enhancing flavors and adding sweetness to both savory and sweet recipes.",
     img: Ingrediant,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
@@ -292,7 +292,7 @@ const HEALTH_JAM = [
     id: 3,
     title: "Vitamin Source",
     name:"Benefits",
-    desc: "Jam is an excellent option for a quick energy boost due to its high sugar content. The sugars in jam, primarily glucose and fructose, are simple carbohydrates that are rapidly absorbed into the bloodstream. This leads to a quick rise in blood sugar levels, providing a rapid source of energy.",
+    desc: "Depending on the fruit used, jam can offer vitamins and antioxidants. For instance, strawberry jam provides vitamin C, which is important for immune health and skin maintenance.",
     img: VitaminSource,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
@@ -301,7 +301,7 @@ const HEALTH_JAM = [
     id: 4,
     title: "Contain Minerals",
     name:"Benefits",
-    desc: "Jam is an excellent option for a quick energy boost due to its high sugar content. The sugars in jam, primarily glucose and fructose, are simple carbohydrates that are rapidly absorbed into the bloodstream. This leads to a quick rise in blood sugar levels, providing a rapid source of energy.",
+    desc: "Jam has a long shelf life due to its high sugar content, which acts as a preservative. This means you can store it for extended periods without worrying about spoilage.",
     img: Minrella,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
@@ -322,7 +322,7 @@ const HEALTH_FLAKES = [
     title: "Low Calories",
     name:"Benefits",
 
-    desc: "Flakes, particularly whole grain varieties, are high in dietary fiber. Fiber aids digestion by promoting regular bowel movements and can help prevent constipation. It also supports heart health by reducing cholesterol levels and stabilizing blood sugar.",
+    desc: "Many flakes, especially those made from whole grains, are low in calories while still being filling. This makes them an excellent choice for weight management, as they provide essential nutrients without contributing excessive calories.",
     img: Psychology,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
@@ -332,7 +332,7 @@ const HEALTH_FLAKES = [
     title: "Nutrient Dense",
     name:"Benefits",
 
-    desc: "Flakes, particularly whole grain varieties, are high in dietary fiber. Fiber aids digestion by promoting regular bowel movements and can help prevent constipation. It also supports heart health by reducing cholesterol levels and stabilizing blood sugar.",
+    desc: "Flakes often contain essential vitamins and minerals, such as B vitamins, iron, and magnesium. These nutrients are crucial for energy production, red blood cell formation, and overall metabolic function, contributing to overall well-being.",
     img: Nutrient,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
@@ -342,7 +342,7 @@ const HEALTH_FLAKES = [
     title: "Heart Health",
     name:"Benefits",
 
-    desc: "Flakes, particularly whole grain varieties, are high in dietary fiber. Fiber aids digestion by promoting regular bowel movements and can help prevent constipation. It also supports heart health by reducing cholesterol levels and stabilizing blood sugar.",
+    desc: "Whole grain flakes can be beneficial for heart health due to their high fiber content and low saturated fat. They help reduce the risk of heart disease by improving cholesterol levels and supporting healthy blood pressure.",
     img: LowClories,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
@@ -362,7 +362,7 @@ const HEALTH_VERNACALLI = [
     id: 2,
     title: "Digestive Health",
     name:"Benefits",
-    desc: "Vermicelli, a type of thin rice or wheat noodle, is typically low in calories, making it a suitable option for weight management. It provides a filling meal without adding excessive caloric intake.",
+    desc: "Vermicelli made from whole grains can be a good source of dietary fiber. Fiber aids digestion by promoting regular bowel movements and can help prevent constipation.",
     img: Digestive,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
@@ -371,7 +371,7 @@ const HEALTH_VERNACALLI = [
     id: 3,
     title: "Energy Source",
     name:"Benefits",
-    desc: "Vermicelli, a type of thin rice or wheat noodle, is typically low in calories, making it a suitable option for weight management. It provides a filling meal without adding excessive caloric intake.",
+    desc: "Vermicelli provides carbohydrates, which are a primary source of energy for the body. Consuming it can help fuel physical activities and maintain energy levels throughout the day.",
     img: EnergyBoost,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
@@ -380,7 +380,7 @@ const HEALTH_VERNACALLI = [
     id: 4,
     title: "Versatile Use",
     name:"Benefits",
-    desc: "Vermicelli, a type of thin rice or wheat noodle, is typically low in calories, making it a suitable option for weight management. It provides a filling meal without adding excessive caloric intake.",
+    desc: "Vermicelli is a versatile ingredient that can be incorporated into various dishes, from soups to stir-fries, allowing for diverse and balanced meals. Its adaptability makes it easy to include in a healthy diet.",
     img: Versatile,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
@@ -402,7 +402,7 @@ const HEALTH_MACRONI = [
     id: 2,
     title: "Digestive Health",
     name:"Benefits",
-    desc: "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
+    desc: "Whole grain macaroni contains dietary fiber, which aids in digestion by promoting regular bowel movements and preventing constipation. Fiber also supports a healthy gut microbiome, contributing to overall digestive health.",
     img: Digestive,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
@@ -411,7 +411,7 @@ const HEALTH_MACRONI = [
     id: 3,
     title: "Nutrient Rich",
     name:"Benefits",
-    desc: "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
+    desc: "Macaroni can be a good source of essential nutrients when made from whole grains or enriched with vitamins and minerals. It often contains B vitamins, iron, and magnesium, which support metabolism, red blood cell formation, and bone health.",
     img: Nutrient,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
@@ -420,7 +420,7 @@ const HEALTH_MACRONI = [
     id: 4,
     title: "Versatile Meals",
     name:"Benefits",
-    desc: "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
+    desc: "Macaroni is a versatile ingredient that can be incorporated into various dishes, from salads to casseroles. Its adaptability allows for the creation of balanced meals, especially when paired with vegetables and lean proteins, enhancing overall diet quality.",
     img: VersatileMeals,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
@@ -609,7 +609,7 @@ const GREEN_TEA = [
     title: "Heart Health",
     name:"Benefits",
 
-    desc: "Green tea is rich in antioxidants, particularly catechins like EGCG, which help combat oxidative stress and neutralize harmful free radicals. These antioxidants support overall health by reducing inflammation and protecting cells from damage.",
+    desc: "Regular consumption of green tea can improve cardiovascular health. It helps lower LDL cholesterol levels and triglycerides, reducing the risk of heart disease. The anti-inflammatory properties also contribute to maintaining healthy blood vessels.",
     img: Psychology,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
@@ -619,7 +619,7 @@ const GREEN_TEA = [
     title: "Metabolism Aid",
     name:"Benefits",
 
-    desc: "Green tea is rich in antioxidants, particularly catechins like EGCG, which help combat oxidative stress and neutralize harmful free radicals. These antioxidants support overall health by reducing inflammation and protecting cells from damage.",
+    desc: "Green tea can enhance metabolic rate and promote fat oxidation. Its catechins and caffeine work together to boost metabolism, which may aid in weight management and improve exercise performance.",
     img: Digestive,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
@@ -629,7 +629,7 @@ const GREEN_TEA = [
     title:"Brain Function",
     name:"Benefits",
 
-    desc: "Green tea is rich in antioxidants, particularly catechins like EGCG, which help combat oxidative stress and neutralize harmful free radicals. These antioxidants support overall health by reducing inflammation and protecting cells from damage.",
+    desc: "The caffeine and L-theanine in green tea can improve cognitive function, enhancing alertness, attention, and memory. These compounds work synergistically to promote better mental clarity and focus.",
     img: BrainFunction,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
@@ -678,7 +678,7 @@ const ProductDetails = () => {
     (itm) => itm.id == searchParams.get("product_id")
   );
 
-  const [isModalOpen, setIsModalOpen] = useState(false); // State to control modal visibility
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentVideo, setCurrentVideo] = useState(''); // State to hold the current video URL
 
 
@@ -695,7 +695,6 @@ const ProductDetails = () => {
   };
 
 
-  console.log("selectedContent",selectedContent);
   const renderBenefits = (benefits) => {
     return benefits.map((itm) => (
       <div key={itm.id} className="flex flex-col w-1/2 items-center justify-center">
@@ -855,7 +854,7 @@ const ProductDetails = () => {
      ): null}
      {/* </a> */}
 
-      <p className="text-[20px] md:text-[40px] py-4 md:py-10 font-bold text-[#9F7B49]">
+      <p className="text-[20px] md:text-[40px] py-4 md:py-10 font-bold text-[#9F7B49] font-literata">
         Content
       </p>
       <div className="bg-[#FFF9F0] relative w-full">
@@ -905,14 +904,14 @@ const ProductDetails = () => {
                 width={60}
                 height={60}
                 alt="header-logo"
-                className="h-[60px] hidden lg:inline  -top-2 absolute -right-14 w-[60px]"
+                className="h-[60px] hidden lg:inline  -top-2 absolute -right-18 w-[40px]"
               />
               <Image
                 src={Comma}
                 width={60}
                 height={60}
                 alt="header-logo"
-                className="h-[60px] hidden lg:inline -top-2 absolute -right-24 w-[60px]"
+                className="h-[60px] hidden lg:inline -top-2 absolute -right-20 w-[40px]"
               />
             </p>
             <p className="text-sm font-jost font-light md:text-xl text-center font-light">
@@ -981,12 +980,18 @@ const ProductDetails = () => {
                 alt="header-logo"
                 className="h-[135px] absolute hidden lg:inline -top-7 -right-7 z-0 ms w-[185px]"
               />
-              <p className="z-20 absolute w-full text-center text-lg md:text-[24px] left-6 font-bold font-jost">
+              {selectedBrand?.id === 1 && selectedProduct?.id === 2 ?  <p className="z-20 absolute w-full text-center text-lg md:text-[24px] left-6 font-normal font-literata  text-[#fff]">
                 {selectedContent?.name}
-              </p>
-              <p className="z-20 absolute font-jost w-[90%] text-center text-xs md:text-base top-12 left-6 md:left-12">
+              </p> :  <p className="z-20 absolute w-full text-center text-lg md:text-[24px] left-6 font-bold font-jost">
+                {selectedContent?.name}
+              </p> }
+             
+             {selectedBrand?.id === 1 && selectedProduct?.id === 2 ?  <p className="z-20 absolute  w-[90%] text-center text-xs  md:text-base top-12 left-6 md:left-12  text-[#fff] font-jost text-[22px] font-normal">
+
                 {selectedContent?.desc}
-              </p>
+              </p> :  <p className="z-20 absolute font-jost w-[90%] text-center text-xs md:text-base top-12 left-6 md:left-12">
+                {selectedContent?.desc}
+              </p>}
               <div className="w-1/2 relative px-14 flex flex-col gap-8 items-center mt-12"></div>
             </div>
           </div>
@@ -994,42 +999,47 @@ const ProductDetails = () => {
       </div>
 
       <div className="flex w-full pt-10 md:pt-20 items-center justify-center flex-col">
-        <p className="text-[#9F7B49] text-center text-[20px] md:text-[40px] font-bold">
-          GLIMPSES OF
-        </p>
-        <p className="text-[#9F7B49] text-center w-[90%] text-[20px] md:text-[40px] font-bold">
-          ORGANIC HONEY LAUNCH
-        </p>
-        <p className=" w-[90%] text-center text-sm md:text-[22px] left-4 md:leading-7 mt-2 md:mt-6 xl:w-[45%] sm:w-[90%] md:w-[80%] font-jost">
-          Launch Event was organized on 9th Jan, 2024 at The Lalit, New Delhi.
-          Sanya Malhotra and our Managing Director Mr. Amit Anand Unveiled Our
-          New Organic Honey.
-        </p>
-        <div className="w-full py-6 md:py-20 flex flex-col items-center justify-center">
-          <div className="w-[90%] flex items-center justify-center">
-            <EmblaCarousel options={OPTIONS}>
-              {GLIMPSES_SLIDES.map((itm, index) => (
-                <div className="embla__slide" key={index}>
-                  <div className="embla__slide__number border w-[176px] p-2 h-[256px] md:!h-[456px] cursor-pointer !rounded-none md:w-[286px] border-[#9F7B49]">
-                    <Image
-                      src={itm?.img}
-                      width={310}
-                      height={470}
-                      alt="header-logo"
-                      className="h-[240px] md:h-[440px] w-[172px] md:w-[270px] max-w-max bg-opacity-40"
-                    />
-                  </div>
+      {selectedBrand?.id === 1 && selectedProduct?.id === 1 && (
+        <>
+         <p className="text-[#9F7B49] text-center text-[20px] md:text-[40px] font-bold">
+        GLIMPSES OF
+      </p>
+      <p className="text-[#9F7B49] text-center w-[90%] text-[20px] md:text-[40px] font-bold">
+        ORGANIC HONEY LAUNCH
+      </p>
+      <p className="w-[90%] text-center text-sm md:text-[22px] left-4 md:leading-7 mt-2 md:mt-6 xl:w-[45%] sm:w-[90%] md:w-[80%] font-jost">
+        Launch Event was organized on 9th Jan, 2024 at The Lalit, New Delhi.
+        Sanya Malhotra and our Managing Director Mr. Amit Anand Unveiled Our
+        New Organic Honey.
+      </p>
+      <div className="w-full py-6 md:py-20 flex flex-col items-center justify-center">
+        <div className="w-[90%] flex items-center justify-center">
+          <EmblaCarousel options={OPTIONS}>
+            {GLIMPSES_SLIDES.map((itm, index) => (
+              <div className="embla__slide" key={index}>
+                <div className="embla__slide__number border w-[176px] p-2 h-[256px] md:!h-[456px] cursor-pointer !rounded-none md:w-[286px] border-[#9F7B49]">
+                  <Image
+                    src={itm?.img}
+                    width={310}
+                    height={470}
+                    alt="header-logo"
+                    className="h-[240px] md:h-[440px] w-[172px] md:w-[270px] max-w-max bg-opacity-40"
+                  />
                 </div>
-              ))}
-            </EmblaCarousel>
-          </div>
+              </div>
+            ))}
+          </EmblaCarousel>
         </div>
+      </div>
+        </>
+      )}
+      
         <div className="w-full py-6 md:py-20 bg-[#FFF9F0] flex flex-col items-center justify-center">
           <p className="text-sm text-center md:text-[22px] font-medium text-[#585858] font-jost">
             Get to know more about Apis from our customers
           </p>
           <Link href={"/our-brand/product-details/blog"}>
-            <p className="text-[20px] md:text-[40px] font-bold text-[#9F7B49] py-2">
+            <p className="text-[20px] md:text-[40px] font-bold text-[#9F7B49] py-2 font-literata">
               Our Social Reviews
             </p>
           </Link>
@@ -1086,11 +1096,11 @@ const ProductDetails = () => {
       <div className="w-full relative flex flex-col justify-center items-center">
         <div className="flex flex-col gap-4 sm:gap-10 px-4 lg:px-36 pb-0 pt-6 md:py-6">
           <div className="flex flex-col items-center justify-center gap-4 md:gap-5">
-            <p className="text-center text-[14px] md:text-[22px] uppercase text-[#585858]" style={{paddingTop:"30px"}}>
+            <p className="text-center text-[14px] md:text-[22px] font-jost  text-[#585858]" style={{paddingTop:"30px"}}>
               day-to-day choices that weave the most profound stories of
               character & growth.
             </p>
-            <h3 className="text-[20px] md:text-[40px] font-bold text-[#9F7B49]">
+            <h3 className="text-[20px] md:text-[40px] font-bold text-[#9F7B49] font-literata -mt-5">
               Similar Products
             </h3>
           </div>

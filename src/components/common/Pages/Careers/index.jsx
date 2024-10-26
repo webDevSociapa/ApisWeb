@@ -295,7 +295,7 @@ export default function Careers() {
         {CAREER_DATA.map((itm, index) => (
           <div key={index} className="border p-2 md:p-3 px-1 border-[#85673D]" onClick={() => handleImageClick(itm)}>
             {itm.type === 1 && (
-              <div className="p-3 pt-0 text-[#85673D] font-bold text-sm md:text-2xl pb-5">
+              <div className="p-3 pt-0 text-[#85673D] font-bold text-sm md:text-2xl pb-5 font-jost">
                 <p>{itm.title}</p>
               </div>
             )}
@@ -309,7 +309,7 @@ export default function Careers() {
               />
             </div>
             {itm.type === 0 && (
-              <div className="p-3 pb-0 text-[#85673D] font-bold text-sm md:text-2xl pt-5">
+              <div className="p-3 pb-0 text-[#85673D] font-bold text-sm md:text-2xl pt-5 font-jost">
                 <p className="font-jost">{itm.title}</p>
               </div>
             )}
