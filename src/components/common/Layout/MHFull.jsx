@@ -17,7 +17,7 @@ const MHFull = () => {
             // width={100}
             // height={55}
             alt="header-logo"
-            className="w-[120px] h-[55px] object-contain object-center logoMidScreen"
+            className=" object-contain object-center logoMidScreen"
           />
         </Link>
       </div>

@@ -3,21 +3,15 @@ import React, { useState, useEffect } from 'react'
 import Image from "next/image";
 import PropTypes from "prop-types";
 import Ring1 from "@/assets/images/OurBrands/Ring-4.png";
-import HoneyMug from "@/assets/images/heart-of-bavaria-section/honey-mug.png";
-import HoneyNest from "@/assets/images/heart-of-bavaria-section/honey-nest.png";
 import Banner from "@/assets/images/Media/media.png";
-import Ahar from "@/assets/images/Media/Ahar.png";
-import AsianExpo from "@/assets/images/Media/AsianExpo.png";
-import WomenDay from "@/assets/images/Media/WomenDay.png";
 import { NEWS_DATA } from '@/lib/constants';
-import HoneyMugMedia from '@/assets/images/Media/honey_mug.png';
-import styles from './media.module.css'; // Importing the CSS module
 import Campaign from '@/assets/images/Media/campaign.png'
 import handhoney from '@/assets/images/Media/handhoney.png'
 import jam from '@/assets/images/Media/jam.png'
 import honey from '@/assets/images/Media/honey.png'
-import RingCircle from '@/assets/images/Media/ringCircle.png'
-import CampaingMedia from '@/assets/images/Media/campaignBg.png'
+import mediaGallery001 from '@/assets/images/Media/mediaGallery001.png'
+import mediaGallery002 from '@/assets/images/Media/mediaGallery002.png'
+import mediaGallery003 from '@/assets/images/Media/mediaGallery003.png'
 // import News1 from "@/assets/images/Media/News1.png";
 // import News2 from "@/assets/images/Media/News2.png";
 // import News3 from "@/assets/images/Media/News3.png";
@@ -31,27 +25,27 @@ import EmblaCarousel from "../../Carousel/Carousel";
 
 const LATEST_SLIDES = [
   {
-    img: WomenDay,
+    img: mediaGallery001,
     title: "Women's Day Celebration",
   },
   {
-    img: AsianExpo,
+    img: mediaGallery002,
     title: "Asian Expo 2019",
   },
   {
-    img: Ahar,
+    img: mediaGallery003,
     title: "Aahar 2019",
   },
   {
-    img: WomenDay,
+    img: mediaGallery001,
     title: "Women's Day Celebration",
   },
   {
-    img: AsianExpo,
+    img: mediaGallery002,
     title: "Asian Expo 2019",
   },
   {
-    img: Ahar,
+    img: mediaGallery003,
     title: "Aahar 2019",
   },
 ];
@@ -91,6 +85,8 @@ export default function Media() {
       setIsMobile(window.innerWidth < 768); // Update state based on window width
     };
 
+    window.scroll(0,0)
+
 
     handleResize(); // Check initial size
     window.addEventListener('resize', handleResize); // Add event listener
@@ -100,7 +96,6 @@ export default function Media() {
     };
   }, []);
 
-console.log("isMobile",);
 
 
   return (

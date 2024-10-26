@@ -126,13 +126,13 @@ export default function HomePage() {
     { img: DMart, path: "https://www.dmart.in/search?searchTerm=apis" },
   ];
 
-  const handleJoinUs = () => {
-    router.push('/careers#join-us');
-  };
+  // const handleJoinUs = () => {
+  //   router.push('/careers#join-us');
+  // };
 
-  const handleLifeAtApis = () => {
-    router.push('/careers#life-at-apis');
-  };
+  // const handleLifeAtApis = () => {
+  //   router.push('/careers#life-at-apis');
+  // };
 
   const [currentProduct, setCurrentProduct] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false); // State to control modal visibility
@@ -433,7 +433,7 @@ export default function HomePage() {
         <p className="text-xs md:text-lg text-center font-medium text-[#585858] uppercase font-jost text-medium">
           embrace the moment with all its beauty and challenges.
         </p>
-        <p className="text-[20px] md:text-[40px] font-bold text-[#9F7B49] pt-0 pb-5 md:pt-0  text-center font-literata">
+        <p className="text-[20px] md:text-[40px] font-bold text-[#9F7B49] pt-0 pb-3 md:pt-0  text-center font-literata">
           Our Presence
         </p>
         <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 md:gap-20 xl:gap-6 items-center justify-center">
@@ -606,7 +606,7 @@ export default function HomePage() {
 
         <div className="w-full tvcSectionResponsive">
           <div className="md:tvc-bg relative !w-full">
-            <div className="flex flex-col gap-0 md:gap-0 sm: gap-0">
+            <div className="flex flex-col gap-0 md:gap-0 sm: gap-0 md: -mt-[18px]">
               {/* <p className="font-medium text-center text-[#585858] text-sm  md:text-xl uppercase text-medium font-jost text-medium">
                 Our Tele-vision Commercial's
               </p> */}
@@ -662,14 +662,8 @@ export default function HomePage() {
         ></div>
       </div>
 
-      <div>
-        <video
-        src={""}
-        />
-      </div>
-
       {/* Work Place Culture */}
-      <div className="work-palace flex items-center justify-center px-4 py-4 lg:px-48 lg:py-48">
+      <div className="work-palace flex items-center justify-center px-4 py-4 lg:px-48 lg:py-40">
         <div className="h-full bg-[#FFF9F0] p-4">
           <div className="flex h-full items-center justify-center bg-white p-3">
             <div className="bg-white flex flex-col gap-2 md:gap-4">
@@ -690,21 +684,20 @@ export default function HomePage() {
                 success and growth.
               </p>
               <div className="flex justify-center gap-10 mt-6">
-                {/* <Link href="/careers"> */}
+                <Link href="/careers#join-us">
                 <button className="border border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white"
-                  onClick={handleJoinUs}
+                  // onClick={handleJoinUs}
                 >
                   Join US
                 </button>
-                {/* </Link> */}
-                {/* <Link href="/careers" passHref> */}
-
+                </Link>
+                <Link href="/careers#life-at-apis">
+               
                 <button className="border border-[#9F7B49] bg-white px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-[#9F7B49] hover:text-white  hover:bg-[#9F7B49]"
-                  onClick={handleLifeAtApis}
                 >
                   Life @apis
                 </button>
-                {/* </Link> */}
+                </Link>
               </div>
             </div>
           </div>

@@ -434,7 +434,6 @@ input[type="password"]:-webkit-autofill:active {
 .video-img1 {
   object-fit: fill;
   /* background-size: cover; */
-  
   width: 100%;
   height: 650px;
 }
@@ -747,12 +746,13 @@ input[type="password"]:-webkit-autofill:active {
     /* border: 2px solid red; */
   }
 }
-@media(max-width: 1080px){
+@media(max-width: 1050px){
   .logoMidScreen{
     width: 120px !important;
     height: 55px !important;
+    margin-right: 10px !important;
     /* margin-top: 10px;
-    margin-right: 20px; */
+    margin-right: 20px; 
     /* padding: 0px 2px; */
     /* border: 2px solid red; */
   }

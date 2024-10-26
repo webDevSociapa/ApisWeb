@@ -41,45 +41,6 @@ import HexaGonalPage from "../../Pages/AboutUs/Hexagonal";
 export default function OurBrand() {
   const [activeTab, setActiveTab] = useState("vision");
 
-  const ImageDataJourney = [
-    { image: Polygon12 },
-    { image: Polygon12 },
-    { image: Polygon12 },
-    { image: Polygon12 },
-    { image: Polygon12 },
-    
-   
-  ]
-  const ImageDataJourney1 = [
-    { image: Polygon12 },
-    { image: Polygon12 },
-    { image: Polygon12 },
-    { image: Polygon12 },
-    { image: Polygon12 },
-  ]
-  // const ImageDataJourney2 = [
-     
-  //   { image: Polygon10 },
-  //   { image: Polygon11 },
-  //   { image: Polygon12 },
-  //   { image: Polygon13 },
-  //   { image: Polygon5 },
-  //   { image: Polygon6 },
-  //   { image: Polygon7 },
-  // ]
-  // const ImageDataJourney3 = [
-  //   { image: Polygon14 },
-  //   { image: Polygon13 },
-  //   { image: Polygon5 },
-  //   { image: Polygon6 },
-  //   { image: Polygon7 },
-  //   { image: Polygon7 },
-   
-  //   // { image: Polygon4 },
-    
-  //   { image: Polygon15 },
-  // ]
-
   const [counts, setCounts] = useState({
     productRanges: 0,
     yearsOfLegacy: 0,
@@ -156,8 +117,8 @@ export default function OurBrand() {
     
       <ImageBanner banner={Banner} />
 <div className="static">
-    <Image src={AboutStreak} className="absolute top-[580px] right-4 aboutStrek" /> {/* Adjusted top value */}
-    <Image src={AboutusLogo} className="absolute top-[720px] right-4 aboutslogo"/>
+    <Image src={AboutStreak} className="absolute top-[500px] right-4 aboutStrek" /> {/* Adjusted top value */}
+    <Image src={AboutusLogo} className="absolute top-[680px] right-4 aboutslogo"/>
 </div>
       <div className="bg-white text-gray-800">
         <div className="relative w-full">
@@ -329,11 +290,9 @@ export default function OurBrand() {
         <p className="text-center text-[14px] font-jost md:text-[22px] uppercase text-[#585858]">
           Celebrating a Legacy of Quality and Growth
         </p>
-        <Link target="_blank" href="/about-us/journey">
           <h3 className="text-center text-[20px] md:text-[40px] font-bold text-[#9F7B49] mt-2">
             Journey
           </h3>
-        </Link>
         <p className="mt-4 text-customDarkGray text-center font-jost text-sm md:text-xl font-medium max-w-4xl mx-auto sm: px-4">
           From humble beginnings to a leading FMCG brand, Apis India’s journey
           is defined by a commitment to quality, innovation, and customer
