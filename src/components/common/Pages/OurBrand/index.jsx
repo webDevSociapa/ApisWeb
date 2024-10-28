@@ -40,8 +40,6 @@ export default function OurBrand({ onProductClick }) {
       onProductClick(event);
     }
   };
-
-
   useEffect(()=>{
     window.scroll(0,0)
   },[])
@@ -102,11 +100,11 @@ export default function OurBrand({ onProductClick }) {
                   href={`/our-brand/product-details?brand_id=${selectedBrand}&product_id=${itm?.id}`}
                   onClick={handleProductClick}
                 >
-                  <div className="h-[80px] w-[120px] md:h-[140px] md:w-[200px] flex items-center justify-center rounded-[20px] flex-col bg-white border border-[#9F7B49] cursor-pointer">
+                  <div className="h-[80px] w-[120px] md:h-[140px] md:w-[200px]  flex items-center justify-center rounded-[20px] flex-col bg-white border border-[#9F7B49] cursor-pointer ApisMenuItem">
                     <Image
-                      src={itm.img}
+                      src={itm.product_img_2}
                       alt={itm.name}
-                      className="h-[50px] w-[50px] md:h-[100px] md:w-[100px]"
+                      // className="md:h-[100px] md:w-[100px]"
                     />
                     <p className="text-xs md:text-lg font-bold mt-2">
                       {itm.name}

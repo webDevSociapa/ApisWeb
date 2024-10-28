@@ -4,20 +4,12 @@ import Image from "next/image";
 import PropTypes from "prop-types";
 import News1 from "@/assets/images/home-banner-section/news-1.png";
 import Fruit from "@/assets/images/home-banner-section/fruit.png";
-import AmazonLogo from "@/assets/images/home-banner-section/amazon.png";
-import JioMart from "@/assets/images/home-banner-section/jiomart.png";
-import JioMart2 from "@/assets/images/home-banner-section/jio-mart.png";
-import DMart from "@/assets/images/home-banner-section/d-mart.png";
-import BlinkIt from "@/assets/images/home-banner-section/blink-it.png";
-import BigBasket from "@/assets/images/home-banner-section/big-basket.png";
-import Union from "@/assets/images/home-banner-section/union.png";
 import IndiaUnit from "@/assets/images/home-banner-section/india-unit.png";
 import DubaiUnit from "@/assets/images/home-banner-section/dubai-unit.png";
 import News2 from "@/assets/images/home-banner-section/news-2.png";
-import TrustSlide1 from "@/assets/images/home-banner-section/trust-slide-1.png";
 import HoneyBee from "@/assets/images/home-banner-section/honey-bee.png";
 
-import ChocolateImg  from '@/assets/images/home-banner-section/ChocolateImg.png'
+import ChocolateImg from '@/assets/images/home-banner-section/ChocolateImg.png'
 import ChocolateBox from '@/assets/images/home-banner-section/ChocolateBox.png'
 // import HoneyBee from '@/assets/images/home-banner-section/honey-bee.png'
 // import TrustSlide10 from '@/assets/images/home-banner-section/Muesli-front.png';
@@ -35,17 +27,11 @@ import Link from "next/link";
 import { useRouter } from 'next/navigation';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useState, useEffect } from 'react';
-import ClassicDates from '@/assets/images/home-banner-section/classicDates01.png'
-import ChocolateSpread from '@/assets/images/home-banner-section/chocoFlakes01.png'
-  import AlmondHoney from '@/assets/images/home-banner-section/cornFlakes01.png'
-  import Saffron from '@/assets/images/home-banner-section/saffron01.png'
-  import SoyaChunks from '@/assets/images/home-banner-section/soyaChunks01.png'
-  import Muesli from '@/assets/images/home-banner-section/muesli01.png'
-  import OrganicHoneyGreenCard from '@/assets/images/home-banner-section/organicHoneyGreenCard1.png'
-  import HoneyStick from '@/assets/images/home-banner-section/stickHoney.png'
-  import { LATEST_SLIDES,LATEST_SLIDES_IMAGES } from "@/lib/constants";
-  import Tvc_Apis01 from '@/assets/images/home-banner-section/tvc_apis01.jpeg'
-  import Tvc_Apis02 from '@/assets/images/home-banner-section/tvc_apis02.jpeg'
+import OrganicHoneyGreenCard from '@/assets/images/home-banner-section/organicHoneyGreenCard1.png'
+import HoneyStick from '@/assets/images/home-banner-section/stickHoney.png'
+import { LATEST_SLIDES, LATEST_SLIDES_IMAGES, SLIDES, AVAILABILITY_SLIDE } from "@/lib/constants";
+import Tvc_Apis01 from '@/assets/images/home-banner-section/tvc_apis01.jpeg'
+import Tvc_Apis02 from '@/assets/images/home-banner-section/tvc_apis02.jpeg'
 
 
 
@@ -55,76 +41,8 @@ export default function HomePage() {
   const OPTIONS = { slidesToScroll: 1, align: 'start' }
   const OPTIONS1 = { loop: true }
   const SLIDE_COUNT = 6;
-  const SLIDES = [
-    {
-      img: TrustSlide1,
-      content: "Organic honey is a natural, nutrient-rich sweetener with health benefits, perfect for enhancing flavor in foods and beverages.",
-      title: "Organic Honey"
-    },
-    {
-      img: ClassicDates,
-      content: "Apis Classic Dates are sweet, nutrient-rich fruits ideal for snacking and adding flavor to dishes.",
-      title: "Classic Dates"
-    },
-    {
-      img: Muesli,
-      content: "Muesli crafted with wholesome ingredients for a nourishing start to your day",
-      title: "Muesli"
-    },
-    {
-      img:  ChocolateSpread,
-      content: "Apis Choco Flakes are crispy cereal flakes coated in rich chocolate for a delightful breakfast.",
-      title: "Choco Flakes",
-    },
-  
-    {
-      img: AlmondHoney,
-      content: "Apis Corn Flakes are a crunchy, nutritious breakfast cereal made from premium corn.",
-      title: "Corn Flakes"
-    },
-    {
-      img: Saffron,
-      content: "Apis Saffron is a high-quality spice prized for its rich aroma, color, and health benefits.",
-      title: "Saffron"
-    },
-    {
-      img: SoyaChunks,
-      content: "Soya chunks are protein-rich, plant-based meat alternatives.",
-      title: "Soya Chunk"
-    },
-    
-    // {
-    //   img: TrustSlide9,
-    //   content: "Lemon honey green tea: refreshing, antioxidant-rich blend.",
-    //   title:"Lemon Honey Green Tea"
-    // },
-   
 
-    // {
-    //   img: TrustSlide1,
-    //   content: "Nature`s golden nectar, pure and organic.",
-    //   title: "Organic Honey",
-    // },
-    // {
-    //   img: TrustSlide2,
-    //   content: "Spread the joy with rich, velvety chocolate",
-    //   title: "Chocolate Spread",
-    // },
-    // {
-    //   img: TrustSlide3,
-    //   content: "Delightful strands of culinary tradition for meals",
-    //   title: "Vermicelli",
-    // },
-  ];
- 
-  const AVAILABILITY_SLIDE = [
-    { img: AmazonLogo, path: "https://www.amazon.in/s?k=apis&crid=2CJFWNXIDZI1V&sprefix=apis%2Caps%2C429&ref=nb_sb_noss_1" },
-    { img: JioMart, path: "https://www.jiomart.com/search/apis" },
-    { img: BigBasket, path: "https://www.bigbasket.com/ps/?q=apis&nc=as" },
-    { img: BlinkIt, path: "https://blinkit.com/s/?q=apis" },
-    { img: JioMart2, path: "https://www.jiomart.com/search/apis/in/prod_mart_master_vertical?prod_mart_master_vertical%5BhierarchicalMenu%5D%5Bcategory_tree.level0%5D%5B0%5D=Category" },
-    { img: DMart, path: "https://www.dmart.in/search?searchTerm=apis" },
-  ];
+
 
   const handleJoinUs = () => {
     router.push('/careers#join-us');
@@ -140,7 +58,7 @@ export default function HomePage() {
 
 
 
-  const openModal = (video) => {    
+  const openModal = (video) => {
     setCurrentVideo(video);
     setIsModalOpen(true);
   };
@@ -168,9 +86,9 @@ export default function HomePage() {
       bgColor: 'home-choco-bg',
       desc: "The chocolate spread from Apis will make you smile in no time. The great mixture of ingredients is what makes it so enticing and fun to eat with anything. You can enhance the flavours of various foods just by adding ApisChocolate Spread to them, which will make them even more delectable."
     },
-    
+
   ];
- 
+
   // useEffect(() => {
   //   const interval = setInterval(() => {
   //     setCurrentProduct((prev) => (prev + 1) % products.length);
@@ -178,9 +96,9 @@ export default function HomePage() {
 
   //   return () => clearInterval(interval);
   // }, []);
-  useEffect(()=>{
-    window.scrollTo(0,0);
-  },[])
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
 
 
   return (
@@ -241,7 +159,7 @@ export default function HomePage() {
               day-to-day choices that weave the most profound stories of character & growth.
             </p>
             <h3 className="text-center text-[20px] md:text-[40px] font-bold text-[#9F7B49] mt-0 md:mt-0">
-               Taste is What Makes the Difference
+              Taste is What Makes the Difference
             </h3>
           </div>
         </div>
@@ -251,13 +169,15 @@ export default function HomePage() {
             {SLIDES.map((itm, index) => (
               <div className="embla__slide" key={index}>
                 <div className="embla__slide__number !h-[240px] w-full">
-                  <Image
-                    src={itm?.img}
-                    width={350}
-                    // height={440}
-                    alt="header-logo"
-                    className="h-[250px] w-auto max-w-max bg-opacity-40"
-                  />
+                  <Link href={`${itm?.path}`} target="_blank">
+                    <Image
+                      src={itm?.img}
+                      width={350}
+                      // height={440}
+                      alt="header-logo"
+                      className="h-[250px] w-auto max-w-max bg-opacity-40"
+                    />
+                  </Link>
                 </div>
                 <div className="border-[2px] border-[hsl(35,37%,45%)] mt-4 lg:mt-10 flex flex-col gap-1 lg:gap-3 p-1.5 w-full sm:w-[50%] h-[60%] md:w-[90%] h-[45%]  xl:w-[90%] h-[30%] mx-auto overflow-none md:py-2">
                   <p className="text-sm sm:text-base lg:text-xl font-bold text-[#373737] mb-2">
@@ -291,26 +211,26 @@ export default function HomePage() {
       <div className="px-0 md:px-2 w-full mb-12 mt-6 md:mt-0">
         <div className="home-story-bg py-8 flex flex-col items-center">
           <p className="uppercase text-sm text-center text-[22px] md:text-lg font-medium text-[#585858] font-medium" style={{ fontFamily: "jost" }}>
-          Find Your Favorite Choices Of A Hearty Meals
-                    </p>
+            Find Your Favorite Choices Of A Hearty Meals
+          </p>
           {/* <p className="uppercase text-sm md:text-lg font-medium text-[#585858] font-jost">
             of character & growth.
           </p> */}
           <p className="font-bold capitalize text-center text-[20px] md:text-[40px] text-[#9F7B49]">
             Products that make a difference
           </p>
-            <div className="px-0 lg:px-2 w-full">
-              <div className={`${products[currentProduct].bgColor} relative mt-5 lg:mt-8`}>
-                <div className="w-full h-full flex flex-col lg:flex-row">
-                  <div className="lg:w-1/2 h-full">
-                    <div className="lg:absolute -top-12 left-6 h-[500px] lg:h-[760px]"></div>
-                    <Image
-                      src={products[currentProduct].image}
-                      height={720}
-                      alt="product-image"
-                      className="h-[500px] w-[45%] w-full lg:h-[650px] lg:w-[42%] absolute -top-4 lg:rounded-tl-[40px] lg:rounded-tr-[250px] lg:rounded-br-[40px] lg:rounded-bl-[250px] rounded-tl-[5px] rounded-tr-[100px] rounded-br-[5px] rounded-bl-[100px]"
-                    />
-                    {/* <video
+          <div className="px-0 lg:px-2 w-full">
+            <div className={`${products[currentProduct].bgColor} relative mt-5 lg:mt-8`}>
+              <div className="w-full h-full flex flex-col lg:flex-row">
+                <div className="lg:w-1/2 h-full">
+                  <div className="lg:absolute -top-12 left-6 h-[500px] lg:h-[760px]"></div>
+                  <Image
+                    src={products[currentProduct].image}
+                    height={720}
+                    alt="product-image"
+                    className="h-[500px] w-[45%] w-full lg:h-[650px] lg:w-[42%] absolute -top-4 lg:rounded-tl-[40px] lg:rounded-tr-[250px] lg:rounded-br-[40px] lg:rounded-bl-[250px] rounded-tl-[5px] rounded-tr-[100px] rounded-br-[5px] rounded-bl-[100px]"
+                  />
+                  {/* <video
                autoPlay
                 muted
                 className="h-[500px] w-[45%] w-full lg:h-[650px] lg:w-[42%] absolute -top-4 lg:rounded-tl-[40px] lg:rounded-tr-[250px] lg:rounded-br-[40px] lg:rounded-bl-[250px] rounded-tl-[5px] rounded-tr-[10px] rounded-br-[5px] rounded-bl-[100px] productDiffBg"
@@ -319,52 +239,52 @@ export default function HomePage() {
                 loop // Ensures the video loops continuously
                 src={'https://luxor-pen-prod.s3.ap-south-1.amazonaws.com/682.500videoframe-ezgif.com-video-to-mp4-converter+(1).mp4 '}
               /> */}
-                    <Image
-                      src={ReactAngle}
-                      className="h-[500px] w-full lg:h-[650px] lg:w-[42%] absolute -top-4 lg:rounded-tl-[40px] lg:rounded-tr-[250px] lg:rounded-br-[40px] lg:rounded-bl-[250px] rounded-tl-[5px] robin rounded-tr-[100px] rounded-br-[5px] rounded-bl-[100px]"
-                    />
+                  <Image
+                    src={ReactAngle}
+                    className="h-[500px] w-full lg:h-[650px] lg:w-[42%] absolute -top-4 lg:rounded-tl-[40px] lg:rounded-tr-[250px] lg:rounded-br-[40px] lg:rounded-bl-[250px] rounded-tl-[5px] robin rounded-tr-[100px] rounded-br-[5px] rounded-bl-[100px]"
+                  />
+                </div>
+                <div className="lg:w-[38%] flex items-center justify-center flex-col py-10 overflow-hidden">
+                  <div className="text-center"> {/* Removed unnecessary classes for centering */}
+                    <p className="text-white font-bold text-[30px] mb-2">
+                      {products[currentProduct].name}
+                    </p>
+                    <p className="text-white text-[19px] font-normal font-jost leading-6">
+                      {products[currentProduct].description}
+                    </p>
                   </div>
-                  <div className="lg:w-[38%] flex items-center justify-center flex-col py-10 overflow-hidden">
-                    <div className="text-center"> {/* Removed unnecessary classes for centering */}
-                      <p className="text-white font-bold text-[30px] mb-2">
-                        {products[currentProduct].name}
-                      </p>
-                      <p className="text-white text-[19px] font-normal font-jost leading-6">
-                        {products[currentProduct].description}
-                      </p>
-                    </div>
-                    <div className="flex relative items-center justify-center"> {/* Removed md:me-24 and item-center */}
+                  <div className="flex relative items-center justify-center"> {/* Removed md:me-24 and item-center */}
+                    <Image
+                      src={products[currentProduct].productImage}
+                      height={330}
+                      alt="product-slide"
+                      className="h-[330px] mx-auto"
+                    />
+
+                    {products[currentProduct].name === 'Organic Honey' && (
                       <Image
-                        src={products[currentProduct].productImage}
-                        height={330}
-                        alt="product-slide"
-                        className="h-[330px] mx-auto" 
+                        src={HoneyBee}
+                        height={125}
+                        alt="honey-bee"
+                        className="h-[125px] hidden md:inline absolute bottom-0 rotate-12 -right-20 xs:right-[24px]"
                       />
-                      
-                      {products[currentProduct].name === 'Organic Honey' && (
-                        <Image
-                          src={HoneyBee}
-                          height={125}
-                          alt="honey-bee"
-                          className="h-[125px] hidden md:inline absolute bottom-0 rotate-12 -right-20 xs:right-[24px]"
-                        />
-                      )}
-                    </div>
-                    <div className="text-center text-white xl:w-[75%] px-3 text-[17px] font-jost font-normal leading-6">
-                      {products[currentProduct].desc}
-                    </div>
+                    )}
+                  </div>
+                  <div className="text-center text-white xl:w-[75%] px-3 text-[17px] font-jost font-normal leading-6">
+                    {products[currentProduct].desc}
                   </div>
                 </div>
-                {products[currentProduct].name === 'Organic Honey' && (
-                  <Image
-                    src={HoneyStick}
-                    // height={965}
-                    alt="honey-dhar"
-                    className="hidden xl:inline h-[550] absolute top-[91px] -right-[10px]"
-                  />
-                )}
               </div>
+              {products[currentProduct].name === 'Organic Honey' && (
+                <Image
+                  src={HoneyStick}
+                  // height={965}
+                  alt="honey-dhar"
+                  className="hidden xl:inline h-[550] absolute top-[91px] -right-[10px]"
+                />
+              )}
             </div>
+          </div>
         </div>
       </div>
 
@@ -372,8 +292,8 @@ export default function HomePage() {
       {/* API Media */}
       {/*   */}
       <div className="relative w-full flex items-center flex-col justify-center apiMediaSection overflow-hidden">
-      <p className="text-xs md:text-lg text-center text-[#585858] text-[22px] px-4 uppercase font-jost text-medium font-jost font-normal">          
-        Stay updated with the latest news, events, and media coverage of APIS India.
+        <p className="text-xs md:text-lg text-center text-[#585858] text-[22px] px-4 uppercase font-jost text-medium font-jost font-normal">
+          Stay updated with the latest news, events, and media coverage of APIS India.
         </p>
         <p className="text-[20px] md:text-[40px] font-bold text-[#9F7B49]">
           Apis Media
@@ -402,13 +322,13 @@ export default function HomePage() {
                       />
                     </div>
                     <div className="py-2"> {/* Ensure text is left-aligned */}
-                <p className="font-bold text-[#85673D] text-sm md:text-xl mb-1 line-clamp-2 overflow-hidden">
-                  {itm.desc}
-                </p>
-                <p className="text-[#525252] text-xs md:text-lg">
-                  {itm.date}
-                </p>
-              </div>
+                      <p className="font-bold text-[#85673D] text-sm md:text-xl mb-1 line-clamp-2 overflow-hidden">
+                        {itm.desc}
+                      </p>
+                      <p className="text-[#525252] text-xs md:text-lg">
+                        {itm.date}
+                      </p>
+                    </div>
                   </div>
                 </a>
               </div>
@@ -550,9 +470,9 @@ export default function HomePage() {
               </EmblaCarousel>
             </div>
             <Link href={"https://www.amazon.in/s?k=apis&crid=2CJFWNXIDZI1V&sprefix=apis%2Caps%2C429&ref=nb_sb_noss_1"} target="_blank">
-            <button className="border border-[#9F7B49] bg-[#9F7B49] px-2 md:px-12 text-[10px] md:text-base py-1 md:py-3 font-bold text-white">
-              Explore More
-            </button>
+              <button className="border border-[#9F7B49] bg-[#9F7B49] px-2 md:px-12 text-[10px] md:text-base py-1 md:py-3 font-bold text-white">
+                Explore More
+              </button>
             </Link>
           </div>
         </div>
@@ -569,49 +489,49 @@ export default function HomePage() {
         <p className="font-medium text-center text-xs md:text-lg text-[#666666] font-medium text-[22px] font-jost sm: -px-4">
           Discover the newest trends, products, and innovations from APIS India.
         </p>
-        <div className="py-6 md:py-10 w-[90%] flex items-center justify-center">
+        <div className="py-6 md:py-10 w-[90%] flex items-center justify-center latestApisHome">
           <EmblaCarousel options={OPTIONS}>
             {LATEST_SLIDES.map((itm, index) => (
-          <div className="embla__slide" key={index}> {/* Open modal on click */}
+              <div className="embla__slide" key={index}> {/* Open modal on click */}
                 <div className="embla__slide__number !h-[246px] w-full">
                   <Image
-                   width={350}
-                   height={346}
+                    width={350}
+                    height={346}
                     className="rounded w-full sm:w-[360px] sm:h-[246px]"
                     src={itm.img}
                     // title="YouTube video player"
                     // frameborder="0"
                     onClick={() => openModal(itm.video)}
-                    // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    // referrerpolicy="strict-origin-when-cross-origin"
-                    // allowfullscreen
-                    />
+                  // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  // referrerpolicy="strict-origin-when-cross-origin"
+                  // allowfullscreen
+                  />
                 </div>
               </div>
             ))}
           </EmblaCarousel>
         </div>
-       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50" onClick={closeModal}> {/* Close modal on overlay click */}
-          <div className="bg-white p-4 rounded-lg w-11/12 md:w-3/4 lg:w-1/2" onClick={(e) => e.stopPropagation()}> {/* Prevent closing on content click */}
-          <div className="flex justify-end mb-2"> {/* Added flex container to align button to the right */}
-            <button className="text-end text-xl" onClick={closeModal}>X</button> {/* Close button */}
+        {isModalOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50" onClick={closeModal}> {/* Close modal on overlay click */}
+            <div className="bg-white p-4 rounded-lg w-11/12 md:w-3/4 lg:w-1/2" onClick={(e) => e.stopPropagation()}> {/* Prevent closing on content click */}
+              <div className="flex justify-end mb-2"> {/* Added flex container to align button to the right */}
+                <button className="text-end text-xl" onClick={closeModal}>X</button> {/* Close button */}
+              </div>
+              <iframe
+                width="450px"
+                height="450px"
+                src={currentVideo}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="rounded-lg w-full"
+              ></iframe>
             </div>
-            <iframe
-              width="450px"
-              height="450px"
-              src={currentVideo}
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              className="rounded-lg w-full"
-            ></iframe>
           </div>
-        </div>
-      )}
-       
+        )}
+
 
         <div className="w-full tvcSectionResponsive">
           <div className="md:tvc-bg relative !w-full">
@@ -638,24 +558,24 @@ export default function HomePage() {
                 src={Tvc_Apis01}
                 onClick={() => openModal('https://www.youtube.com/embed/fFesUk0sBII?si=q-QGdxRPqVK8W82S')}
 
-                // title="YouTube video player"
-                // frameborder="0"
-                // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                // referrerpolicy="strict-origin-when-cross-origin"
-                // allowfullscreen
-             />
+              // title="YouTube video player"
+              // frameborder="0"
+              // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              // referrerpolicy="strict-origin-when-cross-origin"
+              // allowfullscreen
+              />
               <Image
                 className="rounded hidden lg:inline md:h-[360px] h-auto md:w-[580px] max-w-[500px] min-h-[200px]"
                 src={Tvc_Apis02}
                 onClick={() => openModal('https://www.youtube.com/embed/6PqRMIjAEUw?si=q5neKZV8zh5OyZOx')}
-                // title="YouTube video player"
-                // frameborder="0"
-                // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                // referrerpolicy="strict-origin-when-cross-origin"
-                // allowfullscreen
+              // title="YouTube video player"
+              // frameborder="0"
+              // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              // referrerpolicy="strict-origin-when-cross-origin"
+              // allowfullscreen
               />
             </div>
-            
+
             <Image
               src={Fruit}
               // width={601}
@@ -669,12 +589,6 @@ export default function HomePage() {
           className="container-fluid p-0"
           style={{ position: "relative", left: "88px" }}
         ></div>
-      </div>
-
-      <div>
-        <video
-        src={""}
-        />
       </div>
 
       {/* Work Place Culture */}

@@ -118,12 +118,16 @@ const MainFooter = () => {
               <span className="cursor-pointer text-sm text-[#9F7B49] hover:text-activeGreen-500">
                 Copy Right Reserved By ApisIndia.com
               </span>
+              <Link href={"/our-policy?policy=terms"}>
               <span className="cursor-pointer text-sm text-[#9F7B49] hover:text-activeGreen-500">
-                Disclaimer
+                 Terms & Conditions
               </span>
+              </Link>
+              <Link href={"/our-policy?policy=privacy"}>
               <span className="cursor-pointer text-sm text-[#9F7B49] hover:text-activeGreen-500">
                 Privacy Policy
               </span>
+              </Link>
             </div>
             <div className="flex items-start md:items-center justify-start md:justify-center gap-5">
               <a href={"https://www.facebook.com/apisindialtd"} target="_blank">

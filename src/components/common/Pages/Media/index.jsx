@@ -12,12 +12,6 @@ import honey from '@/assets/images/Media/honey.png'
 import mediaGallery001 from '@/assets/images/Media/mediaGallery001.png'
 import mediaGallery002 from '@/assets/images/Media/mediaGallery002.png'
 import mediaGallery003 from '@/assets/images/Media/mediaGallery003.png'
-// import News1 from "@/assets/images/Media/News1.png";
-// import News2 from "@/assets/images/Media/News2.png";
-// import News3 from "@/assets/images/Media/News3.png";
-// import News4 from "@/assets/images/Media/News4.png";
-// import News5 from "@/assets/images/Media/News5.png";
-// import News6 from "@/assets/images/Media/News6.png";
 
 
 import ImageBanner from "../../Layout/Banner";
@@ -95,7 +89,6 @@ export default function Media() {
       window.removeEventListener('resize', handleResize); // Cleanup on unmount
     };
   }, []);
-
 
 
   return (

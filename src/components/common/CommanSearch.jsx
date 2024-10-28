@@ -4,8 +4,7 @@ import { useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import PropTypes from 'prop-types';
 
-import { Button } from '../ui/button';
-import { Input } from '../ui/input';
+// import { Button } from '../ui/button';
 
 export default function CommandSearch({
   className,
@@ -37,7 +36,7 @@ export default function CommandSearch({
       )}
     >
       <span className='icon-search mr-2 text-xl' />
-      <Input
+      <input
         placeholder={placeholder}
         value={searchTerm}
         className={cn(
@@ -46,9 +45,9 @@ export default function CommandSearch({
         onChange={(e) => setSearchTerm(e.target.value)}
       />
       {searchTerm && (
-        <Button variant='icon' className='px-1' onClick={handleClear}>
+        <button variant='icon' className='px-1' onClick={handleClear}>
           <span className='icon-plus rotate-45 text-2xl'></span>
-        </Button>
+        </button>
       )}
     </div>
   );

@@ -37,9 +37,6 @@ import NewsName3 from "@/assets/images/Media/NewsName3.png";
 import NewsName4 from "@/assets/images/Media/NewsName4.png";
 import NewsName5 from "@/assets/images/Media/NewsName5.png";
 import NewsName6 from "@/assets/images/Media/NewsName6.png";
-
-import apisNews1 from "@/assets/images/Media/apisnews1.jpg"
-import apisNews2 from "@/assets/images/Media/apisnews2.jpg"
 import apisNews3 from "@/assets/images/Media/apisnews3.jpg"
 import apisNews4 from "@/assets/images/Media/apisnews4.jpg"
 import apisNews5 from "@/assets/images/Media/apisnews5.jpg"
@@ -102,6 +99,59 @@ import apisNews49 from "@/assets/images/Media/apisnews49.jpg"
  import MediaImage02 from '@/assets/images/home-banner-section/mediaImage02.jpeg'
  import MediaImage01 from '@/assets/images/home-banner-section/mediaImage01.jpeg'
  import NewCookingPaste from '@/assets/images/OurBrands/newCookingPaste.png'
+ import AlmondHoney from '@/assets/images/home-banner-section/cornFlakes01.png'
+import Saffron1 from '@/assets/images/home-banner-section/saffron01.png'
+import SoyaChunks1 from '@/assets/images/home-banner-section/soyaChunks01.png'
+import Muesli from '@/assets/images/home-banner-section/muesli01.png'
+import ClassicDates from '@/assets/images/home-banner-section/classicDates01.png'
+import ChocolateSpread from '@/assets/images/home-banner-section/chocoFlakes01.png'
+import AmazonLogo from "@/assets/images/home-banner-section/amazon.png";
+import JioMart from "@/assets/images/home-banner-section/jiomart.png";
+import JioMart2 from "@/assets/images/home-banner-section/jio-mart.png";
+import DMart from "@/assets/images/home-banner-section/d-mart.png";
+import BlinkIt from "@/assets/images/home-banner-section/blink-it.png";
+import BigBasket from "@/assets/images/home-banner-section/big-basket.png";
+import HoneyShield from "@/assets/images/OurBrands/honeyShield.png";
+import Skin from '@/assets/images/OurBrands/skin.png';
+import Sustain from "@/assets/images/OurBrands/sustain.png";
+import Minrella from '@/assets/images/OurBrands/minrella.png'
+import VitaminSource from '@/assets/images/OurBrands/vitaminSource.png'
+import Ingrediant from '@/assets/images/OurBrands/ingrediant.png'
+import EnergyBoost from '@/assets/images/OurBrands/energyBoost.png'
+import AidsDigestion from "@/assets/images/OurBrands/AidsDigestion.png"
+import Psychology from "@/assets/images/OurBrands/psychology.png"
+import FiberRich from "@/assets/images/OurBrands/fiberRich.png"
+import Nutrient from "@/assets/images/OurBrands/nutrient.png"
+import LowClories from "@/assets/images/OurBrands/lowClories.png"
+import Digestive from "@/assets/images/OurBrands/digestive.png"
+import Versatile from "@/assets/images/OurBrands/versatile.png"
+import VersatileMeals from "@/assets/images/OurBrands/versatileMile.png"
+import NoArtificial from "@/assets/images/OurBrands/noArtificial.png"
+import Calcium from "@/assets/images/OurBrands/calcium.png"
+import Delious from "@/assets/images/OurBrands/delious.png"
+import SkinCare from "@/assets/images/OurBrands/skinCare.png"
+import WeightLoss from "@/assets/images/OurBrands/weightLoss.png"
+import WoundHealing from "@/assets/images/OurBrands/woundHealing.png"
+import ProteinSource from "@/assets/images/OurBrands/proteinSource.png"
+import BoneStrength from "@/assets/images/OurBrands/BoneStrength.png"
+import HarmoneBalance from "@/assets/images/OurBrands/HarmoneBalance.png"
+import MoodEnhance from "@/assets/images/OurBrands/moodEnhance.png"
+import BrainFunction from "@/assets/images/OurBrands/BrainFunction.png"
+import Glimpse1 from "@/assets/images/OurBrands/Glimpse-1.png";
+import Glimpse2 from "@/assets/images/OurBrands/Glimpse-2.png";
+import Glimpse3 from "@/assets/images/OurBrands/Glimpse-3.png";
+import HoneyImage11 from "@/assets/images/OurBrands/honeyyyyy.png"
+import chocoFlakesManu from "@/assets/images/OurBrands/chocoFlakesManu.png"
+import SafronProductMenu from "@/assets/images/OurBrands/safronProductMenu.png"
+import ClassicDatesMenu from "@/assets/images/OurBrands/classicDatesMenu.png"
+import MeusliMenuItem from "@/assets/images/OurBrands/meusliMenuItem.png"
+import CornFlakesMenu from "@/assets/images/OurBrands/cornFlakesMenu.png"
+import SoyaChunkMenu from "@/assets/images/OurBrands/soyaChunkMenu.png"
+import HimalayaHoneyMenu from "@/assets/images/OurBrands/HimalayaHoneyMenu.png"
+import GreenTeaMenuItem from "@/assets/images/OurBrands/greenTeaMenuItem.png"
+import PeanutButterMenu from "@/assets/images/OurBrands/peanutButterMenu.png"
+import JamApisMenu from "@/assets/images/OurBrands/ApisJamMenu.png"
+// import OrganicHoneyMenu from "@/assets/images"
 
 //  import Blog8 from '@/assets/images/our-blog/blog08.png';
 //  import Blog5 from '@/assets/images/our-blog/Blog0.jpg';
@@ -173,6 +223,16 @@ export const STATUS_CODE = {
   WARNING: 2,
 };
 
+
+// export const PRODUCT_MENU = [
+//   {
+//   id:1,
+//   name: "Organic Honey",
+//   product_img_1: ApisJamMenu,
+
+//   }
+// ]
+
 export const PRODUCT_DATA = [
   {
     id: 1,
@@ -180,7 +240,7 @@ export const PRODUCT_DATA = [
     products: [
       {
         id: 1,
-        name: "Honey",
+        name: "Organic Honey",
         img: Honey,
         back_img: OrganicHoney,
         rect_color: "bg-[#FFC660]",
@@ -192,6 +252,8 @@ export const PRODUCT_DATA = [
         product_desc:
           "At Apis India, we are dedicated to delivering high-quality FMCG products that enhance your everyday life. With a focus on freshness, innovation, and reliability, our diverse range of products reflects our commitment to excellence and customer satisfaction. Discover the difference with Apis India.",
         product_img_1: TrustSlide1,
+        product_img_2: HoneyImage11,
+
         customer_says:
           "I’ve tried many honeys, but Apis Organic Honey stands out for its authentic taste and quality. It’s perfect for my tea, baking, and even just a spoonful for a quick energy boost! APIs Honey truly stands out for its purity. It’s evident that they prioritize the natural essence of honey without any additives or artificial processing. The flavor is rich, smooth, and genuinely delightful, reflecting the untouched quality of the nectar.",
         health_benefits:
@@ -201,6 +263,28 @@ export const PRODUCT_DATA = [
       },
       {
         id: 2,
+        name: "Apis Honey",
+        img: Honey,
+        back_img: HoneyBg,
+        rect_color: "bg-[#FFC660]",
+        title_color: "text-[#9F7B49]",
+        desc_color: "text-black",
+        title: "",
+        title_desc: "",
+        product_desc:
+          "At Apis India, we are dedicated to delivering high-quality FMCG products that enhance your everyday life. With a focus on freshness, innovation, and reliability, our diverse range of products reflects our commitment to excellence and customer satisfaction. Discover the difference with Apis India.",
+        product_img_1: HoneyProduct,
+        product_img_2: HimalayaHoneyMenu,
+
+        customer_says:
+          "APIs Himalayan Honey, and it’s exceptional! The honey has a rich, deep flavor with delightful floral undertones that truly reflects its Himalayan origins. Its purity is evident in both taste and texture—smooth and golden without any added sugars or artificial ingredients. I love the natural sweetness it adds to my tea and yogurt, and it’s perfect for drizzling over toast. The packaging is also top-notch, preserving the honey’s freshness. APIs Himalayan Honey has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for high-quality, pure honey with an authentic, flavorful profile.",
+        health_benefits:
+          "Honey has been used for aesthetic purposes especially to return vigour and beauty to skin. When applied together with milk, honey creates a smooth, flawless skin. Real honey is also used for softening hair texture and for glowing skin.",
+        primary_color: "",
+        secondary_color: "",
+      },
+      {
+        id: 3,
         name: "Dates",
         img: Brands,
         rect_color: "bg-[#162D13]",
@@ -212,6 +296,7 @@ export const PRODUCT_DATA = [
         product_desc:
           "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor without any additives or preservatives. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
         product_img_1: DatesProduct,
+        product_img_2: ClassicDatesMenu,
         customer_says:
           "I recently tried Apis Dates, and I’m absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It’s clear that APIs prioritizes purity, as there are no additives or preservatives, just pure, high-quality dates. The texture is perfect—soft and moist, making them a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I’m enjoying a product that’s both nutritious and free from artificial ingredients. APIs Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
         health_benefits:
@@ -239,6 +324,8 @@ export const PRODUCT_DATA = [
         product_desc:
           "Just as our honey exemplifies nature's finest, our jams uphold the same unwavering commitment to quality. We carefully select the freshest fruits, ensuring that each jar delivers a burst of genuine flavor without artificial additives or preservatives. Our meticulous process preserves the natural taste and nutritional benefits of the fruit, offering a delightful and wholesome experience with every spoonful. When you choose APIs jams, you’re savoring purity in its most authentic form, making each bite a true celebration of natural goodness.",
         product_img_1: JamProduct,
+        product_img_2: JamApisMenu,
+
         customer_says:
           "I recently tried Apis Jam, and I’m absolutely delighted with the experience! The flavor is truly exceptional—rich, vibrant, and bursting with genuine fruit goodness. You can taste the quality in every spoonful, with no artificial aftertaste or additives. The texture is perfectly smooth, making it a versatile addition to everything from toast to desserts. I also appreciate the thoughtful packaging that preserves freshness and highlights the commitment to purity. APIs Jam has quickly become a staple in my kitchen, and I wholeheartedly recommend it to anyone looking for a premium, authentic jam that delivers on both taste and quality.",
         health_benefits:
@@ -260,6 +347,7 @@ export const PRODUCT_DATA = [
         product_desc:
           "Purity is the essence of our flakes. We meticulously craft each batch using the highest quality ingredients, ensuring that every flake embodies the true taste of nature. Our commitment to purity means no artificial additives or preservatives—just simple, wholesome goodness in every bite. The result is a crisp, clean flavor that stands out in every dish, delivering a natural crunch that enhances your meals. With APIs flakes, you're not just enjoying a product; you're savoring the essence of purity in food, made with care and integrity from start to finish.",
         product_img_1: FlakesProduct,
+        product_img_2: chocoFlakesManu,
         customer_says:
           "Best experience ever !!!! yes its for APIs Flakes and am thoroughly impressed! The flakes are incredibly crisp and full of natural flavor, adding a delightful crunch to my breakfasts and snacks. What stands out is the purity of the product—no artificial additives or preservatives, just wholesome, high-quality ingredients. Each bite is fresh and satisfying, making them perfect for both sweet and savory dishes. The packaging is also well-designed, keeping the flakes fresh and crisp. APIs Flakes have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking a premium, delicious, and natural option for their meals.",
         health_benefits:
@@ -281,6 +369,7 @@ export const PRODUCT_DATA = [
         product_desc:
           "Purity is deeply embedded in our vermicelli. We prioritize selecting the finest ingredients and employing meticulous processes to ensure that every strand embodies true quality. Our vermicelli is crafted without artificial additives or preservatives, allowing its natural flavor and texture to shine through in every dish. This commitment to purity means that you experience a clean, wholesome taste and consistent quality that enhances your culinary creations. When you choose APIs Vermicelli, you’re not just getting a product; you’re embracing a philosophy where purity is our guiding principle, ensuring excellence in every bite.",
         product_img_1: VermiProduct,
+        product_img_2: VermiProduct,
         customer_says:
           "I recently tried Apis Vermicelli, and I am thoroughly impressed! The texture is perfectly light and airy, making it a fantastic base for both savory and sweet dishes. It cooks evenly and retains its shape beautifully, which is a testament to its high quality. I appreciate that APIs Vermicelli is made with care, resulting in a clean, wholesome taste without any artificial additives. Whether used in a traditional dish or a creative recipe, it adds a wonderful touch to every meal. APIs Vermicelli has quickly become a pantry staple for me, and I highly recommend it to anyone seeking top-notch, versatile pasta.",
         health_benefits:
@@ -288,26 +377,26 @@ export const PRODUCT_DATA = [
         primary_color: "",
         secondary_color: "",
       },
-      {
-        id: 4,
-        name: "Macaroni",
-        img: Macroni,
-        back_img: MacroniBg,
-        rect_color: "bg-[#D1A870]",
-        title_color: "",
-        desc_color: "",
-        title: "",
-        title_desc: "",
-        product_desc:
-          "Purity is integral to our macaroni. We start with premium durum wheat, ensuring that every piece of macaroni embodies authentic taste and superior texture. Our meticulous production process is free from artificial additives and preservatives, preserving the natural essence and wholesome quality of the pasta. This dedication to purity ensures that each bite of APIs Macaroni delivers a clean, satisfying flavor that enhances any dish. When you choose APIs, you're selecting macaroni that exemplifies our commitment to purity, offering a true taste of quality and excellence in every meal.",
-        product_img_1: MacroniProduct,
-        customer_says:
-          "I’m extremely impressed! The quality is outstanding—the macaroni cooks to a perfect al dente texture and holds up beautifully in all my dishes. The flavor is rich and clean, with no artificial aftertaste or fillers. It’s clear that APIs is committed to purity and excellence, as each bite showcases the genuine, wholesome taste of premium durum wheat. Whether I’m making a classic mac and cheese or a hearty pasta salad, APIs Macaroni consistently delivers. It has quickly become a favorite in my kitchen, and I highly recommend it to anyone looking for top-notch, delicious pasta.",
-        health_benefits:
-          "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
-        primary_color: "",
-        secondary_color: "",
-      },
+      // {
+      //   id: 4,
+      //   name: "Macaroni",
+      //   img: Macroni,
+      //   back_img: MacroniBg,
+      //   rect_color: "bg-[#D1A870]",
+      //   title_color: "",
+      //   desc_color: "",
+      //   title: "",
+      //   title_desc: "",
+      //   product_desc:
+      //     "Purity is integral to our macaroni. We start with premium durum wheat, ensuring that every piece of macaroni embodies authentic taste and superior texture. Our meticulous production process is free from artificial additives and preservatives, preserving the natural essence and wholesome quality of the pasta. This dedication to purity ensures that each bite of APIs Macaroni delivers a clean, satisfying flavor that enhances any dish. When you choose APIs, you're selecting macaroni that exemplifies our commitment to purity, offering a true taste of quality and excellence in every meal.",
+      //   product_img_1: MacroniProduct,
+      //   customer_says:
+      //     "I’m extremely impressed! The quality is outstanding—the macaroni cooks to a perfect al dente texture and holds up beautifully in all my dishes. The flavor is rich and clean, with no artificial aftertaste or fillers. It’s clear that APIs is committed to purity and excellence, as each bite showcases the genuine, wholesome taste of premium durum wheat. Whether I’m making a classic mac and cheese or a hearty pasta salad, APIs Macaroni consistently delivers. It has quickly become a favorite in my kitchen, and I highly recommend it to anyone looking for top-notch, delicious pasta.",
+      //   health_benefits:
+      //     "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
+      //   primary_color: "",
+      //   secondary_color: "",
+      // },
       {
         id: 5,
         name: "Spread",
@@ -322,6 +411,7 @@ export const PRODUCT_DATA = [
         product_desc:
           "At APIs, purity is the cornerstone of our spreads. We meticulously select high-quality ingredients to ensure that every jar reflects our commitment to natural, unadulterated flavors. Our spreads are crafted without artificial additives, preservatives, or unnecessary fillers, preserving the authentic taste and nutritional value of the ingredients. This dedication to purity means each spread offers a wholesome, rich flavor that enhances your meals with genuine goodness. Whether enjoyed on toast, as a cooking ingredient, or as a dip, APIs Spreads bring a touch of pure excellence to every bite, embodying our promise of quality and integrity in every jar.",
         product_img_1: SpreadProduct,
+        product_img_2: PeanutButterMenu,
         customer_says:
           "I recently started using Apis Spread, and I’m thoroughly impressed with its quality! The flavor is incredibly rich and authentic, without any artificial aftertaste or fillers. It’s clear that APIs prioritizes purity, as the spread has a natural taste and smooth texture that enhances every meal. Whether I use it on toast, in sandwiches, or as a dip, it consistently adds a delightful touch of flavor. The absence of artificial additives makes it a healthier choice that I can feel good about. APIs Spread has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for a premium, delicious spread.",
         health_benefits:
@@ -335,26 +425,26 @@ export const PRODUCT_DATA = [
     id: 3,
     title: "Kitchen Mix",
     products: [
-      {
-        id: 1,
-        name: "Cooking Paste",
-        img: NewCookingPaste,
-        back_img: HoneyBg,
-        rect_color: "bg-[#FFC660]",
-        title_color: "text-[#9F7B49]",
-        desc_color: "text-black",
-        title: "",
-        title_desc: "",
-        product_desc:
-          "At Apis India, we are dedicated to delivering high-quality FMCG products that enhance your everyday life. With a focus on freshness, innovation, and reliability, our diverse range of products reflects our commitment to excellence and customer satisfaction. Discover the difference with Apis India.",
-        product_img_1: HoneyProduct,
-        customer_says:
-          "APIs Himalayan Honey, and it’s exceptional! The honey has a rich, deep flavor with delightful floral undertones that truly reflects its Himalayan origins. Its purity is evident in both taste and texture—smooth and golden without any added sugars or artificial ingredients. I love the natural sweetness it adds to my tea and yogurt, and it’s perfect for drizzling over toast. The packaging is also top-notch, preserving the honey’s freshness. APIs Himalayan Honey has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for high-quality, pure honey with an authentic, flavorful profile.",
-        health_benefits:
-          "Honey has been used for aesthetic purposes especially to return vigour and beauty to skin. When applied together with milk, honey creates a smooth, flawless skin. Real honey is also used for softening hair texture and for glowing skin.",
-        primary_color: "",
-        secondary_color: "",
-      },
+      // {
+      //   id: 1,
+      //   name: "Cooking Paste",
+      //   img: CoolingPaste,
+      //   back_img: HoneyBg,
+      //   rect_color: "bg-[#FFC660]",
+      //   title_color: "text-[#9F7B49]",
+      //   desc_color: "text-black",
+      //   title: "",
+      //   title_desc: "",
+      //   product_desc:
+      //     "At Apis India, we are dedicated to delivering high-quality FMCG products that enhance your everyday life. With a focus on freshness, innovation, and reliability, our diverse range of products reflects our commitment to excellence and customer satisfaction. Discover the difference with Apis India.",
+      //   product_img_1: HoneyProduct,
+      //   customer_says:
+      //     "APIs Himalayan Honey, and it’s exceptional! The honey has a rich, deep flavor with delightful floral undertones that truly reflects its Himalayan origins. Its purity is evident in both taste and texture—smooth and golden without any added sugars or artificial ingredients. I love the natural sweetness it adds to my tea and yogurt, and it’s perfect for drizzling over toast. The packaging is also top-notch, preserving the honey’s freshness. APIs Himalayan Honey has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for high-quality, pure honey with an authentic, flavorful profile.",
+      //   health_benefits:
+      //     "Honey has been used for aesthetic purposes especially to return vigour and beauty to skin. When applied together with milk, honey creates a smooth, flawless skin. Real honey is also used for softening hair texture and for glowing skin.",
+      //   primary_color: "",
+      //   secondary_color: "",
+      // },
       {
         id: 2,
         name: "Soya Chunk",
@@ -368,6 +458,7 @@ export const PRODUCT_DATA = [
         product_desc:
           "Purity is the cornerstone of our soya chunks. We start with premium soybeans, ensuring that each chunk is packed with natural goodness and robust flavor. Our production process is designed to preserve the integrity of the soybeans, avoiding any artificial additives or preservatives. This commitment to purity means that every bite of APIs Soya Chunks offers a clean, wholesome taste and a satisfying texture that holds up perfectly in various dishes. Whether you’re incorporating them into a savory stir-fry or a hearty stew, APIs Soya Chunks reflect our dedication to delivering pure, high-quality ingredients in every bite.",
         product_img_1: SoyaChunksProduct,
+        product_img_2: SoyaChunkMenu,
         customer_says:
           "I recently tried Apis Soya Chunks, and I’m thoroughly impressed! The chunks are of excellent quality, with a firm texture that holds up beautifully in various dishes. They’re easy to prepare and absorb flavors exceptionally well, making them a versatile addition to my meals. I appreciate that they are made from high-quality soybeans without any unnecessary additives or preservatives. The taste is clean and satisfying, making them a fantastic meat alternative. APIs Soya Chunks have quickly become a staple in my kitchen, and I highly recommend them to anyone seeking a nutritious, delicious, and pure option for their recipes.",
         health_benefits:
@@ -389,6 +480,7 @@ export const PRODUCT_DATA = [
         product_desc:
           "Purity defines our saffron. We meticulously source only the finest saffron threads, ensuring that each strand delivers unparalleled richness and vibrant color. Our saffron is free from additives and artificial enhancements, preserving its natural essence and aromatic depth. This commitment to purity means that every pinch of APIs Saffron adds an authentic, luxurious touch to your culinary creations. Whether enhancing a dish or crafting a delicate infusion, you can trust that our saffron embodies the true essence of purity, elevating your recipes with its exceptional quality and flavor.",
         product_img_1: SaffronProduct,
+        product_img_2: SafronProductMenu,
         customer_says:
           "I’m absolutely thrilled with the quality! The saffron threads are vibrant and fragrant, infusing my dishes with a rich, authentic flavor and beautiful color. The purity of the product is evident, with no artificial additives or fillers—just pure, high-quality saffron. It adds a luxurious touch to both savory and sweet recipes, enhancing them with its unique aroma and depth. APIs Saffron has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for premium saffron that truly delivers on both flavor and purity.",
         health_benefits:
@@ -416,6 +508,7 @@ export const PRODUCT_DATA = [
         product_desc:
           "Purity is at the heart of our green tea. We meticulously select the finest leaves, ensuring that every cup delivers a taste of true nature. Our green tea is crafted with a commitment to purity, free from artificial additives or preservatives, so you can enjoy an authentic, refreshing experience with every sip. The result is a clean, smooth flavor that highlights the natural essence of the tea leaves. When you choose APIs Green Tea, you're savoring more than just a beverage—you're embracing a product where purity is not just a promise but a fundamental presence in every cup.",
         product_img_1: GreenTeaProduct,
+        product_img_2: GreenTeaMenuItem,
         customer_says:
           "I’m thoroughly impressed with APIs Green Tea! From the moment I brewed my first cup, I could tell it was high-quality. The flavor is incredibly fresh and smooth, with a perfect balance of earthy and subtly sweet notes. What I appreciate most is its purity—no artificial flavors or additives, just pure, natural tea that makes each sip enjoyable and invigorating. The aroma is calming and soothing, making it a wonderful way to start the day or unwind in the evening. APIs Green Tea has become my go-to choice, and I highly recommend it to anyone seeking a genuinely refreshing and wholesome tea experience.",
         health_benefits:
@@ -2964,4 +3057,777 @@ export const LATEST_SLIDES_IMAGES = [
   { sNo: 29, name: "Intimation For Penalty", path: "/pdf/2021/Intimation_for_Penalty.pdf" },
   { sNo: 30, name: "Covering Letter", path: "/pdf/2021/Covering_Letter.pdf" },
   // Continue adding entries as needed
+];
+
+
+export  const SLIDES = [
+  {
+    img: TrustSlide1,
+    content: "Organic honey is a natural, nutrient-rich sweetener with health benefits, perfect for enhancing flavor in foods and beverages.",
+    title: "Organic Honey",
+    path:"https://www.amazon.in/Apis-Organic-honey-450gm-Certified/dp/B0CS6WWLDD"
+  },
+  {
+    img: ClassicDates,
+    content: "Apis Classic Dates are sweet, nutrient-rich fruits ideal for snacking and adding flavor to dishes.",
+    title: "Classic Dates",
+    path:"https://www.amazon.in/Apis-Classic-Dates-500g/dp/B0CJXWN5Q6"
+  },
+  {
+    img: Muesli,
+    content: "Muesli crafted with wholesome ingredients for a nourishing start to your day",
+    title: "Muesli",
+    path:""
+  },
+  {
+    img:  ChocolateSpread,
+    content: "Apis Choco Flakes are crispy cereal flakes coated in rich chocolate for a delightful breakfast.",
+    title: "Choco Flakes",
+    path:""
+
+  },
+
+  {
+    img: AlmondHoney,
+    content: "Apis Corn Flakes are a crunchy, nutritious breakfast cereal made from premium corn.",
+    title: "Corn Flakes",
+    path:"https://www.amazon.in/Apis-Cornflakes-1kg-Zip-Pouch/dp/B099FRBQ4C?th=1"
+  },
+  {
+    img: Saffron1,
+    content: "Apis Saffron is a high-quality spice prized for its rich aroma, color, and health benefits.",
+    title: "Saffron",
+    path:"https://www.amazon.in/Apis-Saffron-Kesar/dp/B08NFFST31"
+  },
+  {
+    img: SoyaChunks1,
+    content: "Soya chunks are protein-rich, plant-based meat alternatives.",
+    title: "Soya Chunk",
+    path:"https://uniqrr.com/products/apis-india-soya-chunks-50-gm"
+  },
+  
+  // {
+  //   img: TrustSlide9,
+  //   content: "Lemon honey green tea: refreshing, antioxidant-rich blend.",
+  //   title:"Lemon Honey Green Tea"
+  // },
+ 
+
+  // {
+  //   img: TrustSlide1,
+  //   content: "Nature`s golden nectar, pure and organic.",
+  //   title: "Organic Honey",
+  // },
+  // {
+  //   img: TrustSlide2,
+  //   content: "Spread the joy with rich, velvety chocolate",
+  //   title: "Chocolate Spread",
+  // },
+  // {
+  //   img: TrustSlide3,
+  //   content: "Delightful strands of culinary tradition for meals",
+  //   title: "Vermicelli",
+  // },
+];
+
+export const AVAILABILITY_SLIDE = [
+  { img: AmazonLogo, path: "https://www.amazon.in/s?k=apis&crid=2CJFWNXIDZI1V&sprefix=apis%2Caps%2C429&ref=nb_sb_noss_1" },
+  { img: JioMart, path: "https://www.jiomart.com/search/apis" },
+  { img: BigBasket, path: "https://www.bigbasket.com/ps/?q=apis&nc=as" },
+  { img: BlinkIt, path: "https://blinkit.com/s/?q=apis" },
+  { img: JioMart2, path: "https://www.jiomart.com/search/apis/in/prod_mart_master_vertical?prod_mart_master_vertical%5BhierarchicalMenu%5D%5Bcategory_tree.level0%5D%5B0%5D=Category" },
+  { img: DMart, path: "https://www.dmart.in/search?searchTerm=apis" },
+];
+
+export const HEALTH_BENEFITS = [
+  {
+    id: 1,
+    title: "Boosts Immunity",
+    name:"Boosts Immunity",
+    desc: "Honey is packed with antioxidants that boost your immune system and help fight off illnesses. Regular consumption of honey can strengthen your body’s defenses and promote overall health.",
+    img: HoneyShield,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "Skin Elixir",
+    name:"Boosts Immunity",
+    desc: "Honey acts as a natural skin elixir, offering deep hydration and antibacterial benefits for a glowing complexion. Its soothing properties help heal skin irritations and maintain a healthy, radiant appearance.",
+    img: Skin,
+    shadowClass: "shadow-custom-darkGreen",
+    color: "bg-[#39412D]",
+  },
+  {
+    id: 3,
+    title: "Sustainability",
+    name:"Boosts Immunity",
+    desc: "Apis India’s honey is a testament to sustainable beekeeping practices that support environmental health and local communities. By choosing our honey, you contribute to eco-friendly methods that protect both nature and livelihoods.",
+    img: Sustain,
+    shadowClass: "shadow-custom-rama",
+    color: "bg-[#416E7C]",
+  },
+  {
+    id: 4,
+    title: "Aids Digestion",
+    name:"Boosts Immunity",
+    desc: "Honey aids digestion by soothing the digestive tract and promoting healthy gut bacteria. It can help alleviate digestive discomfort and support smoother, more balanced digestion for better overall wellness.",
+    img: AidsDigestion,
+    shadowClass: "shadow-custom-pink",
+    color: "bg-[#E09384]",
+  },
+];
+export const HEALTH_DATE = [
+  {
+    id: 1,
+    title: "Nutrient Dense",
+    name:"Benefits",
+    desc: "Dates are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
+    img: Nutrient,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "Digestive Health",
+    name:"Benefits",
+    desc: "High in dietary fiber, dates aid in digestion by promoting regular bowel movements and preventing constipation. Fiber also supports a healthy gut microbiome, which is crucial for overall digestive health.",
+    img: Digestive,
+    shadowClass: "shadow-custom-darkGreen",
+    color: "bg-[#39412D]",
+  },
+  {
+    id: 3,
+    title: "Energy Boost",
+    name:"Benefits",
+    desc: "Dates provide a quick source of natural energy due to their high carbohydrate content, primarily from natural sugars like glucose and fructose. They make an excellent snack for an instant energy boost and sustained vitality.",
+    img: EnergyBoost,
+    shadowClass: "shadow-custom-rama",
+    color: "bg-[#416E7C]",
+  },
+  {
+    id: 4,
+    title: "Heart Health",
+    name:"Benefits",
+    desc: "The potassium and magnesium in dates help regulate blood pressure and support cardiovascular health. Additionally, their high fiber content helps lower cholesterol levels, reducing the risk of heart disease and stroke.",
+    img: Psychology,
+    shadowClass: "shadow-custom-pink",
+    color: "bg-[#E09384]",
+  },
+];
+
+export const HEALTH_JAM = [
+  {
+    id: 1,
+    title: "Energy Boost",
+    name:"Benefits",
+    desc: "Jam provides a quick source of energy due to its high sugar content, making it a great option for a quick pick-me-up during the day or before physical activities.",
+    img: EnergyBoost,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "Versatile Ingredient",
+    name:"Benefits",
+    desc: "Jam can be used in a variety of dishes, from breakfast spreads to baking, enhancing flavors and adding sweetness to both savory and sweet recipes.",
+    img: Ingrediant,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 3,
+    title: "Vitamin Source",
+    name:"Benefits",
+    desc: "Depending on the fruit used, jam can offer vitamins and antioxidants. For instance, strawberry jam provides vitamin C, which is important for immune health and skin maintenance.",
+    img: VitaminSource,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 4,
+    title: "Contain Minerals",
+    name:"Benefits",
+    desc: "Jam has a long shelf life due to its high sugar content, which acts as a preservative. This means you can store it for extended periods without worrying about spoilage.",
+    img: Minrella,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+]
+export const HEALTH_FLAKES = [
+  {
+    id: 1,
+    title: "Fiber-Rich",
+    name:"Benefits",
+    desc: "Flakes, particularly whole grain varieties, are high in dietary fiber. Fiber aids digestion by promoting regular bowel movements and can help prevent constipation. It also supports heart health by reducing cholesterol levels and stabilizing blood sugar.",
+    img: FiberRich,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "Low Calories",
+    name:"Benefits",
+
+    desc: "Many flakes, especially those made from whole grains, are low in calories while still being filling. This makes them an excellent choice for weight management, as they provide essential nutrients without contributing excessive calories.",
+    img: Psychology,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 3,
+    title: "Nutrient Dense",
+    name:"Benefits",
+
+    desc: "Flakes often contain essential vitamins and minerals, such as B vitamins, iron, and magnesium. These nutrients are crucial for energy production, red blood cell formation, and overall metabolic function, contributing to overall well-being.",
+    img: Nutrient,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 4,
+    title: "Heart Health",
+    name:"Benefits",
+
+    desc: "Whole grain flakes can be beneficial for heart health due to their high fiber content and low saturated fat. They help reduce the risk of heart disease by improving cholesterol levels and supporting healthy blood pressure.",
+    img: LowClories,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+]
+export const HEALTH_VERNACALLI = [
+  {
+    id: 1,
+    title: "Low Calories",
+    name:"Benefits",
+    desc: "Vermicelli, a type of thin rice or wheat noodle, is typically low in calories, making it a suitable option for weight management. It provides a filling meal without adding excessive caloric intake.",
+    img: LowClories,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "Digestive Health",
+    name:"Benefits",
+    desc: "Vermicelli made from whole grains can be a good source of dietary fiber. Fiber aids digestion by promoting regular bowel movements and can help prevent constipation.",
+    img: Digestive,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 3,
+    title: "Energy Source",
+    name:"Benefits",
+    desc: "Vermicelli provides carbohydrates, which are a primary source of energy for the body. Consuming it can help fuel physical activities and maintain energy levels throughout the day.",
+    img: EnergyBoost,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 4,
+    title: "Versatile Use",
+    name:"Benefits",
+    desc: "Vermicelli is a versatile ingredient that can be incorporated into various dishes, from soups to stir-fries, allowing for diverse and balanced meals. Its adaptability makes it easy to include in a healthy diet.",
+    img: Versatile,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+]
+
+export const HEALTH_MACRONI = [
+  {
+    id: 1,
+    title: "Energy Boost",
+    name:"Benefits",
+
+    desc: "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
+    img: EnergyBoost,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "Digestive Health",
+    name:"Benefits",
+    desc: "Whole grain macaroni contains dietary fiber, which aids in digestion by promoting regular bowel movements and preventing constipation. Fiber also supports a healthy gut microbiome, contributing to overall digestive health.",
+    img: Digestive,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 3,
+    title: "Nutrient Rich",
+    name:"Benefits",
+    desc: "Macaroni can be a good source of essential nutrients when made from whole grains or enriched with vitamins and minerals. It often contains B vitamins, iron, and magnesium, which support metabolism, red blood cell formation, and bone health.",
+    img: Nutrient,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 4,
+    title: "Versatile Meals",
+    name:"Benefits",
+    desc: "Macaroni is a versatile ingredient that can be incorporated into various dishes, from salads to casseroles. Its adaptability allows for the creation of balanced meals, especially when paired with vegetables and lean proteins, enhancing overall diet quality.",
+    img: VersatileMeals,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+]
+export const HEALTH_SPEARD = [
+  {
+    id: 1,
+    title: "Fiber-Rich",
+    name:"Benefits",
+
+    desc: "Aside from being a flavor-filled chocolaty spread, it is also a source of calcium &amp; iron. As such, Apis Chocolate Spread also carries the benefits drawn from these minerals. The spread can be used in addition to any healthy meal for more satisfaction.",
+    img: Calcium,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "Low Calories",
+    name:"Benefits",
+
+    desc: "Aside from being a flavor-filled chocolaty spread, it is also a source of calcium &amp; iron. As such, Apis Chocolate Spread also carries the benefits drawn from these minerals. The spread can be used in addition to any healthy meal for more satisfaction.",
+    img: FiberRich,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 3,
+    title: "Nutrient Dense",
+    name:"Benefits",
+
+    desc: "Aside from being a flavor-filled chocolaty spread, it is also a source of calcium &amp; iron. As such, Apis Chocolate Spread also carries the benefits drawn from these minerals. The spread can be used in addition to any healthy meal for more satisfaction.",
+    img: Delious,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 4,
+    title: "Heart Health",
+    name:"Benefits",
+
+    desc: "Aside from being a flavor-filled chocolaty spread, it is also a source of calcium &amp; iron. As such, Apis Chocolate Spread also carries the benefits drawn from these minerals. The spread can be used in addition to any healthy meal for more satisfaction.",
+    img: NoArtificial,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+]
+export const COOKING_PASTE = [
+  {
+    id: 1,
+    title: "As a Skin Care Solution",
+    name:"Benefits",
+    desc: "Honey has been used for aesthetic purposes especially to return vigour and beauty to skin. When applied together with milk, honey creates a smooth, flawless skin. Real honey is also used for softening hair texture and for glowing skin.",
+    img: SkinCare,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "For Weight Loss",
+    name:"Benefits",
+
+    desc: "Honey has been used for aesthetic purposes especially to return vigour and beauty to skin. When applied together with milk, honey creates a smooth, flawless skin. Real honey is also used for softening hair texture and for glowing skin.",
+    img: WeightLoss,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 3,
+    title: "For Wound Healing",
+    name:"Benefits",
+
+    desc: "Honey has been used for aesthetic purposes especially to return vigour and beauty to skin. When applied together with milk, honey creates a smooth, flawless skin. Real honey is also used for softening hair texture and for glowing skin.",
+    img: WoundHealing,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 4,
+    title: "Energy and performance",
+    name:"Benefits",
+
+    desc: "Honey has been used for aesthetic purposes especially to return vigour and beauty to skin. When applied together with milk, honey creates a smooth, flawless skin. Real honey is also used for softening hair texture and for glowing skin.",
+    img: EnergyBoost,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+]
+export const SOYA_CHUNK = [
+  {
+    id: 1,
+    title: "Protein Source",
+    name:"Benefits",
+
+    desc: "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
+    img: ProteinSource,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "Heart Health",
+    name:"Benefits",
+
+    desc: "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
+    img: Psychology,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 3,
+    title: "Bone Strength",
+    name:"Benefits",
+
+    desc: "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
+    img: BoneStrength,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 4,
+    title: "Hormone Balance",
+    name:"Benefits",
+
+    desc: "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
+    img: HarmoneBalance,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+]
+export const SAFFRON = [
+  {
+    id: 1,
+    title: "Mood Enhancement",
+    name:"Benefits",
+
+    desc: "Saffron contains compounds like crocin and safranal, which have been shown to positively affect mood and may help alleviate symptoms of depression and anxiety. Regular consumption can contribute to improved emotional well-being.",
+    img: MoodEnhance,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "Antioxidant Properties",
+    name:"Benefits",
+
+    desc: "Saffron contains compounds like crocin and safranal, which have been shown to positively affect mood and may help alleviate symptoms of depression and anxiety. Regular consumption can contribute to improved emotional well-being.",
+    img: Calcium,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 3,
+    title: "Digestive Health",
+    name:"Benefits",
+
+    desc: "Saffron contains compounds like crocin and safranal, which have been shown to positively affect mood and may help alleviate symptoms of depression and anxiety. Regular consumption can contribute to improved emotional well-being.",
+    img: Digestive,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 4,
+    title: "Skin Benefits",
+    name:"Benefits",
+
+    desc: "Saffron contains compounds like crocin and safranal, which have been shown to positively affect mood and may help alleviate symptoms of depression and anxiety. Regular consumption can contribute to improved emotional well-being.",
+    img: SkinCare,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+]
+export const GREEN_TEA = [
+  {
+    id: 1,
+    title: "Antioxidant Boost",
+    name:"Benefits",
+
+    desc: "Green tea is rich in antioxidants, particularly catechins like EGCG, which help combat oxidative stress and neutralize harmful free radicals. These antioxidants support overall health by reducing inflammation and protecting cells from damage.",
+    img: Calcium,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "Heart Health",
+    name:"Benefits",
+
+    desc: "Regular consumption of green tea can improve cardiovascular health. It helps lower LDL cholesterol levels and triglycerides, reducing the risk of heart disease. The anti-inflammatory properties also contribute to maintaining healthy blood vessels.",
+    img: Psychology,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 3,
+    title: "Metabolism Aid",
+    name:"Benefits",
+
+    desc: "Green tea can enhance metabolic rate and promote fat oxidation. Its catechins and caffeine work together to boost metabolism, which may aid in weight management and improve exercise performance.",
+    img: Digestive,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 4,
+    title:"Brain Function",
+    name:"Benefits",
+
+    desc: "The caffeine and L-theanine in green tea can improve cognitive function, enhancing alertness, attention, and memory. These compounds work synergistically to promote better mental clarity and focus.",
+    img: BrainFunction,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+]
+export const RECIPIES_DATA1 = [
+  {
+    video: "https://www.youtube.com/embed/8xAEZMjoI7U?si=BCtDVosB050LS1Ci",
+    title: "Apis Honey & Dates Sweet and Sour Dip",
+    time: "Prep 10 min",
+    name:"Himalaya Honey",
+    descreption: "Nature's golden nectar, pure and organic",
+  },
+  {
+    video: "https://www.youtube.com/embed/S8g2Uq2MNlw?si=yq34TnOsgk-k4MOl",
+    title: "Apis Honey & Dates Fruit Cake",
+    name:"Arebian Pearls apis Dates",
+    time: "Prep 10 min",
+    descreption: "Nature's golden nectar, pure and organic",
+},
+{
+  video: "https://www.youtube.com/embed/NeL3kvnYyXQ?si=u1soO1g7rznNRBAU",
+  title: "Apis Recipes | Honey Glazed Carrots",
+  time: "Prep 10 min",
+  descreption: "Apis Recipes | Honey Glazed Carrots",
+
+}, 
+{
+  video: "https://www.youtube.com/embed/ng5x3ntnvAM?si=No7g71v_dE0uolVx",
+  title: "Apis Jam Recipe",
+  name:"apis jam Fruit Blast",
+  time: "Prep 10 min",
+  descreption: "Nature's golden nectar, pure and organic",
+  type:"6"
+},
+];
+
+export const GLIMPSES_SLIDES = [
+  {
+    img: Glimpse1,
+    content: "Nature`s golden nectar, pure and organic",
+    title: "Organic Honey",
+  },
+  {
+    img: Glimpse2,
+    content: "Spread the joy with rich, velvety chocolate",
+    title: "Chocolate Spread",
+  },
+  {
+    img: Glimpse3,
+    content: "Delightful strands of culinary tradition for meals",
+    title: "Vermicelli",
+  },
+  {
+    img: Glimpse1,
+    content: "Nature`s golden nectar, pure and organic",
+    title: "Organic Honey",
+  },
+  {
+    img: Glimpse2,
+    content: "Spread the joy with rich, velvety chocolate",
+    title: "Chocolate Spread",
+  },
+];
+
+
+export const Terms_Conditions = [
+  {id: 1,
+    content: `<div class="container mx-auto p-6 bg-gray-100 rounded-lg">
+      <div class="text-center mb-6">
+        <h4 class="text-2xl font-semibold text-[#9F7B49]">Terms &amp; Conditions</h4>
+      </div>
+
+      <h4 class="text-xl font-semibold text-[#9F7B49] mt-4">REGULATION 46. SEBI (LODR) REGULATION, 2016</h4>
+
+      <p class="text-gray-700 mt-2">(1) The listed entity shall maintain a functional website containing the basic information about the listed entity.</p>
+      
+      <p class="text-gray-700 mt-2">(2) The listed entity shall disseminate the following information on its website:</p>
+      
+      <p class="text-gray-700 mt-4">
+        (a) Details of its business;<br>
+        (b) Terms and conditions of appointment of independent directors;<br>
+        (c) Composition of various committees of board of directors;<br>
+        (d) Code of conduct of board of directors and senior management personnel;<br>
+        (e) Details of establishment of vigil mechanism/ Whistle Blower policy;<br>
+        (f) Criteria of making payments to non-executive directors, if the same has not been disclosed in the annual report;<br>
+        (g) Policy on dealing with related party transactions;<br>
+        (h) Policy for determining material ‘subsidiaries;<br>
+        (i) Details of familiarization programmes imparted to independent directors, including the following details:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;(i) Number of programmes attended by independent directors (during the year and on a cumulative basis till date),<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;(ii) Number of hours spent by independent directors in such programmes (during the year and on cumulative basis till date), and<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;(iii) Other relevant details<br>
+        (j) The email address for grievance redressal and other relevant details;<br>
+        (k) Contact information of the designated officials of the listed entity who are responsible for assisting and handling investor grievances;<br>
+        (l) Financial information including:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;(i) Notice of meeting of the board of directors where financial results shall be discussed;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;(ii) Financial results, on conclusion of the meeting of the board of directors where the financial results were approved;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;(iii) Complete copy of the annual report including balance sheet, profit and loss account, director’s report, corporate governance report, etc.;<br>
+        (m) Shareholding pattern;<br>
+        (n) Details of agreements entered into with the media companies and/or their associates, etc.;<br>
+        (o) Schedule of analyst or institutional investor meet and presentations made by the listed entity to analysts or institutional investors simultaneously with submission to stock exchange;<br>
+        (p) New name and the old name of the listed entity for a continuous period of one year, from the date of the last name change;<br>
+        (q) Items in sub-regulation (1) of regulation 47.<br>
+      </p>
+
+      <p class="text-gray-700 mt-4">
+        (3) (A) The listed entity shall ensure that the contents of the website are correct.<br>
+        (b) The listed entity shall update any change in the content of its website within two working days from the date of such change in content.
+      </p>
+    </div>`
+  },
+  {id: 2, content: `<div class="apis_bg">
+      <div class="container">
+        	<div class="row">
+        		<div class="col-md-3">
+        			<div class="product_list">
+        				<ul>
+                            <li id="flip"><a href="javascript:void(0)">Board Committes <span class="pull-right">
+                                <i class="fa fa-plus"></i><i class="fa fa-minus apis-done"></i></span></a>
+                                <ul class="apis-done" id="panel">
+                                    <li><a href="audit-committee.php">Audit Committee</a></li>
+                                    <li><a href="CSR-Committee.php">CSR Committee</a></li>
+                                    <li><a href="nomination-and-renumeration-committee.php">Nomination and Renumeration Committee </a></li>
+                                    <li><a href="stakeholders-relationship-committee.php">Stakeholders Relationship Committee</a></li>
+                                </ul>
+                            </li>
+                            <li class="active"><a href="investors-corporate-Governance.php">Corporate Governance</a></li>
+                            <li><a href="coc.php">Code Of Conduct</a></li>
+                            <li><a href="investors-financialresults.php">Financial Results</a></li>
+                            <li><a href="Shareholding-information.php">Shareholding Information</a></li>
+                            <li><a href="annual-Report.php">Annual Report</a></li>
+                            <li><a href="corporate-announcement.php">Corporate Announcement</a></li>
+                            <li><a href="green-Initiative.php">Green Initiative</a></li>
+        				</ul>
+        			</div><!-- product_list -->
+        		</div>
+        		<div class="col-md-12">
+        			<div class="investor_box">
+        			    <h4 class="h4">Redefining True Leadership</h4>
+	        			<div class="row">
+                            <div class="col-md-4">
+                                <div class="investor_yellow">
+                                    <h4 class="h4">Corporate Governance</h4>
+                                    <p>PERFORMANCE EVALUATION POLICY</p>
+                                    <a href="pdf/PERFORMANCE-EVALUATION-POLICY.pdf" target="_blank" class="apisbtn hvr-sweep-to-right">View / Download</a>
+                                </div><!-- investor_yellow -->
+                            </div>
+                            <div class="col-md-4">
+                                <div class="investor_yellow">
+                                    <h4 class="h4">Corporate Governance</h4>
+                                    <p>POLICY ON PRESERVATION OF DOCUMENTS</p>
+                                    <a href="pdf/Policy-on-Preservation-of-Documents.pdf" target="_blank" class="apisbtn hvr-sweep-to-right">View / Download</a>
+                                </div><!-- investor_yellow -->
+                            </div>
+                            <div class="col-md-4">
+                                <div class="investor_yellow">
+                                    <h4 class="h4">Corporate Governance</h4>
+                                    <p>POLICY FOR DETERMINING MATERIAL SUBSIDIARY</p>
+                                    <a href="pdf/POLICY-FOR-DETERMINING-MATERIAL-SUBSIDIARY.pdf" target="_blank" class="apisbtn hvr-sweep-to-right">View / Download</a>
+                                </div><!-- investor_yellow -->
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <div class="investor_yellow">
+                                    <h4 class="h4">Corporate Governance</h4>
+                                    <p>FAMILIARISATION PROGRAMME FOR INDEPENDENT DIRECTORS</p>
+                                    <a href="pdf/Familiarisation-Programme-for-Independent-Directors.pdf" target="_blank" class="apisbtn hvr-sweep-to-right">View / Download</a>
+                                </div><!-- investor_yellow -->
+                            </div>
+                            <div class="col-md-4">
+                                <div class="investor_yellow">
+                                    <h4 class="h4">Corporate Governance</h4>
+                                    <p>POLICY FOR DETERMINATION OF MATERIALITY</p>
+                                    <a href="pdf/Policy-for-Determination-of-Materiality.pdf" target="_blank" class="apisbtn hvr-sweep-to-right">View / Download</a>
+                                </div><!-- investor_yellow -->
+                            </div>
+                            <div class="col-md-4">
+                                <div class="investor_yellow">
+                                    <h4 class="h4">Corporate Governance</h4>
+                                    <p>RISK MANAGEMENT POLICY</p>
+                                    <a href="pdf/Risk-Management-Policy-.pdf" target="_blank" class="apisbtn hvr-sweep-to-right">View / Download</a>
+                                </div><!-- investor_yellow -->
+                            </div>
+                            <div class="col-md-4">
+                                <div class="investor_yellow">
+                                    <h4 class="h4">Corporate Governance</h4>
+                                    <p>RELATED PARTY TRANSACTION POLICY</p>
+                                    <a href="pdf/Related_Party_Policy.pdf" target="_blank" class="apisbtn hvr-sweep-to-right">View / Download</a>
+                                </div><!-- investor_yellow -->
+                            </div>
+                            <div class="col-md-4">
+                                <div class="investor_yellow">
+                                    <h4 class="h4">Corporate Governance</h4>
+                                    <p>APIS INDIA CSR POLICY</p>
+                                    <a href="pdf/APIS-INDIA-LMITED-CSR-Policy-[165606].pdf" target="_blank" class="apisbtn hvr-sweep-to-right">View / Download</a>
+                                </div><!-- investor_yellow -->
+                            </div>
+                            <div class="col-md-4">
+                                <div class="investor_yellow">
+                                    <h4 class="h4">Corporate Governance</h4>
+                                    <p>NOMINATION AND REMUNERATION POLICY</p>
+                                    <a href="pdf/NOMINATION-AND-REMUNERATION-POLICY-(for-apis-2016)-[165604].pdf" target="_blank" class="apisbtn hvr-sweep-to-right">View / Download</a>
+                                </div><!-- investor_yellow -->
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <div class="investor_yellow">
+                                    <h4 class="h4">Corporate Governance</h4>
+                                    <p>POLICY ON PREVENTION OF S.H.W</p>
+                                    <a href="pdf/Policy-on-S.H.W-[165601].pdf" target="_blank" class="apisbtn hvr-sweep-to-right">View / Download</a>
+                                </div><!-- investor_yellow -->
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="investor_yellow">
+                                    <h4 class="h4">Corporate Governance</h4>
+                                    <p>VIGIL MECHANISM POLICY</p>
+                                    <a href="pdf/vigil_mechanism_policy.pdf" target="_blank" class="apisbtn hvr-sweep-to-right">View / Download</a>
+                                </div><!-- investor_yellow -->
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="investor_yellow">
+                                    <h4 class="h4">Corporate Governance</h4>
+                                    <p>WEBSITE CONTENT ARCHIVAL POLICY</p>
+                                    <a href="pdf/Website_content_archival_policy.pdf" target="_blank" class="apisbtn hvr-sweep-to-right">View / Download</a>
+                                </div><!-- investor_yellow -->
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <div class="investor_yellow">
+                                    <h4 class="h4">Corporate Governance</h4>
+                                    <p>COMPOSITION OF COMMITTEES OF BOARD OF DIRECTORS</p>
+                                    <a href="pdf/Code_of_conduct.PDF" target="_blank" class="apisbtn hvr-sweep-to-right">View / Download</a>
+                                </div><!-- investor_yellow -->
+                            </div>
+                            <div class="col-md-4">
+                                <div class="investor_yellow">
+                                    <h4 class="h4">Corporate Governance</h4>
+                                    <p>TERM AND CONDITION OF INDEPENDENT DIRECTORS</p>
+                                    <a href="pdf/Term-and-condition-of-Independent-Directors.pdf" target="_blank" class="apisbtn hvr-sweep-to-right">View / Download</a>
+                                </div><!-- investor_yellow -->
+                            </div>
+
+                        </div><!-- row -->
+        			</div><!-- investor_box -->
+        		</div>
+        	</div>
+      </div><!-- container -->
+    </div>`}
 ];

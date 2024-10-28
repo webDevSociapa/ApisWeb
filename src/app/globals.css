@@ -732,7 +732,7 @@ input[type="password"]:-webkit-autofill:active {
 
 @media(max-width: 500px){
   .tvcSectionResponsive{
-    margin-top: 15px;
+    margin-top: -20px;
   }
 }
 
@@ -1118,3 +1118,30 @@ input[type="password"]:-webkit-autofill:active {
     margin-left: -40px;
   }
 } */
+
+@media(max-width:500px){
+  .latestApisHome{
+    padding-top: 0px !important;
+    margin-top: -15px;
+  }
+}
+
+@media(max-width: 768px){
+  .ApisMenuItem{
+    height: 120px !important;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-slideInLeft {
+  animation: slideInLeft 0.5s ease-out forwards;
+}

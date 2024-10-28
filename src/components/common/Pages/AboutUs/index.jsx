@@ -15,27 +15,8 @@ import AmitAnand from "@/assets/images/AboutUs/AmitAnand.png";
 import ImageBanner from "../../Layout/Banner";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Polygon1 from '@/assets/images/AboutUs/Polygon5.png';
-import Polygon2 from '@/assets/images/AboutUs/Polygon6.png';
-import Polygon3 from '@/assets/images/AboutUs/Polygon7.png';
-import Polygon4 from '@/assets/images/AboutUs/Polygon8.png';
-import Polygon5 from '@/assets/images/AboutUs/Polygon9.png';
-import Polygon6 from '@/assets/images/AboutUs/Polygon10 (2).png';
-import Polygon7 from '@/assets/images/AboutUs/Polygon11.png';
-import Polygon8 from '@/assets/images/AboutUs/Polygon12.png';
-import Polygon9 from '@/assets/images/AboutUs/Polygon13.png';
-import Polygon10 from '@/assets/images/AboutUs/Polygon15.png';
-import Polygon11 from '@/assets/images/AboutUs/Polygon15.png';
-import Polygon12 from '@/assets/images/AboutUs/Polygon16.png';
-import Polygon13 from '@/assets/images/AboutUs/Polygon18.png';
-import Polygon14 from '@/assets/images/AboutUs/Polygon19.png';
-import Polygon15 from '@/assets/images/AboutUs/Polygon22.png';
-// import style from '@/components/common/Pages/AboutUs/aboutus.css'
-import Journey from "./Journey";
 import AboutusLogo from '@/assets/images/AboutUs/aboutusLogo.png';
 import AboutStreak from '@/assets/images/AboutUs/aboutStreak.png'
-import Hexagonal from "../../Pages/AboutUs/Hexagonal";
-import HexagonalPage from "../../Pages/AboutUs/Hexagonal";
 import HexaGonalPage from "../../Pages/AboutUs/Hexagonal";
 
 export default function OurBrand() {
@@ -157,59 +138,62 @@ export default function OurBrand() {
         </p>
       </section>
       <div className="relative mt-14 flex flex-col items-center justify-center w-full">
-        <Image src={MissionBanner} width={1440} className="object-cover w-full h-100" />
-        <div className="w-full flex justify-end items-center absolute end-0 top-0">
-          <div className="bg-opacity-80 p-2 md:p-8 rounded-md w-full flex flex-col">
-            <div className="flex flex-row justify-between items-center gap-2 md:gap-10">
+      <Image src={MissionBanner} width={1440} className="object-cover w-full h-100" />
+      
+      <div className="w-full flex justify-end items-center absolute end-0 top-0">
+        <div className="bg-opacity-80 p-2 md:p-8 rounded-md w-full flex flex-col">
+          
+          <div className="flex flex-row justify-between items-center gap-2 md:gap-10">
+            {["vision", "mission", "values"].map((tab) => (
               <button
-                className={`text-white text-center text-shadow-lg font-literata font-bold leading-normal ${activeTab === "vision" ? " text-lg md:text-4xl text-shadow underline" : "text-sm md:text-3xl"}`}
-                onClick={() => setActiveTab("vision")}
+                key={tab}
+                className={`text-white text-center text-shadow-lg font-literata font-bold leading-normal ${
+                  activeTab === tab ? "text-lg md:text-4xl text-shadow underline" : "text-sm md:text-3xl"
+                }`}
+                onClick={() => setActiveTab(tab)}
               >
-                Vision
+                {tab.charAt(0).toUpperCase() + tab.slice(1)}
               </button>
-              <button
-                className={`text-white text-center text-shadow-lg font-literata font-bold leading-normal ${activeTab === "mission" ? "text-lg md:text-4xl text-shadow underline" : "text-sm md:text-3xl"}`}
-                onClick={() => setActiveTab("mission")}
-              >
-                Mission
-              </button>
-              <button
-                className={`text-white text-center text-shadow-lg font-literata font-bold leading-normal ${activeTab === "values" ? "text-lg md:text-4xl text-shadow underline" : "text-sm md:text-3xl"}`}
-                onClick={() => setActiveTab("values")}
-              >
-                Values
-              </button>
-            </div>
-            <p className="text-white mt-12 xs:mt-12 md:mt-20 self-center text-[#373737] text-center font-jost w-[90%] lg:w-[70%] text-xs sm:text-base md:text-3xl font-medium">
-              {renderContent()}
-            </p>
+            ))}
           </div>
-        </div>
-        <div className="lg:absolute bottom-4 w-full">
-          <Image
-            src={Curv}
-            alt="Banner Image"
-            className="object-cover hidden lg:inline w-full h-auto max-h-[670px]"
-            />
-          <div className="relative">
-            <div className="lg:absolute z-10 bottom-[124px] left-0 right-0 flex gap-4 flex-wrap justify-around items-center mt-10 text-center p-4 2xl: py-10 curvonLegacyData">
-              {LEGACY_DATA.map((item) => (
-                <div key={item.key} className="w-[130px] lg:w-[200px] xl:w-[275px] h-[110px] xl:h-[170px] flex-shrink-0 border rounded-[1.875rem] border-[#9F7B49] bg-transparent shadow-md flex items-center justify-center">
-                  <div className="flex gap-3 items-center justify-center flex-col">
-                    <p className="text-[14px] lg:text-[20px] xl:text-[34px] text-center spaced-words font-bold ms-4 text-[#9F7B49]">
-                      {counts[item.key]}+
-                    </p>
-                    <p className="text-[#131313] text-[12px] lg:text-base xl:text-[24px] font-semibold font-jost">
-                      {item.title}
-                    </p>
-                  </div>
-                </div>
-              ))}
+          
+          <div className="relative w-full flex justify-center mt-12 xs:mt-12 md:mt-20">
+            <div
+              key={activeTab}  // Change key to re-render and trigger animation
+              className="md:p-8 pb-2 rounded-xl w-[90%] lg:w-[70%] shadow-lg animate-slideInLeft"
+            >
+              <p className="text-white text-center font-jost text-xs sm:text-base md:text-2xl font-medium">
+                {renderContent()}
+              </p>
             </div>
           </div>
         </div>
       </div>
+
+      <div className="lg:absolute bottom-4 w-full">
+        <Image src={Curv} alt="Banner Image" className="object-cover hidden lg:inline w-full h-auto max-h-[670px]" />
+        
+        <div className="relative">
+          <div className="lg:absolute z-10 bottom-[124px] left-0 right-0 flex gap-4 flex-wrap justify-around items-center mt-10 text-center p-4 2xl:py-10 curvonLegacyData">
+            {LEGACY_DATA.map((item) => (
+              <div key={item.key} className="w-[130px] lg:w-[200px] xl:w-[275px] h-[110px] xl:h-[170px] flex-shrink-0 border rounded-[1.875rem] border-[#9F7B49] bg-transparent shadow-md flex items-center justify-center">
+                <div className="flex gap-3 items-center justify-center flex-col">
+                  <p className="text-[14px] lg:text-[20px] xl:text-[34px] text-center spaced-words font-bold ms-4 text-[#9F7B49]">
+                    {counts[item.key]}+
+                  </p>
+                  <p className="text-[#131313] text-[12px] lg:text-base xl:text-[24px] font-semibold font-jost">
+                    {item.title}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+    
       <div>
+        {/* */}
         <div className="w-full manager-back-1-bg flex flex-col items-center justify-between bg-vimal relative">
           <Image
             src={ManBack1}
