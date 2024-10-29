@@ -104,6 +104,7 @@ export default function HomePage() {
   return (
     <>
       {/* nature page */}
+      {/*  */}
       <div className="relative w-full overflow-hidden bg-buyer-bg-yellow-2 smhome-shadow">
         <div className="home-bg flex w-full flex-col justify-center">
           <div className="absolute end-0 h-full bg-black">

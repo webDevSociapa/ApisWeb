@@ -16,7 +16,6 @@ export async function POST(req, res) {
                 { message: 'Message Sent Successfully' },
                 { status: 200 },
             );
-
         } finally {
             await client.close();
         }
