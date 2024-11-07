@@ -1,26 +1,42 @@
 'use client'
 
-import Image from 'next/image'
+// import Image from 'next/image'
 
-import FbImg from '@/assets/images/social/fb.png'
-import InstaImg from '@/assets/images/social/insta.png'
-import LinkImg from '@/assets/images/social/link-din.png'
-import UtubeImg from '@/assets/images/social/utube.png'
-import Xcom from '@/assets/images/social/xcom.png'
-import FbHover from '@/assets/images/home-banner-section/fbhover.webp'
-import TwitterHover from '@/assets/images/home-banner-section/twitterHover.png'
-import YouTubeHover from '@/assets/images/home-banner-section/youtubeHover.jpg'
-import LinkedinHover from '@/assets/images/home-banner-section/lnkedinHover.png'
-import InstaHover from '@/assets/images/home-banner-section/instaHover.png'
+// import FbImg from '@/assets/images/social/fb.png'
+// import InstaImg from '@/assets/images/social/insta.png'
+// import LinkImg from '@/assets/images/social/link-din.png'
+// import UtubeImg from '@/assets/images/social/utube.png'
+// import Xcom from '@/assets/images/social/xcom.png'
+// import FbHover from '@/assets/images/home-banner-section/fbhover.webp'
+// import TwitterHover from '@/assets/images/home-banner-section/twitterHover.png'
+// import YouTubeHover from '@/assets/images/home-banner-section/youtubeHover.jpg'
+// import LinkedinHover from '@/assets/images/home-banner-section/lnkedinHover.png'
+// import InstaHover from '@/assets/images/home-banner-section/instaHover.png'
+import { useEffect, useState } from 'react'
+import axios from 'axios';
 
 const BrewerLoginHeader = () => {
+  const [headingContent, setHeadingContent] = useState('');
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+
+        const response = await axios.get("/api/HomePage/heading");
+        setHeadingContent(response.data[0].headingContent || "Default Headline"); // Use the default value if not provided
+        console.log("Fetched Data:", response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+  
   return (
     <header className="sticky top-0 z-[100] flex w-full">
       <div className="flex w-full items-center justify-between gap-2 bg-[#FFFBF6] px-2 sm:px-8 py-4 text-xl font-bold leading-[30px] text-[#835415] h-[25px]">
         <marquee>
           <p className="HeaderMarquee text-sm sm:text-sm">
-            We Here At Apis Keep quality on top preference as we believe your
-            trust is our presence.
+            {headingContent}
           </p>
         </marquee>
         <div className="flex items-center hidden lg:inline-flex justify-center gap-5">

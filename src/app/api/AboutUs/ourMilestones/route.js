@@ -4,8 +4,8 @@ import { NextResponse } from "next/server";
 // Connection URI and Database/Collection Names
 const uri = "mongodb+srv://webdev:2OmPVj8DUdEaU1wR@apisindia.38dfp.mongodb.net";
 const client = new MongoClient(uri);
-const dbName = "topHeading";
-const collectionName = "TopHeading_01";
+const dbName = "AboutusBanner";
+const collectionName = "ourMilestones";
 
 // Helper function to connect to the database
 async function connectToDb() {
@@ -18,18 +18,17 @@ async function connectToDb() {
 export async function POST(req) {
     try {
         const body = await req.json();
-        const { headingContent } = body;
+        const { addYear,addImage } = body;
         
-        if (!headingContent) {
+        if (!addYear || !addImage) {
             return NextResponse.json(
-                { message: "headingContent is required." },
+                { message: "addYear & addImage is required." },
                 { status: 400 }
             );
         }
         const collection = await connectToDb();
         
         const Getdata = await collection.find({}).toArray();  
-        console.log("Getdata",Getdata.length);
               
         if(Getdata.length === 0){
             const data = await collection.insertOne(body);
@@ -64,17 +63,17 @@ export async function GET(req) {
 export async function PUT(req) {
     try {
         const body = await req.json();
-        const { headingContent } = body;
+        const { addYear,addImage } = body;
 
-        if (!headingContent) {
+        if (!addYear || !addImage) {
             return NextResponse.json(
-                { message: " headingContent are required." },
+                { message: " addYear & addImage are required." },
                 { status: 400 }
             );
         }
         const collection = await connectToDb();
         const result = await collection.updateOne({},
-            { $set: { headingContent } }
+            { $set: { addYear,addImage } }
         );
         if (result.modifiedCount === 0) {
             return NextResponse.json(

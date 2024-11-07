@@ -18,9 +18,12 @@ import Link from "next/link";
 import AboutusLogo from '@/assets/images/AboutUs/aboutusLogo.png';
 import AboutStreak from '@/assets/images/AboutUs/aboutStreak.png'
 import HexaGonalPage from "../../Pages/AboutUs/Hexagonal";
+import axios from "axios";
 
 export default function OurBrand() {
   const [activeTab, setActiveTab] = useState("vision");
+  const [apisDataNumber,setApisDataNumber] = useState()
+  const [aboutBanner,setAboutBanner] = useState()
 
   const [counts, setCounts] = useState({
     productRanges: 0,
@@ -28,6 +31,8 @@ export default function OurBrand() {
     newCustomers: 0,
     numberOfOutlets: 0
   });
+
+
 
   const LEGACY_DATA = [
     {
@@ -52,13 +57,17 @@ export default function OurBrand() {
     },
   ];
 
+  
+
   useEffect(() => {
+    if (!apisDataNumber?.length) return;
+
     const interval = setInterval(() => {
-      setCounts(prevCounts => {
+      setCounts((prevCounts) => {
         const newCounts = { ...prevCounts };
         let allReached = true;
-        
-        LEGACY_DATA.forEach(item => {
+
+        apisDataNumber.forEach((item) => {
           if (newCounts[item.key] < item.count) {
             newCounts[item.key] += Math.ceil((item.count - newCounts[item.key]) / 10);
             allReached = false;
@@ -66,15 +75,31 @@ export default function OurBrand() {
             newCounts[item.key] = item.count;
           }
         });
-        if (allReached) {
-          clearInterval(interval);
-        }
+
+        if (allReached) clearInterval(interval);
         return newCounts;
       });
     }, 50);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [apisDataNumber]);
+
+  useEffect(()=>{
+    const FetchData = async()=>{
+      const response = await axios.get('/api/AboutUs/ApisDataNumbers');
+      console.log("responseAbout",response.data[0].data);
+      setApisDataNumber(response.data[0].data)
+    }
+    const FetchDataBanner = async()=>{
+      const response = await axios.get('/api/AboutUs/banner');
+      console.log("responseAwwwwbout",response.data.bannerImage);
+      setAboutBanner(response.data.bannerImage)
+      // setApisDataNumber(response)
+    }
+    FetchData()
+    FetchDataBanner()
+  },[])
+  
 
   const renderContent = () => {
     switch (activeTab) {
@@ -96,7 +121,9 @@ export default function OurBrand() {
   return (
     <>
     
-      <ImageBanner banner={Banner} />
+      {aboutBanner ? (
+        <ImageBanner banner={aboutBanner} />
+      ) : <div>Loading .....</div>}
 <div className="static">
     <Image src={AboutStreak} className="absolute top-[500px] right-4 aboutStrek" /> {/* Adjusted top value */}
     <Image src={AboutusLogo} className="absolute top-[680px] right-4 aboutslogo"/>
@@ -175,7 +202,7 @@ export default function OurBrand() {
         
         <div className="relative">
           <div className="lg:absolute z-10 bottom-[124px] left-0 right-0 flex gap-4 flex-wrap justify-around items-center mt-10 text-center p-4 2xl:py-10 curvonLegacyData">
-            {LEGACY_DATA.map((item) => (
+            {apisDataNumber?.map((item) => (
               <div key={item.key} className="w-[130px] lg:w-[200px] xl:w-[275px] h-[110px] xl:h-[170px] flex-shrink-0 border rounded-[1.875rem] border-[#9F7B49] bg-transparent shadow-md flex items-center justify-center">
                 <div className="flex gap-3 items-center justify-center flex-col">
                   <p className="text-[14px] lg:text-[20px] xl:text-[34px] text-center spaced-words font-bold ms-4 text-[#9F7B49]">

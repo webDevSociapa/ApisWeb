@@ -32,6 +32,7 @@ import HoneyStick from '@/assets/images/home-banner-section/stickHoney.png'
 import { LATEST_SLIDES, LATEST_SLIDES_IMAGES, SLIDES, AVAILABILITY_SLIDE } from "@/lib/constants";
 import Tvc_Apis01 from '@/assets/images/home-banner-section/tvc_apis01.jpeg'
 import Tvc_Apis02 from '@/assets/images/home-banner-section/tvc_apis02.jpeg'
+import axios from "axios";
 
 
 
@@ -55,6 +56,8 @@ export default function HomePage() {
   const [currentProduct, setCurrentProduct] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false); // State to control modal visibility
   const [currentVideo, setCurrentVideo] = useState(''); // State to hold the current video URL
+  const [BannerText,setBannerText] = useState('')
+
 
 
 
@@ -97,8 +100,23 @@ export default function HomePage() {
   //   return () => clearInterval(interval);
   // }, []);
   useEffect(() => {
+    const fetBannerText = async()=>{
+      try{
+        const response = await axios.get("/api/HomePage/bannerText");
+        setBannerText(response.data[0].bannerText)
+        console.log("response",response);
+      }
+      catch(error){
+        console.log("Error");
+        
+      }
+    }
+    fetBannerText();
     window.scrollTo(0, 0);
   }, [])
+
+  console.log("{BannerText}",BannerText.split[0]);
+  
 
 
   return (
@@ -113,7 +131,7 @@ export default function HomePage() {
           <div className="relative me-4 md:me-10 flex flex-col items-end justify-center px-3 sm:px-14 sm:py-16">
             {/* Line 1 */}
             <p className="text-end text-[24px] md:text-[60px] font-bold text-[#ffffff] shadow-white">
-              <span className="text-shadow">CHASING</span>
+              <span className="text-shadow">{BannerText}</span>
               <span className="text-shadow">  THE</span>
             </p>
             {/* Line 2 */}
