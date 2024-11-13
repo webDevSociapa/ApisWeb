@@ -8,48 +8,43 @@ const client = new MongoClient(uri);
 const dbName = "AboutusBanner";
 const collectionName = "AboutusBanner_01";
 
-// AWS S3 Configuration
 const s3 = new AWS.S3({
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID, // Store this in environment variables
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY, // Store this in environment variables
-    region: process.env.AWS_REGION // e.g., 'us-east-1'
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+    region: process.env.AWS_REGION,
 });
 
-const bucketName = process.env.AWS_BUCKET_NAME; // Your S3 bucket name
+const bucketName = process.env.AWS_BUCKET_NAME;
 
 async function connectToDb() {
     await client.connect();
-    const database = client.db(dbName);
-    return database.collection(collectionName);
+    return client.db(dbName).collection(collectionName);
 }
 
-// POST API to handle image upload and save to S3
 export async function POST(req) {
     try {
         const formData = await req.formData();
-        const bannerFile = formData.get('bannerImage');
+        const bannerImage = formData.get('bannerImage'); // File field
 
-        if (!bannerFile) {
-            return NextResponse.json({ message: "Banner file is required" }, { status: 400 });
+        if (!bannerImage) {
+            return NextResponse.json({ message: "Banner image is required" }, { status: 400 });
         }
 
-        // Generate a unique filename for the image
-        const uniqueFileName = `${uuidv4()}_${bannerFile.name}`;
-
-        // Upload the image to S3
+        // Generate a unique filename for the banner image
+        const uniqueFileName = `${uuidv4()}_${bannerImage.name}`;
         const uploadParams = {
             Bucket: bucketName,
-            Key: `AboutUs/${uniqueFileName}`, // Folder path inside S3 bucket
-            Body: Buffer.from(await bannerFile.arrayBuffer()),
-            ContentType: bannerFile.type,
-            ACL: 'public-read', // Make the image publicly accessible
+            Key: `AboutUs/${uniqueFileName}`,
+            Body: Buffer.from(await bannerImage.arrayBuffer()),
+            ContentType: bannerImage.type
         };
+        
 
+        // Upload banner image to S3
         const uploadResult = await s3.upload(uploadParams).promise();
+        const imageUrl = uploadResult.Location;
 
-        const imageUrl = uploadResult.Location; // S3 URL of the uploaded image
-
-        // Save the image URL and hideShow flag in the database
+        // Save banner image URL to MongoDB
         const collection = await connectToDb();
         await collection.updateOne(
             {},
@@ -59,19 +54,38 @@ export async function POST(req) {
 
         return NextResponse.json({ message: "Banner uploaded successfully", imageUrl });
     } catch (error) {
-        console.error("Error uploading banner file:", error.message || error);
+        console.error("Error uploading banner image:", error);
         return NextResponse.json({ message: `An error occurred: ${error.message}` }, { status: 500 });
+    } finally {
+        await client.close();
     }
 }
 
-// PUT and GET APIs remain unchanged.
+export async function GET() {
+    try {
+        const collection = await connectToDb();
+        const data = await collection.findOne({}, { projection: { bannerImage: 1, hideShow: 1 } });
+
+        if (!data) {
+            return NextResponse.json({ message: "No banner data found" }, { status: 404 });
+        }
+
+        return NextResponse.json(data);
+    } catch (error) {
+        console.error("Error retrieving banner data:", error);
+        return NextResponse.json({ message: "An error occurred" }, { status: 500 });
+    } finally {
+        await client.close();
+    }
+}
+
 export async function PUT(req) {
     try {
         const body = await req.json();
         const { hideShow } = body;
 
         if (typeof hideShow !== "boolean") {
-            return NextResponse.json({ message: "hideShow must be a boolean value" }, { status: 400 });
+            return NextResponse.json({ message: "hideShow must be a boolean" }, { status: 400 });
         }
 
         const collection = await connectToDb();
@@ -83,23 +97,9 @@ export async function PUT(req) {
 
         return NextResponse.json({ message: "Visibility updated successfully", result });
     } catch (error) {
-        console.error("Error updating visibility:", error);
+        console.error("Error updating hideShow flag:", error);
         return NextResponse.json({ message: "An error occurred" }, { status: 500 });
-    }
-}
-
-export async function GET() {
-    try {
-        const collection = await connectToDb();
-        const data = await collection.findOne({}, { projection: { bannerImage: 1, hideShow: 1 } });
-
-        if (!data) {
-            return NextResponse.json({ message: "Data not found" }, { status: 404 });
-        }
-
-        return NextResponse.json(data);
-    } catch (error) {
-        console.error("Error retrieving data:", error);
-        return NextResponse.json({ message: "An error occurred" }, { status: 500 });
+    } finally {
+        await client.close();
     }
 }

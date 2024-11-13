@@ -22,8 +22,13 @@ import axios from "axios";
 
 export default function OurBrand() {
   const [activeTab, setActiveTab] = useState("vision");
-  const [apisDataNumber,setApisDataNumber] = useState()
-  const [aboutBanner,setAboutBanner] = useState()
+  const [apisDataNumber, setApisDataNumber] = useState()
+  const [aboutBanner, setAboutBanner] = useState()
+  const [ourValues, setOurValues] = useState([])
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+
 
   const [counts, setCounts] = useState({
     productRanges: 0,
@@ -57,7 +62,7 @@ export default function OurBrand() {
     },
   ];
 
-  
+
 
   useEffect(() => {
     if (!apisDataNumber?.length) return;
@@ -84,50 +89,87 @@ export default function OurBrand() {
     return () => clearInterval(interval);
   }, [apisDataNumber]);
 
-  useEffect(()=>{
-    const FetchData = async()=>{
-      const response = await axios.get('/api/AboutUs/ApisDataNumbers');
-      console.log("responseAbout",response.data[0].data);
-      setApisDataNumber(response.data[0].data)
-    }
-    const FetchDataBanner = async()=>{
-      const response = await axios.get('/api/AboutUs/banner');
-      console.log("responseAwwwwbout",response.data.bannerImage);
-      setAboutBanner(response.data.bannerImage)
-      // setApisDataNumber(response)
-    }
-    FetchData()
-    FetchDataBanner()
-  },[])
-  
+
 
   const renderContent = () => {
     switch (activeTab) {
       case "vision":
-        return "To inspire consumers with products that enable living a healthier and fitter lifestyle through continuous product innovation.";
+        return `${ourValues?.visionContent}`
       case "mission":
-        return "We relentlessly will continue to pursue exceptional value for our customers, fueled by innovation and unwavering ethical practices.We champion responsible business practices, driving profitability and will continue to secure the well-being of our customers and stakeholders.We cultivate a thriving workplace and upkeep high standards that promote a strong sense of belonging, hence empowering our people to achieve their life and our business goals.";
+        return `${ourValues?.missionContent}`
       case "values":
-        return "Believing in the power of nature to nourish and enhance well-being, committing to quality and sustainability.";
+        return `${ourValues?.valuesContent}`
       default:
         return "";
     }
   };
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, [])
 
-  useEffect(()=>{
-    window.scroll(0,0);
-  },[])
+
+  useEffect(() => {
+    // Function to fetch data for API calls
+    const fetchData = async () => {
+      try {
+        // Set loading to true before making the request
+        setLoading(true);
+
+        // Making all API calls concurrently with Promise.all
+        const [apisDataResponse, bannerResponse, ourValuesResponse] = await Promise.all([
+          axios.get('/api/AboutUs/ApisDataNumbers'),
+          axios.get('/api/AboutUs/banner'),
+          axios.get('/api/AboutUs/ourValues'),
+        ]);
+
+        // Update state with responses
+        setApisDataNumber(apisDataResponse.data);
+        setAboutBanner(bannerResponse.data.bannerImage);
+        setOurValues(ourValuesResponse.data[0]);
+      } catch (err) {
+        // Handle any errors that occur during the API calls
+        setError('Error fetching data');
+        console.error('Error fetching data', err);
+      } finally {
+        // Set loading to false after API calls complete
+        setLoading(false);
+      }
+    };
+
+    // Call the fetchData function on component mount
+    fetchData();
+
+    // Cleanup function if needed to cancel ongoing API calls
+    return () => {
+      // Cancel API requests here if necessary (optional, depends on your need)
+    };
+  }, []);
+
+  // Conditional rendering based on loading or error state
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>{error}</div>;
+  }
 
   return (
     <>
-    
-      {aboutBanner ? (
-        <ImageBanner banner={aboutBanner} />
-      ) : <div>Loading .....</div>}
-<div className="static">
-    <Image src={AboutStreak} className="absolute top-[500px] right-4 aboutStrek" /> {/* Adjusted top value */}
-    <Image src={AboutusLogo} className="absolute top-[680px] right-4 aboutslogo"/>
-</div>
+      <main className="flex flex-col items-center justify-center w-full">
+        <div className="relative w-full">
+          <Image
+            src={aboutBanner}
+            alt="Banner Image"
+            width={1440}
+            height={1440}
+            className="object-cover w-full h-100"
+          />
+        </div>
+      </main><div className="static">
+        <Image src={AboutStreak} className="absolute top-[500px] right-4 aboutStrek" /> {/* Adjusted top value */}
+        <Image src={AboutusLogo} className="absolute top-[680px] right-4 aboutslogo" />
+      </div>
       <div className="bg-white text-gray-800">
         <div className="relative w-full">
           <div className="inset-0 flex items-center justify-center">
@@ -165,60 +207,59 @@ export default function OurBrand() {
         </p>
       </section>
       <div className="relative mt-14 flex flex-col items-center justify-center w-full">
-      <Image src={MissionBanner} width={1440} className="object-cover w-full h-100" />
-      
-      <div className="w-full flex justify-end items-center absolute end-0 top-0">
-        <div className="bg-opacity-80 p-2 md:p-8 rounded-md w-full flex flex-col">
-          
-          <div className="flex flex-row justify-between items-center gap-2 md:gap-10">
-            {["vision", "mission", "values"].map((tab) => (
-              <button
-                key={tab}
-                className={`text-white text-center text-shadow-lg font-literata font-bold leading-normal ${
-                  activeTab === tab ? "text-lg md:text-4xl text-shadow underline" : "text-sm md:text-3xl"
-                }`}
-                onClick={() => setActiveTab(tab)}
+        <Image src={MissionBanner} width={1440} className="object-cover w-full h-100" />
+
+        <div className="w-full flex justify-end items-center absolute end-0 top-0">
+          <div className="bg-opacity-80 p-2 md:p-8 rounded-md w-full flex flex-col">
+
+            <div className="flex flex-row justify-between items-center gap-2 md:gap-10">
+              {["vision", "mission", "values"].map((tab) => (
+                <button
+                  key={tab}
+                  className={`text-white text-center text-shadow-lg font-literata font-bold leading-normal ${activeTab === tab ? "text-lg md:text-4xl text-shadow underline" : "text-sm md:text-3xl"
+                    }`}
+                  onClick={() => setActiveTab(tab)}
+                >
+                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                </button>
+              ))}
+            </div>
+
+            <div className="relative w-full flex justify-center mt-12 xs:mt-12 md:mt-20">
+              <div
+                key={activeTab}  // Change key to re-render and trigger animation
+                className="md:p-8 pb-2 rounded-xl w-[90%] lg:w-[70%] shadow-lg animate-slideInLeft"
               >
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
-              </button>
-            ))}
+                <p className="text-white text-center font-jost text-xs sm:text-base md:text-2xl font-medium">
+                  {renderContent()}
+                </p>
+              </div>
+            </div>
           </div>
-          
-          <div className="relative w-full flex justify-center mt-12 xs:mt-12 md:mt-20">
-            <div
-              key={activeTab}  // Change key to re-render and trigger animation
-              className="md:p-8 pb-2 rounded-xl w-[90%] lg:w-[70%] shadow-lg animate-slideInLeft"
-            >
-              <p className="text-white text-center font-jost text-xs sm:text-base md:text-2xl font-medium">
-                {renderContent()}
-              </p>
+        </div>
+
+        <div className="lg:absolute bottom-4 w-full">
+          <Image src={Curv} alt="Banner Image" className="object-cover hidden lg:inline w-full h-auto max-h-[670px]" />
+
+          <div className="relative">
+            <div className="lg:absolute z-10 bottom-[124px] left-0 right-0 flex gap-4 flex-wrap justify-around items-center mt-10 text-center p-4 2xl:py-10 curvonLegacyData">
+              {apisDataNumber?.map((item) => (
+                <div key={item.key} className="w-[130px] lg:w-[200px] xl:w-[275px] h-[110px] xl:h-[170px] flex-shrink-0 border rounded-[1.875rem] border-[#9F7B49] bg-transparent shadow-md flex items-center justify-center">
+                  <div className="flex gap-3 items-center justify-center flex-col">
+                    <p className="text-[14px] lg:text-[20px] xl:text-[34px] text-center spaced-words font-bold ms-4 text-[#9F7B49]">
+                      {counts[item.key]}+
+                    </p>
+                    <p className="text-[#131313] text-[12px] lg:text-base xl:text-[24px] font-semibold font-jost">
+                      {item.title}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
 
-      <div className="lg:absolute bottom-4 w-full">
-        <Image src={Curv} alt="Banner Image" className="object-cover hidden lg:inline w-full h-auto max-h-[670px]" />
-        
-        <div className="relative">
-          <div className="lg:absolute z-10 bottom-[124px] left-0 right-0 flex gap-4 flex-wrap justify-around items-center mt-10 text-center p-4 2xl:py-10 curvonLegacyData">
-            {apisDataNumber?.map((item) => (
-              <div key={item.key} className="w-[130px] lg:w-[200px] xl:w-[275px] h-[110px] xl:h-[170px] flex-shrink-0 border rounded-[1.875rem] border-[#9F7B49] bg-transparent shadow-md flex items-center justify-center">
-                <div className="flex gap-3 items-center justify-center flex-col">
-                  <p className="text-[14px] lg:text-[20px] xl:text-[34px] text-center spaced-words font-bold ms-4 text-[#9F7B49]">
-                    {counts[item.key]}+
-                  </p>
-                  <p className="text-[#131313] text-[12px] lg:text-base xl:text-[24px] font-semibold font-jost">
-                    {item.title}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-    
       <div>
         {/* */}
         <div className="w-full manager-back-1-bg flex flex-col items-center justify-between bg-vimal relative">
@@ -301,9 +342,9 @@ export default function OurBrand() {
         <p className="text-center text-[14px] font-jost md:text-[22px] uppercase text-[#585858]">
           Celebrating a Legacy of Quality and Growth
         </p>
-          <h3 className="text-center text-[20px] md:text-[40px] font-bold text-[#9F7B49] mt-2">
-            Journey
-          </h3>
+        <h3 className="text-center text-[20px] md:text-[40px] font-bold text-[#9F7B49] mt-2">
+          Journey
+        </h3>
         <p className="mt-4 text-customDarkGray text-center font-jost text-sm md:text-xl font-medium max-w-4xl mx-auto sm: px-4">
           From humble beginnings to a leading FMCG brand, Apis India’s journey
           is defined by a commitment to quality, innovation, and customer
@@ -316,7 +357,7 @@ export default function OurBrand() {
 
 
 
-       {/* <div classNamelass="relative h-screen">
+      {/* <div classNamelass="relative h-screen">
         <div className="flex flex-wrap -ml-12 -mt-0 sm: ">
           {ImageDataJourney.map((itm, index) => (
             <Image
@@ -356,7 +397,7 @@ export default function OurBrand() {
         </div>
       </div>  */}
 
-  
+
 
 
 

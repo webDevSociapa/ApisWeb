@@ -24,7 +24,6 @@ export async function POST(req){
         }
         const collection = await connectToDb();
         const Getdata = await collection.find({}).toArray();  
-        console.log("Getdata",Getdata);
         
         if(Getdata.length === 0 && bannerText.length > 6){
             const  result = await collection.insertOne(body);

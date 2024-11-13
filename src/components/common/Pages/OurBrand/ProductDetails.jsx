@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import ImageBanner from "../../Layout/Banner";
 import EmblaCarousel from "../../Carousel/Carousel";
 import Ring1 from "@/assets/images/OurBrands/Ring-1.png";
@@ -11,32 +11,44 @@ import HandDrawnHoney from "@/assets/images/OurBrands/HandDrawnHoney.png";
 import Image from "next/image";
 import CheckReportBanner from '@/assets/images/OurBrands/ProductBanner.png'
 import HimalayaHoney from "@/assets/images/OurBrands/himalayaHoney.png"
-import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { PRODUCT_DATA } from "@/lib/constants";
 import Link from "next/link";
 
 import { LATEST_SLIDES,SLIDES,HEALTH_BENEFITS,HEALTH_DATE,HEALTH_JAM,HEALTH_FLAKES,HEALTH_VERNACALLI,HEALTH_MACRONI,HEALTH_SPEARD,COOKING_PASTE,SOYA_CHUNK,SAFFRON,GREEN_TEA,RECIPIES_DATA1,AVAILABILITY_SLIDE,GLIMPSES_SLIDES} from "@/lib/constants";
+import axios from "axios";
 
 const OPTIONS = { loop: true };
+
 
 const ProductDetails = () => {
   const searchParams = useSearchParams();
   const [healthBenefit,sethealthBenefit] = useState()
   const [selectedContent, setSelectedContent] = useState(null); // Hold the selected health benefit content
   // const [selectedContent, setSelectedContent] = useState(HEALTH_BENEFITS[0].id);
-  const selectedBrand = PRODUCT_DATA.find(
-    (itm) => itm.id == searchParams.get("brand_id")
-  );
-  const selectedProduct = selectedBrand.products.find(
-    (itm) => itm.id == searchParams.get("product_id")
-  );
+
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentVideo, setCurrentVideo] = useState(''); // State to hold the current video URL
   const [hoveredId, setHoveredId] = useState(false); // State to track the hovered item
+  const [productBanner,setProductBanner] = useState([])
+const [customerReview,setCustomerReview] = useState([])
+const [productData,setProductData] = useState([])
 
 
+useEffect(()=>{
+    // try {
+      const fetchData = async()=>{
+        const response = await axios.get('/api/our-Brands/productDetails')
+        setProductData(response.data)
+        console.log("response",response.data);
+        
+      }
+    // } catch (error) {
+    //   console.log("error"); 
+    // }
+    fetchData()
+},[])
   const openModal = (video) => {
     
     setCurrentVideo(video);
@@ -52,6 +64,13 @@ const ProductDetails = () => {
     setIsModalOpen(false);
     setCurrentVideo('');
   };
+
+  const selectedBrand = productData?.find(
+    (itm) => itm.id == searchParams.get("brand_id")
+  );
+  const selectedProduct = productData.products?.find(
+    (itm) => itm.id == searchParams.get("product_id")
+  );
 
 
   const renderBenefits = (benefits) => {
@@ -118,6 +137,40 @@ const ProductDetails = () => {
   if (!selectedBrand || !selectedProduct) return <p>Product or Brand not found</p>;
 
   // const selectedObj = renderBenefits(`${}`).find((itm) => itm.id === selectedContent);
+
+
+  useEffect(()=>{
+    const fetchBanner = async()=>{
+    try {
+      const response = await axios.get("/api/our-Brands/products/banner");
+      setProductBanner(response.data.bannerImage)
+    } catch(error){
+      console.log("Error");
+      
+    }
+    }
+    fetchBanner()
+
+    const fetchProductDetails = async()=>{
+      try {
+        const response = await axios.get("/api/our-Brands/products/details");
+        
+      } catch (error) {
+      }
+    }
+    fetchProductDetails()
+    const fetchCustomerReviews = async()=>{
+      try {
+        const response = await axios.get("/api/our-Brands/customerReviews");
+        setCustomerReview(response.data[0])
+        
+      } catch (error) {
+      }
+    }
+    fetchCustomerReviews()
+  },[])
+
+
 
 
   // console.log(renderBenefits(benefits),"renderBenefits");

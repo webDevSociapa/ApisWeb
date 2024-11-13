@@ -4,8 +4,8 @@ import { NextResponse } from "next/server";
 
 const uri ="mongodb+srv://webdev:2OmPVj8DUdEaU1wR@apisindia.38dfp.mongodb.net";
 const client =  new MongoClient(uri)
-const dbName =  "LifeAtApis";
-const collectionName = "LifeAtApis_01";
+const dbName =  "our-Brand";
+const collectionName = "relatedRecipes";
 
 async function connectToDb(){
     await  client.connect();
@@ -17,19 +17,21 @@ async function connectToDb(){
 export async function POST(req){
     try{
         const body = await  req.json();
-        const {thumbnail,videoUrl} = body;
+        
+        const {uploadVideoUrl} = body;
 
-        if(!thumbnail || !videoUrl){
-            return new NextResponse("Please enter thumbnail && videoUrl", {status: 400})
+        if(!uploadVideoUrl){
+            return new NextResponse("Please enter uploadVideoUrl", {status: 400})
         }
         const collection = await connectToDb();
         const Getdata = await collection.find({}).toArray();  
+        console.log("Getdata",Getdata);
         
-        // if(Getdata.leng){
+        if(Getdata.length === 0){
             const  result = await collection.insertOne(body);
-        // }else{
-        //     return NextResponse.json({message: "data Already Exist"})
-        // }
+        }else{
+            return NextResponse.json({message: "data Already Exist"})
+        }
 
         return NextResponse.json(
             { message: "Data added successfully!",data: body }
@@ -46,13 +48,13 @@ export async function PUT(req){
         const body = await req.json();
         console.log("body",body);
         
-        const {videoUrl,thumbnail} = body;
+        const {uploadVideoUrl} = body;
 
-        if(!videoUrl && !thumbnail){
+        if(!bannerText){
             return NextResponse.json({message:"Edit Successfully"},{status: 400})
         }
         const collection = await  connectToDb()
-        const result =  await collection.updateOne({},{$set:{bannerText}});
+        const result =  await collection.updateOne({},{$set:{uploadVideoUrl}});
 
         if (result.modifiedCount === 0) {
             return NextResponse.json(
@@ -77,4 +79,4 @@ export async function PUT(req){
         } finally {
             await client.close();
         }
-    }
+    } 

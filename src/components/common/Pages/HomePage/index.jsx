@@ -38,12 +38,9 @@ import axios from "axios";
 
 export default function HomePage() {
   const router = useRouter();
-
   const OPTIONS = { slidesToScroll: 1, align: 'start' }
   const OPTIONS1 = { loop: true }
   const SLIDE_COUNT = 6;
-
-
 
   const handleJoinUs = () => {
     router.push('/careers#join-us');
@@ -57,9 +54,12 @@ export default function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false); // State to control modal visibility
   const [currentVideo, setCurrentVideo] = useState(''); // State to hold the current video URL
   const [BannerText,setBannerText] = useState('')
-
-
-
+  const [slides, setSlides] = useState([]);
+  const [latestApis,setLatestApis] = useState([])
+  const [tvcHome,setTvcHome] = useState([])
+  const [ourAvailbility,setOurAvailbility] = useState([]);
+  const [getSliderLogo,setGetSliderLogo] = useState([])
+  // const [mediaSection,setMediaSection] = useState([])
 
   const openModal = (video) => {
     setCurrentVideo(video);
@@ -70,8 +70,6 @@ export default function HomePage() {
     setIsModalOpen(false);
     setCurrentVideo('');
   };
-
-
   const products = [
     {
       name: 'Organic Honey',
@@ -91,7 +89,6 @@ export default function HomePage() {
     },
 
   ];
-
   // useEffect(() => {
   //   const interval = setInterval(() => {
   //     setCurrentProduct((prev) => (prev + 1) % products.length);
@@ -103,8 +100,8 @@ export default function HomePage() {
     const fetBannerText = async()=>{
       try{
         const response = await axios.get("/api/HomePage/bannerText");
-        setBannerText(response.data[0].bannerText)
-        console.log("response",response);
+        setBannerText(response?.data[0].bannerText)
+        console.log("response111",response);
       }
       catch(error){
         console.log("Error");
@@ -112,12 +109,75 @@ export default function HomePage() {
       }
     }
     fetBannerText();
+    const addTasteProduct = async()=>{
+      try{
+        const response = await axios.get("/api/HomePage/tasteProduct");
+        setSlides(response.data)
+        console.log("response",response.data);
+      }
+      catch(error){
+        console.log("Error");
+        
+      }
+    }
+    addTasteProduct()
+
+    const addLatestApis = async()=>{
+      try{
+        const response = await axios.get("/api/HomePage/LifeAtApis");
+        setLatestApis(response.data)
+      }
+      catch(error){
+        console.log("Error");
+        
+      }
+    }
+    addLatestApis()
+
+    // const getMediaSection = async()=>{
+    //   try{
+    //     const response = await axios.get("/api/HomePage/mediaSection");
+    //     setMediaSection(response.data)
+    //     console.log("responseDataMedia",response);
+    //   }
+    //   catch(error){
+    //     console.log("Error");
+        
+    //   }
+    // }
+    // getMediaSection()
+    const tvcHome = async()=>{
+      try{
+        const response = await axios.get("/api/HomePage/tvcHome");
+        setTvcHome(response.data)
+        console.log("responseData",response);
+      }
+      catch(error){
+        console.log("Error");
+        
+      }
+    }
+    tvcHome()
+
+    const getSliderLogo = async()=>{
+      try{
+        const response = await axios.get("/api/HomePage/tvcHome");
+        setGetSliderLogo(response.data)
+        console.log("responseDatacatch",response);
+      }
+      catch(error){
+        console.log("Error");
+        
+      }
+    }
+    getSliderLogo()
     window.scrollTo(0, 0);
   }, [])
 
-  console.log("{BannerText}",BannerText.split[0]);
+  // console.log("tvcHome",tvcHome[0].thumbnail);
   
 
+  const words = BannerText?.split(' ');
 
   return (
     <>
@@ -131,18 +191,18 @@ export default function HomePage() {
           <div className="relative me-4 md:me-10 flex flex-col items-end justify-center px-3 sm:px-14 sm:py-16">
             {/* Line 1 */}
             <p className="text-end text-[24px] md:text-[60px] font-bold text-[#ffffff] shadow-white">
-              <span className="text-shadow">{BannerText}</span>
-              <span className="text-shadow">  THE</span>
+              <span className="text-shadow">{words[0] || ''}</span>
+              <span className="text-shadow"> {words[1] || ''}</span>
             </p>
             {/* Line 2 */}
             <p className="text-end text-[24px] md:text-[60px] font-bold text-[#ffffff]">
-              <span className="text-shadow">NATURAL</span>
-              <span className="text-shadow">  FLAVOURS</span>
+              <span className="text-shadow">{words[2] || ''}</span>
+              <span className="text-shadow">   {words[3] || ''}</span>
             </p>
             {/* Line 3 */}
             <p className="text-end text-[24px] md:text-[60px] font-bold text-[#ffffff]">
-              <span className="text-shadow">OF</span>
-              <span className="text-shadow"> EXCELLENCE</span>
+              <span className="text-shadow"> {words[4] || ''}</span>
+              <span className="text-shadow"> {words[5] || ''}</span>
             </p>
           </div>
         </div>
@@ -185,17 +245,17 @@ export default function HomePage() {
 
         <div className="pb-1 md:pb-20 z-10 w-[80%] flex items-center justify-center">
           <EmblaCarousel options={OPTIONS}>
-            {SLIDES.map((itm, index) => (
+            {slides.map((itm, index) => (
               <div className="embla__slide" key={index}>
                 <div className="embla__slide__number !h-[240px] w-full">
                   <Link href={`${itm?.path}`} target="_blank">
-                    <Image
+                     <Image
                       src={itm?.img}
                       width={350}
-                      // height={440}
+                    height={440}
                       alt="header-logo"
                       className="h-[250px] w-auto max-w-max bg-opacity-40"
-                    />
+                    /> 
                   </Link>
                 </div>
                 <div className="border-[2px] border-[hsl(35,37%,45%)] mt-4 lg:mt-10 flex flex-col gap-1 lg:gap-3 p-1.5 w-full sm:w-[50%] h-[60%] md:w-[90%] h-[45%]  xl:w-[90%] h-[30%] mx-auto overflow-none md:py-2">
@@ -319,7 +379,7 @@ export default function HomePage() {
         </p>
         <div className="media-apis w-full max-w-7xl z-10 my-4 md:my-10 px-4 sm:px-0">
           <EmblaCarousel options={OPTIONS} className="embla-close-arrows relative">
-            {NEWS_DATA.map((itm, index) => (
+            {NEWS_DATA?.map((itm, index) => (
               <div
                 className="embla__slide flex-[0_0_280px] md:flex-[0_0_495px] min-w-0 px-2"
                 key={index}
@@ -335,6 +395,8 @@ export default function HomePage() {
                       <Image
                         src={itm?.img}
                         alt="header-logo"
+                        width={300}
+                        height={300}
                         // layout="fill"
                         // objectFit="cover"
                         className="bg-opacity-40 w-full h-full"
@@ -510,17 +572,17 @@ export default function HomePage() {
         </p>
         <div className="py-6 md:py-10 w-[90%] flex items-center justify-center latestApisHome">
           <EmblaCarousel options={OPTIONS}>
-            {LATEST_SLIDES.map((itm, index) => (
+            {latestApis.map((itm, index) => (
               <div className="embla__slide" key={index}> {/* Open modal on click */}
                 <div className="embla__slide__number !h-[246px] w-full">
                   <Image
                     width={350}
                     height={346}
                     className="rounded w-full sm:w-[360px] sm:h-[246px]"
-                    src={itm.img}
+                    src={itm.thumbnail}
                     // title="YouTube video player"
                     // frameborder="0"
-                    onClick={() => openModal(itm.video)}
+                    onClick={() => openModal(itm.videoUrl)}
                   // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   // referrerpolicy="strict-origin-when-cross-origin"
                   // allowfullscreen
@@ -574,8 +636,10 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row items-center w-full tvc-bg sm:justify-center gap-10 pt-5 md:-mt-[150px] w-full xl:-mt-40 sm:mt-0 tvcyoutubeVideo">
               <Image
                 className="rounded md:h-[360px] h-auto md:w-[580px] max-w-[500px] min-h-[200px] w-auto"
-                src={Tvc_Apis01}
-                onClick={() => openModal('https://www.youtube.com/embed/fFesUk0sBII?si=q-QGdxRPqVK8W82S')}
+                src={tvcHome[0]?.thumbnail}
+                width={500}
+                height={500}
+                onClick={() => openModal(`${tvcHome[0].videoUrl}`)}
 
               // title="YouTube video player"
               // frameborder="0"
@@ -585,8 +649,10 @@ export default function HomePage() {
               />
               <Image
                 className="rounded hidden lg:inline md:h-[360px] h-auto md:w-[580px] max-w-[500px] min-h-[200px]"
-                src={Tvc_Apis02}
-                onClick={() => openModal('https://www.youtube.com/embed/6PqRMIjAEUw?si=q5neKZV8zh5OyZOx')}
+                src={tvcHome[1]?.thumbnail}
+                width={500}
+                height={500}
+                onClick={() => openModal(`${tvcHome[1].videoUrl}`)}
               // title="YouTube video player"
               // frameborder="0"
               // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

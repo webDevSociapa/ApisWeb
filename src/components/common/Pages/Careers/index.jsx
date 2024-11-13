@@ -193,6 +193,7 @@ export default function Careers() {
   const router = useRouter()
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState(null);
+  const [jobOpening,setJobOpening] = useState([])
   // const [phone, setPhone] = useState("");
   const [showSuccess, setShowSuccess] = useState(false);
   const modalRef = useRef(null);
@@ -204,7 +205,6 @@ export default function Careers() {
     resume: 'null',
   });
 
-  console.log(formData,"formData");
   
 
   const handleSubmit = async (e) => {
@@ -222,9 +222,6 @@ export default function Careers() {
           'Content-Type': 'multipart/form-data'
         }
       });
-
-      console.log("response", response);
-
       if (response.data.status === 200) {
         setShowSuccess(true);
         setIsModalOpen(false);
@@ -253,6 +250,18 @@ export default function Careers() {
 
     
   useEffect(() => {
+    const CareersData = async()=>{
+      try{
+        const response = await axios.get("/api/careers/jobOpening/");
+        setJobOpening(response.data)
+        console.log("responseDatajobbb",response.data);
+      }
+      catch(error){
+        console.log("Error");
+      }
+    }
+    CareersData()
+
     const handleClickOutside = (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
         setIsModalOpen(false);
@@ -263,6 +272,8 @@ export default function Careers() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
+
+    
   }, []);
 
   const handleImageClick = (item) => {
@@ -346,27 +357,40 @@ export default function Careers() {
                   </tr>
                 </thead>
                 <tbody>
-                  {JOB_OPENINGS.map((job, index) => (
-                    <tr key={index} className={index % 2 === 0 ? "bg-[#FFFBF6]" : "bg-[#F5EBD8]"}>
-                      <td className="p-2 border">{job.position}</td>
-                      <td className="p-2 border">{job.location}</td>
-                      <td className="p-2 border">{job.territory}</td>
-                      <td className="p-2 border">{job.experience}</td>
-                      <td className="p-2 border">{job.relevantExp}</td>
-                      <td className="p-2 border">{job.ctc}</td>
-                      <td className="p-2 border">{job.education}</td>
-                      <td className="p-2 border whitespace-pre-line">{job.skills}</td>
-                      <td className="p-2 border">
-                        <button
-                          onClick={() => handleApplyNow(job)}
-                          className="bg-[#9F7B49] text-white px-2 py-1 md:px-4 md:py-2 rounded text-xs md:text-base"
-                          data-backdrop="static"
-                        >
-                          Apply Now
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
+                {jobOpening ? (
+  jobOpening.length > 0 ? (
+    jobOpening.map((job, index) => (
+      <tr key={index} className={index % 2 === 0 ? "bg-[#FFFBF6]" : "bg-[#F5EBD8]"}>
+        <td className="p-2 border">{job.position}</td>
+        <td className="p-2 border">{job.location}</td>
+        <td className="p-2 border">{job.territory}</td>
+        <td className="p-2 border">{job.experience}</td>
+        <td className="p-2 border">{job.relevantExp}</td>
+        <td className="p-2 border">{job.ctc}</td>
+        <td className="p-2 border">{job.education}</td>
+        <td className="p-2 border whitespace-pre-line">{job.skills}</td>
+        <td className="p-2 border">
+          <button
+            onClick={() => handleApplyNow(job)}
+            className="bg-[#9F7B49] text-white px-2 py-1 md:px-4 md:py-2 rounded text-xs md:text-base"
+            data-backdrop="static"
+          >
+            Apply Now
+          </button>
+        </td>
+      </tr>
+    ))
+  ) : (
+    <tr>
+    <td colSpan="9" className="text-center p-4">Loading Job Portal...</td>
+    </tr>
+  )
+) : (
+  <tr>
+    <td colSpan="9" className="text-center p-4">Loading Job Portal...</td>
+  </tr>
+)}
+
                 </tbody>
               </table>
             </div>

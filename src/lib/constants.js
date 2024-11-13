@@ -144,8 +144,6 @@ import HoneyImage11 from "@/assets/images/OurBrands/honeyyyyy.png"
 import chocoFlakesManu from "@/assets/images/OurBrands/chocoFlakesManu.png"
 import SafronProductMenu from "@/assets/images/OurBrands/safronProductMenu.png"
 import ClassicDatesMenu from "@/assets/images/OurBrands/classicDatesMenu.png"
-import MeusliMenuItem from "@/assets/images/OurBrands/meusliMenuItem.png"
-import CornFlakesMenu from "@/assets/images/OurBrands/cornFlakesMenu.png"
 import SoyaChunkMenu from "@/assets/images/OurBrands/soyaChunkMenu.png"
 import HimalayaHoneyMenu from "@/assets/images/OurBrands/HimalayaHoneyMenu.png"
 import GreenTeaMenuItem from "@/assets/images/OurBrands/greenTeaMenuItem.png"
@@ -377,48 +375,6 @@ export const PRODUCT_DATA = [
         primary_color: "",
         secondary_color: "",
       },
-      // {
-      //   id: 4,
-      //   name: "Macaroni",
-      //   img: Macroni,
-      //   back_img: MacroniBg,
-      //   rect_color: "bg-[#D1A870]",
-      //   title_color: "",
-      //   desc_color: "",
-      //   title: "",
-      //   title_desc: "",
-      //   product_desc:
-      //     "Purity is integral to our macaroni. We start with premium durum wheat, ensuring that every piece of macaroni embodies authentic taste and superior texture. Our meticulous production process is free from artificial additives and preservatives, preserving the natural essence and wholesome quality of the pasta. This dedication to purity ensures that each bite of APIs Macaroni delivers a clean, satisfying flavor that enhances any dish. When you choose APIs, you're selecting macaroni that exemplifies our commitment to purity, offering a true taste of quality and excellence in every meal.",
-      //   product_img_1: MacroniProduct,
-      //   customer_says:
-      //     "I’m extremely impressed! The quality is outstanding—the macaroni cooks to a perfect al dente texture and holds up beautifully in all my dishes. The flavor is rich and clean, with no artificial aftertaste or fillers. It’s clear that APIs is committed to purity and excellence, as each bite showcases the genuine, wholesome taste of premium durum wheat. Whether I’m making a classic mac and cheese or a hearty pasta salad, APIs Macaroni consistently delivers. It has quickly become a favorite in my kitchen, and I highly recommend it to anyone looking for top-notch, delicious pasta.",
-      //   health_benefits:
-      //     "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
-      //   primary_color: "",
-      //   secondary_color: "",
-      // },
-      // {
-      //   id: 5,
-      //   name: "Spread",
-      //   img: Spread,
-      //   back_img: SpreadBg,
-      //   rect_color: "bg-[#6D2C0B]",
-      //   title_color: "text-[#6D2C0B]",
-      //   desc_color: "text-white",
-      //   title: "Apis Spread",
-      //   title_desc:
-      //     "Elevate every bite with the rich, pure flavor of our premium spread",
-      //   product_desc:
-      //     "At APIs, purity is the cornerstone of our spreads. We meticulously select high-quality ingredients to ensure that every jar reflects our commitment to natural, unadulterated flavors. Our spreads are crafted without artificial additives, preservatives, or unnecessary fillers, preserving the authentic taste and nutritional value of the ingredients. This dedication to purity means each spread offers a wholesome, rich flavor that enhances your meals with genuine goodness. Whether enjoyed on toast, as a cooking ingredient, or as a dip, APIs Spreads bring a touch of pure excellence to every bite, embodying our promise of quality and integrity in every jar.",
-      //   product_img_1: SpreadProduct,
-      //   product_img_2: PeanutButterMenu,
-      //   customer_says:
-      //     "I recently started using Apis Spread, and I’m thoroughly impressed with its quality! The flavor is incredibly rich and authentic, without any artificial aftertaste or fillers. It’s clear that APIs prioritizes purity, as the spread has a natural taste and smooth texture that enhances every meal. Whether I use it on toast, in sandwiches, or as a dip, it consistently adds a delightful touch of flavor. The absence of artificial additives makes it a healthier choice that I can feel good about. APIs Spread has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for a premium, delicious spread.",
-      //   health_benefits:
-      //     "Aside from being a flavor-filled chocolaty spread, it is also a source of calcium &amp; iron. As such, Apis Chocolate Spread also carries the benefits drawn from these minerals. The spread can be used in addition to any healthy meal for more satisfaction.",
-      //   primary_color: "",
-      //   secondary_color: "",
-      // },
     ],
   },
   {
