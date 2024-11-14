@@ -54,11 +54,18 @@ const Modal = ({ image, onClose }) => {
 
 export default function Album() {
   const searchParams = useSearchParams()
-  const gallery = searchParams.get("gallery");
   const title = searchParams.get("title");
+  const titleImage = searchParams.get("titleImage");
+  const imageGroup = searchParams.get("imageGroup");
+  const gallery = searchParams.get("gallery");
+
+  console.log("title",imageGroup);
+  
+  
   
   const [activeTab, setActiveTab] = useState(parseInt(gallery) || 1);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [imageSet,setImageSet] = useState ([imageGroup])
 
   useEffect(() => {
     if (gallery) {
@@ -79,6 +86,8 @@ export default function Album() {
   const closeModal = () => {
     setSelectedImage(null);
   };
+
+
 
   return (
     <>
@@ -106,12 +115,15 @@ export default function Album() {
         ))}
       </div> */}
 
-      {currentTab && (
-        <p className="text-center mt-10 font-bold text-[#9F7B49] text-3xl py-4 sm:py-4 sm:mt-2 font-literata">{currentTab.title}</p>
-      )}
+<p className="text-center mt-10 font-bold text-[#9F7B49] text-3xl py-4 sm:py-4 sm:mt-2 font-literata">{title}</p>
+
+
+      {/* {currentTab && (
+        <p className="text-center mt-10 font-bold text-[#9F7B49] text-3xl py-4 sm:py-4 sm:mt-2 font-literata">{title}</p>
+      )} */}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8 px-4">
-        {currentTab && currentTab.content.map((image, index) => (
+        {imageSet?.map((image, index) => (
           <div key={index} className="aspect-square overflow-hidden cursor-pointer"
                onClick={() => handleImageClick(image)}>
             <Image 

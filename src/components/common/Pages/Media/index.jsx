@@ -16,6 +16,7 @@ import mediaGallery003 from '@/assets/images/Media/mediaGallery003.png'
 
 import ImageBanner from "../../Layout/Banner";
 import EmblaCarousel from "../../Carousel/Carousel";
+import axios from 'axios';
 
 const LATEST_SLIDES = [
   {
@@ -72,6 +73,7 @@ const IMAGE_DATA = [
 
 export default function Media() {
   const OPTIONS = { loop: true };
+  const [mediaData,setMediaData] = useState([])
   const [isMobile, setIsMobile] = useState(false); // State to track if the screen is mobile
 
   useEffect(() => {
@@ -89,6 +91,24 @@ export default function Media() {
       window.removeEventListener('resize', handleResize); // Cleanup on unmount
     };
   }, []);
+
+
+  useEffect(()=>{
+    const fetchMediaData = async()=>{
+      try {
+        const response = await axios.get("/api/HomePage/mediaSection");
+        setMediaData(response.data)
+        console.log("ApisMedia",response.data[0].desc);
+        
+      } catch (error) { 
+      }
+    }
+    fetchMediaData()
+    const data = [
+      {data:"Apis Media"}
+    ]
+
+  },[])
 
 
   return (
@@ -129,6 +149,7 @@ export default function Media() {
                     className="h-[260px] md:h-[370px] 2xl:h-[409px]"
                   />
                 </div>
+                <div>{ApisMedia ?? "ApisMedia"}</div>
                 {/* <div className="w-[140px] md:w-[180px]">
                   <Image src={itm.name} alt="News Name" />
                 </div> */}

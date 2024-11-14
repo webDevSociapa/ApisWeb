@@ -7,6 +7,7 @@ import ImageBanner from "../../Layout/Banner";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { PRODUCT_DATA } from "@/lib/constants";
+import axios from "axios";
 
 export default function OurBrand({ onProductClick }) {
   const BRAND_DATA = [
@@ -32,7 +33,8 @@ export default function OurBrand({ onProductClick }) {
     },
   ];
 
-  const [selectedBrand, setSelectedBrand] = useState(BRAND_DATA[0].id);
+  const [productData, setProductData] = useState([])
+  const [selectedBrand, setSelectedBrand] = useState(productData[0]?._id);
 
   const handleProductClick = (event) => {
     // Call the onProductClick prop to close the hover content
@@ -40,9 +42,20 @@ export default function OurBrand({ onProductClick }) {
       onProductClick(event);
     }
   };
-  useEffect(()=>{
-    window.scroll(0,0)
-  },[])
+  useEffect(() => {
+    const fetchProductDetails = async () => {
+      try {
+        const response = await axios.get("/api/our-Brands/productDetails");
+        console.log("responseAAAA", response.data);
+        setProductData(response.data)
+
+      } catch (error) {
+
+      }
+    }
+    fetchProductDetails()
+    window.scroll(0, 0)
+  }, [])
 
   return (
     <div className="relative">
@@ -67,18 +80,18 @@ export default function OurBrand({ onProductClick }) {
           </h2>
           <div className="flex flex-col sm:flex-row justify-between gap-2 sm:gap-10">
             <div className="flex flex-col gap-4 md:gap-8 min-w-[115px] md:min-w-[230px]">
-              {BRAND_DATA.map((brand) => {
+              {productData?.map((brand) => {
                 return (
                   <p
-                    key={brand.id}
-                    className={`text-xs md:text-xl cursor-pointer text-black ${selectedBrand === brand.id ? "font-bold" : "font-normal"}`}
+                    key={brand._id}
+                    className={`text-xs md:text-xl cursor-pointer text-red ${selectedBrand === brand._id ? "font-bold" : "font-normal"}`}
                   >
                     {brand.title === "Recipes" ? (
                       <Link href="/our-brand/recipes" onClick={handleProductClick}>
                         {brand.title}
                       </Link>
                     ) : (
-                      <span onClick={() => setSelectedBrand(brand.id)}>
+                      <span onClick={() => setSelectedBrand(brand._id)}>
                         {brand.title}
                       </span>
                     )}
@@ -91,26 +104,28 @@ export default function OurBrand({ onProductClick }) {
               <div className="h-2 w-2 hidden sm:inline absolute bottom-0 -left-[3px]  bg-black rounded-full"></div>
             </div>
             <div className="flex gap-2 sm:gap-3 w-full flex-wrap">
-              {PRODUCT_DATA.find(
-                (product) => product.id === selectedBrand
-              ).products.map((itm) => {
+              {productData?.find(
+                (product) => product?._id === selectedBrand
+              )?.products?.map((itm) => {
                 return (
                   <Link
-                  key={itm.id}
-                  href={`/our-brand/product-details?brand_id=${selectedBrand}&product_id=${itm?.id}`}
-                  onClick={handleProductClick}
-                >
-                  <div className="h-[80px] w-[120px] md:h-[140px] md:w-[200px]  flex items-center justify-center rounded-[20px] flex-col bg-white border border-[#9F7B49] cursor-pointer ApisMenuItem">
-                    <Image
-                      src={itm.product_img_2}
-                      alt={itm.name}
-                      // className="md:h-[100px] md:w-[100px]"
-                    />
-                    <p className="text-xs md:text-lg font-bold mt-2">
-                      {itm.name}
-                    </p>
-                  </div>
-                </Link>
+                    key={itm._id}
+                    href={`/our-brand/product-details?brand_id=${selectedBrand}&product_id=${itm?._id}&itm = ${itm}`}
+                    onClick={()=>handleProductClick(itm)}
+                  >
+                    <div className="h-[80px] w-[120px] md:h-[140px] md:w-[200px]  flex items-center justify-center rounded-[20px] flex-col bg-white border border-[#9F7B49] cursor-pointer ApisMenuItem">
+                      <Image
+                        src={itm.product_img_2.startsWith("http") ? itm.product_img_2 : `/${itm.product_img_2}`}
+                        alt={itm.name}
+                        height={100}
+                        width={100}
+                      />
+
+                      <p className="text-xs md:text-lg font-bold mt-2">
+                        {itm?.name}
+                      </p>
+                    </div>
+                  </Link>
                 );
               })}
             </div>

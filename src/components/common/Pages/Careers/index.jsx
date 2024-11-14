@@ -194,6 +194,7 @@ export default function Careers() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState(null);
   const [jobOpening,setJobOpening] = useState([])
+  const [apisLifeData,setApisLifeData] = useState([])
   // const [phone, setPhone] = useState("");
   const [showSuccess, setShowSuccess] = useState(false);
   const modalRef = useRef(null);
@@ -262,6 +263,17 @@ export default function Careers() {
     }
     CareersData()
 
+    const fetchLifeApis = async() =>{
+      try {
+        const response =  await axios.get("/api/careers/apisLife");
+        console.log("responseLifeAt",response);
+        setApisLifeData(response.data)
+      } catch (error) {
+        
+      }
+    }
+    fetchLifeApis()
+
     const handleClickOutside = (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
         setIsModalOpen(false);
@@ -272,21 +284,18 @@ export default function Careers() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-
-    
   }, []);
 
   const handleImageClick = (item) => {
-    router.push(`/careers/careerGallary?title=${encodeURIComponent(item.title)}&gallery=${item.gallery}`);
+    router.push(`/careers/careerGallary?title=${encodeURIComponent(item.title)}&gallery=${item.gallery}&titleImage=${encodeURIComponent(item.titleImage)}&imageGroup= ${encodeURIComponent(item.imageGroup)}`);
   };
 
+  
   const handleApplyNow = (job) => {
     setSelectedJob(job);
     setIsModalOpen(true);
     setShowSuccess(false);
   };
-
- 
 
   return (
     <>
@@ -303,23 +312,23 @@ export default function Careers() {
       </div>
      {/* <Link href={"/careers/careerGallary"}> */}
      <div className="flex mt-7 md:mt-14 flex-wrap items-center justify-center gap-5 md:gap-10 w-[80%] m-auto">
-        {CAREER_DATA.map((itm, index) => (
+        {apisLifeData?.map((itm, index) => (
           <div key={index} className="border p-2 md:p-3 px-1 border-[#85673D]" onClick={() => handleImageClick(itm)}>
-            {itm.type === 1 && (
+            {itm.type === "1" && (
               <div className="p-3 pt-0 text-[#85673D] font-bold text-sm md:text-2xl pb-5 font-jost">
                 <p>{itm.title}</p>
               </div>
             )}
             <div>
               <Image
-                src={itm.img}
-                alt={itm.title}
+                src={itm.titleImage}
+                alt={itm.titleImage}
                 width={495}
                 height={443}
                 className="object-cover h-[260px] w-[290px] md:w-[495px] md:h-[443px] cursor-pointer"
               />
             </div>
-            {itm.type === 0 && (
+            {itm.type === "0" && (
               <div className="p-3 pb-0 text-[#85673D] font-bold text-sm md:text-2xl pt-5 font-jost">
                 <p className="font-jost">{itm.title}</p>
               </div>

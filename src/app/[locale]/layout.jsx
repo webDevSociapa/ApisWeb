@@ -14,6 +14,7 @@ import MainHeader from "@/components/common/Layout/MainHeader";
 
 import Loading from "./loading";
 import Newsletter from "@/components/common/Layout/Newsletter";
+import AdminPage from "@/components/common/Pages/Admin";
 
 export const metadata = {
   title: PRODUCT_NAME,

@@ -1,4 +1,4 @@
-import { MongoClient } from "mongodb";
+import { MongoClient, ObjectId } from "mongodb";
 import { NextResponse } from "next/server";
 import AWS from 'aws-sdk';
 import { v4 as uuidv4 } from 'uuid';
@@ -10,12 +10,12 @@ const collectionName = "ApisBlog01";
 
 // AWS S3 Configuration
 const s3 = new AWS.S3({
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID, // Store this in environment variables
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY, // Store this in environment variables
-    region: process.env.AWS_REGION // e.g., 'us-east-1'
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID, 
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY, 
+    region: process.env.AWS_REGION 
 });
 
-const bucketName = process.env.AWS_BUCKET_NAME; // Your S3 bucket name
+const bucketName = process.env.AWS_BUCKET_NAME;
 
 async function connectToDb() {
     await client.connect();
@@ -23,75 +23,128 @@ async function connectToDb() {
     return database.collection(collectionName);
 }
 
-// POST API to handle image upload and save to S3
 export async function POST(req) {
     try {
         const formData = await req.formData();
         const blogImage = formData.get('blogImage');
         const blogTitle = formData.get('blogTitle');
+        const contentData = formData.get('contentData');
+        const blogDate = formData.get('blogDate');
+        const desc = formData.get('desc');
 
-        console.log("formData",formData);
-        if (!blogImage || !blogTitle) {
-            return NextResponse.json({ message: "Banner file is required" }, { status: 400 });
+        if (!blogImage || !blogTitle || !contentData || !blogDate || !desc) {
+            return NextResponse.json({ message: "All fields are required" }, { status: 400 });
         }
-        // Generate a unique filename for the image
+
         const uniqueFileName = `${uuidv4()}_${blogImage.name}`;
-        // Upload the image to S3
         const uploadParams = {
             Bucket: bucketName,
-            Key: `blogs/${uniqueFileName}`, // Folder path inside S3 bucket
+            Key: `blogs/${uniqueFileName}`,
             Body: Buffer.from(await blogImage.arrayBuffer()),
-            ContentType: blogImage.type,
-            ACL: 'public-read', // Make the image publicly accessible
+            ContentType: blogImage.type
         };
-        const uploadResult = await s3.upload(uploadParams).promise();
-        const imageUrl = uploadResult.Location; // S3 URL of the uploaded image
-        // Save the image URL and hideShow flag in the database
-        const collection = await connectToDb();
-        await collection.updateOne(
-            {},
-            { $set: { blogImage: imageUrl, hideShow: true } },
-            { upsert: true }
-        );
 
-        return NextResponse.json({ message: "Banner uploaded successfully", imageUrl });
+        const uploadResult = await s3.upload(uploadParams).promise();
+        const imageUrl = uploadResult.Location;
+
+        const collection = await connectToDb();
+        await collection.insertOne({
+            blogImage: imageUrl,
+            blogTitle,
+            contentData,
+            blogDate,
+            desc,
+            hideShow: true,
+            createdAt: new Date()
+        });
+
+        return NextResponse.json({ message: "Blog data uploaded successfully", imageUrl });
     } catch (error) {
-        console.error("Error uploading banner file:", error.message || error);
+        console.error("Error uploading blog data:", error.message || error);
         return NextResponse.json({ message: `An error occurred: ${error.message}` }, { status: 500 });
     }
 }
 
-// PUT and GET APIs remain unchanged.
 export async function PUT(req) {
     try {
-        const body = await req.json();
-        const { hideShow } = body;
+        const formData = await req.formData();
 
-        if (typeof hideShow !== "boolean") {
-            return NextResponse.json({ message: "hideShow must be a boolean value" }, { status: 400 });
+        // Destructure the fields from the form data
+        const { id, blogTitle, contentData, blogDate, desc, hideShow } = Object.fromEntries(formData.entries());
+        
+        // Get the blog image from form data (optional)
+        const blogImage = formData.get('blogImage');
+
+        // Check if ID and other required fields are provided
+        if (!id || !blogTitle || !contentData || !blogDate || !desc) {
+            return NextResponse.json({ message: "All fields except the image are required" }, { status: 400 });
         }
 
+        // Create an object to hold the fields to be updated
+        const updateData = {};
+
+        // Check if the fields are provided and update them accordingly
+        if (blogTitle) updateData.blogTitle = blogTitle;
+        if (contentData) updateData.contentData = contentData;
+        if (blogDate) updateData.blogDate = blogDate;
+        if (desc) updateData.desc = desc;
+        if (typeof hideShow === "boolean") updateData.hideShow = hideShow; // Ensure the hideShow is a boolean before updating
+
+        // If the image is provided, upload it to AWS S3 and add the image URL to the update data
+        if (blogImage) {
+            const uniqueFileName = `${uuidv4()}_${blogImage.name}`;
+            const uploadParams = {
+                Bucket: bucketName,
+                Key: `blogs/${uniqueFileName}`,
+                Body: Buffer.from(await blogImage.arrayBuffer()),
+                ContentType: blogImage.type
+            };
+
+            const uploadResult = await s3.upload(uploadParams).promise();
+            const imageUrl = uploadResult.Location; // Get the S3 URL of the uploaded image
+
+            // Add the image URL to the update data
+            updateData.blogImage = imageUrl;
+        }
+
+        // Connect to the MongoDB database and update the document by its ID
         const collection = await connectToDb();
         const result = await collection.updateOne(
-            {},
-            { $set: { hideShow } },
-            { upsert: true }
+            { _id: new ObjectId(id) }, // Find document by ID
+            { $set: updateData } // Update only the fields that have been provided
         );
 
-        return NextResponse.json({ message: "Visibility updated successfully", result });
+        if (result.matchedCount === 0) {
+            return NextResponse.json({ message: "No document found with the provided ID" }, { status: 404 });
+        }
+
+        return NextResponse.json({ message: "Content updated successfully", result });
     } catch (error) {
-        console.error("Error updating visibility:", error);
-        return NextResponse.json({ message: "An error occurred" }, { status: 500 });
+        console.error("Error updating content:", error);
+        return NextResponse.json({ message: "An error occurred while updating the content" }, { status: 500 });
     }
 }
 
-export async function GET() {
-    try {
-        const collection = await connectToDb();
-        const data = await collection.findOne({}, { projection: { bannerImage: 1, hideShow: 1 } });
 
-        if (!data) {
-            return NextResponse.json({ message: "Data not found" }, { status: 404 });
+
+export async function GET(req) {
+    try {
+        const url = new URL(req.url);
+        const id = url.searchParams.get("id");
+
+        const collection = await connectToDb();
+        
+        let data;
+        if (id) {
+            data = await collection.findOne({ _id: new ObjectId(id) });
+            if (!data) {
+                return NextResponse.json({ message: "No document found with the provided ID" }, { status: 404 });
+            }
+        } else {
+            data = await collection.find({}).toArray();
+            if (data.length === 0) {
+                return NextResponse.json({ message: "No data found" }, { status: 404 });
+            }
         }
 
         return NextResponse.json(data);

@@ -17,7 +17,8 @@ import {
   PrevButton,
   usePrevNextButtons,
 } from "../../Carousel/EmblaCarouselArrowButtons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const SUSTAINABILITY_DATA = [
   {
@@ -52,6 +53,7 @@ const SUSTAINABILITY_DATA = [
 ];
 
 export default function Sustainability() {
+  const [sustainBiltyData,setSustainBiltyData] = useState([])
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     AutoScroll({ playOnInit: false }),
   ]);
@@ -79,6 +81,23 @@ export default function Sustainability() {
     emblaApi.scrollTo(index); // Add this line to scroll the carousel
   };
 
+  useEffect(()=>{
+    const fetchSustainBilty = async()=>{
+      try {
+        const response = await axios.get("/api/sustainBility");
+        console.log("response",response);
+        
+        setSustainBiltyData(response.data)
+      } catch (error) {
+        
+      }
+    }
+    fetchSustainBilty()
+  },[])
+
+  console.log("sustainBiltyData",sustainBiltyData);
+  
+
   return (
     <>
       <ImageBanner banner={Banner} />
@@ -87,32 +106,23 @@ export default function Sustainability() {
           CSR @Apis
         </p>
         <p className="w-[96%] md:w-[75%] text-sm md:text-xl text-center font-jost">
-          At Apis India, our Corporate Social Responsibility (CSR) initiatives
-          reflect our commitment to making a positive impact on society and the
-          environment. We actively support various community development
-          programs, including educational outreach, environmental
-          sustainability, and health and wellness initiatives. Our efforts are
-          focused on creating meaningful change, from promoting green practices
-          and reducing our carbon footprint to supporting local communities
-          through charitable contributions and volunteer work. We believe that
-          by investing in people and the planet, we can build a better future
-          for everyone. Join us in our journey to make a difference!
+         {sustainBiltyData[0]?.csrContent}
         </p>
       </div>
       <div className=" w-[90%] flex items-center justify-center">
         <section className="embla flex items-center justify-between !w-full">
           <div className="embla__viewport w-full" ref={emblaRef}>
             <div className="embla__container py-8 md:py-20">
-              {SUSTAINABILITY_DATA.map((itm, index) => (
+              {sustainBiltyData?.map((itm, index) => (
                 <div className="embla__slide" key={index}>
                   <div className="embla__slide__number">
                     <div className="bg-[#EECB9A] w-[280px] sm:w-[320px] xl:w-auto rounded-xl flex flex-col h-[320px] md:h-[400px] p-2.5 px-1.5 justify-between border border-[#85673D]">
-                    {itm.video ? (
+                    {itm.videoUrl ? (
                   <iframe
                     width="100%"
                     height="240"
                     className="h-[240px] md:h-[300px]  rounded-2xl w-full bg-opacity-40 "
-                    src={itm.video}
+                    src={itm.videoUrl}
                     title={itm.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin"
@@ -144,7 +154,7 @@ export default function Sustainability() {
           />
         }
         <div className="flex items-center justify-center">
-          {SUSTAINABILITY_DATA.map((_, index) => (
+          {sustainBiltyData.map((_, index) => (
             <p
               key={index}
               onClick={() => handleNumberClick(index)} // Add this onClick handler

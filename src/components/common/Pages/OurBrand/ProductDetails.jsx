@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import ImageBanner from "../../Layout/Banner";
 import EmblaCarousel from "../../Carousel/Carousel";
 import Ring1 from "@/assets/images/OurBrands/Ring-1.png";
@@ -14,43 +14,51 @@ import HimalayaHoney from "@/assets/images/OurBrands/himalayaHoney.png"
 import { useSearchParams } from "next/navigation";
 import { PRODUCT_DATA } from "@/lib/constants";
 import Link from "next/link";
+import { useRouter } from 'next/router';
 
-import { LATEST_SLIDES,SLIDES,HEALTH_BENEFITS,HEALTH_DATE,HEALTH_JAM,HEALTH_FLAKES,HEALTH_VERNACALLI,HEALTH_MACRONI,HEALTH_SPEARD,COOKING_PASTE,SOYA_CHUNK,SAFFRON,GREEN_TEA,RECIPIES_DATA1,AVAILABILITY_SLIDE,GLIMPSES_SLIDES} from "@/lib/constants";
+
+import { LATEST_SLIDES, SLIDES, HEALTH_BENEFITS, HEALTH_DATE, HEALTH_JAM, HEALTH_FLAKES, HEALTH_VERNACALLI, HEALTH_MACRONI, HEALTH_SPEARD, COOKING_PASTE, SOYA_CHUNK, SAFFRON, GREEN_TEA, RECIPIES_DATA1, AVAILABILITY_SLIDE, GLIMPSES_SLIDES } from "@/lib/constants";
 import axios from "axios";
 
 const OPTIONS = { loop: true };
-
-
 const ProductDetails = () => {
   const searchParams = useSearchParams();
-  const [healthBenefit,sethealthBenefit] = useState()
-  const [selectedContent, setSelectedContent] = useState(null); // Hold the selected health benefit content
+  const itm = searchParams.get('itm')
+  console.log("item", itm);
+  const title = searchParams.get('title')
+  console.log("title", title);
+
+
+  const [healthBenefit, sethealthBenefit] = useState()
+  const [selectedContent, setSelectedContent] = useState(null);
+  // Hold the selected health benefit content
   // const [selectedContent, setSelectedContent] = useState(HEALTH_BENEFITS[0].id);
 
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentVideo, setCurrentVideo] = useState(''); // State to hold the current video URL
-  const [hoveredId, setHoveredId] = useState(false); // State to track the hovered item
-  const [productBanner,setProductBanner] = useState([])
-const [customerReview,setCustomerReview] = useState([])
-const [productData,setProductData] = useState([])
+  const [currentVideo, setCurrentVideo] = useState('');
+  // State to hold the current video URL
+  const [hoveredId, setHoveredId] = useState(false);
+  // State to track the hovered item
+  const [productBanner, setProductBanner] = useState([])
+  const [customerReview, setCustomerReview] = useState([])
 
 
-useEffect(()=>{
-    // try {
-      const fetchData = async()=>{
-        const response = await axios.get('/api/our-Brands/productDetails')
-        setProductData(response.data)
-        console.log("response",response.data);
-        
-      }
-    // } catch (error) {
-    //   console.log("error"); 
-    // }
-    fetchData()
-},[])
+  // useEffect(()=>{
+  //     // try {
+  //       const fetchData = async()=>{
+  //         const response = await axios.get('/api/our-Brands/productDetails')
+  //         setProductData(response.data)
+  //         console.log("response1111",response.data);
+
+  //       }
+  //     // } catch (error) {
+  //     //   console.log("error"); 
+  //     // }
+  //     fetchData()
+  // },[])
   const openModal = (video) => {
-    
+
     setCurrentVideo(video);
     setIsModalOpen(true);
   };
@@ -65,24 +73,24 @@ useEffect(()=>{
     setCurrentVideo('');
   };
 
-  const selectedBrand = productData?.find(
-    (itm) => itm.id == searchParams.get("brand_id")
+  const selectedBrand = itm?.find(
+    (itm) => itm?._id == searchParams?.get("brand_id")
   );
-  const selectedProduct = productData.products?.find(
-    (itm) => itm.id == searchParams.get("product_id")
+  const selectedProduct = itm.products?.find(
+    (itm) => itm?._id == searchParams?.get("product_id")
   );
 
 
   const renderBenefits = (benefits) => {
-    return benefits.map((itm) => (
+    return benefits?.map((itm) => (
       <div key={itm.id} className="flex flex-col w-1/2 items-center justify-center">
         {/* <div
           className={`h-[110px] flex items-center justify-center w-[110px] border-2 border-[#9F7B49] rounded-full`}
         > */}
-          <div
-      className={`h-[110px] flex items-center justify-center w-[110px] border-2 border-[#9F7B49] rounded-full 
-                  ${hoveredId ===  itm.id ? 'shadow-lg' : ''} transition-shadow duration-200`} // Change shadow based on state
-    >
+        <div
+          className={`h-[110px] flex items-center justify-center w-[110px] border-2 border-[#9F7B49] rounded-full 
+                  ${hoveredId === itm.id ? 'shadow-lg' : ''} transition-shadow duration-200`} // Change shadow based on state
+        >
           <Image
             src={itm?.img}
             width={65}
@@ -90,7 +98,7 @@ useEffect(()=>{
             alt="header-logo"
             className="h-[65px] w-[65px] cursor-pointer"
             onClick={() => handleImageClick(itm)} // Set the clicked item as the selected content
-            />
+          />
         </div>
         <p className="text-center text-xs md:text-base my-4">
           {itm?.title}
@@ -116,15 +124,15 @@ useEffect(()=>{
       benefits = HEALTH_MACRONI;
     } else if (selectedBrand?.id === 2 && selectedProduct?.id === 5) {
       benefits = HEALTH_SPEARD;
-    } else if(selectedBrand?.id === 3 && selectedProduct?.id === 1) {
+    } else if (selectedBrand?.id === 3 && selectedProduct?.id === 1) {
       benefits = COOKING_PASTE;
-    } else if(selectedBrand?.id === 3 && selectedProduct?.id === 2) {
+    } else if (selectedBrand?.id === 3 && selectedProduct?.id === 2) {
       benefits = SOYA_CHUNK;
     }
-    else if(selectedBrand?.id === 3 && selectedProduct?.id === 3) {
+    else if (selectedBrand?.id === 3 && selectedProduct?.id === 3) {
       benefits = SAFFRON;
     }
-    else if(selectedBrand?.id === 4 && selectedProduct?.id === 1) {
+    else if (selectedBrand?.id === 4 && selectedProduct?.id === 1) {
       benefits = GREEN_TEA;
     }
 
@@ -139,36 +147,28 @@ useEffect(()=>{
   // const selectedObj = renderBenefits(`${}`).find((itm) => itm.id === selectedContent);
 
 
-  useEffect(()=>{
-    const fetchBanner = async()=>{
-    try {
-      const response = await axios.get("/api/our-Brands/products/banner");
-      setProductBanner(response.data.bannerImage)
-    } catch(error){
-      console.log("Error");
-      
-    }
+  useEffect(() => {
+    const fetchBanner = async () => {
+      try {
+        const response = await axios.get("/api/our-Brands/products/banner");
+        setProductBanner(response?.data?.bannerImage)
+      } catch (error) {
+        console.log("Error");
+
+      }
     }
     fetchBanner()
 
-    const fetchProductDetails = async()=>{
-      try {
-        const response = await axios.get("/api/our-Brands/products/details");
-        
-      } catch (error) {
-      }
-    }
-    fetchProductDetails()
-    const fetchCustomerReviews = async()=>{
+    const fetchCustomerReviews = async () => {
       try {
         const response = await axios.get("/api/our-Brands/customerReviews");
         setCustomerReview(response.data[0])
-        
+
       } catch (error) {
       }
     }
     fetchCustomerReviews()
-  },[])
+  }, [])
 
 
 
@@ -214,62 +214,62 @@ useEffect(()=>{
           </button>
         </Link>
       </div>
-      
+
       <div className="w-[90%] border border-[#AE844A] rounded-[10px] flex mt-8 md:mt-20 items-center flex-col gap-4 md:gap-12">
         <div className="bg-white rounded-[10px] w-full h-[23px] md:h-[65px] flex items-center justify-between px-3 md:pt-2 pt-1 avaibility">
           <EmblaCarousel options={OPTIONS} autoScroll>
             {AVAILABILITY_SLIDE.map((img) => {
               return (
                 <div className="embla__slide w-[55px] md:w-auto">
-                                        <Link href={img?.path} target="_blank">
-                                        <Image
-                    src={img?.img}
-                    height={60}
-                    alt="header-logo"
-                    className="h-[18px] w-[50px] md:w-auto md:h-[60px] embla__slide__number"
-                  />
-</Link>
+                  <Link href={img?.path} target="_blank">
+                    <Image
+                      src={img?.img}
+                      height={60}
+                      alt="header-logo"
+                      className="h-[18px] w-[50px] md:w-auto md:h-[60px] embla__slide__number"
+                    />
+                  </Link>
                 </div>
               );
             })}
           </EmblaCarousel>
         </div>
       </div>
-     {/* <a href={'/about-us'}> */}
-     {selectedBrand?.id === 1 && selectedProduct?.id === 1 ?  (
-      <div className="w-[80%] relative 2xl:mt-8">
-      <Image 
-        src={CheckReportBanner}
-        height={340}
-        className="mt-8 w-full"
-        alt="Check Report Banner"
-      />
-      <div className="absolute left-[31%] bottom-[15%]  sm: left-[70%] md:-2 transform -translate-x-1/2 md:left-[70%] lg:left-[70%] chckReportBtn">
-        <a href='/our-brand/product-details/certificate'>
-          <button className="border border-[#9F7B49] bg-[#9F7B49] px-2 sm: px-0 md:px-6 lg:px-12 text-xs sm:text-sm md:text-base py-1 sm:py-2 md:py-3 font-bold text-white whitespace-nowrap">
-            Check Report
-          </button>
-        </a>
-      </div>
-    </div>
-     ): selectedBrand?.id === 3 && selectedProduct?.id === 2 ? (
-      <div className="w-[80%] relative">
-      <Image 
-        src={HimalayaHoney}
-        height={340}
-        className="mt-8 w-full"
-        alt="Check Report Banner"
-      />
-      <div className="absolute left-[31%] bottom-[15%]  sm: left-[70%] md:-2 transform -translate-x-1/2 md:left-[70%] lg:left-[70%] chckReportBtn">
-        <a href='/our-brand/product-details/certificate'>
-          <button className="border border-[#9F7B49] bg-[#9F7B49] px-2 sm: px-0 md:px-6 lg:px-12 text-xs sm:text-sm md:text-base py-1 sm:py-2 md:py-3 font-bold text-white whitespace-nowrap">
-            Check Report
-          </button>
-        </a>
-      </div>
-    </div>
-     ): null}
-     {/* </a> */}
+      {/* <a href={'/about-us'}> */}
+      {selectedBrand?.id === 1 && selectedProduct?.id === 1 ? (
+        <div className="w-[80%] relative 2xl:mt-8">
+          <Image
+            src={CheckReportBanner}
+            height={340}
+            className="mt-8 w-full"
+            alt="Check Report Banner"
+          />
+          <div className="absolute left-[31%] bottom-[15%]  sm: left-[70%] md:-2 transform -translate-x-1/2 md:left-[70%] lg:left-[70%] chckReportBtn">
+            <a href='/our-brand/product-details/certificate'>
+              <button className="border border-[#9F7B49] bg-[#9F7B49] px-2 sm: px-0 md:px-6 lg:px-12 text-xs sm:text-sm md:text-base py-1 sm:py-2 md:py-3 font-bold text-white whitespace-nowrap">
+                Check Report
+              </button>
+            </a>
+          </div>
+        </div>
+      ) : selectedBrand?.id === 3 && selectedProduct?.id === 2 ? (
+        <div className="w-[80%] relative">
+          <Image
+            src={HimalayaHoney}
+            height={340}
+            className="mt-8 w-full"
+            alt="Check Report Banner"
+          />
+          <div className="absolute left-[31%] bottom-[15%]  sm: left-[70%] md:-2 transform -translate-x-1/2 md:left-[70%] lg:left-[70%] chckReportBtn">
+            <a href='/our-brand/product-details/certificate'>
+              <button className="border border-[#9F7B49] bg-[#9F7B49] px-2 sm: px-0 md:px-6 lg:px-12 text-xs sm:text-sm md:text-base py-1 sm:py-2 md:py-3 font-bold text-white whitespace-nowrap">
+                Check Report
+              </button>
+            </a>
+          </div>
+        </div>
+      ) : null}
+      {/* </a> */}
 
       <p className="text-[20px] md:text-[40px] py-4 md:py-10 font-bold text-[#9F7B49] font-literata">
         Content
@@ -357,30 +357,30 @@ useEffect(()=>{
         </p>
         <div className="w-full flex flex-col lg:flex-row">
           <div className="w-full lg:w-1/2 flex flex-wrap">
-          {selectedBrand?.id === 1 && selectedProduct?.id === 1 ? (
-            renderBenefits(HEALTH_BENEFITS)
-          ) : selectedBrand?.id === 1 && selectedProduct?.id === 3 ? (
-            renderBenefits(HEALTH_DATE)
-          ) : selectedBrand?.id === 2 && selectedProduct?.id === 1 ? (
-            renderBenefits(HEALTH_JAM)
-          ) : selectedBrand?.id === 2 && selectedProduct?.id === 2 ? (
-            renderBenefits(HEALTH_FLAKES)
-          ) : selectedBrand?.id === 2 && selectedProduct?.id === 3 ? (
-            renderBenefits(HEALTH_VERNACALLI)
-          ) : selectedBrand?.id === 2 && selectedProduct?.id === 4 ? (
-            renderBenefits(HEALTH_MACRONI)
-          ) : selectedBrand?.id === 2 && selectedProduct?.id === 5 ? (
-            renderBenefits(HEALTH_SPEARD)
-          ) : selectedBrand?.id === 3 && selectedProduct?.id === 1 ? (
-            renderBenefits(COOKING_PASTE)
-          ): selectedBrand?.id === 3 && selectedProduct?.id === 2 ? (
-            renderBenefits(SOYA_CHUNK)
-          ): selectedBrand?.id === 3 && selectedProduct?.id === 3 ? (
-            renderBenefits(SAFFRON)
-          ) : selectedBrand?.id === 4 && selectedProduct?.id === 1 ? (
-            renderBenefits(GREEN_TEA)
-          ):""
-          }
+            {selectedBrand?.id === 1 && selectedProduct?.id === 1 ? (
+              renderBenefits(HEALTH_BENEFITS)
+            ) : selectedBrand?.id === 1 && selectedProduct?.id === 3 ? (
+              renderBenefits(HEALTH_DATE)
+            ) : selectedBrand?.id === 2 && selectedProduct?.id === 1 ? (
+              renderBenefits(HEALTH_JAM)
+            ) : selectedBrand?.id === 2 && selectedProduct?.id === 2 ? (
+              renderBenefits(HEALTH_FLAKES)
+            ) : selectedBrand?.id === 2 && selectedProduct?.id === 3 ? (
+              renderBenefits(HEALTH_VERNACALLI)
+            ) : selectedBrand?.id === 2 && selectedProduct?.id === 4 ? (
+              renderBenefits(HEALTH_MACRONI)
+            ) : selectedBrand?.id === 2 && selectedProduct?.id === 5 ? (
+              renderBenefits(HEALTH_SPEARD)
+            ) : selectedBrand?.id === 3 && selectedProduct?.id === 1 ? (
+              renderBenefits(COOKING_PASTE)
+            ) : selectedBrand?.id === 3 && selectedProduct?.id === 2 ? (
+              renderBenefits(SOYA_CHUNK)
+            ) : selectedBrand?.id === 3 && selectedProduct?.id === 3 ? (
+              renderBenefits(SAFFRON)
+            ) : selectedBrand?.id === 4 && selectedProduct?.id === 1 ? (
+              renderBenefits(GREEN_TEA)
+            ) : ""
+            }
           </div>
           <div className="w-full lg:w-1/2 mt-20 lg:mt-0 px-0 md:px-8 flex justify-center items-center">
             <div
@@ -397,18 +397,18 @@ useEffect(()=>{
                 alt="header-logo"
                 className="h-[135px] absolute hidden lg:inline -top-7 -right-7 z-0 ms w-[185px]"
               />
-           <p className="z-20 absolute w-full text-center text-lg md:text-[24px] left-6 font-normal font-literata">
+              <p className="z-20 absolute w-full text-center text-lg md:text-[24px] left-6 font-normal font-literata">
                 {selectedContent?.name}
               </p>
-              
-             
+
+
               {selectedContent && (
-        <p
-          className={`z-20 absolute w-[90%] text-center text-xs md:text-base top-12 left-6 md:left-12 font-normal`}
-        >
-          {selectedContent.desc}
-        </p>
-      )}
+                <p
+                  className={`z-20 absolute w-[90%] text-center text-xs md:text-base top-12 left-6 md:left-12 font-normal`}
+                >
+                  {selectedContent.desc}
+                </p>
+              )}
               <div className="w-1/2 relative px-14 flex flex-col gap-8 items-center mt-12"></div>
             </div>
           </div>
@@ -416,41 +416,41 @@ useEffect(()=>{
       </div>
 
       <div className="flex w-full pt-10 md:pt-20 items-center justify-center flex-col">
-      {selectedBrand?.id === 1 && selectedProduct?.id === 1 && (
-        <>
-         <p className="text-[#9F7B49] text-center text-[20px] md:text-[40px] font-bold">
-        GLIMPSES OF
-      </p>
-      <p className="text-[#9F7B49] text-center w-[90%] text-[20px] md:text-[40px] font-bold">
-        ORGANIC HONEY LAUNCH
-      </p>
-      <p className="w-[90%] text-center text-sm md:text-[22px] left-4 md:leading-7 mt-2 md:mt-6 xl:w-[45%] sm:w-[90%] md:w-[80%] font-jost">
-        Launch Event was organized on 9th Jan, 2024 at The Lalit, New Delhi.
-        Sanya Malhotra and our Managing Director Mr. Amit Anand Unveiled Our
-        New Organic Honey.
-      </p>
-      <div className="w-full py-6 md:py-20 flex flex-col items-center justify-center">
-        <div className="w-[90%] flex items-center justify-center">
-          <EmblaCarousel options={OPTIONS}>
-            {GLIMPSES_SLIDES.map((itm, index) => (
-              <div className="embla__slide" key={index}>
-                <div className="embla__slide__number border w-[176px] p-2 h-[256px] md:!h-[456px] cursor-pointer !rounded-none md:w-[286px] border-[#9F7B49]">
-                  <Image
-                    src={itm?.img}
-                    width={310}
-                    height={470}
-                    alt="header-logo"
-                    className="h-[240px] md:h-[440px] w-[172px] md:w-[270px] max-w-max bg-opacity-40"
-                  />
-                </div>
+        {selectedBrand?.id === 1 && selectedProduct?.id === 1 && (
+          <>
+            <p className="text-[#9F7B49] text-center text-[20px] md:text-[40px] font-bold">
+              GLIMPSES OF
+            </p>
+            <p className="text-[#9F7B49] text-center w-[90%] text-[20px] md:text-[40px] font-bold">
+              ORGANIC HONEY LAUNCH
+            </p>
+            <p className="w-[90%] text-center text-sm md:text-[22px] left-4 md:leading-7 mt-2 md:mt-6 xl:w-[45%] sm:w-[90%] md:w-[80%] font-jost">
+              Launch Event was organized on 9th Jan, 2024 at The Lalit, New Delhi.
+              Sanya Malhotra and our Managing Director Mr. Amit Anand Unveiled Our
+              New Organic Honey.
+            </p>
+            <div className="w-full py-6 md:py-20 flex flex-col items-center justify-center">
+              <div className="w-[90%] flex items-center justify-center">
+                <EmblaCarousel options={OPTIONS}>
+                  {GLIMPSES_SLIDES.map((itm, index) => (
+                    <div className="embla__slide" key={index}>
+                      <div className="embla__slide__number border w-[176px] p-2 h-[256px] md:!h-[456px] cursor-pointer !rounded-none md:w-[286px] border-[#9F7B49]">
+                        <Image
+                          src={itm?.img}
+                          width={310}
+                          height={470}
+                          alt="header-logo"
+                          className="h-[240px] md:h-[440px] w-[172px] md:w-[270px] max-w-max bg-opacity-40"
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </EmblaCarousel>
               </div>
-            ))}
-          </EmblaCarousel>
-        </div>
-      </div>
-        </>
-      )}
-      
+            </div>
+          </>
+        )}
+
         <div className="w-full py-6 md:py-20 bg-[#FFF9F0] flex flex-col items-center justify-center">
           <p className="text-sm text-center md:text-[22px] font-medium text-[#585858] font-jost">
             Get to know more about Apis from our customers
@@ -470,18 +470,18 @@ useEffect(()=>{
                 <div className="embla__slide" key={index}>
                   <div className="embla__slide__number">
                     <Image
-                    width={350}
-                    height={346}
+                      width={350}
+                      height={346}
                       // width="300px"
                       // height="385px"
                       className="rounded w-full sm:w-[360px] sm:h-[246px]"
                       src={itm?.img}
-                      onClick={()=>openModal(itm.video)}
-                      // title="YouTube video player"
-                      // frameborder="0"
-                      // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      // referrerpolicy="strict-origin-when-cross-origin"
-                      // allowfullscreen
+                      onClick={() => openModal(itm.video)}
+                    // title="YouTube video player"
+                    // frameborder="0"
+                    // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    // referrerpolicy="strict-origin-when-cross-origin"
+                    // allowfullscreen
                     />
                   </div>
                 </div>
@@ -493,8 +493,8 @@ useEffect(()=>{
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50" onClick={closeModal}> {/* Close modal on overlay click */}
           <div className="bg-white p-4 rounded-lg w-11/12 md:w-3/4 lg:w-1/2" onClick={(e) => e.stopPropagation()}> {/* Prevent closing on content click */}
-          <div className="flex justify-end mb-2"> {/* Added flex container to align button to the right */}
-            <button className="text-end text-xl" onClick={closeModal}>X</button> {/* Close button */}
+            <div className="flex justify-end mb-2"> {/* Added flex container to align button to the right */}
+              <button className="text-end text-xl" onClick={closeModal}>X</button> {/* Close button */}
             </div>
             <iframe
               width="450px"
@@ -513,7 +513,7 @@ useEffect(()=>{
       <div className="w-full relative flex flex-col justify-center items-center">
         <div className="flex flex-col gap-4 sm:gap-10 px-4 lg:px-36 pb-0 pt-6 md:py-6">
           <div className="flex flex-col items-center justify-center gap-4 md:gap-5">
-            <p className="text-center text-[14px] md:text-[22px] font-jost  text-[#585858]" style={{paddingTop:"30px"}}>
+            <p className="text-center text-[14px] md:text-[22px] font-jost  text-[#585858]" style={{ paddingTop: "30px" }}>
               day-to-day choices that weave the most profound stories of
               character & growth.
             </p>
@@ -559,12 +559,12 @@ useEffect(()=>{
                 <div className="embla__slide">
                   <div className="w-full">
                     <div className="w-full">
-                    <iframe
-              src={itm.video}
-              height={400}
-              alt="header-logo"
-              className="bg-opacity-40 w-full max-h-[363px] max-w-[514px] rounded-tl-[50px] rounded-br-[50px] rounded-tr-[25px]"
-            />
+                      <iframe
+                        src={itm.video}
+                        height={400}
+                        alt="header-logo"
+                        className="bg-opacity-40 w-full max-h-[363px] max-w-[514px] rounded-tl-[50px] rounded-br-[50px] rounded-tr-[25px]"
+                      />
                     </div>
                     <div className="border-2 max-w-[514px] bg-white border-[hsl(35,37%,45%)] mt-4 lg:mt-6 flex flex-col gap-1 lg:gap-3 py-3 px-2 lg:px-4">
                       <p className="text-sm lg:text-xl font-bold text-[#373737] font-jost">
