@@ -23,6 +23,20 @@ async function connectToDb() {
   return client.db(dbName).collection(collectionName);
 }
 
+// Helper function to upload an image to S3
+async function uploadImageToS3(file) {
+  const uniqueFileName = `${uuidv4()}_${file.name}`;
+  const uploadParams = {
+    Bucket: bucketName,
+    Key: `products/${uniqueFileName}`,
+    Body: Buffer.from(await file.arrayBuffer()),
+    ContentType: file.type,
+  };
+
+  const uploadResult = await s3.upload(uploadParams).promise();
+  return uploadResult.Location;
+}
+
 // POST: Add a new product with image upload
 export async function POST(req) {
   try {
@@ -32,6 +46,7 @@ export async function POST(req) {
     const products = JSON.parse(formData.get("products")); // Assuming `products` is passed as a JSON string
     const bannerImage = formData.get("bannerImage"); // File object
 
+    // Ensure required fields are present
     if (!bannerImage || !title) {
       return NextResponse.json(
         { message: "Title and Banner image are required" },
@@ -39,24 +54,47 @@ export async function POST(req) {
       );
     }
 
-    // Generate unique file name and upload image to S3
-    const uniqueFileName = `${uuidv4()}_${bannerImage.name}`;
-    const uploadParams = {
-      Bucket: bucketName,
-      Key: `products/${uniqueFileName}`,
-      Body: Buffer.from(await bannerImage.arrayBuffer()),
-      ContentType: bannerImage.type,
-    };
+    // Upload banner image to AWS S3
+    // const uniqueBannerFileName = `${uuidv4()}_${bannerImage.name}`;
+    // const bannerUploadParams = {
+    //   Bucket: bucketName,
+    //   Key: `products/${uniqueBannerFileName}`,
+    //   Body: Buffer.from(await bannerImage.arrayBuffer()),
+    //   ContentType: bannerImage.type,
+    // };
+    // const bannerUploadResult = await s3.upload(bannerUploadParams).promise();
+    // const bannerImageUrl = bannerUploadResult.Location;
 
-    const uploadResult = await s3.upload(uploadParams).promise();
-    const imageUrl = uploadResult.Location;
+    // Process product images
+    const updatedProducts = await Promise.all(
+      products.map(async (product) => {
+        const imageFields = ["img", "back_img", "product_img_1", "product_img_2"];
+        const updatedProduct = { ...product };
+
+        for (const field of imageFields) {
+          const image = formData.get(field);
+          if (image) {
+            const uniqueImageFileName = `${uuidv4()}_${image.name}`;
+            const uploadParams = {
+              Bucket: bucketName,
+              Key: `products/${uniqueImageFileName}`,
+              Body: Buffer.from(await image.arrayBuffer()),
+              ContentType: image.type,
+            };
+            const uploadResult = await s3.upload(uploadParams).promise();
+            updatedProduct[field] = uploadResult.Location;
+          }
+        }
+        return updatedProduct;
+      })
+    );
 
     // Insert product details into MongoDB
     const collection = await connectToDb();
     const newProduct = {
       title,
-      products,
-      bannerImage: imageUrl,
+      products: updatedProducts,
+      // bannerImage: bannerImageUrl,
       createdAt: new Date(),
     };
 

@@ -10,28 +10,28 @@ import { PRODUCT_DATA } from "@/lib/constants";
 import axios from "axios";
 
 export default function OurBrand({ onProductClick }) {
-  const BRAND_DATA = [
-    {
-      id: 1,
-      title: "Health & Wellness",
-    },
-    {
-      id: 2,
-      title: "Breakfast Range",
-    },
-    {
-      id: 3,
-      title: "Kitchen Mix",
-    },
-    {
-      id: 4,
-      title: "Beverage",
-    },
-    {
-      id: 5,
-      title: "Recipes",
-    },
-  ];
+  // const BRAND_DATA = [
+  //   {
+  //     id: 1,
+  //     title: "Health & Wellness",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Breakfast Range",
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "Kitchen Mix",
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "Beverage",
+  //   },
+  //   {
+  //     id: 5,
+  //     title: "Recipes",
+  //   },
+  // ];
 
   const [productData, setProductData] = useState([])
   const [selectedBrand, setSelectedBrand] = useState(productData[0]?._id);
