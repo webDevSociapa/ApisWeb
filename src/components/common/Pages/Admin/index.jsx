@@ -1,7 +1,11 @@
+import Sidebar from "../../Admin/sidebar"
+
 const AdminPage = () =>{
     return (
         <>
-        <div>welcome</div>
+        <div>
+            <Sidebar/>
+        </div>
         </>
     )
 }

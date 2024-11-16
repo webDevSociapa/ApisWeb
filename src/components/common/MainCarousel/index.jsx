@@ -1,16 +1,35 @@
 import React, { Component } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import Image from "next/image";
 
 export default class Carasol extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentSlide: 0, // Tracks the current slide index
+      currentSlide: 0,
+      banners: [], // Holds the banner video data
     };
-    this.carouselRef = React.createRef(); // Create a reference for the carousel
+    this.carouselRef = React.createRef();
   }
+
+  componentDidMount() {
+    // Fetch data from the API when the component mounts
+    this.fetchBannerData();
+  }
+
+  fetchBannerData = async () => {
+    try {
+      const response = await fetch("/api/HomePage/banner");
+      const data = await response.json();
+      console.log("Fetched Data:", data);
+  
+      // Wrap the single object in an array
+      this.setState({ banners: [data] });
+    } catch (error) {
+      console.error("Error fetching banner data:", error);
+    }
+  };
+  
 
   updateCurrentSlide = (index) => {
     this.setState({ currentSlide: index });
@@ -18,56 +37,48 @@ export default class Carasol extends Component {
   };
 
   render() {
-    const totalSlides = 2; // Update this number based on your total slides
-    // 
-
+    const { banners, currentSlide } = this.state;
+    console.log("banners",banners);
+    
+  
     return (
-     <>
       <div className="carousel-wrapper">
         <div className="carousel-container">
           <Carousel
             ref={(el) => (this.carouselRef = el)}
-            autoPlay={true} // Ensures the carousel plays automatically
+            autoPlay
             showThumbs={false}
-            infiniteLoop={true} // Allows the carousel to loop infinitely
-            interval={3000} // Sets the interval to 4 seconds
+            infiniteLoop
+            interval={3000}
             onChange={this.updateCurrentSlide}
             showArrows={false}
             showStatus={false}
-            showIndicators={false} // This removes the default dots
+            showIndicators={false}
           >
-            <div className="carousel_banner" style={this.state.imageStyle}>
-              <video
-               autoPlay
-                muted
-                className={"video-img1"}
-                loop // Ensures the video loops continuously
-                src={'https://luxor-pen-prod.s3.ap-south-1.amazonaws.com/Main+Banner+Video+02.mp4'}
-              />
-            </div>
-            <div className="carousel_banner home-shadow" style={this.state.imageStyle}>
-              <video
-                autoPlay
-                muted
-                className={"video-img1"}
-                loop // Ensures the video loops continuously
-                src={'https://api.luxorpen.com/v1/HomePageBanner1.mp4'}
-              />
-            </div>
-          </Carousel> 
-          {/* Moved the scroll-indicator inside the carousel-container */}
+            {banners[0]?.map((banner, index) => (
+              <div className="carousel_banner" key={index}>
+                <video
+                  autoPlay
+                  muted
+                  className="video-img1"
+                  loop
+                  src={banner.videoFile} // Use videoFile from the API data
+                />
+              </div>
+            ))}
+          </Carousel>
           <div className="scroll-indicator">
-            {[...Array(totalSlides)].map((_, index) => (
+            {banners[0]?.map((_, index) => (
               <div
                 key={index}
-                className={`scroll-pill ${index === this.state.currentSlide ? 'active' : ''}`}
+                className={`scroll-pill ${index === currentSlide ? "active" : ""}`}
                 onClick={() => this.updateCurrentSlide(index)}
               />
             ))}
           </div>
         </div>
       </div>
-     </>
     );
   }
+  
 }

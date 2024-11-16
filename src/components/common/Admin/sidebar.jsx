@@ -1,3 +1,5 @@
+"use client"
+
 // components/Sidebar.js
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -28,11 +30,10 @@ import {
 } from '@mui/icons-material';
 import StayCurrentPortraitIcon from '@mui/icons-material/StayCurrentPortrait';
 import SettingsIcon from '@mui/icons-material/Settings';
-import AccountMenu from './adminProfile';
 
 const menuItems = [
   { text: 'Dashboard', icon: <DashboardIcon />, link: '/dashboard' },
-  { text: 'Home', icon: <HomeIcon />, link: '/home' },
+  { text: 'Home', icon: <HomeIcon />, link: '/admin/home' },
   { text: 'About Us', icon: <InfoIcon />, link: '/about-us' },
   { text: 'Our Brands', icon: <BrandingWatermarkIcon />, link: '/our-brands' },
   
@@ -48,6 +49,7 @@ const menuItems = [
   // { text: 'Privacy Policy', icon: <PrivacyTipIcon />, link: '/privacy-policy' },
   // { text: 'Copy Rights', icon: <CopyrightIcon />, link: '/copy-rights' },
 ];
+
 
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
