@@ -84,22 +84,22 @@ import apisNews46 from "@/assets/images/Media/apisnews46.jpg"
 import apisNews47 from "@/assets/images/Media/apisnews47.jpg"
 import apisNews48 from "@/assets/images/Media/apisnews48.jpg"
 import apisNews49 from "@/assets/images/Media/apisnews49.jpg"
- import Blog1 from '@/assets/images/our-blog/Blog01.jpg';
- import Blog2 from '@/assets/images/our-blog/blog02.jpg';
- import Blog3 from '@/assets/images/our-blog/blog03.jpg';
- import Blog4 from '@/assets/images/our-blog/blog04.jpg';
- import Blog5 from '@/assets/images/our-blog/blog05.jpg';
- import Blog6 from '@/assets/images/our-blog/blog06.jpg';
- import Blog7 from '@/assets/images/our-blog/blog07.jpg';
- import Thumbnail_ApisLatest from '@/assets/images/home-banner-section/thumbnail_apisLatest.jpeg'
- import Thumbnail_ApisLatest2 from '@/assets/images/home-banner-section/thumbnail_apisLatest2.jpeg'
- import Thumbnail_ApisLatest3 from '@/assets/images/home-banner-section/thumbnail_apisLatest3.jpeg'
- import Thumbnail_ApisLatest4 from '@/assets/images/home-banner-section/thumbnail_apisLatest4.jpeg'
- import Thumbnail_ApisLatest5 from '@/assets/images/home-banner-section/thumbnail_apisLatest5.jpeg'
- import MediaImage02 from '@/assets/images/home-banner-section/mediaImage02.jpeg'
- import MediaImage01 from '@/assets/images/home-banner-section/mediaImage01.jpeg'
- import NewCookingPaste from '@/assets/images/OurBrands/newCookingPaste.png'
- import AlmondHoney from '@/assets/images/home-banner-section/cornFlakes01.png'
+import Blog1 from '@/assets/images/our-blog/Blog01.jpg';
+import Blog2 from '@/assets/images/our-blog/blog02.jpg';
+import Blog3 from '@/assets/images/our-blog/blog03.jpg';
+import Blog4 from '@/assets/images/our-blog/blog04.jpg';
+import Blog5 from '@/assets/images/our-blog/blog05.jpg';
+import Blog6 from '@/assets/images/our-blog/blog06.jpg';
+import Blog7 from '@/assets/images/our-blog/blog07.jpg';
+import Thumbnail_ApisLatest from '@/assets/images/home-banner-section/thumbnail_apisLatest.jpeg'
+import Thumbnail_ApisLatest2 from '@/assets/images/home-banner-section/thumbnail_apisLatest2.jpeg'
+import Thumbnail_ApisLatest3 from '@/assets/images/home-banner-section/thumbnail_apisLatest3.jpeg'
+import Thumbnail_ApisLatest4 from '@/assets/images/home-banner-section/thumbnail_apisLatest4.jpeg'
+import Thumbnail_ApisLatest5 from '@/assets/images/home-banner-section/thumbnail_apisLatest5.jpeg'
+import MediaImage02 from '@/assets/images/home-banner-section/mediaImage02.jpeg'
+import MediaImage01 from '@/assets/images/home-banner-section/mediaImage01.jpeg'
+import NewCookingPaste from '@/assets/images/OurBrands/newCookingPaste.png'
+import AlmondHoney from '@/assets/images/home-banner-section/cornFlakes01.png'
 import Saffron1 from '@/assets/images/home-banner-section/saffron01.png'
 import SoyaChunks1 from '@/assets/images/home-banner-section/soyaChunks01.png'
 import Muesli from '@/assets/images/home-banner-section/muesli01.png'
@@ -483,7 +483,7 @@ export const NEWS_DATA = [
     img: MediaImage01,
     name: NewsName1,
     desc: "Apis India Unveils New Product to Drive Fitness.",
-    date: " 04 JANUARY, 2024 / PRESS RELEASES",
+    date: "04 JANUARY, 2024 / PRESS RELEASES",
     link: "https://smestreet.in/infocus/apis-india-unveils-new-product-to-drive-fitness-and-wellness-revolution-2318097"
   },
   {
@@ -493,7 +493,7 @@ export const NEWS_DATA = [
     date: "09 JANUARY, 2024 / PRESS RELEASES",
     link: "https://www.business-standard.com/companies/news/apis-india-to-expand-product-portfolio-aims-rs-500-cr-revenue-in-fy25-124010900680_1.html"
   },
-  
+
   {
     img: apisNews5,
     name: NewsName5,
@@ -512,14 +512,14 @@ export const NEWS_DATA = [
   {
     img: apisNews3,
     name: NewsName3,
-    desc: "Organic Honey from Apis India             ",
+    desc: "Organic Honey from Apis India",
     date: "10 JANUARY, 2024 / PRESS RELEASES",
     link: "https://bwhotelier.com/article/organic-honey-from-apis-india-505447"
   },
   {
     img: apisNews4,
     name: NewsName4,
-    desc: "Product launch from APIS India             ",
+    desc: "Product launch from APIS India",
     date: "09 JANUARY, 2024 / PRESS RELEASES",
     link: "https://www.youtube.com/watch?v=8A3SeOYH8ww"
   },
@@ -544,7 +544,7 @@ export const NEWS_DATA = [
     date: "10 JANUARY, 2023 / PRESS RELEASES",
     link: "https://www.slurrp.com/article/we-bet-you-didnt-know-these-creative-ways-to-use-honey-1672830183803"
   },
- 
+
   {
     img: apisNews11,
     name: NewsName6,
@@ -835,11 +835,11 @@ export const NEWS_DATA = [
 ];
 
 
- export const Blog_Data = [
+export const Blog_Data = [
   {
-      id: 1,
-      image:Blog1,
-      contentData:`<div class="blog-content-wrap">
+    id: 1,
+    image: Blog1,
+    contentData: `<div class="blog-content-wrap">
                     <div class="entry-header mb-20">
                 <div class="entry-meta">
                     <a class="mr-2" href="https://blog.apisindia.com/posts/embrace-the-spirit-of-ramadan-with-apis/" rel="bookmark"><i class="ion-ios-time-outline"></i> <time class="updated" datetime="2023-04-13T05:56:18+00:00">April 13, 2023</time></a><span class="byline"><i class="ion-android-person"></i> <span class="screen-reader-text">Posted by</span><span class="author vcard"><a class="url fn n" href="https://blog.apisindia.com/author/admin/">admin</a></span></span>                </div><!-- .entry-meta -->
@@ -867,9 +867,9 @@ export const NEWS_DATA = [
 
   },
   {
-      id: 2,
-      image:Blog2,
-      contentData:`<div class="blog-content-wrap">
+    id: 2,
+    image: Blog2,
+    contentData: `<div class="blog-content-wrap">
                     <div class="entry-header mb-20">
                 <div class="entry-meta">
                     <a class="mr-2" href="https://blog.apisindia.com/posts/the-benefits-of-dates-in-ramadan-nutrition-tradition-and-spirituality/" rel="bookmark"><i class="ion-ios-time-outline"></i><time class="updated" datetime="2023-04-13T07:14:35+00:00">April 13, 2023</time></a><span class="byline"><i class="ion-android-person"></i> <span class="screen-reader-text">Posted by</span><span class="author vcard"><a class="url fn n" href="https://blog.apisindia.com/author/admin/">admin</a></span></span>                </div><!-- .entry-meta -->
@@ -900,9 +900,9 @@ export const NEWS_DATA = [
 
   },
   {
-      id: 3,
-      image:Blog3,
-      contentData:`<div class="blog-content-wrap">
+    id: 3,
+    image: Blog3,
+    contentData: `<div class="blog-content-wrap">
                     <div class="entry-header mb-20">
                 <div class="entry-meta">
                     <a class="mr-2" href="https://blog.apisindia.com/posts/the-sweetest-superfood-exploring-the-health-benefits-of-dates/" rel="bookmark"><i class="ion-ios-time-outline"></i><time class="updated" datetime="2023-04-13T06:12:47+00:00">April 13, 2023</time></a><span class="byline"><i class="ion-android-person"></i> <span class="screen-reader-text">Posted by</span><span class="author vcard"><a class="url fn n" href="https://blog.apisindia.com/author/admin/">admin</a></span></span>                </div><!-- .entry-meta -->
@@ -928,9 +928,9 @@ export const NEWS_DATA = [
 
   },
   {
-      id: 4,
-      image:Blog4,
-      contentData:
+    id: 4,
+    image: Blog4,
+    contentData:
       `<div class="blog-content-wrap">
                     <div class="entry-header mb-20">
                 <div class="entry-meta">
@@ -949,9 +949,9 @@ export const NEWS_DATA = [
 
   },
   {
-      id: 5,
-      image:Blog5,
-      contentData:
+    id: 5,
+    image: Blog5,
+    contentData:
       `<div class="blog-content-wrap">
                     <div class="entry-header mb-20">
                 <div class="entry-meta">
@@ -1017,9 +1017,9 @@ export const NEWS_DATA = [
 
   },
   {
-      id: 6,
-      image:Blog6,
-      contentData:
+    id: 6,
+    image: Blog6,
+    contentData:
       `<div class="blog-content-wrap">
                     <div class="entry-header mb-20">
                 <div class="entry-meta">
@@ -1040,9 +1040,9 @@ export const NEWS_DATA = [
 
   },
   {
-      id: 7,
-      image:Blog7,
-      contentData:
+    id: 7,
+    image: Blog7,
+    contentData:
       `<div class="blog-content-wrap">
                     <div class="entry-header mb-20">
                 <div class="entry-meta">
@@ -1081,112 +1081,112 @@ export const NEWS_DATA = [
     </div>`
 
   },
-//   {
-//       id: 8,
-//       // image:Blog8,
-//       contentData:
-//       `<div class="blog-content-wrap">
-//                     <div class="entry-header mb-20">
-//                 <div class="entry-meta">
-//                     <a class="mr-2" href="https://blog.apisindia.com/posts/five-lip-smacking-summer-drinks-to-make-with-honey/" rel="bookmark"><i class="ion-ios-time-outline"></i> <time class="entry-date published updated" datetime="2022-05-27T13:21:54+00:00">May 27, 2022</time></a><span class="byline"><i class="ion-android-person"></i> <span class="screen-reader-text">Posted by</span><span class="author vcard"><a class="url fn n" href="https://blog.apisindia.com/author/admin/">admin</a></span></span>                </div><!-- .entry-meta -->
-//             </div><!-- .entry-header -->
-//                 <div class="entry-content">
-//             <p><strong>FIVE LIP-SMACKING SUMMER DRINKS TO MAKE WITH HONEY</strong></p>
-// <p>As we welcome summer, let us beat the heat with some tasty summer beverages. Here are five selected summer drinks that are easy to prepare and good for your body.</p>
-// <p>&nbsp;</p>
-// <p>Come summer, our taste buds crave for cool sips of nectareous drinks.&nbsp; While water is ofcourse the best drink to have, there can be other alternatives to quench our thirst as well as keep our bodies cool. Traditionally, we have had numerous summer drinks in our cuisine. However, with time, we have either replaced them with easily available packaged drinks or botched up the recipe with sugar, food colours, soda and what not. There are a few summer drinks which are really easy to make. Add honey to them and they become the best thing about a hot summer afternoon.</p>
-// <p>Here, we share five such recipes curated especially for you and your family.</p>
-// <p>&nbsp;</p>
-// <p><strong>AAM PANNA</strong></p>
-// <p>The gift of summers, mangoes, can deeply satisfy your taste buds in multiple ways. A sip of aam panna signals the onset of the season and has been a traditional favourite. Here is a really easy way to concoct a glass of this tangy and sweet drink.</p>
-// <p><strong>Ingredients of Aam Panna</strong></p>
-// <ul>
-// <li>500 gm green mangoes</li>
-// <li>2 tsp kala namak (black rock salt)</li>
-// <li>2 tsp roasted and powdered cumin seeds</li>
-// <li>2 Tbsp finely chopped mint leaves</li>
-// <li>2 cups water</li>
-// <li>2 spoonful of Apis honey</li>
-// </ul>
-// <p>&nbsp;</p>
-// <p><strong>Method of preparation</strong></p>
-// <p>Take the pulp of a few raw mangoes and boil them well. Blend it with all the ingredients. Top it with a dash of Apis honey. Add a few cubes of ice and serve. Sweet, smooth summer escape!</p>
-// <p>&nbsp;</p>
-// <p><strong>SHIKANJI</strong></p>
-// <p>Another hot favourite for the hot season, Shikanji is primarily consumed in north Indian homes. However, with its benefits and the ease of preparation, it should well be our national summer drink.</p>
-// <p><strong>Ingredients of Shikanji</strong></p>
-// <ul>
-// <li>1/4 cups mint leaves</li>
-// <li>5 tbsp lemon juice</li>
-// <li>1/2 tsp black pepper</li>
-// <li>1 tsp chaat masala</li>
-// <li>1 tsp cumin powder</li>
-// <li>1/2 tsp salt</li>
-// <li>1/2 tsp black salt</li>
-// <li>2 cups water</li>
-// <li>2 spoonful of Apis honey</li>
-// </ul>
-// <p>&nbsp;</p>
-// <p><strong>Method of preparation</strong></p>
-// <p>Crush the mint leaves in a bowl. Add the cumin powder, black pepper, chaat masala, salt and black salt and stir all of them well in water. Add two spoon of Apis honey and serve chilled with a few ice cubes or crushed ice. Your savoury heat-respite drink is ready.</p>
-// <p>&nbsp;</p>
-// <p><strong>JALJEERA</strong></p>
-// <p>Another north Indian favourite that now has fans across the world. Jaljeera has a pungent flavour that hits the gustatory senses and instantly brings the body temperature down. Here is a quick and easy way to fix your drink.</p>
-// <p><strong>Ingredients of Jaljeera</strong></p>
-// <ul>
-// <li>125 grams oftamarind pulp</li>
-// <li>3 tbsp mint leaves</li>
-// <li>3 tbsp coriander leaves</li>
-// <li>3/4 tsp ground cumin, roasted</li>
-// <li>4 tsp black salt</li>
-// <li>3-4 tbsp lemon juice</li>
-// <li>A pinch of chilli powder/kashmirimirch</li>
-// <li>1/2 tsp garam masala</li>
-// <li>2 cups water</li>
-// <li>2 spoonful of Apis honey</li>
-// </ul>
-// <p>&nbsp;</p>
-// <p><strong>Method of preparation</strong></p>
-// <p>Soak the tamarind pulp in warm water for 30 minutes. Deseed it and blend it with the mint and coriander leaves, roasted cumin, lemon juice and chilli powder. Chill it for some time in the refrigerator. Top it with Apis honey and serve chilled with a few ice cubes. Relish the strong flavour as it appeals to your soul and calms it down.</p>
-// <p>&nbsp;</p>
-// <p><strong>CLASSIC SWEET LASSI</strong></p>
-// <p>What started as a go-to drink in the rural homes of Punjab is today a global favourite drink for all seasons and reasons. For centuries, in every Punjabi home, curd has been stored in earthen pots. With a rise in temperature, the curd gets churned with water and served in a long, brass glass. We will stick to the tradition and top it up with Apis Rose Sharbat.</p>
-// <p><strong>&nbsp;</strong></p>
-// <p><strong>Ingredients of Lassi</strong></p>
-// <ul>
-// <li>500 gms yogurt</li>
-// <li>50 gms ice cubes</li>
-// <li>A pinch of salt</li>
-// <li>200 ml water</li>
-// <li>2 spoonful of Apis Rose Sharbat</li>
-// </ul>
-// <p>&nbsp;</p>
-// <p><strong>Method of preparation</strong></p>
-// <p>Crush the ice cubes in a blender. Add yogurt, salt and water and blend for a minute. Add Apis Rose Sharbat and top it well. Drop a couple of ice cubes and serve chilled.</p>
-// <p>Since it’s summer, you can even punch the concoction with your favourite fruit, like mango or watermelon or papaya. Just blend the pulp of the fruit and the yogurt together, top it with Apis Rose Sharbat and you have a summer favourite in your hand.</p>
-// <p>&nbsp;</p>
-// <p><strong>HONEY MINT LEMONADE</strong></p>
-// <p>The drink that conjures the visual of a lazy summer afternoon by the pool has to be one of the top on this chart. The honey mint lemonade is easy to make and is a light and healthy drink. It takes only 4 ingredients and can be cooked up in a jiffy.</p>
-// <p><strong>Ingredients of Honey Mint Lemonade </strong></p>
-// <ul>
-// <li>3-4 tbsp of lemon juice</li>
-// <li>A handful of mint leaves</li>
-// <li>200 ml water</li>
-// <li>3-4 slices of cucumber</li>
-// <li>3-4 ice cubes</li>
-// <li>2 spoonful of Apis honey</li>
-// </ul>
-// <p><strong>&nbsp;</strong></p>
-// <p><strong>Method of preparation</strong></p>
-// <p>Muddle the mint leaves in a pitcher. Add the lemon juice and ice. Rest it for a while and allow it to cool. Add water and Apis honey. Drop the slices of cucumber in the glass and serve chilled. Now relax and sip the delicious summer favourite.</p>
-// <p>&nbsp;</p>
-// <p>The summer heat is an opportunity to stay indoors and spend some quality time with family. Blend these drinks up with the goodness of Apis honey and Rose Sharbat. Spend a relaxed and fun afternoon with your loved ones for many summers to come.</p>
-//     </div>`
-//   },
+  //   {
+  //       id: 8,
+  //       // image:Blog8,
+  //       contentData:
+  //       `<div class="blog-content-wrap">
+  //                     <div class="entry-header mb-20">
+  //                 <div class="entry-meta">
+  //                     <a class="mr-2" href="https://blog.apisindia.com/posts/five-lip-smacking-summer-drinks-to-make-with-honey/" rel="bookmark"><i class="ion-ios-time-outline"></i> <time class="entry-date published updated" datetime="2022-05-27T13:21:54+00:00">May 27, 2022</time></a><span class="byline"><i class="ion-android-person"></i> <span class="screen-reader-text">Posted by</span><span class="author vcard"><a class="url fn n" href="https://blog.apisindia.com/author/admin/">admin</a></span></span>                </div><!-- .entry-meta -->
+  //             </div><!-- .entry-header -->
+  //                 <div class="entry-content">
+  //             <p><strong>FIVE LIP-SMACKING SUMMER DRINKS TO MAKE WITH HONEY</strong></p>
+  // <p>As we welcome summer, let us beat the heat with some tasty summer beverages. Here are five selected summer drinks that are easy to prepare and good for your body.</p>
+  // <p>&nbsp;</p>
+  // <p>Come summer, our taste buds crave for cool sips of nectareous drinks.&nbsp; While water is ofcourse the best drink to have, there can be other alternatives to quench our thirst as well as keep our bodies cool. Traditionally, we have had numerous summer drinks in our cuisine. However, with time, we have either replaced them with easily available packaged drinks or botched up the recipe with sugar, food colours, soda and what not. There are a few summer drinks which are really easy to make. Add honey to them and they become the best thing about a hot summer afternoon.</p>
+  // <p>Here, we share five such recipes curated especially for you and your family.</p>
+  // <p>&nbsp;</p>
+  // <p><strong>AAM PANNA</strong></p>
+  // <p>The gift of summers, mangoes, can deeply satisfy your taste buds in multiple ways. A sip of aam panna signals the onset of the season and has been a traditional favourite. Here is a really easy way to concoct a glass of this tangy and sweet drink.</p>
+  // <p><strong>Ingredients of Aam Panna</strong></p>
+  // <ul>
+  // <li>500 gm green mangoes</li>
+  // <li>2 tsp kala namak (black rock salt)</li>
+  // <li>2 tsp roasted and powdered cumin seeds</li>
+  // <li>2 Tbsp finely chopped mint leaves</li>
+  // <li>2 cups water</li>
+  // <li>2 spoonful of Apis honey</li>
+  // </ul>
+  // <p>&nbsp;</p>
+  // <p><strong>Method of preparation</strong></p>
+  // <p>Take the pulp of a few raw mangoes and boil them well. Blend it with all the ingredients. Top it with a dash of Apis honey. Add a few cubes of ice and serve. Sweet, smooth summer escape!</p>
+  // <p>&nbsp;</p>
+  // <p><strong>SHIKANJI</strong></p>
+  // <p>Another hot favourite for the hot season, Shikanji is primarily consumed in north Indian homes. However, with its benefits and the ease of preparation, it should well be our national summer drink.</p>
+  // <p><strong>Ingredients of Shikanji</strong></p>
+  // <ul>
+  // <li>1/4 cups mint leaves</li>
+  // <li>5 tbsp lemon juice</li>
+  // <li>1/2 tsp black pepper</li>
+  // <li>1 tsp chaat masala</li>
+  // <li>1 tsp cumin powder</li>
+  // <li>1/2 tsp salt</li>
+  // <li>1/2 tsp black salt</li>
+  // <li>2 cups water</li>
+  // <li>2 spoonful of Apis honey</li>
+  // </ul>
+  // <p>&nbsp;</p>
+  // <p><strong>Method of preparation</strong></p>
+  // <p>Crush the mint leaves in a bowl. Add the cumin powder, black pepper, chaat masala, salt and black salt and stir all of them well in water. Add two spoon of Apis honey and serve chilled with a few ice cubes or crushed ice. Your savoury heat-respite drink is ready.</p>
+  // <p>&nbsp;</p>
+  // <p><strong>JALJEERA</strong></p>
+  // <p>Another north Indian favourite that now has fans across the world. Jaljeera has a pungent flavour that hits the gustatory senses and instantly brings the body temperature down. Here is a quick and easy way to fix your drink.</p>
+  // <p><strong>Ingredients of Jaljeera</strong></p>
+  // <ul>
+  // <li>125 grams oftamarind pulp</li>
+  // <li>3 tbsp mint leaves</li>
+  // <li>3 tbsp coriander leaves</li>
+  // <li>3/4 tsp ground cumin, roasted</li>
+  // <li>4 tsp black salt</li>
+  // <li>3-4 tbsp lemon juice</li>
+  // <li>A pinch of chilli powder/kashmirimirch</li>
+  // <li>1/2 tsp garam masala</li>
+  // <li>2 cups water</li>
+  // <li>2 spoonful of Apis honey</li>
+  // </ul>
+  // <p>&nbsp;</p>
+  // <p><strong>Method of preparation</strong></p>
+  // <p>Soak the tamarind pulp in warm water for 30 minutes. Deseed it and blend it with the mint and coriander leaves, roasted cumin, lemon juice and chilli powder. Chill it for some time in the refrigerator. Top it with Apis honey and serve chilled with a few ice cubes. Relish the strong flavour as it appeals to your soul and calms it down.</p>
+  // <p>&nbsp;</p>
+  // <p><strong>CLASSIC SWEET LASSI</strong></p>
+  // <p>What started as a go-to drink in the rural homes of Punjab is today a global favourite drink for all seasons and reasons. For centuries, in every Punjabi home, curd has been stored in earthen pots. With a rise in temperature, the curd gets churned with water and served in a long, brass glass. We will stick to the tradition and top it up with Apis Rose Sharbat.</p>
+  // <p><strong>&nbsp;</strong></p>
+  // <p><strong>Ingredients of Lassi</strong></p>
+  // <ul>
+  // <li>500 gms yogurt</li>
+  // <li>50 gms ice cubes</li>
+  // <li>A pinch of salt</li>
+  // <li>200 ml water</li>
+  // <li>2 spoonful of Apis Rose Sharbat</li>
+  // </ul>
+  // <p>&nbsp;</p>
+  // <p><strong>Method of preparation</strong></p>
+  // <p>Crush the ice cubes in a blender. Add yogurt, salt and water and blend for a minute. Add Apis Rose Sharbat and top it well. Drop a couple of ice cubes and serve chilled.</p>
+  // <p>Since it’s summer, you can even punch the concoction with your favourite fruit, like mango or watermelon or papaya. Just blend the pulp of the fruit and the yogurt together, top it with Apis Rose Sharbat and you have a summer favourite in your hand.</p>
+  // <p>&nbsp;</p>
+  // <p><strong>HONEY MINT LEMONADE</strong></p>
+  // <p>The drink that conjures the visual of a lazy summer afternoon by the pool has to be one of the top on this chart. The honey mint lemonade is easy to make and is a light and healthy drink. It takes only 4 ingredients and can be cooked up in a jiffy.</p>
+  // <p><strong>Ingredients of Honey Mint Lemonade </strong></p>
+  // <ul>
+  // <li>3-4 tbsp of lemon juice</li>
+  // <li>A handful of mint leaves</li>
+  // <li>200 ml water</li>
+  // <li>3-4 slices of cucumber</li>
+  // <li>3-4 ice cubes</li>
+  // <li>2 spoonful of Apis honey</li>
+  // </ul>
+  // <p><strong>&nbsp;</strong></p>
+  // <p><strong>Method of preparation</strong></p>
+  // <p>Muddle the mint leaves in a pitcher. Add the lemon juice and ice. Rest it for a while and allow it to cool. Add water and Apis honey. Drop the slices of cucumber in the glass and serve chilled. Now relax and sip the delicious summer favourite.</p>
+  // <p>&nbsp;</p>
+  // <p>The summer heat is an opportunity to stay indoors and spend some quality time with family. Blend these drinks up with the goodness of Apis honey and Rose Sharbat. Spend a relaxed and fun afternoon with your loved ones for many summers to come.</p>
+  //     </div>`
+  //   },
 ];
 
 
- export const RECIPIES_DATA = [
+export const RECIPIES_DATA = [
   // {
   //   img: Apple,
   //   title: "Honey Apple Fruit Chat",
@@ -1197,7 +1197,7 @@ export const NEWS_DATA = [
     video: "https://www.youtube.com/embed/OAh6X5RIPvg?si=VRG5Bw7_k2356Syd",
     // title:"Himalaya Honey",
     title: "Paneer in Apis Honey Lemon Sauce",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
   },
@@ -1205,14 +1205,14 @@ export const NEWS_DATA = [
     video: "https://www.youtube.com/embed/DXdbIOnI4fs?si=cwgqH9g70o0vhAAD",
     title: "Apis Honey Chilli Idli",
     time: "Prep 10 min",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     descreption: "Nature's golden nectar, pure and organic",
   },
   {
     video: "https://www.youtube.com/embed/OAh6X5RIPvg?si=VRG5Bw7_k2356Syd",
     // title:"Himalaya Honey",
     title: "Paneer in Apis Honey Lemon Sauce",
-    name:"Ginger Garlic",
+    name: "Ginger Garlic",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
   },
@@ -1220,53 +1220,53 @@ export const NEWS_DATA = [
     video: "https://www.youtube.com/embed/DXdbIOnI4fs?si=cwgqH9g70o0vhAAD",
     title: "Apis Honey Chilli Idli",
     time: "Prep 10 min",
-    name:"Ginger Garlic",
+    name: "Ginger Garlic",
     descreption: "Nature's golden nectar, pure and organic",
   },
   {
     video: "https://www.youtube.com/embed/8xAEZMjoI7U?si=BCtDVosB050LS1Ci",
     title: "Apis Honey & Dates Sweet and Sour Dip",
     time: "Prep 10 min",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     descreption: "Nature's golden nectar, pure and organic",
   },
   {
     video: "https://www.youtube.com/embed/8xAEZMjoI7U?si=BCtDVosB050LS1Ci",
     title: "Apis Honey & Dates Sweet and Sour Dip",
     time: "Prep 10 min",
-    name:"Arebian Pearls apis Dates",
+    name: "Arebian Pearls apis Dates",
     descreption: "Nature's golden nectar, pure and organic",
   },
   {
-      video: "https://www.youtube.com/embed/RAEruyy_4fc?si=QNkw-Eh_MI7uuKG7",
-      title: "Apis Honey Chilli Potato",
-      name:"Himalaya Honey",
-      time: "Prep 10 min",
-      descreption: "Nature's golden nectar, pure and organic",
+    video: "https://www.youtube.com/embed/RAEruyy_4fc?si=QNkw-Eh_MI7uuKG7",
+    title: "Apis Honey Chilli Potato",
+    name: "Himalaya Honey",
+    time: "Prep 10 min",
+    descreption: "Nature's golden nectar, pure and organic",
   },
   {
-      video: "https://www.youtube.com/embed/S8g2Uq2MNlw?si=yq34TnOsgk-k4MOl",
-      title: "Apis Honey & Dates Fruit Cake",
-      name:"Himalaya Honey",
-      time: "Prep 10 min",
-      descreption: "Nature's golden nectar, pure and organic",
+    video: "https://www.youtube.com/embed/S8g2Uq2MNlw?si=yq34TnOsgk-k4MOl",
+    title: "Apis Honey & Dates Fruit Cake",
+    name: "Himalaya Honey",
+    time: "Prep 10 min",
+    descreption: "Nature's golden nectar, pure and organic",
   },
   {
-      video: "https://www.youtube.com/embed/S8g2Uq2MNlw?si=yq34TnOsgk-k4MOl",
-      title: "Apis Honey & Dates Fruit Cake",
-      name:"Arebian Pearls apis Dates",
-      time: "Prep 10 min",
-      descreption: "Nature's golden nectar, pure and organic",
+    video: "https://www.youtube.com/embed/S8g2Uq2MNlw?si=yq34TnOsgk-k4MOl",
+    title: "Apis Honey & Dates Fruit Cake",
+    name: "Arebian Pearls apis Dates",
+    time: "Prep 10 min",
+    descreption: "Nature's golden nectar, pure and organic",
   },
   //   img: MIXEDFRUIT,
-    {
-      video: "https://www.youtube.com/embed/i10MOtI-8PE?si=HY2taGRb-MeK66Un",
-      title: "Honey Modak Recipe - Ganesh Chaturthi Special",
-      name:"Himalaya Honey",
+  {
+    video: "https://www.youtube.com/embed/i10MOtI-8PE?si=HY2taGRb-MeK66Un",
+    title: "Honey Modak Recipe - Ganesh Chaturthi Special",
+    name: "Himalaya Honey",
 
-      time: "Prep 10 min",
-      descreption: "Honey Muffin Recipe",
-    },
+    time: "Prep 10 min",
+    descreption: "Honey Muffin Recipe",
+  },
   //   img: MIXEDFRUIT,
   //   title: "Apis Jam Recipe Ideas",
   //   name:"",
@@ -1288,7 +1288,7 @@ export const NEWS_DATA = [
     video: "https://www.youtube.com/embed/WEHMLMu00A4?si=IpcbraTVQr9_D-_x",
     title: "Apis Soya Chunks Kebab Recipe | Kebab Recipes | Seekh Kebab",
     time: "Prep 10 min",
-    name:"Soya Chunks Kebab",
+    name: "Soya Chunks Kebab",
     descreption: "Apis Soya Chunks Kebab Recipe | Kebab Recipes | Seekh Kebab",
 
   },
@@ -1296,7 +1296,7 @@ export const NEWS_DATA = [
     video: "https://www.youtube.com/embed/XDzOMTZy_n0?si=ShwydgtGqI1ynaE9",
     title: "Apis Recipes : Honey BBQ Chicken Recipe",
     time: "Prep 10 min",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     descreption: "Apis Recipes : Honey BBQ Chicken Recipe",
 
   },
@@ -1304,14 +1304,14 @@ export const NEWS_DATA = [
     video: "https://www.youtube.com/embed/9VRrtyF0OEA?si=WbZwBC44wQnpI7pn",
     title: "Apis Dates Halwa | khajoor ka halwa",
     time: "Prep 10 min",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     descreption: "Apis Dates Halwa | khajoor ka halwa | डेट्स (खजूर) हलवा रेसिपी | With Apis Honey | No Sugar",
   },
   {
     video: "https://www.youtube.com/embed/9VRrtyF0OEA?si=WbZwBC44wQnpI7pn",
     title: "Apis Dates Halwa | khajoor ka halwa",
     time: "Prep 10 min",
-    name:"Arebian Pearls apis Dates",
+    name: "Arebian Pearls apis Dates",
     descreption: "Apis Dates Halwa | khajoor ka halwa | डेट्स (खजूर) हलवा रेसिपी | With Apis Honey | No Sugar",
   },
   {
@@ -1324,21 +1324,21 @@ export const NEWS_DATA = [
   {
     video: "https://www.youtube.com/embed/hf4P8aFybvQ?si=zeR0fknIV7KgkDCH",
     title: "Honey Muffin Recipe",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     time: "Prep 10 min",
     descreption: "Honey Muffin Recipe",
   },
   {
     video: "https://www.youtube.com/embed/1-pxUwrb1jY?si=08r_VNFeS0p-kbp7",
     title: "Honey Peanut Butter Sandwich Recipe",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     time: "Prep 10 min",
     descreption: "Honey Chocolate Tart Recipe",
   },
   {
     video: "https://www.youtube.com/embed/1-pxUwrb1jY?si=AniM7DGGcWsHqMLS",
     title: "Honey Chocolate Tart Recipe",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
 
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
@@ -1348,7 +1348,7 @@ export const NEWS_DATA = [
   {
     video: "https://www.youtube.com/embed/jIcuAKg2O88?si=0LTbXtYGURxaySPj",
     title: "Honey Chicken Wings Recipe - Apis",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
 
@@ -1356,7 +1356,7 @@ export const NEWS_DATA = [
   {
     video: "https://www.youtube.com/embed/kGOJpsTJNI8?si=O87ESoR3CvnLWqqR",
     title: "Lemon Honey Dhokla Recipe - Apis Himalaya Honey",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     time: "Prep 10 min",
     descreption: "Lemon Honey Dhokla Recipe - Apis Himalaya Honey",
 
@@ -1364,146 +1364,146 @@ export const NEWS_DATA = [
   {
     video: "https://www.youtube.com/embed/nqjVqM4IVMc?si=w7eJU292rmcAf1XX",
     title: "Apis Chocoflakes Chocolate Cluster Recipe",
-    name:"Chocho Flakes",
+    name: "Chocho Flakes",
     time: "Prep 10 min",
     descreption: "Apis Chocoflakes Chocolate Cluster Recipe",
-    type:"4"
+    type: "4"
   },
   {
     video: "https://www.youtube.com/embed/sp7PAZwkvqc?si=AcuSlmnUaZ38mqnm",
     title: "Apis Himalaya Honey Chicken Thighs Recipe",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     time: "Prep 10 min",
     descreption: "Apis Himalaya Honey Chicken Thighs Recipe",
-    type:"4"
+    type: "4"
   },
   {
     video: "https://www.youtube.com/embed/UaKnrJ7jxUA?si=mWn1ppflQj1BT6nr",
     title: "Apis Cornflakes Paneer Nuggets Recipe",
-    name:"Corn Flakes",
+    name: "Corn Flakes",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"4"
+    type: "4"
   },
   {
     video: "https://www.youtube.com/embed/LJIVoHMoEfo?si=Hv-wWlfnVSoJQALl",
     title: "Apis Cornflakes Recipe",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     time: "Prep 10 min",
     descreption: "Apis Cornflakes Recipe",
-    type:"4"
+    type: "4"
   },
   {
     video: "https://www.youtube.com/embed/LJIVoHMoEfo?si=Hv-wWlfnVSoJQALl",
     title: "Apis Cornflakes Recipe",
-    name:"Corn Flakes",
+    name: "Corn Flakes",
     time: "Prep 10 min",
     descreption: "Apis Cornflakes Recipe",
-    type:"4"
+    type: "4"
   },
   {
     video: "https://www.youtube.com/embed/ZKam7KXIJaE?si=lvYKoIIVkm07Utd0",
     title: "Apis Dates Gujiya Recipe",
-    name:"",
+    name: "",
     time: "Prep 10 min",
     descreption: "Apis Dates Gujiya Recipe",
-    type:"5"
+    type: "5"
   },
   {
     video: "https://www.youtube.com/embed/NDDaneL4K8s?si=ckZmFV1TSC48SGTu",
     title: "Apis Honey Chilli Eggs - Recipe",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"5"
+    type: "5"
   },
   {
     video: "https://www.youtube.com/embed/kL9am3QFjaM?si=xJ0NTliB6jMy-I0y",
     title: "Dates Pie Recipe - Apis",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     time: "Prep 10 min",
     descreption: "Dates Pie Recipe - Apis",
-    type:"6"
+    type: "6"
   },
   {
     video: "https://www.youtube.com/embed/kL9am3QFjaM?si=xJ0NTliB6jMy-I0y",
     title: "Dates Pie Recipe - Apis",
-    name:"Arebian Pearls apis Dates",
+    name: "Arebian Pearls apis Dates",
     time: "Prep 10 min",
     descreption: "Dates Pie Recipe - Apis",
-    type:"6"
+    type: "6"
   },
   {
     video: "https://www.youtube.com/embed/H1oXlytb3l8?si=uYXSIjv7lCQU69gd",
     title: "Honey Chilli Lotus Stem by Neha Deepak Shah ",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"6"
+    type: "6"
   },
   {
     video: "https://www.youtube.com/embed/4eiIcOnV-3k?si=kNyYKr0v99wG50w8",
     title: "Healthy Fruit Dessert with Apis Himalaya Honey",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"6"
+    type: "6"
   },
   {
     video: "https://www.youtube.com/embed/ng5x3ntnvAM?si=No7g71v_dE0uolVx",
     title: "Apis Jam Quick Recipe",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"6"
+    type: "6"
   },
   {
     video: "https://www.youtube.com/embed/ng5x3ntnvAM?si=No7g71v_dE0uolVx",
     title: "Apis Jam Recipe",
-    name:"apis jam Fruit Blast",
+    name: "apis jam Fruit Blast",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"6"
+    type: "6"
   },
   {
     video: "https://www.youtube.com/embed/mL1OH9Vkx0I?si=02y06eQfCnDG7vxt",
     title: "Oats Apis Honey Ladoos!",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"7"
+    type: "7"
   },
   {
     video: "https://www.youtube.com/embed/7I8bVTLLrm0?si=AeJnSKtlIzzH0weQ",
     title: "Honey Glazed Paneer Tikka",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"7"
+    type: "7"
   },
   {
     video: "https://www.youtube.com/embed/9-PdKpY0QCw?si=U48XE5KZ-tmcp6AX",
     title: "Exquisite flavours of Apis Vermicelli!",
-    name:"Apis Seviyan Vermicelli",
+    name: "Apis Seviyan Vermicelli",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"7"
+    type: "7"
   },
   {
     video: "https://www.youtube.com/embed/oe_fjXxhAW8?si=tCdL5_6Wk-Jf7T4O",
     title: "Craft a luscious yet healthy treat with Apis Honey and Vermicelli",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"7"
+    type: "7"
   },
   {
     video: "https://www.youtube.com/embed/U7--fls2cNc?si=X7CUDtLqzM5PhPqa",
     title: "Introducing our delightful Honey Glazed Veg Salad",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"8"
+    type: "8"
   },
   // {
   //   img: "https://www.youtube.com/embed/F5C7jqf0H-U?si=gjPQni7XvofFJoRW",
@@ -1517,44 +1517,44 @@ export const NEWS_DATA = [
   {
     video: "https://www.youtube.com/embed/Vk6pGIAfuqc?si=nZSswEjgzdyWSCIN",
     title: "Ramadan Special Sheer Khurma",
-    name:"Royal Zahidi Dates",
+    name: "Royal Zahidi Dates",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"8"
+    type: "8"
 
   },
   {
     video: "https://www.youtube.com/embed/87JI_nXS9ag?si=g1tpsFUiFql0MaIj",
     title: "Ramadhan Special Dates Laddu Recipe",
-    name:"Apis Seviyan Vermicelli",
+    name: "Apis Seviyan Vermicelli",
 
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"8"
+    type: "8"
   },
   {
     video: "https://www.youtube.com/embed/Jw0pZzvcF6g?si=jzM0PZzRlkA9L9F8",
     title: "Apis Dates Laddu Recipe",
-    name:"Arebian Pearls apis Dates",
+    name: "Arebian Pearls apis Dates",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"9"
+    type: "9"
   },
   {
     video: "https://www.youtube.com/embed/j8pBbVwBiow?si=a13UI-VbyCqj0PrO",
     title: "Sheer Khurma Recipe",
-    name:"Arebian Pearls apis Dates",
+    name: "Arebian Pearls apis Dates",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"9"
+    type: "9"
   },
   {
     video: "https://www.youtube.com/embed/tRU-1Dx1Bz8?si=fCo9BSOKXEXXq5wG",
     title: "Ramadan Special Recipe",
-    name:"Arebian Pearls apis Dates",
+    name: "Arebian Pearls apis Dates",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"9"
+    type: "9"
   },
   // {
   //   img: "https://www.youtube.com/embed/qDtahUI7-rI?si=s6O926yCvMmmq8ep",
@@ -1567,66 +1567,66 @@ export const NEWS_DATA = [
   {
     video: "https://www.youtube.com/embed/hy-x8vGo5rE?si=I9VJHWMDjvAnVujo",
     title: "Honey Cinnamon Lassi Recipe using Apis Honey",
-    name:"Organic Honey",
+    name: "Organic Honey",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"9"
+    type: "9"
   },
   {
     video: "https://www.youtube.com/embed/uPa7-205ahw?si=SnXYrMwJN7q6I5UG",
     title: "Mango Lassi using Apis Honey",
-    name:"Organic Honey",
+    name: "Organic Honey",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"9"
+    type: "9"
   },
   {
     video: "https://www.youtube.com/embed/H4DMfIObK3U?si=C7VEIJxvupBY0wYw",
     title: "Apis breakfast",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"9"
+    type: "9"
   },
   {
     video: "https://www.youtube.com/embed/WunWrdpvzT4?si=09OOdC_zS01Nrzfh",
     title: "Switch to natural sweetener organic honey",
-    name:"Organic Honey",
+    name: "Organic Honey",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"9"
+    type: "9"
   },
   {
     video: "https://www.youtube.com/embed/hy-x8vGo5rE?si=WvQ5qAQ5l0w-qXFw",
     title: "Honey Cinnamon Lassi Recipe using Apis Honey",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"9"
+    type: "9"
   },
   {
     video: "https://www.youtube.com/embed/iqAZpmKUKCk?si=gL5ZjbLC9U9yfobi",
     title: "Apis Organic Honey Switch To Natural Sweetener",
-    name:"Organic Honey",
+    name: "Organic Honey",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"9"
+    type: "9"
   },
   {
     video: "https://www.youtube.com/embed/uPa7-205ahw?si=0s2rG7hdfSvH6Q_F",
     title: "Mango Lassi using Apis Honey",
-    name:"Organic Honey",
+    name: "Organic Honey",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"9"
+    type: "9"
   },
   {
     video: "https://www.youtube.com/embed/GD8Qij22kUI?si=-FCgwOXtU024bNiX",
     title: "Apis Honey & Dates Kheer Recipe",
-    name:"Royal Zahidi Dates",
+    name: "Royal Zahidi Dates",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-    type:"9"
+    type: "9"
   },
 ];
 // const RECEIPE_TYPE_DATA = [
@@ -1643,7 +1643,7 @@ export const NEWS_DATA = [
 //   "Top Rated Recipes",
 // ];
 
- export const RECEIPE_DATA = [
+export const RECEIPE_DATA = [
   "Himalaya Honey",
   "Soya Chunks Kebab",
   "Chocho Flakes",
@@ -1658,21 +1658,21 @@ export const NEWS_DATA = [
 ];
 
 
- export const WORLD_APPERIENCE = [
-  { "id": 1, "name": "Outcome of Board Meeting : November-09-2023", "path": "https://apisindia.com/pdf/2023/Outcome-of-Board-Meeting091123.pdf"},
-  { "id": 2, "name": "Notice of Board Meeting : October-31-2023", "path": "https://apisindia.com/pdf/2023/Notice-of-Board-Meeting311023.pdf"},
-  { "id": 3, "name": "Outcome of Board Metting : August-13-2022", "path": "https://apisindia.com/pdf/2022/Outcome-of-board-meeting-082022.pdf"},
-  { "id": 4, "name": "Covering Letter January-04-2021", "path": "https://apisindia.com/pdf/2020/Covering_Letter_2021.pdf"},
-  { "id": 5, "name": "Disclosure under Reg.30 Appt of Director January-15-2021", "path": "https://apisindia.com/pdf/2020/DISCLOSURE-UNDER-REG-30-APPT-OF-DIRECTOR.pdf"},
-  { "id": 6, "name": "Notice of BM in Newspaper February-03-21", "path": "https://apisindia.com/pdf/2020/NOTICE_OF_BM_IN_NEWSPAPAR-2021.pdf"},
-  { "id": 7, "name": "Outcome of the Board Meeting February-13-21", "path": "https://apisindia.com/pdf/2020/Outcome_of_the_Board_Meeting--2021.pdf"},
-  { "id": 8, "name": "Notice of Board Meeting Stock Exchange February-02-21", "path": "https://apisindia.com/pdf/2020/Notice_of_Board_Meeting_Stock_Exchange-2021.pdf"},
-  { "id": 9, "name": "Outcome of Board Meeting : 15th September, 2020", "path": "https://apisindia.com/pdf/2020/Outcome%20of%20the%20Board%20Meeting%20-%2015ht%20September.pdf"},
+export const WORLD_APPERIENCE = [
+  { "id": 1, "name": "Outcome of Board Meeting : November-09-2023", "path": "https://apisindia.com/pdf/2023/Outcome-of-Board-Meeting091123.pdf" },
+  { "id": 2, "name": "Notice of Board Meeting : October-31-2023", "path": "https://apisindia.com/pdf/2023/Notice-of-Board-Meeting311023.pdf" },
+  { "id": 3, "name": "Outcome of Board Metting : August-13-2022", "path": "https://apisindia.com/pdf/2022/Outcome-of-board-meeting-082022.pdf" },
+  { "id": 4, "name": "Covering Letter January-04-2021", "path": "https://apisindia.com/pdf/2020/Covering_Letter_2021.pdf" },
+  { "id": 5, "name": "Disclosure under Reg.30 Appt of Director January-15-2021", "path": "https://apisindia.com/pdf/2020/DISCLOSURE-UNDER-REG-30-APPT-OF-DIRECTOR.pdf" },
+  { "id": 6, "name": "Notice of BM in Newspaper February-03-21", "path": "https://apisindia.com/pdf/2020/NOTICE_OF_BM_IN_NEWSPAPAR-2021.pdf" },
+  { "id": 7, "name": "Outcome of the Board Meeting February-13-21", "path": "https://apisindia.com/pdf/2020/Outcome_of_the_Board_Meeting--2021.pdf" },
+  { "id": 8, "name": "Notice of Board Meeting Stock Exchange February-02-21", "path": "https://apisindia.com/pdf/2020/Notice_of_Board_Meeting_Stock_Exchange-2021.pdf" },
+  { "id": 9, "name": "Outcome of Board Meeting : 15th September, 2020", "path": "https://apisindia.com/pdf/2020/Outcome%20of%20the%20Board%20Meeting%20-%2015ht%20September.pdf" },
   { "id": 10, "name": "FINANCIAL RESULTS (2019-2020) Q1 Results", "path": "https://apisindia.com/pdf/AGM%20Results.pdf" },
-  { "id": 11, "name": "Q2 Results", "path": "https://apisindia.com/pdf/newupdates/Outcome%20of%20Board%20Meeting.pdf"},
+  { "id": 11, "name": "Q2 Results", "path": "https://apisindia.com/pdf/newupdates/Outcome%20of%20Board%20Meeting.pdf" },
   { "id": 12, "name": "Q3 Results", "path": "https://apisindia.com/pdf/newupdates/Outcome_of_the_Board_Meeting.pdf" },
-  { "id": 13, "name": "Q4 Results", "path": "https://apisindia.com/pdf/2020/Outcome%20of%20Board%20Meeting-final.pdf"},
-  { "id": 14, "name": "Outcome of Board Meeting : Date 14th Feb, 2020", "path": "https://apisindia.com/pdf/newupdates/Outcome_of_the_Board_Meeting.pdf"},
+  { "id": 13, "name": "Q4 Results", "path": "https://apisindia.com/pdf/2020/Outcome%20of%20Board%20Meeting-final.pdf" },
+  { "id": 14, "name": "Outcome of Board Meeting : Date 14th Feb, 2020", "path": "https://apisindia.com/pdf/newupdates/Outcome_of_the_Board_Meeting.pdf" },
   { "id": 15, "name": "Outcome of Board Meeting, 14th Nov., 2019", "path": "https://apisindia.com/pdf/newupdates/Outcome%20of%20Board%20Meeting.pdf" },
   { "id": 16, "name": "Outcome of 37th General Meeting", "path": "https://apisindia.com/pdf/AGM%20Results.pdf" },
   { "id": 17, "name": "Outcome + Audited Financial Results: 31st March 2019", "path": "https://apisindia.com/pdf/Outcome_of_the_Board_Meeting_final.pdf" },
@@ -1694,10 +1694,10 @@ export const NEWS_DATA = [
   { "id": 35, "name": "Q4 Audited FR March 2015", "path": "https://apisindia.com/investorelation-pdf/2014/Q4_Audited-FR_March2015.pdf" },
   { "id": 33, "name": "Q2 UFR September 2014", "path": "https://apisindia.com/investorelation-pdf/2014/Q2_UFR_September-2014.pdf" },
   { "id": 34, "name": "Q3 UFR December 2014", "path": "https://apisindia.com/investorelation-pdf/2014/Q3_UFR_December-2014.pdf" },
-  { "id": 39, "name": "Q4 Financial Audited Result March, 2014", "path": "https://apisindia.com/investorelation-pdf/2013/Q4_Financial-Audited-Result_March-2014.pdf"},
+  { "id": 39, "name": "Q4 Financial Audited Result March, 2014", "path": "https://apisindia.com/investorelation-pdf/2013/Q4_Financial-Audited-Result_March-2014.pdf" },
   { "id": 36, "name": "FINANCIAL RESULTS (AUDITED MARCH 2013-14) Q1 UFR June 2013", "path": "https://apisindia.com/investorelation-pdf/2013/Q1_UFR_June-2013.pdf" },
-  { "id": 37, "name": "Q2 UFR Sep 2013", "path": "https://apisindia.com/investorelation-pdf/2013/Q2_UFR_Sep_2013.pdf"},
-  { "id": 38, "name": "Q3 Limited Review report Q3 (11th Feb, 2013)", "path": "https://apisindia.com/investorelation-pdf/2013/Q3_Limited-Review-report-Q3-(11th=Feb-2013.pdf"},
+  { "id": 37, "name": "Q2 UFR Sep 2013", "path": "https://apisindia.com/investorelation-pdf/2013/Q2_UFR_Sep_2013.pdf" },
+  { "id": 38, "name": "Q3 Limited Review report Q3 (11th Feb, 2013)", "path": "https://apisindia.com/investorelation-pdf/2013/Q3_Limited-Review-report-Q3-(11th=Feb-2013.pdf" },
 ];
 
 
@@ -2931,57 +2931,57 @@ export const LATEST_SLIDES = [
   {
     video:
       "https://www.youtube.com/embed/U0P5fV9IF1c?si=pDY2Wt5HVtS0Hffe&amp;start=1",
-      img:
-    Thumbnail_ApisLatest,
+    img:
+      Thumbnail_ApisLatest,
   },
   {
     video:
       "https://www.youtube.com/embed/mDAY0a94MZU?si=BeiAtbDMKqXN9lJF&amp;start=1",
-      img:
-    Thumbnail_ApisLatest2,
+    img:
+      Thumbnail_ApisLatest2,
   },
   {
     video:
       "https://www.youtube.com/embed/W-JTHS3025w?si=tcTpC8J1Cddo0ybE&amp;start=1",
-      img:
-    Thumbnail_ApisLatest3,
+    img:
+      Thumbnail_ApisLatest3,
   },
   {
     video:
       "https://www.youtube.com/embed/kGOJpsTJNI8?si=TUKuH3NxLa3kEz9j&amp;start=1",
-      img:
-    Thumbnail_ApisLatest4,
+    img:
+      Thumbnail_ApisLatest4,
   },
   {
     video: "https://www.youtube.com/embed/NDDaneL4K8s?si=Tx_7ZixWDpHJzQHf",
     img:
-    Thumbnail_ApisLatest5,
+      Thumbnail_ApisLatest5,
   },
 ];
 export const LATEST_SLIDES_IMAGES = [
   {
     img:
-    Thumbnail_ApisLatest,
+      Thumbnail_ApisLatest,
   },
   {
     img:
-    Thumbnail_ApisLatest2,
+      Thumbnail_ApisLatest2,
   },
   {
     img:
-    Thumbnail_ApisLatest3,
+      Thumbnail_ApisLatest3,
   },
   {
     img:
-    Thumbnail_ApisLatest4,
+      Thumbnail_ApisLatest4,
   },
   {
     img:
-    Thumbnail_ApisLatest5,
+      Thumbnail_ApisLatest5,
   },
 ];
 
- export const Corporate_Annoucement = [
+export const Corporate_Annoucement = [
   { sNo: 1, name: "Outcome of Board Meeting", path: "/pdf/2024/Outcome_of_Board_Meeting_0624.pdf" },
   { sNo: 2, name: "Intimation of Product Launch under", path: "/pdf/2023/Corporate_Announcement_Product_Launch_210124.pdf" },
   { sNo: 3, name: "Proceedings of the 41st Annual General Meeting", path: "/pdf/2023/AGM_Proceedings.pdf" },
@@ -3016,24 +3016,24 @@ export const LATEST_SLIDES_IMAGES = [
 ];
 
 
-export  const SLIDES = [
+export const SLIDES = [
   {
     img: TrustSlide1,
     content: "Organic honey is a natural, nutrient-rich sweetener with health benefits, perfect for enhancing flavor in foods and beverages.",
     title: "Organic Honey",
-    path:"https://www.amazon.in/Apis-Organic-honey-450gm-Certified/dp/B0CS6WWLDD"
+    path: "https://www.amazon.in/Apis-Organic-honey-450gm-Certified/dp/B0CS6WWLDD"
   },
   {
     img: ClassicDates,
     content: "Apis Classic Dates are sweet, nutrient-rich fruits ideal for snacking and adding flavor to dishes.",
     title: "Classic Dates",
-    path:"https://www.amazon.in/Apis-Classic-Dates-500g/dp/B0CJXWN5Q6"
+    path: "https://www.amazon.in/Apis-Classic-Dates-500g/dp/B0CJXWN5Q6"
   },
   {
     img: Muesli,
     content: "Muesli crafted with wholesome ingredients for a nourishing start to your day",
     title: "Muesli",
-    path:""
+    path: ""
   },
   // {
   //   img:  ChocolateSpread,
@@ -3047,27 +3047,27 @@ export  const SLIDES = [
     img: AlmondHoney,
     content: "Apis Corn Flakes are a crunchy, nutritious breakfast cereal made from premium corn.",
     title: "Corn Flakes",
-    path:"https://www.amazon.in/Apis-Cornflakes-1kg-Zip-Pouch/dp/B099FRBQ4C?th=1"
+    path: "https://www.amazon.in/Apis-Cornflakes-1kg-Zip-Pouch/dp/B099FRBQ4C?th=1"
   },
   {
     img: Saffron1,
     content: "Apis Saffron is a high-quality spice prized for its rich aroma, color, and health benefits.",
     title: "Saffron",
-    path:"https://www.amazon.in/Apis-Saffron-Kesar/dp/B08NFFST31"
+    path: "https://www.amazon.in/Apis-Saffron-Kesar/dp/B08NFFST31"
   },
   {
     img: SoyaChunks1,
     content: "Soya chunks are protein-rich, plant-based meat alternatives.",
     title: "Soya Chunk",
-    path:"https://uniqrr.com/products/apis-india-soya-chunks-50-gm"
+    path: "https://uniqrr.com/products/apis-india-soya-chunks-50-gm"
   },
-  
+
   // {
   //   img: TrustSlide9,
   //   content: "Lemon honey green tea: refreshing, antioxidant-rich blend.",
   //   title:"Lemon Honey Green Tea"
   // },
- 
+
 
   // {
   //   img: TrustSlide1,
@@ -3099,7 +3099,7 @@ export const HEALTH_BENEFITS = [
   {
     id: 1,
     title: "Boosts Immunity",
-    name:"Boosts Immunity",
+    name: "Boosts Immunity",
     desc: "Honey is packed with antioxidants that boost your immune system and help fight off illnesses. Regular consumption of honey can strengthen your body’s defenses and promote overall health.",
     img: HoneyShield,
     shadowClass: "shadow-custom-yellow",
@@ -3108,7 +3108,7 @@ export const HEALTH_BENEFITS = [
   {
     id: 2,
     title: "Skin Elixir",
-    name:"Boosts Immunity",
+    name: "Boosts Immunity",
     desc: "Honey acts as a natural skin elixir, offering deep hydration and antibacterial benefits for a glowing complexion. Its soothing properties help heal skin irritations and maintain a healthy, radiant appearance.",
     img: Skin,
     shadowClass: "shadow-custom-darkGreen",
@@ -3117,7 +3117,7 @@ export const HEALTH_BENEFITS = [
   {
     id: 3,
     title: "Sustainability",
-    name:"Boosts Immunity",
+    name: "Boosts Immunity",
     desc: "Apis India’s honey is a testament to sustainable beekeeping practices that support environmental health and local communities. By choosing our honey, you contribute to eco-friendly methods that protect both nature and livelihoods.",
     img: Sustain,
     shadowClass: "shadow-custom-rama",
@@ -3126,7 +3126,7 @@ export const HEALTH_BENEFITS = [
   {
     id: 4,
     title: "Aids Digestion",
-    name:"Boosts Immunity",
+    name: "Boosts Immunity",
     desc: "Honey aids digestion by soothing the digestive tract and promoting healthy gut bacteria. It can help alleviate digestive discomfort and support smoother, more balanced digestion for better overall wellness.",
     img: AidsDigestion,
     shadowClass: "shadow-custom-pink",
@@ -3137,7 +3137,7 @@ export const HEALTH_DATE = [
   {
     id: 1,
     title: "Nutrient Dense",
-    name:"Benefits",
+    name: "Benefits",
     desc: "Dates are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
     img: Nutrient,
     shadowClass: "shadow-custom-yellow",
@@ -3146,7 +3146,7 @@ export const HEALTH_DATE = [
   {
     id: 2,
     title: "Digestive Health",
-    name:"Benefits",
+    name: "Benefits",
     desc: "High in dietary fiber, dates aid in digestion by promoting regular bowel movements and preventing constipation. Fiber also supports a healthy gut microbiome, which is crucial for overall digestive health.",
     img: Digestive,
     shadowClass: "shadow-custom-darkGreen",
@@ -3155,7 +3155,7 @@ export const HEALTH_DATE = [
   {
     id: 3,
     title: "Energy Boost",
-    name:"Benefits",
+    name: "Benefits",
     desc: "Dates provide a quick source of natural energy due to their high carbohydrate content, primarily from natural sugars like glucose and fructose. They make an excellent snack for an instant energy boost and sustained vitality.",
     img: EnergyBoost,
     shadowClass: "shadow-custom-rama",
@@ -3164,7 +3164,7 @@ export const HEALTH_DATE = [
   {
     id: 4,
     title: "Heart Health",
-    name:"Benefits",
+    name: "Benefits",
     desc: "The potassium and magnesium in dates help regulate blood pressure and support cardiovascular health. Additionally, their high fiber content helps lower cholesterol levels, reducing the risk of heart disease and stroke.",
     img: Psychology,
     shadowClass: "shadow-custom-pink",
@@ -3176,7 +3176,7 @@ export const HEALTH_JAM = [
   {
     id: 1,
     title: "Energy Boost",
-    name:"Benefits",
+    name: "Benefits",
     desc: "Jam provides a quick source of energy due to its high sugar content, making it a great option for a quick pick-me-up during the day or before physical activities.",
     img: EnergyBoost,
     shadowClass: "shadow-custom-yellow",
@@ -3185,7 +3185,7 @@ export const HEALTH_JAM = [
   {
     id: 2,
     title: "Versatile Ingredient",
-    name:"Benefits",
+    name: "Benefits",
     desc: "Jam can be used in a variety of dishes, from breakfast spreads to baking, enhancing flavors and adding sweetness to both savory and sweet recipes.",
     img: Ingrediant,
     shadowClass: "shadow-custom-yellow",
@@ -3194,7 +3194,7 @@ export const HEALTH_JAM = [
   {
     id: 3,
     title: "Vitamin Source",
-    name:"Benefits",
+    name: "Benefits",
     desc: "Depending on the fruit used, jam can offer vitamins and antioxidants. For instance, strawberry jam provides vitamin C, which is important for immune health and skin maintenance.",
     img: VitaminSource,
     shadowClass: "shadow-custom-yellow",
@@ -3203,7 +3203,7 @@ export const HEALTH_JAM = [
   {
     id: 4,
     title: "Contain Minerals",
-    name:"Benefits",
+    name: "Benefits",
     desc: "Jam has a long shelf life due to its high sugar content, which acts as a preservative. This means you can store it for extended periods without worrying about spoilage.",
     img: Minrella,
     shadowClass: "shadow-custom-yellow",
@@ -3214,7 +3214,7 @@ export const HEALTH_FLAKES = [
   {
     id: 1,
     title: "Fiber-Rich",
-    name:"Benefits",
+    name: "Benefits",
     desc: "Flakes, particularly whole grain varieties, are high in dietary fiber. Fiber aids digestion by promoting regular bowel movements and can help prevent constipation. It also supports heart health by reducing cholesterol levels and stabilizing blood sugar.",
     img: FiberRich,
     shadowClass: "shadow-custom-yellow",
@@ -3223,7 +3223,7 @@ export const HEALTH_FLAKES = [
   {
     id: 2,
     title: "Low Calories",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Many flakes, especially those made from whole grains, are low in calories while still being filling. This makes them an excellent choice for weight management, as they provide essential nutrients without contributing excessive calories.",
     img: Psychology,
@@ -3233,7 +3233,7 @@ export const HEALTH_FLAKES = [
   {
     id: 3,
     title: "Nutrient Dense",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Flakes often contain essential vitamins and minerals, such as B vitamins, iron, and magnesium. These nutrients are crucial for energy production, red blood cell formation, and overall metabolic function, contributing to overall well-being.",
     img: Nutrient,
@@ -3243,7 +3243,7 @@ export const HEALTH_FLAKES = [
   {
     id: 4,
     title: "Heart Health",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Whole grain flakes can be beneficial for heart health due to their high fiber content and low saturated fat. They help reduce the risk of heart disease by improving cholesterol levels and supporting healthy blood pressure.",
     img: LowClories,
@@ -3255,7 +3255,7 @@ export const HEALTH_VERNACALLI = [
   {
     id: 1,
     title: "Low Calories",
-    name:"Benefits",
+    name: "Benefits",
     desc: "Vermicelli, a type of thin rice or wheat noodle, is typically low in calories, making it a suitable option for weight management. It provides a filling meal without adding excessive caloric intake.",
     img: LowClories,
     shadowClass: "shadow-custom-yellow",
@@ -3264,7 +3264,7 @@ export const HEALTH_VERNACALLI = [
   {
     id: 2,
     title: "Digestive Health",
-    name:"Benefits",
+    name: "Benefits",
     desc: "Vermicelli made from whole grains can be a good source of dietary fiber. Fiber aids digestion by promoting regular bowel movements and can help prevent constipation.",
     img: Digestive,
     shadowClass: "shadow-custom-yellow",
@@ -3273,7 +3273,7 @@ export const HEALTH_VERNACALLI = [
   {
     id: 3,
     title: "Energy Source",
-    name:"Benefits",
+    name: "Benefits",
     desc: "Vermicelli provides carbohydrates, which are a primary source of energy for the body. Consuming it can help fuel physical activities and maintain energy levels throughout the day.",
     img: EnergyBoost,
     shadowClass: "shadow-custom-yellow",
@@ -3282,7 +3282,7 @@ export const HEALTH_VERNACALLI = [
   {
     id: 4,
     title: "Versatile Use",
-    name:"Benefits",
+    name: "Benefits",
     desc: "Vermicelli is a versatile ingredient that can be incorporated into various dishes, from soups to stir-fries, allowing for diverse and balanced meals. Its adaptability makes it easy to include in a healthy diet.",
     img: Versatile,
     shadowClass: "shadow-custom-yellow",
@@ -3294,7 +3294,7 @@ export const HEALTH_MACRONI = [
   {
     id: 1,
     title: "Energy Boost",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Macaroni, primarily composed of carbohydrates, provides a significant energy boost. The complex carbs in macaroni are gradually broken down into glucose, supplying a steady source of energy for daily activities and exercise.",
     img: EnergyBoost,
@@ -3304,7 +3304,7 @@ export const HEALTH_MACRONI = [
   {
     id: 2,
     title: "Digestive Health",
-    name:"Benefits",
+    name: "Benefits",
     desc: "Whole grain macaroni contains dietary fiber, which aids in digestion by promoting regular bowel movements and preventing constipation. Fiber also supports a healthy gut microbiome, contributing to overall digestive health.",
     img: Digestive,
     shadowClass: "shadow-custom-yellow",
@@ -3313,7 +3313,7 @@ export const HEALTH_MACRONI = [
   {
     id: 3,
     title: "Nutrient Rich",
-    name:"Benefits",
+    name: "Benefits",
     desc: "Macaroni can be a good source of essential nutrients when made from whole grains or enriched with vitamins and minerals. It often contains B vitamins, iron, and magnesium, which support metabolism, red blood cell formation, and bone health.",
     img: Nutrient,
     shadowClass: "shadow-custom-yellow",
@@ -3322,7 +3322,7 @@ export const HEALTH_MACRONI = [
   {
     id: 4,
     title: "Versatile Meals",
-    name:"Benefits",
+    name: "Benefits",
     desc: "Macaroni is a versatile ingredient that can be incorporated into various dishes, from salads to casseroles. Its adaptability allows for the creation of balanced meals, especially when paired with vegetables and lean proteins, enhancing overall diet quality.",
     img: VersatileMeals,
     shadowClass: "shadow-custom-yellow",
@@ -3333,7 +3333,7 @@ export const HEALTH_SPEARD = [
   {
     id: 1,
     title: "Fiber-Rich",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Aside from being a flavor-filled chocolaty spread, it is also a source of calcium &amp; iron. As such, Apis Chocolate Spread also carries the benefits drawn from these minerals. The spread can be used in addition to any healthy meal for more satisfaction.",
     img: Calcium,
@@ -3343,7 +3343,7 @@ export const HEALTH_SPEARD = [
   {
     id: 2,
     title: "Low Calories",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Aside from being a flavor-filled chocolaty spread, it is also a source of calcium &amp; iron. As such, Apis Chocolate Spread also carries the benefits drawn from these minerals. The spread can be used in addition to any healthy meal for more satisfaction.",
     img: FiberRich,
@@ -3353,7 +3353,7 @@ export const HEALTH_SPEARD = [
   {
     id: 3,
     title: "Nutrient Dense",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Aside from being a flavor-filled chocolaty spread, it is also a source of calcium &amp; iron. As such, Apis Chocolate Spread also carries the benefits drawn from these minerals. The spread can be used in addition to any healthy meal for more satisfaction.",
     img: Delious,
@@ -3363,7 +3363,7 @@ export const HEALTH_SPEARD = [
   {
     id: 4,
     title: "Heart Health",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Aside from being a flavor-filled chocolaty spread, it is also a source of calcium &amp; iron. As such, Apis Chocolate Spread also carries the benefits drawn from these minerals. The spread can be used in addition to any healthy meal for more satisfaction.",
     img: NoArtificial,
@@ -3375,7 +3375,7 @@ export const COOKING_PASTE = [
   {
     id: 1,
     title: "As a Skin Care Solution",
-    name:"Benefits",
+    name: "Benefits",
     desc: "Honey has been used for aesthetic purposes especially to return vigour and beauty to skin. When applied together with milk, honey creates a smooth, flawless skin. Real honey is also used for softening hair texture and for glowing skin.",
     img: SkinCare,
     shadowClass: "shadow-custom-yellow",
@@ -3384,7 +3384,7 @@ export const COOKING_PASTE = [
   {
     id: 2,
     title: "For Weight Loss",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Honey has been used for aesthetic purposes especially to return vigour and beauty to skin. When applied together with milk, honey creates a smooth, flawless skin. Real honey is also used for softening hair texture and for glowing skin.",
     img: WeightLoss,
@@ -3394,7 +3394,7 @@ export const COOKING_PASTE = [
   {
     id: 3,
     title: "For Wound Healing",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Honey has been used for aesthetic purposes especially to return vigour and beauty to skin. When applied together with milk, honey creates a smooth, flawless skin. Real honey is also used for softening hair texture and for glowing skin.",
     img: WoundHealing,
@@ -3404,7 +3404,7 @@ export const COOKING_PASTE = [
   {
     id: 4,
     title: "Energy and performance",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Honey has been used for aesthetic purposes especially to return vigour and beauty to skin. When applied together with milk, honey creates a smooth, flawless skin. Real honey is also used for softening hair texture and for glowing skin.",
     img: EnergyBoost,
@@ -3416,7 +3416,7 @@ export const SOYA_CHUNK = [
   {
     id: 1,
     title: "Protein Source",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
     img: ProteinSource,
@@ -3426,7 +3426,7 @@ export const SOYA_CHUNK = [
   {
     id: 2,
     title: "Heart Health",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
     img: Psychology,
@@ -3436,7 +3436,7 @@ export const SOYA_CHUNK = [
   {
     id: 3,
     title: "Bone Strength",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
     img: BoneStrength,
@@ -3446,7 +3446,7 @@ export const SOYA_CHUNK = [
   {
     id: 4,
     title: "Hormone Balance",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
     img: HarmoneBalance,
@@ -3458,7 +3458,7 @@ export const SAFFRON = [
   {
     id: 1,
     title: "Mood Enhancement",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Saffron contains compounds like crocin and safranal, which have been shown to positively affect mood and may help alleviate symptoms of depression and anxiety. Regular consumption can contribute to improved emotional well-being.",
     img: MoodEnhance,
@@ -3468,7 +3468,7 @@ export const SAFFRON = [
   {
     id: 2,
     title: "Antioxidant Properties",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Saffron contains compounds like crocin and safranal, which have been shown to positively affect mood and may help alleviate symptoms of depression and anxiety. Regular consumption can contribute to improved emotional well-being.",
     img: Calcium,
@@ -3478,7 +3478,7 @@ export const SAFFRON = [
   {
     id: 3,
     title: "Digestive Health",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Saffron contains compounds like crocin and safranal, which have been shown to positively affect mood and may help alleviate symptoms of depression and anxiety. Regular consumption can contribute to improved emotional well-being.",
     img: Digestive,
@@ -3488,7 +3488,7 @@ export const SAFFRON = [
   {
     id: 4,
     title: "Skin Benefits",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Saffron contains compounds like crocin and safranal, which have been shown to positively affect mood and may help alleviate symptoms of depression and anxiety. Regular consumption can contribute to improved emotional well-being.",
     img: SkinCare,
@@ -3500,7 +3500,7 @@ export const GREEN_TEA = [
   {
     id: 1,
     title: "Antioxidant Boost",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Green tea is rich in antioxidants, particularly catechins like EGCG, which help combat oxidative stress and neutralize harmful free radicals. These antioxidants support overall health by reducing inflammation and protecting cells from damage.",
     img: Calcium,
@@ -3510,7 +3510,7 @@ export const GREEN_TEA = [
   {
     id: 2,
     title: "Heart Health",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Regular consumption of green tea can improve cardiovascular health. It helps lower LDL cholesterol levels and triglycerides, reducing the risk of heart disease. The anti-inflammatory properties also contribute to maintaining healthy blood vessels.",
     img: Psychology,
@@ -3520,7 +3520,7 @@ export const GREEN_TEA = [
   {
     id: 3,
     title: "Metabolism Aid",
-    name:"Benefits",
+    name: "Benefits",
 
     desc: "Green tea can enhance metabolic rate and promote fat oxidation. Its catechins and caffeine work together to boost metabolism, which may aid in weight management and improve exercise performance.",
     img: Digestive,
@@ -3529,8 +3529,8 @@ export const GREEN_TEA = [
   },
   {
     id: 4,
-    title:"Brain Function",
-    name:"Benefits",
+    title: "Brain Function",
+    name: "Benefits",
 
     desc: "The caffeine and L-theanine in green tea can improve cognitive function, enhancing alertness, attention, and memory. These compounds work synergistically to promote better mental clarity and focus.",
     img: BrainFunction,
@@ -3543,31 +3543,31 @@ export const RECIPIES_DATA1 = [
     video: "https://www.youtube.com/embed/8xAEZMjoI7U?si=BCtDVosB050LS1Ci",
     title: "Apis Honey & Dates Sweet and Sour Dip",
     time: "Prep 10 min",
-    name:"Himalaya Honey",
+    name: "Himalaya Honey",
     descreption: "Nature's golden nectar, pure and organic",
   },
   {
     video: "https://www.youtube.com/embed/S8g2Uq2MNlw?si=yq34TnOsgk-k4MOl",
     title: "Apis Honey & Dates Fruit Cake",
-    name:"Arebian Pearls apis Dates",
+    name: "Arebian Pearls apis Dates",
     time: "Prep 10 min",
     descreption: "Nature's golden nectar, pure and organic",
-},
-{
-  video: "https://www.youtube.com/embed/NeL3kvnYyXQ?si=u1soO1g7rznNRBAU",
-  title: "Apis Recipes | Honey Glazed Carrots",
-  time: "Prep 10 min",
-  descreption: "Apis Recipes | Honey Glazed Carrots",
+  },
+  {
+    video: "https://www.youtube.com/embed/NeL3kvnYyXQ?si=u1soO1g7rznNRBAU",
+    title: "Apis Recipes | Honey Glazed Carrots",
+    time: "Prep 10 min",
+    descreption: "Apis Recipes | Honey Glazed Carrots",
 
-}, 
-{
-  video: "https://www.youtube.com/embed/ng5x3ntnvAM?si=No7g71v_dE0uolVx",
-  title: "Apis Jam Recipe",
-  name:"apis jam Fruit Blast",
-  time: "Prep 10 min",
-  descreption: "Nature's golden nectar, pure and organic",
-  type:"6"
-},
+  },
+  {
+    video: "https://www.youtube.com/embed/ng5x3ntnvAM?si=No7g71v_dE0uolVx",
+    title: "Apis Jam Recipe",
+    name: "apis jam Fruit Blast",
+    time: "Prep 10 min",
+    descreption: "Nature's golden nectar, pure and organic",
+    type: "6"
+  },
 ];
 
 export const GLIMPSES_SLIDES = [
@@ -3600,7 +3600,8 @@ export const GLIMPSES_SLIDES = [
 
 
 export const Terms_Conditions = [
-  {id: 1,
+  {
+    id: 1,
     content: `<div class="container mx-auto p-6 bg-gray-100 rounded-lg">
       <div class="text-center mb-6">
         <h4 class="text-2xl font-semibold text-[#9F7B49]">Terms &amp; Conditions</h4>
@@ -3644,7 +3645,8 @@ export const Terms_Conditions = [
       </p>
     </div>`
   },
-  {id: 2, content: `<div class="apis_bg">
+  {
+    id: 2, content: `<div class="apis_bg">
       <div class="container">
         	<div class="row">
         		<div class="col-md-3">

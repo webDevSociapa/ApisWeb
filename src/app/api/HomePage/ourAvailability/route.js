@@ -1,10 +1,22 @@
 import { MongoClient } from "mongodb";
 import { NextResponse } from "next/server";
+import { v4 as uuidv4 } from 'uuid';
+import AWS from 'aws-sdk';
+
 
 const uri = "mongodb+srv://webdev:2OmPVj8DUdEaU1wR@apisindia.38dfp.mongodb.net";
 const client = new MongoClient(uri);
 const dbName = "ourAvailability";
 const collectionName = "ourAvailability_01";
+
+
+const s3 = new AWS.S3({
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  region: process.env.AWS_REGION,
+})
+
+const bucketName = process.env.AWS_BUCKET_NAME;
 
 async function connectToDb() {
   if (!client.isConnected) await client.connect();
@@ -15,22 +27,46 @@ async function connectToDb() {
 // POST: Add a new slide
 export async function POST(req) {
   try {
-    const body = await req.json();
-    const {imgPath } = body;
+    const formData = await req.formData();
+    const uploadLogo = formData.get('uploadLogo')
+    const path = formData.get('path')
+    
+    // const {imgPath } = body;
 
-    if (!imgPath) {
+    if (!uploadLogo) {
       return new NextResponse("Missing required fields", { status: 400 });
     }
 
+
+    const uniqueFileName = `${uuidv4()}_${uploadLogo.name}`;
+    const uploadParams = {
+      Bucket: bucketName ,
+      Key:`e-commerceLogo/${uniqueFileName}`,
+      Body: Buffer.from(await uploadLogo.arrayBuffer()),
+      ContentType: uploadLogo.type
+  }
+
+  const uploadResult = await s3.upload(uploadParams).promise();
+  const logoPath = uploadResult.Location;
+
+
+
     const collection = await connectToDb();
+
+    await collection.insertOne({
+            
+      uploadLogo: logoPath,
+      path,
+    
+});
     // const existingSlide = await collection.findOne({ title });
 
     // if (existingSlide) {
     //   return NextResponse.json({ message: "Slide already exists" }, { status: 409 });
     // }
 
-    const result = await collection.insertOne(body);
-    return NextResponse.json({ message: "added successfully", data: result }, { status: 201 });
+    // const result = await collection.insertOne(body);
+    return NextResponse.json({ message: "added successfully" }, { status: 201 });
   } catch (error) {
     return NextResponse.json({ message: error.message }, { status: 500 });
   }

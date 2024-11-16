@@ -74,6 +74,8 @@ const IMAGE_DATA = [
 export default function Media() {
   const OPTIONS = { loop: true };
   const [mediaData,setMediaData] = useState([])
+  const [mediaSection, setMediaSection] = useState([])
+
   const [isMobile, setIsMobile] = useState(false); // State to track if the screen is mobile
 
   useEffect(() => {
@@ -96,17 +98,26 @@ export default function Media() {
   useEffect(()=>{
     const fetchMediaData = async()=>{
       try {
-        const response = await axios.get("/api/HomePage/mediaSection");
+        const response = await axios.get("/api/mediaSection");
         setMediaData(response.data)
-        console.log("ApisMedia",response.data[0].desc);
+        console.log("ApisMedia",response.data);
         
       } catch (error) { 
       }
     }
     fetchMediaData()
-    const data = [
-      {data:"Apis Media"}
-    ]
+    const getMediaSection = async () => {
+      try {
+        const response = await axios.get("/api/HomePage/mediaSection");
+        setMediaSection(response.data)
+        console.log("responseDataMedia", response);
+      }
+      catch (error) {
+        console.log("Error");
+
+      }
+    }
+    getMediaSection()
 
   },[])
 
@@ -130,7 +141,7 @@ export default function Media() {
       {/* News Items Grid */}
       <div className="w-full py-6 md:py-14 flex items-center justify-center flex-wrap gap-x-8 gap-y-10 md:gap-y-24">
         <EmblaCarousel options={OPTIONS}>
-          {NEWS_DATA.map((itm, index) => (
+          {mediaSection?.map((itm, index) => (
             <div key={index} className="embla__slide flex cursor-pointer flex-col gap-1 w-[280px] md:w-[340px] 2xl:w-[383px] mb-8"
             // onClick={() => openModal(itm)} // Open modal on click
             >
@@ -142,14 +153,13 @@ export default function Media() {
 
                 <div className="h-[260px] md:h-[370px] 2xl:h-[409px]">
                   <Image
-                    src={itm.img}
+                    src={itm.mediaImage}
                     alt="News Image"
                     width={440}
                     height={440}
                     className="h-[260px] md:h-[370px] 2xl:h-[409px]"
                   />
                 </div>
-                <div>{ApisMedia ?? "ApisMedia"}</div>
                 {/* <div className="w-[140px] md:w-[180px]">
                   <Image src={itm.name} alt="News Name" />
                 </div> */}
@@ -178,13 +188,13 @@ export default function Media() {
         </p>
         <div className="py-6 md:py-10 w-[90%] flex items-center justify-center">
           <EmblaCarousel options={{ loop: true }}>
-            {LATEST_SLIDES.map((itm, index) => (
+            {mediaData?.map((itm, index) => (
               <div className="embla__slide" key={index}>
                 <div className="embla__slide__number">
                   <div>
                     <div className="mx-3 border">
                       <Image
-                        src={itm?.img}
+                        src={itm?.mediaImage}
                         alt="header-logo"
                         className="w-[250px] md:w-[400px] h-[250px] md:h-[345px]"
                       />

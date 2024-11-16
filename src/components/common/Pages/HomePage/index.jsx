@@ -53,13 +53,13 @@ export default function HomePage() {
   const [currentProduct, setCurrentProduct] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false); // State to control modal visibility
   const [currentVideo, setCurrentVideo] = useState(''); // State to hold the current video URL
-  const [BannerText,setBannerText] = useState('')
+  const [BannerText, setBannerText] = useState('')
   const [slides, setSlides] = useState([]);
-  const [latestApis,setLatestApis] = useState([])
-  const [tvcHome,setTvcHome] = useState([])
-  const [ourAvailbility,setOurAvailbility] = useState([]);
-  const [getSliderLogo,setGetSliderLogo] = useState([])
-  // const [mediaSection,setMediaSection] = useState([])
+  const [latestApis, setLatestApis] = useState([])
+  const [tvcHome, setTvcHome] = useState([])
+  const [ourAvailbility, setOurAvailbility] = useState([]);
+  const [getSliderLogo, setGetSliderLogo] = useState([])
+  const [mediaSection, setMediaSection] = useState([])
 
   const openModal = (video) => {
     setCurrentVideo(video);
@@ -97,77 +97,77 @@ export default function HomePage() {
   //   return () => clearInterval(interval);
   // }, []);
   useEffect(() => {
-    const fetBannerText = async()=>{
-      try{
+    const fetBannerText = async () => {
+      try {
         const response = await axios.get("/api/HomePage/bannerText");
         setBannerText(response?.data[0].bannerText)
-        console.log("response111",response);
+        console.log("response111", response);
       }
-      catch(error){
+      catch (error) {
         console.log("Error");
-        
+
       }
     }
     fetBannerText();
-    const addTasteProduct = async()=>{
-      try{
+    const addTasteProduct = async () => {
+      try {
         const response = await axios.get("/api/HomePage/tasteProduct");
         setSlides(response.data)
-        console.log("response",response.data);
+        console.log("response", response.data);
       }
-      catch(error){
+      catch (error) {
         console.log("Error");
-        
+
       }
     }
     addTasteProduct()
 
-    const addLatestApis = async()=>{
-      try{
+    const addLatestApis = async () => {
+      try {
         const response = await axios.get("/api/HomePage/LifeAtApis");
         setLatestApis(response.data)
       }
-      catch(error){
+      catch (error) {
         console.log("Error");
-        
+
       }
     }
     addLatestApis()
 
-    // const getMediaSection = async()=>{
-    //   try{
-    //     const response = await axios.get("/api/HomePage/mediaSection");
-    //     setMediaSection(response.data)
-    //     console.log("responseDataMedia",response);
-    //   }
-    //   catch(error){
-    //     console.log("Error");
-        
-    //   }
-    // }
-    // getMediaSection()
-    const tvcHome = async()=>{
-      try{
+    const getMediaSection = async () => {
+      try {
+        const response = await axios.get("/api/HomePage/mediaSection");
+        setMediaSection(response.data)
+        console.log("responseDataMedia", response);
+      }
+      catch (error) {
+        console.log("Error");
+
+      }
+    }
+    getMediaSection()
+    const tvcHome = async () => {
+      try {
         const response = await axios.get("/api/HomePage/tvcHome");
         setTvcHome(response.data)
-        console.log("responseData",response);
+        console.log("responseData", response);
       }
-      catch(error){
+      catch (error) {
         console.log("Error");
-        
+
       }
     }
     tvcHome()
 
-    const getSliderLogo = async()=>{
-      try{
-        const response = await axios.get("/api/HomePage/tvcHome");
+    const getSliderLogo = async () => {
+      try {
+        const response = await axios.get("/api/HomePage/ourAvailability");
         setGetSliderLogo(response.data)
-        console.log("responseDatacatch",response);
+        console.log("responseDatacatch", response);
       }
-      catch(error){
+      catch (error) {
         console.log("Error");
-        
+
       }
     }
     getSliderLogo()
@@ -175,7 +175,7 @@ export default function HomePage() {
   }, [])
 
   // console.log("tvcHome",tvcHome[0].thumbnail);
-  
+
 
   const words = BannerText?.split(' ');
 
@@ -249,13 +249,13 @@ export default function HomePage() {
               <div className="embla__slide" key={index}>
                 <div className="embla__slide__number !h-[240px] w-full">
                   <Link href={`${itm?.path}`} target="_blank">
-                     <Image
-                      src={itm?.img}
+                    <Image
+                      src={itm?.imageFile}
                       width={350}
-                    height={440}
+                      height={440}
                       alt="header-logo"
                       className="h-[250px] w-auto max-w-max bg-opacity-40"
-                    /> 
+                    />
                   </Link>
                 </div>
                 <div className="border-[2px] border-[hsl(35,37%,45%)] mt-4 lg:mt-10 flex flex-col gap-1 lg:gap-3 p-1.5 w-full sm:w-[50%] h-[60%] md:w-[90%] h-[45%]  xl:w-[90%] h-[30%] mx-auto overflow-none md:py-2">
@@ -379,7 +379,7 @@ export default function HomePage() {
         </p>
         <div className="media-apis w-full max-w-7xl z-10 my-4 md:my-10 px-4 sm:px-0">
           <EmblaCarousel options={OPTIONS} className="embla-close-arrows relative">
-            {NEWS_DATA?.map((itm, index) => (
+            {mediaSection?.map((itm, index) => (
               <div
                 className="embla__slide flex-[0_0_280px] md:flex-[0_0_495px] min-w-0 px-2"
                 key={index}
@@ -393,7 +393,7 @@ export default function HomePage() {
                   <div className="border border-[#85673D] embla__slide__number1 md:w-[460px] h-auto md:h-[590px] p-2 pb-0 flex flex-col !rounded-none bg-[#fff] apismedis" style={{ maxWidth: '90%', margin: '0 auto' }}>
                     <div className="relative w-full h-[200px] sm:h-[280px] md:h-[443px] overflow-hidden">
                       <Image
-                        src={itm?.img}
+                        src={itm?.mediaImage}
                         alt="header-logo"
                         width={300}
                         height={300}
@@ -534,13 +534,14 @@ export default function HomePage() {
           <div className="w-full flex items-center justify-center flex-col gap-4 md:gap-12 m">
             <div className="mt-2 md:mt-20 bg-white w-full h-[23px] md:h-[65px] flex items-center justify-between px-3 md:pt-2 pt-1 avaibility">
               <EmblaCarousel options={OPTIONS1} autoScroll>
-                {AVAILABILITY_SLIDE.map((img) => {
+                {getSliderLogo?.map((img) => {
                   return (
                     <div className="embla__slide w-[55px] md:w-auto">
                       <Link href={img?.path} target="_blank">
-                        <Image
-                          src={img?.img}
+                        <img
+                          src={img?.uploadLogo}
                           height={60}
+                          // width={50}
                           alt="header-logo"
                           className="h-[18px] w-[50px] md:w-auto md:h-[60px] embla__slide__number"
                         />

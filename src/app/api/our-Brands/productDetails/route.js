@@ -46,7 +46,6 @@ export async function POST(req) {
     const products = JSON.parse(formData.get("products")); // Assuming `products` is passed as a JSON string
     const bannerImage = formData.get("bannerImage"); // File object
 
-    // Ensure required fields are present
     if (!bannerImage || !title) {
       return NextResponse.json(
         { message: "Title and Banner image are required" },
@@ -54,18 +53,19 @@ export async function POST(req) {
       );
     }
 
-    // Upload banner image to AWS S3
-    // const uniqueBannerFileName = `${uuidv4()}_${bannerImage.name}`;
-    // const bannerUploadParams = {
-    //   Bucket: bucketName,
-    //   Key: `products/${uniqueBannerFileName}`,
-    //   Body: Buffer.from(await bannerImage.arrayBuffer()),
-    //   ContentType: bannerImage.type,
-    // };
-    // const bannerUploadResult = await s3.upload(bannerUploadParams).promise();
-    // const bannerImageUrl = bannerUploadResult.Location;
+    // Uncomment the S3 upload logic and configure as per your requirements
+    /*
+    const uniqueBannerFileName = `${uuidv4()}_${bannerImage.name}`;
+    const bannerUploadParams = {
+      Bucket: bucketName,
+      Key: `products/${uniqueBannerFileName}`,
+      Body: Buffer.from(await bannerImage.arrayBuffer()),
+      ContentType: bannerImage.type,
+    };
+    const bannerUploadResult = await s3.upload(bannerUploadParams).promise();
+    const bannerImageUrl = bannerUploadResult.Location;
+    */
 
-    // Process product images
     const updatedProducts = await Promise.all(
       products.map(async (product) => {
         const imageFields = ["img", "back_img", "product_img_1", "product_img_2"];
@@ -89,7 +89,6 @@ export async function POST(req) {
       })
     );
 
-    // Insert product details into MongoDB
     const collection = await connectToDb();
     const newProduct = {
       title,
@@ -98,16 +97,34 @@ export async function POST(req) {
       createdAt: new Date(),
     };
 
+    // Insert product details and retrieve the inserted _id
     const result = await collection.insertOne(newProduct);
+    const insertedId = result.insertedId;
+
+    // Update the products array to include the _id
+    const finalProducts = updatedProducts.map((product) => ({
+      ...product,
+      _id: insertedId, // Attach the MongoDB _id to each product
+    }));
+
+    // Update the MongoDB document with the new products array
+    await collection.updateOne(
+      { _id: insertedId },
+      { $set: { products: finalProducts } }
+    );
 
     return NextResponse.json({ message: "Product added successfully", result });
   } catch (error) {
     console.error("Error adding product:", error);
-    return NextResponse.json({ message: `An error occurred: ${error.message}` }, { status: 500 });
+    return NextResponse.json(
+      { message: `An error occurred: ${error.message}` },
+      { status: 500 }
+    );
   } finally {
     await client.close();
   }
 }
+
 
 // GET: Retrieve all products or a specific one by ID
 export async function GET(req) {
