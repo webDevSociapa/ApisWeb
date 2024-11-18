@@ -9,7 +9,7 @@ const nextConfig = {
     turbo: {
       rules: {
         '*.svg': {
-          loaders: [ '@svgr/webpack' ],
+          loaders: ['@svgr/webpack'],
           as: '*.js',
         },
       },
@@ -55,17 +55,25 @@ const nextConfig = {
     return config;
   },
   images: {
-    remotePatterns: [ {
-      protocol: "https",
-      hostname: "**"
-    } ],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
   },
-  // i18n: {
-  //   locales: [ 'en', 'de', 'es', 'it', 'fr' ],
-  //   defaultLocale: 'en',
-  // },
+  async headers() {
+    return [
+      {
+        source: '/api/:path*', // सभी API endpoints पर लागू होगा
+        headers: [
+          { key: 'Access-Control-Allow-Origin', value: 'http://localhost:3001' }, // Admin प्रोजेक्ट को अनुमति दें
+          { key: 'Access-Control-Allow-Methods', value: 'GET, POST, PUT, DELETE, OPTIONS' },
+          { key: 'Access-Control-Allow-Headers', value: 'Content-Type, Authorization' },
+        ],
+      },
+    ];
+  },
 };
-
-// hostname: "api-minio.projects.mindinventory.net",
 
 export default withNextIntl(nextConfig);
