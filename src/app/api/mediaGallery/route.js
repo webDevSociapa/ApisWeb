@@ -62,3 +62,16 @@ export async function POST(req) {
     return NextResponse.json({ error: `An error occurred: ${error.message}` }, { status: 500 });
   }
 }
+
+export async function GET(req) {
+    try {
+        const collection = await connectToDb();
+        const data = await collection.find({}).toArray();
+
+        return NextResponse.json(data);
+    } catch (error) {
+        return NextResponse.json({ message: error.message }, { status: 500 });
+    } finally {
+        await client.close();
+    }
+}

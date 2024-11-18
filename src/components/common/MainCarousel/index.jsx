@@ -6,14 +6,13 @@ export default class Carasol extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentSlide: 0,
-      banners: [], // Holds the banner video data
+      banners: [],
+      currentSlide: 0, // Track the currently active slide
     };
     this.carouselRef = React.createRef();
   }
 
   componentDidMount() {
-    // Fetch data from the API when the component mounts
     this.fetchBannerData();
   }
 
@@ -21,58 +20,57 @@ export default class Carasol extends Component {
     try {
       const response = await fetch("/api/HomePage/banner");
       const data = await response.json();
-      console.log("Fetched Data:", data);
-  
-      // Wrap the single object in an array
-      this.setState({ banners: [data] });
+      const filteredBanners = data.filter((banner) => banner.hideShow);
+
+      this.setState({ banners: filteredBanners });
     } catch (error) {
       console.error("Error fetching banner data:", error);
     }
   };
-  
 
-  updateCurrentSlide = (index) => {
+  handleSlideChange = (index) => {
     this.setState({ currentSlide: index });
-    this.carouselRef.current.moveTo(index);
   };
 
   render() {
     const { banners, currentSlide } = this.state;
-    console.log("banners",banners);
-    
-  
+
     return (
       <div className="carousel-wrapper">
         <div className="carousel-container">
           <Carousel
-            ref={(el) => (this.carouselRef = el)}
+            ref={this.carouselRef}
             autoPlay
             showThumbs={false}
             infiniteLoop
-            interval={3000}
-            onChange={this.updateCurrentSlide}
+            interval={6000}
             showArrows={false}
             showStatus={false}
-            showIndicators={false}
+            showIndicators={false} // Disable default indicators
+            onChange={this.handleSlideChange} // Track slide changes
           >
-            {banners[0]?.map((banner, index) => (
-              <div className="carousel_banner" key={index}>
+            {banners.map((banner) => (
+              <div className="carousel_banner" key={banner._id}>
                 <video
                   autoPlay
                   muted
                   className="video-img1"
                   loop
-                  src={banner.videoFile} // Use videoFile from the API data
+                  src={banner.videoFile}
                 />
               </div>
             ))}
           </Carousel>
+
+          {/* Custom Indicators */}
           <div className="scroll-indicator">
-            {banners[0]?.map((_, index) => (
+            {banners.map((_, index) => (
               <div
                 key={index}
-                className={`scroll-pill ${index === currentSlide ? "active" : ""}`}
-                onClick={() => this.updateCurrentSlide(index)}
+                className={`scroll-pill ${
+                  index === currentSlide ? "active" : ""
+                }`}
+                onClick={() => this.carouselRef.current.moveTo(index)}
               />
             ))}
           </div>
@@ -80,5 +78,4 @@ export default class Carasol extends Component {
       </div>
     );
   }
-  
 }

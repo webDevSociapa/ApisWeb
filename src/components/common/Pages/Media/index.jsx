@@ -98,7 +98,7 @@ export default function Media() {
   useEffect(()=>{
     const fetchMediaData = async()=>{
       try {
-        const response = await axios.get("/api/mediaSection");
+        const response = await axios.get("/api/mediaGallery");
         setMediaData(response.data)
         console.log("ApisMedia",response.data);
         
