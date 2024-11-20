@@ -62,18 +62,29 @@ const nextConfig = {
       },
     ],
   },
+
+  
   async headers() {
+    // Determine the allowed origin based on the environment
+    const allowedOrigin =
+      process.env.NODE_ENV === 'production'
+        ? 'https://apis-admin.vercel.app/' // Replace with the live admin domain
+        : 'http://localhost:3001'; // Development admin panel domain
+
     return [
       {
-        source: '/api/:path*', 
+        source: '/api/:path*',
         headers: [
-          { key: 'Access-Control-Allow-Origin', value: 'https://apis-admin.vercel.app/' },  // permission of admin panel 
+          { key: 'Access-Control-Allow-Origin', value: allowedOrigin },
           { key: 'Access-Control-Allow-Methods', value: 'GET, POST, PUT, DELETE, OPTIONS' },
           { key: 'Access-Control-Allow-Headers', value: 'Content-Type, Authorization' },
         ],
-
       },
     ];
+  },
+  // Custom logic for skipping API calls in production
+  env: {
+    SKIP_API_CALLS: process.env.NODE_ENV === 'production' ? 'true' : 'false',
   },
 };
 
