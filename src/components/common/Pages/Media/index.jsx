@@ -99,6 +99,8 @@ export default function Media() {
     const fetchMediaData = async()=>{
       try {
         const response = await axios.get("/api/mediaGallery");
+        console.log("response",response);
+        
         setMediaData(response.data)
         console.log("ApisMedia",response.data);
         
@@ -194,7 +196,9 @@ export default function Media() {
                   <div>
                     <div className="mx-3 border">
                       <Image
-                        src={itm?.mediaImage}
+                        src={itm?.mediaGallery}
+                        height={250}
+                        width={250}
                         alt="header-logo"
                         className="w-[250px] md:w-[400px] h-[250px] md:h-[345px]"
                       />

@@ -1,4 +1,4 @@
-import { MongoClient } from "mongodb";
+import { MongoClient, ObjectId } from "mongodb";
 import { NextResponse } from "next/server";
 import { v4 as uuidv4 } from 'uuid';
 import AWS from 'aws-sdk';
@@ -108,3 +108,31 @@ export async function PUT(req) {
     return NextResponse.json({ message: error.message }, { status: 500 });
   }
 }
+
+// DELETE: Remove slide by ID
+// DELETE: Remove slide by ID
+export async function DELETE(req) {
+  try {
+    const { searchParams } = new URL(req.url);
+    const id = searchParams.get('id'); // Get id from query params
+    
+    if (!id) {
+      return NextResponse.json({ message: "Missing required id" }, { status: 400 });
+    }
+
+    const collection = await connectToDb();
+    
+    // Attempt to delete the document by _id
+    const result = await collection.deleteOne({ _id: new ObjectId(id) });
+
+    if (result.deletedCount === 0) {
+      return NextResponse.json({ message: "Slide not found" }, { status: 404 });
+    }
+
+    return NextResponse.json({ message: "Slide deleted successfully" });
+  } catch (error) {
+    return NextResponse.json({ message: error.message }, { status: 500 });
+  }
+}
+
+
