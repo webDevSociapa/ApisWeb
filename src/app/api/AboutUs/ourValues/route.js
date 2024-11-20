@@ -1,5 +1,7 @@
 import { MongoClient } from "mongodb";
 import { NextResponse } from "next/server";
+import AWS from 'aws-sdk';
+
 
 // Connection URI and Database/Collection Names
 const uri = "mongodb+srv://webdev:2OmPVj8DUdEaU1wR@apisindia.38dfp.mongodb.net";
