@@ -65,12 +65,13 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/api/:path*', // सभी API endpoints पर लागू होगा
+        source: '/api/:path*', 
         headers: [
-          { key: 'Access-Control-Allow-Origin', value: 'http://localhost:3001' }, // Admin प्रोजेक्ट को अनुमति दें
+          { key: 'Access-Control-Allow-Origin', value: 'https://apis-admin.vercel.app/' },  // permission of admin panel 
           { key: 'Access-Control-Allow-Methods', value: 'GET, POST, PUT, DELETE, OPTIONS' },
           { key: 'Access-Control-Allow-Headers', value: 'Content-Type, Authorization' },
         ],
+
       },
     ];
   },

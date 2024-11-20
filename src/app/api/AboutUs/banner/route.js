@@ -81,24 +81,38 @@ export async function GET() {
 
 export async function PUT(req) {
     try {
-        const body = await req.json();
-        const { hideShow } = body;
+        const formData = await req.formData();
+        const bannerImage = formData.get('bannerImage'); // Extract the bannerImage from formData
 
-        if (typeof hideShow !== "boolean") {
-            return NextResponse.json({ message: "hideShow must be a boolean" }, { status: 400 });
+        if (!bannerImage) {
+            return NextResponse.json({ message: "bannerImage is required" }, { status: 400 });
         }
 
+        // Generate a unique filename for the banner image
+        const uniqueFileName = `${uuidv4()}_${bannerImage.name}`;
+        const uploadParams = {
+            Bucket: bucketName,
+            Key: `AboutUs/${uniqueFileName}`,
+            Body: Buffer.from(await bannerImage.arrayBuffer()),
+            ContentType: bannerImage.type
+        };
+
+        // Upload banner image to S3
+        const uploadResult = await s3.upload(uploadParams).promise();
+        const imageUrl = uploadResult.Location;
+
+        // Save banner image URL to MongoDB
         const collection = await connectToDb();
         const result = await collection.updateOne(
             {},
-            { $set: { hideShow } },
+            { $set: { bannerImage: imageUrl } },
             { upsert: true }
         );
 
-        return NextResponse.json({ message: "Visibility updated successfully", result });
+        return NextResponse.json({ message: "Banner image updated successfully", imageUrl });
     } catch (error) {
-        console.error("Error updating hideShow flag:", error);
-        return NextResponse.json({ message: "An error occurred" }, { status: 500 });
+        console.error("Error updating banner image:", error);
+        return NextResponse.json({ message: `An error occurred: ${error.message}` }, { status: 500 });
     } finally {
         await client.close();
     }

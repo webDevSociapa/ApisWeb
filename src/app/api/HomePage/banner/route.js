@@ -1,4 +1,4 @@
-import { MongoClient } from "mongodb";
+import { MongoClient, ObjectId } from "mongodb";
 import { NextResponse } from "next/server";
 import AWS from 'aws-sdk';
 import fs from 'fs';
@@ -76,25 +76,47 @@ export async function POST(req) {
     }
 }
 // PUT API to update the hideShow field
-export async function PUT(req) {
+// DELETE API to delete a video by ID and remove it from S3
+export async function DELETE(req) {
     try {
-        const body = await req.json();
-        const { hideShow } = body;
-        if (typeof hideShow !== "boolean") {
-            return NextResponse.json({ message: "hideShow must be a boolean value" }, { status: 400 });
+        const { id } = await req.json(); // Expecting the video ID in the request body
+        if (!id) {
+            return NextResponse.json({ message: "Video ID is required" }, { status: 400 });
         }
+
         const collection = await connectToDb();
-        const result = await collection.updateOne(
-            {},
-            { $set: { hideShow } },
-            { upsert: true }
-        );
-        return NextResponse.json({ message: "Visibility updated successfully", result });
+
+        // Find the video record in the database
+        const videoRecord = await collection.findOne({ _id: new ObjectId(id) });
+
+        if (!videoRecord) {
+            return NextResponse.json({ message: "Video not found" }, { status: 404 });
+        }
+
+        const videoKey = videoRecord.videoFile.split('.com/')[1]; // Extract S3 key from URL
+
+        // Delete video from S3 bucket
+        const deleteParams = {
+            Bucket: bucketName,
+            Key: videoKey,
+        };
+
+        await s3.deleteObject(deleteParams).promise();
+
+        // Remove the video entry from MongoDB
+        const deleteResult = await collection.deleteOne({ _id: new ObjectId(id) });
+
+        return NextResponse.json({
+            message: "Video deleted successfully",
+            deleteResult,
+        });
+
     } catch (error) {
-        console.error("Error updating visibility:", error);
-        return NextResponse.json({ message: "An error occurred" }, { status: 500 });
+        console.error("Error deleting video:", error.message || error);
+        return NextResponse.json({ message: `An error occurred: ${error.message}` }, { status: 500 });
     }
 }
+
 // GET API to retrieve mainBanner video URL and hideShow field
 export async function GET() {
     try {

@@ -29,6 +29,8 @@ export async function POST(req) {
   try {
     const formData = await req.formData();
     const mediaImage = formData.get('mediaImage');
+    const title = formData.get("title");
+
 
     if (!mediaImage) {
       return NextResponse.json({ error: 'No media image provided' }, { status: 400 });
@@ -51,7 +53,7 @@ export async function POST(req) {
 
     // Insert image URL into MongoDB
     const collection = await connectToDb();
-    const insertResult = await collection.insertOne({ mediaGallery: imageUrl });
+    const insertResult = await collection.insertOne({ mediaGallery: imageUrl,title });
 
     return NextResponse.json({
       message: "Media Gallery Added",
@@ -71,7 +73,8 @@ export async function GET(req) {
         return NextResponse.json(data);
     } catch (error) {
         return NextResponse.json({ message: error.message }, { status: 500 });
-    } finally {
-        await client.close();
     }
+    // } finally {
+    //     await client.close();
+    // }
 }
