@@ -1,4 +1,6 @@
 import { MongoClient } from 'mongodb';
+import AWS from 'aws-sdk';
+
 
 const uri = "mongodb+srv://webdev:2OmPVj8DUdEaU1wR@apisindia.38dfp.mongodb.net";
 const client = new MongoClient(uri);
