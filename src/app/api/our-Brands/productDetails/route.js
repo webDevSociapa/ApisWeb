@@ -52,19 +52,7 @@ export async function POST(req) {
         { status: 400 }
       );
     }
-
-    // Uncomment the S3 upload logic and configure as per your requirements
-    /*
-    const uniqueBannerFileName = `${uuidv4()}_${bannerImage.name}`;
-    const bannerUploadParams = {
-      Bucket: bucketName,
-      Key: `products/${uniqueBannerFileName}`,
-      Body: Buffer.from(await bannerImage.arrayBuffer()),
-      ContentType: bannerImage.type,
-    };
-    const bannerUploadResult = await s3.upload(bannerUploadParams).promise();
-    const bannerImageUrl = bannerUploadResult.Location;
-    */
+    
 
     const updatedProducts = await Promise.all(
       products.map(async (product) => {

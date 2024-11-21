@@ -1,8 +1,12 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ROffice from '../../../../assets/images/ContactUs/ROffice.png'
+import axios from 'axios';
 
 const Tabs = () => {
-  const [activeTab, setActiveTab] = useState('RegisteredOffice')
+  const [activeTab, setActiveTab] = useState('RegisteredOffice');
+  const [headOffice,setHeadOffice] = useState("")
+  const [regOffice,RegOffice] = useState("")
+  const [contactDetails,setContactDetails] = useState([])
   const tabContent = {
     RegisteredOffice: {
       image: ROffice.src,
@@ -40,6 +44,22 @@ const Tabs = () => {
     // },
   }
 
+
+  useEffect(()=>{
+    const fetchData = async()=>{
+      try {
+        const response = await axios.get('/api/contactDetails');
+        console.log("responseeeeee",response);
+
+        setContactDetails(response.data[0])
+
+      } catch (error) {
+        
+      }
+    }
+    fetchData()
+  },[])
+
   return (
     <div className="w-full text-center px-4">
       <div className="flex flex-wrap justify-around mb-4">
@@ -73,13 +93,13 @@ const Tabs = () => {
             <div className="mb-6">
               <h3 className="text-[#9F7B49] text-xl font-bold mb-2">Head office</h3>
               <p className="text-black text-sm leading-relaxed">
-                {tabContent[activeTab].address1}
+                {contactDetails.headOffice}
               </p>
             </div>
             <div>
               <h3 className="text-[#9F7B49] text-xl font-bold mb-2">Registered office</h3>
               <p className="text-black text-sm leading-relaxed mt-2 2xl:line-clamp-4">
-                {tabContent[activeTab].address2}
+              {contactDetails.regOffice}
               </p>
             </div>
           </div>

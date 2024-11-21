@@ -86,34 +86,40 @@ export async function PUT(req) {
         const titleImage = formData.get('titleImage');
         const imageGroup = formData.getAll('imageGroup'); // Get multiple files for imageGroup
         
-        if (!id || !title || !titleImage || imageGroup.length === 0) {
-            return NextResponse.json({ message: "ID, Title, Title Image, and at least one Image in Image Group are required" }, { status: 400 });
+        if (!id || !title) {
+            return NextResponse.json({ message: "ID and Title are required" }, { status: 400 });
         }
 
-        // Upload the titleImage to S3
-        const uniqueTitleFileName = `${uuidv4()}_${titleImage.name}`;
-        const titleUploadParams = {
-            Bucket: bucketName, // Replace with your S3 bucket name
-            Key: `apisLife/${uniqueTitleFileName}`,
-            Body: Buffer.from(await titleImage.arrayBuffer()),
-            ContentType: titleImage.type,
-        };
-        const titleUploadResult = await s3.upload(titleUploadParams).promise();
-        const titleImageUrl = titleUploadResult.Location;
+        let titleImageUrl = undefined;
+        let imageUrls = [];
 
-        // Upload imageGroup files to S3
-        const imageUrls = [];
-        for (let image of imageGroup) {
-            const uniqueFileName = `${uuidv4()}_${image.name}`;
-            const uploadParams = {
+        // Check if titleImage is provided and upload it to S3
+        if (titleImage) {
+            const uniqueTitleFileName = `${uuidv4()}_${titleImage.name}`;
+            const titleUploadParams = {
                 Bucket: bucketName, // Replace with your S3 bucket name
-                Key: `apisLife/${uniqueFileName}`,
-                Body: Buffer.from(await image.arrayBuffer()),
-                ContentType: image.type,
+                Key: `apisLife/${uniqueTitleFileName}`,
+                Body: Buffer.from(await titleImage.arrayBuffer()),
+                ContentType: titleImage.type,
             };
-            
-            const uploadResult = await s3.upload(uploadParams).promise();
-            imageUrls.push(uploadResult.Location);
+            const titleUploadResult = await s3.upload(titleUploadParams).promise();
+            titleImageUrl = titleUploadResult.Location;
+        }
+
+        // Check if imageGroup is provided and upload images to S3
+        if (imageGroup.length > 0) {
+            for (let image of imageGroup) {
+                const uniqueFileName = `${uuidv4()}_${image.name}`;
+                const uploadParams = {
+                    Bucket: bucketName, // Replace with your S3 bucket name
+                    Key: `apisLife/${uniqueFileName}`,
+                    Body: Buffer.from(await image.arrayBuffer()),
+                    ContentType: image.type,
+                };
+                
+                const uploadResult = await s3.upload(uploadParams).promise();
+                imageUrls.push(uploadResult.Location);
+            }
         }
 
         // Connect to the database and update the blog data
@@ -124,8 +130,8 @@ export async function PUT(req) {
                 $set: {
                     title,
                     type,
-                    titleImage: titleImageUrl,
-                    imageGroup: imageUrls,  // Store multiple image URLs as an array
+                    ...(titleImageUrl && { titleImage: titleImageUrl }), // Only set titleImage if it's updated
+                    ...(imageUrls.length > 0 && { imageGroup: imageUrls }), // Only set imageGroup if it's updated
                 },
             }
         );

@@ -12,6 +12,9 @@ const ContactForm = () => {
   });
   const [popupMessage, setPopupMessage] = useState('');
   const [messageInfo, setMessageInfo] = useState(false);
+  const [headOffice,setHeadOffice] = useState("")
+  const [regOffice,RegOffice] = useState("")
+  const [contactDetails,setContactDetails] = useState("")
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -56,6 +59,9 @@ const ContactForm = () => {
       return () => clearTimeout(timer); // Clean up timer on component unmount or messageInfo change
     }
   }, [messageInfo]); // Dependency on messageInfo
+
+
+ 
 
   const closeToast = () => {
     setPopupMessage('');
