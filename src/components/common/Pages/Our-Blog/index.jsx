@@ -31,7 +31,7 @@ const OurBlogPage = () => {
       `/our-blog/blog-details?id=${encodeURIComponent(_id)}&blogTitle=${encodeURIComponent(blogTitle)}&blogImage=${encodeURIComponent(blogImage)}&contentData=${encodeURIComponent(contentData)}`
     );
   };
-  
+
 
   useEffect(() => {
     const fetchBlogsData = async () => {
@@ -72,7 +72,13 @@ const OurBlogPage = () => {
         <p className="font-semibold text-xl mb-2 font-jost">
           {blog.blogTitle}
         </p>
-        <span className="text-gray-500 text-sm font-jost">{blog.blogDate}</span>
+        <span className="text-gray-500 text-sm font-jost">
+          {blog ? new Date(blog.blogDate).toLocaleDateString('en-US', {
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric',
+          }).replace(',', '') : ''}
+        </span>
         <p className="text-gray-700 mt-4 text-justify line-clamp-5 font-jost">
           {blog.desc}
         </p>
@@ -107,9 +113,8 @@ const OurBlogPage = () => {
           {Array.from({ length: pageCount }, (_, index) => (
             <p
               key={index}
-              className={`text-base md:text-3xl border-black px-2 md:px-6 ${
-                index === currentPage ? "font-bold" : "font-normal text-gray-600"
-              } ${index === 0 ? "" : "border-l"}`}
+              className={`text-base md:text-3xl border-black px-2 md:px-6 ${index === currentPage ? "font-bold" : "font-normal text-gray-600"
+                } ${index === 0 ? "" : "border-l"}`}
               aria-label={`Go to page ${index + 1}`}
             >
               {index + 1}

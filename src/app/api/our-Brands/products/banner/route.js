@@ -1,105 +1,80 @@
-import { MongoClient } from "mongodb";
+import { MongoClient, ObjectId } from "mongodb";
 import { NextResponse } from "next/server";
 import AWS from 'aws-sdk';
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid'
+
+
 
 const uri = "mongodb+srv://webdev:2OmPVj8DUdEaU1wR@apisindia.38dfp.mongodb.net";
 const client = new MongoClient(uri);
-const dbName = "our-Brand";
-const collectionName = "productBanner";
+const dbName = "Careers";
+const collectionName = "apisLife";
 
+// AWS S3 Configuration
 const s3 = new AWS.S3({
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-    region: process.env.AWS_REGION,
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID, 
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY, 
+    region: process.env.AWS_REGION 
 });
 
 const bucketName = process.env.AWS_BUCKET_NAME;
-
 async function connectToDb() {
     await client.connect();
-    return client.db(dbName).collection(collectionName);
+    const database = client.db(dbName);
+    return database.collection(collectionName);
 }
 
 export async function POST(req) {
     try {
         const formData = await req.formData();
+
+        // Get data from the form
+        const selectedProduct = formData.get('selectedProduct'); // Product selected from dropdown
+        const title = formData.get('title'); // Title field
+        const productInfo = formData.get('productInfo'); // Product info field
         const bannerImage = formData.get('bannerImage'); // File field
 
-        if (!bannerImage) {
-            return NextResponse.json({ message: "Banner image is required" }, { status: 400 });
+        const bucketName = process.env.AWS_BUCKET_NAME;
+
+
+       
+
+
+        if (!selectedProduct) {
+            return NextResponse.json({ message: "Product is required" }, { status: 400 });
         }
 
-        // Generate a unique filename for the banner image
-        const uniqueFileName = `${uuidv4()}_${bannerImage.name}`;
-        const uploadParams = {
-            Bucket: bucketName,
-            Key: `product/${uniqueFileName}`,
-            Body: Buffer.from(await bannerImage.arrayBuffer()),
-            ContentType: bannerImage.type
+        const updateData = {
+            title,
+            productInfo,
+            hideShow: true, // Assuming you want to show the updated data by default
         };
-        
 
-        // Upload banner image to S3
-        const uploadResult = await s3.upload(uploadParams).promise();
-        const imageUrl = uploadResult.Location;
+        // If a banner image is provided, upload it to S3
+        if (bannerImage) {
+            const uniqueFileName = `${uuidv4()}_${bannerImage.name}`;
+            const uploadParams = {
+                Bucket: bucketName,
+                Key: `product/${uniqueFileName}`,
+                Body: Buffer.from(await bannerImage.arrayBuffer()),
+                ContentType: bannerImage.type,
+            };
 
-        // Save banner image URL to MongoDB
+            const uploadResult = await s3.upload(uploadParams).promise();
+            updateData.bannerImage = uploadResult.Location; // Save uploaded image URL
+        }
+
+        // Save data to MongoDB
         const collection = await connectToDb();
         await collection.updateOne(
-            {},
-            { $set: { bannerImage: imageUrl, hideShow: true } },
-            { upsert: true }
+            { productName: selectedProduct }, // Match by product name
+            { $set: updateData },
+            { upsert: true } // Create if it doesn't exist
         );
 
-        return NextResponse.json({ message: "Banner uploaded successfully", imageUrl });
+        return NextResponse.json({ message: "Product updated successfully", data: updateData });
     } catch (error) {
-        console.error("Error uploading banner image:", error);
+        console.error("Error updating product:", error);
         return NextResponse.json({ message: `An error occurred: ${error.message}` }, { status: 500 });
-    } finally {
-        await client.close();
-    }
-}
-
-export async function GET() {
-    try {
-        const collection = await connectToDb();
-        const data = await collection.findOne({}, { projection: { bannerImage: 1, hideShow: 1 } });
-
-        if (!data) {
-            return NextResponse.json({ message: "No banner data found" }, { status: 404 });
-        }
-
-        return NextResponse.json(data);
-    } catch (error) {
-        console.error("Error retrieving banner data:", error);
-        return NextResponse.json({ message: "An error occurred" }, { status: 500 });
-    } finally {
-        await client.close();
-    }
-}
-
-export async function PUT(req) {
-    try {
-        const body = await req.json();
-        const { hideShow } = body;
-
-        if (typeof hideShow !== "boolean") {
-            return NextResponse.json({ message: "hideShow must be a boolean" }, { status: 400 });
-        }
-
-        const collection = await connectToDb();
-        const result = await collection.updateOne(
-            {},
-            { $set: { hideShow } },
-            { upsert: true }
-        );
-
-        return NextResponse.json({ message: "Visibility updated successfully", result });
-    } catch (error) {
-        console.error("Error updating hideShow flag:", error);
-        return NextResponse.json({ message: "An error occurred" }, { status: 500 });
-    } finally {
-        await client.close();
     }
 }
