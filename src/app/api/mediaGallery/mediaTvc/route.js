@@ -25,11 +25,7 @@ export async function POST(req){
         const collection = await connectToDb();
         const Getdata = await collection.find({}).toArray();  
         
-        if(Getdata.length === 0){
-            const  result = await collection.insertOne(body);
-        }else{
-            return NextResponse.json({message: "data Already Exist"})
-        }
+        const  result = await collection.insertOne(body);
 
         return NextResponse.json(
             { message: "Data added successfully!",data: body }

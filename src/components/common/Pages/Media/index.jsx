@@ -74,7 +74,9 @@ const IMAGE_DATA = [
 export default function Media() {
   const OPTIONS = { loop: true };
   const [mediaData,setMediaData] = useState([])
-  const [mediaSection, setMediaSection] = useState([])
+  const [mediaSection, setMediaSection] = useState([]);
+  const [tvcHome, setTvcHome] = useState([])
+
 
   const [isMobile, setIsMobile] = useState(false); // State to track if the screen is mobile
 
@@ -120,6 +122,18 @@ export default function Media() {
       }
     }
     getMediaSection()
+
+    const tvcHome = async () => {
+      try {
+        const response = await axios.get("/api/HomePage/tvcHome");
+        setTvcHome(response.data)
+      }
+      catch (error) {
+        console.log("Error");
+
+      }
+    }
+    tvcHome()
 
   },[])
 

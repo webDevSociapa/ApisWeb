@@ -101,7 +101,6 @@ export default function HomePage() {
       try {
         const response = await axios.get("/api/HomePage/bannerText");
         setBannerText(response?.data[0].bannerText)
-        console.log("response111", response);
       }
       catch (error) {
         console.log("Error");
@@ -113,7 +112,6 @@ export default function HomePage() {
       try {
         const response = await axios.get("/api/HomePage/tasteProduct");
         setSlides(response.data)
-        console.log("response", response.data);
       }
       catch (error) {
         console.log("Error");
@@ -138,7 +136,6 @@ export default function HomePage() {
       try {
         const response = await axios.get("/api/HomePage/mediaSection");
         setMediaSection(response.data)
-        console.log("responseDataMedia", response);
       }
       catch (error) {
         console.log("Error");
@@ -150,7 +147,6 @@ export default function HomePage() {
       try {
         const response = await axios.get("/api/HomePage/tvcHome");
         setTvcHome(response.data)
-        console.log("responseData", response);
       }
       catch (error) {
         console.log("Error");
@@ -163,7 +159,6 @@ export default function HomePage() {
       try {
         const response = await axios.get("/api/HomePage/ourAvailability");
         setGetSliderLogo(response.data)
-        console.log("responseDatacatch", response);
       }
       catch (error) {
         console.log("Error");
