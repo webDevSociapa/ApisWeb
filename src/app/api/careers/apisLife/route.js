@@ -29,7 +29,7 @@ export async function POST(req) {
         const title = formData.get('title');
         const type = formData.get('type');
         const titleImage = formData.get('titleImage');
-        const imageGroup = formData.getAll('imageGroup'); // Get multiple files for imageGroup
+        const imageGroup = formData.getAll('imageGroup');
         
         if (!title || !titleImage || imageGroup.length === 0) {
             return NextResponse.json({ message: "Title, titleImage, and at least one image in imageGroup are required" }, { status: 400 });
@@ -38,7 +38,7 @@ export async function POST(req) {
         // Upload titleImage to S3
         const uniqueTitleFileName = `${uuidv4()}_${titleImage.name}`;
         const titleUploadParams = {
-            Bucket: bucketName, // Replac`e with your S3 bucket name
+            Bucket: bucketName,
             Key: `apisLife/${uniqueTitleFileName}`,
             Body: Buffer.from(await titleImage.arrayBuffer()),
             ContentType: titleImage.type
@@ -51,7 +51,7 @@ export async function POST(req) {
         for (let image of imageGroup) {
             const uniqueFileName = `${uuidv4()}_${image.name}`;
             const uploadParams = {
-                Bucket: bucketName, // Replace with your S3 bucket name
+                Bucket: bucketName,
                 Key: `apisLife/${uniqueFileName}`,
                 Body: Buffer.from(await image.arrayBuffer()),
                 ContentType: image.type
@@ -67,7 +67,7 @@ export async function POST(req) {
             title,
             type,
             titleImage: titleImageUrl,
-            imageGroup: imageUrls,  // Store multiple image URLs as an array
+            imageGroup: imageUrls,
         });
 
         return NextResponse.json({ message: "Blog data uploaded successfully", imageUrls });
@@ -80,24 +80,24 @@ export async function POST(req) {
 export async function PUT(req) {
     try {
         const formData = await req.formData();
-        const id = formData.get('id'); // You need a blogId to identify the blog post to update
+        const id = formData.get('id');
         const title = formData.get('title');
         const type = formData.get('type');
         const titleImage = formData.get('titleImage');
-        const imageGroup = formData.getAll('imageGroup'); // Get multiple files for imageGroup
+        const newImages = formData.getAll('newImages');
         
         if (!id || !title) {
             return NextResponse.json({ message: "ID and Title are required" }, { status: 400 });
         }
 
         let titleImageUrl = undefined;
-        let imageUrls = [];
+        let newImageUrls = [];
 
         // Check if titleImage is provided and upload it to S3
         if (titleImage) {
             const uniqueTitleFileName = `${uuidv4()}_${titleImage.name}`;
             const titleUploadParams = {
-                Bucket: bucketName, // Replace with your S3 bucket name
+                Bucket: bucketName,
                 Key: `apisLife/${uniqueTitleFileName}`,
                 Body: Buffer.from(await titleImage.arrayBuffer()),
                 ContentType: titleImage.type,
@@ -106,48 +106,48 @@ export async function PUT(req) {
             titleImageUrl = titleUploadResult.Location;
         }
 
-        // Check if imageGroup is provided and upload images to S3
-        if (imageGroup.length > 0) {
-            for (let image of imageGroup) {
+        // Upload new images to S3
+        if (newImages.length > 0) {
+            for (let image of newImages) {
                 const uniqueFileName = `${uuidv4()}_${image.name}`;
                 const uploadParams = {
-                    Bucket: bucketName, // Replace with your S3 bucket name
+                    Bucket: bucketName,
                     Key: `apisLife/${uniqueFileName}`,
                     Body: Buffer.from(await image.arrayBuffer()),
                     ContentType: image.type,
                 };
                 
                 const uploadResult = await s3.upload(uploadParams).promise();
-                imageUrls.push(uploadResult.Location);
+                newImageUrls.push(uploadResult.Location);
             }
         }
 
         // Connect to the database and update the blog data
         const collection = await connectToDb();
         const updateResult = await collection.updateOne(
-            { _id: new ObjectId(id) }, // Find the document by blogId
+            { _id: new ObjectId(id) },
             {
                 $set: {
                     title,
                     type,
-                    ...(titleImageUrl && { titleImage: titleImageUrl }), // Only set titleImage if it's updated
-                    ...(imageUrls.length > 0 && { imageGroup: imageUrls }), // Only set imageGroup if it's updated
+                    ...(titleImageUrl && { titleImage: titleImageUrl }),
                 },
+                $push: {
+                    imageGroup: { $each: newImageUrls }
+                }
             }
         );
 
         if (updateResult.matchedCount === 0) {
-            return NextResponse.json({ message: "No blog found with the provided ID" }, { status: 404 });
+            return NextResponse.json({ message: "No document found with the provided ID" }, { status: 404 });
         }
 
-        return NextResponse.json({ message: "Blog data updated successfully", imageUrls });
+        return NextResponse.json({ message: "Data updated successfully", newImageUrls });
     } catch (error) {
-        console.error("Error updating blog data:", error.message || error);
+        console.error("Error updating data:", error.message || error);
         return NextResponse.json({ message: `An error occurred: ${error.message}` }, { status: 500 });
     }
 }
-
-
 
 export async function GET(req) {
     try {
@@ -175,3 +175,27 @@ export async function GET(req) {
         return NextResponse.json({ message: "An error occurred" }, { status: 500 });
     }
 }
+
+export async function DELETE(req) {
+    try {
+        const { searchParams } = new URL(req.url);
+        const id = searchParams.get("id");
+
+        if (!id) {
+            return NextResponse.json({ message: "ID is required" }, { status: 400 });
+        }
+
+        const collection = await connectToDb();
+
+        const result = await collection.deleteOne({ _id: new ObjectId(id) });
+
+        if (result.deletedCount === 0) {
+            return NextResponse.json({ message: "No document found with the provided ID" }, { status: 404 });
+        }
+
+        return NextResponse.json({ message: "Document deleted successfully" });
+    } catch (error) {
+        return NextResponse.json({ message: "An error occurred" }, { status: 500 });
+    }
+}
+

@@ -1,4 +1,4 @@
-import { MongoClient } from "mongodb";
+import { MongoClient, ObjectId } from "mongodb";
 import { NextResponse } from "next/server";
 import AWS from 'aws-sdk';
 
@@ -69,28 +69,29 @@ export async function GET(req) {
 }
 
 // PUT method to update data
+// PUT method to update data
 export async function PUT(req) {
     try {
         const body = await req.json();
-        const {visionContent, missionContent, valuesContent } = body;
+        const { visionContent, missionContent, valuesContent, id } = body;
 
         // Validate if required fields are present
-        if ((!visionContent && !missionContent && !valuesContent)) {
+        if (!id || !visionContent || !missionContent || !valuesContent) {
             return NextResponse.json(
-                { message: "Type and content are required to update." },
+                { message: "ID and all content fields are required to update." },
                 { status: 400 }
             );
         }
 
         const collection = await connectToDb();
         const result = await collection.updateOne(
-            {  },
-            { $set: {  visionContent, missionContent, valuesContent } }
+            { _id: new ObjectId(id) },  // Use the id to find the document
+            { $set: { visionContent, missionContent, valuesContent } }
         );
 
         if (result.modifiedCount === 0) {
             return NextResponse.json(
-                { message: "No document found with the provided type." },
+                { message: "No document found with the provided ID." },
                 { status: 404 }
             );
         }

@@ -17,10 +17,30 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
 
 const MainFooter = () => {
   const routerPath = usePathname();
   const locale = routerPath.split("/")[1];
+
+
+  const [contactDetails,setContactDetails] = useState([])
+
+
+  useEffect(()=>{
+    const fetchData = async()=>{
+      try {
+        const response = await axios.get('/api/contactDetails');
+        console.log("responseeeeee",response);
+
+        setContactDetails(response.data[0])
+
+      } catch (error) {
+        
+      }
+    }
+    fetchData()
+  },[])
 
 
   return (
