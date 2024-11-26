@@ -1,4 +1,4 @@
-import { MongoClient } from 'mongodb';
+import { MongoClient, ObjectId } from 'mongodb';
 import { NextResponse } from 'next/server';
 import AWS from 'aws-sdk';
 import { v4 as uuidv4 } from 'uuid';
@@ -77,4 +77,28 @@ export async function GET(req) {
     // } finally {
     //     await client.close();
     // }
+}
+
+export async function DELETE(req) {
+  try {
+    const { searchParams } = new URL(req.url);
+    const id = searchParams.get('id');
+
+    if (!id) {
+      return NextResponse.json({ message: "Missing required field: id" }, { status: 400 });
+    }
+
+    const collection = await connectToDb();
+
+    // Delete the document from MongoDB
+    const result = await collection.deleteOne({ _id: new ObjectId(id) });
+
+    if (result.deletedCount === 0) {
+      return NextResponse.json({ message: "Slide not found" }, { status: 404 });
+    }
+
+    return NextResponse.json({ message: "Slide deleted successfully" });
+  } catch (error) {
+    return NextResponse.json({ message: error.message }, { status: 500 });
+  }
 }

@@ -52,13 +52,11 @@ export async function POST(req) {
         { status: 400 }
       );
     }
-    
-
     const updatedProducts = await Promise.all(
       products.map(async (product) => {
-        const imageFields = ["img", "back_img", "product_img_1", "product_img_2"];
+        const imageFields =  ["img", "back_img", "product_img_1", "product_img_2"];
         const updatedProduct = { ...product };
-
+        console.log("updatedProduct",updatedProduct);
         for (const field of imageFields) {
           const image = formData.get(field);
           if (image) {
@@ -71,12 +69,15 @@ export async function POST(req) {
             };
             const uploadResult = await s3.upload(uploadParams).promise();
             updatedProduct[field] = uploadResult.Location;
+            console.log("uploadResult",uploadResult);
+            
           }
         }
         return updatedProduct;
       })
     );
-
+    console.log("updatedProducts",updatedProducts);
+    
     const collection = await connectToDb();
     const newProduct = {
       title,
@@ -84,6 +85,9 @@ export async function POST(req) {
       // bannerImage: bannerImageUrl,
       createdAt: new Date(),
     };
+
+    console.log("newProduct",newProduct);
+    
 
     // Insert product details and retrieve the inserted _id
     const result = await collection.insertOne(newProduct);

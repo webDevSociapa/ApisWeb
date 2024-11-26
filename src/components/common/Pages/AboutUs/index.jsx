@@ -25,6 +25,7 @@ export default function OurBrand() {
   const [apisDataNumber, setApisDataNumber] = useState()
   const [aboutBanner, setAboutBanner] = useState()
   const [ourValues, setOurValues] = useState([])
+  const [ourDirector,setOurDirector] = useState([])
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -108,6 +109,9 @@ export default function OurBrand() {
   }, [])
 
 
+  
+
+
   useEffect(() => {
     // Function to fetch data for API calls
     const fetchData = async () => {
@@ -116,13 +120,18 @@ export default function OurBrand() {
         setLoading(true);
 
         // Making all API calls concurrently with Promise.all
-        const [apisDataResponse, bannerResponse, ourValuesResponse] = await Promise.all([
+        const [apisDataResponse, bannerResponse, ourValuesResponse, ourDirectorResponse] = await Promise.all([
           axios.get('/api/AboutUs/ApisDataNumbers'),
           axios.get('/api/AboutUs/banner'),
           axios.get('/api/AboutUs/ourValues'),
+          axios.get('/api/AboutUs/ourDirectors'),
         ]);
 
+        console.log("ourDirectorResponse",ourDirectorResponse);
+        
+
         // Update state with responses
+        setOurDirector(ourDirectorResponse.data)
         setApisDataNumber(apisDataResponse.data);
         setAboutBanner(bannerResponse.data.bannerImage);
         setOurValues(ourValuesResponse.data[0]);
@@ -153,6 +162,7 @@ export default function OurBrand() {
   if (error) {
     return <div>{error}</div>;
   }
+  console.log("ourDirector[0]",ourDirector.data[0]);
 
   return (
     <>
@@ -274,8 +284,10 @@ export default function OurBrand() {
             <div className="w-full md:w-1/2 flex items-center justify-center">
               <div className="relative w-[300px] md:w-[440px] flex justify-center items-center">
                 <Image
-                  src={VimalAnand}
+                  src={ourDirector.data[0].AddImage}
                   alt="Banner Image"
+                  width={240}
+                  height={240}
                   className="object-cover h-[240px] w-[240px] md:h-[416px] md:w-[342px] z-50 cursor-pointer"
                 />
                 <Image
@@ -291,13 +303,13 @@ export default function OurBrand() {
             </div>
             <div className="w-full mt-4 md:mt-0 md:w-1/2 z-10 flex flex-col gap-2 items-center justify-center">
               <h3 className="text-center font-bold text-[#9F7B49] text-[18px] md:text-[24px] font-literata">
-                VIMAL ANAND
+               {ourDirector.data[0].Name}
               </h3>
               <p className="text-center text-[#373737] font-normal text-[16px] md:text-[19px] font-literata">
-                Managing Director
+               {ourDirector.data[0].Designation}
               </p>
               <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost text-justify">
-                Driven by his passion and conviction, Mr. Vimal Anand has received formal training in beekeeping and Honey processing from the University of Warmia Olystyn Poland. Gradually, he built a global presence & a robust structure supported by a state-of-the-art production factory to cater to the global markets.
+                {ourDirector.data[0].Description}
               </p>
             </div>
           </div>
@@ -309,20 +321,22 @@ export default function OurBrand() {
           />
           <div className="w-full mt-8 md:w-1/2 z-10 flex flex-col gap-2 items-center justify-center">
             <h3 className="text-center font-bold text-[#9F7B49] text-[18px] md:text-[24px] font-literata">
-              AMIT ANAND
+            {ourDirector.data[1].Name}
             </h3>
             <p className="text-center text-[#373737] font-normal text-[16px] md:text-[19px] font-literata">
-              Managing Director
+            {ourDirector.data[1].Designation}
             </p>
             <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost text-justify">
-              A Delhi University Graduate from Kirori Mal College in Commerce, he spearheads key functions of Overall Plant Management; Human Resources; and Finance. The Managing Director of the company and the younger one of the two siblings, he has played the perfect foil to the elder in initiating the GREEN FIELD initiative of the factory in Roorkee. Leading from the front in all factory operations, a person with hands-on expertise in executing all details at the plant level.
+            {ourDirector.data[1].Description}
             </p>
           </div>
           <div className="w-full mt-4 md:mt-0 md:w-1/2 flex items-center justify-center">
             <div className="relative w-[300px] md:w-[440px] flex justify-center items-center">
               <Image
-                src={AmitAnand}
-                alt="Banner Image"
+                  src={ourDirector.data[1].AddImage}
+                  height={240}
+                  width={240}
+                  alt="Banner Image"
                 className="object-cover z-50 absolute h-[240px] w-[240px] md:h-[416px] md:w-[342px] cursor-pointer"
               />
               <Image
