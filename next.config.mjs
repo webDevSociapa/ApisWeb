@@ -68,7 +68,7 @@ const nextConfig = {
     // Determine the allowed origin based on the environment
     const allowedOrigin =
       process.env.NODE_ENV === 'production'
-        ? 'https://apis-admin.vercel.app/' // Replace with the live admin domain
+        ? 'https://apis-admin-4vwti7vaj-webdevsociapas-projects.vercel.app/' // Replace with the live admin domain
         : 'http://localhost:3001'; // Development admin panel domain
 
     return [
