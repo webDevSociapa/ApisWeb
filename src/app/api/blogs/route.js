@@ -71,7 +71,6 @@ export async function PUT(req) {
 
         // Destructure the fields from the form data
         const { id, blogTitle, contentData, blogDate, desc, hideShow } = Object.fromEntries(formData.entries());
-        
         // Get the blog image from form data (optional)
         const blogImage = formData.get('blogImage');
 

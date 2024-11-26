@@ -34,9 +34,8 @@ export async function POST(req) {
         const collection = await connectToDb();
         const user = await collection.findOne({ username });
 
-        console.log("User found:", user);
 
-        if (!user) {
+        if (!user) {                        
             console.error("User not found");
             return NextResponse.json({ message: "Invalid credentials" }, { status: 401 });
         }
