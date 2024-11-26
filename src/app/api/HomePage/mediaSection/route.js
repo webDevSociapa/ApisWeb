@@ -147,3 +147,28 @@ export async function GET(req) {
     return NextResponse.json({ message: "An error occurred" }, { status: 500 });
   }
 }
+
+
+export async function DELETE(req) {
+  try {
+    const { searchParams } = new URL(req.url);
+    const id = searchParams.get('id');
+
+    if (!id) {
+      return NextResponse.json({ message: "Missing required field: id" }, { status: 400 });
+    }
+
+    const collection = await connectToDb();
+
+    // Delete the document from MongoDB
+    const result = await collection.deleteOne({ _id: new ObjectId(id) });
+
+    if (result.deletedCount === 0) {
+      return NextResponse.json({ message: "Slide not found" }, { status: 404 });
+    }
+
+    return NextResponse.json({ message: "Slide deleted successfully" });
+  } catch (error) {
+    return NextResponse.json({ message: error.message }, { status: 500 });
+  }
+}
