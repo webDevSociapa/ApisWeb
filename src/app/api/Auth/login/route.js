@@ -3,16 +3,36 @@ import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 
 const uri = "mongodb+srv://webdev:2OmPVj8DUdEaU1wR@apisindia.38dfp.mongodb.net";
-const client = new MongoClient(uri, { useUnifiedTopology: true });
 const dbName = "UserAuth";
 const collectionName = "signUp";
 
+let cachedClient = null;
+let cachedDb = null;
+
 async function connectToDb() {
-    if (!client.isConnected) {
-        await client.connect();
+    if (cachedClient && cachedDb) {
+        return cachedDb.collection(collectionName);
     }
-    const database = client.db(dbName);
-    return database.collection(collectionName);
+
+    const client = await MongoClient.connect(uri, { useUnifiedTopology: true });
+    const db = client.db(dbName);
+
+    cachedClient = client;
+    cachedDb = db;
+
+    return db.collection(collectionName);
+}
+
+// Reusable CORS headers
+const corsHeaders = {
+    "Access-Control-Allow-Origin": "*", // Update with your specific origin in production
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type, Authorization",
+};
+
+// Handle errors globally
+function handleErrorResponse(res, error, status = 500) {
+    return NextResponse.json({ message: error.message }, { status, headers: corsHeaders });
 }
 
 // POST: Login User
@@ -21,43 +41,37 @@ export async function POST(req) {
         const body = await req.json();
         const { username, password } = body;
 
-        console.log("Request received with:", { username, password });
-
-        if (!username || !password) {
-            console.error("Missing username or password");
-            return NextResponse.json(
-                { message: "Please enter username and password" },
-                { status: 400 }
-            );
+        // CORS Preflight Handling
+        if (req.method === "OPTIONS") {
+            return NextResponse.json({}, { status: 204, headers: corsHeaders });
         }
 
         const collection = await connectToDb();
         const user = await collection.findOne({ username });
 
-
-        if (!user) {                        
-            console.error("User not found");
-            return NextResponse.json({ message: "Invalid credentials" }, { status: 401 });
+        if (!user) {
+            return NextResponse.json(
+                { message: "Invalid credentials" },
+                { status: 401, headers: corsHeaders }
+            );
         }
 
         const isPasswordValid = await bcrypt.compare(password, user.password);
-        console.log("Password valid:", isPasswordValid);
-
         if (!isPasswordValid) {
-            console.error("Invalid password");
-            return NextResponse.json({ message: "Invalid credentials" }, { status: 401 });
+            return NextResponse.json(
+                { message: "Invalid credentials" },
+                { status: 401, headers: corsHeaders }
+            );
         }
 
-        return NextResponse.json({
-            message: "Login successful",
-            user: { username: user.username },
-        });
+        return NextResponse.json(
+            { message: "Login successful", user: { username: user.username } },
+            { status: 200, headers: corsHeaders }
+        );
     } catch (error) {
-        console.error("Error during login:", error);
-        return NextResponse.json({ message: error.message }, { status: 500 });
+        return handleErrorResponse(null, error);
     }
 }
-
 
 // PUT: Create User
 export async function PUT(req) {
@@ -80,13 +94,13 @@ export async function PUT(req) {
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);
-        const result = await collection.insertOne({ username, password: hashedPassword });
+        await collection.insertOne({ username, password: hashedPassword });
 
-        return NextResponse.json({
-            message: "User created successfully!",
-            data: { username },
-        });
+        return NextResponse.json(
+            { message: "User created successfully!" },
+            { status: 201 }
+        );
     } catch (error) {
-        return NextResponse.json({ message: error.message }, { status: 500 });
+        return handleErrorResponse(null, error);
     }
 }
