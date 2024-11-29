@@ -27,6 +27,7 @@ async function connectToDb() {
 function getAllowedOrigin(request) {
     const origin = request.headers.get("origin");
     const allowedOrigins = [
+        "http://localhost:3000",
         "http://localhost:3001",
         "https://apis-web-dkcu.vercel.app",
         // Add any other allowed origins here
@@ -48,6 +49,7 @@ function getCorsHeaders(request) {
 
 // Handle errors globally
 function handleErrorResponse(request, error, status = 500) {
+    console.error("Error:", error);
     return NextResponse.json(
         { message: error.message },
         { status, headers: getCorsHeaders(request) }
@@ -126,4 +128,3 @@ export async function PUT(request) {
         return handleErrorResponse(request, error);
     }
 }
-
