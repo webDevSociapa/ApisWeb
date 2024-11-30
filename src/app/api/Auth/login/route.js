@@ -23,48 +23,30 @@ async function connectToDb() {
     return db.collection(collectionName);
 }
 
-// Get the allowed origin based on environment
-function getAllowedOrigin(request) {
-    const origin = request.headers.get("origin");
-    const allowedOrigins = [
-        "http://localhost:3000",
-        "http://localhost:3001",
-        "https://apis-web-dkcu.vercel.app",
-        // Add any other allowed origins here
-    ];
+// Reusable CORS headers
+const corsHeaders = {
+    "Access-Control-Allow-Origin": "*", // Update this in production with your frontend origin
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type, Authorization",
+};
 
-    return allowedOrigins.includes(origin) ? origin : allowedOrigins[0];
-}
-
-// Reusable CORS headers function
-function getCorsHeaders(request) {
-    const origin = getAllowedOrigin(request);
-    return {
-        "Access-Control-Allow-Origin": origin,
-        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization",
-        "Access-Control-Allow-Credentials": "true",
-    };
-}
-
-// Handle errors globally
-function handleErrorResponse(request, error, status = 500) {
-    console.error("Error:", error);
+// Global error handler
+function handleErrorResponse(res, error, status = 500) {
     return NextResponse.json(
-        { message: error.message },
-        { status, headers: getCorsHeaders(request) }
+        { message: error.message || "Internal Server Error" },
+        { status, headers: corsHeaders }
     );
 }
 
-// OPTIONS: Handle CORS preflight
-export async function OPTIONS(request) {
-    return NextResponse.json({}, { headers: getCorsHeaders(request) });
+// Handle all OPTIONS requests for CORS preflight
+export async function OPTIONS() {
+    return NextResponse.json({}, { status: 204, headers: corsHeaders });
 }
 
 // POST: Login User
-export async function POST(request) {
+export async function POST(req) {
     try {
-        const body = await request.json();
+        const body = await req.json();
         const { username, password } = body;
 
         const collection = await connectToDb();
@@ -73,7 +55,7 @@ export async function POST(request) {
         if (!user) {
             return NextResponse.json(
                 { message: "Invalid credentials" },
-                { status: 401, headers: getCorsHeaders(request) }
+                { status: 401, headers: corsHeaders }
             );
         }
 
@@ -81,29 +63,29 @@ export async function POST(request) {
         if (!isPasswordValid) {
             return NextResponse.json(
                 { message: "Invalid credentials" },
-                { status: 401, headers: getCorsHeaders(request) }
+                { status: 401, headers: corsHeaders }
             );
         }
 
         return NextResponse.json(
             { message: "Login successful", user: { username: user.username } },
-            { status: 200, headers: getCorsHeaders(request) }
+            { status: 200, headers: corsHeaders }
         );
     } catch (error) {
-        return handleErrorResponse(request, error);
+        return handleErrorResponse(null, error);
     }
 }
 
 // PUT: Create User
-export async function PUT(request) {
+export async function PUT(req) {
     try {
-        const body = await request.json();
+        const body = await req.json();
         const { username, password } = body;
 
         if (!username || !password) {
             return NextResponse.json(
                 { message: "Username and password are required" },
-                { status: 400, headers: getCorsHeaders(request) }
+                { status: 400, headers: corsHeaders }
             );
         }
 
@@ -113,7 +95,7 @@ export async function PUT(request) {
         if (existingUser) {
             return NextResponse.json(
                 { message: "Username already exists" },
-                { status: 400, headers: getCorsHeaders(request) }
+                { status: 400, headers: corsHeaders }
             );
         }
 
@@ -122,9 +104,9 @@ export async function PUT(request) {
 
         return NextResponse.json(
             { message: "User created successfully!" },
-            { status: 201, headers: getCorsHeaders(request) }
+            { status: 201, headers: corsHeaders }
         );
     } catch (error) {
-        return handleErrorResponse(request, error);
+        return handleErrorResponse(null, error);
     }
 }
