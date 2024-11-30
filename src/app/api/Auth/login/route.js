@@ -25,14 +25,22 @@ async function connectToDb() {
 
 // Reusable CORS headers
 const corsHeaders = {
-    "Access-Control-Allow-Origin": "*", // Update with your specific origin in production
+    "Access-Control-Allow-Origin": "*", // Update this in production with your frontend origin
     "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type, Authorization",
 };
 
-// Handle errors globally
+// Global error handler
 function handleErrorResponse(res, error, status = 500) {
-    return NextResponse.json({ message: error.message }, { status, headers: corsHeaders });
+    return NextResponse.json(
+        { message: error.message || "Internal Server Error" },
+        { status, headers: corsHeaders }
+    );
+}
+
+// Handle all OPTIONS requests for CORS preflight
+export async function OPTIONS() {
+    return NextResponse.json({}, { status: 204, headers: corsHeaders });
 }
 
 // POST: Login User
@@ -40,11 +48,6 @@ export async function POST(req) {
     try {
         const body = await req.json();
         const { username, password } = body;
-
-        // CORS Preflight Handling
-        if (req.method === "OPTIONS") {
-            return NextResponse.json({}, { status: 204, headers: corsHeaders });
-        }
 
         const collection = await connectToDb();
         const user = await collection.findOne({ username });
@@ -82,7 +85,7 @@ export async function PUT(req) {
         if (!username || !password) {
             return NextResponse.json(
                 { message: "Username and password are required" },
-                { status: 400 }
+                { status: 400, headers: corsHeaders }
             );
         }
 
@@ -90,7 +93,10 @@ export async function PUT(req) {
         const existingUser = await collection.findOne({ username });
 
         if (existingUser) {
-            return NextResponse.json({ message: "Username already exists" }, { status: 400 });
+            return NextResponse.json(
+                { message: "Username already exists" },
+                { status: 400, headers: corsHeaders }
+            );
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);
@@ -98,7 +104,7 @@ export async function PUT(req) {
 
         return NextResponse.json(
             { message: "User created successfully!" },
-            { status: 201 }
+            { status: 201, headers: corsHeaders }
         );
     } catch (error) {
         return handleErrorResponse(null, error);
