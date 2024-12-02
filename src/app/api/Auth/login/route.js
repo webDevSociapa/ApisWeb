@@ -29,7 +29,7 @@ function getAllowedOrigin(request) {
     const allowedOrigins = [
         "http://localhost:3000",
         "http://localhost:3001",
-        "https://apis-web-dkcu.vercel.app",
+        "https://apis-web-ws6c.vercel.app/",
         // Add any other allowed origins here
     ];
 
