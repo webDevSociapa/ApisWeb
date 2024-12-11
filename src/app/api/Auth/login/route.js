@@ -1,5 +1,4 @@
 import { MongoClient } from "mongodb";
-import NextCors from 'nextjs-cors';
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 
@@ -24,25 +23,29 @@ async function connectToDb() {
     return db.collection(collectionName);
 }
 
+// Reusable CORS headers
+const corsHeaders = {
+    "Access-Control-Allow-Origin": "*", // Update this in production with your frontend origin
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type, Authorization",
+};
+
 // Global error handler
-function handleErrorResponse(error, status = 500) {
+function handleErrorResponse(res, error, status = 500) {
     return NextResponse.json(
         { message: error.message || "Internal Server Error" },
-        { status, headers: { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS", "Access-Control-Allow-Headers": "Content-Type, Authorization" } }
+        { status, headers: corsHeaders }
     );
 }
 
 // Handle all OPTIONS requests for CORS preflight
 export async function OPTIONS() {
-    return NextResponse.json({}, { status: 204, headers: { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS", "Access-Control-Allow-Headers": "Content-Type, Authorization" } });
+    return NextResponse.json({}, { status: 204, headers: corsHeaders });
 }
 
 // POST: Login User
 export async function POST(req) {
     try {
-        // Apply CORS handling before processing the request
-        await NextCors(req);
-
         const body = await req.json();
         const { username, password } = body;
 
@@ -52,7 +55,7 @@ export async function POST(req) {
         if (!user) {
             return NextResponse.json(
                 { message: "Invalid credentials" },
-                { status: 401, headers: { "Access-Control-Allow-Origin": "*" } }
+                { status: 401, headers: corsHeaders }
             );
         }
 
@@ -60,32 +63,29 @@ export async function POST(req) {
         if (!isPasswordValid) {
             return NextResponse.json(
                 { message: "Invalid credentials" },
-                { status: 401, headers: { "Access-Control-Allow-Origin": "*" } }
+                { status: 401, headers: corsHeaders }
             );
         }
 
         return NextResponse.json(
             { message: "Login successful", user: { username: user.username } },
-            { status: 200, headers: { "Access-Control-Allow-Origin": "*" } }
+            { status: 200, headers: corsHeaders }
         );
     } catch (error) {
-        return handleErrorResponse(error);
+        return handleErrorResponse(null, error);
     }
 }
 
 // PUT: Create User
 export async function PUT(req) {
     try {
-        // Apply CORS handling before processing the request
-        await NextCors(req);
-
         const body = await req.json();
         const { username, password } = body;
 
         if (!username || !password) {
             return NextResponse.json(
                 { message: "Username and password are required" },
-                { status: 400, headers: { "Access-Control-Allow-Origin": "*" } }
+                { status: 400, headers: corsHeaders }
             );
         }
 
@@ -95,7 +95,7 @@ export async function PUT(req) {
         if (existingUser) {
             return NextResponse.json(
                 { message: "Username already exists" },
-                { status: 400, headers: { "Access-Control-Allow-Origin": "*" } }
+                { status: 400, headers: corsHeaders }
             );
         }
 
@@ -104,9 +104,9 @@ export async function PUT(req) {
 
         return NextResponse.json(
             { message: "User created successfully!" },
-            { status: 201, headers: { "Access-Control-Allow-Origin": "*" } }
+            { status: 201, headers: corsHeaders }
         );
     } catch (error) {
-        return handleErrorResponse(error);
+        return handleErrorResponse(null, error);
     }
 }
