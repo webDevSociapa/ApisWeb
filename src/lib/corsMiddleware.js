@@ -1,27 +1,35 @@
-import Cors from "cors";
+import { NextResponse } from 'next/server';
 
-// Initialize CORS middleware
-const cors = Cors({
-    origin: [
-        "http://localhost:3000", // Website frontend (development)
-        "http://localhost:3001", // Admin frontend (development)
-        "https://apis-web-dkcu.vercel.app/", // Website production domain
-        "https://apis-admin-m46egld9m-webdevsociapas-projects.vercel.app/login", // Admin production domain
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true, // Include credentials if needed (e.g., cookies or authorization headers)
-});
+const allowedOrigins = ['http://localhost:3000', 'https://your-admin-domain.com'];
 
-export function runMiddleware(req, res, fn) {
-    return new Promise((resolve, reject) => {
-        fn(req, res, (result) => {
-            if (result instanceof Error) {
-                return reject(result);
-            }
-            return resolve(result);
-        });
+export function middleware(request) {
+  const origin = request.headers.get('origin');
+  const isAllowedOrigin = allowedOrigins.includes(origin);
+
+  if (request.method === 'OPTIONS') {
+    return NextResponse.json({}, {
+      status: 200,
+      headers: {
+        'Access-Control-Allow-Origin': isAllowedOrigin ? origin : allowedOrigins[0],
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+        'Access-Control-Max-Age': '86400',
+      },
     });
+  }
+
+  const response = NextResponse.next();
+
+  if (isAllowedOrigin) {
+    response.headers.set('Access-Control-Allow-Origin', origin);
+  }
+  response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
+  return response;
 }
 
-export default cors;
+export const config = {
+  matcher: '/api/:path*',
+};
+
