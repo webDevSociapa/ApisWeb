@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const allowedOrigins = ['http://localhost:3000', 'https://apis-web-iuuw.vercel.app/'];
+const allowedOrigins = ['http://localhost:3001', 'https://apis-web-iuuw.vercel.app/'];
 
 export function middleware(request) {
   const origin = request.headers.get('origin');
