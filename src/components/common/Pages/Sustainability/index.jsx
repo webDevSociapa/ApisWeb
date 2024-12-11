@@ -93,10 +93,7 @@ export default function Sustainability() {
       }
     }
     fetchSustainBilty()
-  },[])
-
-  console.log("sustainBiltyData",sustainBiltyData);
-  
+  },[])  
 
   return (
     <>

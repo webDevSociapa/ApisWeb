@@ -67,9 +67,8 @@ export default class Carasol extends Component {
             {banners.map((_, index) => (
               <div
                 key={index}
-                className={`scroll-pill ${
-                  index === currentSlide ? "active" : ""
-                }`}
+                className={`scroll-pill ${index === currentSlide ? "active" : ""
+                  }`}
                 onClick={() => this.carouselRef.current.moveTo(index)}
               />
             ))}
@@ -79,3 +78,4 @@ export default class Carasol extends Component {
     );
   }
 }
+  

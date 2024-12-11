@@ -125,10 +125,7 @@ export default function OurBrand() {
           axios.get('/api/AboutUs/banner'),
           axios.get('/api/AboutUs/ourValues'),
           axios.get('/api/AboutUs/ourDirectors'),
-        ]);
-
-        console.log("ourDirectorResponse",ourDirectorResponse);
-        
+        ]);        
 
         // Update state with responses
         setOurDirector(ourDirectorResponse.data)

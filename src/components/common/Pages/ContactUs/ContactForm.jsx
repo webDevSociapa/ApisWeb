@@ -12,9 +12,6 @@ const ContactForm = () => {
   });
   const [popupMessage, setPopupMessage] = useState('');
   const [messageInfo, setMessageInfo] = useState(false);
-  const [headOffice,setHeadOffice] = useState("")
-  const [regOffice,RegOffice] = useState("")
-  const [contactDetails,setContactDetails] = useState("")
 
   const handleChange = (e) => {
     const { name, value } = e.target;

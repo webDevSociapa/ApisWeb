@@ -18,7 +18,7 @@ import EngageMent1 from '@/assets/images/Careers/engageMent1.webp'
 import ImageBanner from "../../Layout/Banner";
 import Image from "next/image";
 import Link from "next/link";
-import {useRouter } from "next/navigation"
+import { useRouter } from "next/navigation"
 import { useState, useRef, useEffect } from "react";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
@@ -26,7 +26,7 @@ import axios from "axios";
 import employeAward from '@/assets/images/Careers/employeAward.png'
 
 const CAREER_DATA = [
-  {     
+  {
     img: employeAward,
     title: "Employ Award",
     type: 0,
@@ -193,8 +193,8 @@ export default function Careers() {
   const router = useRouter()
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState(null);
-  const [jobOpening,setJobOpening] = useState([])
-  const [apisLifeData,setApisLifeData] = useState([])
+  const [jobOpening, setJobOpening] = useState([])
+  const [apisLifeData, setApisLifeData] = useState([])
   // const [phone, setPhone] = useState("");
   const [showSuccess, setShowSuccess] = useState(false);
   const modalRef = useRef(null);
@@ -206,7 +206,7 @@ export default function Careers() {
     resume: 'null',
   });
 
-  
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -235,7 +235,7 @@ export default function Careers() {
 
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
-    
+
     setFormData(prevData => ({
       ...prevData,
       [name]: type === 'file' ? files[0] : value
@@ -249,27 +249,27 @@ export default function Careers() {
     }));
   };
 
-    
+
   useEffect(() => {
-    const CareersData = async()=>{
-      try{
+    const CareersData = async () => {
+      try {
         const response = await axios.get("/api/careers/jobOpening/");
         setJobOpening(response.data)
-        console.log("responseDatajobbb",response.data);
+        console.log("responseDatajobbb", response.data);
       }
-      catch(error){
+      catch (error) {
         console.log("Error");
       }
     }
     CareersData()
 
-    const fetchLifeApis = async() =>{
+    const fetchLifeApis = async () => {
       try {
-        const response =  await axios.get("/api/careers/apisLife");
-        console.log("responseLifeAt",response);
+        const response = await axios.get("/api/careers/apisLife");
+        console.log("responseLifeAt", response);
         setApisLifeData(response.data)
       } catch (error) {
-        
+
       }
     }
     fetchLifeApis()
@@ -290,7 +290,7 @@ export default function Careers() {
     router.push(`/careers/careerGallary?title=${encodeURIComponent(item.title)}&gallery=${item.gallery}&titleImage=${encodeURIComponent(item.titleImage)}&imageGroup= ${encodeURIComponent(item.imageGroup)}`);
   };
 
-  
+
   const handleApplyNow = (job) => {
     setSelectedJob(job);
     setIsModalOpen(true);
@@ -310,8 +310,8 @@ export default function Careers() {
           are embraced with enthusiasm.
         </p>
       </div>
-     {/* <Link href={"/careers/careerGallary"}> */}
-     <div className="flex mt-7 md:mt-14 flex-wrap items-center justify-center gap-5 md:gap-10 w-[80%] m-auto">
+      {/* <Link href={"/careers/careerGallary"}> */}
+      <div className="flex mt-7 md:mt-14 flex-wrap items-center justify-center gap-5 md:gap-10 w-[80%] m-auto">
         {apisLifeData?.map((itm, index) => (
           <div key={index} className="border p-2 md:p-3 px-1 border-[#85673D]" onClick={() => handleImageClick(itm)}>
             {itm.type === "1" && (
@@ -336,7 +336,7 @@ export default function Careers() {
           </div>
         ))}
       </div>
-     {/* </Link> */}
+      {/* </Link> */}
       <div id="join-us" className="w-full mt-14 flex flex-col items-center justify-center">
         <div className="bg-[#9F7B49] flex flex-col items-center justify-center w-full p-2 md:p-5">
           <div className="bg-[#FFFBF6] w-full py-6 md:py-12 overflow-hidden flex flex-col items-center gap-6 md:gap-12 justify-center relative">
@@ -366,39 +366,39 @@ export default function Careers() {
                   </tr>
                 </thead>
                 <tbody>
-                {jobOpening ? (
-  jobOpening.length > 0 ? (
-    jobOpening.map((job, index) => (
-      <tr key={index} className={index % 2 === 0 ? "bg-[#FFFBF6]" : "bg-[#F5EBD8]"}>
-        <td className="p-2 border">{job.position}</td>
-        <td className="p-2 border">{job.location}</td>
-        <td className="p-2 border">{job.territory}</td>
-        <td className="p-2 border">{job.experience}</td>
-        <td className="p-2 border">{job.relevantExp}</td>
-        <td className="p-2 border">{job.ctc}</td>
-        <td className="p-2 border">{job.education}</td>
-        <td className="p-2 border whitespace-pre-line">{job.skills}</td>
-        <td className="p-2 border">
-          <button
-            onClick={() => handleApplyNow(job)}
-            className="bg-[#9F7B49] text-white px-2 py-1 md:px-4 md:py-2 rounded text-xs md:text-base"
-            data-backdrop="static"
-          >
-            Apply Now
-          </button>
-        </td>
-      </tr>
-    ))
-  ) : (
-    <tr>
-    <td colSpan="9" className="text-center p-4">Loading Job Portal...</td>
-    </tr>
-  )
-) : (
-  <tr>
-    <td colSpan="9" className="text-center p-4">Loading Job Portal...</td>
-  </tr>
-)}
+                  {jobOpening ? (
+                    jobOpening.length > 0 ? (
+                      jobOpening.map((job, index) => (
+                        <tr key={index} className={index % 2 === 0 ? "bg-[#FFFBF6]" : "bg-[#F5EBD8]"}>
+                          <td className="p-2 border">{job.position}</td>
+                          <td className="p-2 border">{job.location}</td>
+                          <td className="p-2 border">{job.territory}</td>
+                          <td className="p-2 border">{job.experience}</td>
+                          <td className="p-2 border">{job.relevantExp}</td>
+                          <td className="p-2 border">{job.ctc}</td>
+                          <td className="p-2 border">{job.education}</td>
+                          <td className="p-2 border whitespace-pre-line">{job.skills}</td>
+                          <td className="p-2 border">
+                            <button
+                              onClick={() => handleApplyNow(job)}
+                              className="bg-[#9F7B49] text-white px-2 py-1 md:px-4 md:py-2 rounded text-xs md:text-base"
+                              data-backdrop="static"
+                            >
+                              Apply Now
+                            </button>
+                          </td>
+                        </tr>
+                      ))
+                    ) : (
+                      <tr>
+                        <td colSpan="9" className="text-center p-4">Loading Job Portal...</td>
+                      </tr>
+                    )
+                  ) : (
+                    <tr>
+                      <td colSpan="9" className="text-center p-4">Loading Job Portal...</td>
+                    </tr>
+                  )}
 
                 </tbody>
               </table>
@@ -415,7 +415,7 @@ export default function Careers() {
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label className="block mb-2 text-sm md:text-base">Select profile applied for</label>
-                <select 
+                <select
                   className="w-full p-2 border rounded text-sm md:text-base"
                   onChange={handleChange}
                   value={formData.selectJob}
@@ -431,25 +431,25 @@ export default function Careers() {
               </div>
               <div className="mb-4">
                 <label className="block mb-2 text-sm md:text-base">Full Name</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   name="fullName"
-                  className="w-full p-2 border rounded text-sm md:text-base" 
-                  placeholder="Enter your full name" 
-                  required  
-                  onChange={handleChange} 
+                  className="w-full p-2 border rounded text-sm md:text-base"
+                  placeholder="Enter your full name"
+                  required
+                  onChange={handleChange}
                   value={formData.fullName}
                 />
               </div>
               <div className="mb-4">
                 <label className="block mb-2 text-sm md:text-base">Email Address</label>
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   name="emailAddress"
-                  className="w-full p-2 border rounded text-sm md:text-base" 
-                  placeholder="Enter your email address" 
-                  required  
-                  onChange={handleChange} 
+                  className="w-full p-2 border rounded text-sm md:text-base"
+                  placeholder="Enter your email address"
+                  required
+                  onChange={handleChange}
                   value={formData.emailAddress}
                 />
               </div>
@@ -457,7 +457,7 @@ export default function Careers() {
                 <label className="block mb-2 text-sm md:text-base">Phone Number</label>
                 <PhoneInput
                   country={'in'}
-                  inputStyle={{width: '100%'}}
+                  inputStyle={{ width: '100%' }}
                   containerClass="w-full"
                   onChange={handlePhoneChange}
                   value={formData.phoneNumber}
@@ -466,12 +466,12 @@ export default function Careers() {
               </div>
               <div className="mb-4">
                 <label className="block mb-2 text-sm md:text-base">Resume</label>
-                <input 
-                  type="file" 
+                <input
+                  type="file"
                   name="resume"
-                  className="w-full p-2 border rounded text-sm md:text-base" 
-                  onChange={(e) => setFormData({...formData, resume: e.target.files[0]})}
-                  required 
+                  className="w-full p-2 border rounded text-sm md:text-base"
+                  onChange={(e) => setFormData({ ...formData, resume: e.target.files[0] })}
+                  required
                 />
               </div>
               <div className="flex justify-end">
@@ -493,8 +493,8 @@ export default function Careers() {
             <div className="text-green-500 text-5xl mb-4">✓</div>
             <h2 className="text-2xl font-bold mb-2">Application Submitted!</h2>
             <p className="mb-4">Thank you for applying. We will review your application and get back to you soon.</p>
-            <button 
-              onClick={() => setShowSuccess(false)} 
+            <button
+              onClick={() => setShowSuccess(false)}
               className="bg-[#9F7B49] text-white px-4 py-2 rounded text-base"
             >
               Close
