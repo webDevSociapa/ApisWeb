@@ -5,7 +5,6 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig = {
-  output: 'export', // Enable static export
   experimental: {
     turbo: {
       rules: {
