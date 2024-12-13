@@ -31,12 +31,10 @@ const MainFooter = () => {
     const fetchData = async()=>{
       try {
         const response = await axios.get('/api/contactDetails');
-        console.log("responseeeeee",response);
-
-        setContactDetails(response.data[0])
-
-      } catch (error) {
+        console.log("contactDetails",contactDetails);
         
+        setContactDetails(response.data[0])
+      } catch (error) {
       }
     }
     fetchData()
