@@ -38,8 +38,6 @@ export default function OurBrand() {
     numberOfOutlets: 0
   });
 
-
-
   const LEGACY_DATA = [
     {
       count: 2580,

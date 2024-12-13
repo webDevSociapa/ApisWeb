@@ -17,7 +17,7 @@ async function connectToDb(){
 export async function POST(req){
     try{
         const body = await  req.json();
-        const {title,videoUrl,csrContent} = body;
+        const {title,videoUrl,csrContent,imageUrl} = body;
 
         if(!videoUrl || !title){
             return new NextResponse("Please enter title && videoUrl", {status: 400})
