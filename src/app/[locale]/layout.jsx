@@ -32,7 +32,7 @@ export default async function MainLayout({ children, params: { locale } }) {
   return (
     <html lang={locale}>
       <head>
-        <meta charSet="UTF-8" />
+        <meta charSet="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           href="https://fonts.googleapis.com/css2?family=Literata:wght@400;700&display=swap"

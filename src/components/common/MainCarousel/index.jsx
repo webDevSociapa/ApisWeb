@@ -32,44 +32,52 @@ export default class Carasol extends Component {
     this.setState({ currentSlide: index });
   };
 
+  // Method to handle custom pill click
+  handlePillClick = (index) => {
+    if (this.carouselRef.current) {
+      this.carouselRef.current.moveTo(index); // Move to selected slide
+    }
+  };
+
   render() {
     const { banners, currentSlide } = this.state;
 
     return (
       <div className="carousel-wrapper">
         <div className="carousel-container">
+          {/* Carousel Component */}
           <Carousel
             ref={this.carouselRef}
             autoPlay
-            showThumbs={false}
             infiniteLoop
-            interval={6000}
+            showThumbs={false}
+            interval={3000} // Auto-slide every 3 seconds
             showArrows={false}
             showStatus={false}
             showIndicators={false} // Disable default indicators
-            onChange={this.handleSlideChange} // Track slide changes
+            stopOnHover={false} // Prevent pausing on hover
+            onChange={this.handleSlideChange} // Update current slide
           >
             {banners.map((banner) => (
               <div className="carousel_banner" key={banner._id}>
                 <video
                   autoPlay
                   muted
-                  className="video-img1"
                   loop
+                  className="video-img1"
                   src={banner.videoFile}
                 />
               </div>
             ))}
           </Carousel>
 
-          {/* Custom Indicators */}
+          {/* Custom Scroll Indicators */}
           <div className="scroll-indicator">
             {banners.map((_, index) => (
               <div
                 key={index}
-                className={`scroll-pill ${index === currentSlide ? "active" : ""
-                  }`}
-                onClick={() => this.carouselRef.current.moveTo(index)}
+                className={`scroll-pill ${index === currentSlide ? "active" : ""}`}
+                onClick={() => this.handlePillClick(index)} // Move to the selected slide
               />
             ))}
           </div>
@@ -78,4 +86,3 @@ export default class Carasol extends Component {
     );
   }
 }
-  
