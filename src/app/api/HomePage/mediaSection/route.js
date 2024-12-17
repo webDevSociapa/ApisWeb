@@ -147,8 +147,6 @@ export async function GET(req) {
     return NextResponse.json({ message: "An error occurred" }, { status: 500 });
   }
 }
-
-
 export async function DELETE(req) {
   try {
     const { searchParams } = new URL(req.url);

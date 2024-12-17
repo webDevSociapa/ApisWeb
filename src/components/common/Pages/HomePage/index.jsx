@@ -573,8 +573,8 @@ export default function HomePage() {
                 <div className="embla__slide__number !h-[246px] w-full">
                   <Image
                     width={350}
-                    height={346}
-                    className="rounded w-full sm:w-[360px] sm:h-[246px]"
+                    height={350}
+                    className="rounded w-full sm:w-[360px] sm:h-[246px] object-contain"
                     src={itm.thumbnail}
                     // title="YouTube video player"
                     // frameborder="0"
