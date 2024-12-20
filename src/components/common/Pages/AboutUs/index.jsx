@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import PropTypes from "prop-types";
-import Banner from "@/assets/images/AboutUs/AboutUs.png";
+import Banner from "@/assets/images/AboutUs/NewBannerApisAbout.png";
 import MissionBanner from "@/assets/images/AboutUs/MissionBanner.png";
 import Ring1 from "@/assets/images/OurBrands/Ring-4.png";
 import Curv from "@/assets/images/AboutUs/Curv.png";
@@ -105,9 +105,6 @@ export default function OurBrand() {
   useEffect(() => {
     window.scroll(0, 0);
   }, [])
-
-
-  
 
 
   useEffect(() => {

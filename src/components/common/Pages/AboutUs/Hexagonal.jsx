@@ -17,7 +17,7 @@ import Polygon13 from '@/assets/images/AboutUs/Polygon18.png';
 import Polygon14 from '@/assets/images/AboutUs/Polygon19.png';
 import Polygon15 from '@/assets/images/AboutUs/Polygon22.png';
 import Polygon16 from '@/assets/images/AboutUs/Polygon17.png';
-
+import Polygon123 from '@/assets/images/AboutUs/apisDiag.png'
 export default function HexagonalPage() {
   return (
     <>
@@ -25,7 +25,8 @@ export default function HexagonalPage() {
       <div className={styles.container}>
         
         </div>
-        <div className={`${styles['container-left']} ${styles['custom-hexagonal']}`}>          {/* <div className={`${styles.row} ${styles.row1}`}>
+        <div className={`${styles['container-left']} ${styles['custom-hexagonal']}`}>          
+          {/* <div className={`${styles.row} ${styles.row1}`}>
             <div className={styles['hex-top1']}>
               <div className={styles.imageWrapper}>
                 <Image src={Polygon1} alt="John Doe" className={styles.imgData} />
@@ -74,7 +75,7 @@ export default function HexagonalPage() {
           <div className={`${styles.row} ${styles.row4}`}>
             <div className={styles['hex-top4']}>
               <div className={styles.imageWrapper}>
-                <Image src={Polygon6} alt="John Doe" className={styles.imgData} />
+                <Image src={Polygon123} alt="John Doe" className={styles.imgData} />
               </div>
               
             </div>

@@ -149,6 +149,22 @@ import HimalayaHoneyMenu from "@/assets/images/OurBrands/HimalayaHoneyMenu.png"
 import GreenTeaMenuItem from "@/assets/images/OurBrands/greenTeaMenuItem.png"
 import PeanutButterMenu from "@/assets/images/OurBrands/peanutButterMenu.png"
 import JamApisMenu from "@/assets/images/OurBrands/ApisJamMenu.png"
+import newSoyaChunks01 from "@/assets/images/home-banner-section/newSoyaChunks01.jpg"
+import newSaffron01 from "@/assets/images/home-banner-section/newSaffron01.jpg"
+import newDates01 from "@/assets/images/home-banner-section/newdates01.jpg"
+import HimalayaHoney001 from "@/assets/images/OurBrands/Himalaya-Honey.png"
+import Jam001 from "@/assets/images/OurBrands/Jam (1).png";
+import SoyaChunks001 from "@/assets/images/OurBrands/Soya-Chunks.png"
+import TulsiGreenTea from "@/assets/images/OurBrands/Tulsi-Green-Tea.png"
+import NewDatesBanner from "@/assets/images/OurBrands/newDatesBanner.png"
+// import 
+import NewBannerGreenTea from "@/assets/images/OurBrands/newBannerGreenTea.png"
+import NewBannerJam from "@/assets/images/OurBrands/newBannerJam.png"
+import NewBannerOrganic from "@/assets/images/OurBrands/newBannerOrganic.png"
+import NewBannerSaffron from "@/assets/images/OurBrands/newBannerSaffron.png"
+import NewBannerSoyaChunks from "@/assets/images/OurBrands/newBannersoyaChunks.png"
+import NewBannerHimalayaHoney from '@/assets/images/OurBrands/Himalaya-Honey12.png'
+import NewBannerVermicalli from "@/assets/images/OurBrands/newBannerVermicalli.png"
 // import OrganicHoneyMenu from "@/assets/images"
 
 //  import Blog8 from '@/assets/images/our-blog/blog08.png';
@@ -240,7 +256,7 @@ export const PRODUCT_DATA = [
         id: 1,
         name: "Organic Honey",
         img: Honey,
-        back_img: OrganicHoney,
+        back_img: NewBannerOrganic,
         rect_color: "bg-[#FFC660]",
         title_color: "text-[#9F7B49]",
         desc_color: "text-black",
@@ -263,7 +279,7 @@ export const PRODUCT_DATA = [
         id: 2,
         name: "Apis Honey",
         img: Honey,
-        back_img: HoneyBg,
+        back_img: NewBannerHimalayaHoney,
         rect_color: "bg-[#FFC660]",
         title_color: "text-[#9F7B49]",
         desc_color: "text-black",
@@ -272,7 +288,7 @@ export const PRODUCT_DATA = [
         product_desc:
           "At Apis India, we are dedicated to delivering high-quality FMCG products that enhance your everyday life. With a focus on freshness, innovation, and reliability, our diverse range of products reflects our commitment to excellence and customer satisfaction. Discover the difference with Apis India.",
         product_img_1: HoneyProduct,
-        product_img_2: HimalayaHoneyMenu,
+        product_img_2: HimalayaHoney001,
 
         customer_says:
           "APIs Himalayan Honey, and it’s exceptional! The honey has a rich, deep flavor with delightful floral undertones that truly reflects its Himalayan origins. Its purity is evident in both taste and texture—smooth and golden without any added sugars or artificial ingredients. I love the natural sweetness it adds to my tea and yogurt, and it’s perfect for drizzling over toast. The packaging is also top-notch, preserving the honey’s freshness. APIs Himalayan Honey has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for high-quality, pure honey with an authentic, flavorful profile.",
@@ -288,7 +304,7 @@ export const PRODUCT_DATA = [
         rect_color: "bg-[#162D13]",
         title_color: "",
         desc_color: "",
-        back_img: Dates,
+        back_img: NewDatesBanner,
         title: "",
         title_desc: "",
         product_desc:
@@ -312,7 +328,7 @@ export const PRODUCT_DATA = [
         id: 1,
         name: "Jam",
         img: Jam,
-        back_img: JamBg,
+        back_img: NewBannerJam,
         rect_color: "bg-[#7F0416]",
         title_color: "text-[#7F0416]",
         desc_color: "text-[#505050]",
@@ -322,7 +338,7 @@ export const PRODUCT_DATA = [
         product_desc:
           "Just as our honey exemplifies nature's finest, our jams uphold the same unwavering commitment to quality. We carefully select the freshest fruits, ensuring that each jar delivers a burst of genuine flavor without artificial additives or preservatives. Our meticulous process preserves the natural taste and nutritional benefits of the fruit, offering a delightful and wholesome experience with every spoonful. When you choose APIs jams, you’re savoring purity in its most authentic form, making each bite a true celebration of natural goodness.",
         product_img_1: JamProduct,
-        product_img_2: JamApisMenu,
+        product_img_2: Jam001,
 
         customer_says:
           "I recently tried Apis Jam, and I’m absolutely delighted with the experience! The flavor is truly exceptional—rich, vibrant, and bursting with genuine fruit goodness. You can taste the quality in every spoonful, with no artificial aftertaste or additives. The texture is perfectly smooth, making it a versatile addition to everything from toast to desserts. I also appreciate the thoughtful packaging that preserves freshness and highlights the commitment to purity. APIs Jam has quickly become a staple in my kitchen, and I wholeheartedly recommend it to anyone looking for a premium, authentic jam that delivers on both taste and quality.",
@@ -357,7 +373,7 @@ export const PRODUCT_DATA = [
         id: 3,
         name: "Vermicelli",
         img: Vermicelli,
-        back_img: VermiBg,
+        back_img: NewBannerVermicalli,
         rect_color: "bg-[#D38030]",
         title_color: "text-[#D38030]",
         desc_color: "text-[#FCC42B]",
@@ -385,7 +401,7 @@ export const PRODUCT_DATA = [
       //   id: 1,
       //   name: "Cooking Paste",
       //   img: CoolingPaste,
-      //   back_img: HoneyBg,
+      //   back_img: HoneyBg, 
       //   rect_color: "bg-[#FFC660]",
       //   title_color: "text-[#9F7B49]",
       //   desc_color: "text-black",
@@ -405,7 +421,7 @@ export const PRODUCT_DATA = [
         id: 2,
         name: "Soya Chunk",
         img: SoyaChunks,
-        back_img: SoyaChunksBg,
+        back_img: NewBannerSoyaChunks,
         rect_color: "bg-[#F0A20A]",
         title_color: "text-[#9F7B49]",
         desc_color: "text-black",
@@ -414,7 +430,7 @@ export const PRODUCT_DATA = [
         product_desc:
           "Purity is the cornerstone of our soya chunks. We start with premium soybeans, ensuring that each chunk is packed with natural goodness and robust flavor. Our production process is designed to preserve the integrity of the soybeans, avoiding any artificial additives or preservatives. This commitment to purity means that every bite of APIs Soya Chunks offers a clean, wholesome taste and a satisfying texture that holds up perfectly in various dishes. Whether you’re incorporating them into a savory stir-fry or a hearty stew, APIs Soya Chunks reflect our dedication to delivering pure, high-quality ingredients in every bite.",
         product_img_1: SoyaChunksProduct,
-        product_img_2: SoyaChunkMenu,
+        product_img_2: SoyaChunks001,
         customer_says:
           "I recently tried Apis Soya Chunks, and I’m thoroughly impressed! The chunks are of excellent quality, with a firm texture that holds up beautifully in various dishes. They’re easy to prepare and absorb flavors exceptionally well, making them a versatile addition to my meals. I appreciate that they are made from high-quality soybeans without any unnecessary additives or preservatives. The taste is clean and satisfying, making them a fantastic meat alternative. APIs Soya Chunks have quickly become a staple in my kitchen, and I highly recommend them to anyone seeking a nutritious, delicious, and pure option for their recipes.",
         health_benefits:
@@ -426,7 +442,7 @@ export const PRODUCT_DATA = [
         id: 3,
         name: "Saffron",
         img: Saffron,
-        back_img: SaffronBg,
+        back_img: NewBannerSaffron,
         rect_color: "bg-[#C62A05]",
         title_color: "text-[#C62A05]",
         desc_color: "text-white",
@@ -454,7 +470,7 @@ export const PRODUCT_DATA = [
         id: 1,
         name: "Green Tea",
         img: GreenTea,
-        back_img: GreenTeaBg,
+        back_img: NewBannerGreenTea,
         rect_color: "bg-[#474C14]",
         title_color: "text-[#474C14]",
         desc_color: "text-white",
@@ -464,7 +480,7 @@ export const PRODUCT_DATA = [
         product_desc:
           "Purity is at the heart of our green tea. We meticulously select the finest leaves, ensuring that every cup delivers a taste of true nature. Our green tea is crafted with a commitment to purity, free from artificial additives or preservatives, so you can enjoy an authentic, refreshing experience with every sip. The result is a clean, smooth flavor that highlights the natural essence of the tea leaves. When you choose APIs Green Tea, you're savoring more than just a beverage—you're embracing a product where purity is not just a promise but a fundamental presence in every cup.",
         product_img_1: GreenTeaProduct,
-        product_img_2: GreenTeaMenuItem,
+        product_img_2: TulsiGreenTea,
         customer_says:
           "I’m thoroughly impressed with APIs Green Tea! From the moment I brewed my first cup, I could tell it was high-quality. The flavor is incredibly fresh and smooth, with a perfect balance of earthy and subtly sweet notes. What I appreciate most is its purity—no artificial flavors or additives, just pure, natural tea that makes each sip enjoyable and invigorating. The aroma is calming and soothing, making it a wonderful way to start the day or unwind in the evening. APIs Green Tea has become my go-to choice, and I highly recommend it to anyone seeking a genuinely refreshing and wholesome tea experience.",
         health_benefits:
@@ -2870,22 +2886,37 @@ export const financialsSheet = {
     {
       id: 1,
       name: "Balance Sheet - 31.03.2018 APIS Pure Foodstuff LLC",
-      path: "https://apisindia.com/pdf/newupdates/Balance%20Sheet_31.03.2018_APIS%20Pure%20Foodstuff%20LLC.pdf"
+      path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/apisArabiaFood/Balance+Sheet_31.03.2018_APIS+Pure+Foodstuff+LLC.pdf"
     },
     {
       id: 2,
       name: "Balance Sheet - 31.03.2019 APIS Pure Foodstuff LLC",
-      path: "https://apisindia.com/pdf/newupdates/Balance%20Sheet_APIS%20PURE_INR.pdf"
+      path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/apisArabiaFood/Balance+Sheet_APIS+PURE_INR.pdf"
     },
     {
       id: 3,
       name: "Balance Sheet - 31.03.2020 APIS Pure Foodstuff LLC",
-      path: "https://apisindia.com/pdf/newupdates/Balance%20Sheet%20Apis%20Pure%20Food%20Stuff%202020%20.pdf"
+      path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/apisArabiaFood/Balance+Sheet+Apis+Pure+Food+Stuff+2020+.pdf"
     },
     {
       id: 4,
-      name: "Balance Sheet - 31.03.2023 APIS Pure Foodstuff LLC",
+      name: "Balance Sheet - 31.03.2021 APIS Pure Foodstuff LLC",
       path: "https://apisindia.com/pdf/newupdates/Balance-Sheet-2023-In-INR.pdf"
+    },
+    {
+      id: 5,
+      name: "Balance Sheet - 31.03.2022 APIS Pure Foodstuff LLC",
+      path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/apisArabiaFood/Balance+Sheet_31.03.2018_APIS+Pure+Foodstuff+LLC.pdf"
+    },
+    {
+      id: 5,
+      name: "Balance Sheet - 31.03.2023 APIS Pure Foodstuff LLC",
+      path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/apisArabiaFood/Balance+Sheet_31.03.2018_APIS+Pure+Foodstuff+LLC.pdf"
+    },
+    {
+      id: 5,
+      name: "Balance Sheet - 31.03.2024 APIS Pure Foodstuff LLC",
+      path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/apisArabiaFood/Balance+Sheet_31.03.2018_APIS+Pure+Foodstuff+LLC.pdf"
     }
   ],
   subsidiaryFinancials: [

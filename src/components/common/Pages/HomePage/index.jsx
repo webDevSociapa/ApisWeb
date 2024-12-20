@@ -132,6 +132,7 @@ export default function HomePage() {
     }
     addLatestApis()
 
+
     const getMediaSection = async () => {
       try {
         const response = await axios.get("/api/HomePage/mediaSection");
@@ -173,6 +174,8 @@ export default function HomePage() {
 
 
   const words = BannerText?.split(' ');
+  console.log("latestApis",latestApis);
+  
 
   return (
     <>
@@ -298,21 +301,22 @@ export default function HomePage() {
               <div className="w-full h-full flex flex-col lg:flex-row">
                 <div className="lg:w-1/2 h-full">
                   <div className="lg:absolute -top-12 left-6 h-[500px] lg:h-[760px]"></div>
-                  <Image
+                  {/* <Image
                     src={products[currentProduct].image}
                     height={720}
                     alt="product-image"
                     className="h-[500px] w-[45%] w-full lg:h-[650px] lg:w-[42%] absolute -top-4 lg:rounded-tl-[40px] lg:rounded-tr-[250px] lg:rounded-br-[40px] lg:rounded-bl-[250px] rounded-tl-[5px] rounded-tr-[100px] rounded-br-[5px] rounded-bl-[100px]"
-                  />
-                  {/* <video
-               autoPlay
-                muted
-                className="h-[500px] w-[45%] w-full lg:h-[650px] lg:w-[42%] absolute -top-4 lg:rounded-tl-[40px] lg:rounded-tr-[250px] lg:rounded-br-[40px] lg:rounded-bl-[250px] rounded-tl-[5px] rounded-tr-[10px] rounded-br-[5px] rounded-bl-[100px] productDiffBg"
+                  /> */}
+                  <video
+                    autoPlay
+                    muted
+                    height={720}
+                    className="h-[500px] w-[45%] w-full lg:h-[650px] lg:w-[42%] absolute -top-4 lg:rounded-tl-[40px] lg:rounded-tr-[250px] lg:rounded-br-[40px] lg:rounded-bl-[250px] rounded-tl-[5px] rounded-tr-[10px] rounded-br-[5px] rounded-bl-[100px] productDiffBg"
 
-                // className={"video-img1"}
-                loop // Ensures the video loops continuously
-                src={'https://luxor-pen-prod.s3.ap-south-1.amazonaws.com/682.500videoframe-ezgif.com-video-to-mp4-converter+(1).mp4 '}
-              /> */}
+                    // className={"video-img1"}
+                    loop // Ensures the video loops continuously
+                    src={'https://apisindia.s3.ap-south-1.amazonaws.com/apisVideoPlayer/2000x2000+video+frame.mp4'}
+                  />
                   <Image
                     src={ReactAngle}
                     className="h-[500px] w-full lg:h-[650px] lg:w-[42%] absolute -top-4 lg:rounded-tl-[40px] lg:rounded-tr-[250px] lg:rounded-br-[40px] lg:rounded-bl-[250px] rounded-tl-[5px] robin rounded-tr-[100px] rounded-br-[5px] rounded-bl-[100px]"
@@ -567,47 +571,27 @@ export default function HomePage() {
           Discover the newest trends, products, and innovations from APIS India.
         </p>
         <div className="py-6 md:py-10 w-[90%] flex items-center justify-center latestApisHome">
-          <EmblaCarousel options={OPTIONS}>
+        <EmblaCarousel options={OPTIONS}>
             {latestApis.map((itm, index) => (
-              <div className="embla__slide" key={index}> {/* Open modal on click */}
+              <div className="embla__slide" key={index}>
                 <div className="embla__slide__number !h-[246px] w-full">
-                  <Image
-                    width={350}
-                    height={350}
-                    className="rounded w-full sm:w-[360px] sm:h-[246px] object-contain"
-                    src={itm.thumbnail}
-                    // title="YouTube video player"
-                    // frameborder="0"
-                    onClick={() => openModal(itm.videoUrl)}
-                  // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  // referrerpolicy="strict-origin-when-cross-origin"
-                  // allowfullscreen
-                  />
+                  <iframe
+                    width="400px"
+                    height="246px"
+                    className="rounded w-full sm:w-[360px] sm:h-[246px]"
+                    src={itm?.videoUrl}
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
                 </div>
               </div>
             ))}
           </EmblaCarousel>
         </div>
-        {isModalOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50" onClick={closeModal}> {/* Close modal on overlay click */}
-            <div className="bg-white p-4 rounded-lg w-11/12 md:w-3/4 lg:w-1/2" onClick={(e) => e.stopPropagation()}> {/* Prevent closing on content click */}
-              <div className="flex justify-end mb-2"> {/* Added flex container to align button to the right */}
-                <button className="text-end text-xl" onClick={closeModal}>X</button> {/* Close button */}
-              </div>
-              <iframe
-                width="450px"
-                height="450px"
-                src={currentVideo}
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                className="rounded-lg w-full"
-              ></iframe>
-            </div>
-          </div>
-        )}
+      
 
 
         <div className="w-full tvcSectionResponsive">

@@ -9,11 +9,29 @@ import { useState, useEffect } from "react";
 import ImageBanner from "../../Layout/Banner";
 import { WORLD_APPERIENCE, CORPORATE_GOVERNANACE, CODE_OF_CONDUCT, ANNUAL_REPORTS, BOARD_MEETING_FINACIALRESULTS, shareholdingPatterns, corporateDisclosures, financialsSheet,Corporate_Annoucement } from '@/lib/constants';
 
-const auditCommitteeMembers = [
-  { name: "MRS. MENIKA GARG", designation: "CHAIRMAN" },
-  { name: "MRS. SHALINI MALIK", designation: "MEMBER" },
-  { name: "MR. KARAN AHOOJA", designation: "MEMBER" },
-];
+const committees = {
+  "Audit Committee": [
+    { name: "Mr. Priyanshu Agarwal", designation: "CHAIRMAN" },
+    { name: "Diksha Gandhi", designation: "MEMBER" },
+    { name: "Mukesh Kasana", designation: "MEMBER" },
+  ],
+  "Nomination and Remuneration Committee": [
+    { sr: "1", name: "Ms. Diksha Gandhi, Independent Director", designation: "Chairperson" },
+    { sr: "2", name: "Mr. Priyanshu Agarwal, Independent Director", designation: "Member" },
+    { sr: "3", name: "Mr. Mukesh Kasana, Independent Director", designation: "Member" },
+  ],
+  "Stakeholder Relationship Committee": [
+    { sr: "1", name: "Ms. Diksha Gandhi, Independent Director", designation: "Chairperson" },
+    { sr: "2", name: "Mr. Priyanshu Agarwal, Independent Director", designation: "Member" },
+    { sr: "3", name: "Mr. Mukesh Kasana, Independent Director", designation: "Member" },
+  ],
+  "Corporate Social Responsibility Committee": [
+    { sr: "1", name: "Mr. Priyanshu Agarwal, Independent Director", designation: "Chairman" },
+    { sr: "2", name: "Mr. Mukesh Kasana, Independent Director", designation: "Member" },
+    { sr: "3", name: "Mr. Amit Anand, Executive Director", designation: "Member" },
+    { sr: "4", name: "Mr. Vimal Anand, Executive Director", designation: "Member" },
+  ],
+};
 
 
 const DUMMY_DATA = {
@@ -22,7 +40,7 @@ const DUMMY_DATA = {
     "Subsidiary Financials": financialsSheet.subsidiaryFinancials
   },
   2: {
-    "Board Associates": auditCommitteeMembers,
+    "Board Associates": committees,
     "Board Subsidiary Financials": []
   },
   3: {
@@ -55,7 +73,7 @@ const DUMMY_DATA = {
 
 const INVESTER_TABS = [
   { id: 1, title: "Financials", types: ["Associates", "Subsidiary Financials"] },
-  { id: 2, title: "Board Committees", types: ["Board Associates", "Board Subsidiary Financials"] },
+  { id: 2, title: "Board Committees" },
   { id: 3, title: "Corporate Governance", types: ["Corporate Associates", "Subsidiary", "Corporate Financials"] },
   { id: 4, title: "Code Of Conduct", types: ["Conduct", "Subsidiary Conduct", "Subsidiary", "Subsidiary-Pride"] },
   { id: 5, title: "Financial Results", types: ["Associates Results", "Subsidiary Financial"] },
@@ -69,6 +87,7 @@ const INVESTER_TABS = [
 export default function Investors() {
   const [selectedTab, setSelectedTab] = useState(INVESTER_TABS[0].id); 
   const [selectedType, setSelectedType] = useState(INVESTER_TABS[0].types[0]); 
+  const [activeTab, setActiveTab] = useState("Audit Committee");
 
   useEffect(() => {
     const firstType = INVESTER_TABS.find(tab => tab.id === selectedTab)?.types[0];
@@ -80,20 +99,41 @@ console.log("selectedTab",DUMMY_DATA);
 
 
 
-  const AuditCommittee =() =>{
-    return (
-      <div className="audit-committee">
-      <h2 className="font-bold text-xl mb-4">Audit Committee</h2>
+const AuditCommittee =() =>{
+  return (
+    <div className="committee-container p-4">
+    <h2 className="font-bold text-2xl mb-6">Committees</h2>
+    {/* Tabs */}
+    <div className="tabs flex mb-4 border-b-2 border-gray-200">
+      {Object.keys(committees).map((committeeName) => (
+        <button
+          key={committeeName}
+          onClick={() => setActiveTab(committeeName)}
+          className={`mr-4 pb-2 ${
+            activeTab === committeeName
+              ? "border-b-2 border-[#AE844A] text-[#AE844A] font-bold"
+              : "text-gray-600"
+          }`}
+        >
+          {committeeName}
+        </button>
+      ))}
+    </div>
+
+    {/* Table for Active Tab */}
+    <div className="committee-data">
       <table className="border-collapse w-full">
         <thead>
           <tr>
-            <th className="border-b-2 border-[#AE844A] text-left">DIRECTOR NAME</th>
-            <th className="border-b-2 border-[#AE844A] text-left">DESIGNATION</th>
+            <th className="border-b-2 border-[#AE844A] text-left py-2">Sr. No.</th>
+            <th className="border-b-2 border-[#AE844A] text-left py-2">Name of the Member</th>
+            <th className="border-b-2 border-[#AE844A] text-left py-2">Designation</th>
           </tr>
         </thead>
         <tbody>
-          {auditCommitteeMembers.map((member, index) => (
-            <tr key={index} className={`border-b border-[#AE844A] ${member.designation === "CHAIRMAN" ? "font-bold" : ""}`}>
+          {committees[activeTab]?.map((member, index) => (
+            <tr key={index} className="border-b border-gray-200">
+              <td className="py-2">{member.sr || index + 1}</td>
               <td className="py-2">{member.name}</td>
               <td className="py-2">{member.designation}</td>
             </tr>
@@ -101,8 +141,9 @@ console.log("selectedTab",DUMMY_DATA);
         </tbody>
       </table>
     </div>
-    )
-  }
+  </div>
+  )
+}
   const RenderGreenInitiative = () => {
     const greenInitiativeData = {
       title: "Defining Our Love For Nature",
@@ -210,7 +251,7 @@ console.log("selectedTab",DUMMY_DATA);
       <div className="relative">
         <div className="sm:absolute flex flex-col gap-[0.5px] h-h-full top-0 z-10">
           {/* Types within the selected tab */}
-          {INVESTER_TABS.find((itm) => itm.id === selectedTab).types.map((item) => (
+          {INVESTER_TABS?.find((itm) => itm.id === selectedTab).types.map((item) => (
             <div className="relative" key={item}>
               <p
                 className={`rectangle tri-selected z-10 rounded-e-xl font-jost ps-3 md:ps-5 py-3 md:py-6 cursor-pointer shadow-md text-sm md:text-lg 2xl:text-xl w-[400px] ${selectedType === item ? "bg-[#AE844A] text-white" : "bg-white text-black"}`}
