@@ -29,9 +29,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useState, useEffect } from 'react';
 import OrganicHoneyGreenCard from '@/assets/images/home-banner-section/organicHoneyGreenCard1.png'
 import HoneyStick from '@/assets/images/home-banner-section/stickHoney.png'
-import { LATEST_SLIDES, LATEST_SLIDES_IMAGES, SLIDES, AVAILABILITY_SLIDE } from "@/lib/constants";
-import Tvc_Apis01 from '@/assets/images/home-banner-section/tvc_apis01.jpeg'
-import Tvc_Apis02 from '@/assets/images/home-banner-section/tvc_apis02.jpeg'
 import axios from "axios";
 
 
@@ -173,9 +170,7 @@ export default function HomePage() {
   // console.log("tvcHome",tvcHome[0].thumbnail);
 
 
-  const words = BannerText?.split(' ');
-  console.log("latestApis",latestApis);
-  
+  const words = BannerText?.split(' ');  
 
   return (
     <>
