@@ -40,9 +40,9 @@ export default function OurBrand({ onProductClick }) {
       onProductClick(event);
     }
   };
-  useEffect(()=>{
-    window.scroll(0,0)
-  },[])
+  useEffect(() => {
+    window.scroll(0, 0)
+  }, [])
 
   return (
     <div className="relative">
@@ -96,21 +96,21 @@ export default function OurBrand({ onProductClick }) {
               ).products.map((itm) => {
                 return (
                   <Link
-                  key={itm.id}
-                  href={`/our-brand/product-details?brand_id=${selectedBrand}&product_id=${itm?.id}`}
-                  onClick={handleProductClick}
-                >
-                  <div className="h-[80px] w-[120px] md:h-[140px] md:w-[200px]  flex items-center justify-center rounded-[20px] flex-col bg-white border border-[#9F7B49] cursor-pointer ApisMenuItem">
-                    <Image
-                      src={itm.product_img_2}
-                      alt={itm.name}
-                      // className="md:h-[100px] md:w-[100px]"
-                    />
-                    <p className="text-xs md:text-lg font-bold mt-2">
-                      {itm.name}
-                    </p>
-                  </div>
-                </Link>
+                    key={itm.id}
+                    href={`/our-brand/product-details?brand_id=${selectedBrand}&product_id=${itm?.id}`}
+                    onClick={handleProductClick}
+                  >
+                    <div className="h-[80px] w-[120px] md:h-[140px] md:w-[200px]  flex items-center justify-center rounded-[20px] flex-col bg-white border border-[#9F7B49] cursor-pointer ApisMenuItem">
+                      <Image
+                        src={itm.product_img_2}
+                        alt={itm.name}
+                        className="md:h-[80px] w-[120px]"
+                      />
+                      <p className="text-xs md:text-lg font-bold mt-2">
+                        {itm.name}
+                      </p>
+                    </div>
+                  </Link>
                 );
               })}
             </div>

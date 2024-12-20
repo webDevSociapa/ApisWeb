@@ -40,18 +40,15 @@ async function uploadToS3(file, folder) {
 export async function POST(req) {
   try {
     const formData = await req.formData();
-    const thumbnail = formData.get('thumbnail');
     const videoUrl = formData.get('videoUrl');
 
-    if (!thumbnail || !videoUrl) {
+    if (!videoUrl) {
       return NextResponse.json({ message: "Missing required fields: thumbnail or videoUrl" }, { status: 400 });
     }
 
-    const thumbnailUrl = await uploadToS3(thumbnail, 'lifeAtApis');
 
     const collection = await connectToDb();
     await collection.insertOne({
-      thumbnail: thumbnailUrl,
       videoUrl,
     });
 

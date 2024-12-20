@@ -218,9 +218,9 @@ const ProductDetails = () => {
      ): null}
      {/* </a> */}
 
-      <p className="text-[20px] md:text-[40px] py-4 md:py-10 font-bold text-[#9F7B49] font-literata">
+      {/* <p className="text-[20px] md:text-[40px] py-4 md:py-10 font-bold text-[#9F7B49] font-literata">
         Content
-      </p>
+      </p> */}
       <div className="bg-[#FFF9F0] relative w-full">
         <Image
           src={Ring1}

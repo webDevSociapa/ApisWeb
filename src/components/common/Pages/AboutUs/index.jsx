@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import PropTypes from "prop-types";
-import Banner from "@/assets/images/AboutUs/AboutUs.png";
+import Banner from "@/assets/images/AboutUs/NewBannerApisAbout.png";
 import MissionBanner from "@/assets/images/AboutUs/MissionBanner.png";
 import Ring1 from "@/assets/images/OurBrands/Ring-4.png";
 import Curv from "@/assets/images/AboutUs/Curv.png";
@@ -19,6 +19,7 @@ import AboutusLogo from '@/assets/images/AboutUs/aboutusLogo.png';
 import AboutStreak from '@/assets/images/AboutUs/aboutStreak.png'
 import HexaGonalPage from "../../Pages/AboutUs/Hexagonal";
 import axios from "axios";
+import { CircularProgress } from "@mui/material";
 
 export default function OurBrand() {
   const [activeTab, setActiveTab] = useState("vision");
@@ -106,10 +107,6 @@ export default function OurBrand() {
     window.scroll(0, 0);
   }, [])
 
-
-  
-
-
   useEffect(() => {
     // Function to fetch data for API calls
     const fetchData = async () => {
@@ -124,7 +121,6 @@ export default function OurBrand() {
           axios.get('/api/AboutUs/ourValues'),
           axios.get('/api/AboutUs/ourDirectors'),
         ]);        
-
         // Update state with responses
         setOurDirector(ourDirectorResponse.data)
         setApisDataNumber(apisDataResponse.data);
@@ -151,9 +147,17 @@ export default function OurBrand() {
 
   // Conditional rendering based on loading or error state
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <CircularProgress
+          height="80" 
+          width="80" 
+          color="#4fa94d" 
+          ariaLabel="loading-indicator"
+        />
+      </div>
+    );
   }
-
   if (error) {
     return <div>{error}</div>;
   }
@@ -173,7 +177,7 @@ export default function OurBrand() {
         </div>
       </main><div className="static">
         <Image src={AboutStreak} className="absolute top-[500px] right-4 aboutStrek" /> {/* Adjusted top value */}
-        <Image src={AboutusLogo} className="absolute top-[680px] right-4 aboutslogo" />
+        {/* <Image src={AboutusLogo} className="absolute top-[680px] right-4 aboutslogo" /> */}
       </div>
       <div className="bg-white text-gray-800">
         <div className="relative w-full">
