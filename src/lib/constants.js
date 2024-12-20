@@ -165,6 +165,7 @@ import NewBannerSaffron from "@/assets/images/OurBrands/newBannerSaffron.png"
 import NewBannerSoyaChunks from "@/assets/images/OurBrands/newBannersoyaChunks.png"
 import NewBannerHimalayaHoney from '@/assets/images/OurBrands/Himalaya-Honey12.png'
 import NewBannerVermicalli from "@/assets/images/OurBrands/newBannerVermicalli.png"
+import NewBannerChoco from "@/assets/images/OurBrands/chocoFlakes011.png"
 // import OrganicHoneyMenu from "@/assets/images"
 
 //  import Blog8 from '@/assets/images/our-blog/blog08.png';
@@ -361,7 +362,7 @@ export const PRODUCT_DATA = [
         product_desc:
           "Purity is the essence of our flakes. We meticulously craft each batch using the highest quality ingredients, ensuring that every flake embodies the true taste of nature. Our commitment to purity means no artificial additives or preservatives—just simple, wholesome goodness in every bite. The result is a crisp, clean flavor that stands out in every dish, delivering a natural crunch that enhances your meals. With APIs flakes, you're not just enjoying a product; you're savoring the essence of purity in food, made with care and integrity from start to finish.",
         product_img_1: FlakesProduct,
-        product_img_2: chocoFlakesManu,
+        product_img_2: NewBannerChoco,
         customer_says:
           "Best experience ever !!!! yes its for APIs Flakes and am thoroughly impressed! The flakes are incredibly crisp and full of natural flavor, adding a delightful crunch to my breakfasts and snacks. What stands out is the purity of the product—no artificial additives or preservatives, just wholesome, high-quality ingredients. Each bite is fresh and satisfying, making them perfect for both sweet and savory dishes. The packaging is also well-designed, keeping the flakes fresh and crisp. APIs Flakes have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking a premium, delicious, and natural option for their meals.",
         health_benefits:
