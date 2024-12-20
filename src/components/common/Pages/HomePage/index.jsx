@@ -11,6 +11,7 @@ import HoneyBee from "@/assets/images/home-banner-section/honey-bee.png";
 
 import ChocolateImg from '@/assets/images/home-banner-section/ChocolateImg.png'
 import ChocolateBox from '@/assets/images/home-banner-section/ChocolateBox.png'
+
 // import HoneyBee from '@/assets/images/home-banner-section/honey-bee.png'
 // import TrustSlide10 from '@/assets/images/home-banner-section/Muesli-front.png';
 
