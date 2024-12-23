@@ -2,7 +2,7 @@
 
 import PropTypes from 'prop-types'
 import ContactForm from './ContactForm'
-import Banner from '@/assets/images/ContactUs/contaxtUsMainBanner.png'
+import Banner from '@/assets/images/ContactUs/Contact-Banner.png'
 import Tabs from './Tabs'
 import ImageBanner from '../../Layout/Banner'
 export default function ContactUs() {
