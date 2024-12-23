@@ -152,7 +152,7 @@ const page = () => {
           .slice(0, visibleRecipes) // Show only the visible recipes
           .map((itm, index) => {
             return (
-              <div className="embla__slide" key={index}>
+              <div className="embla__slide h-[500px]" key={index} >
                 <div className="w-full">
                   <div className="w-full">
                     <iframe

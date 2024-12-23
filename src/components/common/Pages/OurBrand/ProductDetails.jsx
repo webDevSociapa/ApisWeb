@@ -17,12 +17,13 @@ import { PRODUCT_DATA } from "@/lib/constants";
 import Link from "next/link";
 
 import { LATEST_SLIDES,SLIDES,HEALTH_BENEFITS,HEALTH_DATE,HEALTH_JAM,HEALTH_FLAKES,HEALTH_VERNACALLI,HEALTH_MACRONI,HEALTH_SPEARD,COOKING_PASTE,SOYA_CHUNK,SAFFRON,GREEN_TEA,RECIPIES_DATA1,AVAILABILITY_SLIDE,GLIMPSES_SLIDES} from "@/lib/constants";
+import axios from "axios";
 
 const OPTIONS = { loop: true };
 
 const ProductDetails = () => {
   const searchParams = useSearchParams();
-  const [healthBenefit,sethealthBenefit] = useState()
+  const [slides, setSlides] = useState([]);
   const [selectedContent, setSelectedContent] = useState(null); // Hold the selected health benefit content
   // const [selectedContent, setSelectedContent] = useState(HEALTH_BENEFITS[0].id);
   const selectedBrand = PRODUCT_DATA.find(
@@ -85,10 +86,10 @@ const ProductDetails = () => {
 
     if (selectedBrand?.id === 1 && selectedProduct?.id === 1) {
       benefits = HEALTH_BENEFITS;
-    } else if (selectedBrand?.id === 1 && selectedProduct?.id === 3) {
+    } else if (selectedBrand?.id === 2 && selectedProduct?.id === 2) {
       benefits = HEALTH_DATE;
     } else if (selectedBrand?.id === 2 && selectedProduct?.id === 1) {
-      benefits = HEALTH_JAM;
+      benefits = HEALTH_BENEFITS;
     } else if (selectedBrand?.id === 2 && selectedProduct?.id === 2) {
       benefits = HEALTH_FLAKES;
     } else if (selectedBrand?.id === 2 && selectedProduct?.id === 3) {
@@ -98,14 +99,20 @@ const ProductDetails = () => {
     } else if (selectedBrand?.id === 2 && selectedProduct?.id === 5) {
       benefits = HEALTH_SPEARD;
     } else if(selectedBrand?.id === 3 && selectedProduct?.id === 1) {
-      benefits = COOKING_PASTE;
+      benefits = HEALTH_JAM;
     } else if(selectedBrand?.id === 3 && selectedProduct?.id === 2) {
-      benefits = SOYA_CHUNK;
+      benefits = HEALTH_FLAKES;
     }
     else if(selectedBrand?.id === 3 && selectedProduct?.id === 3) {
-      benefits = SAFFRON;
+      benefits = HEALTH_VERNACALLI;
     }
     else if(selectedBrand?.id === 4 && selectedProduct?.id === 1) {
+      benefits = SOYA_CHUNK;
+    }
+    else if(selectedBrand?.id === 4 && selectedProduct?.id === 2) {
+      benefits = SAFFRON;
+    }
+    else if(selectedBrand?.id === 5 && selectedProduct?.id === 1) {
       benefits = GREEN_TEA;
     }
 
@@ -117,10 +124,24 @@ const ProductDetails = () => {
 
   if (!selectedBrand || !selectedProduct) return <p>Product or Brand not found</p>;
 
-  // const selectedObj = renderBenefits(`${}`).find((itm) => itm.id === selectedContent);
+  useEffect(()=>{
+  
+    const addTasteProduct = async () => {
+      try {
+        const response = await axios.get("/api/HomePage/tasteProduct");
+        setSlides(response.data)
+      }
+      catch (error) {
+        console.log("Error");
+
+      }
+    }
+
+    addTasteProduct()
+
+  },[])
 
 
-  // console.log(renderBenefits(benefits),"renderBenefits");
 
   return (
     <div className="relative flex flex-col items-center justify-center w-full">
@@ -128,12 +149,12 @@ const ProductDetails = () => {
       <div className="w-full flex justify-end items-center absolute end-0 top-2 lg:top-16">
         <div className="w-[450px] ps-2 md:ps-0">
           <p
-            className={`${selectedProduct?.title_color} text-shadow text-[20px] md:text-[40px] font-bold`}
+            className={`${selectedProduct?.title_color} text-shadow text-[20px] md:text-[40px] font-bold ml-3`}
           >
             {selectedProduct.title}
           </p>
           <p
-            className={`${selectedProduct?.desc_color} text-xs font-jost xs:text-sm md:text-2xl font-medium mt-2`}
+            className={`${selectedProduct?.desc_color} text-xs font-jost xs:text-sm md:text-2xl font-medium mt-2 ml-3`}
           >
             {selectedProduct.title_desc}
           </p>
@@ -229,7 +250,7 @@ const ProductDetails = () => {
           alt="header-logo"
           className="h-[150px] hidden lg:inline absolute top-0 left-0  w-[150px]"
         />
-        <div className="w-full flex flex-col lg:flex-row">
+        <div className="w-full flex flex-col lg:flex-row my-10">
           <div className="w-full lg:w-1/2 lg:pb-56 px-8 flex xs:justify-center items-center">
             <div
               className={`${selectedProduct?.rect_color} relative 2xl:rounded-tl-[157px] 2xl:rounded-tr-[71px] 2xl:rounded-br-[122px] 2xl:rounded-bl-0
@@ -246,7 +267,7 @@ const ProductDetails = () => {
               /> */}
               <Image
                 src={selectedProduct.img}
-                height={350}
+                height={300}
                 alt="header-logo"
                 className="h-[350px] md:h-[400px] z-50 absolute w-[620px] -right-16  -bottom-1 z-20"
               />
@@ -309,9 +330,9 @@ const ProductDetails = () => {
           ) : selectedBrand?.id === 1 && selectedProduct?.id === 3 ? (
             renderBenefits(HEALTH_DATE)
           ) : selectedBrand?.id === 2 && selectedProduct?.id === 1 ? (
-            renderBenefits(HEALTH_JAM)
+            renderBenefits(HEALTH_BENEFITS)
           ) : selectedBrand?.id === 2 && selectedProduct?.id === 2 ? (
-            renderBenefits(HEALTH_FLAKES)
+            renderBenefits(HEALTH_DATE)
           ) : selectedBrand?.id === 2 && selectedProduct?.id === 3 ? (
             renderBenefits(HEALTH_VERNACALLI)
           ) : selectedBrand?.id === 2 && selectedProduct?.id === 4 ? (
@@ -319,14 +340,18 @@ const ProductDetails = () => {
           ) : selectedBrand?.id === 2 && selectedProduct?.id === 5 ? (
             renderBenefits(HEALTH_SPEARD)
           ) : selectedBrand?.id === 3 && selectedProduct?.id === 1 ? (
-            renderBenefits(COOKING_PASTE)
+            renderBenefits(HEALTH_JAM)
           ): selectedBrand?.id === 3 && selectedProduct?.id === 2 ? (
-            renderBenefits(SOYA_CHUNK)
+            renderBenefits(HEALTH_FLAKES)
           ): selectedBrand?.id === 3 && selectedProduct?.id === 3 ? (
-            renderBenefits(SAFFRON)
+            renderBenefits(HEALTH_VERNACALLI)
           ) : selectedBrand?.id === 4 && selectedProduct?.id === 1 ? (
+            renderBenefits(SOYA_CHUNK)
+          ):  selectedBrand?.id === 4 && selectedProduct?.id === 2 ? (
+            renderBenefits(SAFFRON)
+          ):  selectedBrand?.id === 5 && selectedProduct?.id === 1 ? (
             renderBenefits(GREEN_TEA)
-          ):""
+          ) : ""
           }
           </div>
           <div className="w-full lg:w-1/2 mt-20 lg:mt-0 px-0 md:px-8 flex justify-center items-center">
@@ -402,11 +427,9 @@ const ProductDetails = () => {
           <p className="text-sm text-center md:text-[22px] font-medium text-[#585858] font-jost">
             Get to know more about Apis from our customers
           </p>
-          <Link href={"/our-brand/product-details/blog"}>
             <p className="text-[20px] md:text-[40px] font-bold text-[#9F7B49] py-2 font-literata">
               Our Social Reviews
             </p>
-          </Link>
           <p className="text-sm md:text-[22px] font-medium text-center text-[#585858] font-jost">
             Intentions may lay the foundation, but it's our actions that build
             the world we live in.
@@ -416,20 +439,17 @@ const ProductDetails = () => {
               {LATEST_SLIDES.map((itm, index) => (
                 <div className="embla__slide" key={index}>
                   <div className="embla__slide__number">
-                    <Image
-                    width={350}
-                    height={346}
-                      // width="300px"
-                      // height="385px"
-                      className="rounded w-full sm:w-[360px] sm:h-[246px]"
-                      src={itm?.img}
-                      onClick={()=>openModal(itm.video)}
-                      // title="YouTube video player"
-                      // frameborder="0"
-                      // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      // referrerpolicy="strict-origin-when-cross-origin"
-                      // allowfullscreen
-                    />
+                  <iframe
+              width="450px"
+              height="450px"
+              src={itm.video}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="rounded-lg w-full"
+            ></iframe>
                   </div>
                 </div>
               ))}
@@ -437,26 +457,7 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
-      {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50" onClick={closeModal}> {/* Close modal on overlay click */}
-          <div className="bg-white p-4 rounded-lg w-11/12 md:w-3/4 lg:w-1/2" onClick={(e) => e.stopPropagation()}> {/* Prevent closing on content click */}
-          <div className="flex justify-end mb-2"> {/* Added flex container to align button to the right */}
-            <button className="text-end text-xl" onClick={closeModal}>X</button> {/* Close button */}
-            </div>
-            <iframe
-              width="450px"
-              height="450px"
-              src={currentVideo}
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              className="rounded-lg w-full"
-            ></iframe>
-          </div>
-        </div>
-      )}
+     
       <div className="w-full relative flex flex-col justify-center items-center">
         <div className="flex flex-col gap-4 sm:gap-10 px-4 lg:px-36 pb-0 pt-6 md:py-6">
           <div className="flex flex-col items-center justify-center gap-4 md:gap-5">
@@ -470,23 +471,25 @@ const ProductDetails = () => {
           </div>
         </div>
         <div className="pb-6 md:pb-40 w-[90%] flex items-center justify-center">
-          <EmblaCarousel>
-            {SLIDES.map((itm, index) => (
+        <EmblaCarousel options={OPTIONS}>
+            {slides.map((itm, index) => (
               <div className="embla__slide" key={index}>
                 <div className="embla__slide__number !h-[240px] w-full">
-                  <Image
-                    src={itm?.img}
-                    width={240}
-                    height={240}
-                    alt="header-logo"
-                    className="h-[240px] w-auto max-w-max bg-opacity-40"
-                  />
+                  <Link href={`${itm?.path}`} target="_blank">
+                    <Image
+                      src={itm?.imageFile}
+                      width={350}
+                      height={440}
+                      alt="header-logo"
+                      className="h-[250px] w-auto max-w-max bg-opacity-40"
+                    />
+                  </Link>
                 </div>
-                <div className="border-2 border-[hsl(35,37%,45%)] mt-4 lg:mt-10 flex flex-col gap-1 lg:gap-3 py-3 lg:py-6 px-2 lg:px-4">
-                  <p className="text-sm  lg:text-xl font-bold text-[#373737]">
+                <div className="border-[2px] border-[hsl(35,37%,45%)] mt-4 lg:mt-10 flex flex-col gap-1 lg:gap-3 p-1.5 w-full sm:w-[50%] h-[60%] md:w-[90%] h-[45%]  xl:w-[90%] h-[30%] mx-auto overflow-none md:py-2">
+                  <p className="text-sm sm:text-base lg:text-xl font-bold text-[#373737] mb-2">
                     {itm?.title}
                   </p>
-                  <p className="text-[#666666] text-xs lg:text-sm">
+                  <p className="text-[#666666] text-xs sm:text-sm lg:text-base line-clamp-3 sm:line-clamp-none font-jost">
                     {itm?.content}
                   </p>
                 </div>
