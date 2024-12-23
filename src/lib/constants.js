@@ -166,6 +166,7 @@ import NewBannerSoyaChunks from "@/assets/images/OurBrands/newBannersoyaChunks.p
 import NewBannerHimalayaHoney from '@/assets/images/OurBrands/Himalaya-Honey12.png'
 import NewBannerVermicalli from "@/assets/images/OurBrands/newBannerVermicalli.png"
 import NewBannerChoco from "@/assets/images/OurBrands/chocoFlakes011.png"
+import ChocoFlakes from "@/assets/images/OurBrands/chocoFlakesNew01.png"
 // import OrganicHoneyMenu from "@/assets/images"
 
 //  import Blog8 from '@/assets/images/our-blog/blog08.png';
@@ -249,13 +250,14 @@ export const STATUS_CODE = {
 // ]
 
 export const PRODUCT_DATA = [
+
   {
     id: 1,
-    title: "Health & Wellness",
+    title: "Organic",
     products: [
       {
         id: 1,
-        name: "Organic Honey",
+        name: "Apis Organic Honey",
         img: Honey,
         back_img: NewBannerOrganic,
         rect_color: "bg-[#FFC660]",
@@ -276,9 +278,16 @@ export const PRODUCT_DATA = [
         primary_color: "",
         secondary_color: "",
       },
+    ],
+    },
+  {
+    id: 2,
+    title: "Health & Wellness",
+    products: [
+     
       {
-        id: 2,
-        name: "Apis Honey",
+        id: 1,
+        name: "Himalaya Honey",
         img: Honey,
         back_img: NewBannerHimalayaHoney,
         rect_color: "bg-[#FFC660]",
@@ -299,7 +308,7 @@ export const PRODUCT_DATA = [
         secondary_color: "",
       },
       {
-        id: 3,
+        id: 2,
         name: "Dates",
         img: Brands,
         rect_color: "bg-[#162D13]",
@@ -322,7 +331,7 @@ export const PRODUCT_DATA = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Breakfast Range",
     products: [
       {
@@ -352,13 +361,13 @@ export const PRODUCT_DATA = [
         id: 2,
         name: "Flakes",
         img: Flakes,
-        back_img: FlakesBg,
+        back_img: ChocoFlakes,
         rect_color: "bg-[#CC5500]",
         title_color: "text-[#442C1A]",
         desc_color: "text-[#442C1A]",
         title: "Apis Flakes",
         title_desc:
-          "Experience pure, crunchy delight with every bite of our perfectly crisp flakes.",
+          "      Experience pure, crunchy delight with every bite of our perfectly crisp flakes.",
         product_desc:
           "Purity is the essence of our flakes. We meticulously craft each batch using the highest quality ingredients, ensuring that every flake embodies the true taste of nature. Our commitment to purity means no artificial additives or preservatives—just simple, wholesome goodness in every bite. The result is a crisp, clean flavor that stands out in every dish, delivering a natural crunch that enhances your meals. With APIs flakes, you're not just enjoying a product; you're savoring the essence of purity in food, made with care and integrity from start to finish.",
         product_img_1: FlakesProduct,
@@ -395,7 +404,7 @@ export const PRODUCT_DATA = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Kitchen Mix",
     products: [
       // {
@@ -419,7 +428,7 @@ export const PRODUCT_DATA = [
       //   secondary_color: "",
       // },
       {
-        id: 2,
+        id: 1,
         name: "Soya Chunk",
         img: SoyaChunks,
         back_img: NewBannerSoyaChunks,
@@ -440,7 +449,7 @@ export const PRODUCT_DATA = [
         secondary_color: "",
       },
       {
-        id: 3,
+        id: 2,
         name: "Saffron",
         img: Saffron,
         back_img: NewBannerSaffron,
@@ -464,7 +473,7 @@ export const PRODUCT_DATA = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Beverage",
     products: [
       {
@@ -2962,32 +2971,27 @@ export const financialsSheet = {
 export const LATEST_SLIDES = [
   {
     video:
-      "https://www.youtube.com/embed/U0P5fV9IF1c?si=pDY2Wt5HVtS0Hffe&amp;start=1",
+      "https://apisindia.s3.ap-south-1.amazonaws.com/socialReviewVideo/testi1.mp4",
     img:
       Thumbnail_ApisLatest,
   },
   {
     video:
-      "https://www.youtube.com/embed/mDAY0a94MZU?si=BeiAtbDMKqXN9lJF&amp;start=1",
+      "https://apisindia.s3.ap-south-1.amazonaws.com/socialReviewVideo/testi3.mp4",
     img:
       Thumbnail_ApisLatest2,
   },
   {
     video:
-      "https://www.youtube.com/embed/W-JTHS3025w?si=tcTpC8J1Cddo0ybE&amp;start=1",
+      "https://apisindia.s3.ap-south-1.amazonaws.com/socialReviewVideo/testi4.mp4",
     img:
       Thumbnail_ApisLatest3,
   },
   {
     video:
-      "https://www.youtube.com/embed/kGOJpsTJNI8?si=TUKuH3NxLa3kEz9j&amp;start=1",
+      "https://apisindia.s3.ap-south-1.amazonaws.com/socialReviewVideo/testi2.mp4",
     img:
-      Thumbnail_ApisLatest4,
-  },
-  {
-    video: "https://www.youtube.com/embed/NDDaneL4K8s?si=Tx_7ZixWDpHJzQHf",
-    img:
-      Thumbnail_ApisLatest5,
+      Thumbnail_ApisLatest3,
   },
 ];
 export const LATEST_SLIDES_IMAGES = [
@@ -3058,7 +3062,7 @@ export const SLIDES = [
   {
     img: ClassicDates,
     content: "Apis Classic Dates are sweet, nutrient-rich fruits ideal for snacking and adding flavor to dishes.",
-    title: "Classic Dates",
+    title: "Apis Shahenshah Dates",
     path: "https://www.amazon.in/Apis-Classic-Dates-500g/dp/B0CJXWN5Q6"
   },
   {

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import PropTypes from "prop-types";
 import Banner from "@/assets/images/AboutUs/NewBannerApisAbout.png";
-import MissionBanner from "@/assets/images/AboutUs/MissionBanner.png";
+import MissionBanner from "@/assets/images/AboutUs/missionVission.png";
 import Ring1 from "@/assets/images/OurBrands/Ring-4.png";
 import Curv from "@/assets/images/AboutUs/Curv.png";
 import ManBack1 from "@/assets/images/AboutUs/ManBack1.png";
@@ -225,7 +225,7 @@ export default function OurBrand() {
               {["vision", "mission", "values"].map((tab) => (
                 <button
                   key={tab}
-                  className={`text-white text-center text-shadow-lg font-literata font-bold leading-normal ${activeTab === tab ? "text-lg md:text-4xl text-shadow underline" : "text-sm md:text-3xl"
+                  className={`text-black text-center text-shadow-lg font-literata font-bold leading-normal ${activeTab === tab ? "text-lg md:text-4xl text-shadow underline" : "text-sm md:text-3xl"
                     }`}
                   onClick={() => setActiveTab(tab)}
                 >
@@ -239,7 +239,7 @@ export default function OurBrand() {
                 key={activeTab}  // Change key to re-render and trigger animation
                 className="md:p-8 pb-2 rounded-xl w-[90%] lg:w-[70%] shadow-lg animate-slideInLeft"
               >
-                <p className="text-white text-center font-jost text-xs sm:text-base md:text-2xl font-medium">
+                <p className="text-black text-center font-jost text-xs sm:text-base md:text-2xl font-medium">
                   {renderContent()}
                 </p>
               </div>
