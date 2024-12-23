@@ -114,7 +114,7 @@ export default function Sustainability() {
     fetchSustainBilty()
   }, [])
 
-  
+
 
   return (
     <>
@@ -131,21 +131,19 @@ export default function Sustainability() {
         {/* Tabs */}
         <div className="flex gap-4">
           <button
-            className={`px-4 py-2 rounded ${
-              activeTab === "image"
+            className={`px-4 py-2 rounded ${activeTab === "image"
                 ? "bg-[#85673D] text-white"
                 : "bg-gray-200 text-black"
-            }`}
+              }`}
             onClick={() => setActiveTab("image")}
           >
             CSR Images
           </button>
           <button
-            className={`px-4 py-2 rounded ${
-              activeTab === "video"
+            className={`px-4 py-2 rounded ${activeTab === "video"
                 ? "bg-[#85673D] text-white"
                 : "bg-gray-200 text-black"
-            }`}
+              }`}
             onClick={() => setActiveTab("video")}
           >
             CSR Videos
@@ -153,39 +151,39 @@ export default function Sustainability() {
         </div>
       </div>
       <div className="w-[90%] mx-auto">
-      {activeTab === "image" && (
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-    {SUSTAINBILITY_IMAGE.map((item, index) => (
-      <Image
-        key={index}
-        src={item.image ? item.image : "/Eovibb.png"} // Use a valid path here
-        alt={`CSR Image ${index + 1}`}
-        className="w-full rounded-lg border border-[#85673D]"
-        width={300}
-        height={200}
-      />
-    ))}
-  </div>
-)}
+        {activeTab === "image" && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {SUSTAINBILITY_IMAGE.map((item, index) => (
+              <Image
+                key={index}
+                src={item.image ? item.image : "/Eovibb.png"} // Use a valid path here
+                alt={`CSR Image ${index + 1}`}
+                className="w-full rounded-lg border border-[#85673D]"
+                width={300}
+                height={200}
+              />
+            ))}
+          </div>
+        )}
 
         {activeTab === "video" && (
           <section className="embla flex items-center justify-center">
             <div className="embla__viewport w-full" ref={emblaRef}>
               <div className="embla__container py-8">
-                {sustainBiltyData.map((itm, index) => (
+                {sustainBiltyData?.map((itm, index) => (
                   <div className="embla__slide" key={index}>
                     <div className="rounded-xl p-4 border border-[#85673D]">
-                    <iframe
-                          width="100%"
-                          height="240"
-                          className="h-[240px] md:h-[300px]  rounded-2xl w-full bg-opacity-40 "
-                          src={itm.videoUrl}
-                          title={itm.title}
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          referrerpolicy="strict-origin-when-cross-origin"
-                          allowfullscreen
-                          style={{ aspectRatio: "16/9" }}
-                        ></iframe>
+                      <iframe
+                        width="100%"
+                        height="240"
+                        className="h-[240px] md:h-[300px]  rounded-2xl w-full bg-opacity-40 "
+                        src={itm.videoUrl}
+                        title={itm.title}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                        style={{ aspectRatio: "16/9" }}
+                      ></iframe>
                       <p className="text-xs md:text-base font-normal mt-2">
                         {itm.title}
                       </p>
