@@ -9,7 +9,7 @@ import Link from "next/link";
 import { PRODUCT_DATA } from "@/lib/constants";
 
 export default function OurBrand({ onProductClick }) {
-  const TAB_DATA = ["Apis", "Misk", "Nutraship"];
+  const TAB_DATA = ["Apis", "Misk", "Nutrasip"];
   const BRAND_DATA = [
     {
       id: 1,

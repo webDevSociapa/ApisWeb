@@ -167,6 +167,7 @@ import NewBannerHimalayaHoney from '@/assets/images/OurBrands/Himalaya-Honey12.p
 import NewBannerVermicalli from "@/assets/images/OurBrands/newBannerVermicalli.png"
 import NewBannerChoco from "@/assets/images/OurBrands/chocoFlakes011.png"
 import ChocoFlakes from "@/assets/images/OurBrands/chocoFlakesNew01.png"
+import himalayaHoney01 from "@/assets/images/OurBrands/himalayaHoney01.jpg"
 // import OrganicHoneyMenu from "@/assets/images"
 
 //  import Blog8 from '@/assets/images/our-blog/blog08.png';
@@ -270,7 +271,7 @@ export const PRODUCT_DATA = [
           "At Apis India, we are dedicated to delivering high-quality FMCG products that enhance your everyday life. With a focus on freshness, innovation, and reliability, our diverse range of products reflects our commitment to excellence and customer satisfaction. Discover the difference with Apis India.",
         product_img_1: TrustSlide1,
         product_img_2: HoneyImage11,
-
+        product_img3: TrustSlide1,
         customer_says:
           "I’ve tried many honeys, but Apis Organic Honey stands out for its authentic taste and quality. It’s perfect for my tea, baking, and even just a spoonful for a quick energy boost! APIs Honey truly stands out for its purity. It’s evident that they prioritize the natural essence of honey without any additives or artificial processing. The flavor is rich, smooth, and genuinely delightful, reflecting the untouched quality of the nectar.",
         health_benefits:
@@ -287,7 +288,7 @@ export const PRODUCT_DATA = [
      
       {
         id: 1,
-        name: "Himalaya Honey",
+        name: "Honey",
         img: Honey,
         back_img: NewBannerHimalayaHoney,
         rect_color: "bg-[#FFC660]",
@@ -299,7 +300,7 @@ export const PRODUCT_DATA = [
           "At Apis India, we are dedicated to delivering high-quality FMCG products that enhance your everyday life. With a focus on freshness, innovation, and reliability, our diverse range of products reflects our commitment to excellence and customer satisfaction. Discover the difference with Apis India.",
         product_img_1: HoneyProduct,
         product_img_2: HimalayaHoney001,
-
+        product_img3: himalayaHoney01,
         customer_says:
           "APIs Himalayan Honey, and it’s exceptional! The honey has a rich, deep flavor with delightful floral undertones that truly reflects its Himalayan origins. Its purity is evident in both taste and texture—smooth and golden without any added sugars or artificial ingredients. I love the natural sweetness it adds to my tea and yogurt, and it’s perfect for drizzling over toast. The packaging is also top-notch, preserving the honey’s freshness. APIs Himalayan Honey has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for high-quality, pure honey with an authentic, flavorful profile.",
         health_benefits:

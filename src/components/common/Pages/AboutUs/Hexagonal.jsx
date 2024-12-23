@@ -18,6 +18,10 @@ import Polygon14 from '@/assets/images/AboutUs/Polygon19.png';
 import Polygon15 from '@/assets/images/AboutUs/Polygon22.png';
 import Polygon16 from '@/assets/images/AboutUs/Polygon17.png';
 import Polygon123 from '@/assets/images/AboutUs/apisDiag.png'
+import Polygon31 from '@/assets/images/AboutUs/jr11.png'
+import Polygon32 from '@/assets/images/AboutUs/jr12.png'
+import Polygon33 from '@/assets/images/AboutUs/jr13.png'
+import Polygon34 from '@/assets/images/AboutUs/jr14.png'
 export default function HexagonalPage() {
   return (
     <>
