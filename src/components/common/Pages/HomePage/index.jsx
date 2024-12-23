@@ -169,7 +169,7 @@ export default function HomePage() {
   // console.log("tvcHome",tvcHome[0].thumbnail);
 
 
-  const words = BannerText?.split(' ');  
+  const words = BannerText?.split(' ');
 
   return (
     <>
@@ -565,7 +565,7 @@ export default function HomePage() {
           Discover the newest trends, products, and innovations from APIS India.
         </p>
         <div className="py-6 md:py-10 w-[90%] flex items-center justify-center latestApisHome">
-        <EmblaCarousel options={OPTIONS}>
+          <EmblaCarousel options={OPTIONS}>
             {latestApis.map((itm, index) => (
               <div className="embla__slide" key={index}>
                 <div className="embla__slide__number !h-[246px] w-full">
@@ -577,7 +577,7 @@ export default function HomePage() {
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
+                    referrerpol icy="strict-origin-when-cross-origin"
                     allowfullscreen
                   ></iframe>
                 </div>
@@ -585,7 +585,7 @@ export default function HomePage() {
             ))}
           </EmblaCarousel>
         </div>
-      
+
 
 
         <div className="w-full tvcSectionResponsive">
@@ -608,20 +608,21 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row items-center w-full tvc-bg sm:justify-center gap-10 pt-5 md:-mt-[150px] w-full xl:-mt-40 sm:mt-0 tvcyoutubeVideo">
-              <Image
-                className="rounded md:h-[360px] h-auto md:w-[580px] max-w-[500px] min-h-[200px] w-auto"
-                src={tvcHome[0]?.thumbnail}
-                width={500}
-                height={500}
-                onClick={() => openModal(`${tvcHome[0].videoUrl}`)}
-
-              // title="YouTube video player"
-              // frameborder="0"
-              // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              // referrerpolicy="strict-origin-when-cross-origin"
-              // allowfullscreen
-              />
-              <Image
+              {tvcHome?.map((itm) => (
+                <iframe
+                  className="rounded md:h-[360px] h-auto md:w-[580px] max-w-[500px] min-h-[200px] w-auto"
+                  src={itm.videoUrl}
+                  width={500}
+                  height={500}
+                  // onClick={() => openModal(`${tvcHome[0].videoUrl}`)}
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                />
+              ))}
+              {/* <Image
                 className="rounded hidden lg:inline md:h-[360px] h-auto md:w-[580px] max-w-[500px] min-h-[200px]"
                 src={tvcHome[1]?.thumbnail}
                 width={500}
@@ -632,7 +633,7 @@ export default function HomePage() {
               // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               // referrerpolicy="strict-origin-when-cross-origin"
               // allowfullscreen
-              />
+              /> */}
             </div>
 
             <Image

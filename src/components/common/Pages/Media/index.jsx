@@ -7,11 +7,13 @@ import Banner from "@/assets/images/Media/media.png";
 import { NEWS_DATA } from '@/lib/constants';
 import Campaign from '@/assets/images/Media/campaign.png'
 import handhoney from '@/assets/images/Media/handhoney.png'
-import jam from '@/assets/images/Media/jam.png'
+import jam from '@/assets/images/OurBrands/Jam.png'
 import honey from '@/assets/images/Media/honey.png'
 import mediaGallery001 from '@/assets/images/Media/mediaGallery001.png'
 import mediaGallery002 from '@/assets/images/Media/mediaGallery002.png'
 import mediaGallery003 from '@/assets/images/Media/mediaGallery003.png'
+import Campaign001 from '@/assets/images/home-banner-section/organicHoneyGreenCard1.png'
+import Glimpse1 from "@/assets/images/OurBrands/Glimpse-1.png";
 
 
 import ImageBanner from "../../Layout/Banner";
@@ -49,7 +51,7 @@ const LATEST_SLIDES = [
 
 const IMAGE_DATA = [
   {
-    src: honey,
+    src: Campaign001,
     alt: "Honey",
     name:"Apis Honey",
     colorShadow: 'CDB699'
@@ -241,24 +243,20 @@ export default function Media() {
             </div>
           </div>
           <div className="flex flex-col md:flex-row items-center w-full sm:justify-center gap-10 pt-4 md:mt-10 w-full">
-            <iframe
-              className="rounded lg:inline h-[200px] md:h-[280px] w-[300px] xl:h-[360px] md:w-[580px]"
-              src="https://www.youtube.com/embed/JUVgptUaFU4?si=ILKh0XegYCLhwId-"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              className="rounded lg:inline h-[200px] md:h-[280px] xl:h-[360px] w-[300px] md:w-[580px]"
-              src="https://www.youtube.com/embed/8HEUabT5LJs?si=SOVN0tBFUyLRzEbp"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+          {tvcHome?.map((itm) => (
+                <iframe
+                  className="rounded md:h-[360px] h-auto md:w-[580px] max-w-[500px] min-h-[200px] w-auto"
+                  src={itm.videoUrl}
+                  width={500}
+                  height={500}
+                  // onClick={() => openModal(`${tvcHome[0].videoUrl}`)}
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                />
+              ))}
           </div>
         </div>
       </div>
@@ -269,7 +267,7 @@ export default function Media() {
             <div className="flex flex-col items-center gap-14 grid grid-cols-1 divide-y">
               <div className="w-full md:w-[470px] h-[382px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#CDB699] to-[#CDB699] shadow-[2px_2px_2px_#CDB699] relative">
                 <p className='text-center font-literata font-semibold text-[30px]'>Apis Honey </p>
-                <Image src={honey} alt="Honey" className="bg-transparent p-[9px] mt-0" />
+                <Image src={Campaign001} alt="Honey" className="bg-transparent p-[9px] mt-0" />
               </div>
               <div className="w-full md:w-[470px] h-[382px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#E0C4B2] to-[#E0C4B2] shadow-[2px_2px_2px_#E0C4B2] relative md:-mt-[140px] mt-[10px]">
               <p className='text-center font-literata font-semibold text-[30px]'>Apis Jam </p>
