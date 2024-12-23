@@ -2,11 +2,9 @@
 
 import Image from "next/image";
 import PropTypes from "prop-types";
-import News1 from "@/assets/images/home-banner-section/news-1.png";
 import Fruit from "@/assets/images/home-banner-section/fruit.png";
 import IndiaUnit from "@/assets/images/home-banner-section/india-unit.png";
 import DubaiUnit from "@/assets/images/home-banner-section/apisarabiaNew.png";
-import News2 from "@/assets/images/home-banner-section/news-2.png";
 import HoneyBee from "@/assets/images/home-banner-section/honey-bee.png";
 
 import ChocolateImg from '@/assets/images/home-banner-section/ChocolateImg.png'
