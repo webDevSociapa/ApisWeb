@@ -31,8 +31,6 @@ const OurBlogPage = () => {
       `/our-blog/blog-details?id=${encodeURIComponent(_id)}&blogTitle=${encodeURIComponent(blogTitle)}&blogImage=${encodeURIComponent(blogImage)}&contentData=${encodeURIComponent(contentData)}`
     );
   };
-
-
   useEffect(() => {
     const fetchBlogsData = async () => {
       try {

@@ -150,8 +150,8 @@ const ProductDetails = () => {
           <p
             className={`${selectedProduct?.title_color} text-shadow text-[20px] md:text-[40px] font-bold ml-3`}
           >
-            {selectedProduct.title}
-          </p>
+           {selectedBrand?.id === 2 && selectedProduct?.id === 1 ? "": selectedProduct.title}
+           </p>
           <p
             className={`${selectedProduct?.desc_color} text-xs font-jost xs:text-sm md:text-2xl font-medium mt-2 ml-3`}
           >
@@ -161,85 +161,85 @@ const ProductDetails = () => {
       </div>
       {selectedBrand?.id === 2 && selectedProduct?.id === 1 ? (
         <>
-         <div className="flex flex-col items-center justify-center w-full w-[80%] capitalize">
-        <p className="w-[90%] text-[20px] md:text-[40px] font-bold text-center text-[#84663C]">
-          Purity is our presence in food
-        </p>
-        <p className="text-[#454545] w-[80%] text-sm md:text-2xl text-center mt-4 font-jost md:mt-8">
-          {selectedProduct.product_desc}
-        </p>
-      </div>
-      <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
-        <div className="flex flex-col items-center">
-          <Image
-            src={selectedProduct.product_img_1}
-            height={280}
-            alt="header-logo"
-            className="h-[180px] w-auto md:h-[280px]"
-          />
-          <Link
-            href={{
-              pathname: "/our-brand/product-details/product-desc",
-              query: { selectedProduct: JSON.stringify(selectedProduct) },
-            }}
-          >
-            <button
-              className="border mt-4 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white"
-            >
-              View Details
-            </button>
-          </Link>
-        </div>
+          <div className="flex flex-col items-center justify-center w-full w-[80%] capitalize">
+            <p className="w-[90%] text-[20px] md:text-[40px] font-bold text-center text-[#84663C]">
+              Purity is our presence in food
+            </p>
+            <p className="text-[#454545] w-[80%] text-sm md:text-2xl text-center mt-4 font-jost md:mt-8">
+              {selectedProduct.product_desc}
+            </p>
+          </div>
+          <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
+            <div className="flex flex-col items-center">
+              <Image
+                src={selectedProduct.product_img_1}
+                height={280}
+                alt="header-logo"
+                className="h-[180px] w-auto md:h-[280px]"
+              />
+              <Link
+                href={{
+                  pathname: "/our-brand/product-details/product-desc",
+                  query: { selectedProduct: JSON.stringify(selectedProduct) },
+                }}
+              >
+                <button
+                  className="border mt-4 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white"
+                >
+                  View Details
+                </button>
+              </Link>
+            </div>
 
-        {selectedBrand?.id === 2 && selectedProduct?.id === 1 && (
-          <div className="flex flex-col items-center">
+            {selectedBrand?.id === 2 && selectedProduct?.id === 1 && (
+              <div className="flex flex-col items-center">
+                <Image
+                  src={selectedProduct.product_img3}
+                  height={280}
+                  alt="header-logo"
+                  className="h-[180px] w-auto md:h-[280px]"
+                />
+                <Link href={{
+                  pathname: "/our-brand/product-details/product-desc",
+                  query: { selectedProduct: "HimalayaHoney" }
+                }}>
+                  <button
+                    className="border mt-4 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white"
+                  >
+                    View Details
+                  </button>
+                </Link>
+              </div>
+            )}
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="flex flex-col items-center justify-center w-full w-[80%] capitalize">
+            <p className="w-[90%] text-[20px] md:text-[40px] font-bold text-center text-[#84663C]">
+              Purity is our presence in food
+            </p>
+            <p className="text-[#454545] w-[80%] text-sm md:text-2xl text-center mt-4 font-jost md:mt-8">
+              {selectedProduct.product_desc}
+            </p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
             <Image
-              src={selectedProduct.product_img3}
+              src={selectedProduct.product_img_1}
+              // width={266}
               height={280}
               alt="header-logo"
-              className="h-[180px] w-auto md:h-[280px]"
+              className="h-[180px] mt-8 w-auto md:h-[280px]"
             />
-            <Link href={{
-              pathname: "/our-brand/product-details/product-desc",
-              query: { selectedProduct: "HimalayaHoney" }
-            }}>
-              <button
-                className="border mt-4 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white"
-              >
-                View Details
+            <Link href={"https://www.amazon.in/s?k=organic+honey+apis&crid=219JTIFPTZQV0&sprefix=organic+honey+apis%2Caps%2C209&ref=nb_sb_noss_1"} target="_blank">
+              <button className="border mt-8 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white">
+                Available on
               </button>
             </Link>
           </div>
-        )}
-      </div>
         </>
-      ): (
-       <>
-       <div className="flex flex-col items-center justify-center w-full w-[80%] capitalize">
-        <p className="w-[90%] text-[20px] md:text-[40px] font-bold text-center text-[#84663C]">
-          Purity is our presence in food
-        </p>
-        <p className="text-[#454545] w-[80%] text-sm md:text-2xl text-center mt-4 font-jost md:mt-8">
-          {selectedProduct.product_desc}
-        </p>
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <Image
-          src={selectedProduct.product_img_1}
-          // width={266}
-          height={280}
-          alt="header-logo"
-          className="h-[180px] mt-8 w-auto md:h-[280px]"
-        />
-        <Link href={"https://www.amazon.in/s?k=organic+honey+apis&crid=219JTIFPTZQV0&sprefix=organic+honey+apis%2Caps%2C209&ref=nb_sb_noss_1"} target="_blank">
-          <button className="border mt-8 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white">
-            Available on
-          </button>
-        </Link>
-      </div>
-       </>
       )
-    }
+      }
 
       <div className="w-[90%] border border-[#AE844A] rounded-[10px] flex mt-8 md:mt-20 items-center flex-col gap-4 md:gap-12">
         <div className="bg-white rounded-[10px] w-full h-[23px] md:h-[65px] flex items-center justify-between px-3 md:pt-2 pt-1 avaibility">

@@ -47,7 +47,7 @@ const Journey = () => {
        <style jsx>{`
         @media (min-width: 768px) {
           div {
-            height: 90vh !important;
+            height: 100vh !important;
           }
         }
        
@@ -69,7 +69,7 @@ const Journey = () => {
   }}
 > */}
 
-      <div className="sidebar p-0 absolute py-4 xl:px-2 grid xl:w-[350px] xl:h-[550px] sm:w-[160px] md:w-[120px]">
+      <div className="sidebar p-0 absolute py-2 xl:px-2 grid xl:w-[350px] xl:h-[550px] sm:w-[160px] md:w-[120px]">
         {JOURNEY_DATA.map((itm, ind) => {
           return (
             <button
