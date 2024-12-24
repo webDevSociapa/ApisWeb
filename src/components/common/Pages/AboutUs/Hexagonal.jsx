@@ -22,6 +22,8 @@ import Polygon31 from '@/assets/images/AboutUs/jr11.png'
 import Polygon32 from '@/assets/images/AboutUs/jr12.png'
 import Polygon33 from '@/assets/images/AboutUs/jr13.png'
 import Polygon34 from '@/assets/images/AboutUs/jr14.png'
+import Journey011 from "@/assets/images/AboutUs/journey011.png"
+
 export default function HexagonalPage() {
   return (
     <>
@@ -79,7 +81,7 @@ export default function HexagonalPage() {
           <div className={`${styles.row} ${styles.row4}`}>
             <div className={styles['hex-top4']}>
               <div className={styles.imageWrapper}>
-                <Image src={Polygon123} alt="John Doe" className={styles.imgData} />
+                <Image src={Polygon3} alt="John Doe" className={styles.imgData} />
               </div>
               
             </div>
@@ -93,7 +95,7 @@ export default function HexagonalPage() {
           <div className={`${styles.row} ${styles.row5}`}>
             <div className={styles['hex-top5']}>
               <div className={styles.imageWrapper}>
-                <Image src={Polygon16} alt="John Doe" className={styles.imgData} />
+                <Image src={Journey011} alt="John Doe" className={styles.imgData} />
               </div>
               
             </div>

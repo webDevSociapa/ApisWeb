@@ -170,12 +170,13 @@ import ChocoFlakes from "@/assets/images/OurBrands/chocoFlakesNew01.png"
 import himalayaHoney01 from "@/assets/images/OurBrands/himalayaHoney01.jpg"
 import HimalayaHoney0001 from "@/assets/images/OurBrands/himalayaHoney001.jpg"
 import RegularHoney001 from "@/assets/images/OurBrands/regularHoney001.jpg"
-import soyaChunksProduct01 from "@/assets/images/OurBrands/regularHoney001.jpg"
+import soyaChunksProduct01 from "@/assets/images/OurBrands/soyaChunksProduct01.jpg"
 import chocoFlakes001 from "@/assets/images/OurBrands/chocoFlakes001.png"
 import NewProductBannerDates from "@/assets/images/OurBrands/newProductBannerDates.png"
 import CornFlakesNew from "@/assets/images/OurBrands/cornFlakesNew.png"
 import NewJamBanner from "@/assets/images/OurBrands/newJamBanner.png"
 import DatesProducts from "@/assets/images/OurBrands/datesProducts.png"
+import HoneyBannerNew001 from "@/assets/images/OurBrands/honeyBannerNew001.png";
 
 // import OrganicHoneyMenu from "@/assets/images"
 
@@ -299,7 +300,7 @@ export const PRODUCT_DATA = [
         id: 1,
         name: "Honey",
         img: Honey,
-        back_img: NewBannerHimalayaHoney,
+        back_img: HoneyBannerNew001,
         rect_color: "bg-[#FFC660]",
         title_color: "text-[#9F7B49]",
         desc_color: "text-black",
@@ -512,7 +513,6 @@ export const PRODUCT_DATA = [
       },
     ],
   }
-
 ];
 
 
@@ -3693,8 +3693,7 @@ export const Terms_Conditions = [
       </p>
     </div>`
   },
-  {
-    id: 2, content: `<div class="apis_bg">
+  {  id: 2, content: `<div class="apis_bg">
       <div class="container">
         	<div class="row">
         		<div class="col-md-3">
@@ -3835,5 +3834,6 @@ export const Terms_Conditions = [
         		</div>
         	</div>
       </div><!-- container -->
-    </div>`}
+    </div>`
+  }
 ];
