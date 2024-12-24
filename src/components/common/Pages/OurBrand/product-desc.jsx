@@ -14,7 +14,7 @@ export default function ProductDesc() {
     selectedProduct = { name: rawSelectedProduct };
   }
 
-  const { product_img3 } = selectedProduct;
+  const { product_img_1 } = selectedProduct;
 
   const defaultDescription = {
     name: "Apis Himalaya Honey",
@@ -51,7 +51,7 @@ export default function ProductDesc() {
         {selectedProduct.name === "HimalayaHoney" ? (
           <Image src={HimalayaHoney0001} alt="Himalaya Honey" width={400} height={300} />
         ) : (
-          <Image src={product_img3?.src} alt="Product Image" width={400} height={300} />
+          <Image src={product_img_1?.src} alt="Product Image" width={400} height={300} />
         )}
         <h1 className="text-3xl font-semibold mt-4">{productData.name}</h1>
         <p className="text-gray-700 text-center mt-2">{productData.description}</p>

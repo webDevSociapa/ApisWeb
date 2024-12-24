@@ -159,7 +159,9 @@ const ProductDetails = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center w-full w-[80%] capitalize">
+      {selectedBrand?.id === 2 && selectedProduct?.id === 1 ? (
+        <>
+         <div className="flex flex-col items-center justify-center w-full w-[80%] capitalize">
         <p className="w-[90%] text-[20px] md:text-[40px] font-bold text-center text-[#84663C]">
           Purity is our presence in food
         </p>
@@ -189,26 +191,56 @@ const ProductDetails = () => {
           </Link>
         </div>
 
-       {selectedBrand?.id === 2 && selectedProduct?.id === 1 && (
-         <div className="flex flex-col items-center">
-         <Image
-           src={selectedProduct.product_img4}
-           height={280}
-           alt="header-logo"
-           className="h-[180px] w-auto md:h-[280px]"
-         />
-         <Link href={{pathname:"/our-brand/product-details/product-desc",
-           query:{selectedProduct: "HimalayaHoney" }
-         }}>
-           <button
-             className="border mt-4 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white"
-           >
-             View Details
-           </button>
-         </Link>
-       </div>
-       )}
+        {selectedBrand?.id === 2 && selectedProduct?.id === 1 && (
+          <div className="flex flex-col items-center">
+            <Image
+              src={selectedProduct.product_img3}
+              height={280}
+              alt="header-logo"
+              className="h-[180px] w-auto md:h-[280px]"
+            />
+            <Link href={{
+              pathname: "/our-brand/product-details/product-desc",
+              query: { selectedProduct: "HimalayaHoney" }
+            }}>
+              <button
+                className="border mt-4 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white"
+              >
+                View Details
+              </button>
+            </Link>
+          </div>
+        )}
       </div>
+        </>
+      ): (
+       <>
+       <div className="flex flex-col items-center justify-center w-full w-[80%] capitalize">
+        <p className="w-[90%] text-[20px] md:text-[40px] font-bold text-center text-[#84663C]">
+          Purity is our presence in food
+        </p>
+        <p className="text-[#454545] w-[80%] text-sm md:text-2xl text-center mt-4 font-jost md:mt-8">
+          {selectedProduct.product_desc}
+        </p>
+      </div>
+      <div className="flex flex-col items-center justify-center">
+        <Image
+          src={selectedProduct.product_img_1}
+          // width={266}
+          height={280}
+          alt="header-logo"
+          className="h-[180px] mt-8 w-auto md:h-[280px]"
+        />
+        <Link href={"https://www.amazon.in/s?k=organic+honey+apis&crid=219JTIFPTZQV0&sprefix=organic+honey+apis%2Caps%2C209&ref=nb_sb_noss_1"} target="_blank">
+          <button className="border mt-8 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white">
+            Available on
+          </button>
+        </Link>
+      </div>
+       </>
+      )
+    }
+
       <div className="w-[90%] border border-[#AE844A] rounded-[10px] flex mt-8 md:mt-20 items-center flex-col gap-4 md:gap-12">
         <div className="bg-white rounded-[10px] w-full h-[23px] md:h-[65px] flex items-center justify-between px-3 md:pt-2 pt-1 avaibility">
           <EmblaCarousel options={OPTIONS} autoScroll>
@@ -449,41 +481,41 @@ const ProductDetails = () => {
           </>
         )}
 
-{selectedBrand?.id === 1 && selectedProduct?.id === 1 && (
-     <div className="w-full py-6 md:py-20 bg-[#FFF9F0] flex flex-col items-center justify-center">
-     <p className="text-sm text-center md:text-[22px] font-medium text-[#585858] font-jost">
-       Get to know more about Apis from our customers
-     </p>
-     <p className="text-[20px] md:text-[40px] font-bold text-[#9F7B49] py-2 font-literata">
-       Our Social Reviews
-     </p>
-     <p className="text-sm md:text-[22px] font-medium text-center text-[#585858] font-jost">
-       Intentions may lay the foundation, but it's our actions that build
-       the world we live in.
-     </p>
-     <div className="w-[90%] pt-6 md:pt-16 flex items-center justify-center">
-       <EmblaCarousel options={OPTIONS}>
-         {LATEST_SLIDES.map((itm, index) => (
-           <div className="embla__slide" key={index}>
-             <div className="embla__slide__number">
-               <iframe
-                 width="450px"
-                 height="450px"
-                 src={itm.video}
-                 title="YouTube video player"
-                 frameBorder="0"
-                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                 referrerPolicy="strict-origin-when-cross-origin"
-                 allowFullScreen
-                 className="rounded-lg w-full"
-               ></iframe>
-             </div>
-           </div>
-         ))}
-       </EmblaCarousel>
-     </div>
-   </div>
-)}
+        {selectedBrand?.id === 1 && selectedProduct?.id === 1 && (
+          <div className="w-full py-6 md:py-20 bg-[#FFF9F0] flex flex-col items-center justify-center">
+            <p className="text-sm text-center md:text-[22px] font-medium text-[#585858] font-jost">
+              Get to know more about Apis from our customers
+            </p>
+            <p className="text-[20px] md:text-[40px] font-bold text-[#9F7B49] py-2 font-literata">
+              Our Social Reviews
+            </p>
+            <p className="text-sm md:text-[22px] font-medium text-center text-[#585858] font-jost">
+              Intentions may lay the foundation, but it's our actions that build
+              the world we live in.
+            </p>
+            <div className="w-[90%] pt-6 md:pt-16 flex items-center justify-center">
+              <EmblaCarousel options={OPTIONS}>
+                {LATEST_SLIDES.map((itm, index) => (
+                  <div className="embla__slide" key={index}>
+                    <div className="embla__slide__number">
+                      <iframe
+                        width="450px"
+                        height="450px"
+                        src={itm.video}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        className="rounded-lg w-full"
+                      ></iframe>
+                    </div>
+                  </div>
+                ))}
+              </EmblaCarousel>
+            </div>
+          </div>
+        )}
       </div>
 
       <div className="w-full relative flex flex-col justify-center items-center">

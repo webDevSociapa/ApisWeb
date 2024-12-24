@@ -307,9 +307,9 @@ export const PRODUCT_DATA = [
         title_desc: "",
         product_desc:
           "At Apis India, we are dedicated to delivering high-quality FMCG products that enhance your everyday life. With a focus on freshness, innovation, and reliability, our diverse range of products reflects our commitment to excellence and customer satisfaction. Discover the difference with Apis India.",
-        product_img_1: HoneyProduct,
+        product_img_1: RegularHoney001,
         product_img_2: HimalayaHoney001,
-        product_img3: RegularHoney001,
+        product_img3: HimalayaHoney0001,
         product_img4: HimalayaHoney0001,
         title:"Regular Honey",
         customer_says:
