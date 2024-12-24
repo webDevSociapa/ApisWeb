@@ -7,7 +7,7 @@ export default class Carasol extends Component {
     super(props);
     this.state = {
       banners: [],
-      currentSlide: 0, // Track the currently active slide
+      currentSlide: 0,
     };
     this.carouselRef = React.createRef();
   }
@@ -21,7 +21,6 @@ export default class Carasol extends Component {
       const response = await fetch("/api/HomePage/banner");
       const data = await response.json();
       const filteredBanners = data.filter((banner) => banner.hideShow);
-
       this.setState({ banners: filteredBanners });
     } catch (error) {
       console.error("Error fetching banner data:", error);
@@ -30,13 +29,6 @@ export default class Carasol extends Component {
 
   handleSlideChange = (index) => {
     this.setState({ currentSlide: index });
-  };
-
-  // Method to handle custom pill click
-  handlePillClick = (index) => {
-    if (this.carouselRef.current) {
-      this.carouselRef.current.moveTo(index); // Move to selected slide
-    }
   };
 
   render() {
@@ -51,12 +43,12 @@ export default class Carasol extends Component {
             autoPlay
             infiniteLoop
             showThumbs={false}
-            interval={3000} // Auto-slide every 3 seconds
+            interval={5000} // Adjust slide interval
             showArrows={false}
             showStatus={false}
-            showIndicators={false} // Disable default indicators
-            stopOnHover={false} // Prevent pausing on hover
-            onChange={this.handleSlideChange} // Update current slide
+            showIndicators={false}
+            stopOnHover={false}
+            onChange={this.handleSlideChange}
           >
             {banners.map((banner) => (
               <div className="carousel_banner" key={banner._id}>
@@ -66,6 +58,7 @@ export default class Carasol extends Component {
                   loop
                   className="video-img1"
                   src={banner.videoFile}
+                  playsInline // Ensure compatibility with mobile devices
                 />
               </div>
             ))}
@@ -77,7 +70,7 @@ export default class Carasol extends Component {
               <div
                 key={index}
                 className={`scroll-pill ${index === currentSlide ? "active" : ""}`}
-                onClick={() => this.handlePillClick(index)} // Move to the selected slide
+                onClick={() => this.carouselRef.current.moveTo(index)}
               />
             ))}
           </div>

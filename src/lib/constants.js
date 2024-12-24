@@ -168,6 +168,15 @@ import NewBannerVermicalli from "@/assets/images/OurBrands/newBannerVermicalli.p
 import NewBannerChoco from "@/assets/images/OurBrands/chocoFlakes011.png"
 import ChocoFlakes from "@/assets/images/OurBrands/chocoFlakesNew01.png"
 import himalayaHoney01 from "@/assets/images/OurBrands/himalayaHoney01.jpg"
+import HimalayaHoney0001 from "@/assets/images/OurBrands/himalayaHoney001.jpg"
+import RegularHoney001 from "@/assets/images/OurBrands/regularHoney001.jpg"
+import soyaChunksProduct01 from "@/assets/images/OurBrands/regularHoney001.jpg"
+import chocoFlakes001 from "@/assets/images/OurBrands/chocoFlakes001.png"
+import NewProductBannerDates from "@/assets/images/OurBrands/newProductBannerDates.png"
+import CornFlakesNew from "@/assets/images/OurBrands/cornFlakesNew.png"
+import NewJamBanner from "@/assets/images/OurBrands/newJamBanner.png"
+import DatesProducts from "@/assets/images/OurBrands/datesProducts.png"
+
 // import OrganicHoneyMenu from "@/assets/images"
 
 //  import Blog8 from '@/assets/images/our-blog/blog08.png';
@@ -300,7 +309,9 @@ export const PRODUCT_DATA = [
           "At Apis India, we are dedicated to delivering high-quality FMCG products that enhance your everyday life. With a focus on freshness, innovation, and reliability, our diverse range of products reflects our commitment to excellence and customer satisfaction. Discover the difference with Apis India.",
         product_img_1: HoneyProduct,
         product_img_2: HimalayaHoney001,
-        product_img3: himalayaHoney01,
+        product_img3: RegularHoney001,
+        product_img4: HimalayaHoney0001,
+        title:"Regular Honey",
         customer_says:
           "APIs Himalayan Honey, and it’s exceptional! The honey has a rich, deep flavor with delightful floral undertones that truly reflects its Himalayan origins. Its purity is evident in both taste and texture—smooth and golden without any added sugars or artificial ingredients. I love the natural sweetness it adds to my tea and yogurt, and it’s perfect for drizzling over toast. The packaging is also top-notch, preserving the honey’s freshness. APIs Himalayan Honey has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for high-quality, pure honey with an authentic, flavorful profile.",
         health_benefits:
@@ -315,13 +326,13 @@ export const PRODUCT_DATA = [
         rect_color: "bg-[#162D13]",
         title_color: "",
         desc_color: "",
-        back_img: NewDatesBanner,
+        back_img: NewProductBannerDates,
         title: "",
         title_desc: "",
         product_desc:
           "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor without any additives or preservatives. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
         product_img_1: DatesProduct,
-        product_img_2: ClassicDatesMenu,
+        product_img_2: DatesProducts,
         customer_says:
           "I recently tried Apis Dates, and I’m absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It’s clear that APIs prioritizes purity, as there are no additives or preservatives, just pure, high-quality dates. The texture is perfect—soft and moist, making them a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I’m enjoying a product that’s both nutritious and free from artificial ingredients. APIs Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
         health_benefits:
@@ -349,7 +360,7 @@ export const PRODUCT_DATA = [
         product_desc:
           "Just as our honey exemplifies nature's finest, our jams uphold the same unwavering commitment to quality. We carefully select the freshest fruits, ensuring that each jar delivers a burst of genuine flavor without artificial additives or preservatives. Our meticulous process preserves the natural taste and nutritional benefits of the fruit, offering a delightful and wholesome experience with every spoonful. When you choose APIs jams, you’re savoring purity in its most authentic form, making each bite a true celebration of natural goodness.",
         product_img_1: JamProduct,
-        product_img_2: Jam001,
+        product_img_2: NewJamBanner,
 
         customer_says:
           "I recently tried Apis Jam, and I’m absolutely delighted with the experience! The flavor is truly exceptional—rich, vibrant, and bursting with genuine fruit goodness. You can taste the quality in every spoonful, with no artificial aftertaste or additives. The texture is perfectly smooth, making it a versatile addition to everything from toast to desserts. I also appreciate the thoughtful packaging that preserves freshness and highlights the commitment to purity. APIs Jam has quickly become a staple in my kitchen, and I wholeheartedly recommend it to anyone looking for a premium, authentic jam that delivers on both taste and quality.",
@@ -362,7 +373,7 @@ export const PRODUCT_DATA = [
         id: 2,
         name: "Flakes",
         img: Flakes,
-        back_img: ChocoFlakes,
+        back_img: chocoFlakes001,
         rect_color: "bg-[#CC5500]",
         title_color: "text-[#442C1A]",
         desc_color: "text-[#442C1A]",
@@ -372,7 +383,7 @@ export const PRODUCT_DATA = [
         product_desc:
           "Purity is the essence of our flakes. We meticulously craft each batch using the highest quality ingredients, ensuring that every flake embodies the true taste of nature. Our commitment to purity means no artificial additives or preservatives—just simple, wholesome goodness in every bite. The result is a crisp, clean flavor that stands out in every dish, delivering a natural crunch that enhances your meals. With APIs flakes, you're not just enjoying a product; you're savoring the essence of purity in food, made with care and integrity from start to finish.",
         product_img_1: FlakesProduct,
-        product_img_2: NewBannerChoco,
+        product_img_2: CornFlakesNew,
         customer_says:
           "Best experience ever !!!! yes its for APIs Flakes and am thoroughly impressed! The flakes are incredibly crisp and full of natural flavor, adding a delightful crunch to my breakfasts and snacks. What stands out is the purity of the product—no artificial additives or preservatives, just wholesome, high-quality ingredients. Each bite is fresh and satisfying, making them perfect for both sweet and savory dishes. The packaging is also well-designed, keeping the flakes fresh and crisp. APIs Flakes have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking a premium, delicious, and natural option for their meals.",
         health_benefits:

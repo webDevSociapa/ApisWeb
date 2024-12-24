@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import PropTypes from "prop-types";
-import Banner from "@/assets/images/Investors/Investors.png";
+import Banner from "@/assets/images/ContactUs/contaxtUsMainBanner.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";

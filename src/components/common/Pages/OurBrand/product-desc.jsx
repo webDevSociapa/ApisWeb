@@ -1,127 +1,115 @@
 "use client";
 import { useSearchParams } from "next/navigation";
+import HimalayaHoney0001 from "@/assets/images/OurBrands/himalayaHoney001.jpg";
+import Image from "next/image";
 
 export default function ProductDesc() {
   const searchParams = useSearchParams();
-  const selectedProduct = JSON.parse(searchParams.get("selectedProduct") || "{}");
-  const { back_img, img, product_img_1,product_img_2 } = selectedProduct;
-  console.log("back_img",back_img);
-  
+  const rawSelectedProduct = searchParams.get("selectedProduct") || "";
 
-  console.log("selectedProduct111", selectedProduct);
+  let selectedProduct;
+  try {
+    selectedProduct = JSON.parse(rawSelectedProduct);
+  } catch (error) {
+    selectedProduct = { name: rawSelectedProduct };
+  }
 
-  // Sample Data (Fallback if `selectedProduct` is not provided)
-  const productData = {
-    name: selectedProduct.name || "Organic Honey",
+  const { product_img3 } = selectedProduct;
+
+  const defaultDescription = {
+    name: "Apis Himalaya Honey",
+    image: HimalayaHoney0001,
     description:
-      selectedProduct.description ||
-      "Sourced from the beautiful Kashmir Valley, Apis Organic Honey is an allegory of organic purity. With consistent & delectable natural taste, Apis Organic Honey is patiently extracted & packaged to retain its untouched goodness and flavor! Experience it yourself, and relish this organic gift of nature today!",
-    img: selectedProduct.img?.src || "/path-to-default-image",
-    weight: selectedProduct.weight || "450g",
-    nutritionalInfo: selectedProduct.nutritionalInfo || [
-      { nutrient: "Energy", per100g: "332.40 kcal", per21g: "69.8 kcal", rda: "3.49%" },
-      { nutrient: "Protein", per100g: "0.28g", per21g: "0.06g", rda: "-" },
-      { nutrient: "Carbohydrates", per100g: "82.82g", per21g: "17.39g", rda: "-" },
+      "We are the third-generation entrepreneurs with extensive hands-on knowledge of the trade. Apis brings to you pure natural honey sourced from the beautiful valleys of the Himalayas & across different locations of India. Our amazing range of honey is now also available in convenient packaging!",
+    weight: ["100gm", "225gm", "500gm", "1kg"],
+    rate: ["₹10", "₹40"],
+    nutritionalInfo: [
+      { nutrient: "Energy", value: "319 kcal" },
+      { nutrient: "Protein", value: "0.3 g" },
+      { nutrient: "Carbohydrate", value: "79.5 g" },
+      { nutrient: "of which sugars", value: "0.9 g" },
+      { nutrient: "Total Fat", value: "0.0 g" },
     ],
-    thumbnails: selectedProduct.thumbnails || [
-      { src: "/path-to-default-thumbnail", alt: "Default Thumbnail" },
-    ],
-    healthBenefits:
-      selectedProduct.health_benefits ||
-      "Honey is packed with antioxidants that boost your immune system and help fight off illnesses. Regular consumption of honey can strengthen your body’s defenses and promote overall health.",
-    customerSays:
-      selectedProduct.customer_says ||
-      "Apis Organic Honey is my go-to for its authentic taste and quality!",
+    shelfLife: "24 Months",
   };
 
-  console.log("productData",productData);
-  
+  const productData =
+    selectedProduct.name === "HimalayaHoney"
+      ? defaultDescription
+      : {
+          name: selectedProduct.title || "Organic Honey",
+          description:
+            selectedProduct.product_desc ||
+            "Sourced from the beautiful Kashmir Valley, Apis Organic Honey is an allegory of organic purity. With consistent & delectable natural taste, Apis Organic Honey is patiently extracted & packaged to retain its untouched goodness and flavor!",
+          weight: selectedProduct.weight || ["250g", "500g", "1kg"],
+          nutritionalInfo: selectedProduct.nutritionalInfo || [],
+        };
 
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* Product Section */}
-      <div className="flex flex-col md:flex-row items-start gap-8">
-        {/* Image Section */}
-        <div className="w-full md:w-1/2 flex flex-col items-center">
-          <img
-            src={product_img_1.src}
-            alt={productData.name}
-            className="rounded-lg shadow-md max-w-full"
-          />
-          {/* Thumbnails */}
-          <div className="flex gap-2 mt-4">
-            {/* {back_img.map((thumbnail, index) => ( */}
-              <img
-                // key={index}
-                src={back_img.src}
-                // alt={back_img.alt || `Thumbnail ${index + 1}`}
-                className="w-16 h-16 rounded-md border border-gray-200 cursor-pointer"
-              />
-            {/* ))} */}
-          </div>
-        </div>
-
-        {/* Description Section */}
-        <div className="w-full md:w-1/2 space-y-4">
-          <h1 className="text-3xl font-semibold text-gray-800">{productData.name}</h1>
-          <p className="text-gray-600">{productData.description}</p>
-
-          {/* Product Details Table */}
-          <table className="w-full border border-gray-300">
-            <thead>
-              <tr className="bg-gray-100">
-                <th className="border border-gray-300 px-4 py-2 text-left text-gray-700">Name</th>
-                <th className="border border-gray-300 px-4 py-2 text-left text-gray-700">Weight</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="border border-gray-300 px-4 py-2">{productData.name}</td>
-                <td className="border border-gray-300 px-4 py-2">{productData.weight}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <div className="flex flex-col items-center">
+        {selectedProduct.name === "HimalayaHoney" ? (
+          <Image src={HimalayaHoney0001} alt="Himalaya Honey" width={400} height={300} />
+        ) : (
+          <Image src={product_img3?.src} alt="Product Image" width={400} height={300} />
+        )}
+        <h1 className="text-3xl font-semibold mt-4">{productData.name}</h1>
+        <p className="text-gray-700 text-center mt-2">{productData.description}</p>
       </div>
 
-      {/* Nutritional Information */}
-      <div className="mt-12">
-        <h2 className="text-2xl font-semibold text-gray-800">
-          Nutritional Information (Serving Size ~ 1 tbsp (21g). Servings per pack ~ 21.43)
-        </h2>
-        <table className="w-full mt-4 border border-gray-300">
+      <div className="mt-8">
+        <h2 className="text-xl font-semibold">Product Details</h2>
+        <table className="table-auto border-collapse border border-gray-300 w-full mt-4 text-left">
           <thead>
             <tr className="bg-gray-100">
-              <th className="border border-gray-300 px-4 py-2 text-left text-gray-700">Nutrients</th>
-              <th className="border border-gray-300 px-4 py-2 text-left text-gray-700">Per 100g Serving</th>
-              <th className="border border-gray-300 px-4 py-2 text-left text-gray-700">Per 21g Serving</th>
-              <th className="border border-gray-300 px-4 py-2 text-left text-gray-700">%RDA/Serve</th>
+              <th className="border px-4 py-2">Attribute</th>
+              <th className="border px-4 py-2">Details</th>
             </tr>
           </thead>
           <tbody>
-            {productData.nutritionalInfo.map((info, index) => (
-              <tr key={index}>
-                <td className="border border-gray-300 px-4 py-2">{info.nutrient}</td>
-                <td className="border border-gray-300 px-4 py-2">{info.per100g}</td>
-                <td className="border border-gray-300 px-4 py-2">{info.per21g}</td>
-                <td className="border border-gray-300 px-4 py-2">{info.rda}</td>
+            <tr>
+              <td className="border px-4 py-2">Available Weights</td>
+              <td className="border px-4 py-2">
+                {productData.weight.join(", ")}
+              </td>
+            </tr>
+            {selectedProduct.name === "HimalayaHoney" && (
+              <tr>
+                <td className="border px-4 py-2">Prices</td>
+                <td className="border px-4 py-2">
+                  {productData.rate.join(", ")}
+                </td>
               </tr>
-            ))}
+            )}
+            <tr>
+              <td className="border px-4 py-2">Shelf Life</td>
+              <td className="border px-4 py-2">{productData.shelfLife || "N/A"}</td>
+            </tr>
           </tbody>
         </table>
       </div>
 
-      {/* Health Benefits */}
-      <div className="mt-8">
-        <h2 className="text-2xl font-semibold text-gray-800">Health Benefits</h2>
-        <p className="text-gray-600 mt-2">{productData.healthBenefits}</p>
-      </div>
-
-      {/* Customer Feedback */}
-      <div className="mt-8">
-        <h2 className="text-2xl font-semibold text-gray-800">What Our Customers Say</h2>
-        <p className="text-gray-600 italic mt-2">"{productData.customerSays}"</p>
-      </div>
+      {selectedProduct.name === "HimalayaHoney" && (
+        <div className="mt-8">
+          <h2 className="text-xl font-semibold">Nutritional Information</h2>
+          <table className="table-auto border-collapse border border-gray-300 w-full mt-4 text-left">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border px-4 py-2">Nutrient</th>
+                <th className="border px-4 py-2">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              {productData.nutritionalInfo.map((info, index) => (
+                <tr key={index}>
+                  <td className="border px-4 py-2">{info.nutrient}</td>
+                  <td className="border px-4 py-2">{info.value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 }
