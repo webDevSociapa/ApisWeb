@@ -83,7 +83,7 @@ export default function ProductDesc() {
             )}
             <tr>
               <td className="border px-4 py-2">Shelf Life</td>
-              <td className="border px-4 py-2">{productData.shelfLife || "N/A"}</td>
+              <td className="border px-4 py-2">{productData.shelfLife || "24 months"}</td>
             </tr>
           </tbody>
         </table>

@@ -73,7 +73,7 @@ const DUMMY_DATA = {
 
 const INVESTER_TABS = [
   { id: 1, title: "Financials", types: ["Associates", "Subsidiary Financials"] },
-  { id: 2, title: "Board Committees" },
+  { id: 2, title: "Board Committees", types:[] },
   { id: 3, title: "Corporate Governance", types: ["Corporate Associates", "Subsidiary", "Corporate Financials"] },
   { id: 4, title: "Code Of Conduct", types: ["Conduct", "Subsidiary Conduct", "Subsidiary", "Subsidiary-Pride"] },
   { id: 5, title: "Financial Results", types: ["Associates Results", "Subsidiary Financial"] },
