@@ -296,7 +296,7 @@ const ProductDetails = () => {
         </div>
       ) : null}
       {/* </a> */}
-    
+
 
       {/* <p className="text-[20px] md:text-[40px] py-4 md:py-10 font-bold text-[#9F7B49] font-literata">
         Content
@@ -465,15 +465,16 @@ const ProductDetails = () => {
                 <EmblaCarousel options={OPTIONS}>
                   {GLIMPSES_SLIDES.map((itm, index) => (
                     <div className="embla__slide" key={index}>
-                      <div className="embla__slide__number border w-[176px] p-2 h-[256px] md:!h-[456px] cursor-pointer !rounded-none md:w-[286px] border-[#9F7B49]">
-                        <Image
-                          src={itm?.img}
-                          width={310}
-                          height={470}
-                          alt="header-logo"
-                          className="h-[240px] md:h-[440px] w-[172px] md:w-[270px] max-w-max bg-opacity-40"
-                        />
-                      </div>
+                      {/* <div className="embla__slide__number border w-[176px] p-2 h-[256px] md:!h-[456px] cursor-pointer !rounded-none md:w-[286px] border-[#9F7B49]"> */}
+                      <Image
+                        src={itm?.img}
+                        width={310}
+                        height={470}
+                        alt="header-logo"
+                        className="w-[600px] h-[250px]"
+                      // className="h-[240px] md:h-[440px] w-[172px] md:w-[270px] max-w-max bg-opacity-40"
+                      />
+                      {/* </div> */}
                     </div>
                   ))}
                 </EmblaCarousel>

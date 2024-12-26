@@ -9,28 +9,25 @@ import SoyaChunks from "@/assets/images/OurBrands/SoyaChunks.png";
 import Spread from "@/assets/images/OurBrands/Spread.png";
 import Vermicelli from "@/assets/images/OurBrands/Vermiceilli.png";
 import Brands from "@/assets/images/OurBrands/Brands.png";
-import OrganicHoney from "@/assets/images/OurBrands/OrganicHoney.png";
-import Dates from "@/assets/images/OurBrands/Dates.png";
-import JamBg from "@/assets/images/OurBrands/JamBg.png";
-import FlakesBg from "@/assets/images/OurBrands/FlakesBg.png";
-import VermiBg from "@/assets/images/OurBrands/VermiBg.png";
-import MacroniBg from "@/assets/images/OurBrands/MacroniBg.png";
-import SpreadBg from "@/assets/images/OurBrands/SpreadBg.png";
-import SoyaChunksBg from "@/assets/images/OurBrands/SoyaChunksBg.png";
-import SaffronBg from "@/assets/images/OurBrands/SaffronBg.png";
-import GreenTeaBg from "@/assets/images/OurBrands/GreenTeaBg.png";
-import HoneyBg from "@/assets/images/OurBrands/HoneyBg.png";
+// import OrganicHoney from "@/assets/images/OurBrands/OrganicHoney.png";
+// import VermiBg from "@/assets/images/OurBrands/VermiBg.png";
+// import MacroniBg from "@/assets/images/OurBrands/MacroniBg.png";
+// import SpreadBg from "@/assets/images/OurBrands/SpreadBg.png";
+// import SoyaChunksBg from "@/assets/images/OurBrands/SoyaChunksBg.png";
+// import SaffronBg from "@/assets/images/OurBrands/SaffronBg.png";
+// import GreenTeaBg from "@/assets/images/OurBrands/GreenTeaBg.png";
+// import HoneyBg from "@/assets/images/OurBrands/HoneyBg.png";
 import TrustSlide1 from "@/assets/images/home-banner-section/trust-slide-1.png";
 import DatesProduct from "@/assets/images/OurBrands/DatesProduct.png";
 import JamProduct from "@/assets/images/OurBrands/JamProduct.png";
 import FlakesProduct from "@/assets/images/OurBrands/FlakesProduct.png";
 import VermiProduct from "@/assets/images/OurBrands/VermiProduct.png";
-import MacroniProduct from "@/assets/images/OurBrands/MacroniProduct.png";
-import SpreadProduct from "@/assets/images/OurBrands/SpreadProduct.png";
+// import MacroniProduct from "@/assets/images/OurBrands/MacroniProduct.png";
+// import SpreadProduct from "@/assets/images/OurBrands/SpreadProduct.png";
 import SoyaChunksProduct from "@/assets/images/OurBrands/SoyaChunksProduct.png";
 import SaffronProduct from "@/assets/images/OurBrands/SaffronProduct.png";
 import GreenTeaProduct from "@/assets/images/OurBrands/GreenTeaProduct.png";
-import HoneyProduct from "@/assets/images/OurBrands/HoneyProduct.png";
+// import HoneyProduct from "@/assets/images/OurBrands/HoneyProduct.png";
 import NewsName1 from "@/assets/images/Media/NewsName1.png";
 import NewsName2 from "@/assets/images/Media/NewsName2.png";
 import NewsName3 from "@/assets/images/Media/NewsName3.png";
@@ -137,26 +134,28 @@ import BoneStrength from "@/assets/images/OurBrands/BoneStrength.png"
 import HarmoneBalance from "@/assets/images/OurBrands/HarmoneBalance.png"
 import MoodEnhance from "@/assets/images/OurBrands/moodEnhance.png"
 import BrainFunction from "@/assets/images/OurBrands/BrainFunction.png"
-import Glimpse1 from "@/assets/images/OurBrands/Glimpse-1.png";
-import Glimpse2 from "@/assets/images/OurBrands/Glimpse-2.png";
-import Glimpse3 from "@/assets/images/OurBrands/Glimpse-3.png";
+import Glimpse1 from "@/assets/images/OurBrands/glimp1.jpg";
+import Glimpse2 from "@/assets/images/OurBrands/glimp2.jpg";
+import Glimpse3 from "@/assets/images/OurBrands/glimp3.jpg";
+import Glimpse4 from "@/assets/images/OurBrands/glimp4.jpg";
+import Glimpse5 from "@/assets/images/OurBrands/glimp5.jpg";
 import HoneyImage11 from "@/assets/images/OurBrands/honeyyyyy.png"
-import chocoFlakesManu from "@/assets/images/OurBrands/chocoFlakesManu.png"
+// import chocoFlakesManu from "@/assets/images/OurBrands/chocoFlakesManu.png"
 import SafronProductMenu from "@/assets/images/OurBrands/safronProductMenu.png"
-import ClassicDatesMenu from "@/assets/images/OurBrands/classicDatesMenu.png"
-import SoyaChunkMenu from "@/assets/images/OurBrands/soyaChunkMenu.png"
-import HimalayaHoneyMenu from "@/assets/images/OurBrands/HimalayaHoneyMenu.png"
-import GreenTeaMenuItem from "@/assets/images/OurBrands/greenTeaMenuItem.png"
-import PeanutButterMenu from "@/assets/images/OurBrands/peanutButterMenu.png"
-import JamApisMenu from "@/assets/images/OurBrands/ApisJamMenu.png"
-import newSoyaChunks01 from "@/assets/images/home-banner-section/newSoyaChunks01.jpg"
-import newSaffron01 from "@/assets/images/home-banner-section/newSaffron01.jpg"
-import newDates01 from "@/assets/images/home-banner-section/newdates01.jpg"
+// import ClassicDatesMenu from "@/assets/images/OurBrands/classicDatesMenu.png"
+// import SoyaChunkMenu from "@/assets/images/OurBrands/soyaChunkMenu.png"
+// import HimalayaHoneyMenu from "@/assets/images/OurBrands/HimalayaHoneyMenu.png"
+// import GreenTeaMenuItem from "@/assets/images/OurBrands/greenTeaMenuItem.png"
+// import PeanutButterMenu from "@/assets/images/OurBrands/peanutButterMenu.png"
+// import JamApisMenu from "@/assets/images/OurBrands/ApisJamMenu.png"
+// import newSoyaChunks01 from "@/assets/images/home-banner-section/newSoyaChunks01.jpg"
+// import newSaffron01 from "@/assets/images/home-banner-section/newSaffron01.jpg"
+// import newDates01 from "@/assets/images/home-banner-section/newdates01.jpg"
 import HimalayaHoney001 from "@/assets/images/OurBrands/Himalaya-Honey.png"
-import Jam001 from "@/assets/images/OurBrands/Jam (1).png";
+// import Jam001 from "@/assets/images/OurBrands/Jam (1).png";
 import SoyaChunks001 from "@/assets/images/OurBrands/Soya-Chunks.png"
 import TulsiGreenTea from "@/assets/images/OurBrands/Tulsi-Green-Tea.png"
-import NewDatesBanner from "@/assets/images/OurBrands/newDatesBanner.png"
+// import NewDatesBanner from "@/assets/images/OurBrands/newDatesBanner.png"
 // import 
 import NewBannerGreenTea from "@/assets/images/OurBrands/newBannerGreenTea.png"
 import NewBannerJam from "@/assets/images/OurBrands/newBannerJam.png"
@@ -319,6 +318,7 @@ export const PRODUCT_DATA = [
           "Honey has been used for aesthetic purposes especially to return vigour and beauty to skin. When applied together with milk, honey creates a smooth, flawless skin. Real honey is also used for softening hair texture and for glowing skin.",
         primary_color: "",
         secondary_color: "",
+        shelfLife:"24 months"
       },
       {
         id: 2,
@@ -1743,67 +1743,67 @@ export const CORPORATE_GOVERNANACE = [
   {
     id: 1,
     name: "PERFORMANCE EVALUATION POLICY",
-    path: "https://apisindia.com/pdf/PERFORMANCE-EVALUATION-POLICY.pdf"
+    path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_governance/PERFORMANCE-EVALUATION-POLICY.pdf"
   },
   {
     id: 2,
     name: "POLICY FOR DETERMINING MATERIAL SUBSIDIARY",
-    path: "https://apisindia.com/pdf/POLICY-FOR-DETERMINING-MATERIAL-SUBSIDIARY.pdf"
+    path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_governance/POLICY-FOR-DETERMINING-MATERIAL-SUBSIDIARY.pdf"
   },
   {
     id: 3,
     name: "FAMILIARISATION PROGRAMME FOR INDEPENDENT DIRECTORS",
-    path: "https://apisindia.com/pdf/Familiarisation-Programme-for-Independent-Directors.pdf"
+    path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_governance/Familiarisation-Programme-for-Independent-Directors.pdf"
   },
   {
     id: 4,
     name: "POLICY FOR DETERMINATION OF MATERIALITY",
-    path: "https://apisindia.com/pdf/Policy-for-Determination-of-Materiality.pdf"
+    path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_governance/Policy-for-Determination-of-Materiality.pdf"
   },
   {
     id: 5,
     name: "RISK MANAGEMENT POLICY",
-    path: "https://apisindia.com/pdf/Risk-Management-Policy-.pdf"
+    path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_governance/Risk-Management-Policy-.pdf"
   },
   {
     id: 6,
     name: "RELATED PARTY TRANSACTION POLICY",
-    path: "https://apisindia.com/pdf/Related_Party_Policy.pdf"
+    path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_governance/Related_Party_Policy.pdf"
   },
   {
     id: 7,
     name: "APIS INDIA CSR POLICY",
-    path: "https://apisindia.com/pdf/APIS-INDIA-LMITED-CSR-Policy-[165606].pdf"
+    path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_governance/APIS-INDIA-LMITED-CSR-Policy-%5B165606%5D.pdf"
   },
   {
     id: 8,
     name: "NOMINATION AND REMUNERATION POLICY",
-    path: "https://apisindia.com/pdf/NOMINATION-AND-REMUNERATION-POLICY-(for-apis-2016)-[165604].pdf"
+    path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_governance/NOMINATION-AND-REMUNERATION-POLICY-(for-apis-2016)-%5B165604%5D.pdf"
   },
   {
     id: 9,
     name: "POLICY ON PREVENTION OF S.H.W",
-    path: "https://apisindia.com/pdf/Policy-on-S.H.W-[165601].pdf"
+    path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_governance/Policy-on-Preservation-of-Documents.pdf"
   },
   {
     id: 10,
     name: "VIGIL MECHANISM POLICY",
-    path: "https://apisindia.com/pdf/vigil_mechanism_policy.pdf"
+    path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_governance/vigil_mechanism_policy.pdf"
   },
   {
     id: 11,
     name: "WEBSITE CONTENT ARCHIVAL POLICY",
-    path: "https://apisindia.com/pdf/Website_content_archival_policy.pdf"
+    path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_governance/Website_content_archival_policy.pdf"
   },
   {
     id: 12,
     name: "COMPOSITION OF COMMITTEES OF BOARD OF DIRECTORS",
-    path: "https://apisindia.com/pdf/Code_of_conduct.PDF"
+    path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_governance/Code_of_conduct.pdf"
   },
   {
     id: 13,
     name: "TERM AND CONDITION OF INDEPENDENT DIRECTORS",
-    path: "https://apisindia.com/pdf/Term-and-condition-of-Independent-Directors.pdf"
+    path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_governance/Term-and-condition-of-Independent-Directors+(1).pdf"
   }
 ];
 
@@ -1814,17 +1814,17 @@ export const CODE_OF_CONDUCT = [
   {
     id: 1,
     name: "CODE OF CONDUCT AND PROCEDURE FOR FAIR DISCLOSURE OF UNPUBLISHED PRICE SENSITIVE INFORMATION",
-    path: "https://apisindia.com/pdf/PERFORMANCE-EVALUATION-POLICY.pdf"
+    path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/code_of_conduct/PERFORMANCE-EVALUATION-POLICY+(1).pdf"
   },
   {
     id: 2,
     name: "CODE OF CONDUCT FOR REGULATING AND MONITORING TRADING BY INSIDERS",
-    path: "https://apisindia.com/pdf/Code-of-Conduct-for-Regulating-and-Monitoring-Trading-by-Insiders.pdf"
+    path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/code_of_conduct/Code-of-Conduct-for-Regulating-and-Monitoring-Trading-by-Insiders.pdf"
   },
   {
     id: 3,
     name: "Code of Conduct for Board of Directors and Senior Management of ‘APIS India Limited’",
-    path: "https://apisindia.com/pdf/Code_of_conduct.PDF"
+    path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/code_of_conduct/Code_of_conduct+(2).pdf"
   }
 ];
 
@@ -1963,6 +1963,26 @@ export const FINANCIALS = [
 // src/data/boardMeetingAndFinancialResults.js
 
 export const BOARD_MEETING_FINACIALRESULTS = [
+  {
+    id: 1,
+    name: "FINANCIAL RESULTS (2023-2024) - Results",
+    path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q1+Results____.pdf"
+  },
+  {
+    id: 1,
+    name: "FINANCIAL RESULTS (2023-2024) - Results",
+    path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q2+Results____.pdf"
+  },
+  {
+    id: 1,
+    name: "FINANCIAL RESULTS (2023-2024) - Results",
+    path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q3+Results____.pdf"
+  },
+  {
+    id: 1,
+    name: "FINANCIAL RESULTS (2023-2024) - Results",
+    path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q4+Results____.pdf"
+  },
   {
     id: 1,
     name: "Outcome of Board Meeting : November-09-2023",
@@ -2923,60 +2943,61 @@ export const financialsSheet = {
     {
       id: 4,
       name: "Balance Sheet - 31.03.2021 APIS Pure Foodstuff LLC",
-      path: "https://apisindia.com/pdf/newupdates/Balance-Sheet-2023-In-INR.pdf"
+      path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/apisArabiaFood/Balance+Sheet-Apis+Pure-31.03.2021.pdf"
     },
     {
       id: 5,
       name: "Balance Sheet - 31.03.2022 APIS Pure Foodstuff LLC",
-      path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/apisArabiaFood/Balance+Sheet_31.03.2018_APIS+Pure+Foodstuff+LLC.pdf"
+      path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/apisArabiaFood/Balance+Sheet-Apis+Pure-31.03.2022.pdf"
     },
     {
       id: 5,
       name: "Balance Sheet - 31.03.2023 APIS Pure Foodstuff LLC",
-      path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/apisArabiaFood/Balance+Sheet_31.03.2018_APIS+Pure+Foodstuff+LLC.pdf"
+      path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/apisArabiaFood/Balance-Sheet-2023-In-INR.pdf"
     },
     {
       id: 5,
       name: "Balance Sheet - 31.03.2024 APIS Pure Foodstuff LLC",
-      path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/apisArabiaFood/Balance+Sheet_31.03.2018_APIS+Pure+Foodstuff+LLC.pdf"
+      path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/apisArabiaFood/Balance+Sheet-Apis+Pure+Foodstuff.pdf"
     }
   ],
   subsidiaryFinancials: [
+   
     {
       id: 1,
-      name: "Balance Sheet - 31.03.2018 - Anantadrishti",
-      path: "https://apisindia.com/pdf/newupdates/Balance%20Sheet_Anantadrishti_2018.pdf"
+      name: "Balance Sheet - 31.03.2020 - Anantadrishti",
+      path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/kapilAnand/Balance+Sheet-k20.pdf"
     },
     {
       id: 2,
-      name: "Balance Sheet - 31.03.2019 - Anantadrishti",
-      path: "https://apisindia.com/pdf/newupdates/Balance%20Sheet_Anantadrishti_Anantadrishti_2019.pdf"
+      name: "Balance Sheet - 31.03.2021 - Anantadrishti - Consolidated",
+      path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/kapilAnand/Balance+Sheet-k21.pdf"
     },
     {
       id: 3,
-      name: "Balance Sheet - 31.03.2020 - Anantadrishti - Consolidated",
-      path: "https://apisindia.com/pdf/newupdates/Anantadrishti/Consolidated%20Balance%20Sheet.pdf"
+      name: "Balance Sheet - 31.03.2022 - Anantadrishti",
+      path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/kapilAnand/Balance+Sheet-k22.pdf"
     },
     {
       id: 4,
-      name: "Balance Sheet - 31.03.2020 - Anantadrishti - Standalone",
-      path: "https://apisindia.com/pdf/newupdates/Anantadrishti/Standalone%20Balance%20Sheet.pdf"
+      name: "Balance Sheet - 31.03.2023 - Anantadrishti",
+      path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/kapilAnand/Balalnce-Sheet-Kapil-Anand-Agro.pdf"
     },
     {
       id: 5,
-      name: "Balance Sheet - 31.03.2023 - Anantadrishti",
-      path: "https://apisindia.com/pdf/newupdates/Anantadrishti/Balance-Sheet-Anantadrishti-Smart.pdf"
+      name: "Balance Sheet - 31.03.2024 - Anantadrishti",
+      path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/kapilAnand/Balance+Sheet-k24.pdf"
     },
-    {
-      id: 6,
-      name: "Balance Sheet - 31.03.2023 - Kapil Anand Agro - Standalone",
-      path: "https://apisindia.com/pdf/newupdates/Balalnce-Sheet-Kapil-Anand-Agro.pdf"
-    },
-    {
-      id: 7,
-      name: "Balance Sheet - 31.03.2023 - NFTPL",
-      path: "https://apisindia.com/pdf/newupdates/Balance-Sheet-NFTPL-2023.pdf"
-    }
+    // {
+    //   id: 6,
+    //   name: "Balance Sheet - 31.03.2023 - Kapil Anand Agro - Standalone",
+    //   path: "https://apisindia.com/pdf/newupdates/Balalnce-Sheet-Kapil-Anand-Agro.pdf"
+    // },
+    // {
+    //   id: 7,
+    //   name: "Balance Sheet - 31.03.2023 - NFTPL",
+    //   path: "https://apisindia.com/pdf/newupdates/Balance-Sheet-NFTPL-2023.pdf"
+    // }
   ]
 };
 
@@ -3635,12 +3656,12 @@ export const GLIMPSES_SLIDES = [
     title: "Vermicelli",
   },
   {
-    img: Glimpse1,
+    img: Glimpse4,
     content: "Nature`s golden nectar, pure and organic",
     title: "Organic Honey",
   },
   {
-    img: Glimpse2,
+    img: Glimpse5,
     content: "Spread the joy with rich, velvety chocolate",
     title: "Chocolate Spread",
   },
