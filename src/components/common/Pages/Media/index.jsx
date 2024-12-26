@@ -14,6 +14,7 @@ import mediaGallery002 from '@/assets/images/Media/mediaGallery002.png'
 import mediaGallery003 from '@/assets/images/Media/mediaGallery003.png'
 import Campaign001 from '@/assets/images/home-banner-section/organicHoneyGreenCard1.png'
 import Glimpse1 from "@/assets/images/OurBrands/Glimpse-1.png";
+import MediaBannerNew from "@/assets/images/Media/mediaBannerNew.png";
 
 
 import ImageBanner from "../../Layout/Banner";
@@ -143,7 +144,7 @@ export default function Media() {
   return (
     <>
       {/* Banner Section */}
-      <ImageBanner banner={Banner} />
+      <ImageBanner banner={MediaBannerNew} />
       <div className="flex flex-col items-center justify-center">
         <p className="font-bold text-[20px] md:text-[40px] text-center text-[#9F7B49] font-literata">
           Apis in the News

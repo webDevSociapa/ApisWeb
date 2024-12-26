@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import ROffice from '../../../../assets/images/ContactUs/ROffice.png';
+import RegisterOffice from '../../../../assets/images/ContactUs/registerOffice.png';
 import axios from 'axios';
 
 const Tabs = () => {
@@ -8,7 +9,7 @@ const Tabs = () => {
 
   const tabContent = {
     RegisteredOffice: {
-      image: ROffice.src,
+      image: RegisterOffice.src,
       title: 'Registered Office',
       address1: '18/32, East Patel Nagar New Delhi 110 008 India',
       address2:

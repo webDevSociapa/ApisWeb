@@ -220,10 +220,11 @@ const AuditCommittee =() =>{
     else if(selectedTab === 8 && selectedType === "GreenInitiative"){
       return <RenderGreenInitiative />
     }
+
+    else if(selectedTab === 10)
     return DUMMY_DATA[selectedTab]?.[selectedType] || []; 
   };
 
-  console.log("getDataForSelectedType",DUMMY_DATA);
   
   return (
     <div className="w-full h-full mt-4">
@@ -298,7 +299,8 @@ const AuditCommittee =() =>{
                       <p className="text-black text-xs md:text-lg">{item.name || "No Name"}</p> 
                       <div className="me-4">
                         <a
-                          href={item.path || "#"} 
+                          href={item.path || "#"}
+                          target="_blank"
                           className="h-[20px] w-[20px] md:h-[40px] md:w-[40px] border border-[#AE844A] rounded-full flex items-center justify-center cursor-pointer text-[#AE844A] hover:text-white hover:bg-[#AE844A]"
                         >
                           <FontAwesomeIcon

@@ -150,8 +150,8 @@ const ProductDetails = () => {
           <p
             className={`${selectedProduct?.title_color} text-shadow text-[20px] md:text-[40px] font-bold ml-3`}
           >
-           {selectedBrand?.id === 2 && selectedProduct?.id === 1 ? "": selectedProduct.title}
-           </p>
+            {selectedBrand?.id === 2 && selectedProduct?.id === 1 ? "" : selectedProduct.title}
+          </p>
           <p
             className={`${selectedProduct?.desc_color} text-xs font-jost xs:text-sm md:text-2xl font-medium mt-2 ml-3`}
           >
@@ -296,6 +296,7 @@ const ProductDetails = () => {
         </div>
       ) : null}
       {/* </a> */}
+
 
       {/* <p className="text-[20px] md:text-[40px] py-4 md:py-10 font-bold text-[#9F7B49] font-literata">
         Content
@@ -465,14 +466,14 @@ const ProductDetails = () => {
                   {GLIMPSES_SLIDES.map((itm, index) => (
                     <div className="embla__slide" key={index}>
                       {/* <div className="embla__slide__number border w-[176px] p-2 h-[256px] md:!h-[456px] cursor-pointer !rounded-none md:w-[286px] border-[#9F7B49]"> */}
-                        <Image
-                          src={itm?.img}
-                          width={310}
-                          height={470}
-                          alt="header-logo"
-                          className="w-[600px] h-[250px]"
-                          // className="h-[240px] md:h-[440px] w-[172px] md:w-[270px] max-w-max bg-opacity-40"
-                        />
+                      <Image
+                        src={itm?.img}
+                        width={310}
+                        height={470}
+                        alt="header-logo"
+                        className="w-[600px] h-[250px]"
+                      // className="h-[240px] md:h-[440px] w-[172px] md:w-[270px] max-w-max bg-opacity-40"
+                      />
                       {/* </div> */}
                     </div>
                   ))}
@@ -518,6 +519,17 @@ const ProductDetails = () => {
           </div>
         )}
       </div>
+      <iframe
+        width="450px"
+        height="450px"
+        src={"https://www.youtube.com/embed/btl0BIHASeE?si=P59Q2J6lkNZJ4u6R"}
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+        className="rounded-lg w-full px-20"
+      ></iframe>
 
       <div className="w-full relative flex flex-col justify-center items-center">
         <div className="flex flex-col gap-4 sm:gap-10 px-4 lg:px-36 pb-0 pt-6 md:py-6">
