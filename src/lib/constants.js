@@ -614,7 +614,7 @@ export const NEWS_DATA = [
   {
     img: apisNews15,
     name: NewsName6,
-    desc: "Economic Times News                                ",
+    desc: "Economic Times News",
     date: "16/August, 2021 / PRESS RELEASES",
     link: "https://brandequity.economictimes.indiatimes.com/news/advertising/apis-india-ropes-in-milind-soman-as-the-brand-ambassador/85362992"
   },
