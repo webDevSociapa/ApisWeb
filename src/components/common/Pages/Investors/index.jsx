@@ -131,7 +131,7 @@ const AuditCommittee =() =>{
           </tr>
         </thead>
         <tbody>
-          {committees[activeTab]?.map((member, index) => (
+          {committees[activeTab].map((member, index) => (
             <tr key={index} className="border-b border-gray-200">
               <td className="py-2">{member.sr || index + 1}</td>
               <td className="py-2">{member.name}</td>
@@ -220,8 +220,6 @@ const AuditCommittee =() =>{
     else if(selectedTab === 8 && selectedType === "GreenInitiative"){
       return <RenderGreenInitiative />
     }
-
-    else if(selectedTab === 10)
     return DUMMY_DATA[selectedTab]?.[selectedType] || []; 
   };
 
@@ -290,7 +288,7 @@ const AuditCommittee =() =>{
                 Data for {selectedType}
               </p>
               <div className="flex flex-wrap w-full gap-4">
-                {getDataForSelectedType().map((item, index) => (
+                {getDataForSelectedType()?.map((item, index) => (
                   <div
                     key={index}
                     className="border w-full border-[#AE844A] rounded-[20px] bg-[#FFFBF6] py-3 px-4"

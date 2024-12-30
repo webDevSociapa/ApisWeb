@@ -26,6 +26,11 @@ import Journey011 from "@/assets/images/AboutUs/journey011.png"
 import Journey001 from "@/assets/images/AboutUs/jr001.png"
 import Journey002 from "@/assets/images/AboutUs/jr002.png"
 import Journey003 from "@/assets/images/AboutUs/jr003.png"
+import Journey005 from "@/assets/images/AboutUs/jr005.png"
+import Journey004 from "@/assets/images/AboutUs/jr006.png"
+import Journey006 from "@/assets/images/AboutUs/jr007.png"
+import Journey008 from "@/assets/images/AboutUs/jr008.png"
+
 
 export default function HexagonalPage() {
   return (
@@ -84,7 +89,7 @@ export default function HexagonalPage() {
           <div className={`${styles.row} ${styles.row4}`}>
             <div className={styles['hex-top4']}>
               <div className={styles.imageWrapper}>
-                <Image src={Polygon3} alt="John Doe" className={styles.imgData} />
+                <Image src={Journey005} alt="John Doe" className={styles.imgData} />
               </div>
               
             </div>
@@ -104,9 +109,9 @@ export default function HexagonalPage() {
             </div>
             <div className={`${styles['hex-bottom4']} ${styles.mt2}`}>
               <div className={styles.imageWrapper}>
-                <Image src={Polygon13} alt="John Doe" className={styles.imgData} />
-                <span className={styles.tooltip}>Honey 
-                Production Plant</span>
+                <Image src={Journey004} alt="John Doe" className={styles.imgData} />
+                {/* <span className={styles.tooltip}>Honey 
+                Production Plant</span> */}
               </div>
               
             </div>
@@ -136,7 +141,7 @@ export default function HexagonalPage() {
           <div className={`${styles.row} ${styles.row7}`}>
             <div className={styles['hex-top7']}>
               <div className={styles.imageWrapper}>
-                <Image src={Polygon12} alt="John Doe" className={styles.imgData} />
+                <Image src={Journey006} alt="John Doe" className={styles.imgData} />
               </div>
               {/* <div className={styles.middle}>
                 <div className={styles.text}>John Doe</div>
@@ -145,7 +150,7 @@ export default function HexagonalPage() {
             
             <div className={`${styles['hex-bottom6']} ${styles.mt2}`}>
               <div className={styles.imageWrapper}>
-                <Image src={Polygon13} alt="John Doe" className={styles.imgData} />
+                <Image src={Journey008} alt="John Doe" className={styles.imgData} />
               </div>
               {/* <div className={styles.middle}>
                 <div className={styles.text}>John Doe</div>
