@@ -59,7 +59,7 @@ const ProductDetails = () => {
 
   const renderBenefits = (benefits) => {
     return benefits.map((itm) => (
-      <div key={itm.id} className="flex flex-col w-1/2 items-center justify-center">
+      <div key={itm.id} className="flex flex-col w-[34%] items-center justify-center">
         {/* <div
           className={`h-[110px] flex items-center justify-center w-[110px] border-2 border-[#9F7B49] rounded-full`}
         > */}
@@ -145,6 +145,40 @@ const ProductDetails = () => {
   return (
     <div className="relative flex flex-col items-center justify-center w-full">
       <ImageBanner banner={selectedProduct?.back_img} />
+      {selectedBrand?.id === 1 && selectedProduct?.id === 1 && (
+        <>
+          <p className="text-[#9F7B49] text-center text-[20px] md:text-[40px] font-bold">
+            GLIMPSES OF
+          </p>
+          <p className="text-[#9F7B49] text-center w-[90%] text-[20px] md:text-[40px] font-bold">
+            ORGANIC HONEY LAUNCH
+          </p>
+          <p className="w-[90%] text-center text-sm md:text-[22px] left-4 md:leading-7 mt-2 md:mt-6 xl:w-[45%] sm:w-[90%] md:w-[80%] font-jost">
+            Launch Event was organized on 9th Jan, 2024 at The Lalit, New Delhi.
+            Sanya Malhotra and our Managing Director Mr. Amit Anand Unveiled Our
+            New Organic Honey.
+          </p>
+          <div className="w-full py-6 md:py-20 flex flex-col items-center justify-center">
+            <div className="w-[90%] flex items-center justify-center">
+              <EmblaCarousel options={OPTIONS}>
+                {GLIMPSES_SLIDES.map((itm, index) => (
+                  <div className="embla__slide" key={index}>
+                    {/* <div className="embla__slide__number border w-[176px] p-2 h-[256px] md:!h-[456px] cursor-pointer !rounded-none md:w-[286px] border-[#9F7B49]"> */}
+                    <Image
+                      src={itm?.img}
+
+                      alt="header-logo"
+                    // className="h-[240px] md:h-[440px] w-[172px] md:w-[270px] max-w-max bg-opacity-40"
+                    />
+                    {/* </div> */}
+                  </div>
+                ))}
+              </EmblaCarousel>
+            </div>
+          </div>
+        </>
+      )}
+
       <div className="w-full flex justify-end items-center absolute end-0 top-2 lg:top-16">
         <div className="w-[450px] ps-2 md:ps-0">
           <p
@@ -215,27 +249,29 @@ const ProductDetails = () => {
         </>
       ) : (
         <>
-          <div className="flex flex-col items-center justify-center w-full w-[80%] capitalize">
-            <p className="w-[90%] text-[20px] md:text-[40px] font-bold text-center text-[#84663C]">
-              Purity is our presence in food
-            </p>
-            <p className="text-[#454545] w-[80%] text-sm md:text-2xl text-center mt-4 font-jost md:mt-8">
-              {selectedProduct.product_desc}
-            </p>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <Image
-              src={selectedProduct.product_img_1}
-              // width={266}
-              height={280}
-              alt="header-logo"
-              className="h-[180px] mt-8 w-auto md:h-[280px]"
-            />
-            <Link href={"https://www.amazon.in/s?k=organic+honey+apis&crid=219JTIFPTZQV0&sprefix=organic+honey+apis%2Caps%2C209&ref=nb_sb_noss_1"} target="_blank">
-              <button className="border mt-8 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white">
-                Available on
-              </button>
-            </Link>
+          <div class="grid gap-4 grid-cols-2">
+            <div className="flex flex-col items-center justify-center w-full w-[80%] capitalize">
+              <p className="w-[90%] text-[20px] md:text-[40px] font-bold text-center text-[#84663C]">
+                Purity is our presence in food
+              </p>
+              <p className="text-[#454545] w-[80%] text-sm md:text-2xl text-center mt-4 font-jost md:mt-8">
+                {selectedProduct.product_desc}
+              </p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <Image
+                src={selectedProduct.product_img_1}
+                // width={266}
+                height={280}
+                alt="header-logo"
+                className="h-[180px] mt-8 w-auto md:h-[280px]"
+              />
+              <Link href={"https://www.amazon.in/s?k=organic+honey+apis&crid=219JTIFPTZQV0&sprefix=organic+honey+apis%2Caps%2C209&ref=nb_sb_noss_1"} target="_blank">
+                <button className="border mt-8 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white">
+                  Available on
+                </button>
+              </Link>
+            </div>
           </div>
         </>
       )
@@ -447,41 +483,6 @@ const ProductDetails = () => {
       </div>
 
       <div className="flex w-full pt-10 md:pt-20 items-center justify-center flex-col">
-        {selectedBrand?.id === 1 && selectedProduct?.id === 1 && (
-          <>
-            <p className="text-[#9F7B49] text-center text-[20px] md:text-[40px] font-bold">
-              GLIMPSES OF
-            </p>
-            <p className="text-[#9F7B49] text-center w-[90%] text-[20px] md:text-[40px] font-bold">
-              ORGANIC HONEY LAUNCH
-            </p>
-            <p className="w-[90%] text-center text-sm md:text-[22px] left-4 md:leading-7 mt-2 md:mt-6 xl:w-[45%] sm:w-[90%] md:w-[80%] font-jost">
-              Launch Event was organized on 9th Jan, 2024 at The Lalit, New Delhi.
-              Sanya Malhotra and our Managing Director Mr. Amit Anand Unveiled Our
-              New Organic Honey.
-            </p>
-            <div className="w-full py-6 md:py-20 flex flex-col items-center justify-center">
-              <div className="w-[90%] flex items-center justify-center">
-                <EmblaCarousel options={OPTIONS}>
-                  {GLIMPSES_SLIDES.map((itm, index) => (
-                    <div className="embla__slide" key={index}>
-                      {/* <div className="embla__slide__number border w-[176px] p-2 h-[256px] md:!h-[456px] cursor-pointer !rounded-none md:w-[286px] border-[#9F7B49]"> */}
-                      <Image
-                        src={itm?.img}
-                        width={310}
-                        height={470}
-                        alt="header-logo"
-                        className="w-[600px] h-[250px]"
-                      // className="h-[240px] md:h-[440px] w-[172px] md:w-[270px] max-w-max bg-opacity-40"
-                      />
-                      {/* </div> */}
-                    </div>
-                  ))}
-                </EmblaCarousel>
-              </div>
-            </div>
-          </>
-        )}
 
         {selectedBrand?.id === 1 && selectedProduct?.id === 1 && (
           <div className="w-full py-6 md:py-20 bg-[#FFF9F0] flex flex-col items-center justify-center">
@@ -522,7 +523,7 @@ const ProductDetails = () => {
       <iframe
         width="450px"
         height="450px"
-        src={"https://www.youtube.com/embed/btl0BIHASeE?si=P59Q2J6lkNZJ4u6R"}
+        src={"https://www.youtube.com/embed/PcS4SUF77Sk?si=TxkSO_2-tZ9_5EwZ"}
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
