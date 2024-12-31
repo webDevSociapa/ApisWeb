@@ -13,7 +13,7 @@ import CheckReportBanner from '@/assets/images/OurBrands/ProductBanner.png'
 import HimalayaHoney from "@/assets/images/OurBrands/himalayaHoney.png"
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { PRODUCT_DATA } from "@/lib/constants";
+import { NEWS_DATA, PRODUCT_DATA } from "@/lib/constants";
 import Link from "next/link";
 import FlowerRun from '@/assets/images/home-banner-section/flowerRun.gif'
 
@@ -33,10 +33,7 @@ const ProductDetails = () => {
   const selectedProduct = selectedBrand.products.find(
     (itm) => itm.id == searchParams.get("product_id")
   );
-  const [mediaSection, setMediaSection] = useState([])
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentVideo, setCurrentVideo] = useState(''); // State to hold the current video URL
+  // const [mediaSection, setMediaSection] = useState([])
   const [hoveredId, setHoveredId] = useState(false); // State to track the hovered item
 
 
@@ -140,17 +137,17 @@ const ProductDetails = () => {
     addTasteProduct()
 
 
-    const getMediaSection = async () => {
-      try {
-        const response = await axios.get("/api/HomePage/mediaSection");
-        setMediaSection(response.data)
-      }
-      catch (error) {
-        console.log("Error");
+    // const getMediaSection = async () => {
+    //   try {
+    //     const response = await axios.get("/api/HomePage/mediaSection");
+    //     setMediaSection(response.data)
+    //   }
+    //   catch (error) {
+    //     console.log("Error");
 
-      }
-    }
-    getMediaSection()
+    //   }
+    // }
+    // getMediaSection()
   }, [])
 
 
@@ -209,7 +206,7 @@ const ProductDetails = () => {
         <>
           <div className="flex flex-col items-center justify-center w-full w-[80%] capitalize">
             <p className="w-[90%] text-[20px] md:text-[40px] font-bold text-center text-[#84663C]">
-              Purity is our presence in food
+              Purity is our essence in food
             </p>
             <p className="text-[#454545] w-[80%] text-sm md:text-2xl text-center mt-4 font-jost md:mt-8">
               {selectedProduct.product_desc}
@@ -265,7 +262,7 @@ const ProductDetails = () => {
             {/* Text Section */}
             <div className="flex flex-col items-center justify-center w-full px-4 md:px-0">
               <p className="w-full max-w-[90%] text-[20px] md:text-[40px] font-bold text-center text-[#84663C]">
-                Purity is our presence in food
+                Purity is our essence in food
               </p>
               <p className="text-[#454545] w-full max-w-[80%] text-sm md:text-2xl text-center mt-4 md:mt-8 font-jost">
                 {selectedProduct.product_desc}
@@ -385,70 +382,69 @@ const ProductDetails = () => {
       ) : null}
       {/* </a> */}
 
-
+      {selectedBrand?.id === 1 && selectedProduct?.id === 1 && (
+        
       <div className="relative w-full flex items-center flex-col justify-center  overflow-hidden mt-[40px]">
-        <p className="text-xs md:text-lg text-center text-[#585858] text-[22px] px-4 uppercase font-jost text-medium font-jost font-normal">
-          Stay updated with the latest news, events, and media coverage of APIS India.
-        </p>
-        <p className="text-[20px] md:text-[40px] font-bold text-[#9F7B49]">
-          Apis Media
-        </p>
-        <div className="media-apis w-full max-w-7xl z-10 my-4 md:my-10 px-4 sm:px-0">
-          <EmblaCarousel options={OPTIONS} className="embla-close-arrows relative">
-            {mediaSection?.map((itm, index) => (
-              <div
-                className="embla__slide flex-[0_0_280px] md:flex-[0_0_495px] min-w-0 px-2"
+      <p className="text-[20px] md:text-[40px] font-bold text-[#9F7B49]">
+        Media Coverage
+      </p>
+      <div className="media-apis w-full max-w-7xl z-10 my-4 md:my-10 px-4 sm:px-0 ">
+        <EmblaCarousel options={OPTIONS} className="embla-close-arrows relative">
+          {NEWS_DATA.slice(0,4)?.map((itm, index) => (
+            <div
+              className="embla__slide flex-[0_0_280px] md:flex-[0_0_495px] min-w-0 px-2"
+              key={index}
+            >
+              <a
                 key={index}
+                href={itm.link}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <a
-                  key={index}
-                  href={itm.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="border border-[#85673D] embla__slide__number1 md:w-[460px] h-auto md:h-[590px] p-2 pb-0 flex flex-col !rounded-none bg-[#fff] apismedis" style={{ maxWidth: '90%', margin: '0 auto' }}>
-                    <div className="relative w-full h-[200px] sm:h-[280px] md:h-[443px] overflow-hidden">
-                      <Image
-                        src={itm?.mediaImage}
-                        alt="header-logo"
-                        width={300}
-                        height={300}
-                        // layout="fill"
-                        // objectFit="cover"
-                        className="bg-opacity-40 w-full h-full"
-                      />
-                    </div>
-                    <div className="py-2"> {/* Ensure text is left-aligned */}
-                      <p className="font-bold text-[#85673D] text-sm md:text-xl mb-1 line-clamp-2 overflow-hidden">
-                        {itm.desc}
-                      </p>
-                      <p className="text-[#525252] text-xs md:text-lg">
-                        {itm.date}
-                      </p>
-                    </div>
+                <div className="border border-[#85673D] embla__slide__number1 md:w-[460px] h-auto md:h-[590px] p-2 pb-0 flex flex-col !rounded-none bg-[#fff] apismedis  shadow-[5px_5px_0px_0px_rgba(109,40,217)]" style={{ maxWidth: '90%', margin: '0 auto' }}>
+                  <div className="relative w-full h-[200px] sm:h-[280px] md:h-[443px] overflow-hidden">
+                    <Image
+                      src={itm?.img}
+                      alt="header-logo"
+                      width={300}
+                      height={300}
+                      // layout="fill"
+                      // objectFit="cover"
+                      className="bg-opacity-40 w-full h-full"
+                    />
                   </div>
-                </a>
-              </div>
-            ))}
-          </EmblaCarousel>
-        </div>
-        <Image
-          src={FlowerRun}
-          width={640}
-          height={640}
-          alt="Flower decoration"
-          className="h-[640px] z-0 hidden lg:block w-[640px] absolute -bottom-28 -left-28 opacity-50"
-          style={{ transform: "rotate(40deg)" }}
-        />
-        <Image
-          src={FlowerRun}
-          width={640}
-          height={640}
-          alt="Flower decoration"
-          className="h-[640px] hidden lg:block w-[640px] absolute -top-12 -right-20 opacity-40"
-          style={{ transform: "rotate(-136deg)" }}
-        />
+                  <div className="py-2"> {/* Ensure text is left-aligned */}
+                    <p className="font-bold text-[#85673D] text-sm md:text-xl mb-1 line-clamp-2 overflow-hidden">
+                      {itm.desc}
+                    </p>
+                    <p className="text-[#525252] text-xs md:text-lg">
+                      {itm.date}
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          ))}
+        </EmblaCarousel>
       </div>
+      <Image
+        src={FlowerRun}
+        width={640}
+        height={640}
+        alt="Flower decoration"
+        className="h-[640px] z-0 hidden lg:block w-[640px] absolute -bottom-28 -left-28 opacity-50"
+        style={{ transform: "rotate(40deg)" }}
+      />
+      <Image
+        src={FlowerRun}
+        width={640}
+        height={640}
+        alt="Flower decoration"
+        className="h-[640px] hidden lg:block w-[640px] absolute -top-12 -right-20 opacity-40"
+        style={{ transform: "rotate(-136deg)" }}
+      />
+    </div>
+      )}
 
 
       {/* <p className="text-[20px] md:text-[40px] py-4 md:py-10 font-bold text-[#9F7B49] font-literata">
@@ -569,16 +565,16 @@ const ProductDetails = () => {
       </div>
       {selectedBrand?.id === 1 && selectedProduct?.id === 1 && (
         <iframe
-        width="450px"
-        height="450px"
-        src={"https://www.youtube.com/embed/PcS4SUF77Sk?si=TxkSO_2-tZ9_5EwZ"}
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
-        className="rounded-lg w-full px-20"
-      ></iframe>
+          width="450px"
+          height="450px"
+          src={"https://www.youtube.com/embed/PcS4SUF77Sk?si=TxkSO_2-tZ9_5EwZ"}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+          className="rounded-lg w-full px-20"
+        ></iframe>
       )}
 
       <div className="w-full relative flex flex-col justify-center items-center">

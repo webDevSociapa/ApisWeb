@@ -94,11 +94,6 @@ export default function Investors() {
     setSelectedType(firstType);
   }, [selectedTab]);
 
-
-console.log("selectedTab",DUMMY_DATA);
-
-
-
 const AuditCommittee =() =>{
   return (
     <div className="committee-container p-4">
