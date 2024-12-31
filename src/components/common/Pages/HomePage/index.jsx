@@ -595,7 +595,7 @@ export default function HomePage() {
                 Our Tele-vision Commercial's
               </p> */}
               <p className="text-center text-[#9F7B49] text-[20px] md:text-[40px] font-literata font-bold">
-                TVC
+              Video Ad
               </p>
               <div>
                 <p className="font-medium text-xs md:text-lg text-center text-[#666666] font-jost text-medium text-[22px] sm: px-4">

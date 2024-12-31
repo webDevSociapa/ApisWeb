@@ -15,6 +15,8 @@ import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { PRODUCT_DATA } from "@/lib/constants";
 import Link from "next/link";
+import FlowerRun from '@/assets/images/home-banner-section/flowerRun.gif'
+
 
 import { LATEST_SLIDES, SLIDES, HEALTH_BENEFITS, HEALTH_DATE, HEALTH_JAM, HEALTH_FLAKES, HEALTH_VERNACALLI, HEALTH_MACRONI, HEALTH_SPEARD, COOKING_PASTE, SOYA_CHUNK, SAFFRON, GREEN_TEA, RECIPIES_DATA1, AVAILABILITY_SLIDE, GLIMPSES_SLIDES } from "@/lib/constants";
 import axios from "axios";
@@ -31,6 +33,7 @@ const ProductDetails = () => {
   const selectedProduct = selectedBrand.products.find(
     (itm) => itm.id == searchParams.get("product_id")
   );
+  const [mediaSection, setMediaSection] = useState([])
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentVideo, setCurrentVideo] = useState(''); // State to hold the current video URL
@@ -48,24 +51,20 @@ const ProductDetails = () => {
     setHoveredId(content.id)
   };
 
-  const handleOpenModal = () => {
-    setIsModalOpen(true)
-  }
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
+
+
 
 
   const renderBenefits = (benefits) => {
     return benefits.map((itm) => (
-      <div key={itm.id} className="flex flex-col w-[34%] items-center justify-center">
-        {/* <div
-          className={`h-[110px] flex items-center justify-center w-[110px] border-2 border-[#9F7B49] rounded-full`}
-        > */}
+      <div
+        key={itm.id}
+        className="flex flex-col w-full sm:w-[45%] lg:w-[30%] items-center justify-center my-4"
+      >
         <div
-          className={`h-[110px] flex items-center justify-center w-[110px] border-2 border-[#9F7B49] rounded-full 
-                  ${hoveredId === itm.id ? 'shadow-lg' : ''} transition-shadow duration-200`} // Change shadow based on state
+          className={`h-[110px] flex items-center justify-center w-[110px]  border-[#9F7B49] 
+                      ${hoveredId === itm.id ? 'shadow-lg' : ''} transition-shadow duration-200`}
         >
           <Image
             src={itm?.img}
@@ -73,15 +72,16 @@ const ProductDetails = () => {
             height={65}
             alt="header-logo"
             className="h-[65px] w-[65px] cursor-pointer"
-            onClick={() => handleImageClick(itm)} // Set the clicked item as the selected content
+            onClick={() => handleImageClick(itm)}
           />
         </div>
-        <p className="text-center text-xs md:text-base my-4">
+        <p className="text-center text-xs sm:text-sm md:text-base my-2 md:my-4">
           {itm?.title}
         </p>
       </div>
     ));
   };
+
   useEffect(() => {
     // When the component mounts, set the initial content from the first benefit
     let benefits = null;
@@ -138,6 +138,19 @@ const ProductDetails = () => {
       }
     }
     addTasteProduct()
+
+
+    const getMediaSection = async () => {
+      try {
+        const response = await axios.get("/api/HomePage/mediaSection");
+        setMediaSection(response.data)
+      }
+      catch (error) {
+        console.log("Error");
+
+      }
+    }
+    getMediaSection()
   }, [])
 
 
@@ -166,7 +179,6 @@ const ProductDetails = () => {
                     {/* <div className="embla__slide__number border w-[176px] p-2 h-[256px] md:!h-[456px] cursor-pointer !rounded-none md:w-[286px] border-[#9F7B49]"> */}
                     <Image
                       src={itm?.img}
-
                       alt="header-logo"
                     // className="h-[240px] md:h-[440px] w-[172px] md:w-[270px] max-w-max bg-opacity-40"
                     />
@@ -181,16 +193,16 @@ const ProductDetails = () => {
 
       <div className="w-full flex justify-end items-center absolute end-0 top-2 lg:top-16">
         <div className="w-[450px] ps-2 md:ps-0">
-          <p
+          {/* <p
             className={`${selectedProduct?.title_color} text-shadow text-[20px] md:text-[40px] font-bold ml-3`}
           >
             {selectedBrand?.id === 2 && selectedProduct?.id === 1 ? "" : selectedProduct.title}
-          </p>
-          <p
+          </p> */}
+          {/* <p
             className={`${selectedProduct?.desc_color} text-xs font-jost xs:text-sm md:text-2xl font-medium mt-2 ml-3`}
           >
             {selectedProduct.title_desc}
-          </p>
+          </p> */}
         </div>
       </div>
       {selectedBrand?.id === 2 && selectedProduct?.id === 1 ? (
@@ -249,34 +261,74 @@ const ProductDetails = () => {
         </>
       ) : (
         <>
-          <div class="grid gap-4 grid-cols-2">
-            <div className="flex flex-col items-center justify-center w-full w-[80%] capitalize">
-              <p className="w-[90%] text-[20px] md:text-[40px] font-bold text-center text-[#84663C]">
+          <div className="grid gap-4 md:gap-8 grid-cols-1 md:grid-cols-2">
+            {/* Text Section */}
+            <div className="flex flex-col items-center justify-center w-full px-4 md:px-0">
+              <p className="w-full max-w-[90%] text-[20px] md:text-[40px] font-bold text-center text-[#84663C]">
                 Purity is our presence in food
               </p>
-              <p className="text-[#454545] w-[80%] text-sm md:text-2xl text-center mt-4 font-jost md:mt-8">
+              <p className="text-[#454545] w-full max-w-[80%] text-sm md:text-2xl text-center mt-4 md:mt-8 font-jost">
                 {selectedProduct.product_desc}
               </p>
             </div>
-            <div className="flex flex-col items-center justify-center">
+
+            {/* Image and Button Section */}
+            <div className="flex flex-col items-center justify-center px-4 md:px-0">
               <Image
                 src={selectedProduct.product_img_1}
-                // width={266}
                 height={280}
                 alt="header-logo"
-                className="h-[180px] mt-8 w-auto md:h-[280px]"
+                className="h-[180px] mt-8 w-auto md:h-[380px]"
               />
-              <Link href={"https://www.amazon.in/s?k=organic+honey+apis&crid=219JTIFPTZQV0&sprefix=organic+honey+apis%2Caps%2C209&ref=nb_sb_noss_1"} target="_blank">
-                <button className="border mt-8 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white">
+              <Link
+                href={
+                  "https://www.amazon.in/s?k=organic+honey+apis&crid=219JTIFPTZQV0&sprefix=organic+honey+apis%2Caps%2C209&ref=nb_sb_noss_1"
+                }
+                target="_blank"
+              >
+                <button className="border mt-8 border-[#9F7B49] bg-[#9F7B49] px-6 md:px-12 text-xs md:text-base py-2 md:py-3 font-bold text-white">
                   Available on
                 </button>
               </Link>
+            </div>
+
+            {/* Benefits Section */}
+            <div className="w-full flex flex-row px-4 md:px-0 -mt-[40px]">
+              {selectedBrand?.id === 1 && selectedProduct?.id === 1
+                ? renderBenefits(HEALTH_BENEFITS)
+                : selectedBrand?.id === 1 && selectedProduct?.id === 3
+                  ? renderBenefits(HEALTH_DATE)
+                  : selectedBrand?.id === 2 && selectedProduct?.id === 1
+                    ? renderBenefits(HEALTH_BENEFITS)
+                    : selectedBrand?.id === 2 && selectedProduct?.id === 2
+                      ? renderBenefits(HEALTH_DATE)
+                      : selectedBrand?.id === 2 && selectedProduct?.id === 3
+                        ? renderBenefits(HEALTH_VERNACALLI)
+                        : selectedBrand?.id === 2 && selectedProduct?.id === 4
+                          ? renderBenefits(HEALTH_MACRONI)
+                          : selectedBrand?.id === 2 && selectedProduct?.id === 5
+                            ? renderBenefits(HEALTH_SPEARD)
+                            : selectedBrand?.id === 3 && selectedProduct?.id === 1
+                              ? renderBenefits(HEALTH_JAM)
+                              : selectedBrand?.id === 3 && selectedProduct?.id === 2
+                                ? renderBenefits(HEALTH_FLAKES)
+                                : selectedBrand?.id === 3 && selectedProduct?.id === 3
+                                  ? renderBenefits(HEALTH_VERNACALLI)
+                                  : selectedBrand?.id === 4 && selectedProduct?.id === 1
+                                    ? renderBenefits(SOYA_CHUNK)
+                                    : selectedBrand?.id === 4 && selectedProduct?.id === 2
+                                      ? renderBenefits(SAFFRON)
+                                      : selectedBrand?.id === 5 && selectedProduct?.id === 1
+                                        ? renderBenefits(GREEN_TEA)
+                                        : ""}
+            </div>
+            <div>
+
             </div>
           </div>
         </>
       )
       }
-
       <div className="w-[90%] border border-[#AE844A] rounded-[10px] flex mt-8 md:mt-20 items-center flex-col gap-4 md:gap-12">
         <div className="bg-white rounded-[10px] w-full h-[23px] md:h-[65px] flex items-center justify-between px-3 md:pt-2 pt-1 avaibility">
           <EmblaCarousel options={OPTIONS} autoScroll>
@@ -299,7 +351,7 @@ const ProductDetails = () => {
       </div>
       {/* <a href={'/about-us'}> */}
       {selectedBrand?.id === 1 && selectedProduct?.id === 1 ? (
-        <div className="w-[80%] relative 2xl:mt-8">
+        <div className="w-[100%] relative 2xl:mt-8">
           <Image
             src={CheckReportBanner}
             height={340}
@@ -315,7 +367,7 @@ const ProductDetails = () => {
           </div>
         </div>
       ) : selectedBrand?.id === 3 && selectedProduct?.id === 2 ? (
-        <div className="w-[80%] relative">
+        <div className="w-[100%] relative">
           <Image
             src={HimalayaHoney}
             height={340}
@@ -334,64 +386,123 @@ const ProductDetails = () => {
       {/* </a> */}
 
 
+      <div className="relative w-full flex items-center flex-col justify-center  overflow-hidden mt-[40px]">
+        <p className="text-xs md:text-lg text-center text-[#585858] text-[22px] px-4 uppercase font-jost text-medium font-jost font-normal">
+          Stay updated with the latest news, events, and media coverage of APIS India.
+        </p>
+        <p className="text-[20px] md:text-[40px] font-bold text-[#9F7B49]">
+          Apis Media
+        </p>
+        <div className="media-apis w-full max-w-7xl z-10 my-4 md:my-10 px-4 sm:px-0">
+          <EmblaCarousel options={OPTIONS} className="embla-close-arrows relative">
+            {mediaSection?.map((itm, index) => (
+              <div
+                className="embla__slide flex-[0_0_280px] md:flex-[0_0_495px] min-w-0 px-2"
+                key={index}
+              >
+                <a
+                  key={index}
+                  href={itm.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="border border-[#85673D] embla__slide__number1 md:w-[460px] h-auto md:h-[590px] p-2 pb-0 flex flex-col !rounded-none bg-[#fff] apismedis" style={{ maxWidth: '90%', margin: '0 auto' }}>
+                    <div className="relative w-full h-[200px] sm:h-[280px] md:h-[443px] overflow-hidden">
+                      <Image
+                        src={itm?.mediaImage}
+                        alt="header-logo"
+                        width={300}
+                        height={300}
+                        // layout="fill"
+                        // objectFit="cover"
+                        className="bg-opacity-40 w-full h-full"
+                      />
+                    </div>
+                    <div className="py-2"> {/* Ensure text is left-aligned */}
+                      <p className="font-bold text-[#85673D] text-sm md:text-xl mb-1 line-clamp-2 overflow-hidden">
+                        {itm.desc}
+                      </p>
+                      <p className="text-[#525252] text-xs md:text-lg">
+                        {itm.date}
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            ))}
+          </EmblaCarousel>
+        </div>
+        <Image
+          src={FlowerRun}
+          width={640}
+          height={640}
+          alt="Flower decoration"
+          className="h-[640px] z-0 hidden lg:block w-[640px] absolute -bottom-28 -left-28 opacity-50"
+          style={{ transform: "rotate(40deg)" }}
+        />
+        <Image
+          src={FlowerRun}
+          width={640}
+          height={640}
+          alt="Flower decoration"
+          className="h-[640px] hidden lg:block w-[640px] absolute -top-12 -right-20 opacity-40"
+          style={{ transform: "rotate(-136deg)" }}
+        />
+      </div>
+
+
       {/* <p className="text-[20px] md:text-[40px] py-4 md:py-10 font-bold text-[#9F7B49] font-literata">
         Content
       </p> */}
-      <div className="bg-[#FFF9F0] relative w-full">
+      <div className="bg-[#FFF9F0] relative w-full min-h-[600px] flex justify-center items-center">
         <Image
           src={Ring1}
           width={150}
           height={150}
           alt="header-logo"
-          className="h-[150px] hidden lg:inline absolute top-0 left-0  w-[150px]"
+          className="h-[150px] hidden lg:block absolute top-0 left-0 w-[150px]"
         />
         <div className="w-full flex flex-col lg:flex-row my-10">
-          <div className="w-full lg:w-1/2 lg:pb-56 px-8 flex xs:justify-center items-center">
+          <div className="w-full lg:w-1/2 flex justify-center items-center px-4 lg:px-8 mt-12 lg:mt-0">
             <div
               className={`${selectedProduct?.rect_color} relative 2xl:rounded-tl-[157px] 2xl:rounded-tr-[71px] 2xl:rounded-br-[122px] 2xl:rounded-bl-0
-            rounded-tl-[60px] rounded-tr-[30px] rounded-br-[60px] rounded-bl-0 mt-24 z-50 h-[175px] md:h-[250px] w-[280px] md:w-[380px]`}
+        rounded-tl-[60px] rounded-tr-[30px] rounded-br-[60px] rounded-bl-0 mt-8 z-50 h-[175px] md:h-[250px] w-[280px] md:w-[380px]`}
             >
               <div
-                className="bg-custom-radial-gradient  absolute bottom-4 md:bottom-8 z-50 left-4   md:left-8 backdrop-blur-lg 2xl:rounded-tl-[157px] 2xl:rounded-tr-[71px] 2xl:rounded-br-[122px] 2xl:rounded-bl-0
-            rounded-tl-[60px] rounded-tr-[30px] rounded-br-[60px] rounded-bl-0 h-[175px] md:h-[250px] w-[280px] md:w-[380px]"
+                className="bg-custom-radial-gradient absolute bottom-4 md:bottom-8 z-50 left-4 md:left-8 backdrop-blur-lg rounded-tl-[60px] rounded-tr-[30px] rounded-br-[60px] rounded-bl-0 h-[175px] md:h-[250px] w-[280px] md:w-[380px]"
               ></div>
-              {/* <Image
-                src={Rectangle1}
-                alt="header-logo"
-                className="h-[250px] absolute bottom-8 left-8 w-[230px] md:w-[360px] z-20"
-              /> */}
               <Image
                 src={selectedProduct.img}
-                height={300}
-                alt="header-logo"
-                className="h-[350px] md:h-[400px] z-50 absolute w-[620px] -right-16  -bottom-1 z-20"
+                height={280}
+                alt="product-image"
+                className="h-[280px] md:h-[400px] z-50 absolute w-[620px] -right-16 -bottom-1 z-20"
               />
               <div className="relative h-full w-full">
                 <Image
                   src={Ring4}
                   height={200}
-                  alt="header-logo"
+                  alt="ring-image"
                   className="h-[225px] w-[225px] rotate-animation absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
                 />
               </div>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 relative md:px-14 px-2 flex flex-col gap-4 md:gap-8 items-center mt-12">
+          <div className="w-full lg:w-1/2 relative px-4 lg:px-14 flex flex-col gap-4 md:gap-8 items-center mt-8 lg:mt-0">
             <p className="text-xl md:text-[30px] relative text-center font-light">
               Look what our customer say
               <Image
                 src={Comma}
                 width={60}
                 height={60}
-                alt="header-logo"
-                className="h-[60px] hidden lg:inline  -top-2 absolute -right-18 w-[40px]"
+                alt="comma-icon"
+                className="h-[60px] lg:block absolute -top-2 right-[-20px] w-[40px]"
               />
               <Image
                 src={Comma}
                 width={60}
                 height={60}
-                alt="header-logo"
-                className="h-[60px] hidden lg:inline -top-2 absolute -right-20 w-[40px]"
+                alt="comma-icon"
+                className="h-[60px] lg:block absolute -top-2 right-[-40px] w-[40px]"
               />
             </p>
             <p className="text-sm font-jost font-light md:text-xl text-center font-light">
@@ -401,8 +512,8 @@ const ProductDetails = () => {
               src={Ring3}
               width={80}
               height={250}
-              alt="header-logo"
-              className="h-[250px] hidden lg:inline absolute top-16 right-0 w-[60px]"
+              alt="ring-image"
+              className="h-[250px] hidden lg:block absolute top-16 right-0 w-[60px]"
             />
           </div>
         </div>
@@ -410,79 +521,15 @@ const ProductDetails = () => {
           src={HandDrawnHoney}
           width={200}
           height={200}
-          alt="header-logo"
-          className="h-[180px] hidden lg:inline absolute bottom-0 right-0 w-[180px]"
+          alt="hand-drawn-honey"
+          className="h-[180px] hidden lg:block absolute bottom-0 right-0 w-[180px]"
         />
       </div>
-      <div className="bg-[#FFF9F0] relative w-full rounded-tl-[0px] rounded-tr-[0px] rounded-br-[0px] md:rounded-bl-[200px] rounded-bl-[80px] pb-20">
-        <p className="text-base md:text-[26px] py-8 lg:pb-20 text-center">
-          Health Benefits
-        </p>
-        <div className="w-full flex flex-col lg:flex-row">
-          <div className="w-full lg:w-1/2 flex flex-wrap">
-            {selectedBrand?.id === 1 && selectedProduct?.id === 1 ? (
-              renderBenefits(HEALTH_BENEFITS)
-            ) : selectedBrand?.id === 1 && selectedProduct?.id === 3 ? (
-              renderBenefits(HEALTH_DATE)
-            ) : selectedBrand?.id === 2 && selectedProduct?.id === 1 ? (
-              renderBenefits(HEALTH_BENEFITS)
-            ) : selectedBrand?.id === 2 && selectedProduct?.id === 2 ? (
-              renderBenefits(HEALTH_DATE)
-            ) : selectedBrand?.id === 2 && selectedProduct?.id === 3 ? (
-              renderBenefits(HEALTH_VERNACALLI)
-            ) : selectedBrand?.id === 2 && selectedProduct?.id === 4 ? (
-              renderBenefits(HEALTH_MACRONI)
-            ) : selectedBrand?.id === 2 && selectedProduct?.id === 5 ? (
-              renderBenefits(HEALTH_SPEARD)
-            ) : selectedBrand?.id === 3 && selectedProduct?.id === 1 ? (
-              renderBenefits(HEALTH_JAM)
-            ) : selectedBrand?.id === 3 && selectedProduct?.id === 2 ? (
-              renderBenefits(HEALTH_FLAKES)
-            ) : selectedBrand?.id === 3 && selectedProduct?.id === 3 ? (
-              renderBenefits(HEALTH_VERNACALLI)
-            ) : selectedBrand?.id === 4 && selectedProduct?.id === 1 ? (
-              renderBenefits(SOYA_CHUNK)
-            ) : selectedBrand?.id === 4 && selectedProduct?.id === 2 ? (
-              renderBenefits(SAFFRON)
-            ) : selectedBrand?.id === 5 && selectedProduct?.id === 1 ? (
-              renderBenefits(GREEN_TEA)
-            ) : ""
-            }
-          </div>
-          <div className="w-full lg:w-1/2 mt-20 lg:mt-0 px-0 md:px-8 flex justify-center items-center">
-            <div
-              className={`${selectedProduct?.rect_color} relative 2xl:rounded-tl-[157px] 2xl:rounded-tr-[71px] 2xl:rounded-br-[122px] 2xl:rounded-bl-0
-            rounded-tl-[60px] rounded-tr-[30px] rounded-br-[60px] rounded-bl-0 h-[175px] md:h-[250px] w-[280px] md:w-[380px]`}
-            >
-              <div
-                className="bg-custom-radial-gradient  absolute bottom-4 md:bottom-8 left-4   md:left-8 backdrop-blur-lg 2xl:rounded-tl-[157px] 2xl:rounded-tr-[71px] 2xl:rounded-br-[122px] 2xl:rounded-bl-0
-            rounded-tl-[60px] rounded-tr-[30px] rounded-br-[60px] rounded-bl-0 h-[175px] md:h-[250px] w-[280px] md:w-[380px]"
-              ></div>
-              <Image
-                src={Ring2}
-                height={200}
-                alt="header-logo"
-                className="h-[135px] absolute hidden lg:inline -top-7 -right-7 z-0 ms w-[185px]"
-              />
-              <p className="z-20 absolute w-full text-center text-lg md:text-[24px] left-6 font-normal font-literata">
-                {selectedContent?.name}
-              </p>
 
 
-              {selectedContent && (
-                <p
-                  className={`z-20 absolute w-[90%] text-center text-xs md:text-base top-12 left-6 md:left-12 font-normal`}
-                >
-                  {selectedContent.desc}
-                </p>
-              )}
-              <div className="w-1/2 relative px-14 flex flex-col gap-8 items-center mt-12"></div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div className="flex w-full pt-10 md:pt-20 items-center justify-center flex-col">
+
+      <div className="flex w-full  items-center justify-center flex-col">
 
         {selectedBrand?.id === 1 && selectedProduct?.id === 1 && (
           <div className="w-full py-6 md:py-20 bg-[#FFF9F0] flex flex-col items-center justify-center">
@@ -520,7 +567,8 @@ const ProductDetails = () => {
           </div>
         )}
       </div>
-      <iframe
+      {selectedBrand?.id === 1 && selectedProduct?.id === 1 && (
+        <iframe
         width="450px"
         height="450px"
         src={"https://www.youtube.com/embed/PcS4SUF77Sk?si=TxkSO_2-tZ9_5EwZ"}
@@ -531,6 +579,7 @@ const ProductDetails = () => {
         allowFullScreen
         className="rounded-lg w-full px-20"
       ></iframe>
+      )}
 
       <div className="w-full relative flex flex-col justify-center items-center">
         <div className="flex flex-col gap-4 sm:gap-10 px-4 lg:px-36 pb-0 pt-6 md:py-6">
