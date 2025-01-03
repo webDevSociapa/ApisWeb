@@ -525,6 +525,21 @@ export const NEWS_DATA = [
     link: "https://smestreet.in/infocus/apis-india-unveils-new-product-to-drive-fitness-and-wellness-revolution-2318097"
   },
   {
+    img: apisNews3,
+    name: NewsName3,
+    desc: "Organic Honey from Apis India",
+    date: "10 JANUARY, 2024 / PRESS RELEASES",
+    link: "https://bwhotelier.com/article/organic-honey-from-apis-india-505447"
+  },
+
+  {
+    img: apisNews4,
+    name: NewsName4,
+    desc: "Product launch from APIS India",
+    date: "09 JANUARY, 2024 / PRESS RELEASES",
+    link: "https://www.youtube.com/watch?v=8A3SeOYH8ww"
+  },
+  {
     img: MediaImage02,
     name: NewsName2,
     desc: "Apis India aims Rs 500 CR revenue in FY25",
@@ -547,20 +562,8 @@ export const NEWS_DATA = [
     link: "https://biznewsdesk.com/business/a-perfect-blend-of-nutrition-tradition-taste-by-apis/"
   },
 
-  {
-    img: apisNews3,
-    name: NewsName3,
-    desc: "Organic Honey from Apis India",
-    date: "10 JANUARY, 2024 / PRESS RELEASES",
-    link: "https://bwhotelier.com/article/organic-honey-from-apis-india-505447"
-  },
-  {
-    img: apisNews4,
-    name: NewsName4,
-    desc: "Product launch from APIS India",
-    date: "09 JANUARY, 2024 / PRESS RELEASES",
-    link: "https://www.youtube.com/watch?v=8A3SeOYH8ww"
-  },
+ 
+  
   {
     img: apisNews7,
     name: NewsName6,

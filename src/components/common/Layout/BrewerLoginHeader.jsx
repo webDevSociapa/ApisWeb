@@ -1,17 +1,4 @@
 'use client'
-
-// import Image from 'next/image'
-
-// import FbImg from '@/assets/images/social/fb.png'
-// import InstaImg from '@/assets/images/social/insta.png'
-// import LinkImg from '@/assets/images/social/link-din.png'
-// import UtubeImg from '@/assets/images/social/utube.png'
-// import Xcom from '@/assets/images/social/xcom.png'
-// import FbHover from '@/assets/images/home-banner-section/fbhover.webp'
-// import TwitterHover from '@/assets/images/home-banner-section/twitterHover.png'
-// import YouTubeHover from '@/assets/images/home-banner-section/youtubeHover.jpg'
-// import LinkedinHover from '@/assets/images/home-banner-section/lnkedinHover.png'
-// import InstaHover from '@/assets/images/home-banner-section/instaHover.png'
 import { useEffect, useState } from 'react'
 import axios from 'axios';
 
@@ -30,7 +17,8 @@ const BrewerLoginHeader = () => {
     };
     fetchData();
   }, []);
-  
+
+
   return (
     <header className="sticky top-0 z-[100] flex w-full">
       <div className="flex w-full items-center justify-between gap-2 bg-[#FFFBF6] px-2 sm:px-8 py-4 text-xl font-bold leading-[30px] text-[#835415] h-[25px]">
