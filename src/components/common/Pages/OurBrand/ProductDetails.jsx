@@ -280,7 +280,7 @@ const ProductDetails = () => {
               {selectedBrand?.id === 1 && selectedProduct?.id === 1 && (
                 <Link
                   href={
-                    "https://www.amazon.in/s?k=organic+honey+apis&crid=219JTIFPTZQV0&sprefix=organic+honey+apis%2Caps%2C209&ref=nb_sb_noss_1"
+                    "https://www.amazon.in/Apis-Organic-honey-450gm-Certified/dp/B0CS6WWLDD/ref=sr_1_1_sspa?crid=219JTIFPTZQV0&dib=eyJ2IjoiMSJ9.7R3mQ34PIwgZkHqRRgwEjVWlVCDaeYA_gMiIp7z_xR9gL3YKL6Dh8Q0O4bLs1p3RyxpxPRRX7OmtSgZoL4ybDSLGwvSlhjMGL0BCl7HkvhLFCVfH2LQNxsak5PVF2GYJC7vRfW2qfPWk-OLU_WiU8F_lJXSsBqIVuDTE9hph-qVmdJI5boCvzNzVI_XkHUfDHnghRopggMDYgQaphGr5SLt_zC-AlDu6wm0hTnXEyk5fRTgDdZCUzk69fbZ33_f8yHyE8xnlaHZR5J0zpUs6Wa5yOmTg4h33s3hu6KKwnts.LhdhmHfem2YrWbVRD7ObAzhChsuUnKmokbketoIX2gg&dib_tag=se&keywords=organic+honey+apis&qid=1735901474&sprefix=organic+honey+apis%2Caps%2C209&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1https://www.amazon.in/Apis-Organic-honey-450gm-Certified/dp/B0CS6WWLDD/ref=sr_1_1_sspa?crid=219JTIFPTZQV0&dib=eyJ2IjoiMSJ9.7R3mQ34PIwgZkHqRRgwEjVWlVCDaeYA_gMiIp7z_xR9gL3YKL6Dh8Q0O4bLs1p3RyxpxPRRX7OmtSgZoL4ybDSLGwvSlhjMGL0BCl7HkvhLFCVfH2LQNxsak5PVF2GYJC7vRfW2qfPWk-OLU_WiU8F_lJXSsBqIVuDTE9hph-qVmdJI5boCvzNzVI_XkHUfDHnghRopggMDYgQaphGr5SLt_zC-AlDu6wm0hTnXEyk5fRTgDdZCUzk69fbZ33_f8yHyE8xnlaHZR5J0zpUs6Wa5yOmTg4h33s3hu6KKwnts.LhdhmHfem2YrWbVRD7ObAzhChsuUnKmokbketoIX2gg&dib_tag=se&keywords=organic+honey+apis&qid=1735901474&sprefix=organic+honey+apis%2Caps%2C209&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
                   }
                   target="_blank"
                 >

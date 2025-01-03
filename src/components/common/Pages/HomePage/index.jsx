@@ -653,46 +653,43 @@ export default function HomePage() {
 
       {/* Work Place Culture */}
       <div className="work-palace flex items-center justify-center px-4 py-4 lg:px-48 lg:py-48">
-        <div className="h-full bg-[#FFF9F0] p-4">
-          <div className="flex h-full items-center justify-center bg-white p-3">
-            <div className="bg-white flex flex-col gap-2 md:gap-4">
-              <p className="text-center text-[22px] md:text-xl font-medium text-[#585858] font-jost text-medium  sm: text-[12px] text-medium">
-                BE AMONG US
-              </p>
-              <p className="text-center text-[20px] md:text-[40px] font-bold text-[#9F7B49] font-literata text-semibold xl:text-[40px] sm:text-[20px] xl:-mt-[16px]">
-                Work Place Culture
-              </p>
-              <p className="text-center text-[12px] md:text-xl font-medium text-[#666666] font-jost font-medium text-justify sm:text-[15px] workCultureApis">
-                At Apis India, we cultivate a collaborative and innovative
-                environment where every team member is encouraged to thrive. We
-                believe in the power of teamwork and the importance of
-                creativity, fostering a culture where ideas are shared openly,
-                and innovation is celebrated. Our inclusive and supportive
-                atmosphere ensures that every employee feels valued and
-                empowered to contribute their best, driving our collective
-                success and growth.
-              </p>
-              <div className="flex justify-center gap-10 mt-6">
-                {/* <Link href="/careers"> */}
-                <button className="border border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white"
-                  onClick={handleJoinUs}
-                >
-                  Join US
-                </button>
-                {/* </Link> */}
-                {/* <Link href="/careers" passHref> */}
-
-                <button className="border border-[#9F7B49] bg-white px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-[#9F7B49] hover:text-white  hover:bg-[#9F7B49]"
-                  onClick={handleLifeAtApis}
-                >
-                  Life @apis
-                </button>
-                {/* </Link> */}
-              </div>
-            </div>
-          </div>
+  <div className="h-full bg-[#FFF9F0] p-4">
+    <div className="flex h-full items-center justify-center bg-white p-3">
+      <div className="bg-white flex flex-col gap-2 md:gap-4">
+        <p className="text-center text-[22px] md:text-xl font-medium text-[#585858] font-jost text-medium sm: text-[12px] text-medium">
+          BE AMONG US
+        </p>
+        <p className="text-center text-[20px] md:text-[40px] font-bold text-[#9F7B49] font-literata text-semibold xl:text-[40px] sm:text-[20px] xl:-mt-[16px]">
+          Work Place Culture
+        </p>
+        <p className="text-center text-[12px] md:text-xl font-medium text-[#666666] font-jost font-medium text-justify sm:text-[15px] workCultureApis">
+          At Apis India, we cultivate a collaborative and innovative environment
+          where every team member is encouraged to thrive. We believe in the power
+          of teamwork and the importance of creativity, fostering a culture where
+          ideas are shared openly, and innovation is celebrated. Our inclusive and
+          supportive atmosphere ensures that every employee feels valued and empowered
+          to contribute their best, driving our collective success and growth.
+        </p>
+        <div className="flex justify-center gap-10 mt-6">
+          <button
+            className="border border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white"
+            onClick={handleJoinUs}
+          >
+            Join US
+          </button>
+          <button
+            className="border border-[#9F7B49] bg-white px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-[#9F7B49] hover:text-white hover:bg-[#9F7B49]"
+            onClick={handleLifeAtApis}
+          >
+            Life @apis
+          </button>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+
     </>
   );
 }
