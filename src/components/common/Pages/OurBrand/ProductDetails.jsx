@@ -581,10 +581,10 @@ const ProductDetails = () => {
       <div className="w-full relative flex flex-col justify-center items-center">
         <div className="flex flex-col gap-4 sm:gap-10 px-4 lg:px-36 pb-0 pt-6 md:py-6">
           <div className="flex flex-col items-center justify-center gap-4 md:gap-5">
-            <p className="text-center text-[14px] md:text-[22px] font-jost  text-[#585858]" style={{ paddingTop: "30px" }}>
+            {/* <p className="text-center text-[14px] md:text-[22px] font-jost  text-[#585858]" style={{ paddingTop: "30px" }}>
               day-to-day choices that weave the most profound stories of
               character & growth.
-            </p>
+            </p> */}
             <h3 className="text-[20px] md:text-[40px] font-bold text-[#9F7B49] font-literata -mt-5">
               Similar Products
             </h3>

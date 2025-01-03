@@ -283,7 +283,7 @@ export const PRODUCT_DATA = [
         product_img_2: HoneyImage11,
         product_img3: TrustSlide1,
         customer_says:
-          "I’ve tried many honeys, but Apis Organic Honey stands out for its authentic taste and quality. It’s perfect for my tea, baking, and even just a spoonful for a quick energy boost! APIs Honey truly stands out for its purity. It’s evident that they prioritize the natural essence of honey without any additives or artificial processing. The flavor is rich, smooth, and genuinely delightful, reflecting the untouched quality of the nectar.",
+          "I’ve tried many honeys, but Apis Organic Honey stands out for its authentic taste and quality. It’s perfect for my tea, baking, and even just a spoonful for a quick energy boost! Apis Honey truly stands out for its purity. It’s evident that they prioritize the natural essence of honey without any additives or artificial processing. The flavor is rich, smooth, and genuinely delightful, reflecting the untouched quality of the nectar.",
         health_benefits:
           "Honey is packed with antioxidants that boost your immune system and help fight off illnesses. Regular consumption of honey can strengthen your body’s defenses and promote overall health.",
         primary_color: "",
@@ -314,7 +314,7 @@ export const PRODUCT_DATA = [
         product_img4: HimalayaHoney0001,
         title:"Regular Honey",
         customer_says:
-          "APIs Himalayan Honey, and it’s exceptional! The honey has a rich, deep flavor with delightful floral undertones that truly reflects its Himalayan origins. Its purity is evident in both taste and texture—smooth and golden without any added sugars or artificial ingredients. I love the natural sweetness it adds to my tea and yogurt, and it’s perfect for drizzling over toast. The packaging is also top-notch, preserving the honey’s freshness. APIs Himalayan Honey has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for high-quality, pure honey with an authentic, flavorful profile.",
+          "Apis Himalayan Honey, and it’s exceptional! The honey has a rich, deep flavor with delightful floral undertones that truly reflects its Himalayan origins. Its purity is evident in both taste and texture—smooth and golden without any added sugars or artificial ingredients. I love the natural sweetness it adds to my tea and yogurt, and it’s perfect for drizzling over toast. The packaging is also top-notch, preserving the honey’s freshness. Apis Himalayan Honey has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for high-quality, pure honey with an authentic, flavorful profile.",
         health_benefits:
           "Honey has been used for aesthetic purposes especially to return vigour and beauty to skin. When applied together with milk, honey creates a smooth, flawless skin. Real honey is also used for softening hair texture and for glowing skin.",
         primary_color: "",
@@ -336,7 +336,7 @@ export const PRODUCT_DATA = [
         product_img_1: DatesProduct,
         product_img_2: DatesProducts,
         customer_says:
-          "I recently tried Apis Dates, and I’m absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It’s clear that APIs prioritizes purity, as there are no additives or preservatives, just pure, high-quality dates. The texture is perfect—soft and moist, making them a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I’m enjoying a product that’s both nutritious and free from artificial ingredients. APIs Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+          "I recently tried Apis Dates, and I’m absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It’s clear that Apis prioritizes purity, as there are no additives or preservatives, just pure, high-quality dates. The texture is perfect—soft and moist, making them a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I’m enjoying a product that’s both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
         health_benefits:
           "Dates are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
         primary_color: "",
@@ -360,12 +360,12 @@ export const PRODUCT_DATA = [
         title_desc:
           "Discover The Purest fruits flavours handpicked for apis jam creation.",
         product_desc:
-          "Just as our honey exemplifies nature's finest, our jams uphold the same unwavering commitment to quality. We carefully select the freshest fruits, ensuring that each jar delivers a burst of genuine flavor without artificial additives or preservatives. Our meticulous process preserves the natural taste and nutritional benefits of the fruit, offering a delightful and wholesome experience with every spoonful. When you choose APIs jams, you’re savoring purity in its most authentic form, making each bite a true celebration of natural goodness.",
+          "Just as our honey exemplifies nature's finest, our jams uphold the same unwavering commitment to quality. We carefully select the freshest fruits, ensuring that each jar delivers a burst of genuine flavor without artificial additives or preservatives. Our meticulous process preserves the natural taste and nutritional benefits of the fruit, offering a delightful and wholesome experience with every spoonful. When you choose Apis jams, you’re savoring purity in its most authentic form, making each bite a true celebration of natural goodness.",
         product_img_1: JamProduct,
         product_img_2: NewJamBanner,
 
         customer_says:
-          "I recently tried Apis Jam, and I’m absolutely delighted with the experience! The flavor is truly exceptional—rich, vibrant, and bursting with genuine fruit goodness. You can taste the quality in every spoonful, with no artificial aftertaste or additives. The texture is perfectly smooth, making it a versatile addition to everything from toast to desserts. I also appreciate the thoughtful packaging that preserves freshness and highlights the commitment to purity. APIs Jam has quickly become a staple in my kitchen, and I wholeheartedly recommend it to anyone looking for a premium, authentic jam that delivers on both taste and quality.",
+          "I recently tried Apis Jam, and I’m absolutely delighted with the experience! The flavor is truly exceptional—rich, vibrant, and bursting with genuine fruit goodness. You can taste the quality in every spoonful, with no artificial aftertaste or additives. The texture is perfectly smooth, making it a versatile addition to everything from toast to desserts. I also appreciate the thoughtful packaging that preserves freshness and highlights the commitment to purity. Apis Jam has quickly become a staple in my kitchen, and I wholeheartedly recommend it to anyone looking for a premium, authentic jam that delivers on both taste and quality.",
         health_benefits:
           "Jam is an excellent option for a quick energy boost due to its high sugar content. The sugars in jam, primarily glucose and fructose, are simple carbohydrates that are rapidly absorbed into the bloodstream. This leads to a quick rise in blood sugar levels, providing a rapid source of energy.",
         primary_color: "",
@@ -474,11 +474,11 @@ export const PRODUCT_DATA = [
         title_desc:
           "Elevate your dishes with the exquisite richness and vibrant color of our premium saffron",
         product_desc:
-          "Purity defines our saffron. We meticulously source only the finest saffron threads, ensuring that each strand delivers unparalleled richness and vibrant color. Our saffron is free from additives and artificial enhancements, preserving its natural essence and aromatic depth. This commitment to purity means that every pinch of APIs Saffron adds an authentic, luxurious touch to your culinary creations. Whether enhancing a dish or crafting a delicate infusion, you can trust that our saffron embodies the true essence of purity, elevating your recipes with its exceptional quality and flavor.",
+          "Purity defines our saffron. We meticulously source only the finest saffron threads, ensuring that each strand delivers unparalleled richness and vibrant color. Our saffron is free from additives and artificial enhancements, preserving its natural essence and aromatic depth. This commitment to purity means that every pinch of Apis Saffron adds an authentic, luxurious touch to your culinary creations. Whether enhancing a dish or crafting a delicate infusion, you can trust that our saffron embodies the true essence of purity, elevating your recipes with its exceptional quality and flavor.",
         product_img_1: SaffronProduct,
         product_img_2: SafronProductMenu,
         customer_says:
-          "I’m absolutely thrilled with the quality! The saffron threads are vibrant and fragrant, infusing my dishes with a rich, authentic flavor and beautiful color. The purity of the product is evident, with no artificial additives or fillers—just pure, high-quality saffron. It adds a luxurious touch to both savory and sweet recipes, enhancing them with its unique aroma and depth. APIs Saffron has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for premium saffron that truly delivers on both flavor and purity.",
+          "I’m absolutely thrilled with the quality! The saffron threads are vibrant and fragrant, infusing my dishes with a rich, authentic flavor and beautiful color. The purity of the product is evident, with no artificial additives or fillers—just pure, high-quality saffron. It adds a luxurious touch to both savory and sweet recipes, enhancing them with its unique aroma and depth. Apis Saffron has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for premium saffron that truly delivers on both flavor and purity.",
         health_benefits:
           "Saffron contains compounds like crocin and safranal, which have been shown to positively affect mood and may help alleviate symptoms of depression and anxiety. Regular consumption can contribute to improved emotional well-being.",
         primary_color: "",
@@ -502,11 +502,11 @@ export const PRODUCT_DATA = [
         title_desc:
           "Discover The Purest fruits flavours handpicked for apis jam creation.",
         product_desc:
-          "Purity is at the heart of our green tea. We meticulously select the finest leaves, ensuring that every cup delivers a taste of true nature. Our green tea is crafted with a commitment to purity, free from artificial additives or preservatives, so you can enjoy an authentic, refreshing experience with every sip. The result is a clean, smooth flavor that highlights the natural essence of the tea leaves. When you choose APIs Green Tea, you're savoring more than just a beverage—you're embracing a product where purity is not just a promise but a fundamental presence in every cup.",
+          "Purity is at the heart of our green tea. We meticulously select the finest leaves, ensuring that every cup delivers a taste of true nature. Our green tea is crafted with a commitment to purity, free from artificial additives or preservatives, so you can enjoy an authentic, refreshing experience with every sip. The result is a clean, smooth flavor that highlights the natural essence of the tea leaves. When you choose Apis Green Tea, you're savoring more than just a beverage—you're embracing a product where purity is not just a promise but a fundamental presence in every cup.",
         product_img_1: GreenTeaProduct,
         product_img_2: TulsiGreenTea,
         customer_says:
-          "I’m thoroughly impressed with APIs Green Tea! From the moment I brewed my first cup, I could tell it was high-quality. The flavor is incredibly fresh and smooth, with a perfect balance of earthy and subtly sweet notes. What I appreciate most is its purity—no artificial flavors or additives, just pure, natural tea that makes each sip enjoyable and invigorating. The aroma is calming and soothing, making it a wonderful way to start the day or unwind in the evening. APIs Green Tea has become my go-to choice, and I highly recommend it to anyone seeking a genuinely refreshing and wholesome tea experience.",
+          "I’m thoroughly impressed with Apis Green Tea! From the moment I brewed my first cup, I could tell it was high-quality. The flavor is incredibly fresh and smooth, with a perfect balance of earthy and subtly sweet notes. What I appreciate most is its purity—no artificial flavors or additives, just pure, natural tea that makes each sip enjoyable and invigorating. The aroma is calming and soothing, making it a wonderful way to start the day or unwind in the evening. Apis Green Tea has become my go-to choice, and I highly recommend it to anyone seeking a genuinely refreshing and wholesome tea experience.",
         health_benefits:
           "Green tea is rich in antioxidants, particularly catechins like EGCG, which help combat oxidative stress and neutralize harmful free radicals. These antioxidants support overall health by reducing inflammation and protecting cells from damage.",
         primary_color: "",

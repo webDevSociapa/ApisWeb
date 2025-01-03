@@ -226,9 +226,9 @@ export default function HomePage() {
           </div>
           <div>
 
-            <p className="text-center text-[14px] md:text-[22px] uppercase text-[#585858] mt-[20]  text-medium font-jost">
+            {/* <p className="text-center text-[14px] md:text-[22px] uppercase text-[#585858] mt-[20]  text-medium font-jost">
               day-to-day choices that weave the most profound stories of character & growth.
-            </p>
+            </p> */}
             <h3 className="text-center text-[20px] md:text-[40px] font-bold text-[#9F7B49] mt-0 md:mt-0">
               Taste is What Makes the Difference
             </h3>
