@@ -491,14 +491,14 @@ const ProductDetails = () => {
                 width={60}
                 height={60}
                 alt="comma-icon"
-                className="h-[60px] lg:block absolute -top-2 right-[-20px] w-[40px]"
+                className="h-[60px] lg:block absolute -top-2 right-[-32px] w-[40px]"
               />
               <Image
                 src={Comma}
                 width={60}
                 height={60}
                 alt="comma-icon"
-                className="h-[60px] lg:block absolute -top-2 right-[-40px] w-[40px]"
+                className="h-[60px] lg:block absolute -top-2 right-[-50px] w-[40px]"
               />
             </p>
             <p className="text-sm font-jost font-light md:text-xl text-center font-light">

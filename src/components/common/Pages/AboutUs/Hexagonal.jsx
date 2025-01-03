@@ -18,10 +18,10 @@ import Polygon14 from '@/assets/images/AboutUs/Polygon19.png';
 import Polygon15 from '@/assets/images/AboutUs/Polygon22.png';
 import Polygon16 from '@/assets/images/AboutUs/Polygon17.png';
 import Polygon123 from '@/assets/images/AboutUs/apisDiag.png'
-import Polygon31 from '@/assets/images/AboutUs/jr11.png'
-import Polygon32 from '@/assets/images/AboutUs/jr12.png'
-import Polygon33 from '@/assets/images/AboutUs/jr13.png'
-import Polygon34 from '@/assets/images/AboutUs/jr14.png'
+import Polygon31 from '@/assets/images/AboutUs/r1.png'
+import Polygon32 from '@/assets/images/AboutUs/r2.png'
+import Polygon33 from '@/assets/images/AboutUs/r3.png'
+import Polygon34 from '@/assets/images/AboutUs/r4.png'
 import Journey011 from "@/assets/images/AboutUs/journey011.png"
 import Journey001 from "@/assets/images/AboutUs/jr001.png"
 import Journey002 from "@/assets/images/AboutUs/jr002.png"
@@ -74,14 +74,14 @@ export default function HexagonalPage() {
           <div className={`${styles.row} ${styles.row3}`}>
             <div className={styles['hex-top3']}>
               <div className={styles.imageWrapper}>
-                <Image src={Polygon1} alt="John Doe" className={styles.imgData} />
+                <Image src={Polygon31} alt="John Doe" className={styles.imgData} />
                 <span className={styles.tooltip}>Apis In 1983</span>
               </div>
               
             </div>
             <div className={`${styles['hex-bottom2']} ${styles.mt2}`}>
               <div className={styles.imageWrapper}>
-                <Image src={Polygon5} alt="John Doe" className={styles.imgData} />
+                <Image src={Polygon32} alt="John Doe" className={styles.imgData} />
               </div>
               
             </div>
