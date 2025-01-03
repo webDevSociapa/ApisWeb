@@ -277,18 +277,19 @@ const ProductDetails = () => {
                 alt="header-logo"
                 className="h-[180px] mt-8 w-auto md:h-[380px]"
               />
-              <Link
-                href={
-                  "https://www.amazon.in/s?k=organic+honey+apis&crid=219JTIFPTZQV0&sprefix=organic+honey+apis%2Caps%2C209&ref=nb_sb_noss_1"
-                }
-                target="_blank"
-              >
-                <button className="border mt-8 border-[#9F7B49] bg-[#9F7B49] px-6 md:px-12 text-xs md:text-base py-2 md:py-3 font-bold text-white">
-                  Available on
-                </button>
-              </Link>
+              {selectedBrand?.id === 1 && selectedProduct?.id === 1 && (
+                <Link
+                  href={
+                    "https://www.amazon.in/s?k=organic+honey+apis&crid=219JTIFPTZQV0&sprefix=organic+honey+apis%2Caps%2C209&ref=nb_sb_noss_1"
+                  }
+                  target="_blank"
+                >
+                  <button className="border mt-8 border-[#9F7B49] bg-[#9F7B49] px-6 md:px-12 text-xs md:text-base py-2 md:py-3 font-bold text-white">
+                    Available on
+                  </button>
+                </Link>
+              )}
             </div>
-
             {/* Benefits Section */}
             <div className="w-full flex flex-row px-4 md:px-0 -mt-[40px]">
               {selectedBrand?.id === 1 && selectedProduct?.id === 1
@@ -383,67 +384,67 @@ const ProductDetails = () => {
       {/* </a> */}
 
       {selectedBrand?.id === 1 && selectedProduct?.id === 1 && (
-        
-      <div className="relative w-full flex items-center flex-col justify-center  overflow-hidden mt-[40px]">
-      <p className="text-[20px] md:text-[40px] font-bold text-[#9F7B49]">
-        Media Coverage
-      </p>
-      <div className="media-apis w-full max-w-7xl z-10 my-4 md:my-10 px-4 sm:px-0 ">
-        <EmblaCarousel options={OPTIONS} className="embla-close-arrows relative">
-          {NEWS_DATA.slice(0,4)?.map((itm, index) => (
-            <div
-              className="embla__slide flex-[0_0_280px] md:flex-[0_0_495px] min-w-0 px-2"
-              key={index}
-            >
-              <a
-                key={index}
-                href={itm.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="border border-[#85673D] embla__slide__number1 md:w-[460px] h-auto md:h-[590px] p-2 pb-0 flex flex-col !rounded-none bg-[#fff] apismedis  shadow-[5px_5px_0px_0px_rgba(109,40,217)]" style={{ maxWidth: '90%', margin: '0 auto' }}>
-                  <div className="relative w-full h-[200px] sm:h-[280px] md:h-[443px] overflow-hidden">
-                    <Image
-                      src={itm?.img}
-                      alt="header-logo"
-                      width={300}
-                      height={300}
-                      // layout="fill"
-                      // objectFit="cover"
-                      className="bg-opacity-40 w-full h-full"
-                    />
-                  </div>
-                  <div className="py-2"> {/* Ensure text is left-aligned */}
-                    <p className="font-bold text-[#85673D] text-sm md:text-xl mb-1 line-clamp-2 overflow-hidden">
-                      {itm.desc}
-                    </p>
-                    <p className="text-[#525252] text-xs md:text-lg">
-                      {itm.date}
-                    </p>
-                  </div>
+
+        <div className="relative w-full flex items-center flex-col justify-center  overflow-hidden mt-[40px]">
+          <p className="text-[20px] md:text-[40px] font-bold text-[#9F7B49]">
+            Media Coverage
+          </p>
+          <div className="media-apis w-full max-w-7xl z-10 my-4 md:my-10 px-4 sm:px-0 ">
+            <EmblaCarousel options={OPTIONS} className="embla-close-arrows relative">
+              {NEWS_DATA.slice(0, 4)?.map((itm, index) => (
+                <div
+                  className="embla__slide flex-[0_0_280px] md:flex-[0_0_495px] min-w-0 px-2"
+                  key={index}
+                >
+                  <a
+                    key={index}
+                    href={itm.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="border border-[#85673D] embla__slide__number1 md:w-[460px] h-auto md:h-[590px] p-2 pb-0 flex flex-col !rounded-none bg-[#fff] apismedis  shadow-[5px_5px_0px_0px_rgba(109,40,217)]" style={{ maxWidth: '90%', margin: '0 auto' }}>
+                      <div className="relative w-full h-[200px] sm:h-[280px] md:h-[443px] overflow-hidden">
+                        <Image
+                          src={itm?.img}
+                          alt="header-logo"
+                          width={300}
+                          height={300}
+                          // layout="fill"
+                          // objectFit="cover"
+                          className="bg-opacity-40 w-full h-full"
+                        />
+                      </div>
+                      <div className="py-2"> {/* Ensure text is left-aligned */}
+                        <p className="font-bold text-[#85673D] text-sm md:text-xl mb-1 line-clamp-2 overflow-hidden">
+                          {itm.desc}
+                        </p>
+                        <p className="text-[#525252] text-xs md:text-lg">
+                          {itm.date}
+                        </p>
+                      </div>
+                    </div>
+                  </a>
                 </div>
-              </a>
-            </div>
-          ))}
-        </EmblaCarousel>
-      </div>
-      <Image
-        src={FlowerRun}
-        width={640}
-        height={640}
-        alt="Flower decoration"
-        className="h-[640px] z-0 hidden lg:block w-[640px] absolute -bottom-28 -left-28 opacity-50"
-        style={{ transform: "rotate(40deg)" }}
-      />
-      <Image
-        src={FlowerRun}
-        width={640}
-        height={640}
-        alt="Flower decoration"
-        className="h-[640px] hidden lg:block w-[640px] absolute -top-12 -right-20 opacity-40"
-        style={{ transform: "rotate(-136deg)" }}
-      />
-    </div>
+              ))}
+            </EmblaCarousel>
+          </div>
+          <Image
+            src={FlowerRun}
+            width={640}
+            height={640}
+            alt="Flower decoration"
+            className="h-[640px] z-0 hidden lg:block w-[640px] absolute -bottom-28 -left-28 opacity-50"
+            style={{ transform: "rotate(40deg)" }}
+          />
+          <Image
+            src={FlowerRun}
+            width={640}
+            height={640}
+            alt="Flower decoration"
+            className="h-[640px] hidden lg:block w-[640px] absolute -top-12 -right-20 opacity-40"
+            style={{ transform: "rotate(-136deg)" }}
+          />
+        </div>
       )}
 
 

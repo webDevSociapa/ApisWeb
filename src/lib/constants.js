@@ -176,6 +176,7 @@ import CornFlakesNew from "@/assets/images/OurBrands/cornFlakesNew.png"
 import NewJamBanner from "@/assets/images/OurBrands/newJamBanner.png"
 import DatesProducts from "@/assets/images/OurBrands/datesProducts.png"
 import HoneyBannerNew001 from "@/assets/images/OurBrands/honeyBannerNew001.png";
+import newSoyaChunkss from "@/assets/images/OurBrands/newSoyaChunkss.png";
 
 // import OrganicHoneyMenu from "@/assets/images"
 
@@ -443,7 +444,7 @@ export const PRODUCT_DATA = [
       {
         id: 1,
         name: "Soya Chunk",
-        img: SoyaChunks,
+        img: newSoyaChunkss,
         back_img: NewBannerSoyaChunks,
         rect_color: "bg-[#F0A20A]",
         title_color: "text-[#9F7B49]",
@@ -1686,15 +1687,15 @@ export const RECIPIES_DATA = [
 
 export const RECEIPE_DATA = [
   "Himalaya Honey",
-  "Soya Chunks Kebab",
-  "Chocho Flakes",
+  "Soya Chunks",
+  "Choco Flakes",
   "Corn Flakes",
-  "Arebian Pearls apis Dates",
-  "apis jam Fruit Blast",
-  "Apis Seviyan Vermicelli",
-  "Royal Zahidi Dates",
+  "Dates",
+  "Jam",
+  "Vermicelli",
+  // "Royal Zahidi Dates",
   "Organic Honey",
-  "Ginger Garlic"
+  "Garlic Paste"
 
 ];
 

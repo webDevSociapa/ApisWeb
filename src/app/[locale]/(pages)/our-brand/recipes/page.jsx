@@ -124,7 +124,7 @@ const page = () => {
 
       {/* Brand Specific Section */}
       <div className="bg-[#FFF9F0] p-6 mt-12 w-full">
-        <p className="text-2xl font-bold">Brands Specific</p>
+        <p className="text-2xl font-bold">Product Specific</p>
 
         {/* Recipe Data Horizontal Scrollable (Mobile Only) */}
         <div className="md:flex-wrap flex overflow-x-scroll hide-scrollbar mt-8 gap-8 w-full items-center">

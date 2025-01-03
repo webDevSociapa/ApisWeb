@@ -53,8 +53,9 @@ input[type="password"]:-webkit-autofill:active {
   height: 914px;
   width: 100%;
   background-size: 100% 100%;
-  /* margin-right: 50px; */
+  transform: scale(-1, -1);
 }
+
 @media (max-width: 1024px) {
   .work-palace {
     height: auto;

@@ -555,9 +555,9 @@ export default function HomePage() {
 
       {/* Latest @Apis */}
       <div className="w-full flex flex-col items-center justify-center py-4 md:py-8 sm: py-8 2xl: mt-8">
-        <p className="font-medium text-center text-[#585858] text-sm  md:text-xl font-medium text-[22px] font-jost">
+        {/* <p className="font-medium text-center text-[#585858] text-sm  md:text-xl font-medium text-[22px] font-jost">
           DISCOVER OUR LATEST STORIES
-        </p>
+        </p> */}
         <p className="text-bold text-[20px] text-center text-[#9F7B49] md:text-[40px] font-bold text-[20px] font-literata">
           Latest @Apis
         </p>
