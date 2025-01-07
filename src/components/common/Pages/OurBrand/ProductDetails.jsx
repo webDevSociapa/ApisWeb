@@ -288,7 +288,7 @@ const ProductDetails = () => {
               </Link>
             </div>
             {/* Benefits Section */}
-            <div className="w-full flex flex-row px-4 md:px-0 -mt-[40px]">
+            <div className="w-full flex flex-row flex-wrap md:flex-nowrap px-4 md:px-0 -mt-[40px]">
               {selectedBrand?.id === 1 && selectedProduct?.id === 1
                 ? renderBenefits(HEALTH_BENEFITS)
                 : selectedBrand?.id === 1 && selectedProduct?.id === 3
@@ -462,23 +462,23 @@ const ProductDetails = () => {
               className={`${selectedProduct?.rect_color} relative 2xl:rounded-tl-[157px] 2xl:rounded-tr-[71px] 2xl:rounded-br-[122px] 2xl:rounded-bl-0
         rounded-tl-[60px] rounded-tr-[30px] rounded-br-[60px] rounded-bl-0 mt-8 z-50 h-[175px] md:h-[250px] w-[280px] md:w-[380px]`}
             >
-              <div
+              {/* <div
                 className="bg-custom-radial-gradient absolute bottom-4 md:bottom-8 z-50 left-4 md:left-8  rounded-tl-[60px] rounded-tr-[30px] rounded-br-[60px] rounded-bl-0 h-[175px] md:h-[250px] w-[300px] md:w-[380px]"
-              ></div>
+              ></div> */}
               <Image
                 src={selectedProduct.img}
                 height={280}
                 alt="product-image"
-                className="h-[280px] md:h-[280px] z-50 absolute w-[620px] -right-6 bottom-4 z-20"
+                className="h-[280px] md:h-[280px] z-50 absolute w-[620px] -right-2 bottom-4 z-20"
               />
-              <div className="relative h-full w-full">
-                <Image
-                  src={Ring4}
-                  height={200}
-                  alt="ring-image"
-                  className="h-[225px] w-[225px] rotate-animation absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
-                />
-              </div>
+              <div className="relative h-full w-full hidden md:block">
+        <Image
+          src={Ring4}
+          height={200}
+          alt="ring-image"
+          className="h-[225px] w-[225px] rotate-animation absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+        />
+      </div>
             </div>
           </div>
           <div className="w-full lg:w-1/2 relative px-4 lg:px-14 flex flex-col gap-4 md:gap-8 items-center mt-8 lg:mt-0">
@@ -496,7 +496,7 @@ const ProductDetails = () => {
                 width={60}
                 height={60}
                 alt="comma-icon"
-                className="h-[60px] lg:block absolute -top-2 right-[-50px] w-[40px]"
+                className="h-[60px] lg:block absolute -top-2 right-[-40px] w-[40px]"
               />
             </p>
             <p className="text-sm font-jost font-light md:text-xl text-center font-light">
