@@ -462,14 +462,14 @@ const ProductDetails = () => {
               className={`${selectedProduct?.rect_color} relative 2xl:rounded-tl-[157px] 2xl:rounded-tr-[71px] 2xl:rounded-br-[122px] 2xl:rounded-bl-0
         rounded-tl-[60px] rounded-tr-[30px] rounded-br-[60px] rounded-bl-0 mt-8 z-50 h-[175px] md:h-[250px] w-[280px] md:w-[380px]`}
             >
-              <div
+              {/* <div
                 className="bg-custom-radial-gradient absolute bottom-4 md:bottom-8 z-50 left-4 md:left-8  rounded-tl-[60px] rounded-tr-[30px] rounded-br-[60px] rounded-bl-0 h-[175px] md:h-[250px] w-[300px] md:w-[380px]"
-              ></div>
+              ></div> */}
               <Image
                 src={selectedProduct.img}
                 height={280}
                 alt="product-image"
-                className="h-[280px] md:h-[280px] z-50 absolute w-[620px] -right-6 bottom-4 z-20"
+                className="h-[280px] md:h-[280px] z-50 absolute w-[620px] -right-2 bottom-4 z-20"
               />
               <div className="relative h-full w-full">
                 <Image

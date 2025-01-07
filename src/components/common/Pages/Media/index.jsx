@@ -15,6 +15,9 @@ import mediaGallery003 from '@/assets/images/Media/mediaGallery003.png'
 import Campaign001 from '@/assets/images/home-banner-section/organicHoneyGreenCard1.png'
 import Glimpse1 from "@/assets/images/OurBrands/Glimpse-1.png";
 import MediaBannerNew from "@/assets/images/Media/mediaBannerNew.png";
+import Diwali01 from "@/assets/images/Media/Diwali01.png";
+import womensDay from "@/assets/images/Media/womensDay.png";
+import RJSameya01 from "@/assets/images/Media/RJSameya01.png";
 
 
 import ImageBanner from "../../Layout/Banner";
@@ -52,22 +55,22 @@ const LATEST_SLIDES = [
 
 const IMAGE_DATA = [
   {
-    src: Campaign001,
-    alt: "Honey",
-    name:"Apis Honey",
+    src: Diwali01,
+    alt: "Diwali X Apis",
+    name:"Diwali X Apis",
     colorShadow: 'CDB699'
   },
   {
-    src: jam,
-    alt: "Jam",
-    name:"Apis Jam",
+    src: womensDay,
+    alt: "ApisHeroes",
+    name:"#ApisHeroes",
     colorShadow: 'E0C4B2'
 
   },
   {
-    src: Campaign,
-    alt: "Campaign",
-    name:"Apis Campaigns",
+    src: RJSameya01,
+    alt: "RJ Sayema X Apis",
+    name:"RJ Sayema X Apis",
     colorShadow: 'F5D5AC'
 
   },
@@ -234,7 +237,7 @@ export default function Media() {
         <div className="relative flex items-center justify-center flex-col !w-[96%]">
           <div className="flex flex-col gap-2 md:gap-4">
             <p className="font-bold text-[20px] md:text-[40px] text-center text-[#9F7B49]">
-              TVC
+            Video Ad
             </p>
             <div>
               <p className="text-sm md:text-xl md:leading-8 text-center font-jost">
@@ -267,13 +270,13 @@ export default function Media() {
       {!isMobile ? <div className='grid grid-cols-1 md:grid-cols-2 xl: -mx-4'>      
             <div className="flex flex-col items-center gap-14 grid grid-cols-1 divide-y">
               <div className="w-full md:w-[470px] h-[382px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#CDB699] to-[#CDB699] shadow-[2px_2px_2px_#CDB699] relative">
-                <p className='text-center font-literata font-semibold text-[30px]'>Apis Honey </p>
-                <Image src={Campaign001} alt="Honey" className="bg-transparent p-[9px] mt-0" />
+                <p className='text-center font-literata font-semibold text-[30px]'>Diwali X Apis </p>
+                <Image src={Diwali01} alt="Honey" className="bg-transparent p-[9px] mt-0" style={{borderRadius:"25%"}} />
               </div>
               <div className="w-full md:w-[470px] h-[382px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#E0C4B2] to-[#E0C4B2] shadow-[2px_2px_2px_#E0C4B2] relative md:-mt-[140px] mt-[10px]">
-              <p className='text-center font-literata font-semibold text-[30px]'>Apis Jam </p>
+              <p className='text-center font-literata font-semibold text-[30px]'>ApisHeroes </p>
 
-                <Image src={jam} alt="Jam" className="bg-transparent p-[9px] mt-0" />
+                <Image src={womensDay} alt="Jam" className="bg-transparent p-[9px] mt-0"  style={{borderRadius:"25%"}}  />
               </div>
               <div className="">
                 {/* <div className="relative flex w-full bg-[#FFF9F0] mt-10 border-2 h-[800px]"> */}
@@ -302,9 +305,9 @@ export default function Media() {
                 </div>
               </div>
               <div className="w-full md:w-[470px] h-[382px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#F5D5AC] to-[#F5D5AC] shadow-[2px_2px_2px_#F5D5AC] relative md:mt-[60px] mt-[20px] -ml-[25px]">
-              <p className='text-center font-literata font-semibold text-[30px]'>Apis Campaigns </p>
+              <p className='text-center font-literata font-semibold text-[30px]'>RJ Sayema X Apis </p>
 
-                <Image src={Campaign} alt="Campaign" className="bg-transparent p-[9px] mt-0" />
+                <Image src={RJSameya01} alt="Campaign" className="bg-transparent p-[9px] mt-0"  style={{borderRadius:"25%"}}  />
               </div>
             </div>
           </div> :
