@@ -7,7 +7,6 @@ import Ring2 from "@/assets/images/OurBrands/Ring-2.png";
 import Ring3 from "@/assets/images/OurBrands/Ring-3.png";
 import Ring4 from "@/assets/images/OurBrands/Ring-4.png";
 import Comma from "@/assets/images/OurBrands/Comma.png";
-import HandDrawnHoney from "@/assets/images/OurBrands/HandDrawnHoney.png";
 import Image from "next/image";
 import CheckReportBanner from '@/assets/images/OurBrands/ProductBanner.png'
 import HimalayaHoney from "@/assets/images/OurBrands/himalayaHoney.png"
@@ -16,6 +15,7 @@ import { useSearchParams } from "next/navigation";
 import { NEWS_DATA, PRODUCT_DATA } from "@/lib/constants";
 import Link from "next/link";
 import FlowerRun from '@/assets/images/home-banner-section/flowerRun.gif'
+
 
 
 import { LATEST_SLIDES, SLIDES, HEALTH_BENEFITS, HEALTH_DATE, HEALTH_JAM, HEALTH_FLAKES, HEALTH_VERNACALLI, HEALTH_MACRONI, HEALTH_SPEARD, COOKING_PASTE, SOYA_CHUNK, SAFFRON, GREEN_TEA, RECIPIES_DATA1, AVAILABILITY_SLIDE, GLIMPSES_SLIDES } from "@/lib/constants";
@@ -277,18 +277,14 @@ const ProductDetails = () => {
                 alt="header-logo"
                 className="h-[180px] mt-8 w-auto md:h-[380px]"
               />
-              {selectedBrand?.id === 1 && selectedProduct?.id === 1 && (
-                <Link
-                  href={
-                    "https://www.amazon.in/Apis-Organic-honey-450gm-Certified/dp/B0CS6WWLDD/ref=sr_1_1_sspa?crid=219JTIFPTZQV0&dib=eyJ2IjoiMSJ9.7R3mQ34PIwgZkHqRRgwEjVWlVCDaeYA_gMiIp7z_xR9gL3YKL6Dh8Q0O4bLs1p3RyxpxPRRX7OmtSgZoL4ybDSLGwvSlhjMGL0BCl7HkvhLFCVfH2LQNxsak5PVF2GYJC7vRfW2qfPWk-OLU_WiU8F_lJXSsBqIVuDTE9hph-qVmdJI5boCvzNzVI_XkHUfDHnghRopggMDYgQaphGr5SLt_zC-AlDu6wm0hTnXEyk5fRTgDdZCUzk69fbZ33_f8yHyE8xnlaHZR5J0zpUs6Wa5yOmTg4h33s3hu6KKwnts.LhdhmHfem2YrWbVRD7ObAzhChsuUnKmokbketoIX2gg&dib_tag=se&keywords=organic+honey+apis&qid=1735901474&sprefix=organic+honey+apis%2Caps%2C209&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1https://www.amazon.in/Apis-Organic-honey-450gm-Certified/dp/B0CS6WWLDD/ref=sr_1_1_sspa?crid=219JTIFPTZQV0&dib=eyJ2IjoiMSJ9.7R3mQ34PIwgZkHqRRgwEjVWlVCDaeYA_gMiIp7z_xR9gL3YKL6Dh8Q0O4bLs1p3RyxpxPRRX7OmtSgZoL4ybDSLGwvSlhjMGL0BCl7HkvhLFCVfH2LQNxsak5PVF2GYJC7vRfW2qfPWk-OLU_WiU8F_lJXSsBqIVuDTE9hph-qVmdJI5boCvzNzVI_XkHUfDHnghRopggMDYgQaphGr5SLt_zC-AlDu6wm0hTnXEyk5fRTgDdZCUzk69fbZ33_f8yHyE8xnlaHZR5J0zpUs6Wa5yOmTg4h33s3hu6KKwnts.LhdhmHfem2YrWbVRD7ObAzhChsuUnKmokbketoIX2gg&dib_tag=se&keywords=organic+honey+apis&qid=1735901474&sprefix=organic+honey+apis%2Caps%2C209&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
-                  }
-                  target="_blank"
-                >
-                  <button className="border mt-8 border-[#9F7B49] bg-[#9F7B49] px-6 md:px-12 text-xs md:text-base py-2 md:py-3 font-bold text-white">
-                    Available on
-                  </button>
-                </Link>
-              )}
+              <Link
+                href={selectedProduct?.link}
+                target="_blank"
+              >
+                <button className="border mt-8 border-[#9F7B49] bg-[#9F7B49] px-6 md:px-12 text-xs md:text-base py-2 md:py-3 font-bold text-white">
+                  Available on
+                </button>
+              </Link>
             </div>
             {/* Benefits Section */}
             <div className="w-full flex flex-row px-4 md:px-0 -mt-[40px]">
@@ -364,7 +360,7 @@ const ProductDetails = () => {
             </a>
           </div>
         </div>
-      ) : selectedBrand?.id === 3 && selectedProduct?.id === 2 ? (
+      ) : selectedBrand?.id === 2 && selectedProduct?.id === 1 ? (
         <div className="w-[100%] relative">
           <Image
             src={HimalayaHoney}
@@ -466,13 +462,13 @@ const ProductDetails = () => {
         rounded-tl-[60px] rounded-tr-[30px] rounded-br-[60px] rounded-bl-0 mt-8 z-50 h-[175px] md:h-[250px] w-[280px] md:w-[380px]`}
             >
               <div
-                className="bg-custom-radial-gradient absolute bottom-4 md:bottom-8 z-50 left-4 md:left-8 backdrop-blur-lg rounded-tl-[60px] rounded-tr-[30px] rounded-br-[60px] rounded-bl-0 h-[175px] md:h-[250px] w-[280px] md:w-[380px]"
+                className="bg-custom-radial-gradient absolute bottom-4 md:bottom-8 z-50 left-4 md:left-8  rounded-tl-[60px] rounded-tr-[30px] rounded-br-[60px] rounded-bl-0 h-[175px] md:h-[250px] w-[300px] md:w-[380px]"
               ></div>
               <Image
                 src={selectedProduct.img}
                 height={280}
                 alt="product-image"
-                className="h-[280px] md:h-[400px] z-50 absolute w-[620px] -right-16 -bottom-1 z-20"
+                className="h-[280px] md:h-[280px] z-50 absolute w-[620px] -right-6 bottom-4 z-20"
               />
               <div className="relative h-full w-full">
                 <Image
@@ -515,7 +511,7 @@ const ProductDetails = () => {
           </div>
         </div>
         <Image
-          src={HandDrawnHoney}
+          src={selectedProduct.saysImage}
           width={200}
           height={200}
           alt="hand-drawn-honey"
@@ -591,7 +587,7 @@ const ProductDetails = () => {
           </div>
         </div>
         <div className="pb-6 md:pb-40 w-[90%] flex items-center justify-center">
-          <EmblaCarousel options={OPTIONS}>
+          <EmblaCarousel options={OPTIONS} autoScroll>
             {slides.map((itm, index) => (
               <div className="embla__slide" key={index}>
                 <div className="embla__slide__number !h-[240px] w-full">
