@@ -277,7 +277,7 @@ export default function Media() {
                 </Link>
               </div>
               <div className="w-full md:w-[470px] h-[382px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#E0C4B2] to-[#E0C4B2] shadow-[2px_2px_2px_#E0C4B2] relative md:-mt-[140px] mt-[10px]">
-              <p className='text-center font-literata font-semibold text-[30px]'>ApisHeroes </p>
+              <p className='text-center font-literata font-semibold text-[30px]'>#ApisHeroes </p>
                <Link href="https://www.instagram.com/p/C4QPfZco3NT" target='blank'>
                <Image src={womensDay} alt="Jam" className="bg-transparent p-[9px] mt-0"  style={{borderRadius:"25%"}}  />
                </Link>
