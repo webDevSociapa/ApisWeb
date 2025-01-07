@@ -191,6 +191,10 @@ import Jam102 from "@/assets/images/OurBrands/jam102.png";
 import Saffron102 from "@/assets/images/OurBrands/saffron102.png";
 import SoyaChunks102 from "@/assets/images/OurBrands/soya102.png";
 import GreenTea102 from "@/assets/images/OurBrands/greenTea102.png";
+import Vermicelli103 from "@/assets/images/OurBrands/Vermicelli103.png";
+import jam103 from "@/assets/images/OurBrands/jam103.png";
+import cornFlakes103 from "@/assets/images/OurBrands/cornFlakes103.png";
+import honey103 from "@/assets/images/OurBrands/honey103.png";
 // import OrganicHoneyMenu from "@/assets/images"
 
 //  import Blog8 from '@/assets/images/our-blog/blog08.png';
@@ -282,7 +286,7 @@ export const PRODUCT_DATA = [
       {
         id: 1,
         name: "Apis Organic Honey",
-        img: Honey,
+        img: honey103,
         back_img: NewBannerOrganic,
         rect_color: "bg-[#FFC660]",
         title_color: "text-[#9F7B49]",
@@ -314,7 +318,7 @@ export const PRODUCT_DATA = [
       {
         id: 1,
         name: "Honey",
-        img: Honey,
+        img: honey103,
         back_img: HoneyBannerNew001,
         rect_color: "bg-[#FFC660]",
         title_color: "text-[#9F7B49]",
@@ -350,13 +354,13 @@ export const PRODUCT_DATA = [
         saysImage:newDates101,
         title: "",
         title_desc: "",
-        link:"https://www.amazon.in/Apis-Classic-Dates-500g/dp/B0CJXWN5Q6",
+        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
-          "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor without any additives or preservatives. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
+          "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
         product_img_1: DatesProducts,
         product_img_2: DatesProduct,
         customer_says:
-          "I recently tried Apis Dates, and I’m absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It’s clear that Apis prioritizes purity, as there are no additives or preservatives, just pure, high-quality dates. The texture is perfect—soft and moist, making them a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I’m enjoying a product that’s both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+          "I recently tried Apis Dates, and I'm absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It's clear that Apis prioritizes purity and high-quality dates. The texture is perfect-soft and moist, making them, a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I'm enjoying a product that's both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
         health_benefits:
           "Dates are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
         primary_color: "",
@@ -371,14 +375,14 @@ export const PRODUCT_DATA = [
       {
         id: 1,
         name: "Jam",
-        img: Jam,
+        img: jam103,
         back_img: NewBannerJam,
         rect_color: "bg-[#7F0416]",
         title_color: "text-[#7F0416]",
         desc_color: "text-[#505050]",
         title: "Apis Jam",
         saysImage: jam101,
-        link:"",
+        link:"https://www.amazon.in/stores/page/BE19AE4D-42D0-450C-BA0D-3D75A016D55F?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         title_desc:
           "Discover The Purest fruits flavours handpicked for apis jam creation.",
         product_desc:
@@ -396,7 +400,7 @@ export const PRODUCT_DATA = [
       {
         id: 2,
         name: "Flakes",
-        img: Flakes,
+        img: cornFlakes103,
         back_img: chocoFlakes001,
         rect_color: "bg-[#CC5500]",
         title_color: "text-[#442C1A]",
@@ -420,7 +424,7 @@ export const PRODUCT_DATA = [
       {
         id: 3,
         name: "Vermicelli",
-        img: Vermicelli,
+        img: Vermicelli103,
         back_img: NewBannerVermicalli,
         rect_color: "bg-[#D38030]",
         title_color: "text-[#D38030]",
@@ -431,11 +435,11 @@ export const PRODUCT_DATA = [
         title_desc:
           "Delight in the perfect texture and taste with our premium vermicelli",
         product_desc:
-          "Purity is deeply embedded in our vermicelli. We prioritize selecting the finest ingredients and employing meticulous processes to ensure that every strand embodies true quality. Our vermicelli is crafted without artificial additives or preservatives, allowing its natural flavor and texture to shine through in every dish. This commitment to purity means that you experience a clean, wholesome taste and consistent quality that enhances your culinary creations. When you choose APIs Vermicelli, you’re not just getting a product; you’re embracing a philosophy where purity is our guiding principle, ensuring excellence in every bite.",
+          "Purity is deeply embedded in our vermicelli. We prioritize selecting the finest ingredients and employing meticulous processes to ensure that every strand embodies true quality. Our vermicelli is crafted without artificial additives or preservatives, allowing its natural flavor and texture to shine through in every dish. This commitment to purity means that you experience a clean, wholesome taste and consistent quality that enhances your culinary creations. When you choose Apis Vermicelli, you’re not just getting a product; you’re embracing a philosophy where purity is our guiding principle, ensuring excellence in every bite.",
         product_img_1: vermicali102,
         product_img_2: VermiProduct,
         customer_says:
-          "I recently tried Apis Vermicelli, and I am thoroughly impressed! The texture is perfectly light and airy, making it a fantastic base for both savory and sweet dishes. It cooks evenly and retains its shape beautifully, which is a testament to its high quality. I appreciate that APIs Vermicelli is made with care, resulting in a clean, wholesome taste without any artificial additives. Whether used in a traditional dish or a creative recipe, it adds a wonderful touch to every meal. APIs Vermicelli has quickly become a pantry staple for me, and I highly recommend it to anyone seeking top-notch, versatile pasta.",
+          "I recently tried Apis Vermicelli, and I am thoroughly impressed! The texture is perfectly light and airy, making it a fantastic base for both savory and sweet dishes. It cooks evenly and retains its shape beautifully, which is a testament to its high quality. I appreciate that Apis Vermicelli is made with care, resulting in a clean, wholesome taste without any artificial additives. Whether used in a traditional dish or a creative recipe, it adds a wonderful touch to every meal. Apis Vermicelli has quickly become a pantry staple for me, and I highly recommend it to anyone seeking top-notch, versatile pasta.",
         health_benefits:
           "Vermicelli, a type of thin rice or wheat noodle, is typically low in calories, making it a suitable option for weight management. It provides a filling meal without adding excessive caloric intake.",
         primary_color: "",
