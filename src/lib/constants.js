@@ -408,7 +408,7 @@ export const PRODUCT_DATA = [
           "      Experience pure, crunchy delight with every bite of our perfectly crisp flakes.",
         product_desc:
           "Purity is the essence of our flakes. We meticulously craft each batch using the highest quality ingredients, ensuring that every flake embodies the true taste of nature. Our commitment to purity means no artificial additives or preservatives—just simple, wholesome goodness in every bite. The result is a crisp, clean flavor that stands out in every dish, delivering a natural crunch that enhances your meals. With Apis flakes, you're not just enjoying a product; you're savoring the essence of purity in food, made with care and integrity from start to finish.",
-        product_img_1: FlakesProduct,
+        product_img_1: chocoFlakes102,
         product_img_2: CornFlakesNew,
         customer_says:
           "Best experience ever !!!! yes its for Apis Flakes and am thoroughly impressed! The flakes are incredibly crisp and full of natural flavor, adding a delightful crunch to my breakfasts and snacks. What stands out is the purity of the product—no artificial additives or preservatives, just wholesome, high-quality ingredients. Each bite is fresh and satisfying, making them perfect for both sweet and savory dishes. The packaging is also well-designed, keeping the flakes fresh and crisp. Apis Flakes have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking a premium, delicious, and natural option for their meals.",
@@ -432,7 +432,7 @@ export const PRODUCT_DATA = [
           "Delight in the perfect texture and taste with our premium vermicelli",
         product_desc:
           "Purity is deeply embedded in our vermicelli. We prioritize selecting the finest ingredients and employing meticulous processes to ensure that every strand embodies true quality. Our vermicelli is crafted without artificial additives or preservatives, allowing its natural flavor and texture to shine through in every dish. This commitment to purity means that you experience a clean, wholesome taste and consistent quality that enhances your culinary creations. When you choose APIs Vermicelli, you’re not just getting a product; you’re embracing a philosophy where purity is our guiding principle, ensuring excellence in every bite.",
-        product_img_1: VermiProduct,
+        product_img_1: vermicali102,
         product_img_2: VermiProduct,
         customer_says:
           "I recently tried Apis Vermicelli, and I am thoroughly impressed! The texture is perfectly light and airy, making it a fantastic base for both savory and sweet dishes. It cooks evenly and retains its shape beautifully, which is a testament to its high quality. I appreciate that APIs Vermicelli is made with care, resulting in a clean, wholesome taste without any artificial additives. Whether used in a traditional dish or a creative recipe, it adds a wonderful touch to every meal. APIs Vermicelli has quickly become a pantry staple for me, and I highly recommend it to anyone seeking top-notch, versatile pasta.",
@@ -480,11 +480,11 @@ export const PRODUCT_DATA = [
         link:"https://uniqrr.com/products/apis-india-soya-chunks-50-gm",
         saysImage:Soya101,
         product_desc:
-          "Purity is the cornerstone of our soya chunks. We start with premium soybeans, ensuring that each chunk is packed with natural goodness and robust flavor. Our production process is designed to preserve the integrity of the soybeans, avoiding any artificial additives or preservatives. This commitment to purity means that every bite of APIs Soya Chunks offers a clean, wholesome taste and a satisfying texture that holds up perfectly in various dishes. Whether you’re incorporating them into a savory stir-fry or a hearty stew, APIs Soya Chunks reflect our dedication to delivering pure, high-quality ingredients in every bite.",
+          "Purity is the cornerstone of our soya chunks. We start with premium soybeans, ensuring that each chunk is packed with natural goodness and robust flavor. Our production process is designed to preserve the integrity of the soybeans, avoiding any artificial additives or preservatives. This commitment to purity means that every bite of Apis Soya Chunks offers a clean, wholesome taste and a satisfying texture that holds up perfectly in various dishes. Whether you’re incorporating them into a savory stir-fry or a hearty stew, Apis Soya Chunks reflect our dedication to delivering pure, high-quality ingredients in every bite.",
         product_img_1: SoyaChunks102,
         product_img_2: SoyaChunks001,
         customer_says:
-          "I recently tried Apis Soya Chunks, and I’m thoroughly impressed! The chunks are of excellent quality, with a firm texture that holds up beautifully in various dishes. They’re easy to prepare and absorb flavors exceptionally well, making them a versatile addition to my meals. I appreciate that they are made from high-quality soybeans without any unnecessary additives or preservatives. The taste is clean and satisfying, making them a fantastic meat alternative. APIs Soya Chunks have quickly become a staple in my kitchen, and I highly recommend them to anyone seeking a nutritious, delicious, and pure option for their recipes.",
+          "I recently tried Apis Soya Chunks, and I’m thoroughly impressed! The chunks are of excellent quality, with a firm texture that holds up beautifully in various dishes. They’re easy to prepare and absorb flavors exceptionally well, making them a versatile addition to my meals. I appreciate that they are made from high-quality soybeans without any unnecessary additives or preservatives. The taste is clean and satisfying, making them a fantastic meat alternative. Apis Soya Chunks have quickly become a staple in my kitchen, and I highly recommend them to anyone seeking a nutritious, delicious, and pure option for their recipes.",
         health_benefits:
           "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
         primary_color: "",
