@@ -23,6 +23,7 @@ import RJSameya01 from "@/assets/images/Media/RJSameya01.png";
 import ImageBanner from "../../Layout/Banner";
 import EmblaCarousel from "../../Carousel/Carousel";
 import axios from 'axios';
+import Link from 'next/link';
 
 const LATEST_SLIDES = [
   {
@@ -271,16 +272,19 @@ export default function Media() {
             <div className="flex flex-col items-center gap-14 grid grid-cols-1 divide-y">
               <div className="w-full md:w-[470px] h-[382px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#CDB699] to-[#CDB699] shadow-[2px_2px_2px_#CDB699] relative">
                 <p className='text-center font-literata font-semibold text-[30px]'>Diwali X Apis </p>
+                <Link href="https://www.instagram.com/reel/DBYrgsQtbQN" target='blank'>
                 <Image src={Diwali01} alt="Honey" className="bg-transparent p-[9px] mt-0" style={{borderRadius:"25%"}} />
+                </Link>
               </div>
               <div className="w-full md:w-[470px] h-[382px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#E0C4B2] to-[#E0C4B2] shadow-[2px_2px_2px_#E0C4B2] relative md:-mt-[140px] mt-[10px]">
               <p className='text-center font-literata font-semibold text-[30px]'>ApisHeroes </p>
-
-                <Image src={womensDay} alt="Jam" className="bg-transparent p-[9px] mt-0"  style={{borderRadius:"25%"}}  />
+               <Link href="https://www.instagram.com/p/C4QPfZco3NT" target='blank'>
+               <Image src={womensDay} alt="Jam" className="bg-transparent p-[9px] mt-0"  style={{borderRadius:"25%"}}  />
+               </Link>
               </div>
               <div className="">
                 {/* <div className="relative flex w-full bg-[#FFF9F0] mt-10 border-2 h-[800px]"> */}
-  
+
     {/* </div> */}
               </div>
             </div>
@@ -306,8 +310,9 @@ export default function Media() {
               </div>
               <div className="w-full md:w-[470px] h-[382px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#F5D5AC] to-[#F5D5AC] shadow-[2px_2px_2px_#F5D5AC] relative md:mt-[60px] mt-[20px] -ml-[25px]">
               <p className='text-center font-literata font-semibold text-[30px]'>RJ Sayema X Apis </p>
-
-                <Image src={RJSameya01} alt="Campaign" className="bg-transparent p-[9px] mt-0"  style={{borderRadius:"25%"}}  />
+              <Link href="https://www.instagram.com/p/C0t6yR9iUTj" target='blank'>
+              <Image src={RJSameya01} alt="Campaign" className="bg-transparent p-[9px] mt-0"  style={{borderRadius:"25%"}}  />
+              </Link>
               </div>
             </div>
           </div> :
