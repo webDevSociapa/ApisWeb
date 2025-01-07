@@ -174,10 +174,23 @@ import chocoFlakes001 from "@/assets/images/OurBrands/chocoFlakes001.png"
 import NewProductBannerDates from "@/assets/images/OurBrands/newProductBannerDates.png"
 import CornFlakesNew from "@/assets/images/OurBrands/cornFlakesNew.png"
 import NewJamBanner from "@/assets/images/OurBrands/newJamBanner.png"
-import DatesProducts from "@/assets/images/OurBrands/datesProducts.png"
-import HoneyBannerNew001 from "@/assets/images/OurBrands/honeyBannerNew001.png";
-import newSoyaChunkss from "@/assets/images/OurBrands/newSoyaChunkss.png";
-
+import DatesProducts from "@/assets/images/OurBrands/newDatesProduct1.png"
+import HoneyBannerNew001 from "@/assets/images/OurBrands/himalayaHoneynew11.png";
+import newSoyaChunkss from "@/assets/images/OurBrands/newSoyaChunks1.png";
+import cornFlakes101 from "@/assets/images/OurBrands/cornFlakes101.png";
+import newDates101 from "@/assets/images/OurBrands/newDates101.png";
+import greenTea101 from "@/assets/images/OurBrands/greenTea101.png";
+import jam101 from "@/assets/images/OurBrands/jam101.png";
+import Vermicelli101 from "@/assets/images/OurBrands/Vermicelli101.png";
+import saffron101 from "@/assets/images/OurBrands/saffron101.png";
+import Soya101 from "@/assets/images/OurBrands/Soya101.png";
+import HandDrawnHoney from "@/assets/images/OurBrands/HandDrawnHoney.png";
+import chocoFlakes102 from "@/assets/images/OurBrands/chocoFlakes102.png";
+import vermicali102 from "@/assets/images/OurBrands/vermicali102.png";
+import Jam102 from "@/assets/images/OurBrands/jam102.png";
+import Saffron102 from "@/assets/images/OurBrands/saffron102.png";
+import SoyaChunks102 from "@/assets/images/OurBrands/soya102.png";
+import GreenTea102 from "@/assets/images/OurBrands/greenTea102.png";
 // import OrganicHoneyMenu from "@/assets/images"
 
 //  import Blog8 from '@/assets/images/our-blog/blog08.png';
@@ -275,6 +288,8 @@ export const PRODUCT_DATA = [
         title_color: "text-[#9F7B49]",
         desc_color: "text-black",
         title: "Apis Organic Honey",
+        link:"https://www.amazon.in/Apis-Organic-honey-450gm-Certified/dp/B0CS6WWLDD",
+        saysImage:HandDrawnHoney,
         title_desc:
           "Discover The Purest Organic Honey From The Enchanting Valleys Of Kashmir",
         product_desc:
@@ -304,6 +319,9 @@ export const PRODUCT_DATA = [
         rect_color: "bg-[#FFC660]",
         title_color: "text-[#9F7B49]",
         desc_color: "text-black",
+        saysImage:newDates101,
+        saysImage:HandDrawnHoney,
+        link:"https://www.amazon.in/Apis-Organic-honey-450gm-Certified/dp/B0CS6WWLDD/ref=sr_1_1_sspa?crid=219JTIFPTZQV0&dib=eyJ2IjoiMSJ9.7R3mQ34PIwgZkHqRRgwEjVWlVCDaeYA_gMiIp7z_xR9gL3YKL6Dh8Q0O4bLs1p3RyxpxPRRX7OmtSgZoL4ybDSLGwvSlhjMGL0BCl7HkvhLFCVfH2LQNxsak5PVF2GYJC7vRfW2qfPWk-OLU_WiU8F_lJXSsBqIVuDTE9hph-qVmdJI5boCvzNzVI_XkHUfDHnghRopggMDYgQaphGr5SLt_zC-AlDu6wm0hTnXEyk5fRTgDdZCUzk69fbZ33_f8yHyE8xnlaHZR5J0zpUs6Wa5yOmTg4h33s3hu6KKwnts.LhdhmHfem2YrWbVRD7ObAzhChsuUnKmokbketoIX2gg&dib_tag=se&keywords=organic+honey+apis&qid=1735901474&sprefix=organic+honey+apis%2Caps%2C209&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1https://www.amazon.in/Apis-Organic-honey-450gm-Certified/dp/B0CS6WWLDD/ref=sr_1_1_sspa?crid=219JTIFPTZQV0&dib=eyJ2IjoiMSJ9.7R3mQ34PIwgZkHqRRgwEjVWlVCDaeYA_gMiIp7z_xR9gL3YKL6Dh8Q0O4bLs1p3RyxpxPRRX7OmtSgZoL4ybDSLGwvSlhjMGL0BCl7HkvhLFCVfH2LQNxsak5PVF2GYJC7vRfW2qfPWk-OLU_WiU8F_lJXSsBqIVuDTE9hph-qVmdJI5boCvzNzVI_XkHUfDHnghRopggMDYgQaphGr5SLt_zC-AlDu6wm0hTnXEyk5fRTgDdZCUzk69fbZ33_f8yHyE8xnlaHZR5J0zpUs6Wa5yOmTg4h33s3hu6KKwnts.LhdhmHfem2YrWbVRD7ObAzhChsuUnKmokbketoIX2gg&dib_tag=se&keywords=organic+honey+apis&qid=1735901474&sprefix=organic+honey+apis%2Caps%2C209&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1",
         title: "",
         title_desc: "",
         product_desc:
@@ -314,7 +332,7 @@ export const PRODUCT_DATA = [
         product_img4: HimalayaHoney0001,
         title:"Regular Honey",
         customer_says:
-          "Apis Himalayan Honey, and it’s exceptional! The honey has a rich, deep flavor with delightful floral undertones that truly reflects its Himalayan origins. Its purity is evident in both taste and texture—smooth and golden without any added sugars or artificial ingredients. I love the natural sweetness it adds to my tea and yogurt, and it’s perfect for drizzling over toast. The packaging is also top-notch, preserving the honey’s freshness. Apis Himalayan Honey has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for high-quality, pure honey with an authentic, flavorful profile.",
+          "Apis Honey, and it’s exceptional! The honey has a rich, deep flavor with delightful floral undertones that truly reflects its Himalayan origins. Its purity is evident in both taste and texture—smooth and golden without any added sugars or artificial ingredients. I love the natural sweetness it adds to my tea and yogurt, and it’s perfect for drizzling over toast. The packaging is also top-notch, preserving the honey’s freshness. Apis Honey has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for high-quality, pure honey with an authentic, flavorful profile.",
         health_benefits:
           "Honey has been used for aesthetic purposes especially to return vigour and beauty to skin. When applied together with milk, honey creates a smooth, flawless skin. Real honey is also used for softening hair texture and for glowing skin.",
         primary_color: "",
@@ -329,12 +347,14 @@ export const PRODUCT_DATA = [
         title_color: "",
         desc_color: "",
         back_img: NewProductBannerDates,
+        saysImage:newDates101,
         title: "",
         title_desc: "",
+        link:"https://www.amazon.in/Apis-Classic-Dates-500g/dp/B0CJXWN5Q6",
         product_desc:
           "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor without any additives or preservatives. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
-        product_img_1: DatesProduct,
-        product_img_2: DatesProducts,
+        product_img_1: DatesProducts,
+        product_img_2: DatesProduct,
         customer_says:
           "I recently tried Apis Dates, and I’m absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It’s clear that Apis prioritizes purity, as there are no additives or preservatives, just pure, high-quality dates. The texture is perfect—soft and moist, making them a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I’m enjoying a product that’s both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
         health_benefits:
@@ -357,11 +377,13 @@ export const PRODUCT_DATA = [
         title_color: "text-[#7F0416]",
         desc_color: "text-[#505050]",
         title: "Apis Jam",
+        saysImage: jam101,
+        link:"",
         title_desc:
           "Discover The Purest fruits flavours handpicked for apis jam creation.",
         product_desc:
           "Just as our honey exemplifies nature's finest, our jams uphold the same unwavering commitment to quality. We carefully select the freshest fruits, ensuring that each jar delivers a burst of genuine flavor without artificial additives or preservatives. Our meticulous process preserves the natural taste and nutritional benefits of the fruit, offering a delightful and wholesome experience with every spoonful. When you choose Apis jams, you’re savoring purity in its most authentic form, making each bite a true celebration of natural goodness.",
-        product_img_1: JamProduct,
+        product_img_1: Jam102,
         product_img_2: NewJamBanner,
 
         customer_says:
@@ -380,6 +402,8 @@ export const PRODUCT_DATA = [
         title_color: "text-[#442C1A]",
         desc_color: "text-[#442C1A]",
         title: "Apis Flakes",
+        saysImage:cornFlakes101,
+        link:"https://www.amazon.in/Apis-Cornflakes-1kg-Zip-Pouch/dp/B099FRBQ4C?th=1",
         title_desc:
           "      Experience pure, crunchy delight with every bite of our perfectly crisp flakes.",
         product_desc:
@@ -401,7 +425,9 @@ export const PRODUCT_DATA = [
         rect_color: "bg-[#D38030]",
         title_color: "text-[#D38030]",
         desc_color: "text-[#FCC42B]",
+        saysImage: Vermicelli101,
         title: "Apis Vermicelli",
+        link:"https://www.amazon.in/Apis-Vermicelli-900g/dp/B0CJXWN5Q6",
         title_desc:
           "Delight in the perfect texture and taste with our premium vermicelli",
         product_desc:
@@ -443,7 +469,7 @@ export const PRODUCT_DATA = [
       // },
       {
         id: 1,
-        name: "Soya Chunk",
+        name: "Soya Chunks",
         img: newSoyaChunkss,
         back_img: NewBannerSoyaChunks,
         rect_color: "bg-[#F0A20A]",
@@ -451,9 +477,11 @@ export const PRODUCT_DATA = [
         desc_color: "text-black",
         title: "",
         title_desc: "",
+        link:"https://uniqrr.com/products/apis-india-soya-chunks-50-gm",
+        saysImage:Soya101,
         product_desc:
           "Purity is the cornerstone of our soya chunks. We start with premium soybeans, ensuring that each chunk is packed with natural goodness and robust flavor. Our production process is designed to preserve the integrity of the soybeans, avoiding any artificial additives or preservatives. This commitment to purity means that every bite of APIs Soya Chunks offers a clean, wholesome taste and a satisfying texture that holds up perfectly in various dishes. Whether you’re incorporating them into a savory stir-fry or a hearty stew, APIs Soya Chunks reflect our dedication to delivering pure, high-quality ingredients in every bite.",
-        product_img_1: SoyaChunksProduct,
+        product_img_1: SoyaChunks102,
         product_img_2: SoyaChunks001,
         customer_says:
           "I recently tried Apis Soya Chunks, and I’m thoroughly impressed! The chunks are of excellent quality, with a firm texture that holds up beautifully in various dishes. They’re easy to prepare and absorb flavors exceptionally well, making them a versatile addition to my meals. I appreciate that they are made from high-quality soybeans without any unnecessary additives or preservatives. The taste is clean and satisfying, making them a fantastic meat alternative. APIs Soya Chunks have quickly become a staple in my kitchen, and I highly recommend them to anyone seeking a nutritious, delicious, and pure option for their recipes.",
@@ -471,11 +499,13 @@ export const PRODUCT_DATA = [
         title_color: "text-[#C62A05]",
         desc_color: "text-white",
         title: "Apis Saffron",
+        link:"https://www.amazon.in/Apis-Saffron-Kesar/dp/B08NFFST31",
+        saysImage:saffron101,
         title_desc:
           "Elevate your dishes with the exquisite richness and vibrant color of our premium saffron",
         product_desc:
           "Purity defines our saffron. We meticulously source only the finest saffron threads, ensuring that each strand delivers unparalleled richness and vibrant color. Our saffron is free from additives and artificial enhancements, preserving its natural essence and aromatic depth. This commitment to purity means that every pinch of Apis Saffron adds an authentic, luxurious touch to your culinary creations. Whether enhancing a dish or crafting a delicate infusion, you can trust that our saffron embodies the true essence of purity, elevating your recipes with its exceptional quality and flavor.",
-        product_img_1: SaffronProduct,
+        product_img_1: Saffron102,
         product_img_2: SafronProductMenu,
         customer_says:
           "I’m absolutely thrilled with the quality! The saffron threads are vibrant and fragrant, infusing my dishes with a rich, authentic flavor and beautiful color. The purity of the product is evident, with no artificial additives or fillers—just pure, high-quality saffron. It adds a luxurious touch to both savory and sweet recipes, enhancing them with its unique aroma and depth. Apis Saffron has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for premium saffron that truly delivers on both flavor and purity.",
@@ -499,11 +529,13 @@ export const PRODUCT_DATA = [
         title_color: "text-[#474C14]",
         desc_color: "text-white",
         title: "Apis Green Tea",
+        saysImage: greenTea101,
+        link:"https://www.amazon.in/Apis-Green-Tea-100g/dp/B0CJXWN5Q6",
         title_desc:
           "Discover The Purest fruits flavours handpicked for apis jam creation.",
         product_desc:
           "Purity is at the heart of our green tea. We meticulously select the finest leaves, ensuring that every cup delivers a taste of true nature. Our green tea is crafted with a commitment to purity, free from artificial additives or preservatives, so you can enjoy an authentic, refreshing experience with every sip. The result is a clean, smooth flavor that highlights the natural essence of the tea leaves. When you choose Apis Green Tea, you're savoring more than just a beverage—you're embracing a product where purity is not just a promise but a fundamental presence in every cup.",
-        product_img_1: GreenTeaProduct,
+        product_img_1: GreenTea102,
         product_img_2: TulsiGreenTea,
         customer_says:
           "I’m thoroughly impressed with Apis Green Tea! From the moment I brewed my first cup, I could tell it was high-quality. The flavor is incredibly fresh and smooth, with a perfect balance of earthy and subtly sweet notes. What I appreciate most is its purity—no artificial flavors or additives, just pure, natural tea that makes each sip enjoyable and invigorating. The aroma is calming and soothing, making it a wonderful way to start the day or unwind in the evening. Apis Green Tea has become my go-to choice, and I highly recommend it to anyone seeking a genuinely refreshing and wholesome tea experience.",

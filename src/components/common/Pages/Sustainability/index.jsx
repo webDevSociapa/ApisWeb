@@ -137,7 +137,7 @@ export default function Sustainability() {
               }`}
             onClick={() => setActiveTab("image")}
           >
-            CSR Images
+            Images
           </button>
           <button
             className={`px-4 py-2 rounded ${activeTab === "video"
@@ -146,7 +146,7 @@ export default function Sustainability() {
               }`}
             onClick={() => setActiveTab("video")}
           >
-            CSR Videos
+            Videos
           </button>
         </div>
       </div>
