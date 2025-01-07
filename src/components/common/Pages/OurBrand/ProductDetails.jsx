@@ -177,6 +177,7 @@ const ProductDetails = () => {
                     <Image
                       src={itm?.img}
                       alt="header-logo"
+                      className=" border-4 border-[#9F7B49]"
                     // className="h-[240px] md:h-[440px] w-[172px] md:w-[270px] max-w-max bg-opacity-40"
                     />
                     {/* </div> */}
