@@ -1,59 +1,55 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
 
-const TABS = [
-  { id: 1, title: "Employee Award", content: [] }, // Dummy content
-  { id: 2, title: "Meet & Greet", content: [] }, // Dummy content
-  { id: 3, title: "Engagements", content: [] }, // Dummy content
-  { id: 4, title: "Celebrations", content: [] }, // Dummy content
-];
-
-const Modal = ({ image, onClose }) => {
-  return (
-    <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
-      <div className="relative max-w-4xl w-full">
-        <button
-          onClick={onClose}
-          className="absolute top-2 right-2 text-white text-xl bg-black bg-opacity-50 rounded-full w-8 h-8 flex items-center justify-center"
-        >
-          &times;
-        </button>
-        <Image
-          src={image}
-          alt="Modal image"
-          width={1200}
-          height={800}
-          className="w-full h-auto object-contain"
-        />
-      </div>
+const Modal = ({ image, onClose }) => (
+  <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+    <div className="relative max-w-4xl w-full">
+      <button
+        onClick={onClose}
+        className="absolute top-2 right-2 text-white text-xl bg-black bg-opacity-50 rounded-full w-8 h-8 flex items-center justify-center"
+      >
+        &times;
+      </button>
+      <Image
+        src={image}
+        alt="Modal image"
+        width={1200}
+        height={800}
+        className="w-full h-auto object-contain"
+      />
     </div>
-  );
-};
+  </div>
+);
 
 export default function Album() {
-  const searchParams = useSearchParams();
-  const title = searchParams.get("title");
-  const imageGroup = searchParams.get("imageGroup");
-  const gallery = searchParams.get("gallery");
-
-  // Parse the comma-separated image URLs into an array
-  const [activeTab, setActiveTab] = useState(parseInt(gallery) || 1);
   const [selectedImage, setSelectedImage] = useState(null);
-  const [imageSet, setImageSet] = useState(imageGroup ? imageGroup.split(",") : []);
-  
+  const [imageSet, setImageSet] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const imagesPerPage = 8;
+
+  // Set the image set from localStorage if available
   useEffect(() => {
-    if (gallery) {
-      setActiveTab(parseInt(gallery));
+    const storedData = localStorage.getItem("imageGroup");
+    if (storedData) {
+      // Parse the JSON string to an actual object
+      const parsedData = JSON.parse(storedData);
+      setImageSet(parsedData.imageGroup || []);
     }
-  }, [gallery]);
+  }, []);
 
-  const handleTabClick = (tabId) => {
-    setActiveTab(tabId);
+  // Calculate the images to display for the current page
+  const indexOfLastImage = currentPage * imagesPerPage;
+  const indexOfFirstImage = indexOfLastImage - imagesPerPage;
+
+  const currentImages = imageSet.slice(indexOfFirstImage, indexOfLastImage);    
+
+  // Pagination logic
+  const totalPages = Math.ceil(imageSet.length / imagesPerPage);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
   };
-
-  const currentTab = TABS.find((tab) => tab.id === activeTab);
 
   const handleImageClick = (image) => {
     setSelectedImage(image);
@@ -76,12 +72,12 @@ export default function Album() {
         </p>
       </div>
 
-      <p className="text-center mt-10 font-bold text-[#9F7B49] text-3xl py-4 sm:py-4 sm:mt-2 font-literata">
+      {/* <p className="text-center mt-10 font-bold text-[#9F7B49] text-3xl py-4 sm:py-4 sm:mt-2 font-literata">
         {title}
-      </p>
+      </p> */}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8 px-4">
-        {imageSet?.map((image, index) => (
+        {currentImages?.map((image, index) => (
           <div
             key={index}
             className="aspect-square overflow-hidden cursor-pointer"
@@ -98,7 +94,27 @@ export default function Album() {
         ))}
       </div>
 
-      {selectedImage && <Modal image={selectedImage} onClose={closeModal} />}
+      {/* {selectedImage && <Modal image={selectedImage} onClose={closeModal} />} */}
+      {/* Pagination Controls */}
+      <div className="flex justify-center mt-8">
+        <button
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+          className="px-4 py-2 mx-2 bg-gray-300 text-black rounded"
+        >
+          Previous
+        </button>
+        <span className="px-4 py-2 text-lg">
+          Page {currentPage} of {totalPages}
+        </span>
+        <button
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          className="px-4 py-2 mx-2 bg-gray-300 text-black rounded"
+        >
+          Next
+        </button>
+      </div>
     </>
   );
 }

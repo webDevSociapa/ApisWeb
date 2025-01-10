@@ -232,7 +232,6 @@ export default function Careers() {
       setPopupMessage('An error occurred. Please try again.');
     }
   }
-
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
 
@@ -287,7 +286,8 @@ export default function Careers() {
   }, []);
 
   const handleImageClick = (item) => {
-    router.push(`/careers/careerGallary?title=${encodeURIComponent(item.title)}&gallery=${item.gallery}&titleImage=${encodeURIComponent(item.titleImage)}&imageGroup= ${encodeURIComponent(item.imageGroup)}`);
+    localStorage.setItem('imageGroup', JSON.stringify(item));
+    router.push('/careers/careerGallary');
   };
 
 

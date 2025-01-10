@@ -73,7 +73,6 @@ const IMAGE_DATA = [
     alt: "RJ Sayema X Apis",
     name:"RJ Sayema X Apis",
     colorShadow: 'F5D5AC'
-
   },
 ];
 
