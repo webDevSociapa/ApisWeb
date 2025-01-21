@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import ROffice from '../../../../assets/images/ContactUs/apisarabiaNew1.png';
-import RegisterOffice from '../../../../assets/images/ContactUs/registerOffice.png';
+import RegisterOffice from '../../../../assets/images/ContactUs/newHeadOffice.jpg';
 import axios from 'axios';
 
 const Tabs = () => {
@@ -13,7 +13,7 @@ const Tabs = () => {
       title: 'Registered Office',
       address1: '18/32, East Patel Nagar New Delhi 110 008 India',
       address2:
-        'Telephone No : +91-11-43206666 Fax No: +91-11-43559111 vikas.cs@apisindia.com',
+        'Telephone No : +91-11-43206666, Fax No: +91-11-43559111, vikas.cs@apisindia.com',
       mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1750.7789475989298!2d77.17160334758306!3d28.6430095782245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d029570d2aacd%3A0x705df65106416c81!2s18%2C%20Block%204%2C%20East%20Patel%20Nagar%2C%20Patel%20Nagar%2C%20New%20Delhi%2C%20Delhi%20110008!5e0!3m2!1sen!2sin!4v1734948627355!5m2!1sen!2sin',
     },
     OverseasOperation: {
@@ -21,7 +21,7 @@ const Tabs = () => {
       title: 'Overseas Operation',
       address1: 'Apis Arabia Foods LLC TP030603, National Industries Park Dubai - UAE',
       address2:
-        'Telephone No : +971-43439442 admin@apisarabia.ae General enquiries: mail@apisindia.com',
+        'Telephone No : +971-43439442, admin@apisarabia.ae, General enquiries: mail@apisindia.com',
       mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1861093.4468067323!2d52.62910215109915!3d24.34829915112267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f0de9ff1fe65f%3A0xc60195bfe55b15fd!2sApis%20Arabia-%20Dubai!5e0!3m2!1sen!2sin!4v1734948929909!5m2!1sen!2sin',
     },
   };
