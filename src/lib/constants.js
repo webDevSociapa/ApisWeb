@@ -228,7 +228,7 @@ export const PATH_DATA = [
   },
   {
     url: "/about-us",
-    name: "About Us",
+    name: "About Us", 
   },
   {
     url: "/our-brand",

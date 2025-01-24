@@ -342,7 +342,6 @@ export default function Media() {
                 {IMAGE_DATA.map((item, index) => (
                   <div className="embla__slide" key={index}> {/* Open modal on click */}
                     <div className="embla__slide__number h-full w-full flex items-center justify-center"> {/* Full height and centered */}
-
                     <div
                         key={index}
                         className="w-full h-full p-4 rounded-[72px_36px_34px_0] flex flex-col items-center justify-center" // Changed to flex-col for vertical alignment
@@ -360,17 +359,8 @@ export default function Media() {
               </EmblaCarousel>
             </div>
           </>
-        
-  
-          
-          
-              }
-  
-        
-  
-  
-
-      {/* Carousel for Mobile View */}
+     }
+  {/* Carousel for Mobile View */}
      </div>
 
       {/* Modal Section */}

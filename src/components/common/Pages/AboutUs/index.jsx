@@ -21,7 +21,7 @@ import HexaGonalPage from "../../Pages/AboutUs/Hexagonal";
 import axios from "axios";
 import { CircularProgress } from "@mui/material";
 
-export default function OurBrand() {
+export default function AboutUsPage() {
   const [activeTab, setActiveTab] = useState("vision");
   const [apisDataNumber, setApisDataNumber] = useState()
   const [aboutBanner, setAboutBanner] = useState()
@@ -80,7 +80,6 @@ export default function OurBrand() {
             newCounts[item.key] = item.count;
           }
         });
-
         if (allReached) clearInterval(interval);
         return newCounts;
       });
@@ -88,8 +87,6 @@ export default function OurBrand() {
 
     return () => clearInterval(interval);
   }, [apisDataNumber]);
-
-
 
   const renderContent = () => {
     switch (activeTab) {
@@ -161,8 +158,6 @@ export default function OurBrand() {
   if (error) {
     return <div>{error}</div>;
   }
-  console.log("ourDirector[0]",ourDirector.data[0]);
-
   return (
     <>
       <main className="flex flex-col items-center justify-center w-full">
@@ -215,7 +210,7 @@ export default function OurBrand() {
           that purity makes. Purely Natural, Simply Better.
         </p>
       </section>
-      <div className="relative mt-14 flex flex-col items-center justify-center w-full">
+      <div id="mission-values" className="relative mt-14 flex flex-col items-center justify-center w-full">
         <Image src={MissionBanner} width={1440} className="object-cover w-full h-100" />
 
         <div className="w-full flex justify-end items-center absolute end-0 top-0">
@@ -367,9 +362,6 @@ export default function OurBrand() {
 
       </div>
 
-
-
-
       {/* <div classNamelass="relative h-screen">
         <div className="flex flex-wrap -ml-12 -mt-0 sm: ">
           {ImageDataJourney.map((itm, index) => (
@@ -409,13 +401,6 @@ export default function OurBrand() {
           ))}
         </div>
       </div>  */}
-
-
-
-
-
-
-
       {/* <Link href={"/our-brand/product-details/recipies"}>
           <button className="border border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white">
             View All
@@ -432,7 +417,8 @@ export default function OurBrand() {
   );
 }
 
-OurBrand.propTypes = {
+
+AboutUsPage.propTypes = {
   initialData: PropTypes.object,
 };
 

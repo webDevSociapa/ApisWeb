@@ -48,11 +48,6 @@ const ProductDetails = () => {
     setHoveredId(content.id)
   };
 
-
-
-
-
-
   const renderBenefits = (benefits) => {
     return benefits.map((itm) => (
       <div
@@ -82,7 +77,6 @@ const ProductDetails = () => {
   useEffect(() => {
     // When the component mounts, set the initial content from the first benefit
     let benefits = null;
-
     if (selectedBrand?.id === 1 && selectedProduct?.id === 1) {
       benefits = HEALTH_BENEFITS;
     } else if (selectedBrand?.id === 2 && selectedProduct?.id === 2) {
@@ -472,13 +466,13 @@ const ProductDetails = () => {
                 className="h-[280px] md:h-[280px] z-50 absolute w-[620px] -right-2 bottom-4 z-20"
               />
               <div className="relative h-full w-full hidden md:block">
-        <Image
-          src={Ring4}
-          height={200}
-          alt="ring-image"
-          className="h-[225px] w-[225px] rotate-animation absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
-        />
-      </div>
+                <Image
+                  src={Ring4}
+                  height={200}
+                  alt="ring-image"
+                  className="h-[225px] w-[225px] rotate-animation absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+                />
+              </div>
             </div>
           </div>
           <div className="w-full lg:w-1/2 relative px-4 lg:px-14 flex flex-col gap-4 md:gap-8 items-center mt-8 lg:mt-0">
