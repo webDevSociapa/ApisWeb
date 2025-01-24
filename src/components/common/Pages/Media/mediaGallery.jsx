@@ -13,12 +13,9 @@ export default function MediaGalleryData() {
         const fetchMediaData = async () => {
             try {
                 const response = await axios.get("/api/mediaGallery");
-                console.log("response", response);
-
                 setMediaData(response.data)
-                console.log("ApisMedia", response.data);
-
             } catch (error) {
+                console.log("error", error);
             }
         }
         fetchMediaData()

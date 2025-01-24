@@ -240,12 +240,12 @@ const NavBar = ({ className, linkClass }) => {
                         </li>
                         <li>
                           <Link href="/media/mediaGallery" className="hover:underline">
-                            Press Release
+                            Media Library
                           </Link>
                         </li>
                         <li>
-                          <Link href="/about-us/journey" className="hover:underline">
-                            Media Library
+                          <Link href="/sustainability" className="hover:underline">
+                            Press Release
                           </Link>
                         </li>
                       </ul>
@@ -294,7 +294,7 @@ const NavBar = ({ className, linkClass }) => {
                 <div className="w-full max-w-[800px] bg-white p-16">
                   <div className="flex flex-row gap-6 justify-between">
                     <div className="flex flex-col">
-                    <Image src={Rectangle2} width={400} height={400} />
+                      <Image src={Rectangle2} width={400} height={400} />
                     </div>
                     {/* Left Section: Image and Description */}
                     <div className="flex flex-col w-1/3 gap-4">

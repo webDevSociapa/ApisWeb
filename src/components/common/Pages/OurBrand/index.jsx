@@ -67,7 +67,7 @@ export default function OurBrand({ onProductClick }) {
       <div className="bg-white flex flex-col items-center h-auto border-b border-[#9F7B49] lg:absolute left-[3%] lg:w-[94%] top-0">
         <div className="flex flex-col w-[96%] my-4 md:mt-8">
           <div className="flex flex-row justify-between items-start gap-4 w-full">
-          <Image src={Rectangle2} width={300} height={300}/>
+            <Image src={Rectangle2} width={300} height={300} />
 
             {/* TAB_DATA Section */}
             <div className="flex flex-col gap-4 w-1/4">
@@ -82,40 +82,42 @@ export default function OurBrand({ onProductClick }) {
               ))}
             </div>
             {/* BRAND_DATA Section */}
-            <div className="flex flex-col gap-4 w-1/4">
-              {BRAND_DATA.map((brand) => (
-                <p
-                  key={brand.id}
-                  className={`text-xs md:text-xl cursor-pointer text-black ${selectedBrand === brand.id ? "font-bold" : "font-normal"
-                    }`}
-                >
+            <div className="flex flex-col gap-6 w-full">
+              {/* Loop through PRODUCT_DATA for titles and products */}
+              {PRODUCT_DATA.map((brand) => (
+                <div key={brand.id} className="w-full">
+                  {/* Title */}
+                  <h3
+                    className={`text-xl font-bold text-[#A57F5A]  pl-2 ${selectedBrand === brand.id ? "underline" : ""
+                      }`}
+                    onClick={() => setSelectedBrand(brand.id)}
+                  >
+                    {brand.title}
+                  </h3>
 
-                  {brand.title === "Recipes" ? (
-                    <Link href="/our-brand/recipes" onClick={handleProductClick}>
-                      {brand.title}
-                    </Link>
-                  ) : (
-                    <span onClick={() => setSelectedBrand(brand.id)}>
-                      {brand.title}
-                    </span>
-                  )}
-                </p>
-              ))}
-            </div>
+                  {/* Products */}
+                  <div className="pl-4 mt-2">
+                    {brand.products.map((product) => (
+                      <div key={product.id} className="relative group">
+                        {/* Product Name */}
+                        <p className="text-sm text-gray-800 cursor-pointer hover:underline">
+                          {product.name}
+                        </p>
 
-            {/* PRODUCT_DATA Section */}
-            <div className="flex flex-wrap gap-4 w-1/2">
-              {PRODUCT_DATA.find((product) => product.id === selectedBrand).products.map((itm) => (
-                <Link
-                  key={itm.id}
-                  href={`/our-brand/product-details?brand_id=${selectedBrand}&product_id=${itm?.id}`}
-                  onClick={handleProductClick}
-                >
-                  <div className="flex flex-col items-center justify-center h-[120px] w-[120px] md:h-[150px] md:w-[200px] bg-white border border-[#9F7B49] rounded-[20px] cursor-pointer ApisMenuItem">
-                    <Image src={itm.product_img_2} alt={itm.name} />
-                    <p className="text-xs md:text-lg font-bold mt-2">{itm.name}</p>
+                        {/* Variants (shown on hover) */}
+                        {product.variants && (
+                          <div className="absolute hidden group-hover:block bg-white shadow-lg border rounded-md mt-1 p-2 z-10">
+                            {product.variants.map((variant) => (
+                              <p key={variant.id} className="text-xs text-gray-600 hover:text-black">
+                                {variant.name}
+                              </p>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
           </div>

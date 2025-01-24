@@ -83,7 +83,6 @@ export default function Media() {
   const [mediaSection, setMediaSection] = useState([]);
   const [tvcHome, setTvcHome] = useState([])
 
-
   const [isMobile, setIsMobile] = useState(false); // State to track if the screen is mobile
 
   useEffect(() => {
@@ -106,12 +105,8 @@ export default function Media() {
   useEffect(()=>{
     const fetchMediaData = async()=>{
       try {
-        const response = await axios.get("/api/mediaGallery");
-        console.log("response",response);
-        
-        setMediaData(response.data)
-        console.log("ApisMedia",response.data);
-        
+        const response = await axios.get("/api/mediaGallery");        
+        setMediaData(response.data)        
       } catch (error) { 
       }
     }
@@ -120,11 +115,9 @@ export default function Media() {
       try {
         const response = await axios.get("/api/HomePage/mediaSection");
         setMediaSection(response.data)
-        console.log("responseDataMedia", response);
       }
       catch (error) {
         console.log("Error");
-
       }
     }
     getMediaSection()
@@ -136,11 +129,9 @@ export default function Media() {
       }
       catch (error) {
         console.log("Error");
-
       }
     }
     tvcHome()
-
   },[])
 
 

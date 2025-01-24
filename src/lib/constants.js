@@ -314,7 +314,6 @@ export const PRODUCT_DATA = [
     id: 2,
     title: "Health & Wellness",
     products: [
-     
       {
         id: 1,
         name: "Honey",
