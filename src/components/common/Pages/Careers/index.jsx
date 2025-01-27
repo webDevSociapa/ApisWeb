@@ -206,8 +206,6 @@ export default function Careers() {
     resume: 'null',
   });
 
-
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -248,7 +246,6 @@ export default function Careers() {
     }));
   };
 
-
   useEffect(() => {
     const CareersData = async () => {
       try {
@@ -278,7 +275,6 @@ export default function Careers() {
         setIsModalOpen(false);
       }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -289,7 +285,6 @@ export default function Careers() {
     localStorage.setItem('imageGroup', JSON.stringify(item));
     router.push('/careers/careerGallary');
   };
-
 
   const handleApplyNow = (job) => {
     setSelectedJob(job);

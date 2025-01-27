@@ -83,7 +83,6 @@ export default function Media() {
   const [mediaSection, setMediaSection] = useState([]);
   const [tvcHome, setTvcHome] = useState([])
 
-
   const [isMobile, setIsMobile] = useState(false); // State to track if the screen is mobile
 
   useEffect(() => {
@@ -106,12 +105,8 @@ export default function Media() {
   useEffect(()=>{
     const fetchMediaData = async()=>{
       try {
-        const response = await axios.get("/api/mediaGallery");
-        console.log("response",response);
-        
-        setMediaData(response.data)
-        console.log("ApisMedia",response.data);
-        
+        const response = await axios.get("/api/mediaGallery");        
+        setMediaData(response.data)        
       } catch (error) { 
       }
     }
@@ -120,11 +115,9 @@ export default function Media() {
       try {
         const response = await axios.get("/api/HomePage/mediaSection");
         setMediaSection(response.data)
-        console.log("responseDataMedia", response);
       }
       catch (error) {
         console.log("Error");
-
       }
     }
     getMediaSection()
@@ -136,11 +129,9 @@ export default function Media() {
       }
       catch (error) {
         console.log("Error");
-
       }
     }
     tvcHome()
-
   },[])
 
 
@@ -342,7 +333,6 @@ export default function Media() {
                 {IMAGE_DATA.map((item, index) => (
                   <div className="embla__slide" key={index}> {/* Open modal on click */}
                     <div className="embla__slide__number h-full w-full flex items-center justify-center"> {/* Full height and centered */}
-
                     <div
                         key={index}
                         className="w-full h-full p-4 rounded-[72px_36px_34px_0] flex flex-col items-center justify-center" // Changed to flex-col for vertical alignment
@@ -360,17 +350,8 @@ export default function Media() {
               </EmblaCarousel>
             </div>
           </>
-        
-  
-          
-          
-              }
-  
-        
-  
-  
-
-      {/* Carousel for Mobile View */}
+     }
+  {/* Carousel for Mobile View */}
      </div>
 
       {/* Modal Section */}

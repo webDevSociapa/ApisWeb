@@ -92,7 +92,6 @@ export const isActive = (routerPath, path) => {
   ) {
     return true;
   }
-
   return false;
 };
 
@@ -126,9 +125,8 @@ export const uploadFilePresignedURL = async (url, file, customHeaders) => {
     if (!response.ok) {
       throw new Error(TOAST_MESSAGES.ERROR_UPLOADING_FILE);
     }
-
     const contentType = response.headers.get('Content-Type');
-
+    
     if (contentType && contentType.includes('application/json')) {
       return await response.json();
     } else {
