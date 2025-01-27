@@ -252,7 +252,7 @@ export const PATH_DATA = [
   },
   {
     url: "/our-blog",
-    name: "Our Blog",
+    name: "Our Resources",
   },
   {
     url: "/contact-us",
@@ -519,36 +519,36 @@ export const PRODUCT_DATA = [
       },
     ],
   },
-  {
-    id: 5,
-    title: "Beverage",
-    products: [
-      {
-        id: 1,
-        name: "Green Tea",
-        img: GreenTea,
-        back_img: NewBannerGreenTea,
-        rect_color: "bg-[#474C14]",
-        title_color: "text-[#474C14]",
-        desc_color: "text-white",
-        title: "Apis Green Tea",
-        saysImage: greenTea101,
-        link:"https://www.amazon.in/Apis-Green-Tea-100g/dp/B0CJXWN5Q6",
-        title_desc:
-          "Discover The Purest fruits flavours handpicked for apis jam creation.",
-        product_desc:
-          "Purity is at the heart of our green tea. We meticulously select the finest leaves, ensuring that every cup delivers a taste of true nature. Our green tea is crafted with a commitment to purity, free from artificial additives or preservatives, so you can enjoy an authentic, refreshing experience with every sip. The result is a clean, smooth flavor that highlights the natural essence of the tea leaves. When you choose Apis Green Tea, you're savoring more than just a beverage—you're embracing a product where purity is not just a promise but a fundamental presence in every cup.",
-        product_img_1: GreenTea102,
-        product_img_2: TulsiGreenTea,
-        customer_says:
-          "I’m thoroughly impressed with Apis Green Tea! From the moment I brewed my first cup, I could tell it was high-quality. The flavor is incredibly fresh and smooth, with a perfect balance of earthy and subtly sweet notes. What I appreciate most is its purity—no artificial flavors or additives, just pure, natural tea that makes each sip enjoyable and invigorating. The aroma is calming and soothing, making it a wonderful way to start the day or unwind in the evening. Apis Green Tea has become my go-to choice, and I highly recommend it to anyone seeking a genuinely refreshing and wholesome tea experience.",
-        health_benefits:
-          "Green tea is rich in antioxidants, particularly catechins like EGCG, which help combat oxidative stress and neutralize harmful free radicals. These antioxidants support overall health by reducing inflammation and protecting cells from damage.",
-        primary_color: "",
-        secondary_color: "",
-      },
-    ],
-  }
+  // {
+  //   id: 5,
+  //   title: "Beverage",
+  //   products: [
+  //     {
+  //       id: 1,
+  //       name: "Green Tea",
+  //       img: GreenTea,
+  //       back_img: NewBannerGreenTea,
+  //       rect_color: "bg-[#474C14]",
+  //       title_color: "text-[#474C14]",
+  //       desc_color: "text-white",
+  //       title: "Apis Green Tea",
+  //       saysImage: greenTea101,
+  //       link:"https://www.amazon.in/Apis-Green-Tea-100g/dp/B0CJXWN5Q6",
+  //       title_desc:
+  //         "Discover The Purest fruits flavours handpicked for apis jam creation.",
+  //       product_desc:
+  //         "Purity is at the heart of our green tea. We meticulously select the finest leaves, ensuring that every cup delivers a taste of true nature. Our green tea is crafted with a commitment to purity, free from artificial additives or preservatives, so you can enjoy an authentic, refreshing experience with every sip. The result is a clean, smooth flavor that highlights the natural essence of the tea leaves. When you choose Apis Green Tea, you're savoring more than just a beverage—you're embracing a product where purity is not just a promise but a fundamental presence in every cup.",
+  //       product_img_1: GreenTea102,
+  //       product_img_2: TulsiGreenTea,
+  //       customer_says:
+  //         "I’m thoroughly impressed with Apis Green Tea! From the moment I brewed my first cup, I could tell it was high-quality. The flavor is incredibly fresh and smooth, with a perfect balance of earthy and subtly sweet notes. What I appreciate most is its purity—no artificial flavors or additives, just pure, natural tea that makes each sip enjoyable and invigorating. The aroma is calming and soothing, making it a wonderful way to start the day or unwind in the evening. Apis Green Tea has become my go-to choice, and I highly recommend it to anyone seeking a genuinely refreshing and wholesome tea experience.",
+  //       health_benefits:
+  //         "Green tea is rich in antioxidants, particularly catechins like EGCG, which help combat oxidative stress and neutralize harmful free radicals. These antioxidants support overall health by reducing inflammation and protecting cells from damage.",
+  //       primary_color: "",
+  //       secondary_color: "",
+  //     },
+  //   ],
+  // }
 ];
 
 

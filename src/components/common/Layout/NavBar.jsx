@@ -51,6 +51,11 @@ const NavBar = ({ className, linkClass }) => {
   };
 
 
+  const handleOurContactUsEnter = () => {
+    setHoveredItem('Contact Us');
+  };
+
+
   const handleOurBrandContentMouseLeave = () => {
     setHoveredItem(null);
   };
@@ -76,8 +81,9 @@ const NavBar = ({ className, linkClass }) => {
     setHoveredItem(null);
   };
 
-
-
+  const handleOurContactUsLeave = () => {
+    setHoveredItem(null);
+  };
 
   const handleNavigateToOurBrand = (event) => {
     event.preventDefault(); // Prevent default navigation
@@ -243,11 +249,7 @@ const NavBar = ({ className, linkClass }) => {
                             Media Library
                           </Link>
                         </li>
-                        <li>
-                          <Link href="/sustainability" className="hover:underline">
-                            Press Release
-                          </Link>
-                        </li>
+
                       </ul>
                     </div>
                     {/* Right Section: Leadership */}
@@ -313,7 +315,40 @@ const NavBar = ({ className, linkClass }) => {
                       </ul>
                     </div>
                     {/* Right Section: Leadership */}
+                  </div>
+                </div>
+              </div>
+            )}
 
+{path.name === 'Contact Us' && hoveredItem === 'Contact Us' && (
+              <div
+                className="absolute top-full left-0 w-full bg-white z-50 flex "
+                onMouseEnter={handleOurContactUsEnter}
+                onMouseLeave={handleOurContactUsLeave}
+              >
+                <div className="w-full max-w-[800px] bg-white p-16">
+                  <div className="flex flex-row gap-6 justify-between">
+                    <div className="flex flex-col">
+                      <Image src={Rectangle2} width={400} height={400} />
+                    </div>
+                    {/* Left Section: Image and Description */}
+                    <div className="flex flex-col w-1/3 gap-4">
+                      <h4 className="font-bold text-[#A57F5A] mb-2 border-l-2 border-[#9F7B49] px-2">Apis Resources</h4>
+                      <ul className="text-sm text-gray-600 space-y-4">
+                      <li>
+                          <Link href="/contact-us" className="hover:underline">
+                          Our Registered Office / Overseas Operation
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/contact-us/factoryAddress" className="hover:underline">
+                          Our Factory Address
+                          </Link>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                    {/* Right Section: Leadership */}
                   </div>
                 </div>
               </div>
