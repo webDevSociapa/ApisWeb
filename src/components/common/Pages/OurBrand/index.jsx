@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import Banner from "@/assets/images/OurBrands/OurBrands.png";
 import Rectangle2 from "@/assets/images/OurBrands/Rectangle2.png";
 import { PRODUCT_DATA } from "@/lib/constants";
+import Cgallery from "@/assets/images/Careers/cgallary.png"
+
 import Link from "next/link";
 
 export default function OurBrand({ onProductClick }) {
@@ -36,7 +38,7 @@ export default function OurBrand({ onProductClick }) {
       <div className="bg-white flex flex-col items-center h-auto border-b border-[#9F7B49] lg:absolute left-[3%] lg:w-[94%] top-0">
         <div className="flex flex-col w-[96%] my-4 md:mt-8">
           <div className="flex flex-row justify-between items-start gap-4 w-full">
-            <Image src={Rectangle2} alt="Rectangle" width={300} height={300} />
+            <Image src={Cgallery} alt="Rectangle" width={400} height={400} />
             <div className="flex flex-col gap-4 w-1/4">
               {TAB_DATA.map((tab, index) => (
                 <div
