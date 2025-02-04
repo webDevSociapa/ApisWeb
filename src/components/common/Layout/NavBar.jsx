@@ -28,7 +28,7 @@ const NavBar = ({ className, linkClass }) => {
   };
 
   const handleOurBrandContentMouseEnter = () => {
-    setHoveredItem('Our Brand');
+    setHoveredItem('Brand');
   };
 
   const handleAboutUsMouseEnter = () => {
@@ -48,7 +48,7 @@ const NavBar = ({ className, linkClass }) => {
   };
 
   const handleOurBlogMouseEnter = () => {
-    setHoveredItem('Our Resources');
+    setHoveredItem('Resources');
   };
 
 
@@ -88,7 +88,7 @@ const NavBar = ({ className, linkClass }) => {
 
   const handleNavigateToOurBrand = (event) => {
     event.preventDefault(); // Prevent default navigation
-    setHoveredItem('Our Brand'); // Show hover content
+    setHoveredItem('Brand'); // Show hover content
   };
 
   const isOurBrandActive = () => {
@@ -119,7 +119,7 @@ const NavBar = ({ className, linkClass }) => {
               onMouseLeave={handleMouseLeave}
               className="navabarMobileView"
             >
-              {path.name !== 'Our Brand' || path.name !== 'About Us' ? (
+              {path.name !== 'Brand' || path.name !== 'About Us' ? (
                 <Link href={tabUrlWithLocale} className={cn(linkClass)}>
                   <div className='mt-3 flex flex-col items-center'>
                     <span
@@ -143,7 +143,7 @@ const NavBar = ({ className, linkClass }) => {
                   </span>
                 </div>
               )}
-              {path.name === 'Our Brand' && hoveredItem === 'Our Brand' && (
+              {path.name === 'Brand' && hoveredItem === 'Brand' && (
                 <div
                   className="absolute top-full left-0 w-full bg-white z-1000"
                   onMouseEnter={handleOurBrandContentMouseEnter}
@@ -288,7 +288,7 @@ const NavBar = ({ className, linkClass }) => {
               </div>
             )}
 
-            {path.name === 'Our Resources' && hoveredItem === 'Our Resources' && (
+            {path.name === 'Resources' && hoveredItem === 'Resources' && (
               <div
                 className="absolute top-full left-0 w-full bg-white z-50 flex "
                 onMouseEnter={handleOurBlogMouseEnter}
