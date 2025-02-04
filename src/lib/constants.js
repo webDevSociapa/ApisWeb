@@ -232,7 +232,7 @@ export const PATH_DATA = [
   },
   {
     url: "/our-brand",
-    name: "Our Brand",
+    name: "Brand",
   },
   {
     url: "/investors",
@@ -252,7 +252,7 @@ export const PATH_DATA = [
   },
   {
     url: "/our-blog",
-    name: "Our Resources",
+    name: "Resources",
   },
   {
     url: "/contact-us",
