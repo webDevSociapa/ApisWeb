@@ -21,12 +21,12 @@ import HexaGonalPage from "../../Pages/AboutUs/Hexagonal";
 import axios from "axios";
 import { CircularProgress } from "@mui/material";
 
-export default function AboutUsPage() {
+export default function AboutUsPage({}) {
   const [activeTab, setActiveTab] = useState("vision");
   const [apisDataNumber, setApisDataNumber] = useState()
   const [aboutBanner, setAboutBanner] = useState()
   const [ourValues, setOurValues] = useState([])
-  const [ourDirector,setOurDirector] = useState([])
+  const [ourDirector, setOurDirector] = useState([])
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -117,7 +117,7 @@ export default function AboutUsPage() {
           axios.get('/api/AboutUs/banner'),
           axios.get('/api/AboutUs/ourValues'),
           axios.get('/api/AboutUs/ourDirectors'),
-        ]);        
+        ]);
         // Update state with responses
         setOurDirector(ourDirectorResponse.data)
         setApisDataNumber(apisDataResponse.data);
@@ -147,9 +147,9 @@ export default function AboutUsPage() {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <CircularProgress
-          height="80" 
-          width="80" 
-          color="#4fa94d" 
+          height="80"
+          width="80"
+          color="#4fa94d"
           ariaLabel="loading-indicator"
         />
       </div>
@@ -297,10 +297,10 @@ export default function AboutUsPage() {
             </div>
             <div className="w-full mt-4 md:mt-0 md:w-1/2 z-10 flex flex-col gap-2 items-center justify-center">
               <h3 className="text-center font-bold text-[#9F7B49] text-[18px] md:text-[24px] font-literata">
-               {ourDirector.data[0].Name}
+                {ourDirector.data[0].Name}
               </h3>
               <p className="text-center text-[#373737] font-normal text-[16px] md:text-[19px] font-literata">
-               {ourDirector.data[0].Designation}
+                {ourDirector.data[0].Designation}
               </p>
               <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost text-justify">
                 {ourDirector.data[0].Description}
@@ -315,22 +315,22 @@ export default function AboutUsPage() {
           />
           <div className="w-full mt-8 md:w-1/2 z-10 flex flex-col gap-2 items-center justify-center">
             <h3 className="text-center font-bold text-[#9F7B49] text-[18px] md:text-[24px] font-literata">
-            {ourDirector.data[1].Name}
+              {ourDirector.data[1].Name}
             </h3>
             <p className="text-center text-[#373737] font-normal text-[16px] md:text-[19px] font-literata">
-            {ourDirector.data[1].Designation}
+              {ourDirector.data[1].Designation}
             </p>
             <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost text-justify">
-            {ourDirector.data[1].Description}
+              {ourDirector.data[1].Description}
             </p>
           </div>
           <div className="w-full mt-4 md:mt-0 md:w-1/2 flex items-center justify-center">
             <div className="relative w-[300px] md:w-[440px] flex justify-center items-center">
               <Image
-                  src={ourDirector.data[1].AddImage}
-                  height={240}
-                  width={240}
-                  alt="Banner Image"
+                src={ourDirector.data[1].AddImage}
+                height={240}
+                width={240}
+                alt="Banner Image"
                 className="object-cover z-50 absolute h-[240px] w-[240px] md:h-[416px] md:w-[342px] cursor-pointer"
               />
               <Image
