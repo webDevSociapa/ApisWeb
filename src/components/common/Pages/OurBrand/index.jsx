@@ -17,6 +17,7 @@ export default function OurBrand({ onProductClick }) {
   ];
 
   const [selectedBrand, setSelectedBrand] = useState(BRAND_DATA[0].id);
+  const [hoveredProduct, setHoveredProduct] = useState(null);
 
   const handleProductClick = (brandId, productId) => {
     router.push(`/our-brand/product-details?brand_id=${brandId}&product_id=${productId}`);
@@ -65,22 +66,36 @@ export default function OurBrand({ onProductClick }) {
                     <button
                       className="text-base text-[#373737] hover:text-[#9F7B49] transition-all"
                       onClick={() => handleProductClick(brand.id, product.id)}
+                      onMouseEnter={() => setHoveredProduct(product.id)}
+                      onMouseLeave={() => setHoveredProduct(null)}
                     >
                       {product.name}
                     </button>
 
                     {/* Subcategories Dropdown */}
-                    {product.subcategories && product.subcategories.length > 0 && (
-                      <div className="absolute hidden group-hover:flex flex-col bg-white shadow-lg border rounded-md mt-1 p-2 z-10 w-44">
-                        {product.subcategories.map((sub) => (
-                          <Link
-                            key={sub.id}
-                            href={`/our-brand/product-details?brand_id=${brand.id}&product_id=${sub.id}`}
-                            className="text-sm text-gray-600 hover:underline"
-                          >
-                            {sub.name}
-                          </Link>
-                        ))}
+                    {/* Subcategories Dropdown */}
+                    {product.name === "Honey" && (
+                      <div className="absolute top-0 left-10 ml-4 w-[200px] z-10 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-linear transform scale-95 group-hover:scale-100">
+                        <div className="bg-white shadow-lg border rounded-md p-4">
+                          <ul className="text-sm text-gray-600 space-y-2">
+                            <li>
+                              <Link
+                                href={`/our-brand/product-details?brand_id=1&product_id=1`}
+                                className="hover:underline"
+                              >
+                                Organic Honey
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href={`/our-brand/product-details?brand_id=2&product_id=1`}
+                                className="hover:underline"
+                              >
+                                Honey
+                              </Link>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     )}
                   </div>

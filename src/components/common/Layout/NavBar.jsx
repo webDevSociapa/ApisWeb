@@ -10,7 +10,7 @@ import OurBrand from '../Pages/OurBrand/index';
 import Link from 'next/link';
 import Image from 'next/image';
 import Rectangle2 from "@/assets/images/OurBrands/Rectangle2.png";
-import Cgallery from "@/assets/images/Careers/cgallary.png"
+import Cgallery from "@/assets/images/Careers/engagement07.jpg"
 
 const NavBar = ({ className, linkClass }) => {
   const routerPath = usePathname();
@@ -119,7 +119,7 @@ const NavBar = ({ className, linkClass }) => {
               onMouseLeave={handleMouseLeave}
               className="navabarMobileView"
             >
-              {path.name !== 'Brand' || path.name !== 'About Us' ? (
+              {!['Brand', 'About Us', 'Contact Us', 'Careers', 'Media', 'Sustainability', 'Resources'].includes(path.name) ? (
                 <Link href={tabUrlWithLocale} className={cn(linkClass)}>
                   <div className='mt-3 flex flex-col items-center'>
                     <span
@@ -131,10 +131,7 @@ const NavBar = ({ className, linkClass }) => {
                   </div>
                 </Link>
               ) : (
-                <div
-                  className="mt-3 flex flex-col items-center cursor-pointer"
-                  onClick={handleNavigateToOurBrand}
-                >
+                <div className="mt-3 flex flex-col items-center cursor-default">
                   <span className={cn(
                     "font-medium text-[#3D3D3D] w-max",
                     isOurBrandActive() ? 'font-bold uppercase' : 'hoverHeader'
@@ -143,6 +140,7 @@ const NavBar = ({ className, linkClass }) => {
                   </span>
                 </div>
               )}
+
               {path.name === 'Brand' && hoveredItem === 'Brand' && (
                 <div
                   className="absolute top-full left-0 w-full bg-white z-1000"
@@ -160,7 +158,7 @@ const NavBar = ({ className, linkClass }) => {
                 onMouseEnter={handleAboutUsMouseEnter}
                 onMouseLeave={handleAboutUsMouseLeave}
               >
-                <div className="w-full max-w-[800px] bg-white p-16">
+                <div className="w-full max-w-[800px] bg-white p-16" onProductClick={handleOurBrandContentClick}>
                   <div className="flex flex-row gap-6 justify-between">
                     <div className="flex flex-col">
                       <Image src={Cgallery} width={400} height={400} />
