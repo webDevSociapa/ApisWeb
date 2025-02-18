@@ -88,10 +88,26 @@ export default function OurBrand({ onProductClick }) {
                             </li>
                             <li>
                               <Link
+                                href={`/our-brand/product-details?brand_id=1&product_id=2`}
+                                className="hover:underline"
+                              >
+                               Himalaya Honey
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
                                 href={`/our-brand/product-details?brand_id=2&product_id=1`}
                                 className="hover:underline"
                               >
-                                Honey
+                              Regular Honey
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href={`/our-brand/product-details?brand_id=2&product_id=1`}
+                                className="text-gray-400 opacity-50 cursor-not-allowed"
+                              >
+                              Infused Honey
                               </Link>
                             </li>
                           </ul>

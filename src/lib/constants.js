@@ -308,8 +308,37 @@ export const PRODUCT_DATA = [
         primary_color: "",
         secondary_color: "",
       },
+      {
+        id: 2,
+        name: "Himalaya Honey",
+        img: honey103,
+        back_img: HoneyBannerNew001,
+        rect_color: "bg-[#FFC660]",
+        title_color: "text-[#9F7B49]",
+        desc_color: "text-black",
+        title: "Apis Organic Honey",
+        link:"https://www.amazon.in/Apis-Organic-honey-450gm-Certified/dp/B0CS6WWLDD",
+        saysImage:HandDrawnHoney,
+        title_desc:
+          "Discover The Purest Organic Honey From The Enchanting Valleys Of Kashmir",
+        product_desc:
+          "At Apis India, we are dedicated to delivering high-quality FMCG products that enhance your everyday life. With a focus on freshness, innovation, and reliability, our diverse range of products reflects our commitment to excellence and customer satisfaction. Discover the difference with Apis India.",
+        product_img_1: HimalayaHoney0001,
+        product_img_2: HoneyImage11,
+        product_img3: TrustSlide1,
+        customer_says:
+          "I’ve tried many honeys, but Apis Organic Honey stands out for its authentic taste and quality. It’s perfect for my tea, baking, and even just a spoonful for a quick energy boost! Apis Honey truly stands out for its purity. It’s evident that they prioritize the natural essence of honey without any additives or artificial processing. The flavor is rich, smooth, and genuinely delightful, reflecting the untouched quality of the nectar.",
+        health_benefits:
+          "Honey is packed with antioxidants that boost your immune system and help fight off illnesses. Regular consumption of honey can strengthen your body’s defenses and promote overall health.",
+        primary_color: "",
+        secondary_color: "",
+      },
     ],
+
+    
     },
+
+
   {
     id: 2,
     title: "Health & Wellness",

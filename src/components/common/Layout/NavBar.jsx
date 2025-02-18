@@ -10,7 +10,7 @@ import OurBrand from '../Pages/OurBrand/index';
 import Link from 'next/link';
 import Image from 'next/image';
 import Rectangle2 from "@/assets/images/OurBrands/Rectangle2.png";
-import Cgallery from "@/assets/images/Careers/engagement07.jpg"
+import Cgallery from "@/assets/images/Careers/engage.png"
 
 const NavBar = ({ className, linkClass }) => {
   const routerPath = usePathname();
@@ -119,7 +119,7 @@ const NavBar = ({ className, linkClass }) => {
               onMouseLeave={handleMouseLeave}
               className="navabarMobileView"
             >
-              {!['Brand', 'About Us', 'Contact Us', 'Careers', 'Media', 'Sustainability', 'Resources'].includes(path.name) ? (
+              {!PATH_DATA.includes(path.name) ? (
                 <Link href={tabUrlWithLocale} className={cn(linkClass)}>
                   <div className='mt-3 flex flex-col items-center'>
                     <span
