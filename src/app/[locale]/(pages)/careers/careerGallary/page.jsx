@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import EmblaCarousel from "@/components/common/Carousel/Carousel";
 
 const Modal = ({ image, onClose }) => (
   <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
@@ -27,6 +28,8 @@ export default function Album() {
   const [imageSet, setImageSet] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const imagesPerPage = 8;
+  const OPTIONS1 = { loop: true }
+
 
   // Set the image set from localStorage if available
   useEffect(() => {
@@ -42,7 +45,7 @@ export default function Album() {
   const indexOfLastImage = currentPage * imagesPerPage;
   const indexOfFirstImage = indexOfLastImage - imagesPerPage;
 
-  const currentImages = imageSet.slice(indexOfFirstImage, indexOfLastImage);    
+  const currentImages = imageSet.slice(indexOfFirstImage, indexOfLastImage);
 
   // Pagination logic
   const totalPages = Math.ceil(imageSet.length / imagesPerPage);
@@ -76,23 +79,29 @@ export default function Album() {
         {title}
       </p> */}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8 px-4">
-        {currentImages?.map((image, index) => (
+<div className="flex justify-center mt-8 px-4">
+  <div className="w-full max-w-5xl">
+    <EmblaCarousel options={OPTIONS1} autoScroll>
+      {currentImages?.map((image, index) => (
+        <div key={index} className="embla__slide flex justify-center">
           <div
-            key={index}
-            className="aspect-square overflow-hidden cursor-pointer"
+            className="w-[250px] md:w-[300px] lg:w-[350px]   aspect-square overflow-hidden cursor-pointer"
             onClick={() => handleImageClick(image)}
           >
             <Image
               src={image}
               alt={image}
-              width={300}
-              height={300}
+              width={400}
+              height={400}
               className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
             />
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
+    </EmblaCarousel>
+  </div>
+</div>
+
 
       {/* {selectedImage && <Modal image={selectedImage} onClose={closeModal} />} */}
       {/* Pagination Controls */}
