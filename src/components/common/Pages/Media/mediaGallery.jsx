@@ -35,10 +35,9 @@ export default function MediaGalleryData() {
                     world we live in.
                 </p>
                 <div className="py-6 md:py-10 w-[90%] flex items-center justify-center">
-                    <EmblaCarousel options={{ loop: true }}>
+                    <EmblaCarousel options={OPTIONS} autoScroll>
                         {mediaData?.map((itm, index) => (
-                            <div className="embla__slide" key={index}>
-                                <div className="embla__slide__number">
+        <div key={index} className="embla__slide flex justify-center">
                                     <div>
                                         <div className="mx-3 border">
                                             <Image
@@ -53,7 +52,7 @@ export default function MediaGalleryData() {
                                             {itm?.title}
                                         </div>
                                     </div>
-                                </div>
+                            
                             </div>
                         ))}
                     </EmblaCarousel>
