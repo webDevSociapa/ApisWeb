@@ -11,6 +11,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Rectangle2 from "@/assets/images/OurBrands/Rectangle2.png";
 import Cgallery from "@/assets/images/Careers/engage.png"
+import AboutusMini from "@/assets/images/Aboutus/aboutusMini.png"
+import CareerMini from "@/assets/images/Careers/CareerMini.png"
+import MediaMini from "@/assets/images/Media/MediaMini.png"
+import sustainabilityMini from "@/assets/images/sustainabilityMini.png"
+import ResourcesMini from "@/assets/images/resourcesMini.png"
+import ContactusMini from "@/assets/images/ContactUs/TouchMini.png"
 
 const NavBar = ({ className, linkClass }) => {
   const routerPath = usePathname();
@@ -161,7 +167,7 @@ const NavBar = ({ className, linkClass }) => {
                 <div className="w-full max-w-[800px] bg-white p-16" onProductClick={handleOurBrandContentClick}>
                   <div className="flex flex-row gap-6 justify-between">
                     <div className="flex flex-col">
-                      <Image src={Cgallery} width={400} height={400} />
+                      <Image src={AboutusMini} width={400} height={400} />
                     </div>
                     {/* Left Section: Image and Description */}
                     <div className="flex flex-col w-1/3 gap-4">
@@ -199,7 +205,7 @@ const NavBar = ({ className, linkClass }) => {
                 <div className="w-full max-w-[800px] bg-white p-16">
                   <div className="flex flex-row gap-6 justify-between">
                     <div className="flex flex-col">
-                      <Image src={Cgallery} width={400} height={400} />
+                      <Image src={CareerMini} width={400} height={400} />
                     </div>
                     {/* Left Section: Image and Description */}
                     <div className="flex flex-col w-1/3 gap-4">
@@ -232,7 +238,7 @@ const NavBar = ({ className, linkClass }) => {
                 <div className="w-full max-w-[800px] bg-white p-16">
                   <div className="flex flex-row gap-6 justify-between">
                     <div className="flex flex-col">
-                      <Image src={Cgallery} width={400} height={400} />
+                      <Image src={MediaMini} width={400} height={400} />
                     </div>
                     {/* Left Section: Image and Description */}
                     <div className="flex flex-col w-1/3 gap-4">
@@ -266,7 +272,7 @@ const NavBar = ({ className, linkClass }) => {
                 <div className="w-full max-w-[800px] bg-white p-16">
                   <div className="flex flex-row gap-6 justify-between">
                     <div className="flex flex-col">
-                      <Image src={Cgallery} width={400} height={400} />
+                      <Image src={sustainabilityMini} width={400} height={400} />
                     </div>
                     {/* Left Section: Image and Description */}
                     <div className="flex flex-col w-1/3 gap-4">
@@ -295,7 +301,7 @@ const NavBar = ({ className, linkClass }) => {
                 <div className="w-full max-w-[800px] bg-white p-16">
                   <div className="flex flex-row gap-6 justify-between">
                     <div className="flex flex-col">
-                      <Image src={Cgallery} width={400} height={400} />
+                      <Image src={ResourcesMini} width={400} height={400} />
                     </div>
                     {/* Left Section: Image and Description */}
                     <div className="flex flex-col w-1/3 gap-4">
@@ -328,7 +334,7 @@ const NavBar = ({ className, linkClass }) => {
                 <div className="w-full max-w-[800px] bg-white p-16">
                   <div className="flex flex-row gap-6 justify-between">
                     <div className="flex flex-col">
-                      <Image src={Cgallery} width={400} height={400} />
+                      <Image src={ContactusMini} width={400} height={400} />
                     </div>
                     {/* Left Section: Image and Description */}
                     <div className="flex flex-col w-1/3 gap-4">
@@ -344,7 +350,6 @@ const NavBar = ({ className, linkClass }) => {
                             Our Factory Address
                           </Link>
                         </li>
-
                       </ul>
                     </div>
                     {/* Right Section: Leadership */}

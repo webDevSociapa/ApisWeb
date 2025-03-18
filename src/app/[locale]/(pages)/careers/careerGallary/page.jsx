@@ -79,28 +79,28 @@ export default function Album() {
         {title}
       </p> */}
 
-<div className="flex justify-center mt-8 px-4">
-  <div className="w-full max-w-5xl">
-    <EmblaCarousel options={OPTIONS1} autoScroll>
-      {currentImages?.map((image, index) => (
-        <div key={index} className="embla__slide flex justify-center">
-          <div
-            className="w-[250px] md:w-[300px] lg:w-[350px]   aspect-square overflow-hidden cursor-pointer"
-            onClick={() => handleImageClick(image)}
-          >
-            <Image
-              src={image}
-              alt={image}
-              width={400}
-              height={400}
-              className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-            />
-          </div>
+      <div className="flex justify-center mt-8 px-4">
+        <div className="w-full max-w-5xl">
+          <EmblaCarousel options={OPTIONS1} autoScroll>
+            {currentImages?.map((image, index) => (
+              <div key={index} className="embla__slide flex justify-center">
+                <div
+                  className="w-[250px] md:w-[300px] lg:w-[350px]   aspect-square overflow-hidden cursor-pointer"
+                  onClick={() => handleImageClick(image)}
+                >
+                  <Image
+                    src={image}
+                    alt={image}
+                    width={400}
+                    height={400}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  />
+                </div>
+              </div>
+            ))}
+          </EmblaCarousel>
         </div>
-      ))}
-    </EmblaCarousel>
-  </div>
-</div>
+      </div>
 
 
       {/* {selectedImage && <Modal image={selectedImage} onClose={closeModal} />} */}

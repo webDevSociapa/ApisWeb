@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import ImageBanner from "../../Layout/Banner";
-import Banner from "@/assets/images/our-blog/blogBannerMain1.png";
+import Banner from "@/assets/images/resourcesMain.png";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { NextButton, PrevButton } from "../../Carousel/EmblaCarouselArrowButtons";
