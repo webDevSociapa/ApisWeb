@@ -1,7 +1,7 @@
 "use client";
 
 import PropTypes from "prop-types";
-import Banner from "@/assets/images/Careers/careerMain.png";
+import Banner from "@/assets/images/Careers/careerBanner.png";
 import Ring1 from "@/assets/images/OurBrands/Ring-4.png";
 import Award from "@/assets/images/Careers/Award.png";
 // import Celebrations from "@/assets/images/Careers/Celebrations.png";
@@ -24,6 +24,7 @@ import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import axios from "axios";
 import employeAward from '@/assets/images/Careers/employeAward.png'
+
 
 const CAREER_DATA = [
   {
