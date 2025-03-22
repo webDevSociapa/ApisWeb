@@ -1,6 +1,6 @@
 "use client"
 
-import Banner from "@/assets/images/Careers/careerBannerNew.png";
+import Banner from "@/assets/images/Careers/careerBanner.png";
 import ImageBanner from "../../Layout/Banner";
 import { useEffect, useState } from "react";
 import axios from "axios";
