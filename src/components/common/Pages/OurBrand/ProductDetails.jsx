@@ -52,10 +52,10 @@ const ProductDetails = () => {
     return benefits.map((itm) => (
       <div
         key={itm.id}
-        className="flex flex-col w-full sm:w-[45%] lg:w-[30%] items-center justify-center my-4"
+        className="flex flex-col w-[48%] sm:w-[45%] md:w-[30%] items-center justify-center my-4"
       >
         <div
-          className={`h-[110px] flex items-center justify-center w-[110px]  border-[#9F7B49] 
+          className={`h-[110px] flex items-center justify-center w-[110px] border-[#9F7B49] 
                       ${hoveredId === itm.id ? 'shadow-lg' : ''} transition-shadow duration-200`}
         >
           <Image
@@ -308,8 +308,7 @@ const ProductDetails = () => {
                                     : selectedBrand?.id === 4 && selectedProduct?.id === 2
                                       ? renderBenefits(SAFFRON)
                                       : selectedBrand?.id === 5 && selectedProduct?.id === 1
-                                        ? renderBenefits(GREEN_TEA)
-                                        : ""}
+                                        ? renderBenefits(GREEN_TEA)                     : ""}
             </div>
             <div>
 

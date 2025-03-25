@@ -195,6 +195,27 @@ import Vermicelli103 from "@/assets/images/OurBrands/Vermicelli103.png";
 import jam103 from "@/assets/images/OurBrands/jam103.png";
 import cornFlakes103 from "@/assets/images/OurBrands/cornFlakes103.png";
 import honey103 from "@/assets/images/OurBrands/honey103.png";
+import DatesV1 from "@/assets/images/OurBrands/ArabianPearls.jpg"
+import DatesV2 from "@/assets/images/OurBrands/ClassicDate.jpg"
+import DatesV3 from "@/assets/images/OurBrands/DeseededDate.jpg"
+import DatesV4 from "@/assets/images/OurBrands/DesertBliss.jpg"
+import DatesV5 from "@/assets/images/OurBrands/KalmiDates.jpg"
+import DatesV6 from "@/assets/images/OurBrands/PremiumDates.jpg"
+import DatesV7 from "@/assets/images/OurBrands/RoyalZahidi.jpg"
+import DatesV8 from "@/assets/images/OurBrands/SelectDate.jpg"
+import DatesV9 from "@/assets/images/OurBrands/ShaaneKhajoor.jpg"
+import DatesV10 from "@/assets/images/OurBrands/ShehenshahDate.jpg"
+import ShehenshahBG from "@/assets/images/OurBrands/ShehenshahDateBg1.jpg"
+import RoyalZahidiBg from "@/assets/images/OurBrands/RoyalZahidiBg1.jpg"
+import ArabianPearlsBg from "@/assets/images/OurBrands/ArabianPearlsBg1.jpg"
+import ClassicDateBg from "@/assets/images/OurBrands/ClassicDateBg1.jpg"
+import DeseededDateBg from "@/assets/images/OurBrands/DeseededDateBg1.jpg"
+import DesertBlissBg from "@/assets/images/OurBrands/DesertBlissBg1.jpg"
+import KalmiDatesBg from "@/assets/images/OurBrands/KalmiDatesBg1.jpg"
+import PremiumDatesBg from "@/assets/images/OurBrands/PremiumDatesBg1.jpg"
+import SelectDateBg from "@/assets/images/OurBrands/SelectDateBg1.jpg"
+import ShaaneKhajoorBg from "@/assets/images/OurBrands/ShaanEKhajoorBg1.jpg"
+
 // import OrganicHoneyMenu from "@/assets/images"
 
 //  import Blog8 from '@/assets/images/our-blog/blog08.png';
@@ -394,8 +415,251 @@ export const PRODUCT_DATA = [
         primary_color: "",
         secondary_color: "",
       },
+
+      {
+        id: 3,
+        name: "Shehenshah Date",
+        img: Brands,
+        rect_color: "bg-[#162D13]",
+        title_color: "",
+        desc_color: "",
+        back_img: ShehenshahBG,
+        saysImage:newDates101,
+        title: "",
+        title_desc: "",
+        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        product_desc:
+          "Shehenshah Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
+        product_img_1: DatesV10,
+        product_img_2: DatesProduct,
+        customer_says:
+          "I recently tried Apis Dates, and I'm absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It's clear that Apis prioritizes purity and high-quality dates. The texture is perfect-soft and moist, making them, a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I'm enjoying a product that's both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+        health_benefits:
+          "Royal Zahidi are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
+        primary_color: "",
+        secondary_color: "",
+      },
+      {
+        id: 4,
+        name: "Arabian Pearls Date",
+        img: Brands,
+        rect_color: "bg-[#162D13]",
+        title_color: "",
+        desc_color: "",
+        back_img: ArabianPearlsBg,
+        saysImage:newDates101,
+        title: "",
+        title_desc: "",
+        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        product_desc:
+          "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
+        product_img_1: DatesV1,
+        product_img_2: DatesProduct,
+        customer_says:
+          "I recently tried Apis Dates, and I'm absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It's clear that Apis prioritizes purity and high-quality dates. The texture is perfect-soft and moist, making them, a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I'm enjoying a product that's both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+        health_benefits:
+          "Royal Zahidi are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
+        primary_color: "",
+        secondary_color: "",
+      },
+
+      {
+        id: 5,
+        name: "Select Date",
+        img: Brands,
+        rect_color: "bg-[#162D13]",
+        title_color: "",
+        desc_color: "",
+        back_img: SelectDateBg,
+        saysImage:newDates101,
+        title: "",
+        title_desc: "",
+        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        product_desc:
+          "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
+        product_img_1: DatesV8,
+        product_img_2: DatesProduct,
+        customer_says:
+          "I recently tried Apis Dates, and I'm absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It's clear that Apis prioritizes purity and high-quality dates. The texture is perfect-soft and moist, making them, a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I'm enjoying a product that's both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+        health_benefits:
+          "Royal Zahidi are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
+        primary_color: "",
+        secondary_color: "",
+      },
+
+      {
+        id: 6,
+        name: "ClassicDate",
+        img: Brands,
+        rect_color: "bg-[#162D13]",
+        title_color: "",
+        desc_color: "",
+        back_img: ClassicDateBg,
+        saysImage:newDates101,
+        title: "",
+        title_desc: "",
+        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        product_desc:
+          "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
+        product_img_1: DatesV2,
+        product_img_2: DatesProduct,
+        customer_says:
+          "I recently tried Apis Dates, and I'm absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It's clear that Apis prioritizes purity and high-quality dates. The texture is perfect-soft and moist, making them, a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I'm enjoying a product that's both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+        health_benefits:
+          "Royal Zahidi are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
+        primary_color: "",
+        secondary_color: "",
+      },
+
+
+      {
+        id: 7,
+        name: "Royal Zahidi",
+        img: Brands,
+        rect_color: "bg-[#162D13]",
+        title_color: "",
+        desc_color: "",
+        back_img: RoyalZahidiBg,
+        saysImage:newDates101,
+        title: "",
+        title_desc: "",
+        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        product_desc:
+          "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
+        product_img_1: DatesV7,
+        product_img_2: DatesProduct,
+        customer_says:
+          "I recently tried Apis Dates, and I'm absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It's clear that Apis prioritizes purity and high-quality dates. The texture is perfect-soft and moist, making them, a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I'm enjoying a product that's both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+        health_benefits:
+          "Royal Zahidi are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
+        primary_color: "",
+        secondary_color: "",
+      },
+
+      {
+        id: 8,
+        name: "Shaan e Khajoor",
+        img: Brands,
+        rect_color: "bg-[#162D13]",
+        title_color: "",
+        desc_color: "",
+        back_img: ShaaneKhajoorBg,
+        saysImage:newDates101,
+        title: "",
+        title_desc: "",
+        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        product_desc:
+          "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
+        product_img_1: DatesV9,
+        product_img_2: DatesProduct,
+        customer_says:
+          "I recently tried Apis Dates, and I'm absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It's clear that Apis prioritizes purity and high-quality dates. The texture is perfect-soft and moist, making them, a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I'm enjoying a product that's both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+        health_benefits:
+          "Royal Zahidi are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
+        primary_color: "",
+        secondary_color: "",
+      },
+
+      {
+        id: 9,
+        name: "KalmiDates",
+        img: Brands,
+        rect_color: "bg-[#162D13]",
+        title_color: "",
+        desc_color: "",
+        back_img: KalmiDatesBg,
+        saysImage:newDates101,
+        title: "",
+        title_desc: "",
+        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        product_desc:
+          "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
+        product_img_1: DatesV5,
+        product_img_2: DatesProduct,
+        customer_says:
+          "I recently tried Apis Dates, and I'm absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It's clear that Apis prioritizes purity and high-quality dates. The texture is perfect-soft and moist, making them, a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I'm enjoying a product that's both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+        health_benefits:
+          "Royal Zahidi are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
+        primary_color: "",
+        secondary_color: "",
+      },
+
+      {
+        id: 10,
+        name: "DesertBliss",
+        img: Brands,
+        rect_color: "bg-[#162D13]",
+        title_color: "",
+        desc_color: "",
+        back_img: DesertBlissBg,
+        saysImage:newDates101,
+        title: "",
+        title_desc: "",
+        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        product_desc:
+          "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
+        product_img_1: DatesV4,
+        product_img_2: DatesProduct,
+        customer_says:
+          "I recently tried Apis Dates, and I'm absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It's clear that Apis prioritizes purity and high-quality dates. The texture is perfect-soft and moist, making them, a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I'm enjoying a product that's both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+        health_benefits:
+          "Royal Zahidi are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
+        primary_color: "",
+        secondary_color: "",
+      },
+
+      {
+        id: 11,
+        name: "DeseededDate",
+        img: Brands,
+        rect_color: "bg-[#162D13]",
+        title_color: "",
+        desc_color: "",
+        back_img: DeseededDateBg,
+        saysImage:newDates101,
+        title: "",
+        title_desc: "",
+        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        product_desc:
+          "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
+        product_img_1: DatesV3,
+        product_img_2: DatesProduct,
+        customer_says:
+          "I recently tried Apis Dates, and I'm absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It's clear that Apis prioritizes purity and high-quality dates. The texture is perfect-soft and moist, making them, a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I'm enjoying a product that's both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+        health_benefits:
+          "Royal Zahidi are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
+        primary_color: "",
+        secondary_color: "",
+      },
+
+      {
+        id: 12,
+        name: "Premium Dates",
+        img: Brands,
+        rect_color: "bg-[#162D13]",
+        title_color: "",
+        desc_color: "",
+        back_img: PremiumDatesBg,
+        saysImage:newDates101,
+        title: "",
+        title_desc: "",
+        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        product_desc:
+          "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
+        product_img_1: DatesV6,
+        product_img_2: DatesProduct,
+        customer_says:
+          "I recently tried Apis Dates, and I'm absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It's clear that Apis prioritizes purity and high-quality dates. The texture is perfect-soft and moist, making them, a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I'm enjoying a product that's both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+        health_benefits:
+          "Royal Zahidi are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
+        primary_color: "",
+        secondary_color: "",
+      },
     ],
   },
+
+
+  
   {
     id: 3,
     title: "Breakfast Range",

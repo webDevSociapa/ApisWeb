@@ -1,8 +1,7 @@
 "use client";
-
 import Image from "next/image";
 import PropTypes from "prop-types";
-// import Banner from "@/assets/images/AboutUs/aboutUsNewBanner.png";
+import Banner from "@/assets/images/AboutUs/aboutUsNewBanner.png";
 import MissionBanner from "@/assets/images/AboutUs/missionVission.png";
 import Ring1 from "@/assets/images/OurBrands/Ring-4.png";
 import Curv from "@/assets/images/AboutUs/Curv.png";
@@ -12,26 +11,14 @@ import VimalAnand from "@/assets/images/AboutUs/VimalAnand.png";
 import Frame1 from "@/assets/images/AboutUs/Frame1.png";
 import Frame2 from "@/assets/images/AboutUs/Frame2.png";
 import AmitAnand from "@/assets/images/AboutUs/AmitAnand.png";
-import ImageBanner from "../../Layout/Banner";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import AboutusLogo from '@/assets/images/AboutUs/aboutusLogo.png';
 import AboutStreak from '@/assets/images/AboutUs/aboutStreak.png'
 import HexaGonalPage from "../../Pages/AboutUs/Hexagonal";
-import axios from "axios";
-import { CircularProgress } from "@mui/material";
 
-export default function AboutUsPage({}) {
+export default function AboutUsPage({ }) {
   const [activeTab, setActiveTab] = useState("vision");
-  const [apisDataNumber, setApisDataNumber] = useState()
-  const [aboutBanner, setAboutBanner] = useState()
-  const [ourValues, setOurValues] = useState([])
-  const [ourDirector, setOurDirector] = useState([])
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-
-
   const [counts, setCounts] = useState({
     productRanges: 0,
     yearsOfLegacy: 0,
@@ -46,7 +33,7 @@ export default function AboutUsPage({}) {
       key: "productRanges"
     },
     {
-      count: 580,
+      count: 600,
       title: "Years Of Legacy",
       key: "yearsOfLegacy"
     },
@@ -62,17 +49,13 @@ export default function AboutUsPage({}) {
     },
   ];
 
-
-
   useEffect(() => {
-    if (!apisDataNumber?.length) return;
-
     const interval = setInterval(() => {
-      setCounts((prevCounts) => {
+      setCounts(prevCounts => {
         const newCounts = { ...prevCounts };
         let allReached = true;
 
-        apisDataNumber.forEach((item) => {
+        LEGACY_DATA.forEach(item => {
           if (newCounts[item.key] < item.count) {
             newCounts[item.key] += Math.ceil((item.count - newCounts[item.key]) / 10);
             allReached = false;
@@ -80,22 +63,24 @@ export default function AboutUsPage({}) {
             newCounts[item.key] = item.count;
           }
         });
-        if (allReached) clearInterval(interval);
+        if (allReached) {
+          clearInterval(interval);
+        }
         return newCounts;
       });
     }, 50);
 
     return () => clearInterval(interval);
-  }, [apisDataNumber]);
+  }, []);
 
   const renderContent = () => {
     switch (activeTab) {
       case "vision":
-        return `${ourValues?.visionContent}`
+        return `To inspire consumers with products that enable living a healthier and fitter lifestyle through continuous product innovation`
       case "mission":
-        return `${ourValues?.missionContent}`
+        return `To inspire consumers with products that enable living a healthier and fitter lifestyle through continuous product innovation.`
       case "values":
-        return `${ourValues?.valuesContent}`
+        return `Believing in the power of nature to nourish and enhance well-being, committing to quality and sustainability.`
       default:
         return "";
     }
@@ -104,66 +89,12 @@ export default function AboutUsPage({}) {
     window.scroll(0, 0);
   }, [])
 
-  useEffect(() => {
-    // Function to fetch data for API calls
-    const fetchData = async () => {
-      try {
-        // Set loading to true before making the request
-        setLoading(true);
-
-        // Making all API calls concurrently with Promise.all
-        const [apisDataResponse, bannerResponse, ourValuesResponse, ourDirectorResponse] = await Promise.all([
-          axios.get('/api/AboutUs/ApisDataNumbers'),
-          axios.get('/api/AboutUs/banner'),
-          axios.get('/api/AboutUs/ourValues'),
-          axios.get('/api/AboutUs/ourDirectors'),
-        ]);
-        // Update state with responses
-        setOurDirector(ourDirectorResponse.data)
-        setApisDataNumber(apisDataResponse.data);
-        setAboutBanner(bannerResponse.data.bannerImage);
-        setOurValues(ourValuesResponse.data[0]);
-      } catch (err) {
-        // Handle any errors that occur during the API calls
-        setError('Error fetching data');
-        console.error('Error fetching data', err);
-      } finally {
-        // Set loading to false after API calls complete
-        setLoading(false);
-      }
-    };
-
-    // Call the fetchData function on component mount
-    fetchData();
-
-    // Cleanup function if needed to cancel ongoing API calls
-    return () => {
-      // Cancel API requests here if necessary (optional, depends on your need)
-    };
-  }, []);
-
-  // Conditional rendering based on loading or error state
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <CircularProgress
-          height="80"
-          width="80"
-          color="#4fa94d"
-          ariaLabel="loading-indicator"
-        />
-      </div>
-    );
-  }
-  if (error) {
-    return <div>{error}</div>;
-  }
   return (
     <>
       <main className="flex flex-col items-center justify-center w-full">
         <div className="relative w-full">
           <Image
-            src={aboutBanner}
+            src={Banner}
             alt="Banner Image"
             width={1440}
             height={1440}
@@ -247,7 +178,7 @@ export default function AboutUsPage({}) {
 
           <div className="relative">
             <div className="lg:absolute z-10 bottom-[124px] left-0 right-0 flex gap-4 flex-wrap justify-around items-center mt-10 text-center p-4 2xl:py-10 curvonLegacyData">
-              {apisDataNumber?.map((item) => (
+              {LEGACY_DATA?.map((item) => (
                 <div key={item.key} className="w-[130px] lg:w-[200px] xl:w-[275px] h-[110px] xl:h-[170px] flex-shrink-0 border rounded-[1.875rem] border-[#9F7B49] bg-transparent shadow-md flex items-center justify-center">
                   <div className="flex gap-3 items-center justify-center flex-col">
                     <p className="text-[14px] lg:text-[20px] xl:text-[34px] text-center spaced-words font-bold ms-4 text-[#9F7B49]">
@@ -278,7 +209,7 @@ export default function AboutUsPage({}) {
             <div className="w-full md:w-1/2 flex items-center justify-center">
               <div className="relative w-[300px] md:w-[440px] flex justify-center items-center">
                 <Image
-                  src={ourDirector.data[0].AddImage}
+                  src={VimalAnand}
                   alt="Banner Image"
                   width={240}
                   height={240}
@@ -297,13 +228,13 @@ export default function AboutUsPage({}) {
             </div>
             <div className="w-full mt-4 md:mt-0 md:w-1/2 z-10 flex flex-col gap-2 items-center justify-center">
               <h3 className="text-center font-bold text-[#9F7B49] text-[18px] md:text-[24px] font-literata">
-                {ourDirector.data[0].Name}
+                VIMAL ANAND
               </h3>
               <p className="text-center text-[#373737] font-normal text-[16px] md:text-[19px] font-literata">
-                {ourDirector.data[0].Designation}
+                Managing Director
               </p>
               <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost text-justify">
-                {ourDirector.data[0].Description}
+                Driven by his passion and conviction, Mr. Vimal Anand has received formal training in beekeeping and Honey processing from the University of Warmia Olystyn Poland. Gradually, he built a global presence & a robust structure supported by a state-of-the-art production factory to cater to the global markets.
               </p>
             </div>
           </div>
@@ -315,19 +246,18 @@ export default function AboutUsPage({}) {
           />
           <div className="w-full mt-8 md:w-1/2 z-10 flex flex-col gap-2 items-center justify-center">
             <h3 className="text-center font-bold text-[#9F7B49] text-[18px] md:text-[24px] font-literata">
-              {ourDirector.data[1].Name}
+              AMIT ANAND
             </h3>
             <p className="text-center text-[#373737] font-normal text-[16px] md:text-[19px] font-literata">
-              {ourDirector.data[1].Designation}
+              Managing Director
             </p>
             <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost text-justify">
-              {ourDirector.data[1].Description}
-            </p>
+              A Delhi University Graduate from Kirori Mal College in Commerce, he spearheads key functions of Overall Plant Management; Human Resources; and Finance. The Managing Director of the company and the younger one of the two siblings, he has played the perfect foil to the elder in initiating the GREEN FIELD initiative of the factory in Roorkee. Leading from the front in all factory operations, a person with hands-on expertise in executing all details at the plant level.            </p>
           </div>
           <div className="w-full mt-4 md:mt-0 md:w-1/2 flex items-center justify-center">
             <div className="relative w-[300px] md:w-[440px] flex justify-center items-center">
               <Image
-                src={ourDirector.data[1].AddImage}
+                src={AmitAnand}
                 height={240}
                 width={240}
                 alt="Banner Image"

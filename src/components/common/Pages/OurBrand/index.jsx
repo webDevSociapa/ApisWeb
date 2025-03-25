@@ -60,7 +60,7 @@ export default function OurBrand({ onProductClick }) {
             {/* Products List */}
             <div className="space-y-2">
               {brand.products
-                .filter((product) => product.name !== "Apis Organic Honey")
+                .filter((product) => product.name !== "Apis Organic Honey" && product.name !== "Royal Zahidi" && product.name !== "Shehenshah Date" && product.name !== "Arabian Pearls Date" && product.name !== "Select Date" && product.name !== "ClassicDate" && product.name !== "Shaan e Khajoor" && product.name !== "KalmiDates" && product.name !=="DesertBliss" && product.name !== "DeseededDate" && product.name !== "Premium Dates" ) 
                 .map((product) => (
                   <div key={product.id} className="relative group">
                     <button
@@ -71,9 +71,6 @@ export default function OurBrand({ onProductClick }) {
                     >
                       {product.name}
                     </button>
-
-                    {/* Subcategories Dropdown */}
-                    {/* Subcategories Dropdown */}
                     {product.name === "Honey" && (
                       <div className="absolute top-0 left-10 ml-4 w-[200px] z-10 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-linear transform scale-95 group-hover:scale-100">
                         <div className="bg-white shadow-lg border rounded-md p-4">
@@ -110,6 +107,103 @@ export default function OurBrand({ onProductClick }) {
                               Infused Honey
                               </Link>
                             </li>
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+
+                    {/*  */}
+                    {product.name === "Dates" && (
+                      <div className="absolute top-14 left-10 ml-4 w-[200px] z-10 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-linear transform scale-95 group-hover:scale-100">
+                        <div className="bg-white shadow-lg border rounded-md p-4">
+                          <ul className="text-sm text-gray-600 space-y-2">
+                            <li>
+                              <Link
+                                href={`/our-brand/product-details?brand_id=2&product_id=3`}
+                                className="hover:underline"
+                              >
+                               Shahenshah Dates
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href={`/our-brand/product-details?brand_id=2&product_id=7`}
+                                className="hover:underline"
+                              >
+                               Royal Zahidi
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href={`/our-brand/product-details?brand_id=2&product_id=4`}
+                                className="hover:underline"
+                              >
+                               Arabian Dates
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href={`/our-brand/product-details?brand_id=2&product_id=5`}
+                                className="hover:underline"
+                              >
+                                Select Date
+                              </Link>
+                            </li>
+
+                            <li>
+                              <Link
+                                href={`/our-brand/product-details?brand_id=2&product_id=6`}
+                                className="hover:underline"
+                              >
+                               ClassicDate
+                              </Link>
+                            </li>
+
+                            <li>
+                              <Link
+                                href={`/our-brand/product-details?brand_id=2&product_id=8`}
+                                className="hover:underline"
+                              >
+                               Shaan e Khajoor
+                              </Link>
+                            </li>
+
+                            <li>
+                              <Link
+                                href={`/our-brand/product-details?brand_id=2&product_id=9`}
+                                className="hover:underline"
+                              >
+                               KalmiDates
+                              </Link>
+                            </li> 
+
+                            <li>
+                              <Link
+                                href={`/our-brand/product-details?brand_id=2&product_id=10`}
+                                className="hover:underline"
+                              >
+                               DesertBliss
+                              </Link>
+                            </li>
+
+                            <li>
+                              <Link
+                                href={`/our-brand/product-details?brand_id=2&product_id=11`}
+                                className="hover:underline"
+                              >
+                               DeseededDate
+                              </Link>
+                            </li>
+
+                            <li>
+                              <Link
+                                href={`/our-brand/product-details?brand_id=2&product_id=12`}
+                                className="hover:underline"
+                              >
+                               PremiumDates
+                              </Link>
+                            </li>
+                           
                           </ul>
                         </div>
                       </div>
