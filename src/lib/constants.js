@@ -426,7 +426,7 @@ export const PRODUCT_DATA = [
         title_desc: "",
         link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
-          "Shehenshah Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
+          " Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
         product_img_1: DatesV10,
         product_img_2: DatesProduct,
         customer_says:
