@@ -7,7 +7,7 @@ import axios from "axios";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-export default function  LifeAtApis(){
+export default function LifeAtApis() {
   const router = useRouter();
   const [apisLifeData, setApisLifeData] = useState([])
 
@@ -16,22 +16,22 @@ export default function  LifeAtApis(){
     router.push('/careers/careerGallary');
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     const fetchLifeApis = async () => {
       try {
         const response = await axios.get("/api/careers/apisLife");
         console.log("responseLifeAt", response);
         setApisLifeData(response.data)
       } catch (error) {
-         console.log("error",error); 
+        console.log("error", error);
       }
     }
     fetchLifeApis()
-  },[])
-  
-    return (
-        <>
-        <ImageBanner banner={Banner} />
+  }, [])
+
+  return (
+    <>
+      <ImageBanner banner={Banner} />
       <div id="life-at-apis" className="flex flex-col items-center justify-center">
         <p className="font-bold text-[20px] md:text-[40px] text-center text-[#9F7B49] font-literata">
           Life @Apis
@@ -68,6 +68,6 @@ export default function  LifeAtApis(){
           </div>
         ))}
       </div>
-        </>
-    )
+    </>
+  )
 }
