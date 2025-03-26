@@ -287,8 +287,6 @@ export const STATUS_CODE = {
   FAIL: 0,
   WARNING: 2,
 };
-
-
 // export const PRODUCT_MENU = [
 //   {
 //   id:1,
@@ -297,7 +295,6 @@ export const STATUS_CODE = {
 
 //   }
 // ]
-
 export const PRODUCT_DATA = [
 
   {
@@ -433,7 +430,7 @@ export const PRODUCT_DATA = [
         product_img_1: DatesV10,
         product_img_2: DatesProduct,
         customer_says:
-          "I recently tried Apis Dates, and I'm absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It's clear that Apis prioritizes purity and high-quality dates. The texture is perfect-soft and moist, making them, a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I'm enjoying a product that's both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+          "I recently tried Shahenshah Dates, and I’m beyond impressed! These dates are incredibly fresh, naturally sweet, and packed with rich flavor. The soft, moist texture makes them an absolute delight—whether enjoyed on their own or added to recipes.What I love most? Pure goodness with no artificial additives! A perfect blend of taste and nutrition, Shahenshah Dates have quickly become a must-have in my pantry. Highly recommended for anyone who values quality and authenticity!",
         health_benefits:
           "Royal Zahidi are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
         primary_color: "",
@@ -456,7 +453,7 @@ export const PRODUCT_DATA = [
         product_img_1: DatesV1,
         product_img_2: DatesProduct,
         customer_says:
-          "I recently tried Apis Dates, and I'm absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It's clear that Apis prioritizes purity and high-quality dates. The texture is perfect-soft and moist, making them, a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I'm enjoying a product that's both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+          "Oh man, I wasn’t expecting Arabian Pearls Dates to be this good! I grabbed a pack just to try, and now I can’t stop snacking on them. They’re insanely soft, perfectly sweet, and just feel so fresh like they were picked yesterday. No weird aftertaste, no artificial stuff, just pure, rich flavor. I’ve been tossing them into my oatmeal, blending them in smoothies, and honestly, just eating them straight out of the pack. If you’re into natural, guilt-free snacking, these are a total game-changer. 10/10 recommend!",
         health_benefits:
           "Royal Zahidi are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
         primary_color: "",
@@ -480,7 +477,7 @@ export const PRODUCT_DATA = [
         product_img_1: DatesV8,
         product_img_2: DatesProduct,
         customer_says:
-          "I recently tried Apis Dates, and I'm absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It's clear that Apis prioritizes purity and high-quality dates. The texture is perfect-soft and moist, making them, a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I'm enjoying a product that's both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+          "I recently tried Arabian Select Dates, and they’ve completely won me over! From the first bite, I could tell they were exceptionally fresh, naturally sweet, and packed with flavor. The texture is just right soft, chewy, and absolutely delicious.Whether I’m having them as a quick snack, pairing them with nuts, or adding them to my morning oats, they never disappoint. It’s great to know I’m indulging in something that’s not only tasty but also pure and nutritious. If you’re a date lover, Arabian Select is a must-try!",
         health_benefits:
           "Royal Zahidi are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
         primary_color: "",
@@ -504,7 +501,7 @@ export const PRODUCT_DATA = [
         product_img_1: DatesV2,
         product_img_2: DatesProduct,
         customer_says:
-          "I recently tried Apis Dates, and I'm absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It's clear that Apis prioritizes purity and high-quality dates. The texture is perfect-soft and moist, making them, a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I'm enjoying a product that's both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+          "I recently tried Arabian Classic Dates, and I’m seriously impressed! They’re incredibly soft, naturally sweet, and packed with flavor exactly how premium dates should be. The freshness is unmatched, making every bite a delight.It’s rare to find dates that strike the perfect balance between texture and taste, but these do it effortlessly. I love how they add a touch of natural sweetness to my day without any guilt. A must-have for anyone who appreciates quality and authenticity!",
         health_benefits:
           "Royal Zahidi are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
         primary_color: "",
@@ -529,7 +526,7 @@ export const PRODUCT_DATA = [
         product_img_1: DatesV7,
         product_img_2: DatesProduct,
         customer_says:
-          "I recently tried Apis Dates, and I'm absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It's clear that Apis prioritizes purity and high-quality dates. The texture is perfect-soft and moist, making them, a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I'm enjoying a product that's both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+          "I recently got my hands on Royal Zahidi Dates. You know, they're just delightful! They are sweet and have this wonderful deep caramel flavor; it makes one feel indulgent yet wholesome. Their texture, firm yet chewy, is what I truly love about them-the perfect bite: not too soft but also not too dry.Whether I'm having them when I need an energy boost, mixed with nuts, or blended into a morning smoothie, they've never failed me. The knowledge that they're pure and free from any additives makes it that much better. A true must-try for anyone who loves dates of the highest quality!",
         health_benefits:
           "Royal Zahidi are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
         primary_color: "",
@@ -553,7 +550,7 @@ export const PRODUCT_DATA = [
         product_img_1: DatesV9,
         product_img_2: DatesProduct,
         customer_says:
-          "I recently tried Apis Dates, and I'm absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It's clear that Apis prioritizes purity and high-quality dates. The texture is perfect-soft and moist, making them, a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I'm enjoying a product that's both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+          "Apis Shaan-e-Kajoor has been a game-changer for my snacking! The dates are unbelievably soft, fresh, and naturally sweet exactly how they should be. Every bite feels like a burst of pure goodness, making them perfect for a quick energy boost or a guilt-free treat. The best part? No artificial additives, just wholesome nutrition. Safe to say, they’ve earned a permanent spot in my pantry!",
         health_benefits:
           "Royal Zahidi are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
         primary_color: "",
@@ -577,7 +574,7 @@ export const PRODUCT_DATA = [
         product_img_1: DatesV5,
         product_img_2: DatesProduct,
         customer_says:
-          "I recently tried Apis Dates, and I'm absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It's clear that Apis prioritizes purity and high-quality dates. The texture is perfect-soft and moist, making them, a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I'm enjoying a product that's both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+          "I've always been picky about dates, but Apis Premium Kalmi Dates won me over instantly! They’re soft, rich, and naturally sweet - no need for additives when nature does it right.Perfect for a quick energy boost, post-workout snack, or even to sweeten my desserts the healthy way. It’s rare to find such freshness and quality in every bite. Safe to say, my snack game just got an upgrade!",
         health_benefits:
           "Royal Zahidi are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
         primary_color: "",
@@ -601,7 +598,7 @@ export const PRODUCT_DATA = [
         product_img_1: DatesV4,
         product_img_2: DatesProduct,
         customer_says:
-          "I recently tried Apis Dates, and I'm absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It's clear that Apis prioritizes purity and high-quality dates. The texture is perfect-soft and moist, making them, a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I'm enjoying a product that's both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+          "I’m officially hooked on Apis Dessert Bliss Dates! They’re moist, rich, and naturally sweet without any added sugars. A handful keeps me full and energized perfect for my busy days!",
         health_benefits:
           "Royal Zahidi are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
         primary_color: "",
@@ -625,7 +622,7 @@ export const PRODUCT_DATA = [
         product_img_1: DatesV3,
         product_img_2: DatesProduct,
         customer_says:
-          "I recently tried Apis Dates, and I'm absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It's clear that Apis prioritizes purity and high-quality dates. The texture is perfect-soft and moist, making them, a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I'm enjoying a product that's both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+          "A treat I can’t resist! Apis Deseeded Dates have become my go-to snack. No added sugar, no artificial ingredients just pure, delicious goodness. Highly recommend to anyone looking for a nutritious treat!",
         health_benefits:
           "Royal Zahidi are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
         primary_color: "",
@@ -649,7 +646,7 @@ export const PRODUCT_DATA = [
         product_img_1: DatesV6,
         product_img_2: DatesProduct,
         customer_says:
-          "I recently tried Apis Dates, and I'm absolutely thrilled with them! The dates are incredibly fresh, naturally sweet, and bursting with rich flavor. It's clear that Apis prioritizes purity and high-quality dates. The texture is perfect-soft and moist, making them, a delicious and wholesome snack on their own or a fantastic addition to recipes. I love that I'm enjoying a product that's both nutritious and free from artificial ingredients. Apis Dates have quickly become a favorite in my pantry, and I highly recommend them to anyone seeking top-notch, pure dates.",
+          "I was looking for a natural sweet snack, and these dates checked all the boxes. Super soft, perfectly moist, and packed with flavor each bite feels like a little treat straight from nature. And the best part? No added sugar, no artificial stuff - just pure, wholesome goodness! ",
         health_benefits:
           "Royal Zahidi are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
         primary_color: "",
@@ -1554,7 +1551,6 @@ export const Blog_Data = [
   //     </div>`
   //   },
 ];
-
 
 export const RECIPIES_DATA = [
   // {

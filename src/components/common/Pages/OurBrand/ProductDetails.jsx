@@ -311,7 +311,6 @@ const ProductDetails = () => {
                                         ? renderBenefits(GREEN_TEA)                     : ""}
             </div>
             <div>
-
             </div>
           </div>
         </>
