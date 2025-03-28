@@ -22,11 +22,11 @@ const Journey = () => {
     { year: "Year 2018", title: "2018", desc: "In 2018, AIL crossed 15ML USD in Export Sales", img: JR2018 },
     { year: "Year 2019", title: "2019", desc: "In 2019, AIL crossed 15ML USD in Export Sales", img: JR2019 },
     { year: "Year 2020", title: "2020", desc: "In 2020, AIL crossed 15ML USD in Export Sales", img: JR2020 },
-    { year: "Year 2021", title: "2021", desc: "In 2021, AIL crossed 15ML USD in Export Sales", img: JR2021 },
+    { year: "Year 2021", title: "2021", desc: "In 2021, AIL crossed 15ML USD in Export Sales", img: JR2024 },
     { year: "Year 2022", title: "2022", desc: "In 2022, AIL crossed 15ML USD in Export Sales", img: JR2022 },
-    { year: "Year 2023", title: "2023", desc: "In 2023, AIL crossed 15ML USD in Export Sales", img: JR2023 },
-    { year: "Year 2024", title: "2024", desc: "In 2024, AIL crossed 15ML USD in Export Sales", img: JR2024 },
-    { year: "Year 2025", title: "2024", desc: "In 2025, AIL crossed 15ML USD in Export Sales", img: JR2025 },
+    { year: "Year 2023", title: "2023", desc: "In 2023, AIL crossed 15ML USD in Export Sales", img: JR2025 },
+    { year: "Year 2024", title: "2024", desc: "In 2024, AIL crossed 15ML USD in Export Sales", img: JR2025 }
+    // { year: "Year 2025", title: "2024", desc: "In 2025, AIL crossed 15ML USD in Export Sales", img: JR2025 },
   ];
 
   const [selectedIndex, setSelectedIndex] = useState(0);
