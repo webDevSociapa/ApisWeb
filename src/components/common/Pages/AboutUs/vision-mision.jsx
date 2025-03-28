@@ -9,34 +9,84 @@ import axios from "axios";
 
 export default function VisionMission() {
   const [activeTab, setActiveTab] = useState("vision");
-  const [ourValues, setOurValues] = useState([])
-  const [apisDataNumber, setApisDataNumber] = useState()
+  const [apisDataNumber, setApisDataNumber] = useState();
+
+
+  const [counts, setCounts] = useState({
+    productRanges: 0,
+    yearsOfLegacy: 0,
+    newCustomers: 0,
+    numberOfOutlets: 0
+  });
+
+
+  const LEGACY_DATA = [
+    {
+      count: 2580,
+      title: "Product Ranges",
+      key: "productRanges"
+    },
+    {
+      count: 580,
+      title: "Years Of Legacy",
+      key: "yearsOfLegacy"
+    },
+    {
+      count: 280,
+      title: "New Customer",
+      key: "newCustomers"
+    },
+    {
+      count: 6580,
+      title: "Number Of Outlets",
+      key: "numberOfOutlets"
+    },
+  ];
+
   
     const renderContent = () => {
         switch (activeTab) {
           case "vision":
-            return `${ourValues?.visionContent}`
+            return `To inspire consumers with products that enable living a healthier and fitter lifestyle through continuous product innovation.`
           case "mission":
-            return `${ourValues?.missionContent}`
+            return `We relentlessly will continue to pursue exceptional value for our customers, fueled by innovation and unwavering ethical practices.We champion responsible business practices, driving profitability and will continue to secure the well-being of our customers and stakeholders.We cultivate a thriving workplace and upkeep high standards that promote a strong sense of belonging, hence empowering our people to achieve their life and our business goals.`
           case "values":
-            return `${ourValues?.valuesContent}`
+            return `Believing in the power of nature to nourish and enhance well-being, committing to quality and sustainability.`
           default:
             return "";
         }
       };
-      useEffect(()=>{
-        const fetchMisionData = async()=>{
-            try {
-              const response = await axios.get("/api/AboutUs/ourValues");              
-              setOurValues(response.data[0]);
-              
-            } catch (error) { 
+
+      console.log(renderContent.case,"rendercontent");
+
+      useEffect(() => {
+        const interval = setInterval(() => {
+          setCounts(prevCounts => {
+            const newCounts = { ...prevCounts };
+            let allReached = true;
+            LEGACY_DATA.forEach(item => {
+              if (newCounts[item.key] < item.count) {
+                newCounts[item.key] += Math.ceil((item.count - newCounts[item.key]) / 10);
+                allReached = false;
+              } else {
+                newCounts[item.key] = item.count;
+              }
+            });
+            if (allReached) {
+              clearInterval(interval);
             }
-          }
-          fetchMisionData()
-      },[])
+            return newCounts;
+          });
+        }, 50);
+    
+        return () => clearInterval(interval);
+      }, []);
+
+
+
 
   return (
+
     <div id="mission-values" className="relative mt-14 flex flex-col items-center justify-center w-full">
     <Image src={MissionBanner} width={1440} className="object-cover w-full h-100" />
 
@@ -72,7 +122,7 @@ export default function VisionMission() {
       <Image src={Curv} alt="Banner Image" className="object-cover hidden lg:inline w-full h-auto max-h-[670px]" />
       <div className="relative">
         <div className="lg:absolute z-10 bottom-[124px] left-0 right-0 flex gap-4 flex-wrap justify-around items-center mt-10 text-center p-4 2xl:py-10 curvonLegacyData">
-          {apisDataNumber?.map((item) => (
+          {LEGACY_DATA?.map((item) => (
             <div key={item.key} className="w-[130px] lg:w-[200px] xl:w-[275px] h-[110px] xl:h-[170px] flex-shrink-0 border rounded-[1.875rem] border-[#9F7B49] bg-transparent shadow-md flex items-center justify-center">
               <div className="flex gap-3 items-center justify-center flex-col">
                 <p className="text-[14px] lg:text-[20px] xl:text-[34px] text-center spaced-words font-bold ms-4 text-[#9F7B49]">
