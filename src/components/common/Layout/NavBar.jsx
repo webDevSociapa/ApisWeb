@@ -11,7 +11,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Rectangle2 from "@/assets/images/OurBrands/Rectangle2.png";
 import Cgallery from "@/assets/images/Careers/engage.png"
-import AboutusMini from "@/assets/images/AboutUs/aboutusMini.png"
+import AboutusMini from "@/assets/images/AboutUs/newAboutusMini1.png"
 import CareerMini from "@/assets/images/Careers/CareerMini.png"
 import MediaMini from "@/assets/images/Media/MediaMini.png"
 import sustainabilityMini from "@/assets/images/sustainabilityMini.png"
