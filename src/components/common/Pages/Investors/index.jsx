@@ -267,7 +267,7 @@ const AuditCommittee =() =>{
         <ImageBanner banner={Banner} />
         <div className="bg-[#FFFBF6] flex items-center justify-center py-4  lg:py-12 border border-t-0 border-[#9F7B49] bg-opacity-80 sm:absolute w-full  bottom-0">
           <div className="text-xs md:text-base lg:text-xl text-center w-[94%] font-jost">
-          At Apis India, we are committed to driving growth and delivering value for our investors through a blend of innovation, quality, and strategic expansion. Our diverse product portfolio, including premium honey, health-focused spreads, and staple food items, is designed to meet the evolving needs of consumers worldwide. With a solid track record of profitability and a vision for sustainable growth, we are focused on leveraging market trends and operational efficiencies to maximize returns. Your investment in Apis India is an investment in a future of robust growth and industry leadership.
+          At AIL, we are committed to driving growth and delivering value for our investors through a blend of innovation, quality, and strategic expansion. Our diverse product portfolio, including premium honey, health-focused spreads, and staple food items, is designed to meet the evolving needs of consumers worldwide. With a solid track record of profitability and a vision for sustainable growth, we are focused on leveraging market trends and operational efficiencies to maximize returns. Your investment in AIL is an investment in a future of robust growth and industry leadership.
           </div>
         </div>
         </div>

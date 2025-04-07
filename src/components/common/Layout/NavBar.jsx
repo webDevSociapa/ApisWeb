@@ -209,11 +209,11 @@ const NavBar = ({ className, linkClass }) => {
                     </div>
                     {/* Left Section: Image and Description */}
                     <div className="flex flex-col w-1/3 gap-4">
-                      <h4 className="font-bold text-[#A57F5A] mb-2 border-l-2 border-[#9F7B49] px-2">Apis Careers</h4>
+                      <h4 className="font-bold text-[#A57F5A] mb-2 border-l-2 border-[#9F7B49] px-2">Careers</h4>
                       <ul className="text-sm text-gray-600 space-y-4">
                         <li>
                           <Link href="/careers/lifeAtApis" className="hover:underline">
-                            Life At Apis
+                          Life at AIL
                           </Link>
                         </li>
                         <li>
@@ -242,7 +242,7 @@ const NavBar = ({ className, linkClass }) => {
                     </div>
                     {/* Left Section: Image and Description */}
                     <div className="flex flex-col w-1/3 gap-4">
-                      <h4 className="font-bold text-[#A57F5A] mb-2 border-l-2 border-[#9F7B49] px-2">Apis Media</h4>
+                      <h4 className="font-bold text-[#A57F5A] mb-2 border-l-2 border-[#9F7B49] px-2">Media</h4>
                       <ul className="text-sm text-gray-600 space-y-4">
                         <li>
                           <Link href="/media/apisInTheNews" className="hover:underline">
@@ -252,6 +252,11 @@ const NavBar = ({ className, linkClass }) => {
                         <li>
                           <Link href="/media/mediaGallery" className="hover:underline">
                             Media Library
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/our-blog/ourBlogs" className="hover:underline">
+                             Blogs
                           </Link>
                         </li>
 
@@ -276,11 +281,11 @@ const NavBar = ({ className, linkClass }) => {
                     </div>
                     {/* Left Section: Image and Description */}
                     <div className="flex flex-col w-1/3 gap-4">
-                      <h4 className="font-bold text-[#A57F5A] mb-2 border-l-2 border-[#9F7B49] px-2">Apis Sustainability</h4>
+                      <h4 className="font-bold text-[#A57F5A] mb-2 border-l-2 border-[#9F7B49] px-2">Sustainability</h4>
                       <ul className="text-sm text-gray-600 space-y-4">
                         <li>
                           <Link href="/sustainability/" className="hover:underline">
-                            CSR @ APIS
+                          CSR @AIL
                           </Link>
                         </li>
                       </ul>
@@ -305,16 +310,12 @@ const NavBar = ({ className, linkClass }) => {
                     </div>
                     {/* Left Section: Image and Description */}
                     <div className="flex flex-col w-1/3 gap-4">
-                      <h4 className="font-bold text-[#A57F5A] mb-2 border-l-2 border-[#9F7B49] px-2">Apis Resources</h4>
+                      <h4 className="font-bold text-[#A57F5A] mb-2 border-l-2 border-[#9F7B49] px-2"> Resources</h4>
                       <ul className="text-sm text-gray-600 space-y-4">
-                        <li>
-                          <Link href="/our-blog/ourBlogs" className="hover:underline">
-                            Our Blogs
-                          </Link>
-                        </li>
+                        
                         <li>
                           <Link href="/our-blog/ourRecipis" className="hover:underline">
-                            Our Receipes
+                             Receipes
                           </Link>
                         </li>
                       </ul>
@@ -338,7 +339,7 @@ const NavBar = ({ className, linkClass }) => {
                     </div>
                     {/* Left Section: Image and Description */}
                     <div className="flex flex-col w-1/3 gap-4">
-                      <h4 className="font-bold text-[#A57F5A] mb-2 border-l-2 border-[#9F7B49] px-2">Apis Resources</h4>
+                      <h4 className="font-bold text-[#A57F5A] mb-2 border-l-2 border-[#9F7B49] px-2">Connect</h4>
                       <ul className="text-sm text-gray-600 space-y-4">
                         <li>
                           <Link href="/contact-us" className="hover:underline">

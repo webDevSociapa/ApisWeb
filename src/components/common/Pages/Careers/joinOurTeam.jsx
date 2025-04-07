@@ -86,7 +86,7 @@ import ImageBanner from "../../Layout/Banner";
                 Join Us
               </p>
               <p className="text-center text-xs md:text-lg text-[#353535] mt-4 w-[90%] md:w-[80%]">
-                Join us at Apis India and become part of a dynamic team where
+                Join us at AIL and become part of a dynamic team where
                 innovation, collaboration, and personal growth are at the heart
                 of everything we do
               </p>

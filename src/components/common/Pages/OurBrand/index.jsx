@@ -155,7 +155,7 @@ export default function OurBrand({ onProductClick }) {
                                 href={`/our-brand/product-details?brand_id=2&product_id=6`}
                                 className="hover:underline"
                               >
-                               ClassicDate
+                               Classic Date
                               </Link>
                             </li>
 
@@ -173,7 +173,7 @@ export default function OurBrand({ onProductClick }) {
                                 href={`/our-brand/product-details?brand_id=2&product_id=9`}
                                 className="hover:underline"
                               >
-                               KalmiDates
+                               Kalmi Dates
                               </Link>
                             </li> 
 
@@ -191,7 +191,7 @@ export default function OurBrand({ onProductClick }) {
                                 href={`/our-brand/product-details?brand_id=2&product_id=11`}
                                 className="hover:underline"
                               >
-                               DeseededDate
+                               Deseeded Date
                               </Link>
                             </li>
 
@@ -200,7 +200,7 @@ export default function OurBrand({ onProductClick }) {
                                 href={`/our-brand/product-details?brand_id=2&product_id=12`}
                                 className="hover:underline"
                               >
-                               PremiumDates
+                               Premium Dates
                               </Link>
                             </li>
                            

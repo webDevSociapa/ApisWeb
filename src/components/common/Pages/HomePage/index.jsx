@@ -361,7 +361,7 @@ export default function HomePage() {
       {/*   */}
       <div className="relative w-full flex items-center flex-col justify-center apiMediaSection overflow-hidden">
         <p className="text-xs md:text-lg text-center text-[#585858] text-[22px] px-4 uppercase font-jost text-medium font-jost font-normal">
-          Stay updated with the latest news, events, and media coverage of APIS India.
+          Stay updated with the latest news, events, and media coverage of AIL.
         </p>
         <p className="text-[20px] md:text-[40px] font-bold text-[#9F7B49]">
           Apis Media
@@ -557,7 +557,7 @@ export default function HomePage() {
           Latest @Apis
         </p>
         <p className="font-medium text-center text-xs md:text-lg text-[#666666] font-medium text-[22px] font-jost sm: -px-4">
-          Discover the newest trends, products, and innovations from APIS India.
+          Discover the newest trends, products, and innovations from AIL.
         </p>
         <div className="py-6 md:py-10 w-[90%] flex items-center justify-center latestApisHome">
           <EmblaCarousel options={OPTIONS}>
@@ -594,7 +594,7 @@ export default function HomePage() {
               </p>
               <div>
                 <p className="font-medium text-xs md:text-lg text-center text-[#666666] font-jost text-medium text-[22px] sm: px-4">
-                  Catch the latest Apis India commercials showcasing the pure
+                  Catch the latest AIL commercials showcasing the pure
                   and natural essence of
                 </p>
                 <p className="font-medium text-xs md:text-lg text-center text-[#666666]  font-jost text-medium text-[22px]">
@@ -658,7 +658,7 @@ export default function HomePage() {
                 Work Place Culture
               </p>
               <p className="text-center text-[12px] md:text-xl font-medium text-[#666666] font-jost font-medium text-justify sm:text-[15px] workCultureApis">
-                At Apis India, we cultivate a collaborative and innovative environment
+                At AIL, we cultivate a collaborative and innovative environment
                 where every team member is encouraged to thrive. We believe in the power
                 of teamwork and the importance of creativity, fostering a culture where
                 ideas are shared openly, and innovation is celebrated. Our inclusive and

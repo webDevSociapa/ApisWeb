@@ -93,7 +93,7 @@ const page = () => {
         make your dine complete with our recipes
       </p>
       <p className="text-center w-[55%] font-jost text-sm  md:text-xl text-[#454545] my-8 rgba(0, 0, 0, 1)">
-        Explore a world of delicious possibilities with Apis India! Our curated
+        Explore a world of delicious possibilities with AIL! Our curated
         recipes, crafted using the finest Apis honey and other natural products,
         are perfect for every palate. Whether you're whipping up a quick snack
         or a gourmet meal, our products bring health, flavor, and quality to
