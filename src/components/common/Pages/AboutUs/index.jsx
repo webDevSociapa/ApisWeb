@@ -131,11 +131,11 @@ export default function AboutUsPage({ }) {
           Purely Crafted Natural Flavors
         </h2>
         <p className="mt-4 text-customDarkGray text-center font-jost text-sm md:text-xl font-medium max-w-4xl mx-auto">
-          Welcome to Apis India, where nature meets quality. We are dedicated to
+          Welcome to AIL, where nature meets quality. We are dedicated to
           bringing you the finest organic products, crafted with care and
           sustainability. Our commitment to purity ensures that every item you
           purchase is free from artificial additives and harmful chemicals. At
-          Apis India, we believe in the power of nature to nourish and enhance
+          AIL, we believe in the power of nature to nourish and enhance
           your well-being. Discover a world of natural goodness with our range
           of high-quality, organic FMCG products, and experience the difference
           that purity makes. Purely Natural, Simply Better.
@@ -284,7 +284,7 @@ export default function AboutUsPage({ }) {
           Journey
         </h3>
         <p className="mt-4 text-customDarkGray text-center font-jost text-sm md:text-xl font-medium max-w-4xl mx-auto sm: px-4">
-          From humble beginnings to a leading FMCG brand, Apis India’s journey
+          From humble beginnings to a leading FMCG brand, AIL's journey
           is defined by a commitment to quality, innovation, and customer
           satisfaction. Join us as we continue to grow and inspire.
         </p>

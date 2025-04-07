@@ -222,7 +222,7 @@ import ShaaneKhajoorBg from "@/assets/images/OurBrands/ShaanEKhajoorBg1.jpg"
 //  import Blog5 from '@/assets/images/our-blog/Blog0.jpg';
 
 
-export const PRODUCT_NAME = "APIS India";
+export const PRODUCT_NAME = "AIL";
 
 export const PRIVATE_ROUTES = [
   {
@@ -315,7 +315,7 @@ export const PRODUCT_DATA = [
         title_desc:
           "Discover The Purest Organic Honey From The Enchanting Valleys Of Kashmir",
         product_desc:
-          "At Apis India, we are dedicated to delivering high-quality FMCG products that enhance your everyday life. With a focus on freshness, innovation, and reliability, our diverse range of products reflects our commitment to excellence and customer satisfaction. Discover the difference with Apis India.",
+          "At AIL, we are dedicated to delivering high-quality FMCG products that enhance your everyday life. With a focus on freshness, innovation, and reliability, our diverse range of products reflects our commitment to excellence and customer satisfaction. Discover the difference with AIL.",
         product_img_1: TrustSlide1,
         product_img_2: HoneyImage11,
         product_img3: TrustSlide1,
@@ -340,7 +340,7 @@ export const PRODUCT_DATA = [
         title_desc:
           "Discover The Purest Organic Honey From The Enchanting Valleys Of Kashmir",
         product_desc:
-          "At Apis India, we are dedicated to delivering high-quality FMCG products that enhance your everyday life. With a focus on freshness, innovation, and reliability, our diverse range of products reflects our commitment to excellence and customer satisfaction. Discover the difference with Apis India.",
+          "At AIL, we are dedicated to delivering high-quality FMCG products that enhance your everyday life. With a focus on freshness, innovation, and reliability, our diverse range of products reflects our commitment to excellence and customer satisfaction. Discover the difference with AIL.",
         product_img_1: HimalayaHoney0001,
         product_img_2: HoneyImage11,
         product_img3: TrustSlide1,
@@ -375,7 +375,7 @@ export const PRODUCT_DATA = [
         title: "",
         title_desc: "",
         product_desc:
-          "At Apis India, we are dedicated to delivering high-quality FMCG products that enhance your everyday life. With a focus on freshness, innovation, and reliability, our diverse range of products reflects our commitment to excellence and customer satisfaction. Discover the difference with Apis India.",
+          "At AIL, we are dedicated to delivering high-quality FMCG products that enhance your everyday life. With a focus on freshness, innovation, and reliability, our diverse range of products reflects our commitment to excellence and customer satisfaction. Discover the difference with AIL.",
         product_img_1: RegularHoney001,
         product_img_2: HimalayaHoney001,
         product_img3: HimalayaHoney0001,
@@ -663,7 +663,7 @@ export const PRODUCT_DATA = [
     products: [
       {
         id: 1,
-        name: "Jam",
+        name: " Fruit Jam",
         img: jam103,
         back_img: NewBannerJam,
         rect_color: "bg-[#7F0416]",
@@ -751,7 +751,7 @@ export const PRODUCT_DATA = [
       //   title: "",
       //   title_desc: "",
       //   product_desc:
-      //     "At Apis India, we are dedicated to delivering high-quality FMCG products that enhance your everyday life. With a focus on freshness, innovation, and reliability, our diverse range of products reflects our commitment to excellence and customer satisfaction. Discover the difference with Apis India.",
+      //     "At AIL, we are dedicated to delivering high-quality FMCG products that enhance your everyday life. With a focus on freshness, innovation, and reliability, our diverse range of products reflects our commitment to excellence and customer satisfaction. Discover the difference with AIL.",
       //   product_img_1: HoneyProduct,
       //   customer_says:
       //     "APIs Himalayan Honey, and it’s exceptional! The honey has a rich, deep flavor with delightful floral undertones that truly reflects its Himalayan origins. Its purity is evident in both taste and texture—smooth and golden without any added sugars or artificial ingredients. I love the natural sweetness it adds to my tea and yogurt, and it’s perfect for drizzling over toast. The packaging is also top-notch, preserving the honey’s freshness. APIs Himalayan Honey has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for high-quality, pure honey with an authentic, flavorful profile.",
@@ -846,14 +846,14 @@ export const NEWS_DATA = [
   {
     img: MediaImage01,
     name: NewsName1,
-    desc: "Apis India Unveils New Product to Drive Fitness.",
+    desc: "AIL Unveils New Product to Drive Fitness.",
     date: "04 JANUARY, 2024 / PRESS RELEASES",
     link: "https://smestreet.in/infocus/apis-india-unveils-new-product-to-drive-fitness-and-wellness-revolution-2318097"
   },
   {
     img: apisNews3,
     name: NewsName3,
-    desc: "Organic Honey from Apis India",
+    desc: "Organic Honey from AIL",
     date: "10 JANUARY, 2024 / PRESS RELEASES",
     link: "https://bwhotelier.com/article/organic-honey-from-apis-india-505447"
   },
@@ -861,14 +861,14 @@ export const NEWS_DATA = [
   {
     img: apisNews4,
     name: NewsName4,
-    desc: "Product launch from APIS India",
+    desc: "Product launch from AIL",
     date: "09 JANUARY, 2024 / PRESS RELEASES",
     link: "https://www.youtube.com/watch?v=8A3SeOYH8ww"
   },
   {
     img: MediaImage02,
     name: NewsName2,
-    desc: "Apis India aims Rs 500 CR revenue in FY25",
+    desc: "AIL aims Rs 500 CR revenue in FY25",
     date: "09 JANUARY, 2024 / PRESS RELEASES",
     link: "https://www.business-standard.com/companies/news/apis-india-to-expand-product-portfolio-aims-rs-500-cr-revenue-in-fy25-124010900680_1.html"
   },
@@ -876,7 +876,7 @@ export const NEWS_DATA = [
   {
     img: apisNews5,
     name: NewsName5,
-    desc: "Apis India launch of Hazelnut Chocolate spread",
+    desc: "AIL launch of Hazelnut Chocolate spread",
     date: "11 APRIL, 2023 / PRESS RELEASES",
     link: "https://www.ifttrade.com/news/Apis-India-expands-its-Spread-Category-with-the-launch-of-Hazelnut-Chocolate-spread"
   },
@@ -893,7 +893,7 @@ export const NEWS_DATA = [
   {
     img: apisNews7,
     name: NewsName6,
-    desc: "Apis India launches Peanut Butter in two variants",
+    desc: "AIL launches Peanut Butter in two variants",
     date: "24 MARCH, 2023 / PRESS RELEASES",
     link: "https://lifeandmore.in/life-style/food/apis-india-launches-peanut-butter/"
   },
@@ -950,7 +950,7 @@ export const NEWS_DATA = [
   {
     img: apisNews10,
     name: NewsName6,
-    desc: "Apis India #ShuddhAurSaccha Campaign                 ",
+    desc: "AIL #ShuddhAurSaccha Campaign                 ",
     date: "14 DECEMBER, 2022 / PRESS RELEASES",
     link: "https://www.uniindia.com/apis-india-launches-shuddhaursaccha-campaign-promoting-its-honey-for-healthy-winters/press-releases/news/2878783.html"
   },
@@ -993,28 +993,28 @@ export const NEWS_DATA = [
     img: apisNews21,
     name: NewsName6,
     desc: "Corperate Coverage Outlook Initiatives",
-    date: "Apis India Limited ",
+    date: "AIL Limited ",
     link: "https://apisindia.com/media/Coporate%20Coverage_Dec_2020%20(2).pdf"
   },
   {
     img: apisNews22,
     name: NewsName6,
     desc: "Times Of India.",
-    date: "feat. Mr. Amit Ananad, Managing Director, Apis India",
+    date: "feat. Mr. Amit Ananad, Managing Director, AIL",
     link: "https://timesofindia.indiatimes.com/business/india-business/after-a-sweet-start-with-apis-honey-apis-india-limited-is-in-expansion-mode-of-its-fmcg-portfolio/articleshow/78905307.cms?utm_source=whatsapp&utm_medium=social&utm_campaign=TOIMobile"
   },
   {
     img: apisNews23,
     name: NewsName6,
     desc: "SMB Story",
-    date: "Feat. Mr. Pankaj Mishra, CEO, Apis India",
+    date: "Feat. Mr. Pankaj Mishra, CEO, AIL",
     link: "https://yourstory.com/smbstory/honey-brand-apis-dabur-patanjali-business"
   },
   {
     img: apisNews24,
     name: NewsName6,
     desc: "Forbes India ",
-    date: "Feat. Mr. Pankaj Mishra, CEO, Apis India ",
+    date: "Feat. Mr. Pankaj Mishra, CEO, AIL ",
     link: "https://www.forbesindia.com/article/brand-connect/pankaj-mishra-ceo-apis-india-driving-growth-and-expansion/62931/1"
   },
   {
@@ -1042,14 +1042,14 @@ export const NEWS_DATA = [
     img: apisNews28,
     name: NewsName6,
     desc: "The most Admirable Brand 2019-20 ",
-    date: "Mr. Amit Anand, MD, Apis India ",
+    date: "Mr. Amit Anand, MD, AIL ",
     link: "https://www.youtube.com/watch?v=J0LitwjNpKs"
   },
   {
     img: apisNews29,
     name: NewsName6,
     desc: "Promising Brand Economic Times 2019 ",
-    date: "Mr. Pankaj Mishra, CEO, Apis India ",
+    date: "Mr. Pankaj Mishra, CEO, AIL ",
     link: "https://www.youtube.com/watch?v=ts9T-KK26Io"
   },
   {
@@ -1304,12 +1304,12 @@ export const Blog_Data = [
                     <a class="mr-2" href="https://blog.apisindia.com/posts/apis-campaign-for-ramadan-speaks-of-personal-well-being/" rel="bookmark"><i class="ion-ios-time-outline"></i> <time class="entry-date published updated" datetime="2023-03-30T09:47:30+00:00">March 30, 2023</time></a><span class="byline"><i class="ion-android-person"></i> <span class="screen-reader-text">Posted by</span><span class="author vcard"><a class="url fn n" href="https://blog.apisindia.com/author/admin/">admin</a></span></span>                </div><!-- .entry-meta -->
             </div><!-- .entry-header -->
                 <div class="entry-content">
-            <p>Apis India has launched a campaign during the holy month of Ramadan.</p>
-<p>The campaign, titled “Ibaadat Ke Iss Mahine Rakhein Sehat Ka Saath”, aims to promote individual well-being by blending the spiritual and personal aspects of Ramadan through Apis India’s range of dates clubbed with other relevant products consumed in the month of Ramadan. Beyond just health, the campaign also celebrates the community bond that Ramadan brings together.</p>
+            <p>AIL has launched a campaign during the holy month of Ramadan.</p>
+<p>The campaign, titled “Ibaadat Ke Iss Mahine Rakhein Sehat Ka Saath”, aims to promote individual well-being by blending the spiritual and personal aspects of Ramadan through AIL’s range of dates clubbed with other relevant products consumed in the month of Ramadan. Beyond just health, the campaign also celebrates the community bond that Ramadan brings together.</p>
 <p>As part of its digital campaign for Ramadan, Apis is implementing a multifaceted strategy that includes a variety of initiatives. In addition to the ongoing social media campaign, the brand has planned a Pan-India contest and an influencer campaign on social media. These efforts are designed to engage with a wide audience and promote the brand’s message of overall well-being during the holy month.</p>
 <p>The contest invites participants to create unique recipes using Apis dates and other products for sehri and iftar promoting the diverse delicacies of the season through the brand.</p>
-<p>As part of Apis India’s “Ibaadat Ke Iss Mahine Rakhein Sehat Ka Saath” campaign, the brand’s social media strategy includes an online contest that leverages the overarching narrative.</p>
-<p>Being a social media contest that engages the community, Apis India is also relying on other factors to reach out to a broader community. Through influencers from the Muslim community, the brand aims to spread awareness, while maximising the influencers by using them as a catalyst to boost the activity. The brand is also focusing on targeted ads during this holy month to amplify its online campaign.</p>
+<p>As part of AIL’s “Ibaadat Ke Iss Mahine Rakhein Sehat Ka Saath” campaign, the brand’s social media strategy includes an online contest that leverages the overarching narrative.</p>
+<p>Being a social media contest that engages the community, AIL is also relying on other factors to reach out to a broader community. Through influencers from the Muslim community, the brand aims to spread awareness, while maximising the influencers by using them as a catalyst to boost the activity. The brand is also focusing on targeted ads during this holy month to amplify its online campaign.</p>
 <p>To expand its reach beyond the digital sphere, the brand also includes hoardings, billboards, and banners to complement the social media campaign. In addition, the brand will organise an on-ground activity inspired by its video advertisement which conveyed the message of togetherness across religious lines and promoted the brand as an icon bringing people together.</p>
 <p>The on-ground activity will see Apis visiting areas in the national capital with a significant Muslim population and distributing hampers containing Apis Dates and other products to the underprivileged during iftar. Through this initiative, Apis aims to increase consumer awareness about the significance of physical well-being during Ramadan and create a deeper bond within the community. By leveraging its campaign, Apis hopes to make a lasting impact on individuals and communities across the country.</p>
     </div>`
@@ -1393,15 +1393,15 @@ export const Blog_Data = [
                     <a class="mr-2" href="https://blog.apisindia.com/posts/apis-india-launches-shuddhaursaccha-campaign-promoting-its-honey-for-healthy-winters/" rel="bookmark"><i class="ion-ios-time-outline"></i> <time class="entry-date published updated" datetime="2022-12-14T13:26:01+00:00">December 14, 2022</time></a><span class="byline"><i class="ion-android-person"></i> <span class="screen-reader-text">Posted by</span><span class="author vcard"><a class="url fn n" href="https://blog.apisindia.com/author/admin/">admin</a></span></span>                </div><!-- .entry-meta -->
             </div><!-- .entry-header -->
                 <div class="entry-content">
-            <p>Apis India Limited launches #ShuddhAurSaccha, a campaign to appeal to its audience by promoting their Honey. Through this, the brand wishes to send a healthy message to its audience and especially to parents for their children. The campaign film portrays a mother and her son at a supermarket browsing where the son is shown to have picked up something, which he hides from his mother’s questioning eyes and the film then builds on that premise. The film acts as a reassuring message that Apis Himalaya Honey is pure, true, and the right fit for everyone as it helps boost immunity relaxes the body, aids in detoxification, is good for the skin, helps in weight management, and even improves digestion. The brand is promoting the product as the one pleasant and healthy item that everyone must have in their diet to maintain a strong immune system and avoid coughing and colds now that winter has arrived.</p>
+            <p>AIL Limited launches #ShuddhAurSaccha, a campaign to appeal to its audience by promoting their Honey. Through this, the brand wishes to send a healthy message to its audience and especially to parents for their children. The campaign film portrays a mother and her son at a supermarket browsing where the son is shown to have picked up something, which he hides from his mother’s questioning eyes and the film then builds on that premise. The film acts as a reassuring message that Apis Himalaya Honey is pure, true, and the right fit for everyone as it helps boost immunity relaxes the body, aids in detoxification, is good for the skin, helps in weight management, and even improves digestion. The brand is promoting the product as the one pleasant and healthy item that everyone must have in their diet to maintain a strong immune system and avoid coughing and colds now that winter has arrived.</p>
 <p>The campaign is being launched across various platforms including TVC, Digital Promotion, Radio Campaigns, Outdoor marketing, and much more. To amplify the campaign’s reach, the brand will be promoting a jingle to be run across various radio channels and to promote a positive impact throughout its tone, the jingle has been created with an upbeat tune, with voices that complement the slogan-Shuddh Aur Saccha, Sehat Ke Liye Accha. In order to reinforce the association of Apis Himalaya Honey with health benefits and to position the product as the foremost choice, the brand has invested in the right storytelling to capture the attention of consumers. Through this jingle, the brand wishes to reinforce the idea that Apis Honey will make breakfasts healthier &amp; yummier because after all, the product is pure, true, and good for everyone’s health.</p>
-<p>Apis India will also launch this campaign across digital mediums through social media marketing campaign and will also be collaborating with numerous influencers ranging from master chefs to lifestyle influencers, fitness, and food bloggers in order to further position Apis Himalaya Honey for its health benefits during this season.</p>
+<p>AIL will also launch this campaign across digital mediums through social media marketing campaign and will also be collaborating with numerous influencers ranging from master chefs to lifestyle influencers, fitness, and food bloggers in order to further position Apis Himalaya Honey for its health benefits during this season.</p>
 <p>Other than that, the brand has also introduced its new mascot for Apis Honey a friendly honey bee that can be easily associated with positivity in connection to the goodness that the product brings. The mascot was also ideated to reflect the brand’s identity in providing pure honey to consumers.</p>
-<p>Commenting on the campaign, Mr. Amit Anand, MD of Apis India Ltd. said, Consumers have become more aware of their health requirements in the last two years and have been actively going for healthy alternatives. With the coming winter season, the time of the year when immunity tends to weaken, we are hoping to make parents more aware by promoting this campaign. Apis India has made a reputation for itself in the FMCG sector, thanks to its incredible value proposition, a solid leadership group, and incredibly competent staff ”. As it continues to its centennial year in 2024, the brand remains to be the first choice for consumers among honey-makers who contribute to the health of millions of Indians and consumers around the world.</p>
+<p>Commenting on the campaign, Mr. Amit Anand, MD of AIL Ltd. said, Consumers have become more aware of their health requirements in the last two years and have been actively going for healthy alternatives. With the coming winter season, the time of the year when immunity tends to weaken, we are hoping to make parents more aware by promoting this campaign. AIL has made a reputation for itself in the FMCG sector, thanks to its incredible value proposition, a solid leadership group, and incredibly competent staff ”. As it continues to its centennial year in 2024, the brand remains to be the first choice for consumers among honey-makers who contribute to the health of millions of Indians and consumers around the world.</p>
 <p>Marketing agency Sociapa who has been partners with the brand for the last 3 years and has planned and executed the campaign, says, “It feels extremely proud and honored to be a part of the brand. We are extremely hopeful that the audience will very well resonate with the brand’s ideology which is being communicated via #ShuddhAurSaccha”.</p>
-<p>Apis India’s journey begins in 1924 and over the decades it had built up a reliable reputation. Since 2016 the brand has forayed into the B2C aspect with over three decades worth of experience sourcing and processing honey. The company has over 5,000 registered beekeepers across 15 states where honey is sourced from and processed at a state-of-the-art manufacturing facility spread across 7 acres in Roorkee, Uttarakhand.</p>
+<p>AIL’s journey begins in 1924 and over the decades it had built up a reliable reputation. Since 2016 the brand has forayed into the B2C aspect with over three decades worth of experience sourcing and processing honey. The company has over 5,000 registered beekeepers across 15 states where honey is sourced from and processed at a state-of-the-art manufacturing facility spread across 7 acres in Roorkee, Uttarakhand.</p>
 <p>With the growing concerns of people consuming sugar which has led to ill effects on the body, the company leveraged the benefits of honey to promote its unique Apis Himalaya Honey brand.</p>
-<p>Currently, the company is positioned as one of the top three honey brands with over 4 lakh conventional retail outlets. When it comes to Apis Honey, it is easy to associate it with marking the standards of purity. Apis India holds numerous certifications promoting its purity which includes BRC Global, APEDA, NON-GMO, KOSHER, and ISO 22000 by Intertek. It is also FSSAI compliant and registered with USFDA. According to the company, its honey is also free from any additional preservatives and additives, so consumers may enjoy the pure taste of honey with its health benefits like – weight loss, protection from cold &amp; cough, improved metabolism, and rich source of antioxidants and nutrients.</p>
+<p>Currently, the company is positioned as one of the top three honey brands with over 4 lakh conventional retail outlets. When it comes to Apis Honey, it is easy to associate it with marking the standards of purity. AIL holds numerous certifications promoting its purity which includes BRC Global, APEDA, NON-GMO, KOSHER, and ISO 22000 by Intertek. It is also FSSAI compliant and registered with USFDA. According to the company, its honey is also free from any additional preservatives and additives, so consumers may enjoy the pure taste of honey with its health benefits like – weight loss, protection from cold &amp; cough, improved metabolism, and rich source of antioxidants and nutrients.</p>
 <p>&nbsp;</p>
     </div>`
 
@@ -2100,7 +2100,7 @@ export const CORPORATE_GOVERNANACE = [
   },
   {
     id: 7,
-    name: "APIS INDIA CSR POLICY",
+    name: "AIL CSR POLICY",
     path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_governance/APIS-INDIA-LMITED-CSR-Policy-%5B165606%5D.pdf"
   },
   {
@@ -2151,7 +2151,7 @@ export const CODE_OF_CONDUCT = [
   },
   {
     id: 3,
-    name: "Code of Conduct for Board of Directors and Senior Management of ‘APIS India Limited’",
+    name: "Code of Conduct for Board of Directors and Senior Management of ‘AIL Limited’",
     path: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/code_of_conduct/Code_of_conduct+(2).pdf"
   }
 ];
@@ -3515,7 +3515,7 @@ export const HEALTH_BENEFITS = [
     id: 3,
     title: "Sustainability",
     name: "Boosts Immunity",
-    desc: "Apis India’s honey is a testament to sustainable beekeeping practices that support environmental health and local communities. By choosing our honey, you contribute to eco-friendly methods that protect both nature and livelihoods.",
+    desc: "AIL’s honey is a testament to sustainable beekeeping practices that support environmental health and local communities. By choosing our honey, you contribute to eco-friendly methods that protect both nature and livelihoods.",
     img: Sustain,
     shadowClass: "shadow-custom-rama",
     color: "bg-[#416E7C]",
@@ -4125,7 +4125,7 @@ export const Terms_Conditions = [
                             <div class="col-md-4">
                                 <div class="investor_yellow">
                                     <h4 class="h4">Corporate Governance</h4>
-                                    <p>APIS INDIA CSR POLICY</p>
+                                    <p>AIL CSR POLICY</p>
                                     <a href="pdf/APIS-INDIA-LMITED-CSR-Policy-[165606].pdf" target="_blank" class="apisbtn hvr-sweep-to-right">View / Download</a>
                                 </div><!-- investor_yellow -->
                             </div>

@@ -17,7 +17,7 @@ import Newsletter from "@/components/common/Layout/Newsletter";
 
 export const metadata = {
   title: PRODUCT_NAME,
-  description: "Apis India",
+  description: "AIL",
 };
 
 const bebas = Bebas_Neue({

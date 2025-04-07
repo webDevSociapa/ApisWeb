@@ -48,7 +48,7 @@ export default function ApisInTheNews() {
                     Apis in the News
                 </p>
                 <p className="text-sm w-[95%]  md:text-xl md:w-[70%] md:leading-8 mt-3  md:mt-6 text-center font-jost">
-                    Apis India has consistently shined in the news, with press releases
+                    AIL has consistently shined in the news, with press releases
                     highlighting our commitment to quality, innovation, and
                     sustainability. Our brand’s achievements and initiatives capture media
                     attention and resonate with audiences.

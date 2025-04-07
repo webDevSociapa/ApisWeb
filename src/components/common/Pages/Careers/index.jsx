@@ -293,6 +293,8 @@ export default function Careers() {
     setShowSuccess(false);
   };
 
+
+
   return (
     <>
       <ImageBanner banner={Banner} />
@@ -301,7 +303,7 @@ export default function Careers() {
           Life @Apis
         </p>
         <p className="text-sm w-[95%]  md:text-xl md:w-[70%] md:leading-8 mt-3  md:mt-6 text-center font-jost">
-          At Apis India, we foster a collaborative and innovative work culture
+          At AIL, we foster a collaborative and innovative work culture
           where every team member's ideas are valued, and growth opportunities
           are embraced with enthusiasm.
         </p>
@@ -341,7 +343,7 @@ export default function Careers() {
                 Join Us
               </p>
               <p className="text-center text-xs md:text-lg text-[#353535] mt-4 w-[90%] md:w-[80%]">
-                Join us at Apis India and become part of a dynamic team where
+                Join us at AIL and become part of a dynamic team where
                 innovation, collaboration, and personal growth are at the heart
                 of everything we do
               </p>

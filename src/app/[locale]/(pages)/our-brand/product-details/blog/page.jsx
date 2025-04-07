@@ -69,7 +69,7 @@ const page = () => {
         The blog
       </p>
       <p className="text-center w-[55%] font-jost text-sm  md:text-xl text-[#454545] my-8">
-        Welcome to the Apis India blog, your go-to resource for all things
+        Welcome to the AIL blog, your go-to resource for all things
         related to health, nutrition, and culinary inspiration. Here, we share
         expert tips, delicious recipes, and the latest trends to help you make
         the most of our premium products. Our blog is designed to inform and
