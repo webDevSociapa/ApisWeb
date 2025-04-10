@@ -216,7 +216,8 @@ import PremiumDatesBg from "@/assets/images/OurBrands/PremiumDatesBg1.jpg"
 import SelectDateBg from "@/assets/images/OurBrands/SelectDateBg1.jpg"
 import ShaaneKhajoorBg from "@/assets/images/OurBrands/ShaanEKhajoorBg1.jpg"
 import GGPBanner from "@/assets/images/OurBrands/ggpbanner.png"
-import ggpProduct from "@/assets/images/OurBrands/ggpproduct.png"
+import ggpProduct from "@/assets/images/OurBrands/newggpProduct.png"
+import newGGP02 from "@/assets/images/OurBrands/newggp02.png"
 
 // import OrganicHoneyMenu from "@/assets/images"
 
@@ -813,7 +814,7 @@ export const PRODUCT_DATA = [
       {
         id: 3,
         name: "GGP",
-        img: Saffron,
+        img: newGGP02,
         back_img: GGPBanner,
         rect_color: "bg-[#C62A05]",
         title_color: "text-[#C62A05]",
