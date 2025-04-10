@@ -215,6 +215,8 @@ import KalmiDatesBg from "@/assets/images/OurBrands/KalmiDatesBg1.jpg"
 import PremiumDatesBg from "@/assets/images/OurBrands/PremiumDatesBg1.jpg"
 import SelectDateBg from "@/assets/images/OurBrands/SelectDateBg1.jpg"
 import ShaaneKhajoorBg from "@/assets/images/OurBrands/ShaanEKhajoorBg1.jpg"
+import GGPBanner from "@/assets/images/OurBrands/ggpbanner.png"
+import ggpProduct from "@/assets/images/OurBrands/ggpproduct.png"
 
 // import OrganicHoneyMenu from "@/assets/images"
 
@@ -799,6 +801,31 @@ export const PRODUCT_DATA = [
         product_desc:
           "Purity defines our saffron. We meticulously source only the finest saffron threads, ensuring that each strand delivers unparalleled richness and vibrant color. Our saffron is free from additives and artificial enhancements, preserving its natural essence and aromatic depth. This commitment to purity means that every pinch of Apis Saffron adds an authentic, luxurious touch to your culinary creations. Whether enhancing a dish or crafting a delicate infusion, you can trust that our saffron embodies the true essence of purity, elevating your recipes with its exceptional quality and flavor.",
         product_img_1: Saffron102,
+        product_img_2: SafronProductMenu,
+        customer_says:
+          "I’m absolutely thrilled with the quality! The saffron threads are vibrant and fragrant, infusing my dishes with a rich, authentic flavor and beautiful color. The purity of the product is evident, with no artificial additives or fillers—just pure, high-quality saffron. It adds a luxurious touch to both savory and sweet recipes, enhancing them with its unique aroma and depth. Apis Saffron has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for premium saffron that truly delivers on both flavor and purity.",
+        health_benefits:
+          "Saffron contains compounds like crocin and safranal, which have been shown to positively affect mood and may help alleviate symptoms of depression and anxiety. Regular consumption can contribute to improved emotional well-being.",
+        primary_color: "",
+        secondary_color: "",
+      },
+
+      {
+        id: 3,
+        name: "GGP",
+        img: Saffron,
+        back_img: GGPBanner,
+        rect_color: "bg-[#C62A05]",
+        title_color: "text-[#C62A05]",
+        desc_color: "text-white",
+        title: "Apis Saffron",
+        link:"https://www.amazon.in/Apis-Saffron-Kesar/dp/B08NFFST31",
+        saysImage:saffron101,
+        title_desc:
+          "Elevate your dishes with the exquisite richness and vibrant color of our premium saffron",
+        product_desc:
+          "Purity defines our saffron. We meticulously source only the finest saffron threads, ensuring that each strand delivers unparalleled richness and vibrant color. Our saffron is free from additives and artificial enhancements, preserving its natural essence and aromatic depth. This commitment to purity means that every pinch of Apis Saffron adds an authentic, luxurious touch to your culinary creations. Whether enhancing a dish or crafting a delicate infusion, you can trust that our saffron embodies the true essence of purity, elevating your recipes with its exceptional quality and flavor.",
+        product_img_1: ggpProduct,
         product_img_2: SafronProductMenu,
         customer_says:
           "I’m absolutely thrilled with the quality! The saffron threads are vibrant and fragrant, infusing my dishes with a rich, authentic flavor and beautiful color. The purity of the product is evident, with no artificial additives or fillers—just pure, high-quality saffron. It adds a luxurious touch to both savory and sweet recipes, enhancing them with its unique aroma and depth. Apis Saffron has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for premium saffron that truly delivers on both flavor and purity.",
