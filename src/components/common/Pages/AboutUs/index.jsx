@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import PropTypes from "prop-types";
-import Banner from "@/assets/images/AboutUs/aboutUsNewBanner.png";
+import Banner from "@/assets/images/AboutUs/mainAboutusBanner.png";
 import MissionBanner from "@/assets/images/AboutUs/missionVission.png";
 import Ring1 from "@/assets/images/OurBrands/Ring-4.png";
 import Curv from "@/assets/images/AboutUs/Curv.png";
