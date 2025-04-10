@@ -688,7 +688,7 @@ export const PRODUCT_DATA = [
       },
       {
         id: 2,
-        name: "Flakes",
+        name: "Cereals",
         img: cornFlakes103,
         back_img: chocoFlakes001,
         rect_color: "bg-[#CC5500]",
