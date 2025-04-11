@@ -133,8 +133,6 @@ export default function Media() {
     }
     tvcHome()
   },[])
-
-
   return (
     <>
       {/* Banner Section */}

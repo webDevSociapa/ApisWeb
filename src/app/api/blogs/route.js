@@ -15,7 +15,7 @@ const s3 = new AWS.S3({
     region: process.env.AWS_REGION 
 });
 
-const bucketName = process.env.AWS_BUCKET_NAME;
+const bucketName = "apisindia";
 
 async function connectToDb() {
     await client.connect();
