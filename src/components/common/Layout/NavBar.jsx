@@ -16,7 +16,7 @@ import CareerMini from "@/assets/images/Careers/CareerMini.png"
 import MediaMini from "@/assets/images/Media/MediaMini.png"
 import sustainabilityMini from "@/assets/images/sustainabilityMini.png"
 import ResourcesMini from "@/assets/images/resourcesMini.png"
-import ContactusMini from "@/assets/images/ContactUs/TouchMini.png"
+import ContactusMini from "@/assets/images/ContactUs/new-contact-small.png"
 
 const NavBar = ({ className, linkClass }) => {
   const routerPath = usePathname();
