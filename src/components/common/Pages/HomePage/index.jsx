@@ -556,9 +556,10 @@ export default function HomePage() {
         <p className="text-bold text-[20px] text-center text-[#9F7B49] md:text-[40px] font-bold text-[20px] font-literata">
           Latest @Apis
         </p>
-        <p className="font-medium text-center text-xs md:text-lg text-[#666666] font-medium text-[22px] font-jost sm: -px-4">
-          Discover the newest trends, products, and innovations from AIL.
-        </p>
+        <p className="font-medium text-center text-xs md:text-lg text-[#666666] text-[22px] font-jost pb-[25px] sm:pb-0 -px-4">
+  Discover the newest trends, products, and innovations from AIL.
+</p>
+
         <div className="py-6 md:py-10 w-[90%] flex items-center justify-center latestApisHome">
           <EmblaCarousel options={OPTIONS}>
             {latestApis.map((itm, index) => (
@@ -647,8 +648,8 @@ export default function HomePage() {
       </div>
 
       {/* Work Place Culture */}
-      <div className="work-palace flex items-center justify-center px-4 py-4 lg:px-48 lg:py-48">
-        <div className="h-full bg-[#FFF9F0] p-4">
+      <div className="work-palace mt-[152px] lg:mt-0 flex items-center justify-center px-4 py-4 lg:px-48 lg:py-48">
+      <div className="h-full bg-[#FFF9F0] p-4">
           <div className="flex h-full items-center justify-center bg-white p-3">
             <div className="bg-white flex flex-col gap-2 md:gap-4">
               <p className="text-center text-[22px] md:text-xl font-medium text-[#585858] font-jost text-medium sm: text-[12px] text-medium">

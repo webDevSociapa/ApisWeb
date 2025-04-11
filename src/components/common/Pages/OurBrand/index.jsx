@@ -29,7 +29,7 @@ export default function OurBrand({ onProductClick }) {
   }, []);
 
   return (
-    <div className="relative bg-white p-6">
+    <div className="relative bg-white p-6 mx-5">
       {/* Tabs Section */}
       <div className="flex justify-center gap-8 border-b-2 border-[#9F7B49] pb-4">
         {TAB_DATA.map((tab, index) => (
@@ -60,7 +60,7 @@ export default function OurBrand({ onProductClick }) {
             {/* Products List */}
             <div className="space-y-2">
               {brand.products
-                .filter((product) => product.name !== "Apis Organic Honey" && product.name !== "Royal Zahidi" && product.name !== "Shehenshah Date" && product.name !== "Arabian Pearls Date" && product.name !== "Select Date" && product.name !== "ClassicDate" && product.name !== "Shaan e Khajoor" && product.name !== "KalmiDates" && product.name !=="DesertBliss" && product.name !== "DeseededDate" && product.name !== "Premium Dates" ) 
+                .filter((product) => product.name !== "Apis Organic Honey" && product.name !== "Royal Zahidi" && product.name !== "Shehenshah Date" && product.name !== "Arabian Pearls Date" && product.name !== "Select Date" && product.name !== "ClassicDate" && product.name !== "Shaan e Khajoor" && product.name !== "KalmiDates" && product.name !== "DesertBliss" && product.name !== "DeseededDate" && product.name !== "Premium Dates")
                 .map((product) => (
                   <div key={product.id} className="relative group">
                     <button
@@ -88,7 +88,7 @@ export default function OurBrand({ onProductClick }) {
                                 href={`/our-brand/product-details?brand_id=1&product_id=2`}
                                 className="hover:underline"
                               >
-                               Himalaya Honey
+                                Himalaya Honey
                               </Link>
                             </li>
                             <li>
@@ -96,7 +96,7 @@ export default function OurBrand({ onProductClick }) {
                                 href={`/our-brand/product-details?brand_id=2&product_id=1`}
                                 className="hover:underline"
                               >
-                              Regular Honey
+                                Regular Honey
                               </Link>
                             </li>
                             <li>
@@ -104,7 +104,7 @@ export default function OurBrand({ onProductClick }) {
                                 href={`/our-brand/product-details?brand_id=2&product_id=1`}
                                 className="text-gray-400 opacity-50 cursor-not-allowed"
                               >
-                              Infused Honey
+                                Infused Honey
                               </Link>
                             </li>
                           </ul>
@@ -122,7 +122,7 @@ export default function OurBrand({ onProductClick }) {
                                 href={`/our-brand/product-details?brand_id=2&product_id=3`}
                                 className="hover:underline"
                               >
-                               Shahenshah Dates
+                                Shahenshah Dates
                               </Link>
                             </li>
                             <li>
@@ -130,7 +130,7 @@ export default function OurBrand({ onProductClick }) {
                                 href={`/our-brand/product-details?brand_id=2&product_id=7`}
                                 className="hover:underline"
                               >
-                               Royal Zahidi
+                                Royal Zahidi
                               </Link>
                             </li>
                             <li>
@@ -138,7 +138,7 @@ export default function OurBrand({ onProductClick }) {
                                 href={`/our-brand/product-details?brand_id=2&product_id=4`}
                                 className="hover:underline"
                               >
-                               Arabian Dates
+                                Arabian Dates
                               </Link>
                             </li>
                             <li>
@@ -155,7 +155,7 @@ export default function OurBrand({ onProductClick }) {
                                 href={`/our-brand/product-details?brand_id=2&product_id=6`}
                                 className="hover:underline"
                               >
-                               Classic Date
+                                Classic Date
                               </Link>
                             </li>
 
@@ -164,7 +164,7 @@ export default function OurBrand({ onProductClick }) {
                                 href={`/our-brand/product-details?brand_id=2&product_id=8`}
                                 className="hover:underline"
                               >
-                               Shaan e Khajoor
+                                Shaan e Khajoor
                               </Link>
                             </li>
 
@@ -173,16 +173,16 @@ export default function OurBrand({ onProductClick }) {
                                 href={`/our-brand/product-details?brand_id=2&product_id=9`}
                                 className="hover:underline"
                               >
-                               Kalmi Dates
+                                Kalmi Dates
                               </Link>
-                            </li> 
+                            </li>
 
                             <li>
                               <Link
                                 href={`/our-brand/product-details?brand_id=2&product_id=10`}
                                 className="hover:underline"
                               >
-                               DesertBliss
+                                DesertBliss
                               </Link>
                             </li>
 
@@ -191,7 +191,7 @@ export default function OurBrand({ onProductClick }) {
                                 href={`/our-brand/product-details?brand_id=2&product_id=11`}
                                 className="hover:underline"
                               >
-                               Deseeded Date
+                                Deseeded Date
                               </Link>
                             </li>
 
@@ -200,10 +200,10 @@ export default function OurBrand({ onProductClick }) {
                                 href={`/our-brand/product-details?brand_id=2&product_id=12`}
                                 className="hover:underline"
                               >
-                               Premium Dates
+                                Premium Dates
                               </Link>
                             </li>
-                           
+
                           </ul>
                         </div>
                       </div>
