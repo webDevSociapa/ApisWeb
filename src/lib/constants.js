@@ -252,7 +252,7 @@ export const PATH_DATA = [
   },
   {
     url: "/about-us",
-    name: "About Us", 
+    name: "About Us",
   },
   {
     url: "/our-brand",
@@ -313,12 +313,12 @@ export const PRODUCT_DATA = [
         title_color: "text-[#9F7B49]",
         desc_color: "text-black",
         title: "Apis Organic Honey",
-        link:"https://www.amazon.in/Apis-Organic-honey-450gm-Certified/dp/B0CS6WWLDD",
-        saysImage:HandDrawnHoney,
+        link: "https://www.amazon.in/Apis-Organic-honey-450gm-Certified/dp/B0CS6WWLDD",
+        saysImage: HandDrawnHoney,
         title_desc:
           "Discover The Purest Organic Honey From The Enchanting Valleys Of Kashmir",
         product_desc:
-          "At AIL, we are dedicated to delivering high-quality FMCG products that enhance your everyday life. With a focus on freshness, innovation, and reliability, our diverse range of products reflects our commitment to excellence and customer satisfaction. Discover the difference with AIL.",
+          "Introducing Apis Organic Honey, sourced from the serene valleys of Kashmir. Our commitment to preserving this liquid gold ensures that every drop reflects the pristine beauty of the region.Nestled in the Himalayan foothills, Kashmir's valleys are famous for their fertile soil and diverse wildflowers. In this enchanting environment, our bees forage among a plethora of flowers, producing exceptional organic honey.Our meticulous organic farming practices avoid synthetic chemicals, ensuring our bees thrive in a toxin-free environment. This dedication protects our bees and preserves the natural purity of our honey",
         product_img_1: TrustSlide1,
         product_img_2: HoneyImage11,
         product_img3: TrustSlide1,
@@ -338,8 +338,8 @@ export const PRODUCT_DATA = [
         title_color: "text-[#9F7B49]",
         desc_color: "text-black",
         title: "Apis Organic Honey",
-        link:"https://www.amazon.in/Apis-Organic-honey-450gm-Certified/dp/B0CS6WWLDD",
-        saysImage:HandDrawnHoney,
+        link: "https://www.amazon.in/Apis-Organic-honey-450gm-Certified/dp/B0CS6WWLDD",
+        saysImage: HandDrawnHoney,
         title_desc:
           "Discover The Purest Organic Honey From The Enchanting Valleys Of Kashmir",
         product_desc:
@@ -356,8 +356,8 @@ export const PRODUCT_DATA = [
       },
     ],
 
-    
-    },
+
+  },
 
 
   {
@@ -372,9 +372,9 @@ export const PRODUCT_DATA = [
         rect_color: "bg-[#FFC660]",
         title_color: "text-[#9F7B49]",
         desc_color: "text-black",
-        saysImage:newDates101,
-        saysImage:HandDrawnHoney,
-        link:"https://www.amazon.in/Apis-Organic-honey-450gm-Certified/dp/B0CS6WWLDD/ref=sr_1_1_sspa?crid=219JTIFPTZQV0&dib=eyJ2IjoiMSJ9.7R3mQ34PIwgZkHqRRgwEjVWlVCDaeYA_gMiIp7z_xR9gL3YKL6Dh8Q0O4bLs1p3RyxpxPRRX7OmtSgZoL4ybDSLGwvSlhjMGL0BCl7HkvhLFCVfH2LQNxsak5PVF2GYJC7vRfW2qfPWk-OLU_WiU8F_lJXSsBqIVuDTE9hph-qVmdJI5boCvzNzVI_XkHUfDHnghRopggMDYgQaphGr5SLt_zC-AlDu6wm0hTnXEyk5fRTgDdZCUzk69fbZ33_f8yHyE8xnlaHZR5J0zpUs6Wa5yOmTg4h33s3hu6KKwnts.LhdhmHfem2YrWbVRD7ObAzhChsuUnKmokbketoIX2gg&dib_tag=se&keywords=organic+honey+apis&qid=1735901474&sprefix=organic+honey+apis%2Caps%2C209&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1https://www.amazon.in/Apis-Organic-honey-450gm-Certified/dp/B0CS6WWLDD/ref=sr_1_1_sspa?crid=219JTIFPTZQV0&dib=eyJ2IjoiMSJ9.7R3mQ34PIwgZkHqRRgwEjVWlVCDaeYA_gMiIp7z_xR9gL3YKL6Dh8Q0O4bLs1p3RyxpxPRRX7OmtSgZoL4ybDSLGwvSlhjMGL0BCl7HkvhLFCVfH2LQNxsak5PVF2GYJC7vRfW2qfPWk-OLU_WiU8F_lJXSsBqIVuDTE9hph-qVmdJI5boCvzNzVI_XkHUfDHnghRopggMDYgQaphGr5SLt_zC-AlDu6wm0hTnXEyk5fRTgDdZCUzk69fbZ33_f8yHyE8xnlaHZR5J0zpUs6Wa5yOmTg4h33s3hu6KKwnts.LhdhmHfem2YrWbVRD7ObAzhChsuUnKmokbketoIX2gg&dib_tag=se&keywords=organic+honey+apis&qid=1735901474&sprefix=organic+honey+apis%2Caps%2C209&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1",
+        saysImage: newDates101,
+        saysImage: HandDrawnHoney,
+        link: "https://www.amazon.in/Apis-Organic-honey-450gm-Certified/dp/B0CS6WWLDD/ref=sr_1_1_sspa?crid=219JTIFPTZQV0&dib=eyJ2IjoiMSJ9.7R3mQ34PIwgZkHqRRgwEjVWlVCDaeYA_gMiIp7z_xR9gL3YKL6Dh8Q0O4bLs1p3RyxpxPRRX7OmtSgZoL4ybDSLGwvSlhjMGL0BCl7HkvhLFCVfH2LQNxsak5PVF2GYJC7vRfW2qfPWk-OLU_WiU8F_lJXSsBqIVuDTE9hph-qVmdJI5boCvzNzVI_XkHUfDHnghRopggMDYgQaphGr5SLt_zC-AlDu6wm0hTnXEyk5fRTgDdZCUzk69fbZ33_f8yHyE8xnlaHZR5J0zpUs6Wa5yOmTg4h33s3hu6KKwnts.LhdhmHfem2YrWbVRD7ObAzhChsuUnKmokbketoIX2gg&dib_tag=se&keywords=organic+honey+apis&qid=1735901474&sprefix=organic+honey+apis%2Caps%2C209&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1https://www.amazon.in/Apis-Organic-honey-450gm-Certified/dp/B0CS6WWLDD/ref=sr_1_1_sspa?crid=219JTIFPTZQV0&dib=eyJ2IjoiMSJ9.7R3mQ34PIwgZkHqRRgwEjVWlVCDaeYA_gMiIp7z_xR9gL3YKL6Dh8Q0O4bLs1p3RyxpxPRRX7OmtSgZoL4ybDSLGwvSlhjMGL0BCl7HkvhLFCVfH2LQNxsak5PVF2GYJC7vRfW2qfPWk-OLU_WiU8F_lJXSsBqIVuDTE9hph-qVmdJI5boCvzNzVI_XkHUfDHnghRopggMDYgQaphGr5SLt_zC-AlDu6wm0hTnXEyk5fRTgDdZCUzk69fbZ33_f8yHyE8xnlaHZR5J0zpUs6Wa5yOmTg4h33s3hu6KKwnts.LhdhmHfem2YrWbVRD7ObAzhChsuUnKmokbketoIX2gg&dib_tag=se&keywords=organic+honey+apis&qid=1735901474&sprefix=organic+honey+apis%2Caps%2C209&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1",
         title: "",
         title_desc: "",
         product_desc:
@@ -383,14 +383,14 @@ export const PRODUCT_DATA = [
         product_img_2: HimalayaHoney001,
         product_img3: HimalayaHoney0001,
         product_img4: HimalayaHoney0001,
-        title:"Regular Honey",
+        title: "Regular Honey",
         customer_says:
           "Apis Honey, and it’s exceptional! The honey has a rich, deep flavor with delightful floral undertones that truly reflects its Himalayan origins. Its purity is evident in both taste and texture—smooth and golden without any added sugars or artificial ingredients. I love the natural sweetness it adds to my tea and yogurt, and it’s perfect for drizzling over toast. The packaging is also top-notch, preserving the honey’s freshness. Apis Honey has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for high-quality, pure honey with an authentic, flavorful profile.",
         health_benefits:
           "Honey has been used for aesthetic purposes especially to return vigour and beauty to skin. When applied together with milk, honey creates a smooth, flawless skin. Real honey is also used for softening hair texture and for glowing skin.",
         primary_color: "",
         secondary_color: "",
-        shelfLife:"24 months"
+        shelfLife: "24 months"
       },
       {
         id: 2,
@@ -400,10 +400,10 @@ export const PRODUCT_DATA = [
         title_color: "",
         desc_color: "",
         back_img: NewProductBannerDates,
-        saysImage:newDates101,
+        saysImage: newDates101,
         title: "",
         title_desc: "",
-        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        link: "https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
           "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
         product_img_1: DatesProducts,
@@ -424,10 +424,10 @@ export const PRODUCT_DATA = [
         title_color: "",
         desc_color: "",
         back_img: ShehenshahBG,
-        saysImage:newDates101,
+        saysImage: newDates101,
         title: "",
         title_desc: "",
-        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        link: "https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
           " Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
         product_img_1: DatesV10,
@@ -447,10 +447,10 @@ export const PRODUCT_DATA = [
         title_color: "",
         desc_color: "",
         back_img: ArabianPearlsBg,
-        saysImage:newDates101,
+        saysImage: newDates101,
         title: "",
         title_desc: "",
-        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        link: "https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
           "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
         product_img_1: DatesV1,
@@ -471,10 +471,10 @@ export const PRODUCT_DATA = [
         title_color: "",
         desc_color: "",
         back_img: SelectDateBg,
-        saysImage:newDates101,
+        saysImage: newDates101,
         title: "",
         title_desc: "",
-        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        link: "https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
           "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
         product_img_1: DatesV8,
@@ -495,10 +495,10 @@ export const PRODUCT_DATA = [
         title_color: "",
         desc_color: "",
         back_img: ClassicDateBg,
-        saysImage:newDates101,
+        saysImage: newDates101,
         title: "",
         title_desc: "",
-        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        link: "https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
           "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
         product_img_1: DatesV2,
@@ -520,10 +520,10 @@ export const PRODUCT_DATA = [
         title_color: "",
         desc_color: "",
         back_img: RoyalZahidiBg,
-        saysImage:newDates101,
+        saysImage: newDates101,
         title: "",
         title_desc: "",
-        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        link: "https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
           "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
         product_img_1: DatesV7,
@@ -544,10 +544,10 @@ export const PRODUCT_DATA = [
         title_color: "",
         desc_color: "",
         back_img: ShaaneKhajoorBg,
-        saysImage:newDates101,
+        saysImage: newDates101,
         title: "",
         title_desc: "",
-        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        link: "https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
           "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
         product_img_1: DatesV9,
@@ -568,10 +568,10 @@ export const PRODUCT_DATA = [
         title_color: "",
         desc_color: "",
         back_img: KalmiDatesBg,
-        saysImage:newDates101,
+        saysImage: newDates101,
         title: "",
         title_desc: "",
-        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        link: "https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
           "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
         product_img_1: DatesV5,
@@ -592,10 +592,10 @@ export const PRODUCT_DATA = [
         title_color: "",
         desc_color: "",
         back_img: DesertBlissBg,
-        saysImage:newDates101,
+        saysImage: newDates101,
         title: "",
         title_desc: "",
-        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        link: "https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
           "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
         product_img_1: DatesV4,
@@ -616,10 +616,10 @@ export const PRODUCT_DATA = [
         title_color: "",
         desc_color: "",
         back_img: DeseededDateBg,
-        saysImage:newDates101,
+        saysImage: newDates101,
         title: "",
         title_desc: "",
-        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        link: "https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
           "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
         product_img_1: DatesV3,
@@ -640,10 +640,10 @@ export const PRODUCT_DATA = [
         title_color: "",
         desc_color: "",
         back_img: PremiumDatesBg,
-        saysImage:newDates101,
+        saysImage: newDates101,
         title: "",
         title_desc: "",
-        link:"https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        link: "https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
           "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
         product_img_1: DatesV6,
@@ -659,7 +659,7 @@ export const PRODUCT_DATA = [
   },
 
 
-  
+
   {
     id: 3,
     title: "Breakfast Range",
@@ -674,7 +674,7 @@ export const PRODUCT_DATA = [
         desc_color: "text-[#505050]",
         title: "Apis Jam",
         saysImage: jam101,
-        link:"https://www.amazon.in/stores/page/BE19AE4D-42D0-450C-BA0D-3D75A016D55F?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        link: "https://www.amazon.in/stores/page/BE19AE4D-42D0-450C-BA0D-3D75A016D55F?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         title_desc:
           "Discover The Purest fruits flavours handpicked for apis jam creation.",
         product_desc:
@@ -698,8 +698,8 @@ export const PRODUCT_DATA = [
         title_color: "text-[#442C1A]",
         desc_color: "text-[#442C1A]",
         title: "Apis Flakes",
-        saysImage:cornFlakes101,
-        link:"https://www.amazon.in/Apis-Cornflakes-1kg-Zip-Pouch/dp/B099FRBQ4C?th=1",
+        saysImage: cornFlakes101,
+        link: "https://www.amazon.in/Apis-Cornflakes-1kg-Zip-Pouch/dp/B099FRBQ4C?th=1",
         title_desc:
           "      Experience pure, crunchy delight with every bite of our perfectly crisp flakes.",
         product_desc:
@@ -723,11 +723,11 @@ export const PRODUCT_DATA = [
         desc_color: "text-[#FCC42B]",
         saysImage: Vermicelli101,
         title: "Apis Vermicelli",
-        link:"https://www.amazon.in/Apis-Vermicelli-900g/dp/B0CJXWN5Q6",
+        link: "https://www.amazon.in/Apis-Vermicelli-900g/dp/B0CJXWN5Q6",
         title_desc:
           "Delight in the perfect texture and taste with our premium vermicelli",
         product_desc:
-          "Purity is deeply embedded in our vermicelli. We prioritize selecting the finest ingredients and employing meticulous processes to ensure that every strand embodies true quality. Our vermicelli is crafted without artificial additives or preservatives, allowing its natural flavor and texture to shine through in every dish. This commitment to purity means that you experience a clean, wholesome taste and consistent quality that enhances your culinary creations. When you choose Apis Vermicelli, you’re not just getting a product; you’re embracing a philosophy where purity is our guiding principle, ensuring excellence in every bite.",
+          "Apis Vermicelli is a versatile and delicious pasta, ideal for a variety of dishes from savory to sweet.",
         product_img_1: vermicali102,
         product_img_2: VermiProduct,
         customer_says:
@@ -773,10 +773,10 @@ export const PRODUCT_DATA = [
         desc_color: "text-black",
         title: "",
         title_desc: "",
-        link:"https://uniqrr.com/products/apis-india-soya-chunks-50-gm",
-        saysImage:Soya101,
+        link: "https://uniqrr.com/products/apis-india-soya-chunks-50-gm",
+        saysImage: Soya101,
         product_desc:
-          "Purity is the cornerstone of our soya chunks. We start with premium soybeans, ensuring that each chunk is packed with natural goodness and robust flavor. Our production process is designed to preserve the integrity of the soybeans, avoiding any artificial additives or preservatives. This commitment to purity means that every bite of Apis Soya Chunks offers a clean, wholesome taste and a satisfying texture that holds up perfectly in various dishes. Whether you’re incorporating them into a savory stir-fry or a hearty stew, Apis Soya Chunks reflect our dedication to delivering pure, high-quality ingredients in every bite.",
+          "Apis Soya Chunks are high-protein meat substitutes made from defatted soy flour, perfect for vegetarian and vegan diets.",
         product_img_1: SoyaChunks102,
         product_img_2: SoyaChunks001,
         customer_says:
@@ -795,8 +795,8 @@ export const PRODUCT_DATA = [
         title_color: "text-[#C62A05]",
         desc_color: "text-white",
         title: "Apis Saffron",
-        link:"https://www.amazon.in/Apis-Saffron-Kesar/dp/B08NFFST31",
-        saysImage:saffron101,
+        link: "https://www.amazon.in/Apis-Saffron-Kesar/dp/B08NFFST31",
+        saysImage: saffron101,
         title_desc:
           "Elevate your dishes with the exquisite richness and vibrant color of our premium saffron",
         product_desc:
@@ -820,12 +820,12 @@ export const PRODUCT_DATA = [
         title_color: "text-[#C62A05]",
         desc_color: "text-white",
         title: "Apis Saffron",
-        link:"https://www.amazon.in/Apis-Saffron-Kesar/dp/B08NFFST31",
-        saysImage:saffron101,
+        link: "https://www.amazon.in/Apis-Saffron-Kesar/dp/B08NFFST31",
+        saysImage: saffron101,
         title_desc:
           "Elevate your dishes with the exquisite richness and vibrant color of our premium saffron",
         product_desc:
-          "Our Ginger Garlic Paste is crafted from carefully selected, farm-fresh ingredients - free from artificial colors, flavors, or preservatives. Ground to a smooth consistency, it captures the bold aroma and natural pungency of real ginger and garlic. Every spoonful delivers a rich, homestyle taste that brings depth and tradition to your cooking. From everyday curries to special marinades, Apis ensures purity and flavor in every blend.",
+          "Apis offers a range of essential cooking pastes, including Garlic Paste, Ginger Paste, and Ginger Garlic Paste, each crafted to bring convenience and authentic flavor to your kitchen. These pastes are made from the freshest ingredients, ensuring that your dishes are infused with the rich and aromatic taste that is the hallmark of traditional Indian and Asian cuisines.",
         product_img_1: ggpProduct,
         product_img_2: SafronProductMenu,
         customer_says:
@@ -916,8 +916,8 @@ export const NEWS_DATA = [
     link: "https://biznewsdesk.com/business/a-perfect-blend-of-nutrition-tradition-taste-by-apis/"
   },
 
- 
-  
+
+
   {
     img: apisNews7,
     name: NewsName6,
@@ -3318,7 +3318,7 @@ export const financialsSheet = {
     }
   ],
   subsidiaryFinancials: [
-   
+
     {
       id: 1,
       name: "Balance Sheet - 31.03.2020 - Anantadrishti",
@@ -3523,7 +3523,7 @@ export const AVAILABILITY_SLIDE = [
 export const HEALTH_BENEFITS = [
   {
     id: 1,
-    title: "Boosts Immunity",
+    title: "Free from pesticides and chemicals",
     name: "Boosts Immunity",
     desc: "Honey is packed with antioxidants that boost your immune system and help fight off illnesses. Regular consumption of honey can strengthen your body’s defenses and promote overall health.",
     img: HoneyShield,
@@ -3532,7 +3532,7 @@ export const HEALTH_BENEFITS = [
   },
   {
     id: 2,
-    title: "Skin Elixir",
+    title: "Rich in vitamins and minerals",
     name: "Boosts Immunity",
     desc: "Honey acts as a natural skin elixir, offering deep hydration and antibacterial benefits for a glowing complexion. Its soothing properties help heal skin irritations and maintain a healthy, radiant appearance.",
     img: Skin,
@@ -3541,7 +3541,7 @@ export const HEALTH_BENEFITS = [
   },
   {
     id: 3,
-    title: "Sustainability",
+    title: "Supports heart health",
     name: "Boosts Immunity",
     desc: "AIL’s honey is a testament to sustainable beekeeping practices that support environmental health and local communities. By choosing our honey, you contribute to eco-friendly methods that protect both nature and livelihoods.",
     img: Sustain,
@@ -3550,7 +3550,7 @@ export const HEALTH_BENEFITS = [
   },
   {
     id: 4,
-    title: "Aids Digestion",
+    title: "Enhances immune function",
     name: "Boosts Immunity",
     desc: "Honey aids digestion by soothing the digestive tract and promoting healthy gut bacteria. It can help alleviate digestive discomfort and support smoother, more balanced digestion for better overall wellness.",
     img: AidsDigestion,
@@ -3561,7 +3561,7 @@ export const HEALTH_BENEFITS = [
 export const HEALTH_DATE = [
   {
     id: 1,
-    title: "Nutrient Dense",
+    title: "High in fiber",
     name: "Benefits",
     desc: "Dates are rich in essential nutrients like fiber, potassium, magnesium, and vitamins B6 and K. These nutrients support various bodily functions, including bone health, muscle function, and energy metabolism.",
     img: Nutrient,
@@ -3570,7 +3570,7 @@ export const HEALTH_DATE = [
   },
   {
     id: 2,
-    title: "Digestive Health",
+    title: "Rich in essential nutrients",
     name: "Benefits",
     desc: "High in dietary fiber, dates aid in digestion by promoting regular bowel movements and preventing constipation. Fiber also supports a healthy gut microbiome, which is crucial for overall digestive health.",
     img: Digestive,
@@ -3579,7 +3579,7 @@ export const HEALTH_DATE = [
   },
   {
     id: 3,
-    title: "Energy Boost",
+    title: "Natural energy booster",
     name: "Benefits",
     desc: "Dates provide a quick source of natural energy due to their high carbohydrate content, primarily from natural sugars like glucose and fructose. They make an excellent snack for an instant energy boost and sustained vitality.",
     img: EnergyBoost,
@@ -3588,7 +3588,7 @@ export const HEALTH_DATE = [
   },
   {
     id: 4,
-    title: "Heart Health",
+    title: "Supports heart health",
     name: "Benefits",
     desc: "The potassium and magnesium in dates help regulate blood pressure and support cardiovascular health. Additionally, their high fiber content helps lower cholesterol levels, reducing the risk of heart disease and stroke.",
     img: Psychology,
@@ -3600,16 +3600,16 @@ export const HEALTH_DATE = [
 export const HEALTH_JAM = [
   {
     id: 1,
-    title: "Energy Boost",
+    title: "Rich in fruit goodness",
     name: "Benefits",
-    desc: "Jam provides a quick source of energy due to its high sugar content, making it a great option for a quick pick-me-up during the day or before physical activities.",
+    desc: "Made with high-quality, real fruits.",
     img: EnergyBoost,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
   },
   {
     id: 2,
-    title: "Versatile Ingredient",
+    title: "Naturally sweet",
     name: "Benefits",
     desc: "Jam can be used in a variety of dishes, from breakfast spreads to baking, enhancing flavors and adding sweetness to both savory and sweet recipes.",
     img: Ingrediant,
@@ -3618,7 +3618,7 @@ export const HEALTH_JAM = [
   },
   {
     id: 3,
-    title: "Vitamin Source",
+    title: "Naturally sweet",
     name: "Benefits",
     desc: "Depending on the fruit used, jam can offer vitamins and antioxidants. For instance, strawberry jam provides vitamin C, which is important for immune health and skin maintenance.",
     img: VitaminSource,
@@ -3627,7 +3627,7 @@ export const HEALTH_JAM = [
   },
   {
     id: 4,
-    title: "Contain Minerals",
+    title: "Versatile use",
     name: "Benefits",
     desc: "Jam has a long shelf life due to its high sugar content, which acts as a preservative. This means you can store it for extended periods without worrying about spoilage.",
     img: Minrella,
@@ -3638,7 +3638,7 @@ export const HEALTH_JAM = [
 export const HEALTH_FLAKES = [
   {
     id: 1,
-    title: "Fiber-Rich",
+    title: "Low in fat",
     name: "Benefits",
     desc: "Flakes, particularly whole grain varieties, are high in dietary fiber. Fiber aids digestion by promoting regular bowel movements and can help prevent constipation. It also supports heart health by reducing cholesterol levels and stabilizing blood sugar.",
     img: FiberRich,
@@ -3647,7 +3647,7 @@ export const HEALTH_FLAKES = [
   },
   {
     id: 2,
-    title: "Low Calories",
+    title: "High in essential vitamins and minerals",
     name: "Benefits",
 
     desc: "Many flakes, especially those made from whole grains, are low in calories while still being filling. This makes them an excellent choice for weight management, as they provide essential nutrients without contributing excessive calories.",
@@ -3657,7 +3657,7 @@ export const HEALTH_FLAKES = [
   },
   {
     id: 3,
-    title: "Nutrient Dense",
+    title: "Gluten-free option available",
     name: "Benefits",
 
     desc: "Flakes often contain essential vitamins and minerals, such as B vitamins, iron, and magnesium. These nutrients are crucial for energy production, red blood cell formation, and overall metabolic function, contributing to overall well-being.",
@@ -3667,7 +3667,7 @@ export const HEALTH_FLAKES = [
   },
   {
     id: 4,
-    title: "Heart Health",
+    title: "Good source of dietary fiber",
     name: "Benefits",
 
     desc: "Whole grain flakes can be beneficial for heart health due to their high fiber content and low saturated fat. They help reduce the risk of heart disease by improving cholesterol levels and supporting healthy blood pressure.",
@@ -3679,7 +3679,7 @@ export const HEALTH_FLAKES = [
 export const HEALTH_VERNACALLI = [
   {
     id: 1,
-    title: "Low Calories",
+    title: "Quick and easy to cook",
     name: "Benefits",
     desc: "Vermicelli, a type of thin rice or wheat noodle, is typically low in calories, making it a suitable option for weight management. It provides a filling meal without adding excessive caloric intake.",
     img: LowClories,
@@ -3688,7 +3688,7 @@ export const HEALTH_VERNACALLI = [
   },
   {
     id: 2,
-    title: "Digestive Health",
+    title: "Low in fat",
     name: "Benefits",
     desc: "Vermicelli made from whole grains can be a good source of dietary fiber. Fiber aids digestion by promoting regular bowel movements and can help prevent constipation.",
     img: Digestive,
@@ -3697,7 +3697,7 @@ export const HEALTH_VERNACALLI = [
   },
   {
     id: 3,
-    title: "Energy Source",
+    title: "High in carbohydrates for energy",
     name: "Benefits",
     desc: "Vermicelli provides carbohydrates, which are a primary source of energy for the body. Consuming it can help fuel physical activities and maintain energy levels throughout the day.",
     img: EnergyBoost,
@@ -3706,7 +3706,7 @@ export const HEALTH_VERNACALLI = [
   },
   {
     id: 4,
-    title: "Versatile Use",
+    title: "Versatile ingredients for various recipes",
     name: "Benefits",
     desc: "Vermicelli is a versatile ingredient that can be incorporated into various dishes, from soups to stir-fries, allowing for diverse and balanced meals. Its adaptability makes it easy to include in a healthy diet.",
     img: Versatile,
@@ -3840,7 +3840,7 @@ export const COOKING_PASTE = [
 export const SOYA_CHUNK = [
   {
     id: 1,
-    title: "Protein Source",
+    title: "High in protein",
     name: "Benefits",
 
     desc: "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
@@ -3850,7 +3850,7 @@ export const SOYA_CHUNK = [
   },
   {
     id: 2,
-    title: "Heart Health",
+    title: "Low in fat",
     name: "Benefits",
 
     desc: "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
@@ -3860,7 +3860,7 @@ export const SOYA_CHUNK = [
   },
   {
     id: 3,
-    title: "Bone Strength",
+    title: "Rich in fiber",
     name: "Benefits",
 
     desc: "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
@@ -3870,7 +3870,7 @@ export const SOYA_CHUNK = [
   },
   {
     id: 4,
-    title: "Hormone Balance",
+    title: "Versatile ingredient",
     name: "Benefits",
 
     desc: "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
@@ -3955,6 +3955,50 @@ export const GREEN_TEA = [
   {
     id: 4,
     title: "Brain Function",
+    name: "Benefits",
+
+    desc: "The caffeine and L-theanine in green tea can improve cognitive function, enhancing alertness, attention, and memory. These compounds work synergistically to promote better mental clarity and focus.",
+    img: BrainFunction,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+]
+
+
+export const GGP = [
+  {
+    id: 1,
+    title: "Enhances flavor",
+    name: "Benefits",
+
+    desc: "Green tea is rich in antioxidants, particularly catechins like EGCG, which help combat oxidative stress and neutralize harmful free radicals. These antioxidants support overall health by reducing inflammation and protecting cells from damage.",
+    img: Calcium,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    title: "Convenient and ready-to-use",
+    name: "Benefits",
+
+    desc: "Regular consumption of green tea can improve cardiovascular health. It helps lower LDL cholesterol levels and triglycerides, reducing the risk of heart disease. The anti-inflammatory properties also contribute to maintaining healthy blood vessels.",
+    img: Psychology,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 3,
+    title: "Rich in antioxidants",
+    name: "Benefits",
+
+    desc: "Green tea can enhance metabolic rate and promote fat oxidation. Its catechins and caffeine work together to boost metabolism, which may aid in weight management and improve exercise performance.",
+    img: Digestive,
+    shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 4,
+    title: "Promotes digestion",
     name: "Benefits",
 
     desc: "The caffeine and L-theanine in green tea can improve cognitive function, enhancing alertness, attention, and memory. These compounds work synergistically to promote better mental clarity and focus.",
@@ -4070,7 +4114,8 @@ export const Terms_Conditions = [
       </p>
     </div>`
   },
-  {  id: 2, content: `<div class="apis_bg">
+  {
+    id: 2, content: `<div class="apis_bg">
       <div class="container">
         	<div class="row">
         		<div class="col-md-3">

@@ -42,7 +42,7 @@ const MainFooter = () => {
 
 
   return (
-    <footer className="bottom-0 z-10 w-full bg-[#FFF9F0]">
+  <footer className="bottom-0 z-10 w-full bg-[#FFF9F0]">
   <div className="mx-auto flex w-full flex-col">
     <div className="flex flex-col items-center md:items-start md:flex-row">
       {/* Logo */}
@@ -60,7 +60,7 @@ const MainFooter = () => {
 
       {/* Quick Links */}
       <div className="my-4 md:my-10 flex flex-col items-center md:items-start text-center md:text-left border-s border-[#000000] px-4 md:px-10 max-[800px]:border-s-0">
-        <div className="flex flex-wrap justify-center md:justify-start gap-x-6 md:gap-x-12 gap-y-2 md:gap-y-4">
+        <div className="flex flex-wrap justify-center md:justify-start gap-x-6 md:gap-x-12 gap-y-2 md:gap-y-4 sm:gap-y-16">
           {PATH_DATA.map((path) => {
             const tabUrlWithLocale = `/${locale}${path.url}`;
             return (
@@ -84,14 +84,12 @@ const MainFooter = () => {
           <div className="flex gap-3 items-start">
             <FontAwesomeIcon icon={faPhone} className="pt-1 text-[#9F7B49]" />
             <div>
-              <p className="font-bold">Toll Free Number For Apis Customer Service:</p>
-              <p>+91-11-43206666</p>
-            </div>
+  <p className="inline font-bold">Toll Free Number:</p>
+  <span className="inline">+91-11-43206666</span>
+</div>
+
           </div>
-          <div className="flex gap-3 items-center">
-            <FontAwesomeIcon icon={faPhone} className="text-[#9F7B49]" />
-            <p>+91-11-43206666</p>
-          </div>
+    
         </div>
       </div>
     </div>

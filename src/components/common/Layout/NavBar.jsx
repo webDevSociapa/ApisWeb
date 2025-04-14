@@ -147,7 +147,7 @@ const NavBar = ({ className, linkClass }) => {
                 </div>
               )}
 
-              {path.name === 'Brand' && hoveredItem === 'Brand' && (
+            {path.name === 'Brand' && hoveredItem === 'Brand' && (
                 <div
                   className="absolute top-full left-0 w-full bg-white z-1000"
                   onMouseEnter={handleOurBrandContentMouseEnter}
@@ -157,7 +157,6 @@ const NavBar = ({ className, linkClass }) => {
                 </div>
               )}
             </div>
-
             {path.name === 'About Us' && hoveredItem === 'About Us' && (
               <div
                 className="absolute top-full left-0 w-full bg-white z-50 flex "
@@ -296,7 +295,6 @@ const NavBar = ({ className, linkClass }) => {
                 </div>
               </div>
             )}
-
             {path.name === 'Resources' && hoveredItem === 'Resources' && (
               <div
                 className="absolute top-full left-0 w-full bg-white z-50 flex "
@@ -325,7 +323,6 @@ const NavBar = ({ className, linkClass }) => {
                 </div>
               </div>
             )}
-
             {path.name === 'Contact Us' && hoveredItem === 'Contact Us' && (
               <div
                 className="absolute top-full left-0 w-full bg-white z-50 flex "
