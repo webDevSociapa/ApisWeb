@@ -12,7 +12,7 @@ import CheckReportBanner from '@/assets/images/OurBrands/ProductBanner.png'
 import HimalayaHoney from "@/assets/images/OurBrands/himalayaHoney.png"
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { NEWS_DATA, PRODUCT_DATA } from "@/lib/constants";
+import { GGP, NEWS_DATA, PRODUCT_DATA } from "@/lib/constants";
 import Link from "next/link";
 import FlowerRun from '@/assets/images/home-banner-section/flowerRun.gif'
 
@@ -44,6 +44,8 @@ const ProductDetails = () => {
   // };
 
   const handleImageClick = (content) => {
+    console.log("content", content);
+    
     setSelectedContent(content);
     setHoveredId(content.id)
   };
@@ -71,6 +73,7 @@ const ProductDetails = () => {
           {itm?.title}
         </p>
       </div>
+      
     ));
   };
 
@@ -107,6 +110,9 @@ const ProductDetails = () => {
     }
     else if (selectedBrand?.id === 5 && selectedProduct?.id === 1) {
       benefits = GREEN_TEA;
+    }
+    else if (selectedBrand?.id === 4 && selectedProduct?.id === 3) {
+      benefits = GGP;
     }
 
     // Set the first health benefit as the selected content on page render
@@ -221,6 +227,7 @@ const ProductDetails = () => {
                   query: { selectedProduct: JSON.stringify(selectedProduct) },
                 }}
               >
+
                 <button
                   className="border mt-4 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white"
                 >
@@ -308,7 +315,8 @@ const ProductDetails = () => {
                                     : selectedBrand?.id === 4 && selectedProduct?.id === 2
                                       ? renderBenefits(SAFFRON)
                                       : selectedBrand?.id === 5 && selectedProduct?.id === 1
-                                        ? renderBenefits(GREEN_TEA)                     : ""}
+                                        ? renderBenefits(GREEN_TEA): selectedBrand?.id === 4 && selectedProduct?.id === 3
+                                        ? renderBenefits(GGP)                     : ""}
             </div>
             <div>
             </div>

@@ -506,11 +506,7 @@ export default function HomePage() {
           <p className="text-bold text-[#D7AD5F] text-[20px] sm:text-[28px] md:text-[34px] lg:text-[40px] font-literata font-semibold mt-[-5px] sm:mt-[-7px] md:mt-[-8px] lg:mt-[-22px]">Our Availability
           </p>
           <div className="font-medium text-center text-white text-xs md:text-lg w-10/12 text-[24px] font-medium font-jost sm: text-[10px] text-medium  2xl: w-[70%] ">
-            Apis products are widely available to ensure you can enjoy our
-            natural and premium offerings wherever you are. You can find our
-            range of honey, organic honey, muesli, pickles, and more at leading
-            supermarkets, grocery stores, and health food shops across the
-            country.
+          Apis products are widely available to ensure you can enjoy our natural and premium offerings wherever you are. You can find our range of honey, organic honey, muesli, pickles, and more at leading supermarkets, grocery stores, and health food shops across the country. Additionally, our products are conveniently accessible online through major e-commerce platforms, making it easy to have your favorite Apis products delivered right to your doorstep. Whether you prefer shopping in-store or online, Apis is always within reach, ready to bring the goodness of nature to your table.
           </div>
           <div className="font-medium text-center text-white text-xs md:text-lg w-10/12 text-[24px] font-medium font-jost text-medium sm: text-[10px] font-jost text-medium 2xl: w-[70%] ">
             Additionally, our products are conveniently accessible online
@@ -557,8 +553,8 @@ export default function HomePage() {
           Latest @Apis
         </p>
         <p className="font-medium text-center text-xs md:text-lg text-[#666666] text-[22px] font-jost pb-[25px] sm:pb-0 -px-4">
-  Discover the newest trends, products, and innovations from AIL.
-</p>
+        Discover the newest trends, products, and innovations from APIS India.
+        </p>
 
         <div className="py-6 md:py-10 w-[90%] flex items-center justify-center latestApisHome">
           <EmblaCarousel options={OPTIONS}>

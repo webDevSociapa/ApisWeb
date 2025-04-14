@@ -131,14 +131,7 @@ export default function AboutUsPage({ }) {
           Purely Crafted Natural Flavors
         </h2>
         <p className="mt-4 text-customDarkGray text-center font-jost text-sm md:text-xl font-medium max-w-4xl mx-auto">
-          Welcome to AIL, where nature meets quality. We are dedicated to
-          bringing you the finest organic products, crafted with care and
-          sustainability. Our commitment to purity ensures that every item you
-          purchase is free from artificial additives and harmful chemicals. At
-          AIL, we believe in the power of nature to nourish and enhance
-          your well-being. Discover a world of natural goodness with our range
-          of high-quality, organic FMCG products, and experience the difference
-          that purity makes. Purely Natural, Simply Better.
+        Welcome to Apis India, where nature meets quality. We are dedicated to bringing you the finest organic products, crafted with care and sustainability. Our commitment to purity ensures that every item you purchase is free from artificial additives and harmful chemicals. At Apis India, we believe in the power of nature to nourish and enhance your well-being. Discover a world of natural goodness with our range of high-quality, organic FMCG products, and experience the difference that purity makes. Purely Natural, Simply Better.
         </p>
       </section>
       <div id="mission-values" className="relative mt-14 flex flex-col items-center justify-center w-full">
@@ -234,7 +227,7 @@ export default function AboutUsPage({ }) {
                 Managing Director
               </p>
               <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost text-justify">
-                Driven by his passion and conviction, Mr. Vimal Anand has received formal training in beekeeping and Honey processing from the University of Warmia Olystyn Poland. Gradually, he built a global presence & a robust structure supported by a state-of-the-art production factory to cater to the global markets.
+              Driven by his passion and conviction, Mr. Vimal Anand has received formal training in beekeeping and Honey processing from the University of Warmia Olystyn Poland. Gradually he built a global presence & a robust structure supported by a state-of-the-art production factory to cater to the global markets. His undeterred leadership and vision have led the company to reach its heights today, becoming a leading player in the world's organized honey trade.
               </p>
             </div>
           </div>
@@ -252,7 +245,8 @@ export default function AboutUsPage({ }) {
               Managing Director
             </p>
             <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost text-justify">
-              A Delhi University Graduate from Kirori Mal College in Commerce, he spearheads key functions of Overall Plant Management; Human Resources; and Finance. The Managing Director of the company and the younger one of the two siblings, he has played the perfect foil to the elder in initiating the GREEN FIELD initiative of the factory in Roorkee. Leading from the front in all factory operations, a person with hands-on expertise in executing all details at the plant level.            </p>
+            A Delhi University Graduate from Kirori Mal College in Commerce, he spearheads key functions of Overall Plant Management; Human Resources; and Finance. The Managing Director of the company and the younger one of the two siblings, he has played the perfect foil to the elder in initiating the GREEN FIELD initiative of the factory in Roorkee. Leading from the front in all factory operations a person with hands-on expertise in executing all details at the plant level
+              </p>
           </div>
           <div className="w-full mt-4 md:mt-0 md:w-1/2 flex items-center justify-center">
             <div className="relative w-[300px] md:w-[440px] flex justify-center items-center">
@@ -263,11 +257,13 @@ export default function AboutUsPage({ }) {
                 alt="Banner Image"
                 className="object-cover z-50 absolute h-[240px] w-[240px] md:h-[416px] md:w-[342px] cursor-pointer"
               />
+
               <Image
                 src={Frame2}
                 alt="Banner Image"
                 className="object-cover -top-10 z-10 h-[240px] left-0 w-[240px] md:w-[420px] md:h-[460px] cursor-pointer"
               />
+
               <Image
                 src={Ring1}
                 className="hidden lg:inline z-0 absolute -left-20 -top-6 h-[331px] w-[331px] rotate-animation"
@@ -289,7 +285,6 @@ export default function AboutUsPage({ }) {
           satisfaction. Join us as we continue to grow and inspire.
         </p>
         <HexaGonalPage />
-
       </div>
 
       {/* <div classNamelass="relative h-screen">
