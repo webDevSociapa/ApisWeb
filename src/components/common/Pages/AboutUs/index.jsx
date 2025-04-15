@@ -274,15 +274,13 @@ export default function AboutUsPage({ }) {
       </div>
       <div className="my-10">
         <p className="text-center text-[14px] font-jost md:text-[22px] uppercase text-[#585858]">
-          Celebrating a Legacy of Quality and Growth
+        Celebrating a Legacy of Quality and Growth
         </p>
         <h3 className="text-center text-[20px] md:text-[40px] font-bold text-[#9F7B49] mt-2">
           Journey
         </h3>
         <p className="mt-4 text-customDarkGray text-center font-jost text-sm md:text-xl font-medium max-w-4xl mx-auto sm: px-4">
-          From humble beginnings to a leading FMCG brand, AIL's journey
-          is defined by a commitment to quality, innovation, and customer
-          satisfaction. Join us as we continue to grow and inspire.
+        From humble beginnings to a leading FMCG brand, Apis India’s journey is defined by a commitment to quality, innovation, and customer satisfaction. Join us as we continue to grow and inspire
         </p>
         <HexaGonalPage />
       </div>

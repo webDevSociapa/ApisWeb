@@ -174,7 +174,7 @@ const NavBar = ({ className, linkClass }) => {
                       <ul className="text-sm text-gray-600 space-y-4">
                         <li>
                           <Link href="/about-us/mission-vision" className="hover:underline">
-                            Our Vision and Mission
+                            Vision and Mission
                           </Link>
                         </li>
                         <li>
@@ -212,7 +212,7 @@ const NavBar = ({ className, linkClass }) => {
                       <ul className="text-sm text-gray-600 space-y-4">
                         <li>
                           <Link href="/careers/lifeAtApis" className="hover:underline">
-                          Life at AIL
+                          Life @ AIL
                           </Link>
                         </li>
                         <li>
@@ -313,7 +313,7 @@ const NavBar = ({ className, linkClass }) => {
                         
                         <li>
                           <Link href="/our-blog/ourRecipis" className="hover:underline">
-                             Receipes
+                          Recipes
                           </Link>
                         </li>
                       </ul>

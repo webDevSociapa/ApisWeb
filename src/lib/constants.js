@@ -813,7 +813,7 @@ export const PRODUCT_DATA = [
 
       {
         id: 3,
-        name: "GGP",
+        name: "Ginger garlic paste",
         img: newGGP02,
         back_img: GGPBanner,
         rect_color: "bg-[#C62A05]",
