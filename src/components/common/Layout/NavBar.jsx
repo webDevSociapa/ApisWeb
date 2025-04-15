@@ -340,12 +340,12 @@ const NavBar = ({ className, linkClass }) => {
                       <ul className="text-sm text-gray-600 space-y-4">
                         <li>
                           <Link href="/contact-us" className="hover:underline">
-                            Our Registered Office / Overseas Operation
+                             Registered Office / Overseas Operation
                           </Link>
                         </li>
                         <li>
                           <Link href="/contact-us/factoryAddress" className="hover:underline">
-                            Our Factory Address
+                             Factory Address
                           </Link>
                         </li>
                       </ul>
