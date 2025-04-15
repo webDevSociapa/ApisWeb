@@ -124,7 +124,7 @@ export default function Media() {
 
     const tvcHome = async () => {
       try {
-        const response = await axios.get("/api/HomePage/tvcHome");
+        const response = await axios.get("/api/mediaGallery/mediaTvc");
         setTvcHome(response.data)
       }
       catch (error) {
@@ -133,6 +133,9 @@ export default function Media() {
     }
     tvcHome()
   },[])
+
+
+
   return (
     <>
       {/* Banner Section */}
@@ -232,8 +235,14 @@ export default function Media() {
             </div>
           </div>
           <div className="flex flex-col md:flex-row items-center w-full sm:justify-center gap-10 pt-4 md:mt-10 w-full">
-          {tvcHome?.map((itm) => (
-                <iframe
+          {tvcHome.length > 0 ? (
+            <EmblaCarousel options={{ loop: true }}>
+            {tvcHome?.map((itm, index) => (
+              <div className="embla__slide" key={index}>
+                <div className="embla__slide__number">
+                  <div>
+                    <div className="mx-3 border">
+                    <iframe
                   className="rounded md:h-[360px] h-auto md:w-[580px] max-w-[500px] min-h-[200px] w-auto"
                   src={itm.videoUrl}
                   width={500}
@@ -245,7 +254,17 @@ export default function Media() {
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen
                 />
-              ))}
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+            ))}
+          </EmblaCarousel>
+          ): <div className="flex items-center justify-center h-64">
+          <div className="w-12 h-12 border-4 border-dashed rounded-full animate-spin border-[#85673d]"></div>
+        </div>
+        }
           </div>
         </div>
       </div>
