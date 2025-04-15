@@ -142,7 +142,7 @@ export default function Media() {
           Apis in the News
         </p>
         <p className="text-sm w-[95%]  md:text-xl md:w-[70%] md:leading-8 mt-3  md:mt-6 text-center font-jost">
-        Stay updated with the latest news, events, and media coverage of APIS India.
+        Stay updated with the latest news, events, and media coverage of AIL.
         </p>
       </div>
 
@@ -223,12 +223,11 @@ export default function Media() {
         <div className="relative flex items-center justify-center flex-col !w-[96%]">
           <div className="flex flex-col gap-2 md:gap-4">
             <p className="font-bold text-[20px] md:text-[40px] text-center text-[#9F7B49]">
-            Video Ad
+            TVC
             </p>
             <div>
               <p className="text-sm md:text-xl md:leading-8 text-center font-jost">
-                Intentions may lay the foundation, but it's our actions that
-                build the world we live in.
+              Catch a glimpse of our captivating TVCs, where AIL’s passion for quality and innovation shines through every frame
               </p>
             </div>
           </div>
@@ -276,8 +275,7 @@ export default function Media() {
             <div className="text-center mt-8 px-14">
               <h4 className="font-semibold text-[34px] font-literata color-[#9F7B49]">Our Campaigns</h4>
               <p className="w-full md:w-[502px] text-[17px] leading-[31.79px] mt-4 font-jost px-20">
-                Dive into AIL’s successful campaigns that reflect our dedication to creativity and impact.
-                Each campaign is crafted to resonate with our audience and showcase our brand’s strengths.
+              Dive into AIL’s successful campaigns that reflect our dedication to creativity and impact. Each campaign is crafted to resonate with our audience and showcase our brand’s strengths.
               </p>
               <div className='w-full md:w-[470px] h-[500px] p-[50px] flex flex-col items-center relative'> {/* Changed to flex-col for mobile layout */}
                   <div className='absolute flex justify-center'> {/* Centering the Ring1 image */}
