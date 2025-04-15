@@ -184,7 +184,7 @@ const NavBar = ({ className, linkClass }) => {
                         </li>
                         <li>
                           <Link href="/about-us/ourDirectors" className="hover:underline">
-                            Our Board of Directors
+                             Board of Directors
                           </Link>
                         </li>
                       </ul>

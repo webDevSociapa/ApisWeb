@@ -58,20 +58,20 @@ const IMAGE_DATA = [
   {
     src: Diwali01,
     alt: "Diwali X Apis",
-    name:"Diwali X Apis",
+    name: "Diwali X Apis",
     colorShadow: 'CDB699'
   },
   {
     src: womensDay,
     alt: "ApisHeroes",
-    name:"#ApisHeroes",
+    name: "#ApisHeroes",
     colorShadow: 'E0C4B2'
 
   },
   {
     src: RJSameya01,
     alt: "RJ Sayema X Apis",
-    name:"RJ Sayema X Apis",
+    name: "RJ Sayema X Apis",
     colorShadow: 'F5D5AC'
   },
 ];
@@ -79,7 +79,7 @@ const IMAGE_DATA = [
 
 export default function Media() {
   const OPTIONS = { loop: true };
-  const [mediaData,setMediaData] = useState([])
+  const [mediaData, setMediaData] = useState([])
   const [mediaSection, setMediaSection] = useState([]);
   const [tvcHome, setTvcHome] = useState([])
 
@@ -90,7 +90,7 @@ export default function Media() {
       setIsMobile(window.innerWidth < 768); // Update state based on window width
     };
 
-    window.scroll(0,0)
+    window.scroll(0, 0)
 
 
     handleResize(); // Check initial size
@@ -102,12 +102,12 @@ export default function Media() {
   }, []);
 
 
-  useEffect(()=>{
-    const fetchMediaData = async()=>{
+  useEffect(() => {
+    const fetchMediaData = async () => {
       try {
-        const response = await axios.get("/api/mediaGallery");        
-        setMediaData(response.data)        
-      } catch (error) { 
+        const response = await axios.get("/api/mediaGallery");
+        setMediaData(response.data)
+      } catch (error) {
       }
     }
     fetchMediaData()
@@ -132,7 +132,7 @@ export default function Media() {
       }
     }
     tvcHome()
-  },[])
+  }, [])
 
 
 
@@ -145,7 +145,7 @@ export default function Media() {
           Apis in the News
         </p>
         <p className="text-sm w-[95%]  md:text-xl md:w-[70%] md:leading-8 mt-3  md:mt-6 text-center font-jost">
-        Stay updated with the latest news, events, and media coverage of AIL.
+          Stay updated with the latest news, events, and media coverage of AIL.
         </p>
       </div>
 
@@ -226,98 +226,97 @@ export default function Media() {
         <div className="relative flex items-center justify-center flex-col !w-[96%]">
           <div className="flex flex-col gap-2 md:gap-4">
             <p className="font-bold text-[20px] md:text-[40px] text-center text-[#9F7B49]">
-            TVC
+              TVC
             </p>
             <div>
               <p className="text-sm md:text-xl md:leading-8 text-center font-jost">
-              Catch a glimpse of our captivating TVCs, where AIL’s passion for quality and innovation shines through every frame
+                Catch a glimpse of our captivating TVCs, where AIL’s passion for quality and innovation shines through every frame
               </p>
             </div>
           </div>
           <div className="flex flex-col md:flex-row items-center w-full sm:justify-center gap-10 pt-4 md:mt-10 w-full">
-          {tvcHome.length > 0 ? (
-            <EmblaCarousel options={{ loop: true }}>
-            {tvcHome?.map((itm, index) => (
-              <div className="embla__slide" key={index}>
-                <div className="embla__slide__number">
-                  <div>
-                    <div className="mx-3 border">
-                    <iframe
-                  className="rounded md:h-[360px] h-auto md:w-[580px] max-w-[500px] min-h-[200px] w-auto"
-                  src={itm.videoUrl}
-                  width={500}
-                  height={500}
-                  // onClick={() => openModal(`${tvcHome[0].videoUrl}`)}
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
-                />
+            {tvcHome.length > 0 ? (
+              <EmblaCarousel options={{ loop: true }}>
+                {tvcHome?.map((itm, index) => (
+                  <div className="embla__slide" key={index}>
+                    <div className="embla__slide__number">
+                      <div>
+                        <div className="mx-3 border">
+                          <iframe
+                            className="rounded md:h-[360px] h-auto md:w-[580px] max-w-[500px] min-h-[200px] w-auto"
+                            src={itm.videoUrl}
+                            width={500}
+                            height={500}
+                            // onClick={() => openModal(`${tvcHome[0].videoUrl}`)}
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                          />
+                        </div>
+
+                      </div>
                     </div>
-                   
                   </div>
-                </div>
-              </div>
-            ))}
-          </EmblaCarousel>
-          ): <div className="flex items-center justify-center h-64">
-          <div className="w-12 h-12 border-4 border-dashed rounded-full animate-spin border-[#85673d]"></div>
-        </div>
-        }
+                ))}
+              </EmblaCarousel>
+            ) : <div className="flex items-center justify-center h-64">
+              <div className="w-12 h-12 border-4 border-dashed rounded-full animate-spin border-[#85673d]"></div>
+            </div>
+            }
           </div>
         </div>
       </div>
 
-
       <div className="flex flex-wrap justify-center mt-[120px] gap-10 w-full campaignmedia">
-      {!isMobile ? <div className='grid grid-cols-1 md:grid-cols-2 xl: -mx-4'>      
-            <div className="flex flex-col items-center gap-14 grid grid-cols-1 divide-y">
-              <div className="w-full md:w-[470px] h-[382px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#CDB699] to-[#CDB699] shadow-[2px_2px_2px_#CDB699] relative">
-                <p className='text-center font-literata font-semibold text-[30px]'>Diwali X Apis </p>
-                <Link href="https://www.instagram.com/reel/DBYrgsQtbQN" target='blank'>
-                <Image src={Diwali01} alt="Honey" className="bg-transparent p-[9px] mt-0" style={{borderRadius:"25%"}} />
-                </Link>
-              </div>
-              <div className="w-full md:w-[470px] h-[382px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#E0C4B2] to-[#E0C4B2] shadow-[2px_2px_2px_#E0C4B2] relative md:-mt-[140px] mt-[10px]">
+        {!isMobile ? <div className='grid grid-cols-1 md:grid-cols-2 xl: -mx-4'>
+          <div className="flex flex-col items-center gap-14 grid grid-cols-1 divide-y">
+            <div className="w-full md:w-[470px] h-[382px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#CDB699] to-[#CDB699] shadow-[2px_2px_2px_#CDB699] relative">
+              <p className='text-center font-literata font-semibold text-[30px]'>Diwali X Apis </p>
+              <Link href="https://www.instagram.com/reel/DBYrgsQtbQN" target='blank'>
+                <Image src={Diwali01} alt="Honey" className="bg-transparent p-[9px] mt-0" style={{ borderRadius: "25%" }} />
+              </Link>
+            </div>
+            <div className="w-full md:w-[470px] h-[382px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#E0C4B2] to-[#E0C4B2] shadow-[2px_2px_2px_#E0C4B2] relative md:-mt-[140px] mt-[10px]">
               <p className='text-center font-literata font-semibold text-[30px]'>#ApisHeroes </p>
-               <Link href="https://www.instagram.com/p/C4QPfZco3NT" target='blank'>
-               <Image src={womensDay} alt="Jam" className="bg-transparent p-[9px] mt-0"  style={{borderRadius:"25%"}}  />
-               </Link>
-              </div>
-              <div className="">
-                {/* <div className="relative flex w-full bg-[#FFF9F0] mt-10 border-2 h-[800px]"> */}
+              <Link href="https://www.instagram.com/p/C4QPfZco3NT" target='blank'>
+                <Image src={womensDay} alt="Jam" className="bg-transparent p-[9px] mt-0" style={{ borderRadius: "25%" }} />
+              </Link>
+            </div>
+            <div className="">
+              {/* <div className="relative flex w-full bg-[#FFF9F0] mt-10 border-2 h-[800px]"> */}
 
-    {/* </div> */}
+              {/* </div> */}
+            </div>
+          </div>
+          <div className="text-center mt-8 px-14">
+            <h4 className="font-semibold text-[34px] font-literata color-[#9F7B49]">Our Campaigns</h4>
+            <p className="w-full md:w-[502px] text-[17px] leading-[31.79px] mt-4 font-jost px-20">
+              Dive into AIL’s successful campaigns that reflect our dedication to creativity and impact. Each campaign is crafted to resonate with our audience and showcase our brand’s strengths.
+            </p>
+            <div className='w-full md:w-[470px] h-[500px] p-[50px] flex flex-col items-center relative'> {/* Changed to flex-col for mobile layout */}
+              <div className='absolute flex justify-center'> {/* Centering the Ring1 image */}
+                <Image
+                  src={Ring1}
+                  className="rotate-animation"
+                />
+              </div>
+              <div className="m-12"> {/* Added margin-top to create space below Ring1 */}
+                <Image
+                  src={handhoney}
+                  className="w-[250px]"
+                />
               </div>
             </div>
-            <div className="text-center mt-8 px-14">
-              <h4 className="font-semibold text-[34px] font-literata color-[#9F7B49]">Our Campaigns</h4>
-              <p className="w-full md:w-[502px] text-[17px] leading-[31.79px] mt-4 font-jost px-20">
-              Dive into AIL’s successful campaigns that reflect our dedication to creativity and impact. Each campaign is crafted to resonate with our audience and showcase our brand’s strengths.
-              </p>
-              <div className='w-full md:w-[470px] h-[500px] p-[50px] flex flex-col items-center relative'> {/* Changed to flex-col for mobile layout */}
-                  <div className='absolute flex justify-center'> {/* Centering the Ring1 image */}
-                  <Image
-                    src={Ring1}
-                    className="rotate-animation"
-                  />
-                </div>
-                <div className="m-12"> {/* Added margin-top to create space below Ring1 */}
-                  <Image
-                    src={handhoney}
-                    className="w-[250px]"
-                  />
-                </div>
-              </div>
-              <div className="w-full md:w-[470px] h-[382px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#F5D5AC] to-[#F5D5AC] shadow-[2px_2px_2px_#F5D5AC] relative md:mt-[60px] mt-[20px] -ml-[25px]">
+            <div className="w-full md:w-[470px] h-[382px] p-[31px] rounded-[154px_83px_127px_0] bg-gradient-to-r from-[#F5D5AC] to-[#F5D5AC] shadow-[2px_2px_2px_#F5D5AC] relative md:mt-[60px] mt-[20px] -ml-[25px]">
               <p className='text-center font-literata font-semibold text-[30px]'>RJ Sayema X Apis </p>
               <Link href="https://www.instagram.com/p/C0t6yR9iUTj" target='blank'>
-              <Image src={RJSameya01} alt="Campaign" className="bg-transparent p-[9px] mt-0"  style={{borderRadius:"25%"}}  />
+                <Image src={RJSameya01} alt="Campaign" className="bg-transparent p-[9px] mt-0" style={{ borderRadius: "25%" }} />
               </Link>
-              </div>
             </div>
-          </div> :
+          </div>
+        </div> :
           <>
             <div className="text-center mt-8">
               <h4 className="font-semibold text-[34px] text-literata color-[#9F7B49]">Our Campaigns</h4>
@@ -345,7 +344,7 @@ export default function Media() {
                 {IMAGE_DATA.map((item, index) => (
                   <div className="embla__slide" key={index}> {/* Open modal on click */}
                     <div className="embla__slide__number h-full w-full flex items-center justify-center"> {/* Full height and centered */}
-                    <div
+                      <div
                         key={index}
                         className="w-full h-full p-4 rounded-[72px_36px_34px_0] flex flex-col items-center justify-center" // Changed to flex-col for vertical alignment
                         style={{
@@ -362,9 +361,9 @@ export default function Media() {
               </EmblaCarousel>
             </div>
           </>
-     }
-  {/* Carousel for Mobile View */}
-     </div>
+        }
+        {/* Carousel for Mobile View */}
+      </div>
 
       {/* Modal Section */}
     </>
