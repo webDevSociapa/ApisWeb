@@ -22,12 +22,12 @@ export async function POST(req) {
       // Setup Nodemailer to send an email
       
       const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: '7827719965test@gmail.com', // Your email
-          pass: 'hgvu hwmq lnfh xqxa',
-        },
-      });
+            service: 'gmail',
+            auth: {
+              user: 'webdev@sociapa.com', // ✅ Full Gmail
+              pass: 'oilihgfduptzvxyp',         // ✅ App password (no spaces)
+            },
+          });
 
       const mailOptions = {
         from: emailAddress, // Sender email (user's email)
