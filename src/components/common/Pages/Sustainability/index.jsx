@@ -27,6 +27,7 @@ import {
 } from "../../Carousel/EmblaCarouselArrowButtons";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import EmblaCarousel from "../../Carousel/Carousel";
 
 const SUSTAINABILITY_DATA = [
   {
@@ -99,30 +100,32 @@ export default function Sustainability() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     AutoScroll({ playOnInit: false }),
   ]);
+    const [imageSet, setImageSet] = useState([]);
+  
+    const [currentPage, setCurrentPage] = useState(1);
+    const imagesPerPage = 8;
+
+    const [selectedImage, setSelectedImage] = useState(null);
+  
+
+  const handleImageClick = (image) => {
+    setSelectedImage(image);
+  };
+  const OPTIONS1 = { loop: true }
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const {
-    prevBtnDisabled,
-    nextBtnDisabled,
-    onPrevButtonClick,
-    onNextButtonClick,
-  } = usePrevNextButtons(emblaApi);
+  const indexOfLastImage = currentPage * imagesPerPage;
+  const indexOfFirstImage = indexOfLastImage - imagesPerPage;
 
-  const handlePrevButtonClick = () => {
-    if (emblaRef.current) {
-      emblaRef.current.scrollByIndex(-1);
-      setCurrentIndex(
-        (prevIndex) =>
-          (prevIndex - 1 + SUSTAINABILITY_DATA.length) %
-          SUSTAINABILITY_DATA.length);
-    }
+  const currentImages = imageSet.slice(indexOfFirstImage, indexOfLastImage);
+
+  // Pagination logic
+  const totalPages = Math.ceil(imageSet.length / imagesPerPage);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
   };
-
-  const handleNumberClick = (index) => {
-    setCurrentIndex(index);
-    emblaApi.scrollTo(index); // Add this line to scroll the carousel
-  };
-
   const VideoSection = ({ videos, emblaRef }) => (
     <section className="embla flex items-center justify-center">
       <div className="embla__viewport w-full" ref={emblaRef}>
@@ -221,118 +224,111 @@ export default function Sustainability() {
 
   return (
     <>
-    <ImageBanner banner={Banner} />
-    
-    <div className="w-full flex flex-col items-center justify-center gap-4 md:gap-10">
-      <p className="text-[20px] text-center md:text-[40px] font-bold text-[#9F7B49] font-literata">
-        CSR @Apis
-      </p>
-      <p className="w-[96%] md:w-[75%] text-sm md:text-xl text-center font-jost">
-        {sustainBiltyData[0]?.csrContent || "Loading..."}
-      </p>
-    </div>
-  
-    {/* Tabs */}
-    <div className="w-full flex justify-center items-center my-4">
-      <div className="flex gap-4">
-        <button
-          className={`px-4 py-2 rounded ${activeTab === "image" ? "bg-[#85673D] text-white" : "bg-gray-200 text-black"}`}
-          onClick={() => setActiveTab("image")}
-        >
-          Images
-        </button>
-        <button
-          className={`px-4 py-2 rounded ${activeTab === "video" ? "bg-[#85673D] text-white" : "bg-gray-200 text-black"}`}
-          onClick={() => setActiveTab("video")}
-        >
-          Videos
-        </button>
-      </div>
-    </div>
-  
-    {/* Image or Video Content */}
-    <div className="w-[90%] mx-auto">
-      {activeTab === "image" && (
-        <section className="embla flex items-center justify-center">
-          <div className="embla__viewport w-full" ref={emblaRef}>
-            <div className="embla__container py-8">
-              {SUSTAINBILITY_IMAGE.map((item, index) => (
-                <div className="embla__slide" key={index}>
-                  <div className="rounded-xl p-4 border border-[#85673D]">
-                    <Image
-                      key={index}
-                      src={item.image || "/Eovibb.png"}
-                      alt={`CSR Image ${index + 1}`}
-                      className="w-full rounded-lg border border-[#85673D]"
-                      width={300}
-                      height={200}
-                    />
-                  </div>
-                </div>
-              ))}
+   <ImageBanner banner={Banner} />
+
+{/* Heading and Description */}
+<div className="w-full flex flex-col items-center justify-center gap-4 md:gap-10 px-4">
+  <p className="text-[20px] text-center md:text-[40px] font-bold text-[#9F7B49] font-literata">
+    CSR @Apis
+  </p>
+  <p className="w-full md:w-[75%] text-sm md:text-xl text-center font-jost">
+    {sustainBiltyData[0]?.csrContent || "Loading..."}
+  </p>
+</div>
+
+{/* Tabs */}
+<div className="w-full flex justify-center items-center my-4">
+  <div className="flex gap-4">
+    <button
+      className={`px-4 py-2 rounded ${
+        activeTab === "image" ? "bg-[#85673D] text-white" : "bg-gray-200 text-black"
+      }`}
+      onClick={() => setActiveTab("image")}
+    >
+      Images
+    </button>
+    <button
+      className={`px-4 py-2 rounded ${
+        activeTab === "video" ? "bg-[#85673D] text-white" : "bg-gray-200 text-black"
+      }`}
+      onClick={() => setActiveTab("video")}
+    >
+      Videos
+    </button>
+  </div>
+</div>
+
+{/* Image Carousel */}
+{activeTab === "image" && (
+  <div className="flex justify-center mt-8 px-2 md:px-4">
+    <div className="w-full max-w-6xl">
+      <EmblaCarousel options={{ loop: true, align: "center", slidesToScroll: 1 }} autoScroll>
+        {SUSTAINBILITY_IMAGE?.map((image, index) => (
+          <div key={index} className="embla__slide flex justify-center">
+            <div
+              className="w-[85%] sm:w-[250px] md:w-[300px] lg:w-[350px] aspect-square overflow-hidden cursor-pointer rounded-xl"
+              onClick={() => handleImageClick(image)}
+            >
+              <Image
+                src={image.image || "/Eovibb.png"}
+                alt={image}
+                width={400}
+                height={400}
+                className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+              />
             </div>
           </div>
-        </section>
-      )}
-  
-      {activeTab === "video" && (
-        <section className="embla flex items-center justify-center">
-          <div className="embla__viewport w-full" ref={emblaRef}>
-            <div className="embla__container py-8">
-              {sustainBiltyData?.map((itm, index) => (
-                <div className="embla__slide" key={index}>
-                  <div className="rounded-xl p-4 border border-[#85673D]">
-                    <iframe
-                      width="100%"
-                      height="240"
-                      className="h-[240px] md:h-[300px] rounded-2xl w-full bg-opacity-40"
-                      src={itm.videoUrl}
-                      title={itm.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerpolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                      style={{ aspectRatio: "16/9" }}
-                    ></iframe>
-                    <p className="text-xs md:text-base font-normal mt-2">
-                      {itm.title}
-                    </p>
-                  </div>
-                </div>
-              ))}
+        ))}
+      </EmblaCarousel>
+    </div>
+  </div>
+)}
+
+{/* Video Section */}
+{activeTab === "video" && (
+  <section className="embla flex items-center justify-center px-2 md:px-0">
+    <div className="embla__viewport w-full" ref={emblaRef}>
+      <div className="embla__container py-8 gap-6">
+        {sustainBiltyData.map((itm, index) => (
+          <div className="embla__slide" key={index}>
+            <div className="rounded-xl p-4 border border-[#85673D] max-w-md mx-auto">
+              <iframe
+                className="rounded-2xl w-full h-[220px] md:h-[300px] bg-opacity-40"
+                src={itm.videoUrl}
+                title={itm.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                style={{ aspectRatio: "16/9" }}
+              ></iframe>
+              <p className="text-xs md:text-base font-normal mt-2 text-center">{itm.title}</p>
             </div>
           </div>
-        </section>
-      )}
-    </div>
-  
-    {/* Pagination */}
-    <div className="pagination w-[90%] mt-4 flex justify-between space-x-2">
-      <PrevButton
-        onClick={() => {
-          onPrevButtonClick();
-          handleNumberClick(currentIndex - 1);
-        }}
-        disabled={currentIndex === 0}
-      />
-      
-      <div className="flex items-center justify-center">
-        {SUSTAINBILITY_IMAGE.map((_, index) => (
-          <p
-            key={index}
-            onClick={() => handleNumberClick(index)}
-            className={`text-base md:text-3xl border-black px-2 md:px-6 cursor-pointer ${index === currentIndex ? "font-bold" : "font-normal text-gray-600"} ${index === 0 ? "" : "border-l"}`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
         ))}
       </div>
-      <NextButton
-        onClick={() => {
-          handleNumberClick(currentIndex + 1);
-          onNextButtonClick();
-        }}
-        disabled={currentIndex + 1 === SUSTAINBILITY_IMAGE.length}
-      />
     </div>
+  </section>
+)}
+
+{/* Pagination */}
+<div className="flex justify-center mt-8">
+  <button
+    onClick={() => handlePageChange(currentPage - 1)}
+    disabled={currentPage === 1}
+    className="px-4 py-2 mx-2 bg-gray-300 text-black rounded disabled:opacity-50"
+  >
+    Previous
+  </button>
+  <span className="px-4 py-2 text-lg">Page {currentPage} of {totalPages}</span>
+  <button
+    onClick={() => handlePageChange(currentPage + 1)}
+    disabled={currentPage === totalPages}
+    className="px-4 py-2 mx-2 bg-gray-300 text-black rounded disabled:opacity-50"
+  >
+    Next
+  </button>
+</div>
+
   </>
   
   );
