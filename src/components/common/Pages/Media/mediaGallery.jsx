@@ -31,9 +31,7 @@ export default function MediaGalleryData() {
                     Media Gallery
                 </p>
                 <p className="font-medium mt-2 text-center text-xs md:text-lg text-[#666666] font-jost">
-                    Intentions may lay the foundation, but it's our actions that build the
-                    world we live in.
-                </p>
+                Explore our Media Gallery for a glimpse into AIL’s latest news, events, and captivating visuals                </p>
                 <div className="py-6 md:py-10 w-[90%] flex items-center justify-center">
                     <EmblaCarousel options={OPTIONS} autoScroll>
                         {mediaData?.map((itm, index) => (

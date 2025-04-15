@@ -553,7 +553,7 @@ export default function HomePage() {
           Latest @Apis
         </p>
         <p className="font-medium text-center text-xs md:text-lg text-[#666666] text-[22px] font-jost pb-[25px] sm:pb-0 -px-4">
-        Discover the newest trends, products, and innovations from APIS India.
+        Discover the newest trends, products, and innovations from AIL.
         </p>
 
         <div className="py-6 md:py-10 w-[90%] flex items-center justify-center latestApisHome">
@@ -587,7 +587,7 @@ export default function HomePage() {
                 Our Tele-vision Commercial's
               </p> */}
               <p className="text-center text-[#9F7B49] text-[20px] md:text-[40px] font-literata font-bold">
-                Video Ad
+              Our TVC Arena
               </p>
               <div>
                 <p className="font-medium text-xs md:text-lg text-center text-[#666666] font-jost text-medium text-[22px] sm: px-4">
@@ -655,12 +655,7 @@ export default function HomePage() {
                 Work Place Culture
               </p>
               <p className="text-center text-[12px] md:text-xl font-medium text-[#666666] font-jost font-medium text-justify sm:text-[15px] workCultureApis">
-                At AIL, we cultivate a collaborative and innovative environment
-                where every team member is encouraged to thrive. We believe in the power
-                of teamwork and the importance of creativity, fostering a culture where
-                ideas are shared openly, and innovation is celebrated. Our inclusive and
-                supportive atmosphere ensures that every employee feels valued and empowered
-                to contribute their best, driving our collective success and growth.
+              At AIL, we cultivate a collaborative and innovative environment where every team member is encouraged to thrive. We believe in the power of teamwork and the importance of creativity, fostering a culture where ideas are shared openly, and innovation is celebrated. Our inclusive and supportive atmosphere ensures that every employee feels valued and empowered to contribute their best, driving our collective success and growth
               </p>
               <div className="flex justify-center gap-10 mt-6">
                 <button

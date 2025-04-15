@@ -37,9 +37,7 @@ export default function LifeAtApis() {
           Life @Apis
         </p>
         <p className="text-sm w-[95%]  md:text-xl md:w-[70%] md:leading-8 mt-3  md:mt-6 text-center font-jost">
-          At AIL, we foster a collaborative and innovative work culture
-          where every team member's ideas are valued, and growth opportunities
-          are embraced with enthusiasm.
+        At AIL, we foster a collaborative and innovative work culture where every team member's ideas are valued, and growth opportunities are embraced with enthusiasm.
         </p>
       </div>
       {/* <Link href={"/careers/careerGallary"}> */}
