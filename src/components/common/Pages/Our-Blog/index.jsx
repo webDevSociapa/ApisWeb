@@ -25,10 +25,9 @@ const OurBlogPage = () => {
     (currentPage + 1) * itemsPerPage
   );
 
-  const handleImageClick = (blog) => {
-    const { _id, blogTitle, blogImage, contentData } = blog; // Destructure all necessary properties
+  const handleImageClick = (blogId) => {
     router.push(
-      `/our-blog/blog-details?id=${encodeURIComponent(_id)}&blogTitle=${encodeURIComponent(blogTitle)}&blogImage=${encodeURIComponent(blogImage)}&contentData=${encodeURIComponent(contentData)}`
+      `/our-blog/blog-details?id=${blogId}`
     );
   };
   useEffect(() => {
@@ -98,7 +97,7 @@ const OurBlogPage = () => {
 
       <div className="w-[100%] grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 mx-auto px-4 xl:w-[65%]">
         {currentItems.map((blog) => (
-          <BlogCard key={blog._id} blog={blog} onClick={handleImageClick} />
+          <BlogCard key={blog._id} blog={blog} onClick={()=>handleImageClick(blog._id)} />
         ))}
       </div>
 
