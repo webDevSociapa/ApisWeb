@@ -45,7 +45,7 @@ export async function POST(req) {
         };
         const titleUploadResult = await s3.upload(titleUploadParams).promise();
         const titleImageUrl = titleUploadResult.Location;
-
+        
         // Upload imageGroup files to S3
         const imageUrls = [];
         for (let image of imageGroup) {
