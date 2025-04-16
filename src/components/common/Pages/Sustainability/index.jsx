@@ -236,6 +236,7 @@ export default function Sustainability() {
   </p>
 </div>
 
+
 {/* Tabs */}
 <div className="w-full flex justify-center items-center my-4">
   <div className="flex gap-4">
@@ -299,7 +300,6 @@ export default function Sustainability() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
-                style={{ aspectRatio: "16/9" }}
               ></iframe>
               <p className="text-xs md:text-base font-normal mt-2 text-center">{itm.title}</p>
             </div>
