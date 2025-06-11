@@ -16,6 +16,8 @@ async function connectToDb() {
     return database.collection(collectionName);
 }
 
+
+
 // POST method to add data
 export async function POST(req) {
     try {
