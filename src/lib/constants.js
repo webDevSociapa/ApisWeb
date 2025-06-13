@@ -275,7 +275,7 @@ export const PATH_DATA = [
     name: "Sustainability",
   },
   {
-    url: "/our-blog",
+    url: "/our-blog/ourRecipis",
     name: "Resources",
   },
   {

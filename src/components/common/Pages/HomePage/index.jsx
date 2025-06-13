@@ -29,6 +29,8 @@ import { useState, useEffect } from 'react';
 import OrganicHoneyGreenCard from '@/assets/images/home-banner-section/organicHoneyGreenCard1.png'
 import HoneyStick from '@/assets/images/home-banner-section/stickHoney.png'
 import axios from "axios";
+import Head from 'next/head';
+
 
 
 
@@ -127,7 +129,7 @@ export default function HomePage() {
       }
     }
     addLatestApis()
-    
+
     const getMediaSection = async () => {
       try {
         const response = await axios.get("/api/HomePage/mediaSection");
@@ -169,6 +171,35 @@ export default function HomePage() {
 
   return (
     <>
+
+      <Head>
+        <title>Pure And Natural Products - Best Honey, Best Jam, Best Pickle, Quality Dates | Apis India</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="description" content="Discover the exceptional range of natural honey, dates, jam, pickle, green tea, and preserves at APIS India's official website. Experience the perfect blend of taste, quality, and authenticity in every product." />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="msnbot" content="index, follow" />
+        <meta name="YahooSeeker" content="index, follow" />
+        <meta name="google-site-verification" content="P65OGdUwq-pF55bMQOwqRVBm7ijswIsdQ8KV7UZDDho" />
+        <meta property="og:title" content="India`s Leading Natural Honey Brand. Discover Dates, Jams, Pickles, Green Tea, Preserves & More - APIS" />
+        <meta property="og:description" content="APIS is an iconic FMCG brand in India and manufacturer of superior-quality Natural Honey, Dates, Jam, Pickle, Green Tea and Preserves in India. Explore our complete product range at Apisindia.com" />
+        <meta property="og:site_name" content="http://www.apisindia.com " />
+        <meta name="twitter:title" content="India`s Leading Natural Honey Brand. Discover Dates, Jams, Pickles, Green Tea, Preserves & More - APIS" />
+        <meta name="twitter:description" content="Discover the exceptional range of natural honey, dates, jam, pickle, green tea, and preserves at APIS India's official website. Experience the perfect blend of taste, quality, and authenticity in every product." />
+        <meta name="keywords" content="Natural Honey, Pure Honey, Dates, Jam, Pickle, Green Tea, APIS, APIS India, Apisindia.com" />
+        <meta
+          name="keywords"
+          content="Natural Honey, Pure Honey, Dates, Jam, Pickle, Green Tea, APIS, APIS India, Apisindia.com"
+        />
+        <meta
+          name="description"
+          content="Discover the exceptional range of natural honey, dates, jam, pickle, green tea, and preserves at APIS India's official website. Experience the perfect blend of taste, quality, and authenticity in every product."
+        />
+      </Head>
+
+      
       {/* nature page */}
       {/*  */}
       <div className="relative w-full overflow-hidden bg-buyer-bg-yellow-2 smhome-shadow">
@@ -506,7 +537,7 @@ export default function HomePage() {
           <p className="text-bold text-[#D7AD5F] text-[20px] sm:text-[28px] md:text-[34px] lg:text-[40px] font-literata font-semibold mt-[-5px] sm:mt-[-7px] md:mt-[-8px] lg:mt-[-22px]">Our Availability
           </p>
           <div className="font-medium text-center text-white text-xs md:text-lg w-10/12 text-[24px] font-medium font-jost sm: text-[10px] text-medium  2xl: w-[70%] ">
-          Apis products are widely available to ensure you can enjoy our natural and premium offerings wherever you are. You can find our range of honey, organic honey, muesli, pickles, and more at leading supermarkets, grocery stores, and health food shops across the country. Additionally, our products are conveniently accessible online through major e-commerce platforms, making it easy to have your favorite Apis products delivered right to your doorstep. Whether you prefer shopping in-store or online, Apis is always within reach, ready to bring the goodness of nature to your table.
+            Apis products are widely available to ensure you can enjoy our natural and premium offerings wherever you are. You can find our range of honey, organic honey, muesli, pickles, and more at leading supermarkets, grocery stores, and health food shops across the country. Additionally, our products are conveniently accessible online through major e-commerce platforms, making it easy to have your favorite Apis products delivered right to your doorstep. Whether you prefer shopping in-store or online, Apis is always within reach, ready to bring the goodness of nature to your table.
           </div>
           <div className="font-medium text-center text-white text-xs md:text-lg w-10/12 text-[24px] font-medium font-jost text-medium sm: text-[10px] font-jost text-medium 2xl: w-[70%] ">
             Additionally, our products are conveniently accessible online
@@ -553,7 +584,7 @@ export default function HomePage() {
           Latest @Apis
         </p>
         <p className="font-medium text-center text-xs md:text-lg text-[#666666] text-[22px] font-jost pb-[25px] sm:pb-0 -px-4">
-        Discover the newest trends, products, and innovations from AIL.
+          Discover the newest trends, products, and innovations from AIL.
         </p>
 
         <div className="py-6 md:py-10 w-[90%] flex items-center justify-center latestApisHome">
@@ -578,8 +609,6 @@ export default function HomePage() {
           </EmblaCarousel>
         </div>
 
-
-
         <div className="w-full tvcSectionResponsive">
           <div className="md:tvc-bg relative !w-full">
             <div className="flex flex-col gap-0 md:gap-0 sm: gap-0">
@@ -587,7 +616,7 @@ export default function HomePage() {
                 Our Tele-vision Commercial's
               </p> */}
               <p className="text-center text-[#9F7B49] text-[20px] md:text-[40px] font-literata font-bold">
-              Our TVC Arena
+                Our TVC Arena
               </p>
               <div>
                 <p className="font-medium text-xs md:text-lg text-center text-[#666666] font-jost text-medium text-[22px] sm: px-4">
@@ -645,7 +674,7 @@ export default function HomePage() {
 
       {/* Work Place Culture */}
       <div className="work-palace mt-[152px] lg:mt-0 flex items-center justify-center px-4 py-4 lg:px-48 lg:py-48">
-      <div className="h-full bg-[#FFF9F0] p-4">
+        <div className="h-full bg-[#FFF9F0] p-4">
           <div className="flex h-full items-center justify-center bg-white p-3">
             <div className="bg-white flex flex-col gap-2 md:gap-4">
               <p className="text-center text-[22px] md:text-xl font-medium text-[#585858] font-jost text-medium sm: text-[12px] text-medium">
@@ -655,7 +684,7 @@ export default function HomePage() {
                 Work Place Culture
               </p>
               <p className="text-center text-[12px] md:text-xl font-medium text-[#666666] font-jost font-medium text-justify sm:text-[15px] workCultureApis">
-              At AIL, we cultivate a collaborative and innovative environment where every team member is encouraged to thrive. We believe in the power of teamwork and the importance of creativity, fostering a culture where ideas are shared openly, and innovation is celebrated. Our inclusive and supportive atmosphere ensures that every employee feels valued and empowered to contribute their best, driving our collective success and growth
+                At AIL, we cultivate a collaborative and innovative environment where every team member is encouraged to thrive. We believe in the power of teamwork and the importance of creativity, fostering a culture where ideas are shared openly, and innovation is celebrated. Our inclusive and supportive atmosphere ensures that every employee feels valued and empowered to contribute their best, driving our collective success and growth
               </p>
               <div className="flex justify-center gap-10 mt-6">
                 <button

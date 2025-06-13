@@ -28,6 +28,7 @@ import {
 import { useEffect, useState } from "react";
 import axios from "axios";
 import EmblaCarousel from "../../Carousel/Carousel";
+import Head from "next/head";
 
 const SUSTAINABILITY_DATA = [
   {
@@ -100,13 +101,13 @@ export default function Sustainability() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     AutoScroll({ playOnInit: false }),
   ]);
-    const [imageSet, setImageSet] = useState([]);
-  
-    const [currentPage, setCurrentPage] = useState(1);
-    const imagesPerPage = 8;
+  const [imageSet, setImageSet] = useState([]);
 
-    const [selectedImage, setSelectedImage] = useState(null);
-  
+  const [currentPage, setCurrentPage] = useState(1);
+  const imagesPerPage = 8;
+
+  const [selectedImage, setSelectedImage] = useState(null);
+
 
   const handleImageClick = (image) => {
     setSelectedImage(image);
@@ -204,7 +205,7 @@ export default function Sustainability() {
       />
     </div>
   );
-  
+
 
 
   useEffect(() => {
@@ -224,113 +225,127 @@ export default function Sustainability() {
 
   return (
     <>
-   <ImageBanner banner={Banner} />
 
-{/* Heading and Description */}
-<div className="w-full flex flex-col items-center justify-center gap-4 md:gap-10 px-4">
-  <p className="text-[20px] text-center md:text-[40px] font-bold text-[#9F7B49] font-literata">
-    CSR @Apis
-  </p>
-  <p className="w-full md:w-[75%] text-sm md:text-xl text-center font-jost">
-    {sustainBiltyData[0]?.csrContent || "Loading..."}
-  </p>
-</div>
+      <Head>
+        <title> Work Culture | Apis India</title>
+        <meta charSet="utf-8" />
+        <meta name="description" content="Apis A leading FMCG company which has been thrice awarded the prestigious APEDA Export Award by Ministry of Commerce, Government of India, for our achievement in exports of honey." />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="msnbot" content="index, follow" />
+        <meta name="YahooSeeker" content="index, follow" />
+        <meta property="og:title" content=" Work Culture | Apis India" />
+        <meta property="og:description" content="Apis A leading FMCG company which has been thrice awarded the prestigious APEDA Export Award by Ministry of Commerce, Government of India, for our achievement in exports of honey." />
+        <meta property="og:site_name" content="http://www.apisindia.com/efo.php" />
+        <meta name="twitter:title" content=" Work Culture | Apis India" />
+        <meta name="twitter:description" content="Apis A leading FMCG company which has been thrice awarded the prestigious APEDA Export Award by Ministry of Commerce, Government of India, for our achievement in exports of honey." />
+        <meta itemprop="title" content=" Work Culture | Apis India" />
+        <meta itemprop="description" content="Apis A leading FMCG company which has been thrice awarded the prestigious APEDA Export Award by Ministry of Commerce, Government of India, for our achievement in exports of honey. " />
+      </Head>
+      <ImageBanner banner={Banner} />
 
-
-{/* Tabs */}
-<div className="w-full flex justify-center items-center my-4">
-  <div className="flex gap-4">
-    <button
-      className={`px-4 py-2 rounded ${
-        activeTab === "image" ? "bg-[#85673D] text-white" : "bg-gray-200 text-black"
-      }`}
-      onClick={() => setActiveTab("image")}
-    >
-      Images
-    </button>
-    <button
-      className={`px-4 py-2 rounded ${
-        activeTab === "video" ? "bg-[#85673D] text-white" : "bg-gray-200 text-black"
-      }`}
-      onClick={() => setActiveTab("video")}
-    >
-      Videos
-    </button>
-  </div>
-</div>
-
-{/* Image Carousel */}
-{activeTab === "image" && (
-  <div className="flex justify-center mt-8 px-2 md:px-4">
-    <div className="w-full max-w-6xl">
-      <EmblaCarousel options={{ loop: true, align: "center", slidesToScroll: 1 }} autoScroll>
-        {SUSTAINBILITY_IMAGE?.map((image, index) => (
-          <div key={index} className="embla__slide flex justify-center">
-            <div
-              className="w-[85%] sm:w-[250px] md:w-[300px] lg:w-[350px] aspect-square overflow-hidden cursor-pointer rounded-xl"
-              onClick={() => handleImageClick(image)}
-            >
-              <Image
-                src={image.image || "/Eovibb.png"}
-                alt={image}
-                width={400}
-                height={400}
-                className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-              />
-            </div>
-          </div>
-        ))}
-      </EmblaCarousel>
-    </div>
-  </div>
-)}
-
-{/* Video Section */}
-{activeTab === "video" && (
-  <section className="embla flex items-center justify-center px-2 md:px-0">
-    <div className="embla__viewport w-full" ref={emblaRef}>
-      <div className="embla__container py-8 gap-6">
-        {sustainBiltyData.map((itm, index) => (
-          <div className="embla__slide" key={index}>
-            <div className="rounded-xl p-4 border border-[#85673D] max-w-md mx-auto">
-              <iframe
-                className="rounded-2xl w-full h-[220px] md:h-[300px] bg-opacity-40"
-                src={itm.videoUrl}
-                title={itm.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-              <p className="text-xs md:text-base font-normal mt-2 text-center">{itm.title}</p>
-            </div>
-          </div>
-        ))}
+      {/* Heading and Description */}
+      <div className="w-full flex flex-col items-center justify-center gap-4 md:gap-10 px-4">
+        <p className="text-[20px] text-center md:text-[40px] font-bold text-[#9F7B49] font-literata">
+          CSR @Apis
+        </p>
+        <p className="w-full md:w-[75%] text-sm md:text-xl text-center font-jost">
+          {sustainBiltyData[0]?.csrContent || "Loading..."}
+        </p>
       </div>
-    </div>
-  </section>
-)}
 
-{/* Pagination */}
-<div className="flex justify-center mt-8">
-  <button
-    onClick={() => handlePageChange(currentPage - 1)}
-    disabled={currentPage === 1}
-    className="px-4 py-2 mx-2 bg-gray-300 text-black rounded disabled:opacity-50"
-  >
-    Previous
-  </button>
-  <span className="px-4 py-2 text-lg">Page {currentPage} of {totalPages}</span>
-  <button
-    onClick={() => handlePageChange(currentPage + 1)}
-    disabled={currentPage === totalPages}
-    className="px-4 py-2 mx-2 bg-gray-300 text-black rounded disabled:opacity-50"
-  >
-    Next
-  </button>
-</div>
+      {/* Tabs */}
+      <div className="w-full flex justify-center items-center my-4">
+        <div className="flex gap-4">
+          <button
+            className={`px-4 py-2 rounded ${activeTab === "image" ? "bg-[#85673D] text-white" : "bg-gray-200 text-black"
+              }`}
+            onClick={() => setActiveTab("image")}
+          >
+            Images
+          </button>
+          <button
+            className={`px-4 py-2 rounded ${activeTab === "video" ? "bg-[#85673D] text-white" : "bg-gray-200 text-black"
+              }`}
+            onClick={() => setActiveTab("video")}
+          >
+            Videos
+          </button>
+        </div>
+      </div>
 
-  </>
-  
+      {/* Image Carousel */}
+      {activeTab === "image" && (
+        <div className="flex justify-center mt-8 px-2 md:px-4">
+          <div className="w-full max-w-6xl">
+            <EmblaCarousel options={{ loop: true, align: "center", slidesToScroll: 1 }} autoScroll>
+              {SUSTAINBILITY_IMAGE?.map((image, index) => (
+                <div key={index} className="embla__slide flex justify-center">
+                  <div
+                    className="w-[85%] sm:w-[250px] md:w-[300px] lg:w-[350px] aspect-square overflow-hidden cursor-pointer rounded-xl"
+                    onClick={() => handleImageClick(image)}
+                  >
+                    <Image
+                      src={image.image || "/Eovibb.png"}
+                      alt={image}
+                      width={400}
+                      height={400}
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    />
+                  </div>
+                </div>
+              ))}
+            </EmblaCarousel>
+          </div>
+        </div>
+      )}
+
+      {/* Video Section */}
+      {activeTab === "video" && (
+        <section className="embla flex items-center justify-center px-2 md:px-0">
+          <div className="embla__viewport w-full" ref={emblaRef}>
+            <div className="embla__container py-8 gap-6">
+              {sustainBiltyData.map((itm, index) => (
+                <div className="embla__slide" key={index}>
+                  <div className="rounded-xl p-4 border border-[#85673D] max-w-md mx-auto">
+                    <iframe
+                      className="rounded-2xl w-full h-[220px] md:h-[300px] bg-opacity-40"
+                      src={itm.videoUrl}
+                      title={itm.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    ></iframe>
+                    <p className="text-xs md:text-base font-normal mt-2 text-center">{itm.title}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Pagination */}
+      <div className="flex justify-center mt-8">
+        <button
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+          className="px-4 py-2 mx-2 bg-gray-300 text-black rounded disabled:opacity-50"
+        >
+          Previous
+        </button>
+        <span className="px-4 py-2 text-lg">Page {currentPage} of {totalPages}</span>
+        <button
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          className="px-4 py-2 mx-2 bg-gray-300 text-black rounded disabled:opacity-50"
+        >
+          Next
+        </button>
+      </div>
+
+    </>
+
   );
 }
 

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { NextButton, PrevButton } from "../../Carousel/EmblaCarouselArrowButtons";
 import axios from "axios";
+import Head from "next/head";
 
 const OurBlogPage = () => {
   const router = useRouter();
@@ -85,6 +86,20 @@ const OurBlogPage = () => {
 
   return (
     <>
+    <Head>
+      <title>Apis India Newsletter - Purity Is Our Essence In Food</title>
+	<meta name="description" content="Purity Is Our Essence In Food" />
+	<link rel="canonical" href="https://blog.apisindia.com/" />
+	<link rel="next" href="https://blog.apisindia.com/page/2/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Apis India Newsletter" />
+	<meta property="og:description" content="Purity Is Our Essence In Food" />
+	<meta property="og:url" content="https://blog.apisindia.com/" />
+	<meta property="og:site_name" content="Apis India Newsletter" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@apis_india" />
+    </Head>
       <ImageBanner banner={Banner} />
       <div className="flex flex-col items-center justify-center mt-10">
         <p className="font-bold text-[20px] md:text-[40px] text-center text-[#9F7B49]">
@@ -97,7 +112,7 @@ const OurBlogPage = () => {
 
       <div className="w-[100%] grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 mx-auto px-4 xl:w-[65%]">
         {currentItems.map((blog) => (
-          <BlogCard key={blog._id} blog={blog} onClick={()=>handleImageClick(blog._id)} />
+          <BlogCard key={blog._id} blog={blog} onClick={() => handleImageClick(blog._id)} />
         ))}
       </div>
 
