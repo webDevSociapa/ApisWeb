@@ -24,6 +24,7 @@ import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import axios from "axios";
 import employeAward from '@/assets/images/Careers/employeAward.png'
+import Head from "next/head";
 
 
 const CAREER_DATA = [
@@ -297,6 +298,43 @@ export default function Careers() {
 
   return (
     <>
+
+      <Head>
+        <title>Apis India | Join Our Squad</title>
+        <meta charSet="utf-8" />
+        <meta
+          name="description"
+          content="Apis India has also forayed into Tea; Pickles, Jam, Dates & Preserves considering the changing purchase dynamics & growing need of the quality branded packaged products. For any other information on the products kindly fill the contact form."
+        />
+
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="msnbot" content="index, follow" />
+        <meta name="YahooSeeker" content="index, follow" />
+
+        <meta property="og:title" content="Apis India | Join Our Squad" />
+        <meta
+          property="og:description"
+          content="Apis India has also forayed into Tea; Pickles, Jam, Dates & Preserves considering the changing purchase dynamics & growing need of the quality branded packaged products. For any other information on the products kindly fill the contact form."
+        />
+        <meta property="og:site_name" content="http://www.apisindia.com/en/careers" />
+
+        <meta name="twitter:title" content="Apis India | Join Our Squad" />
+        <meta
+          name="twitter:description"
+          content="Apis India has also forayed into Tea; Pickles, Jam, Dates & Preserves considering the changing purchase dynamics & growing need of the quality branded packaged products. For any other information on the products kindly fill the contact form."
+        />
+
+        <meta itemProp="title" content="Apis India | Join Our Squad" />
+        <meta
+          itemProp="description"
+          content="Apis India has also forayed into Tea; Pickles, Jam, Dates & Preserves considering the changing purchase dynamics & growing need of the quality branded packaged products. For any other information on the products kindly fill the contact form."
+        />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="format-detection" content="telephone=no" />
+
+      </Head>
       <ImageBanner banner={Banner} />
       <div id="life-at-apis" className="flex flex-col items-center justify-center">
         <p className="font-bold text-[20px] md:text-[40px] text-center text-[#9F7B49] font-literata">

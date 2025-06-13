@@ -5,80 +5,82 @@ import Banner from "@/assets/images/Careers/careerBanner.png";
 import { useEffect, useRef, useState } from "react";
 import ImageBanner from "../../Layout/Banner";
 
- export default function JoinOurTeam(){
-      const [isModalOpen, setIsModalOpen] = useState(false);
-      const [selectedJob, setSelectedJob] = useState(null);
-      const [jobOpening, setJobOpening] = useState([])
-      // const [phone, setPhone] = useState("");
-      const [showSuccess, setShowSuccess] = useState(false);
-      const modalRef = useRef(null);
-      const [formData, setFormData] = useState({
-        selectJob: '',
-        fullName: '',
-        emailAddress: '',
-        phoneNumber: '',
-        resume: 'null',
-      });
+export default function JoinOurTeam() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedJob, setSelectedJob] = useState(null);
+  const [jobOpening, setJobOpening] = useState([])
+  // const [phone, setPhone] = useState("");
+  const [showSuccess, setShowSuccess] = useState(false);
+  const modalRef = useRef(null);
+  const [formData, setFormData] = useState({
+    selectJob: '',
+    fullName: '',
+    emailAddress: '',
+    phoneNumber: '',
+    resume: 'null',
+  });
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append('selectJob', formData.selectJob);
+      formDataToSend.append('fullName', formData.fullName);
+      formDataToSend.append('emailAddress', formData.emailAddress);
+      formDataToSend.append('phoneNumber', formData.phoneNumber);
+      formDataToSend.append('resume', formData.resume);
 
-      const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-          const formDataToSend = new FormData();
-          formDataToSend.append('selectJob', formData.selectJob);
-          formDataToSend.append('fullName', formData.fullName);
-          formDataToSend.append('emailAddress', formData.emailAddress);
-          formDataToSend.append('phoneNumber', formData.phoneNumber);
-          formDataToSend.append('resume', formData.resume);
-    
-          const response = await axios.post('/api/ApplyJobRole', formDataToSend, {
-            headers: {
-              'Content-Type': 'multipart/form-data'
-            }
-          });
-          if (response.data.status === 200) {
-            setShowSuccess(true);
-            setIsModalOpen(false);
-          }
-        } catch (error) {
-          console.error("Error submitting form:", error);
-          setPopupMessage('An error occurred. Please try again.');
+      const response = await axios.post('/api/ApplyJobRole', formDataToSend, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
         }
+      });
+      if (response.data.status === 200) {
+        setShowSuccess(true);
+        setIsModalOpen(false);
       }
-      const handleChange = (e) => {
-        const { name, value, type, files } = e.target;
-    
-        setFormData(prevData => ({
-          ...prevData,
-          [name]: type === 'file' ? files[0] : value
-        }));
-      };
-    
-      const handlePhoneChange = (value) => {
-        setFormData(prevData => ({
-          ...prevData,
-          phoneNumber: value
-        }));
-      };
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setPopupMessage('An error occurred. Please try again.');
+    }
+  }
+
+  const handleChange = (e) => {
+    const { name, value, type, files } = e.target;
+
+    setFormData(prevData => ({
+      ...prevData,
+      [name]: type === 'file' ? files[0] : value
+    }));
+  };
+
+  const handlePhoneChange = (value) => {
+    setFormData(prevData => ({
+      ...prevData,
+      phoneNumber: value
+    }));
+  };
 
 
-    useEffect(()=>{
-        const CareersData = async () => {
-            try {
-              const response = await axios.get("/api/careers/jobOpening/");
-              setJobOpening(response.data)
-              console.log("responseDatajobbb", response.data);
-            }
-            catch (error) {
-              console.log("Error");
-            }
-          }
-          CareersData()
-    },[])
-    return (
-       <>
-        <ImageBanner banner={Banner} />
-        <div id="join-us" className="w-full mt-14 flex flex-col items-center justify-center">
+  useEffect(() => {
+    const CareersData = async () => {
+      try {
+        const response = await axios.get("/api/careers/jobOpening/");
+        setJobOpening(response.data)
+        console.log("responseDatajobbb", response.data);
+      }
+      catch (error) {
+        console.log("Error");
+      }
+    }
+    CareersData()
+  }, [])
+
+
+  return (
+    <>
+      <ImageBanner banner={Banner} />
+      <div id="join-us" className="w-full mt-14 flex flex-col items-center justify-center">
         <div className="bg-[#9F7B49] flex flex-col items-center justify-center w-full p-2 md:p-5">
           <div className="bg-[#FFFBF6] w-full py-6 md:py-12 overflow-hidden flex flex-col items-center gap-6 md:gap-12 justify-center relative">
             <div className="flex flex-col items-center justify-center">
@@ -86,7 +88,7 @@ import ImageBanner from "../../Layout/Banner";
                 Join Us
               </p>
               <p className="text-center text-xs md:text-lg text-[#353535] mt-4 w-[90%] md:w-[80%]">
-              Join us at AIL and become part of a dynamic team where innovation, collaboration, and personal growth are at the heart of everything we do
+                Join us at AIL and become part of a dynamic team where innovation, collaboration, and personal growth are at the heart of everything we do
               </p>
             </div>
             <div className="w-full overflow-x-auto">
@@ -224,7 +226,6 @@ import ImageBanner from "../../Layout/Banner";
           </div>
         </div>
       )}
-
       {showSuccess && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
           <div className="bg-white p-6 rounded-lg max-w-md w-full text-center">
@@ -240,6 +241,6 @@ import ImageBanner from "../../Layout/Banner";
           </div>
         </div>
       )}
-       </>
-    )
+    </>
+  )
 }

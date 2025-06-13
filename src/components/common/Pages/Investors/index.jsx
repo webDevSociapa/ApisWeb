@@ -10,13 +10,13 @@ export default function Investors() {
       {/* Reports Button */}
       <div>
         <button
-          className="w-full text-left font-semibold bg-gray-200 px-4 py-2 rounded-md shadow toggle-btn flex justify-between items-center"
+          className="w-full text-left font-semibold bg-gray-100 px-4 py-2 rounded-md shadow toggle-btn flex justify-between items-center border border-[#835415]"
           onClick={() => toggleCollapse("reportsSection")}
         >
           <span>Reports</span>
           <div className="flex items-center gap-2">
             <span className="dropdown-icon">▼</span>
-            <span className="text-sm text-blue-600">View More</span>
+            <span className="text-sm text-[#835415]">View More</span>
           </div>
         </button>
 
@@ -25,7 +25,7 @@ export default function Investors() {
           {/* Corporate Governance Reports */}
           <div>
             <button
-              className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow bg"
+              className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow bg "
               onClick={() => toggleCollapse("corporatePolicies000111")}
             >
               Corporate Governance Reports
@@ -142,13 +142,13 @@ export default function Investors() {
       {/* Governance Button */}
       <div>
         <button
-          className="w-full text-left font-semibold bg-gray-200 px-4 py-2 rounded-md shadow toggle-btn flex justify-between items-center"
+          className="w-full text-left font-semibold bg-gray-100 px-4 py-2 rounded-md shadow toggle-btn flex justify-between items-center border border-[#835415]"
           onClick={() => toggleCollapse("governanceBtn")}
         >
           <span>Corporate Governance</span>
           <div className="flex items-center gap-2">
             <span className="dropdown-icon">▼</span>
-            <span className="text-sm text-blue-600">View More</span>
+            <span className="text-sm text-[#835415]">View More</span>
           </div>
         </button>
 
@@ -240,7 +240,6 @@ export default function Investors() {
             </div>
           </div>
 
-
           {/* Business Responsibility Reports */}
           <div>
             <button
@@ -329,8 +328,6 @@ export default function Investors() {
                       </a>
                     </td>
                   </tr>
-
-
                   <tr>
                     <td className="border p-2">2021</td>
                     <td className="border p-2">
@@ -354,7 +351,6 @@ export default function Investors() {
                       </a>
                     </td>
                   </tr>
-
                   <tr>
                     <td className="border p-2">2020</td>
                     <td className="border p-2">
@@ -378,7 +374,6 @@ export default function Investors() {
                       </a>
                     </td>
                   </tr>
-
                   <tr>
                     <td className="border p-2">2019</td>
                     <td className="border p-2">
@@ -428,13 +423,9 @@ export default function Investors() {
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
-
                   </tr>
-
-
                   {/* Repeat similarly for 2022 to 2018 */}
                   {/* You can map over a JSON object if needed to simplify this code */}
-
                 </tbody>
               </table>
             </div>
@@ -716,7 +707,7 @@ export default function Investors() {
       {/*  Shreholding Infromation */}
       <div>
         <button
-          className="w-full text-left font-semibold bg-gray-200 px-4 py-2 rounded-md shadow toggle-btn flex justify-between items-center"
+          className="w-full text-left font-semibold bg-gray-100 px-4 py-2 rounded-md shadow toggle-btn flex justify-between items-center border border-[#835415]"
           onClick={() => toggleCollapse("shareholdingBtn")}
         >
           <span>
@@ -724,7 +715,7 @@ export default function Investors() {
           </span>
           <div className="flex items-center gap-2">
             <span className="dropdown-icon">▼</span>
-            <span className="text-sm text-blue-600">View More</span>
+            <span className="text-sm text-[#835415]">View More</span>
           </div>
         </button>
 
@@ -895,13 +886,13 @@ export default function Investors() {
 
       <div>
         <button
-          className="w-full text-left font-semibold bg-gray-200 px-4 py-2 rounded-md shadow toggle-btn flex justify-between items-center"
+          className="w-full text-left font-semibold bg-gray-100 px-4 py-2 rounded-md shadow toggle-btn flex justify-between items-center border border-[#835415]"
           onClick={() => toggleCollapse("announcemtns")}
         >
           <span>Announcements</span>
           <div className="flex items-center gap-2">
             <span className="dropdown-icon">▼</span>
-            <span className="text-sm text-blue-600">View More</span>
+            <span className="text-sm text-[#835415]">View More</span>
           </div>
         </button>
 
@@ -1036,7 +1027,7 @@ export default function Investors() {
       {/* Disclousre */}
       <div>
         <button
-          className="w-full text-left font-semibold bg-gray-200 px-4 py-2 rounded-md shadow toggle-btn flex justify-between items-center"
+          className="w-full text-left font-semibold bg-gray-100 px-4 py-2 rounded-md shadow toggle-btn flex justify-between items-center border border-[#835415]"
           onClick={() => toggleCollapse("disclosure21")}
         >
           <span>
@@ -1046,7 +1037,7 @@ export default function Investors() {
           </span>
           <div className="flex items-center gap-2">
             <span className="dropdown-icon">▼</span>
-            <span className="text-sm text-blue-600">View More</span>
+            <span className="text-sm text-[#835415]">View More</span>
           </div>
         </button>
 
@@ -1559,15 +1550,10 @@ export default function Investors() {
                       </tbody>
                     </table>
                   </div>
-
-
                 </div>
 
-
-
-
                 <div className=" mb-4 p-2">
-                  <h5> FINANCIAL RESULTS, ON CONCLUSION OF THE MEETING OF THE BOARD OF DIRECTORS WHERE THE FINANCIAL RESULTS WERE APPROVED</h5>
+                  <h5>FINANCIAL RESULTS, ON CONCLUSION OF THE MEETING OF THE BOARD OF DIRECTORS WHERE THE FINANCIAL RESULTS WERE APPROVED</h5>
                   <div className="noticeOfMeetingBoard">
                     <table className="w-full border-collapse text-center text-sm">
                       <thead className="bg-gray-200">
@@ -2545,12 +2531,12 @@ export default function Investors() {
             </div>
 
 
-             <div className="mt-2">
+            <div className="mt-2">
               <button
                 className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow mb-2"
                 onClick={() => toggleCollapse("determiningMaterility")}
               >
-                DISCLOSURE OF CONTACT DETAILS OF KEY MANAGERIAL PERSONNEL WHO ARE AUTHORIZED FOR THE PURPOSE OF <br/>DETERMINING MATERIALITY OF AN EVENT OR INFORMATION AND FOR THE PURPOSE OF MAKING DISCLOSURES TO STOCK EXCHANGE(S)
+                DISCLOSURE OF CONTACT DETAILS OF KEY MANAGERIAL PERSONNEL WHO ARE AUTHORIZED FOR THE PURPOSE OF <br />DETERMINING MATERIALITY OF AN EVENT OR INFORMATION AND FOR THE PURPOSE OF MAKING DISCLOSURES TO STOCK EXCHANGE(S)
                 <span className="float-right">▼</span>
               </button>
 
@@ -2605,7 +2591,7 @@ export default function Investors() {
 
 
 
-             <div className="mt-2">
+            <div className="mt-2">
               <button
                 className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow mb-2"
                 onClick={() => toggleCollapse("regulation300")}
@@ -2615,27 +2601,27 @@ export default function Investors() {
               </button>
 
               <div id="regulation300" className="hidden mt-2 overflow-x-auto">
-               <p>No Data</p>
+                <p>No Data</p>
               </div>
             </div>
 
 
-             <div className="mt-2">
+            <div className="mt-2">
               <button
                 className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow mb-2"
                 onClick={() => toggleCollapse("DEVIATION211")}
               >
-               STATEMENTS OF DEVIATION(S) OR VARIATION(S) AS SPECIFIED IN REGULATION 32 OF THESE REGULATIONS
+                STATEMENTS OF DEVIATION(S) OR VARIATION(S) AS SPECIFIED IN REGULATION 32 OF THESE REGULATIONS
                 <span className="float-right">▼</span>
               </button>
 
               <div id="DEVIATION211" className="hidden mt-2 overflow-x-auto">
-               <p>No Data</p>
+                <p>No Data</p>
               </div>
             </div>
 
 
-             <div className="mt-2">
+            <div className="mt-2">
               <button
                 className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow mb-2"
                 onClick={() => toggleCollapse("DISTRIBUTION2100")}
@@ -2645,118 +2631,118 @@ export default function Investors() {
               </button>
 
               <div id="DISTRIBUTION2100" className="hidden mt-2 overflow-x-auto">
-               <p>No Data</p>
+                <p>No Data</p>
               </div>
             </div>
 
 
-        <div className="mt-2">
-  <button
-    className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow mb-2"
-    onClick={() => toggleCollapse("annualReport")}
-  >
-    ANNUAL Report
-    <span className="float-right">▼</span>
-  </button>
+            <div className="mt-2">
+              <button
+                className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow mb-2"
+                onClick={() => toggleCollapse("annualReport")}
+              >
+                ANNUAL Report
+                <span className="float-right">▼</span>
+              </button>
 
-  <div id="annualReport" className="hidden mt-2 overflow-x-auto">
-    <table className="min-w-full border-collapse text-sm text-left">
-      <tbody>
-        {[
-          {
-            title: "Annual Report 2023-2024",
-            url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual+Report-2023-24_FINAL+(1).pdf",
-          },
-          {
-            title: "Annual Report 2022-2023",
-            url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual-Report-2023.pdf",
-          },
-          {
-            title: "Annual Report 2021-2022",
-            url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual+Report+2021-22.pdf",
-          },
-          {
-            title: "Annual Report 2020-2021",
-            url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual-Report-2020-21-Final.pdf",
-          },
-          {
-            title: "Annual Report 2019-2020",
-            url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual+Report-2020.pdf",
-          },
-          {
-            title: "Annual Report 2018-2019",
-            url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual+Report+Final+2018-19.pdf",
-          },
-          {
-            title: "Annual Report 2017-2018",
-            url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual-Report-APIS-2017.pdf",
-          },
-          {
-            title: "Annual Report 2015-2016",
-            url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Final-Annual-Report-2015-16-(1).pdf",
-          },
-        ].map(({ title, url }, index) => (
-          <tr
-            key={index}
-            className="border-b-2 border-[#003366]"
-          >
-            <td className="px-4 py-2">{title}</td>
-            <td className="px-4 py-2">
-              <a href={url} target="_blank" rel="noopener noreferrer">
-                <Image src={pdficon1} alt="PDF" width="30" />
-              </a>
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
+              <div id="annualReport" className="hidden mt-2 overflow-x-auto">
+                <table className="min-w-full border-collapse text-sm text-left">
+                  <tbody>
+                    {[
+                      {
+                        title: "Annual Report 2023-2024",
+                        url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual+Report-2023-24_FINAL+(1).pdf",
+                      },
+                      {
+                        title: "Annual Report 2022-2023",
+                        url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual-Report-2023.pdf",
+                      },
+                      {
+                        title: "Annual Report 2021-2022",
+                        url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual+Report+2021-22.pdf",
+                      },
+                      {
+                        title: "Annual Report 2020-2021",
+                        url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual-Report-2020-21-Final.pdf",
+                      },
+                      {
+                        title: "Annual Report 2019-2020",
+                        url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual+Report-2020.pdf",
+                      },
+                      {
+                        title: "Annual Report 2018-2019",
+                        url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual+Report+Final+2018-19.pdf",
+                      },
+                      {
+                        title: "Annual Report 2017-2018",
+                        url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual-Report-APIS-2017.pdf",
+                      },
+                      {
+                        title: "Annual Report 2015-2016",
+                        url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Final-Annual-Report-2015-16-(1).pdf",
+                      },
+                    ].map(({ title, url }, index) => (
+                      <tr
+                        key={index}
+                        className="border-b-2 border-[#003366]"
+                      >
+                        <td className="px-4 py-2">{title}</td>
+                        <td className="px-4 py-2">
+                          <a href={url} target="_blank" rel="noopener noreferrer">
+                            <Image src={pdficon1} alt="PDF" width="30" />
+                          </a>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
 
 
-  <div className="mt-2">
-  <button
-    className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow mb-2"
-    onClick={() => toggleCollapse("annualReturn")}
-  >
-    ANNUAL RETURN
-    <span className="float-right">▼</span>
-  </button>
+              <div className="mt-2">
+                <button
+                  className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow mb-2"
+                  onClick={() => toggleCollapse("annualReturn")}
+                >
+                  ANNUAL RETURN
+                  <span className="float-right">▼</span>
+                </button>
 
-  <div id="annualReturn" className="hidden mt-2 overflow-x-auto">
-    <table className="min-w-full border-collapse text-sm text-left">
-      <tbody>
-        {[
-          {
-            title: "MGT-7 2023-2024",
-            url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReturn/MGT-7+(1).pdf",
-          },
-          {
-            title: "MGT-7 2022-2023",
-            url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReturn/MGT-7-23.pdf",
-          },
-          {
-            title: "MGT-7 2021-2022",
-            url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReturn/MGT-7.pdf",
-          },
-        ].map(({ title, url }, index) => (
-          <tr
-            key={index}
-            className="border-b-2 border-[#003366]"
-          >
-            <td className="px-4 py-2">{title}</td>
-            <td className="px-4 py-2">
-              <a href={url} target="_blank" rel="noopener noreferrer">
-                 <Image src={pdficon1} alt="PDF" width="30" />
-              </a>
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-</div>
+                <div id="annualReturn" className="hidden mt-2 overflow-x-auto">
+                  <table className="min-w-full border-collapse text-sm text-left">
+                    <tbody>
+                      {[
+                        {
+                          title: "MGT-7 2023-2024",
+                          url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReturn/MGT-7+(1).pdf",
+                        },
+                        {
+                          title: "MGT-7 2022-2023",
+                          url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReturn/MGT-7-23.pdf",
+                        },
+                        {
+                          title: "MGT-7 2021-2022",
+                          url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReturn/MGT-7.pdf",
+                        },
+                      ].map(({ title, url }, index) => (
+                        <tr
+                          key={index}
+                          className="border-b-2 border-[#003366]"
+                        >
+                          <td className="px-4 py-2">{title}</td>
+                          <td className="px-4 py-2">
+                            <a href={url} target="_blank" rel="noopener noreferrer">
+                              <Image src={pdficon1} alt="PDF" width="30" />
+                            </a>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
 
-</div>
+            </div>
 
 
 

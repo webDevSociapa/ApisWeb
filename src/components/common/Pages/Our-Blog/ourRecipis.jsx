@@ -3,14 +3,56 @@
 import { RECIPIES_DATA1 } from "@/lib/constants";
 import EmblaCarousel from "../../Carousel/Carousel";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function OurRecipisData() {
     const OPTIONS = { loop: true };
     return (
         <>
+            <Head>
+                <Head>
+                    <title>Best Recipes of Honey, Jam, Pickle, Dates & Soya Chunks</title>
+                    <meta charSet="utf-8" />
+                    <meta
+                        name="description"
+                        content="Cooking delicious meals with less worry and more fun is what APIS Recipes is all about. It's no secret that we at Apis India enjoy food and are always looking for innovative methods to make tasty dishes. check the recipes NOW!"
+                    />
+                    <meta name="robots" content="index, follow" />
+                    <meta name="googlebot" content="index, follow" />
+                    <meta name="msnbot" content="index, follow" />
+                    <meta name="YahooSeeker" content="index, follow" />
+                    <meta
+                        property="og:title"
+                        content="Best Recipes of Honey, Jam, pickle, Dates & Soya Chunks"
+                    />
+                    <meta
+                        property="og:description"
+                        content="Cooking delicious meals with less worry and more fun is what APIS Recipes is all about. It's no secret that we at Apis India enjoy food and are always looking for innovative methods to make tasty dishes. check the recipes NOW!"
+                    />
+                    <meta property="og:site_name" content="http://www.apisindia.com/greentea.php" />
+                    <meta
+                        name="twitter:title"
+                        content="Best Recipes of Honey, Jam, pickle, Dates & Soya Chunks"
+                    />
+                    <meta
+                        name="twitter:description"
+                        content="Cooking delicious meals with less worry and more fun is what APIS Recipes is all about. It's no secret that we at Apis India enjoy food and are always looking for innovative methods to make tasty dishes. check the recipes NOW!"
+                    />
+                    <meta
+                        itemProp="title"
+                        content="Best Recipes of Honey, Jam, pickle, Dates & Soya Chunks"
+                    />
+                    <meta
+                        itemProp="description"
+                        content="Cooking delicious meals with less worry and more fun is what APIS Recipes is all about. It's no secret that we at Apis India enjoy food and are always looking for innovative methods to make tasty dishes. check the recipes NOW!"
+                    />
+                    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+                </Head>
+
+            </Head>
             <div className="bg-[#FFF9F0] py-10 w-full flex flex-col items-center">
                 <p className="text-[20px] md:text-[40px] text-[#9F7B49] font-bold">
-                Recipies
+                    Recipies
                 </p>
                 <div className="w-[90%] gap-10 py-10 flex items-center justify-center media-apis">
                     <EmblaCarousel options={OPTIONS} autoScroll>

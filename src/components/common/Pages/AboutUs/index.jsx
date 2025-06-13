@@ -16,6 +16,8 @@ import Link from "next/link";
 import AboutusLogo from '@/assets/images/AboutUs/aboutusLogo.png';
 import AboutStreak from '@/assets/images/AboutUs/aboutStreak.png'
 import HexaGonalPage from "../../Pages/AboutUs/Hexagonal";
+import Head from 'next/head';
+
 
 export default function AboutUsPage({ }) {
   const [activeTab, setActiveTab] = useState("vision");
@@ -91,6 +93,26 @@ export default function AboutUsPage({ }) {
 
   return (
     <>
+      <Head>
+        <title>Buy Best Organic Honey in India | Apis India</title>
+        <meta charSet="utf-8" />
+        <meta name="description" content="Apis is a growing FMCG company to manufacture products like Honey, Dates, Jam, Pickle, Green Tea and Preserves." />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="msnbot" content="index, follow" />
+        <meta name="YahooSeeker" content="index, follow" />
+        <meta property="og:title" content="Buy Best Organic Honey in India | Apis India" />
+        <meta property="og:description" content="Apis is a growing FMCG company to manufacture products like Honey, Dates, Jam, Pickle, Green Tea and Preserves." />
+        <meta property="og:site_name" content="http://www.apisindia.com/aboutus.php" />
+        <meta name="twitter:title" content="Buy Best Organic Honey in India | Apis India" />
+        <meta name="twitter:description" content="Apis is a growing FMCG company to manufacture products like Honey, Dates, Jam, Pickle, Green Tea and Preserves." />
+        <meta itemProp="title" content="Buy Best Organic Honey in India | Apis India" />
+        <meta itemProp="description" content="Apis is a growing FMCG company to manufacture products like Honey, Dates, Jam, Pickle, Green Tea and Preserves." />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="format-detection" content="telephone=no" />
+      </Head>
+
+
       <main className="flex flex-col items-center justify-center w-full">
         <div className="relative w-full">
           <Image
@@ -131,7 +153,7 @@ export default function AboutUsPage({ }) {
           Purely Crafted Natural Flavors
         </h2>
         <p className="mt-4 text-customDarkGray text-center font-jost text-sm md:text-xl font-medium max-w-4xl mx-auto">
-        Welcome to AIL, where nature meets quality. We are dedicated to bringing you the finest organic products, crafted with care and sustainability. Our commitment to purity ensures that every item you purchase is free from artificial additives and harmful chemicals. At AIL, we believe in the power of nature to nourish and enhance your well-being. Discover a world of natural goodness with our range of high-quality, organic FMCG products, and experience the difference that purity makes. Purely Natural, Simply Better.
+          Welcome to AIL, where nature meets quality. We are dedicated to bringing you the finest organic products, crafted with care and sustainability. Our commitment to purity ensures that every item you purchase is free from artificial additives and harmful chemicals. At AIL, we believe in the power of nature to nourish and enhance your well-being. Discover a world of natural goodness with our range of high-quality, organic FMCG products, and experience the difference that purity makes. Purely Natural, Simply Better.
         </p>
       </section>
       <div id="mission-values" className="relative mt-14 flex flex-col items-center justify-center w-full">
@@ -227,7 +249,7 @@ export default function AboutUsPage({ }) {
                 Managing Director
               </p>
               <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost text-justify">
-              Driven by his passion and conviction, Mr. Vimal Anand has received formal training in beekeeping and Honey processing from the University of Warmia Olystyn Poland. Gradually he built a global presence & a robust structure supported by a state-of-the-art production factory to cater to the global markets. His undeterred leadership and vision have led the company to reach its heights today, becoming a leading player in the world's organized honey trade.
+                Driven by his passion and conviction, Mr. Vimal Anand has received formal training in beekeeping and Honey processing from the University of Warmia Olystyn Poland. Gradually he built a global presence & a robust structure supported by a state-of-the-art production factory to cater to the global markets. His undeterred leadership and vision have led the company to reach its heights today, becoming a leading player in the world's organized honey trade.
               </p>
             </div>
           </div>
@@ -245,8 +267,8 @@ export default function AboutUsPage({ }) {
               Managing Director
             </p>
             <p className="text-center text-[#373737] font-medium w-[85%] md:w-[70%] text-[14px] md:text-[22px] font-jost text-justify">
-            A Delhi University Graduate from Kirori Mal College in Commerce, he spearheads key functions of Overall Plant Management; Human Resources; and Finance. The Managing Director of the company and the younger one of the two siblings, he has played the perfect foil to the elder in initiating the GREEN FIELD initiative of the factory in Roorkee. Leading from the front in all factory operations a person with hands-on expertise in executing all details at the plant level
-              </p>
+              A Delhi University Graduate from Kirori Mal College in Commerce, he spearheads key functions of Overall Plant Management; Human Resources; and Finance. The Managing Director of the company and the younger one of the two siblings, he has played the perfect foil to the elder in initiating the GREEN FIELD initiative of the factory in Roorkee. Leading from the front in all factory operations a person with hands-on expertise in executing all details at the plant level
+            </p>
           </div>
           <div className="w-full mt-4 md:mt-0 md:w-1/2 flex items-center justify-center">
             <div className="relative w-[300px] md:w-[440px] flex justify-center items-center">
@@ -274,13 +296,13 @@ export default function AboutUsPage({ }) {
       </div>
       <div className="my-10">
         <p className="text-center text-[14px] font-jost md:text-[22px] uppercase text-[#585858]">
-        Celebrating a Legacy of Quality and Growth
+          Celebrating a Legacy of Quality and Growth
         </p>
         <h3 className="text-center text-[20px] md:text-[40px] font-bold text-[#9F7B49] mt-2">
           Journey
         </h3>
         <p className="mt-4 text-customDarkGray text-center font-jost text-sm md:text-xl font-medium max-w-4xl mx-auto sm: px-4">
-        From humble beginnings to a leading FMCG brand, Apis India’s journey is defined by a commitment to quality, innovation, and customer satisfaction. Join us as we continue to grow and inspire
+          From humble beginnings to a leading FMCG brand, Apis India’s journey is defined by a commitment to quality, innovation, and customer satisfaction. Join us as we continue to grow and inspire
         </p>
         <HexaGonalPage />
       </div>

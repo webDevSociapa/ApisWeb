@@ -48,6 +48,7 @@
 //   // Count occurrences of each number
 //   Array111.forEach(num => {
 //       countMap[num] = (countMap[num] || 0) + 1;
+      
 
 //   });
 
@@ -192,6 +193,10 @@
 
 
 // // console.log(sortedValues);
+
+
+
+const Data = [4,2,5,6]
 
 
 

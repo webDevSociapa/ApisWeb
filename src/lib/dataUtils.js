@@ -3,9 +3,10 @@ import path from 'path';
 
 const dataFilePath = path.resolve(process.cwd(), 'src', 'lib', 'data.json');
 
+
+
 export function readData() {
   const data = fs.readFileSync(dataFilePath, 'utf8');
-
   return JSON.parse(data);
 }
 
@@ -15,13 +16,13 @@ export function writeData(data) {
 
 export function getOrders() {
   const data = readData();
-
   return data.orders;
 }
 
 export function addOrder(order) {
   const data = readData();
 
+  
   data.orders.push(order);
   writeData(data);
 }

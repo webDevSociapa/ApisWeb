@@ -24,6 +24,7 @@ import ImageBanner from "../../Layout/Banner";
 import EmblaCarousel from "../../Carousel/Carousel";
 import axios from 'axios';
 import Link from 'next/link';
+import Head from 'next/head';
 
 const LATEST_SLIDES = [
   {
@@ -89,9 +90,7 @@ export default function Media() {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768); // Update state based on window width
     };
-
     window.scroll(0, 0)
-
 
     handleResize(); // Check initial size
     window.addEventListener('resize', handleResize); // Add event listener
@@ -110,7 +109,10 @@ export default function Media() {
       } catch (error) {
       }
     }
-    fetchMediaData()
+    fetchMediaData();
+
+
+
     const getMediaSection = async () => {
       try {
         const response = await axios.get("/api/HomePage/mediaSection");
@@ -138,6 +140,26 @@ export default function Media() {
 
   return (
     <>
+
+      <Head>
+        <title>Media - A digital tale of our journey | Apis India</title>
+        <meta charSet="utf-8" />
+        <meta name="description" content="Himalayan Flora Honey. From the foothills of the Himalayan Mountains, comes a honey that is as pure as the Himalayas.Enjoy the taste of fresh Himalayan honey from Apis India." />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="msnbot" content="index, follow" />
+        <meta name="YahooSeeker" content="index, follow" />
+        <meta property="og:title" content="Best & Pure Honey| Fssai Approved | Apis India" />
+        <meta property="og:description" content="Himalayan Flora Honey. From the foothills of the Himalayan Mountains, comes a honey that is as pure as the Himalayas.Enjoy the taste of fresh Himalayan honey from Apis India." />
+        <meta property="og:site_name" content="http://www.apisIndia.com/media.php" />
+        <meta name="twitter:title" content="Best & Pure Honey| Fssai Approved | Apis India" />
+        <meta name="twitter:description" content="Himalayan Flora Honey. From the foothills of the Himalayan Mountains, comes a honey that is as pure as the Himalayas.Enjoy the taste of fresh Himalayan honey from Apis India." />
+        <meta itemProp="title" content="Best & Pure Honey| Fssai Approved | Apis India" />
+        <meta itemProp="description" content="Himalayan Flora Honey. From the foothills of the Himalayan Mountains, comes a honey that is as pure as the Himalayas.Enjoy the taste of fresh Himalayan honey from Apis India." />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="format-detection" content="telephone=no" />
+
+      </Head>
       {/* Banner Section */}
       <ImageBanner banner={MediaBannerNew} />
       <div className="flex flex-col items-center justify-center">
@@ -161,7 +183,6 @@ export default function Media() {
                 href={itm.link}
                 target="_blank"
               >
-
                 <div className="h-[260px] md:h-[370px] 2xl:h-[409px]">
                   <Image
                     src={itm.mediaImage}
