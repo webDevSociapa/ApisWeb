@@ -52,7 +52,7 @@ export default function OurRecipisData() {
             </Head>
             <div className="bg-[#FFF9F0] py-10 w-full flex flex-col items-center">
                 <p className="text-[20px] md:text-[40px] text-[#9F7B49] font-bold">
-                    Recipies
+                    Recipes
                 </p>
                 <div className="w-[90%] gap-10 py-10 flex items-center justify-center media-apis">
                     <EmblaCarousel options={OPTIONS} autoScroll>

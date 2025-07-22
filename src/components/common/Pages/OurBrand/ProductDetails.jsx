@@ -354,7 +354,7 @@ const ProductDetails = () => {
             alt="Check Report Banner"
           />
           <div className="absolute left-[31%] bottom-[15%]  sm: left-[70%] md:-2 transform -translate-x-1/2 md:left-[70%] lg:left-[70%] chckReportBtn">
-            <a href='/our-brand/product-details/certificate'>
+            <a href='/our-brand/product-details/certificate2'>
               <button className="border border-[#9F7B49] bg-[#9F7B49] px-2 sm: px-0 md:px-6 lg:px-12 text-xs sm:text-sm md:text-base py-1 sm:py-2 md:py-3 font-bold text-white whitespace-nowrap">
                 Check Report
               </button>
@@ -617,7 +617,7 @@ const ProductDetails = () => {
       </div>
       <div className="bg-[#FFF9F0] py-10 w-full flex flex-col items-center">
         <p className="text-[20px] md:text-[40px] text-[#9F7B49] font-bold">
-          Recipies
+          Recipes
         </p>
         <div className="w-[90%] gap-10 py-10 flex items-center justify-center media-apis">
           <EmblaCarousel options={OPTIONS} autoScroll>

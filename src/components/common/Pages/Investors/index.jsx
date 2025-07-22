@@ -108,34 +108,80 @@ export default function Investors() {
               Certificate under Reg.7(3) and Reg. 40(10)
               <span className="float-right">▼</span>
             </button>
-            <div id="corporatePolicies4" className="hidden mt-2">
-              <h6 className="font-semibold text-gray-800 mb-2">Part A: Certificate under Regulation 7(3)</h6>
-              <table className="w-full border-collapse text-center shadow rounded-md">
-                <thead className="bg-gray-100">
-                  <tr>
-                    <th className="border p-2">Year</th>
-                    <th className="border p-2">Download</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[2018, 2019, 2020].map((year) => (
-                    <tr key={year} className="border">
-                      <td className="border p-2">{year}</td>
-                      <td className="border p-2">
-                        <a
-                          href={`https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/7(3)+%26+40(10)/7(3)+%26+40(10)/7(3)/${year}/Compliance+under+regulation+7(3).pdf`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Image src={pdficon1} alt="PDF" width="20" className="inline mr-1" />
-                          Download
-                        </a>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+           <div id="corporatePolicies4" className="hidden mt-2">
+  {/* Part A: Regulation 7(3) */}
+  <h6 className="font-semibold text-gray-800 mb-2">Part A: Certificate under Regulation 7(3)</h6>
+  <table className="w-full border-collapse text-center shadow rounded-md mb-6">
+    <thead className="bg-gray-100">
+      <tr>
+        <th className="border p-2">Year</th>
+        <th className="border p-2">Download</th>
+      </tr>
+    </thead>
+    <tbody>
+      {[
+        { year: 2018, file: 'Compliance+under+regulation+7(3).pdf' },
+        { year: 2019, file: 'Covering_Letter.pdf' },
+        { year: 2020, file: 'Covering+Letter.pdf' },
+        { year: 2021, file: 'Covering_Letter-7(3).pdf' },
+        { year: 2022, file: 'Covering_Letter.pdf' },
+        { year: 2023, file: 'Certificate+and+Covering+Letter.pdf' },
+        { year: 2024, file: 'Covering+Letter.pdf' }
+      ].map(({ year, file }) => (
+        <tr key={year} className="border">
+          <td className="border p-2">{year}</td>
+          <td className="border p-2">
+            <a
+              href={`https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/7(3)+%26+40(10)/7(3)+%26+40(10)/7(3)/${year}/${file}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src={pdficon1} alt="PDF" width={20} className="inline mr-1" />
+              Download
+            </a>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+
+  {/* Part B: Regulation 40(10) */}
+  <h6 className="font-semibold text-gray-800 mb-2">Part B: Certificate under Regulation 40(10)</h6>
+  <table className="w-full border-collapse text-center shadow rounded-md">
+    <thead className="bg-gray-100">
+      <tr>
+        <th className="border p-2">Year</th>
+        <th className="border p-2">Download</th>
+      </tr>
+    </thead>
+    <tbody>
+      {[
+        { year: 2018, file: 'Certificate+under+Reg+40(9).pdf' },
+        { year: 2019, file: 'Covering_Letter.pdf' },
+        { year: 2020, file: 'Covering_Letter_sw.pdf' },
+        { year: 2021, file: 'Covering_Letter.pdf' },
+        { year: 2022, file: 'Covering_Letter.pdf' },
+        { year: 2023, file: 'Covring+Letter-40(10).pdf' },
+        { year: 2024, file: 'Covering+Letter.pdf' }
+      ].map(({ year, file }) => (
+        <tr key={year} className="border">
+          <td className="border p-2">{year}</td>
+          <td className="border p-2">
+            <a
+              href={`https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/7(3)+%26+40(10)/7(3)+%26+40(10)/40(10)/${year}/${file}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src={pdficon1} alt="PDF" width={20} className="inline mr-1" />
+              Download
+            </a>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+          </div>
+
           </div>
         </div>
       </div>
@@ -792,6 +838,13 @@ export default function Investors() {
                         </a>
                       </td>
 
+<td className="border p-2">
+                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Voting+Results_Signed.pdf" target="_blank" rel="noopener noreferrer">
+                          <Image src={pdficon1} alt="PDF" width="30" />
+                        </a>
+                      </td>
+
+
 
                     </tr>
 
@@ -935,7 +988,7 @@ export default function Investors() {
                     </td>
                   </tr>
                   <tr className="border-b-2 border-[#003366]">
-                    <td>Corporate-Annoucement-Product-Launch210124</td>
+                    <td>Corporate-Annoucement <br/> Product-Launch210124</td>
                     <td>
                       <a
                         href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_announcement/Covering_Letter.pdf"
@@ -946,7 +999,7 @@ export default function Investors() {
                     </td>
                   </tr>
                   <tr className="border-b-2 border-[#003366]">
-                    <td>Disclosure_Calender_of_Event_of_Postal_Ballot</td>
+                    <td>Disclosure_Calender_of_Event <br/> _of_Postal_Ballot</td>
                     <td>
                       <a
                         href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_announcement/Disclosure_Calender_of_Event_of_Postal_Ballot.pdf"
@@ -957,7 +1010,7 @@ export default function Investors() {
                     </td>
                   </tr>
                   <tr className="border-b-2 border-[#003366]">
-                    <td>Intimation_for_appointment_of_Statutory_Auditor</td>
+                    <td>Intimation_for_appointment <br/> _of_Statutory_Auditor</td>
                     <td>
                       <a
                         href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_announcement/Intimation_for_appointment_of_Statutory_Auditor.pdf"
@@ -979,7 +1032,7 @@ export default function Investors() {
                     </td>
                   </tr>
                   <tr className="border-b-2 border-[#003366]">
-                    <td>Intimation_under_Reg.30-Appointment_of_Director</td>
+                    <td>Intimation_under <br/> _Reg.30-Appointment_of_Director</td>
                     <td>
                       <a
                         href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_announcement/Intimation_under_Reg.30-Appointment_of_Director.pdf"

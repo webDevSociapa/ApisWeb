@@ -223,7 +223,7 @@ const MHMOBILE = () => {
             />
           </a>
           <a
-            href={"https://www.linkedin.com/showcase/apisindia/"}
+            href={"https://www.linkedin.com/company/apis-india-ltd"}
             target="_blank"
           >
             <Image

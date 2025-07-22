@@ -4,6 +4,11 @@ import Investors from '@/components/common/Pages/Investors';
 
 import Loading from '../../loading';
 
+export const metadata = {
+  title: 'AIL - Investors'
+};
+
+
 export default async function Page() {
   return (
     <Suspense fallback={<Loading />}>

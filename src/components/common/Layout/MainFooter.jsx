@@ -120,7 +120,7 @@ const MainFooter = () => {
           <a href={"https://www.instagram.com/apisindialtd/"} target="_blank">
             <Image src={InstaImg} alt="InstaImg" height={21} width={21} className="cursor-pointer" />
           </a>
-          <a href={"https://www.linkedin.com/showcase/apisindia/"} target="_blank">
+          <a href={"https://www.linkedin.com/company/apis-india-ltd"} target="_blank">
             <Image src={LinkImg} alt="LinkImg" height={21} width={21} className="cursor-pointer" />
           </a>
         </div>

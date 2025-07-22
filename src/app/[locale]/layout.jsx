@@ -7,6 +7,8 @@ import { getMessages } from "next-intl/server";
 import { Bebas_Neue } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import PropTypes from "prop-types";
+import Head from "next/head";
+
 
 import BrewerLoginHeader from "@/components/common/Layout/BrewerLoginHeader";
 import MainFooter from "@/components/common/Layout/MainFooter";
@@ -31,19 +33,24 @@ export default async function MainLayout({ children, params: { locale } }) {
 
   return (
     <html lang={locale}>
-      <head>
-        <meta charSet="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Literata:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
+     <head>
+        {/* Google Site Verification */}
+        <meta name="google-site-verification" content="h0iHtFuY87Z7LyV_7QoRurcDdlS9gDYme7XPrcPiqCY" />
 
-        <link
-          href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
-          rel="stylesheet"
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8L8XBHW1R2"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-8L8XBHW1R2');
+            `,
+          }}
         />
       </head>
+
       <body
         className={cn(
           "min-h-screen overflow-auto bg-background font-satoshi antialiased",
