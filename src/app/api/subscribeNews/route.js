@@ -33,8 +33,8 @@ export  async function POST (req, res) {
 
     const mailOptions = {
       from: email, // Sender email (user's email)
-      to: 'khanrobin7071@gmail.com', // Your email to receive the message
-      subject: 'New Message from Contact Form',
+      to: ['care@apisindia.com','web@sociapa.com'], // Your email to receive the message
+      subject: 'New Message from Subscribe Newsletter',
       text: `
         Email Address: ${email}`,
     };

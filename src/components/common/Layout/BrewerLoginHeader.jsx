@@ -129,7 +129,7 @@ const BrewerLoginHeader = () => {
 
           </a>
           <a
-            href={'https://www.linkedin.com/showcase/apisindia/'}
+            href={'https://www.linkedin.com/company/apis-india-ltd/'}
             target="_blank"
             className="flex items-center justify-center group"
           >

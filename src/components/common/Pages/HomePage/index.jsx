@@ -182,7 +182,7 @@ export default function HomePage() {
         <meta name="googlebot" content="index, follow" />
         <meta name="msnbot" content="index, follow" />
         <meta name="YahooSeeker" content="index, follow" />
-        <meta name="google-site-verification" content="P65OGdUwq-pF55bMQOwqRVBm7ijswIsdQ8KV7UZDDho" />
+        <meta name="google-site-verification" content="h0iHtFuY87Z7LyV_7QoRurcDdlS9gDYme7XPrcPiqCY" />
         <meta property="og:title" content="India`s Leading Natural Honey Brand. Discover Dates, Jams, Pickles, Green Tea, Preserves & More - APIS" />
         <meta property="og:description" content="APIS is an iconic FMCG brand in India and manufacturer of superior-quality Natural Honey, Dates, Jam, Pickle, Green Tea and Preserves in India. Explore our complete product range at Apisindia.com" />
         <meta property="og:site_name" content="http://www.apisindia.com " />

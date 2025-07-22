@@ -29,6 +29,22 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(formData.emailAddress)) {
+    setPopupMessage('Please enter a valid email address.');
+    setMessageInfo(true);
+    return;
+  }
+
+  const phoneRegex = /^[6-9]\d{9}$/;
+  if (!phoneRegex.test(formData.phoneNumber)) {
+    setPopupMessage('Please enter a valid 10-digit phone number.');
+    setMessageInfo(true);
+    return;
+  }
+
+
     if (!captchaToken) {
       setPopupMessage('Please confirm you are not a robot.');
       setMessageInfo(true);

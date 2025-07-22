@@ -1,67 +1,64 @@
 import { MongoClient } from "mongodb";
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
   try {
     const body = await req.json();
-    
     const { fullName, cityLocation, emailAddress, phoneNumber, message } = body;
 
     // MongoDB connection
     const uri = "mongodb+srv://webdev:2OmPVj8DUdEaU1wR@apisindia.38dfp.mongodb.net";
     const client = new MongoClient(uri);
-    
 
     try {
-      // Connect to the database and insert form data
-      const database = client.db('newApis');
-      const formData = database.collection('newApis01');
-      const data = await formData.insertOne(body);
-      
-      // Setup Nodemailer to send an email
-      
+      await client.connect(); // ✅ Ensure connection before using
+      const database = client.db("newApis");
+      const formData = database.collection("newApis01");
+      await formData.insertOne(body);
+
+      // Setup Nodemailer transporter
       const transporter = nodemailer.createTransport({
-            service: 'gmail',
-            auth: {
-              user: 'webdev@sociapa.com', // ✅ Full Gmail
-              pass: 'oilihgfduptzvxyp',         // ✅ App password (no spaces)
-            },
-          });
+        service: "gmail",
+        auth: {
+          user: "webdev@sociapa.com",
+          pass: "oilihgfduptzvxyp", // ✅ App password
+        },
+      });
 
+      // Email content
       const mailOptions = {
-        from: emailAddress, // Sender email (user's email)
-        to: 'khanrobin7071@gmail.com', // Your email to receive the message
-        subject: 'New Message from Contact Form',
+        from: "webdev@sociapa.com", // ✅ Always your verified sender
+        to: ["care@apisindia.com", "hr@apisindia.com"],
+        replyTo: emailAddress, // ✅ Use replyTo instead
+        subject: "New Message from Contact Form",
         text: `
-          Full Name: ${fullName}
-          City Location: ${cityLocation}
-          Email Address: ${emailAddress}
-          Phone Number: ${phoneNumber}
+Full Name: ${fullName}
+City Location: ${cityLocation}
+Email Address: ${emailAddress}
+Phone Number: ${phoneNumber}
 
-          Message:
-          ${message}
+Message:
+${message}
         `,
       };
 
       // Send email
       await transporter.sendMail(mailOptions);
-      
 
-      // Return success response after saving and sending email
       return NextResponse.json(
-        { message: 'Message sent and email delivered successfully',status: 200 , body},
-        // { status: 200 }
+        {
+          message: "Message sent and email delivered successfully",
+          status: 200,
+          body,
+        },
+        { status: 200 }
       );
-
     } finally {
-      await client.close();
+      await client.close(); // ✅ Always close connection
     }
   } catch (error) {
-    console.error('Error handling POST request:', error);
-    return NextResponse.json(
-      { message: error.message },
-      { status: 500 }
-    );
+    console.error("Error handling POST request:", error);
+    return NextResponse.json({ message: error.message }, { status: 500 });
   }
 }

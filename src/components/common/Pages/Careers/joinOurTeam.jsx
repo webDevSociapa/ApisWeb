@@ -4,6 +4,7 @@ import axios from "axios";
 import Banner from "@/assets/images/Careers/careerBanner.png";
 import { useEffect, useRef, useState } from "react";
 import ImageBanner from "../../Layout/Banner";
+import PhoneInput from "react-phone-input-2";
 
 export default function JoinOurTeam() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -59,6 +60,12 @@ export default function JoinOurTeam() {
       ...prevData,
       phoneNumber: value
     }));
+  };
+
+    const handleApplyNow = (job) => {
+    setSelectedJob(job);
+    setIsModalOpen(true);
+    setShowSuccess(false);
   };
 
 
@@ -164,7 +171,7 @@ export default function JoinOurTeam() {
                   required
                 >
                   <option value="">Select a profile</option>
-                  {JOB_OPENINGS.map((job, index) => (
+                  {jobOpening.map((job, index) => (
                     <option key={index} value={job.position}>{job.position}</option>
                   ))}
                 </select>

@@ -17,14 +17,14 @@ const page = () => {
   const [error, setError] = useState('');
   const router = useRouter();
 
-const handleSubmit = async (e) => {
+ const handleSubmit = async (e) => {
   e.preventDefault();
   setMessage('');
   setError('');
 
-  // ❌ Disallowed batch numbers list
-  const disallowedBatchNumbers = [
-    'DS21KF255',
+  // ✅ Allowed batch numbers list
+  const allowedBatchNumbers = [
+   'DS21KF255',
     'DS28KF257',
     'DS20AG280',
     'DS31AG285',
@@ -35,14 +35,14 @@ const handleSubmit = async (e) => {
     'DS13BH115'
   ];
 
-  // ✅ Check if entered batch number is in the disallowed list
-  if (disallowedBatchNumbers.includes(batchNumber)) {
-    setError('This batch number is not allowed. Please check and enter a valid batch number.');
+  // ✅ Check if entered batch number is in the allowed list
+  if (!allowedBatchNumbers.includes(batchNumber)) {
+    setError('Invalid batch number. Please enter a valid one.');
     return;
   }
 
   try {
-    const response = await fetch('/api/checkReport', {
+    const response = await fetch('/api/checkReportOrganic', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -53,15 +53,16 @@ const handleSubmit = async (e) => {
 
     if (response.ok) {
       setMessage("Batch Number is valid");
-      router.push(`/generate-pdf?batchNumber=${batchNumber}`);
+      router.push(`/generate-pdf2?batchNumber=${batchNumber}`);
     } else {
-      setError('Batch number not found. Please check and try again.');
+      setError('Batch number not found in database. Please check and try again.');
     }
   } catch (error) {
     console.error('Error:', error);
     setError('An error occurred. Please try again later.');
   }
 };
+
 
   return (
     <>
@@ -73,7 +74,7 @@ const handleSubmit = async (e) => {
         />
       </div>
       <p className="font-bold text-[#84663C] md:text-[40px] text-[20px] w-[75%] capitalize text-center">
-        Bringing Purity and Responsibility with every jar we deliver
+        dddBringing Purity and Responsibility with every jar we deliver
       </p>
       <div className="w-full flex flex-col items-center justify-center">
         <div className="w-[90%] md:w-[50%]">

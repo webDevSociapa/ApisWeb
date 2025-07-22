@@ -38,15 +38,15 @@ export async function POST(req){
             
             const transporter = nodemailer.createTransport({
                 service: 'gmail',
-                auth: {
-                  user: 'khanrobin7071@gmail.com',
-                  pass: 'hgvu hwmq lnfh xqxa',
-                },
+               auth: {
+              user: 'webdev@sociapa.com', // ✅ Full Gmail
+              pass: 'oilihgfduptzvxyp',         // ✅ App password (no spaces)
+            },
               });
               
               const mailOptions = {
                 from: emailAddress,
-                to: 'khanrobin7071@gmail.com',
+                to: 'recruitment@apisindia.com',
                 subject: 'New Job Application',
                 html: `
                   <p><strong>Applying Job:</strong> ${selectJob}</p>

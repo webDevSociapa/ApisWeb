@@ -30,7 +30,7 @@ const FactoryTabs = () => {
       title: 'Factory Address',
       address1: 'Address: 66-72, Peerpura Rd, Roorkee, Shimlauni, Uttarakhand 247667',
       address2:
-        'Telephone No : +971-43439442, admin@apisarabia.ae, General enquiries: mail@apisindia.com',
+        'General enquiries: mail@apisindia.com',
       mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3461.7411819388685!2d77.88127159999999!3d29.814020799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390eb35b4768d7c9%3A0x58151f4740f1e8b7!2sApis%20India%20Limited!5e0!3m2!1sen!2sin!4v1737982556579!5m2!1sen!2sin',
     },
   };
