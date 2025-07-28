@@ -628,21 +628,26 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row items-center w-full tvc-bg sm:justify-center gap-10 pt-5 md:-mt-[150px] w-full xl:-mt-40 sm:mt-0 tvcyoutubeVideo">
-              {tvcHome?.map((itm) => (
-                <iframe
-                  className="rounded md:h-[360px] h-auto md:w-[580px] max-w-[500px] min-h-[200px] w-auto"
-                  src={itm.videoUrl}
-                  width={500}
-                  height={500}
-                  // onClick={() => openModal(`${tvcHome[0].videoUrl}`)}
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
-                />
-              ))}
+            <div className="flex flex-col sm:flex-row items-center w-full tvc-bg sm:justify-center gap-10 pt-5  w-full xl:-mt-60 sm:mt-0 tvcyoutubeVideo">
+             <EmblaCarousel options={OPTIONS}>
+            {tvcHome.map((itm, index) => (
+              <div className="embla__slide" key={index}>
+                <div className="embla__slide__number !h-[246px] w-full">
+                  <iframe
+                    width="400px"
+                    height="246px"
+                    className="rounded w-full sm:w-[360px] sm:h-[246px]"
+                    src={itm?.videoUrl}
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpol icy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            ))}
+          </EmblaCarousel>
               {/* <Image
                 className="rounded hidden lg:inline md:h-[360px] h-auto md:w-[580px] max-w-[500px] min-h-[200px]"
                 src={tvcHome[1]?.thumbnail}
