@@ -13,6 +13,8 @@ import JR2022 from '@/assets/images/AboutUs/newmilestone-01.png'
 import JR2023 from '@/assets/images/AboutUs/9.jpg'
 import JR2024 from '@/assets/images/AboutUs/10.jpg'
 import JR2025 from '@/assets/images/AboutUs/milesStone2024.jpg'
+import JR2026 from '@/assets/images/AboutUs/new2025milestone.png'
+
 
 const Journey = () => {
   const JOURNEY_DATA = [
@@ -25,7 +27,9 @@ const Journey = () => {
     { year: "Year 2021", title: "2021", desc: "In 2021, AIL crossed 15ML USD in Export Sales", img: JR2024 },
     { year: "Year 2022", title: "2022", desc: "In 2022, AIL crossed 15ML USD in Export Sales", img: JR2022 },
     { year: "Year 2023", title: "2023", desc: "In 2023, AIL crossed 15ML USD in Export Sales", img: JR2025 },
-    { year: "Year 2024", title: "2024", desc: "In 2024, AIL crossed 15ML USD in Export Sales", img: JR2025 }
+    { year: "Year 2024", title: "2024", desc: "In 2024, AIL crossed 15ML USD in Export Sales", img: JR2025 },
+        { year: "Year 2025", title: "2025", desc: "In 2024, AIL crossed 15ML USD in Export Sales", img: JR2026 }
+
     // { year: "Year 2025", title: "2024", desc: "In 2025, AIL crossed 15ML USD in Export Sales", img: JR2025 },
   ];
 
@@ -71,20 +75,25 @@ const Journey = () => {
   }}
 > */}
 
-      <div className="sidebar p-0 absolute py-2 xl:px-2 grid xl:w-[350px] xl:h-[550px] sm:w-[160px] md:w-[120px]">
-        {JOURNEY_DATA.map((itm, ind) => {
-          return (
-            <button
-              key={ind}
-              className={`tablinks shadow-xl border border-[#9F7B49] text-xl scroll-auto rounded-[15px] ${selectedIndex === ind ? "bg-[#9F7B49] text-white font-bold" : "bg-[#FFF9F0E5] text-black"} 
-                xl:w-[350px] xl:h-[70px] md:w-[250px] md:h-[50px] px-2`}
-              onClick={() => openCity(ind)}
-            >
-              {itm.year}
-            </button>
-          );
-        })}
-      </div>
+<div className="sidebar absolute top-30 left-0 flex flex-col py-2 xl:px-2 xl:w-[350px] sm:w-[160px] md:w-[120px] space-y-2 md:overflow-y-auto md:overflow-x-auto md:pr-1 md:max-h-[90vh]">
+  {JOURNEY_DATA.map((itm, ind) => {
+    return (
+      <button
+        key={ind}
+        className={`tablinks shadow-xl border border-[#9F7B49] text-xl scroll-auto rounded-[15px] ${
+          selectedIndex === ind
+            ? "bg-[#9F7B49] text-white font-bold"
+            : "bg-[#FFF9F0E5] text-black"
+        } 
+        xl:w-[350px] xl:h-[70px] md:w-[250px] md:h-[50px] px-2`}
+        onClick={() => openCity(ind)}
+      >
+        {itm.year}
+      </button>
+    );
+  })}
+</div>
+
 
       {/* <div className="p-3 absolute bottom-10 left-10 text-white">
       
