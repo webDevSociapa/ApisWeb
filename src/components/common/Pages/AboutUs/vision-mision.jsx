@@ -66,12 +66,12 @@ export default function VisionMission() {
         case "values":
   return (
     <ul className="pl-5 space-y-2 text-justify text-xs md:text-base leading-snug">
-      <li><strong>U </strong>nwavering Integrity: We hold ourselves accountable to the highest ethical standards in everything we intend, plan, say or do.</li>
-      <li><strong>P </strong>eople First: We cultivate an empowered and thriving people-centric environment that inspires excellence and fosters growth.</li>
-      <li><strong>L </strong>ifelong Learning: We embrace a culture of continuous learning and development, and equip our team with the knowledge and skills to excel.</li>
-      <li><strong>I </strong>nnovative Thinking: We challenge the status quo and explore newer, out-of-the-box and unconventional ways to deliver excellence.</li>
-      <li><strong>F </strong>uturistic Focus: We are committed to staying ahead of the curve, by using cutting-edge technology and best global quality practices.</li>
-      <li><strong>T </strong>rusted Excellence: We are committed to building trust and exceeding expectations for all our stakeholders both internally and externally.</li>
+      <li><strong>U</strong>nwavering Integrity: We hold ourselves accountable to the highest ethical standards in everything we intend, plan, say or do.</li>
+      <li><strong>P</strong>eople First: We cultivate an empowered and thriving people-centric environment that inspires excellence and fosters growth.</li>
+      <li><strong>L</strong>ifelong Learning: We embrace a culture of continuous learning and development, and equip our team with the knowledge and skills to excel.</li>
+      <li><strong>I</strong>nnovative Thinking: We challenge the status quo and explore newer, out-of-the-box and unconventional ways to deliver excellence.</li>
+      <li><strong>F</strong>uturistic Focus: We are committed to staying ahead of the curve, by using cutting-edge technology and best global quality practices.</li>
+      <li><strong>T</strong>rusted Excellence: We are committed to building trust and exceeding expectations for all our stakeholders both internally and externally.</li>
     </ul>
   );
 
