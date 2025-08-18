@@ -2,13 +2,14 @@
 
 import { useRouter } from "next/navigation";
 import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { PRODUCT_DATA } from "@/lib/constants";
 import Link from "next/link";
 import Head from "next/head";
 
 export default function OurBrand({ onProductClick }) {
   const router = useRouter();
+  const [activeTab, setActiveTab] = useState("Apis");
 
   const TAB_DATA = ["Apis", "Misk", "Nutrasip"];
   const BRAND_DATA = [
@@ -19,11 +20,24 @@ export default function OurBrand({ onProductClick }) {
 
   const [selectedBrand, setSelectedBrand] = useState(BRAND_DATA[0].id);
   const [hoveredProduct, setHoveredProduct] = useState(null);
+  const [dropdownOpen, setDropdownOpen] = useState(null);
+  const dropdownRef = useRef(null);
 
   const handleProductClick = (brandId, productId) => {
     router.push(`/our-brand/product-details?brand_id=${brandId}&product_id=${productId}`);
     if (onProductClick) onProductClick();
   };
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(null);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -54,17 +68,32 @@ export default function OurBrand({ onProductClick }) {
       <div className="relative bg-white p-6 mx-5">
         {/* Tabs Section */}
         <div className="flex justify-center gap-8 border-b-2 border-[#9F7B49] pb-4">
-          {TAB_DATA.map((tab, index) => (
-            <div
-              key={index}
-              className={`text-lg font-bold px-4 py-2 ${tab === "Apis"
-                ? "text-[#9F7B49] border-b-4 border-[#9F7B49]"
-                : "text-gray-400 opacity-50 cursor-not-allowed"
-                }`}
-            >
-              {tab}
-            </div>
-          ))}
+      {TAB_DATA.map((tab, index) => {
+        const isActive = tab === activeTab;
+        const baseClasses = "text-lg font-bold px-4 py-2";
+        const activeClasses = "text-[#9F7B49] border-b-4 border-[#9F7B49]";
+        const inactiveClasses = "text-gray-400 opacity-50 cursor-not-allowed";
+
+        const tabContent = (
+          <div
+            key={index}
+            onClick={() => {
+              setActiveTab(tab);
+            }}
+            className={`${baseClasses} ${isActive ? activeClasses : inactiveClasses}`}
+            style={{ cursor: tab === "Misk" ? "pointer" : "default" }}
+          >
+            {tab}
+          </div>
+        );
+
+        // Make Misk redirect on click
+        return tab === "Misk" ? (
+          <Link href="/our-brand/misk" key={index}>{tabContent}</Link>
+        ) : (
+          tabContent
+        );
+      })}
         </div>
         {/* Product Section */}
         <div className="mt-6 grid grid-cols-3 gap-16">
@@ -72,8 +101,7 @@ export default function OurBrand({ onProductClick }) {
             <div key={brand.id} className="space-y-2">
               {/* Brand Title */}
               <h3
-                className={`text-2xl font-bold cursor-pointer ${selectedBrand === brand.id ? "text-[#9F7B49]" : "text-[#A57F5A]"
-                  }`}
+                className={`text-xl md:text-2xl font-bold cursor-pointer ${selectedBrand === brand.id ? "text-[#9F7B49]" : "text-[#A57F5A]"}`}
                 onClick={() => setSelectedBrand(brand.id)}
               >
                 {brand.title}
@@ -84,151 +112,123 @@ export default function OurBrand({ onProductClick }) {
                 {brand.products
                   .filter((product) => product.name !== "Apis Organic Honey" && product.name !== "Royal Zahidi" && product.name !== "Shehenshah Date" && product.name !== "Arabian Pearls Date" && product.name !== "Select Date" && product.name !== "ClassicDate" && product.name !== "Shaan e Khajoor" && product.name !== "KalmiDates" && product.name !== "DesertBliss" && product.name !== "DeseededDate" && product.name !== "Premium Dates")
                   .map((product) => (
-                    <div key={product.id} className="relative group">
-                      <button
-                        className="text-base text-[#373737] hover:text-[#9F7B49] transition-all"
-                        onClick={() => handleProductClick(brand.id, product.id)}
-                        onMouseEnter={() => setHoveredProduct(product.id)}
-                        onMouseLeave={() => setHoveredProduct(null)}
-                      >
-                        {product.name}
-                      </button>
-                      {product.name === "Honey" && (
-                        <div className="absolute top-0 left-10 ml-4 w-[200px] z-10 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-linear transform scale-95 group-hover:scale-100">
-                          <div className="bg-white shadow-lg border rounded-md p-4">
-                            <ul className="text-sm text-gray-600 space-y-2">
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=1&product_id=1`}
-                                  className="hover:underline"
-                                >
-                                  Organic Honey
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=1&product_id=2`}
-                                  className="hover:underline"
-                                >
-                                  Himalaya Honey
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=1`}
-                                  className="hover:underline"
-                                >
-                                  Regular Honey
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=1`}
-                                  className="text-gray-400 opacity-50 cursor-not-allowed"
-                                >
-                                  Infused Honey
-                                </Link>
-                              </li>
-                            </ul>
-                          </div>
+                    <div key={product.id} className="relative" ref={dropdownRef}>
+                      {/* Dropdown for Honey */}
+                      {product.name === "Honey" ? (
+                        <div>
+                          <button
+                            className="text-base text-[#373737] hover:text-[#9F7B49] transition-all flex items-center"
+                            onClick={() => setDropdownOpen(dropdownOpen === "honey" ? null : "honey")}
+                          >
+                            {product.name}
+                            <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                          </button>
+                          {dropdownOpen === "honey" && (
+                            <div className="absolute left-[40px] top-[10%] w-[200px] z-10 bg-white shadow-lg border rounded-md p-4">
+                              <ul className="text-sm text-gray-600 space-y-2">
+                                <li>
+                                  <Link href={`/our-brand/product-details?brand_id=1&product_id=1`} className="hover:underline">
+                                    Organic Honey
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link href={`/our-brand/product-details?brand_id=1&product_id=2`} className="hover:underline">
+                                    Himalaya Honey
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link href={`/our-brand/product-details?brand_id=2&product_id=1`} className="hover:underline">
+                                    Regular Honey
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link href={`/our-brand/product-details?brand_id=1&product_id=3`} className="hover:underline">
+                                    Infused Honey
+                                  </Link>
+                                </li>
+                              </ul>
+                            </div>
+                          )}
                         </div>
-                      )}
-
-                      {/*  */}
-                      {product.name === "Dates" && (
-                        <div className="absolute top-14 left-10 ml-4 w-[200px] z-10 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-linear transform scale-95 group-hover:scale-100">
-                          <div className="bg-white shadow-lg border rounded-md p-4">
-                            <ul className="text-sm text-gray-600 space-y-2">
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=3`}
-                                  className="hover:underline"
-                                >
-                                  Shahenshah Dates
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=7`}
-                                  className="hover:underline"
-                                >
-                                  Royal Zahidi
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=4`}
-                                  className="hover:underline"
-                                >
-                                  Arabian Dates
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=5`}
-                                  className="hover:underline"
-                                >
-                                  Select Date
-                                </Link>
-                              </li>
-
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=6`}
-                                  className="hover:underline"
-                                >
-                                  Classic Date
-                                </Link>
-                              </li>
-
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=8`}
-                                  className="hover:underline"
-                                >
-                                  Shaan e Khajoor
-                                </Link>
-                              </li>
-
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=9`}
-                                  className="hover:underline"
-                                >
-                                  Kalmi Dates
-                                </Link>
-                              </li>
-
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=10`}
-                                  className="hover:underline"
-                                >
-                                  DesertBliss
-                                </Link>
-                              </li>
-
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=11`}
-                                  className="hover:underline"
-                                >
-                                  Deseeded Date
-                                </Link>
-                              </li>
-
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=12`}
-                                  className="hover:underline"
-                                >
-                                  Premium Dates
-                                </Link>
-                              </li>
-
-                            </ul>
-                          </div>
+                      ) : product.name === "Dates" ? (
+                        // Dropdown for Dates
+                        <div>
+                          <button
+                            className="text-base text-[#373737] hover:text-[#9F7B49] transition-all flex items-center"
+                            onClick={() => setDropdownOpen(dropdownOpen === "dates" ? null : "dates")}
+                          >
+                            {product.name}
+                            <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                          </button>
+                          {dropdownOpen === "dates" && (
+                            <div className="absolute left-[40px] top-[10%] w-[200px] z-10 bg-white shadow-lg border rounded-md p-4">
+                              <ul className="text-sm text-gray-600 space-y-2">
+                                <li>
+                                  <Link href={`/our-brand/product-details?brand_id=2&product_id=3`} className="hover:underline">
+                                    Shahenshah Dates
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link href={`/our-brand/product-details?brand_id=2&product_id=7`} className="hover:underline">
+                                    Royal Zahidi
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link href={`/our-brand/product-details?brand_id=2&product_id=4`} className="hover:underline">
+                                    Arabian Dates
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link href={`/our-brand/product-details?brand_id=2&product_id=5`} className="hover:underline">
+                                    Select Date
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link href={`/our-brand/product-details?brand_id=2&product_id=6`} className="hover:underline">
+                                    Classic Date
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link href={`/our-brand/product-details?brand_id=2&product_id=8`} className="hover:underline">
+                                    Shaan e Khajoor
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link href={`/our-brand/product-details?brand_id=2&product_id=9`} className="hover:underline">
+                                    Kalmi Dates
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link href={`/our-brand/product-details?brand_id=2&product_id=10`} className="hover:underline">
+                                    DesertBliss
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link href={`/our-brand/product-details?brand_id=2&product_id=11`} className="hover:underline">
+                                    Deseeded Date
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link href={`/our-brand/product-details?brand_id=2&product_id=12`} className="hover:underline">
+                                    Premium Dates
+                                  </Link>
+                                </li>
+                              </ul>
+                            </div>
+                          )}
                         </div>
+                      ) : (
+                        // Normal product button
+                        <button
+                          className="text-base text-[#373737] hover:text-[#9F7B49] transition-all"
+                          onClick={() => handleProductClick(brand.id, product.id)}
+                        >
+                          {product.name}
+                        </button>
                       )}
                     </div>
                   ))}

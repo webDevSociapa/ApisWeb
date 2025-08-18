@@ -306,7 +306,7 @@ export default function HomePage() {
       </div>
       {/* Day to day story */}
       {/* a */}
-      <div className="px-0 md:px-2 w-full mb-12 mt-6 md:mt-0">
+      <div className="px-0 md:px-2 w-full mb-12 mt-6 md:mt-8">
         <div className="home-story-bg py-8 flex flex-col items-center">
           <p className="uppercase text-sm text-center text-[22px] md:text-lg font-medium text-[#585858] font-medium" style={{ fontFamily: "jost" }}>
             Find Your Favorite Choices Of A Hearty Meals
@@ -628,7 +628,7 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row items-center w-full tvc-bg sm:justify-center gap-10 pt-5  w-full xl:-mt-60 sm:mt-0 tvcyoutubeVideo">
+            <div className="flex flex-col sm:flex-row items-center w-full tvc-bg sm:justify-center gap-10 pt-5  w-full xl:-mt-40 sm:mt-0 tvcyoutubeVideo">
              <EmblaCarousel options={OPTIONS}>
             {tvcHome.map((itm, index) => (
               <div className="embla__slide" key={index}>

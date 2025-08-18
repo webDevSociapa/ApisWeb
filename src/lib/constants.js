@@ -218,6 +218,16 @@ import ShaaneKhajoorBg from "@/assets/images/OurBrands/ShaanEKhajoorBg1.jpg"
 import GGPBanner from "@/assets/images/OurBrands/ggpbanner.png"
 import ggpProduct from "@/assets/images/OurBrands/newggpProduct.png"
 import newGGP02 from "@/assets/images/OurBrands/newggp02.png"
+import InfusedHoney from "@/assets/images/OurBrands/Infused-Honey.png"
+import NutrashipProducts from "@/assets/images/OurBrands/Nutrasip-Lemon-Honey-new.png";
+import NutrashipProductDesc from "@/assets/images/OurBrands/Nutrasip-product-desc.png";
+
+import NutrashipIcon1 from "@/assets/images/OurBrands/Detox-Nutrasip-Icon.png";
+import NutrashipIcon2 from "@/assets/images/OurBrands/Power-of-8-Herbs-Nutrasip-Icon.png";
+import NutrashipIcon3 from "@/assets/images/OurBrands/Zero-BitternessNutrasip-Icon.png";
+
+
+
 
 // import OrganicHoneyMenu from "@/assets/images"
 
@@ -349,6 +359,32 @@ export const PRODUCT_DATA = [
         product_img3: TrustSlide1,
         customer_says:
           "I’ve tried many honeys, but Apis Organic Honey stands out for its authentic taste and quality. It’s perfect for my tea, baking, and even just a spoonful for a quick energy boost! Apis Honey truly stands out for its purity. It’s evident that they prioritize the natural essence of honey without any additives or artificial processing. The flavor is rich, smooth, and genuinely delightful, reflecting the untouched quality of the nectar.",
+        health_benefits:
+          "Honey is packed with antioxidants that boost your immune system and help fight off illnesses. Regular consumption of honey can strengthen your body’s defenses and promote overall health.",
+        primary_color: "",
+        secondary_color: "",
+      },
+
+       {
+        id: 3,
+        name: "Infused Honey",
+        img: NutrashipProductDesc,
+        back_img: InfusedHoney,
+        rect_color: "bg-[#FFC660]",
+        title_color: "text-[#9F7B49]",
+        desc_color: "text-black",
+        title: "Apis Organic Honey",
+        link: "https://www.amazon.in/Apis-Organic-honey-450gm-Certified/dp/B0CS6WWLDD",
+        saysImage: HandDrawnHoney,
+        title_desc:
+          "Discover The Purest Organic Honey From The Enchanting Valleys Of Kashmir",
+        product_desc:
+          "Apis Honey with Hot Chilli Spice up your palate with this bold blend of pure honey infused with fiery red chillies. Ideal for drizzling over grilled veggies, marinades, or even pizza for an adventurous edge.Best For: Glazes, BBQs, fusion dishes",
+        product_img_1: NutrashipProducts,
+        product_img_2: HoneyImage11,
+        product_img3: TrustSlide1,
+        customer_says:
+          "I never knew honey could be this exciting! The Apis infused honey range adds the perfect twist to my daily routine whether I’m adding zing to my green tea, a kick to my toast, or a calming touch to my lemon water. The flavors are bold, natural, and absolutely delicious",
         health_benefits:
           "Honey is packed with antioxidants that boost your immune system and help fight off illnesses. Regular consumption of honey can strengthen your body’s defenses and promote overall health.",
         primary_color: "",
@@ -658,6 +694,8 @@ export const PRODUCT_DATA = [
     ],
   },
 
+  
+
 
 
   {
@@ -837,6 +875,13 @@ export const PRODUCT_DATA = [
       },
     ],
   },
+
+
+
+  
+
+
+  
   // {
   //   id: 5,
   //   title: "Beverage",
@@ -4066,6 +4111,51 @@ export const GLIMPSES_SLIDES = [
     title: "Chocolate Spread",
   },
 ];
+
+
+
+export const NUTRASHIP = [
+  {
+    id: 1,
+    // title: "Antioxidant Boost",
+    // name: "Benefits",
+
+    // desc: "Green tea is rich in antioxidants, particularly catechins like EGCG, which help combat oxidative stress and neutralize harmful free radicals. These antioxidants support overall health by reducing inflammation and protecting cells from damage.",
+    img: NutrashipIcon1,
+    // shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 2,
+    // title: "Heart Health",
+    // name: "Benefits",
+
+    // desc: "Regular consumption of green tea can improve cardiovascular health. It helps lower LDL cholesterol levels and triglycerides, reducing the risk of heart disease. The anti-inflammatory properties also contribute to maintaining healthy blood vessels.",
+    img: NutrashipIcon2,
+    // shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 3,
+    // title: "Metabolism Aid",
+    // name: "Benefits",
+
+    // desc: "Green tea can enhance metabolic rate and promote fat oxidation. Its catechins and caffeine work together to boost metabolism, which may aid in weight management and improve exercise performance.",
+    img: NutrashipIcon3,
+    // shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+  {
+    id: 4,
+    // title: "Brain Function",
+    // name: "Benefits",
+
+    // desc: "The caffeine and L-theanine in green tea can improve cognitive function, enhancing alertness, attention, and memory. These compounds work synergistically to promote better mental clarity and focus.",
+    img: BrainFunction,
+    // shadowClass: "shadow-custom-yellow",
+    color: "bg-[#FFC660]",
+  },
+]
 
 
 export const Terms_Conditions = [

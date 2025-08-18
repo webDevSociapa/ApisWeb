@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image";
-import MissionBanner from "@/assets/images/AboutUs/aboutus-mission-banner.jpg";
+import MissionBanner from "@/assets/images/AboutUs/vision-mision-banner.png";
 import { useEffect, useState } from "react";
 import Curv from "@/assets/images/AboutUs/Curv.png";
 import axios from "axios";
@@ -80,8 +80,6 @@ export default function VisionMission() {
     }
   };
 
-      console.log(renderContent.case,"rendercontent");
-
       useEffect(() => {
         const interval = setInterval(() => {
           setCounts(prevCounts => {
@@ -111,18 +109,6 @@ export default function VisionMission() {
   return (
 
       <>
-      <main className="flex flex-col items-center justify-center w-full">
-            <div className="relative w-full">
-              <Image
-                src={Banner}
-                alt="Banner Image"
-                width={1440}
-                height={1440}
-                className="object-cover w-full h-100"
-              />
-            </div>
-          </main>
-
    <div id="mission-values" className="relative mt-14 flex flex-col items-center justify-center w-full">
   {/* Mission Banner */}
   <div className="relative w-full">

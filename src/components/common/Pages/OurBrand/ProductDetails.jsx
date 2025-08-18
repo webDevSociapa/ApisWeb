@@ -12,7 +12,7 @@ import CheckReportBanner from '@/assets/images/OurBrands/ProductBanner.png'
 import HimalayaHoney from "@/assets/images/OurBrands/himalayaHoney.png"
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { GGP, NEWS_DATA, PRODUCT_DATA } from "@/lib/constants";
+import { GGP, NEWS_DATA, NUTRASHIP, PRODUCT_DATA } from "@/lib/constants";
 import Link from "next/link";
 import FlowerRun from '@/assets/images/home-banner-section/flowerRun.gif'
 
@@ -44,7 +44,6 @@ const ProductDetails = () => {
   // };
 
   const handleImageClick = (content) => {
-    console.log("content", content);
     
     setSelectedContent(content);
     setHoveredId(content.id)
@@ -52,7 +51,7 @@ const ProductDetails = () => {
 
   const renderBenefits = (benefits) => {
     return benefits.map((itm) => (
-      <div
+      <div 
         key={itm.id}
         className="flex flex-col w-[48%] sm:w-[45%] md:w-[30%] items-center justify-center my-4"
       >
@@ -113,6 +112,10 @@ const ProductDetails = () => {
     }
     else if (selectedBrand?.id === 4 && selectedProduct?.id === 3) {
       benefits = GGP;
+    }
+
+      else if (selectedBrand?.id === 1 && selectedProduct?.id === 3) {
+      benefits = NUTRASHIP;
     }
 
     // Set the first health benefit as the selected content on page render
@@ -236,26 +239,7 @@ const ProductDetails = () => {
               </Link>
             </div>
 
-            {selectedBrand?.id === 2 && selectedProduct?.id === 1 && (
-              <div className="flex flex-col items-center">
-                <Image
-                  src={selectedProduct.product_img3}
-                  height={280}
-                  alt="header-logo"
-                  className="h-[180px] w-auto md:h-[280px]"
-                />
-                <Link href={{
-                  pathname: "/our-brand/product-details/product-desc",
-                  query: { selectedProduct: "HimalayaHoney" }
-                }}>
-                  <button
-                    className="border mt-4 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-12 text-xs md:text-base py-1 md:py-3 font-bold text-white"
-                  >
-                    View Details
-                  </button>
-                </Link>
-              </div>
-            )}
+           
           </div>
         </>
       ) : (
@@ -264,7 +248,7 @@ const ProductDetails = () => {
             {/* Text Section */}
             <div className="flex flex-col items-center justify-center w-full px-4 md:px-0">
               <p className="w-full max-w-[90%] text-[20px] md:text-[40px] font-bold text-center text-[#84663C]">
-                Purity is our essence in food
+                {selectedBrand?.id === 1 && selectedProduct?.id === 3 ? "Nature’s Sweetness, Reimagined" : "Purity is our essence in food"}
               </p>
               <p className="text-[#454545] w-full max-w-[80%] text-sm md:text-2xl text-center mt-4 md:mt-8 font-jost">
                 {selectedProduct.product_desc}
@@ -316,7 +300,7 @@ const ProductDetails = () => {
                                       ? renderBenefits(SAFFRON)
                                       : selectedBrand?.id === 5 && selectedProduct?.id === 1
                                         ? renderBenefits(GREEN_TEA): selectedBrand?.id === 4 && selectedProduct?.id === 3
-                                        ? renderBenefits(GGP)                     : ""}
+                                        ? renderBenefits(GGP) : selectedBrand?.id === 1 && selectedProduct?.id === 3 ? renderBenefits(NUTRASHIP) : "" }
             </div>
             <div>
             </div>
@@ -583,7 +567,7 @@ const ProductDetails = () => {
               character & growth.
             </p> */}
             <h3 className="text-[20px] md:text-[40px] font-bold text-[#9F7B49] font-literata -mt-5">
-              Similar Products
+               Our Range
             </h3>
           </div>
         </div>
