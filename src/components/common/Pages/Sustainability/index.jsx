@@ -29,6 +29,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import EmblaCarousel from "../../Carousel/Carousel";
 import Head from "next/head";
+import { Button } from "@mui/material";
 
 const SUSTAINABILITY_DATA = [
   {
@@ -104,6 +105,9 @@ export default function Sustainability() {
   const [imageSet, setImageSet] = useState([]);
 
   const [currentPage, setCurrentPage] = useState(1);
+  const [showAllImages, setShowAllImages] = useState(false);
+const [isModalOpen, setIsModalOpen] = useState(false);
+
   const imagesPerPage = 8;
 
   const [selectedImage, setSelectedImage] = useState(null);
@@ -326,7 +330,7 @@ export default function Sustainability() {
       )}
 
       {/* Pagination */}
-      <div className="flex justify-center mt-8">
+      {/* <div className="flex justify-center mt-8">
         <button
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
@@ -342,7 +346,53 @@ export default function Sustainability() {
         >
           Next
         </button>
+      </div> */}
+
+{/* View More Button */}
+<div className="flex justify-center">
+  <button
+    onClick={() => setIsModalOpen(true)}
+    className="px-4 py-2 text-lg bg-[#855B3D] text-white rounded-md hover:bg-[#734C33] transition-colors duration-300 mt-8"
+  >
+    View More
+  </button>
+</div>
+{isModalOpen && (
+  <div className="fixed inset-0 z-50 bg-black bg-opacity-60 flex items-center justify-center px-2 mt-40">
+    <div className="bg-white rounded-2xl max-h-[90vh] w-full max-w-6xl overflow-y-auto p-6 relative">
+      
+      {/* Close Icon */}
+      <button
+        onClick={() => setIsModalOpen(false)}
+        className="absolute top-4 right-4 text-2xl font-bold text-black hover:text-[#855B3D]"
+      >
+        &times;
+      </button>
+
+      <h2 className="text-center text-2xl font-semibold text-[#855B3D] mb-6">All CSR Images</h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {SUSTAINBILITY_IMAGE?.map((image, index) => (
+          <div
+            key={index}
+            className="w-full aspect-square overflow-hidden rounded-xl cursor-pointer"
+            onClick={() => handleImageClick(image)}
+          >
+            <Image
+              src={image.image || "/Eovibb.png"}
+              alt={`CSR ${index + 1}`}
+              width={400}
+              height={400}
+              className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+            />
+          </div>
+        ))}
       </div>
+    </div>
+  </div>
+)}
+
+
 
     </>
 

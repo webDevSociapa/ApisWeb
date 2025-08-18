@@ -92,6 +92,26 @@ const NavBar = ({ className, linkClass }) => {
     setHoveredItem(null);
   };
 
+  const handleCareerContentClick = () => {
+    setHoveredItem(null);
+  };
+
+  const handleMediaContentClick = () => {
+    setHoveredItem(null);
+  };
+
+  const handleSustainabilityContentClick = () => {
+    setHoveredItem(null);
+  };
+
+  const handleRecipesContentClick = () => {
+    setHoveredItem(null);
+  };
+
+  const handleContactContentClick = () => {
+    setHoveredItem(null);
+  };
+
   const handleNavigateToOurBrand = (event) => {
     event.preventDefault(); // Prevent default navigation
     setHoveredItem('Brand'); // Show hover content
@@ -147,7 +167,7 @@ const NavBar = ({ className, linkClass }) => {
                 </div>
               )}
 
-            {path.name === 'Brand' && hoveredItem === 'Brand' && (
+              {path.name === 'Brand' && hoveredItem === 'Brand' && (
                 <div
                   className="absolute top-full left-0 w-full bg-white z-1000"
                   onMouseEnter={handleOurBrandContentMouseEnter}
@@ -156,6 +176,7 @@ const NavBar = ({ className, linkClass }) => {
                   <OurBrand onProductClick={handleOurBrandContentClick} />
                 </div>
               )}
+
             </div>
             {path.name === 'About Us' && hoveredItem === 'About Us' && (
               <div
@@ -166,28 +187,35 @@ const NavBar = ({ className, linkClass }) => {
                 <div className="w-full max-w-[800px] bg-white p-16" onProductClick={handleOurBrandContentClick}>
                   <div className="flex flex-row gap-6 justify-between">
                     <div className="flex flex-col">
-                      <Image src={AboutusMini} width={400} height={400} />
+                      {/* <Image src={AboutusMini} width={400} height={400} /> */}
                     </div>
                     {/* Left Section: Image and Description */}
                     <div className="flex flex-col w-1/3 gap-4">
                       <h4 className="font-bold text-[#A57F5A] mb-2 border-l-2 border-[#9F7B49] px-2">Corporate Profile</h4>
                       <ul className="text-sm text-gray-600 space-y-4">
                         <li>
-                          <Link href="/about-us/mission-vision" className="hover:underline">
-                            Vision and Mission
-                          </Link>
+                          <div onClick={handleOurBrandContentClick}>
+                            <Link href="/about-us/mission-vision" className="hover:underline">
+                              Vision and Mission
+                            </Link>
+                          </div>
                         </li>
                         <li>
-                          <Link href="/about-us/journey" className="hover:underline">
-                            Milestone
-                          </Link>
+                          <div onClick={handleOurBrandContentClick}>
+                            <Link href="/about-us/journey" className="hover:underline">
+                              Milestone
+                            </Link>
+                          </div>
                         </li>
                         <li>
-                          <Link href="/about-us/ourDirectors" className="hover:underline">
-                             Board of Directors
-                          </Link>
+                          <div onClick={handleOurBrandContentClick}>
+                            <Link href="/about-us/ourDirectors" className="hover:underline">
+                              Board of Directors
+                            </Link>
+                          </div>
                         </li>
                       </ul>
+
                     </div>
                     {/* Right Section: Leadership */}
 
@@ -211,16 +239,21 @@ const NavBar = ({ className, linkClass }) => {
                       <h4 className="font-bold text-[#A57F5A] mb-2 border-l-2 border-[#9F7B49] px-2">Careers</h4>
                       <ul className="text-sm text-gray-600 space-y-4">
                         <li>
-                          <Link href="/careers/lifeAtApis" className="hover:underline">
-                          Life @ AIL
-                          </Link>
+                          <div onClick={handleCareerContentClick}>
+                            <Link href="/careers/lifeAtApis" className="hover:underline">
+                              Life @ AIL
+                            </Link>
+                          </div>
                         </li>
                         <li>
-                          <Link href="/careers/joinOurTeam" className="hover:underline">
-                            Work With Us
-                          </Link>
+                          <div onClick={handleCareerContentClick}>
+                            <Link href="/careers/joinOurTeam" className="hover:underline">
+                              Work With Us
+                            </Link>
+                          </div>
                         </li>
                       </ul>
+
                     </div>
                     {/* Right Section: Leadership */}
 
@@ -244,22 +277,28 @@ const NavBar = ({ className, linkClass }) => {
                       <h4 className="font-bold text-[#A57F5A] mb-2 border-l-2 border-[#9F7B49] px-2">Media</h4>
                       <ul className="text-sm text-gray-600 space-y-4">
                         <li>
-                          <Link href="/media/apisInTheNews" className="hover:underline">
-                            Apis in the news
-                          </Link>
+                          <div onClick={handleMediaContentClick}>
+                            <Link href="/media/apisInTheNews" className="hover:underline">
+                              Apis in the news
+                            </Link>
+                          </div>
                         </li>
                         <li>
-                          <Link href="/media/mediaGallery" className="hover:underline">
-                            Media Library
-                          </Link>
+                          <div onClick={handleMediaContentClick}>
+                            <Link href="/media/mediaGallery" className="hover:underline">
+                              Media Library
+                            </Link>
+                          </div>
                         </li>
                         <li>
-                          <Link href="/our-blog/ourBlogs" className="hover:underline">
-                             Blogs
-                          </Link>
+                          <div onClick={handleMediaContentClick}>
+                            <Link href="/our-blog/ourBlogs" className="hover:underline">
+                              Blogs
+                            </Link>
+                          </div>
                         </li>
-
                       </ul>
+
                     </div>
                     {/* Right Section: Leadership */}
 
@@ -283,11 +322,14 @@ const NavBar = ({ className, linkClass }) => {
                       <h4 className="font-bold text-[#A57F5A] mb-2 border-l-2 border-[#9F7B49] px-2">Sustainability</h4>
                       <ul className="text-sm text-gray-600 space-y-4">
                         <li>
-                          <Link href="/sustainability/" className="hover:underline">
-                          CSR @AIL
-                          </Link>
+                          <div onClick={handleSustainabilityContentClick}>
+                            <Link href="/sustainability/" className="hover:underline">
+                              CSR @AIL
+                            </Link>
+                          </div>
                         </li>
                       </ul>
+
                     </div>
                     {/* Right Section: Leadership */}
 
@@ -310,13 +352,15 @@ const NavBar = ({ className, linkClass }) => {
                     <div className="flex flex-col w-1/3 gap-4">
                       <h4 className="font-bold text-[#A57F5A] mb-2 border-l-2 border-[#9F7B49] px-2"> Resources</h4>
                       <ul className="text-sm text-gray-600 space-y-4">
-                        
                         <li>
-                          <Link href="/our-blog/ourRecipis" className="hover:underline">
-                          Recipes
-                          </Link>
+                          <div onClick={handleRecipesContentClick}>
+                            <Link href="/our-blog/ourRecipis" className="hover:underline">
+                              Recipes
+                            </Link>
+                          </div>
                         </li>
                       </ul>
+
                     </div>
                     {/* Right Section: Leadership */}
                   </div>
@@ -339,16 +383,21 @@ const NavBar = ({ className, linkClass }) => {
                       <h4 className="font-bold text-[#A57F5A] mb-2 border-l-2 border-[#9F7B49] px-2">Connect</h4>
                       <ul className="text-sm text-gray-600 space-y-4">
                         <li>
-                          <Link href="/contact-us" className="hover:underline">
-                             Registered Office / Overseas Operation
-                          </Link>
+                          <div onClick={handleContactContentClick}>
+                            <Link href="/contact-us" className="hover:underline">
+                              Registered Office / Overseas Operation
+                            </Link>
+                          </div>
                         </li>
                         <li>
-                          <Link href="/contact-us/factoryAddress" className="hover:underline">
-                             Factory Address
-                          </Link>
+                          <div onClick={handleContactContentClick}>
+                            <Link href="/contact-us/factoryAddress" className="hover:underline">
+                              Factory Address
+                            </Link>
+                          </div>
                         </li>
                       </ul>
+
                     </div>
                     {/* Right Section: Leadership */}
                   </div>

@@ -264,10 +264,10 @@ export default function Media() {
                       <div>
                         <div className="mx-3 border">
                           <iframe
-                            className="rounded md:h-[360px] h-auto md:w-[580px] max-w-[500px] min-h-[200px] w-auto"
+                        className="w-[250px] md:w-[400px] h-[250px] md:h-[345px]"
                             src={itm.videoUrl}
-                            width={500}
-                            height={500}
+                            height={250}
+                        width={250}
                             // onClick={() => openModal(`${tvcHome[0].videoUrl}`)}
                             title="YouTube video player"
                             frameborder="0"
