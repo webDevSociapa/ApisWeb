@@ -568,7 +568,7 @@ export default function HomePage() {
             </div>
             <Link href={"https://www.amazon.in/s?k=apis&crid=2CJFWNXIDZI1V&sprefix=apis%2Caps%2C429&ref=nb_sb_noss_1"} target="_blank">
               <button className="border border-[#9F7B49] bg-[#9F7B49] px-2 md:px-12 text-[10px] md:text-base py-1 md:py-3 font-bold text-white">
-                Explore More
+                Buy Now
               </button>
             </Link>
           </div>

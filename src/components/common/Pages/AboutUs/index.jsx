@@ -46,7 +46,7 @@ export default function AboutUsPage({ }) {
     },
     {
       count: "2.5L",
-      title: "Number Of Outlets",
+      title: "Outlets",
       key: "numberOfOutlets"
     },
   ];

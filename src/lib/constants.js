@@ -175,7 +175,8 @@ import NewProductBannerDates from "@/assets/images/OurBrands/newProductBannerDat
 import CornFlakesNew from "@/assets/images/OurBrands/cornFlakesNew.png"
 import NewJamBanner from "@/assets/images/OurBrands/newJamBanner.png"
 import DatesProducts from "@/assets/images/OurBrands/newDatesProduct1.png"
-import HoneyBannerNew001 from "@/assets/images/OurBrands/himalayaHoneynew11.png";
+import HoneyBannerNew001 from "@/assets/images/OurBrands/Himalaya-Honey-banner-fix111.png";
+import RegularHoneyNewFix from "@/assets/images/OurBrands/Regular-Honey-banner-fix222.png";
 import newSoyaChunkss from "@/assets/images/OurBrands/newSoyaChunks1.png";
 import cornFlakes101 from "@/assets/images/OurBrands/cornFlakes101.png";
 import newDates101 from "@/assets/images/OurBrands/newDates101.png";
@@ -225,6 +226,12 @@ import NutrashipProductDesc from "@/assets/images/OurBrands/Nutrasip-product-des
 import NutrashipIcon1 from "@/assets/images/OurBrands/Detox-Nutrasip-Icon.png";
 import NutrashipIcon2 from "@/assets/images/OurBrands/Power-of-8-Herbs-Nutrasip-Icon.png";
 import NutrashipIcon3 from "@/assets/images/OurBrands/Zero-BitternessNutrasip-Icon.png";
+
+
+
+
+
+
 
 
 
@@ -374,7 +381,7 @@ export const PRODUCT_DATA = [
         title_color: "text-[#9F7B49]",
         desc_color: "text-black",
         title: "Apis Organic Honey",
-        link: "https://www.amazon.in/Apis-Organic-honey-450gm-Certified/dp/B0CS6WWLDD",
+        link: "#",
         saysImage: HandDrawnHoney,
         title_desc:
           "Discover The Purest Organic Honey From The Enchanting Valleys Of Kashmir",
@@ -404,7 +411,7 @@ export const PRODUCT_DATA = [
         id: 1,
         name: "Honey",
         img: honey103,
-        back_img: HoneyBannerNew001,
+        back_img: RegularHoneyNewFix,
         rect_color: "bg-[#FFC660]",
         title_color: "text-[#9F7B49]",
         desc_color: "text-black",
@@ -4116,46 +4123,31 @@ export const GLIMPSES_SLIDES = [
 
 export const NUTRASHIP = [
   {
-    id: 1,
     // title: "Antioxidant Boost",
     // name: "Benefits",
 
     // desc: "Green tea is rich in antioxidants, particularly catechins like EGCG, which help combat oxidative stress and neutralize harmful free radicals. These antioxidants support overall health by reducing inflammation and protecting cells from damage.",
     img: NutrashipIcon1,
     // shadowClass: "shadow-custom-yellow",
-    color: "bg-[#FFC660]",
   },
   {
-    id: 2,
     // title: "Heart Health",
     // name: "Benefits",
 
     // desc: "Regular consumption of green tea can improve cardiovascular health. It helps lower LDL cholesterol levels and triglycerides, reducing the risk of heart disease. The anti-inflammatory properties also contribute to maintaining healthy blood vessels.",
     img: NutrashipIcon2,
     // shadowClass: "shadow-custom-yellow",
-    color: "bg-[#FFC660]",
   },
   {
-    id: 3,
     // title: "Metabolism Aid",
     // name: "Benefits",
 
     // desc: "Green tea can enhance metabolic rate and promote fat oxidation. Its catechins and caffeine work together to boost metabolism, which may aid in weight management and improve exercise performance.",
     img: NutrashipIcon3,
     // shadowClass: "shadow-custom-yellow",
-    color: "bg-[#FFC660]",
   },
-  {
-    id: 4,
-    // title: "Brain Function",
-    // name: "Benefits",
 
-    // desc: "The caffeine and L-theanine in green tea can improve cognitive function, enhancing alertness, attention, and memory. These compounds work synergistically to promote better mental clarity and focus.",
-    img: BrainFunction,
-    // shadowClass: "shadow-custom-yellow",
-    color: "bg-[#FFC660]",
-  },
-]
+];
 
 
 export const Terms_Conditions = [

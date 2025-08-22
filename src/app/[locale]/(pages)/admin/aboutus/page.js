@@ -42,7 +42,7 @@ const AboutData = () => {
         { title: "product Ranges", numbers: "232+" },
         { title: "Years of legacy", numbers: "232+" },
         { title: "new Customer", numbers: "133+" },
-        { title: "number of outlets", numbers: "100+" },
+        { title: "Outlets", numbers: "100+" },
     ]
 
     const [open, setOpen] = useState(false);

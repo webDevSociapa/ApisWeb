@@ -2,24 +2,25 @@
 
 import { useRouter } from "next/navigation";
 import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { PRODUCT_DATA } from "@/lib/constants";
 import Link from "next/link";
 import Head from "next/head";
 
 export default function OurBrand({ onProductClick }) {
-  const router = useRouter();
-    const [activeTab, setActiveTab] = useState("Apis");
-
-
-  const TAB_DATA = ["Apis", "Misk", "Nutrasip"];
-  const BRAND_DATA = [
+   const BRAND_DATA = [
     { id: 1, title: "Health & Wellness" },
     { id: 2, title: "Breakfast Range" },
     { id: 3, title: "Kitchen Mix" },
   ];
-
+  const router = useRouter();
+  const [activeTab, setActiveTab] = useState("Apis");
   const [selectedBrand, setSelectedBrand] = useState(BRAND_DATA[0].id);
+  const [openDropdown, setOpenDropdown] = useState(null); // NEW: track open dropdown
+
+  const TAB_DATA = ["Apis", "Misk", "Nutrasip"];
+ 
+
   const [hoveredProduct, setHoveredProduct] = useState(null);
 
   const handleProductClick = (brandId, productId) => {
@@ -31,9 +32,20 @@ export default function OurBrand({ onProductClick }) {
     window.scrollTo(0, 0);
   }, []);
 
+  // Close dropdown when clicking outside
+  const dropdownRef = useRef(null);
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setOpenDropdown(null);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
     <>
-
       <Head>
         <title>Pure And Natural Products - Best Honey, Best Jam, Best Pickle, Quality Dates | Apis India</title>
         <meta charSet="utf-8" />
@@ -90,167 +102,242 @@ export default function OurBrand({ onProductClick }) {
             <div key={brand.id} className="space-y-2">
               {/* Brand Title */}
               <h3
-                className={`text-2xl font-bold cursor-pointer ${selectedBrand === brand.id ? "text-[#9F7B49]" : "text-[#A57F5A]"
-                  }`}
-                onClick={() => setSelectedBrand(brand.id)}
-              >
-                {brand.title}
-              </h3>
+  className={`text-base sm:text-xl md:text-2xl font-bold cursor-pointer ${selectedBrand === brand.id ? "text-[#9F7B49]" : "text-[#A57F5A]"}`}
+  onClick={() => setSelectedBrand(brand.id)}
+>
+  {brand.title}
+</h3>
 
               {/* Products List */}
               <div className="space-y-2">
                 {brand.products
-                  .filter((product) => product.name !== "Apis Organic Honey" && product.name !== "Royal Zahidi" && product.name !== "Shehenshah Date" && product.name !== "Arabian Pearls Date" && product.name !== "Select Date" && product.name !== "ClassicDate" && product.name !== "Shaan e Khajoor" && product.name !== "KalmiDates" && product.name !== "DesertBliss" && product.name !== "DeseededDate" && product.name !== "Premium Dates")
-                  .map((product) => (
-                    <div key={product.id} className="relative group">
-                      <button
-                        className="text-base text-[#373737] hover:text-[#9F7B49] transition-all"
-                        onClick={() => handleProductClick(brand.id, product.id)}
-                        onMouseEnter={() => setHoveredProduct(product.id)}
-                        onMouseLeave={() => setHoveredProduct(null)}
-                      >
-                        {product.name}
-                      </button>
-                     {product.name === "Honey" && (
-  <div className="absolute top-400 left-30 ml-4 w-[200px] z-10 opacity-0 md:group-hover:opacity-100 transition-all duration-300 ease-linear transform scale-95 md:group-hover:scale-100">
-    <div className="bg-white shadow-lg border rounded-md p-4">
-      <ul className="text-sm text-gray-600 space-y-2">
-        <li>
-          <Link
-            href={`/our-brand/product-details?brand_id=1&product_id=1`}
-            className="hover:underline"
-          >
-            Organic Honey
-          </Link>
-        </li>
-        <li>
-          <Link
-            href={`/our-brand/product-details?brand_id=1&product_id=2`}
-            className="hover:underline"
-          >
-            Himalaya Honey
-          </Link>
-        </li>
-        <li>
-          <Link
-            href={`/our-brand/product-details?brand_id=2&product_id=1`}
-            className="hover:underline"
-          >
-            Regular Honey
-          </Link>
-        </li>
-        <li>
-          <Link
-            href={`/our-brand/product-details?brand_id=1&product_id=3`}
-            className="hover:underline"
-          >
-            Infused Honey
-          </Link>
-        </li>
-      </ul>
-    </div>
-  </div>
-)}
+                  .filter((product) =>
+                    product.name !== "Apis Organic Honey" &&
+                    product.name !== "Royal Zahidi" &&
+                    product.name !== "Shehenshah Date" &&
+                    product.name !== "Arabian Pearls Date" &&
+                    product.name !== "Select Date" &&
+                    product.name !== "ClassicDate" &&
+                    product.name !== "Shaan e Khajoor" &&
+                    product.name !== "KalmiDates" &&
+                    product.name !== "DesertBliss" &&
+                    product.name !== "DeseededDate" &&
+                    product.name !== "Premium Dates"
+                  )
+                  .map((product) => {
+                    // Unique ref for each dropdown
+                    const thisDropdownRef = useRef(null);
 
+                    useEffect(() => {
+                      function handleClickOutside(event) {
+                        if (
+                          thisDropdownRef.current &&
+                          !thisDropdownRef.current.contains(event.target)
+                        ) {
+                          setOpenDropdown(null);
+                        }
+                      }
+                      if (openDropdown === `${brand.id}-${product.id}`) {
+                        document.addEventListener("mousedown", handleClickOutside);
+                      }
+                      return () => document.removeEventListener("mousedown", handleClickOutside);
+                    }, [openDropdown]);
 
-                      {/*  */}
-                      {product.name === "Dates" && (
-                        <div className="absolute top-14 left-10 ml-4 w-[200px] z-10 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-linear transform scale-95 group-hover:scale-100 mt-10">
-                          <div className="bg-white shadow-lg border rounded-md p-4">
-                            <ul className="text-sm text-gray-600 space-y-2">
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=3`}
-                                  className="hover:underline"
-                                >
-                                  Shahenshah Dates
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=7`}
-                                  className="hover:underline"
-                                >
-                                  Royal Zahidi
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=4`}
-                                  className="hover:underline"
-                                >
-                                  Arabian Dates
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=5`}
-                                  className="hover:underline"
-                                >
-                                  Select Date
-                                </Link>
-                              </li>
-
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=6`}
-                                  className="hover:underline"
-                                >
-                                  Classic Date
-                                </Link>
-                              </li>
-
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=8`}
-                                  className="hover:underline"
-                                >
-                                  Shaan e Khajoor
-                                </Link>
-                              </li>
-
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=9`}
-                                  className="hover:underline"
-                                >
-                                  Kalmi Dates
-                                </Link>
-                              </li>
-
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=10`}
-                                  className="hover:underline"
-                                >
-                                  DesertBliss
-                                </Link>
-                              </li>
-
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=11`}
-                                  className="hover:underline"
-                                >
-                                  Deseeded Date
-                                </Link>
-                              </li>
-
-                              <li>
-                                <Link
-                                  href={`/our-brand/product-details?brand_id=2&product_id=12`}
-                                  className="hover:underline"
-                                >
-                                  Premium Dates
-                                </Link>
-                              </li>
-
-                            </ul>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  ))}
+                    return (
+                      <div key={product.id} className="relative" ref={thisDropdownRef}>
+                        {(product.name === "Honey" || product.name === "Dates") ? (
+                          <>
+                            <button
+                              className="text-base text-[#373737] hover:text-[#9F7B49] transition-all"
+                              onClick={() =>
+                                setOpenDropdown(
+                                  openDropdown === `${brand.id}-${product.id}` ? null : `${brand.id}-${product.id}`
+                                )
+                              }
+                            >
+                              {product.name}
+                              <span className="ml-2">&#9662;</span>
+                            </button>
+                            {openDropdown === `${brand.id}-${product.id}` && (
+                              <div className="absolute top-8 left-0 w-[220px] z-20 bg-white shadow-lg border rounded-md p-4">
+                                <ul className="text-sm text-gray-600 space-y-2">
+                                  {product.name === "Honey" && (
+                                    <>
+                                      <li>
+                                        <button
+                                          className="hover:underline text-left w-full"
+                                          onClick={() => {
+                                            setOpenDropdown(null);
+                                            handleProductClick(1, 1);
+                                          }}
+                                        >
+                                          Organic Honey
+                                        </button>
+                                      </li>
+                                      <li>
+                                        <button
+                                          className="hover:underline text-left w-full"
+                                          onClick={() => {
+                                            setOpenDropdown(null);
+                                            handleProductClick(1, 2);
+                                          }}
+                                        >
+                                          Himalaya Honey
+                                        </button>
+                                      </li>
+                                      <li>
+                                        <button
+                                          className="hover:underline text-left w-full"
+                                          onClick={() => {
+                                            setOpenDropdown(null);
+                                            handleProductClick(2, 1);
+                                          }}
+                                        >
+                                          Regular Honey
+                                        </button>
+                                      </li>
+                                      <li>
+                                        <button
+                                          className="hover:underline text-left w-full"
+                                          onClick={() => {
+                                            setOpenDropdown(null);
+                                            handleProductClick(1, 3);
+                                          }}
+                                        >
+                                          Infused Honey
+                                        </button>
+                                      </li>
+                                    </>
+                                  )}
+                                  {product.name === "Dates" && (
+                                    <>
+                                      <li>
+                                        <button
+                                          className="hover:underline text-left w-full"
+                                          onClick={() => {
+                                            setOpenDropdown(null);
+                                            handleProductClick(2, 3);
+                                          }}
+                                        >
+                                          Shahenshah Dates
+                                        </button>
+                                      </li>
+                                      <li>
+                                        <button
+                                          className="hover:underline text-left w-full"
+                                          onClick={() => {
+                                            setOpenDropdown(null);
+                                            handleProductClick(2, 7);
+                                          }}
+                                        >
+                                          Royal Zahidi
+                                        </button>
+                                      </li>
+                                      <li>
+                                        <button
+                                          className="hover:underline text-left w-full"
+                                          onClick={() => {
+                                            setOpenDropdown(null);
+                                            handleProductClick(2, 4);
+                                          }}
+                                        >
+                                          Arabian Dates
+                                        </button>
+                                      </li>
+                                      <li>
+                                        <button
+                                          className="hover:underline text-left w-full"
+                                          onClick={() => {
+                                            setOpenDropdown(null);
+                                            handleProductClick(2, 5);
+                                          }}
+                                        >
+                                          Select Date
+                                        </button>
+                                      </li>
+                                      <li>
+                                        <button
+                                          className="hover:underline text-left w-full"
+                                          onClick={() => {
+                                            setOpenDropdown(null);
+                                            handleProductClick(2, 6);
+                                          }}
+                                        >
+                                          Classic Date
+                                        </button>
+                                      </li>
+                                      <li>
+                                        <button
+                                          className="hover:underline text-left w-full"
+                                          onClick={() => {
+                                            setOpenDropdown(null);
+                                            handleProductClick(2, 8);
+                                          }}
+                                        >
+                                          Shaan e Khajoor
+                                        </button>
+                                      </li>
+                                      <li>
+                                        <button
+                                          className="hover:underline text-left w-full"
+                                          onClick={() => {
+                                            setOpenDropdown(null);
+                                            handleProductClick(2, 9);
+                                          }}
+                                        >
+                                          Kalmi Dates
+                                        </button>
+                                      </li>
+                                      <li>
+                                        <button
+                                          className="hover:underline text-left w-full"
+                                          onClick={() => {
+                                            setOpenDropdown(null);
+                                            handleProductClick(2, 10);
+                                          }}
+                                        >
+                                          DesertBliss
+                                        </button>
+                                      </li>
+                                      <li>
+                                        <button
+                                          className="hover:underline text-left w-full"
+                                          onClick={() => {
+                                            setOpenDropdown(null);
+                                            handleProductClick(2, 11);
+                                          }}
+                                        >
+                                          Deseeded Date
+                                        </button>
+                                      </li>
+                                      <li>
+                                        <button
+                                          className="hover:underline text-left w-full"
+                                          onClick={() => {
+                                            setOpenDropdown(null);
+                                            handleProductClick(2, 12);
+                                          }}
+                                        >
+                                          Premium Dates
+                                        </button>
+                                      </li>
+                                    </>
+                                  )}
+                                </ul>
+                              </div>
+                            )}
+                          </>
+                        ) : (
+                          <button
+                            className="text-base text-[#373737] hover:text-[#9F7B49] transition-all"
+                            onClick={() => handleProductClick(brand.id, product.id)}
+                          >
+                            {product.name}
+                          </button>
+                        )}
+                      </div>
+                    );
+                  })}
               </div>
             </div>
           ))}

@@ -18,6 +18,8 @@ import FlowerRun from '@/assets/images/home-banner-section/flowerRun.gif'
 
 
 
+
+
 import { LATEST_SLIDES, SLIDES, HEALTH_BENEFITS, HEALTH_DATE, HEALTH_JAM, HEALTH_FLAKES, HEALTH_VERNACALLI, HEALTH_MACRONI, HEALTH_SPEARD, COOKING_PASTE, SOYA_CHUNK, SAFFRON, GREEN_TEA, RECIPIES_DATA1, AVAILABILITY_SLIDE, GLIMPSES_SLIDES } from "@/lib/constants";
 import axios from "axios";
 
@@ -246,14 +248,17 @@ const ProductDetails = () => {
         <>
           <div className="grid gap-4 md:gap-8 grid-cols-1 md:grid-cols-2">
             {/* Text Section */}
-            <div className="flex flex-col items-center justify-center w-full px-4 md:px-0">
-              <p className="w-full max-w-[90%] text-[20px] md:text-[40px] font-bold text-center text-[#84663C]">
-                {selectedBrand?.id === 1 && selectedProduct?.id === 3 ? "Nature’s Sweetness, Reimagined" : "Purity is our essence in food"}
-              </p>
-              <p className="text-[#454545] w-full max-w-[80%] text-sm md:text-2xl text-center mt-4 md:mt-8 font-jost">
-                {selectedProduct.product_desc}
-              </p>
-            </div>
+           <div className="flex flex-col items-center justify-center w-full px-4 md:px-0">
+  <p className="w-full max-w-[85%] text-[18px] md:text-[32px] font-bold text-center text-[#84663C] leading-snug">
+    {selectedBrand?.id === 1 && selectedProduct?.id === 3
+      ? "Nature’s Sweetness, Reimagined"
+      : "Purity is our essence in food"}
+  </p>
+  <p className="text-[#454545] w-full max-w-[75%] text-justify text-xs md:text-lg mt-4 md:mt-6 font-jost leading-relaxed">
+    {selectedProduct.product_desc}
+  </p>
+</div>
+
 
             {/* Image and Button Section */}
             <div className="flex flex-col items-center justify-center px-4 md:px-0">
@@ -276,8 +281,7 @@ const ProductDetails = () => {
             <div className="w-full flex flex-row flex-wrap md:flex-nowrap px-4 md:px-0 -mt-[40px]">
               {selectedBrand?.id === 1 && selectedProduct?.id === 1
                 ? renderBenefits(HEALTH_BENEFITS)
-                : selectedBrand?.id === 1 && selectedProduct?.id === 3
-                  ? renderBenefits(HEALTH_DATE)
+                
                   : selectedBrand?.id === 2 && selectedProduct?.id === 1
                     ? renderBenefits(HEALTH_BENEFITS)
                     : selectedBrand?.id === 2 && selectedProduct?.id === 2
