@@ -98,7 +98,7 @@ const MainFooter = () => {
   <div className="border-t border-t-zinc-300 p-4 md:px-6 lg:py-8">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div className="flex flex-col md:flex-row md:items-center justify-center gap-4 text-sm text-[#9F7B49] font-normal md:justify-start lg:gap-8">
-          <span>Copy Right Reserved By ApisIndia.com</span>
+          <span>CopyRight Reserved By ApisIndia.com</span>
           <Link href={"/our-policy?policy=terms"}>
             <span className="hover:text-activeGreen-500 cursor-pointer">Terms & Conditions</span>
           </Link>

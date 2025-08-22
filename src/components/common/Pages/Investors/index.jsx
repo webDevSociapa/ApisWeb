@@ -1903,8 +1903,18 @@ export default function Investors() {
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
-                      <td className="border px-4 py-2">-</td>
-                      <td className="border px-4 py-2">-</td>
+
+                      <td className="border px-4 py-2">
+                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/SHP-APIS-DEC-2024.html" target="_blank" rel="noopener noreferrer">
+                          <Image src={pdficon1} alt="PDF" width="30" />
+                        </a>
+                      </td>
+                       <td className="border px-4 py-2">
+                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Shareholding+Pattern.html" target="_blank" rel="noopener noreferrer">
+                          <Image src={pdficon1} alt="PDF" width="30" />
+                        </a>
+                      </td>
+                       
                     </tr>
 
                     <tr>
@@ -2174,7 +2184,7 @@ export default function Investors() {
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2024-25/Q4/Intimation+under+Reg.30-publication+of+Results.pdf" target="_blank" rel="noopener noreferrer">
+                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Intimation+under+Reg.30-Newspeper+Advertisement.pdf" target="_blank" rel="noopener noreferrer">
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
@@ -2794,17 +2804,7 @@ export default function Investors() {
                   </table>
                 </div>
               </div>
-
             </div>
-
-
-
-
-
-
-
-
-
           </div>
         </div>
         {/*  */}
