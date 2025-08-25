@@ -11,9 +11,9 @@ import JR2020 from '@/assets/images/AboutUs/6.jpg'
 import JR2021 from '@/assets/images/AboutUs/7.jpg'
 import JR2022 from '@/assets/images/AboutUs/newmilestone-01.png'
 import JR2023 from '@/assets/images/AboutUs/9.jpg'
-import JR2024 from '@/assets/images/AboutUs/10.jpg'
+import JR2024 from '@/assets/images/AboutUs/2021final.jpg'
 import JR2025 from '@/assets/images/AboutUs/milesStone2024.jpg'
-import JR2026 from '@/assets/images/AboutUs/new2025milestone.png'
+import JR2026 from '@/assets/images/AboutUs/2025final.jpg'
 
 
 const Journey = () => {
@@ -28,7 +28,7 @@ const Journey = () => {
     { year: "Year 2022", title: "2022", desc: "In 2022, AIL crossed 15ML USD in Export Sales", img: JR2022 },
     { year: "Year 2023", title: "2023", desc: "In 2023, AIL crossed 15ML USD in Export Sales", img: JR2025 },
     { year: "Year 2024", title: "2024", desc: "In 2024, AIL crossed 15ML USD in Export Sales", img: JR2025 },
-        { year: "Year 2025", title: "2025", desc: "In 2024, AIL crossed 15ML USD in Export Sales", img: JR2026 }
+    { year: "Year 2025", title: "2025", desc: "In 2024, AIL crossed 15ML USD in Export Sales", img: JR2026 }
 
     // { year: "Year 2025", title: "2024", desc: "In 2025, AIL crossed 15ML USD in Export Sales", img: JR2025 },
   ];
