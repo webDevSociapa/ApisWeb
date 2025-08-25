@@ -228,6 +228,19 @@ import NutrashipIcon2 from "@/assets/images/OurBrands/Power-of-8-Herbs-Nutrasip-
 import NutrashipIcon3 from "@/assets/images/OurBrands/Zero-BitternessNutrasip-Icon.png";
 
 
+import DatesNewIcons1 from "@/assets/images/OurBrands/Anti-Inflamatry-Date-Icon.png";
+import DatesNewIcons2 from "@/assets/images/OurBrands/High-Anti-oxidants-Date-Icon.png";
+import DatesNewIcons3 from "@/assets/images/OurBrands/High-Energy-&-Low-Fat-Date-Icon.png";
+import DatesNewIcons4 from  "@/assets/images/OurBrands/High-in-Fibre_Date_Icon.png";
+
+
+import VermicalliFinal from "@/assets/images/OurBrands/vermicaliFinal1.png";
+import RegularHoneyFinal from "@/assets/images/OurBrands/regular-honey-final.png";
+import HimalayaHoneyFinal from "@/assets/images/OurBrands/himalaya-honey-final.png";
+import InfusedHoneyFinal from "@/assets/images/OurBrands/infused-honey-final.png";
+
+
+
 
 
 
@@ -350,7 +363,7 @@ export const PRODUCT_DATA = [
         id: 2,
         name: "Himalaya Honey",
         img: honey103,
-        back_img: HoneyBannerNew001,
+        back_img: HimalayaHoneyFinal,
         rect_color: "bg-[#FFC660]",
         title_color: "text-[#9F7B49]",
         desc_color: "text-black",
@@ -376,7 +389,7 @@ export const PRODUCT_DATA = [
         id: 3,
         name: "Infused Honey",
         img: NutrashipProductDesc,
-        back_img: InfusedHoney,
+        back_img: InfusedHoneyFinal,
         rect_color: "bg-[#FFC660]",
         title_color: "text-[#9F7B49]",
         desc_color: "text-black",
@@ -411,7 +424,7 @@ export const PRODUCT_DATA = [
         id: 1,
         name: "Honey",
         img: honey103,
-        back_img: RegularHoneyNewFix,
+        back_img: RegularHoneyFinal,
         rect_color: "bg-[#FFC660]",
         title_color: "text-[#9F7B49]",
         desc_color: "text-black",
@@ -472,7 +485,7 @@ export const PRODUCT_DATA = [
         title_desc: "",
         link: "https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
-          " Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
+          "This is the Shahenshah of dates, also known as black dates. Picked at their final stage of ripening, they boast a deep color, soft chewy bite, and rich sweetness that makes them irresistible. Our promise of purity ensures every bite is naturally sweet, rich in flavor, and true to the authentic taste of high-quality dates with all their natural goodness intact",
         product_img_1: DatesV10,
         product_img_2: DatesProduct,
         customer_says:
@@ -493,7 +506,7 @@ export const PRODUCT_DATA = [
         saysImage: newDates101,
         title: "",
         title_desc: "",
-        link: "https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
+        link: "Fard dates offer a balanced sweetness with a deep, caramel-like taste and are rich in fiber, potassium, magnesium, and antioxidants. Our promise of purity ensures every bite is naturally sweet, rich in flavor, and true to the authentic taste of high-quality dates with all their natural goodness intact.",
         product_desc:
           "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
         product_img_1: DatesV1,
@@ -519,7 +532,7 @@ export const PRODUCT_DATA = [
         title_desc: "",
         link: "https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
-          "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
+          "Select dates are known for their soft bite and naturally rich flavor. They are a wholesome treat packed with fiber, vitamins, and minerals ideal for daily snacking or as a natural sweetener in recipes. Our promise of purity ensures every bite is naturally sweet, rich in flavor, and true to the authentic taste of high-quality dates with all their natural goodness intact.",
         product_img_1: DatesV8,
         product_img_2: DatesProduct,
         customer_says:
@@ -543,7 +556,7 @@ export const PRODUCT_DATA = [
         title_desc: "",
         link: "https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
-          "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
+          "These dates are a timeless, nutritious fruit prized for their versatility and health benefits. Packed with fiber, antioxidants, and essential vitamins and minerals, they have been enjoyed for centuries as a natural and wholesome addition to a healthy diet. Our promise of purity ensures every bite is naturally sweet, rich in flavor, and true to the authentic taste of high-quality dates with all their natural goodness intact.",
         product_img_1: DatesV2,
         product_img_2: DatesProduct,
         customer_says:
@@ -568,7 +581,7 @@ export const PRODUCT_DATA = [
         title_desc: "",
         link: "https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
-          "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
+          "These premium dates are prized for their rich natural sweetness, soft chewy texture, and exceptional quality. Sourced from select date palms, they’re also packed with nutrients like fiber, vitamins, and minerals. Our promise of purity ensures every bite is naturally sweet, rich in flavor, and true to the authentic taste of high-quality dates with all their natural goodness intact.",
         product_img_1: DatesV7,
         product_img_2: DatesProduct,
         customer_says:
@@ -592,7 +605,7 @@ export const PRODUCT_DATA = [
         title_desc: "",
         link: "https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
-          "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
+          "Also known as Sukha Khajoor or Kharik, these premium dried dates are naturally sweet and nutrient-rich. Free from artificial additives, they make a wholesome, healthy treat for any time of the day. Every date delivers pure flavor, soft texture, and the natural goodness of high-quality dates. Our promise of purity ensures every bite is naturally sweet, rich in flavor, and true to the authentic taste of high-quality dates with all their natural goodness intact.",
         product_img_1: DatesV9,
         product_img_2: DatesProduct,
         customer_says:
@@ -616,7 +629,7 @@ export const PRODUCT_DATA = [
         title_desc: "",
         link: "https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
-          "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
+          "Kalmi dates, also called Safawi dates, are dark brown, slightly wrinkled, and oval-shaped. Packed with protein, vitamins, minerals, and iron, they support heart health, strengthen bones, boost the nervous system, and aid digestion. Our promise of purity ensures every bite is naturally sweet, rich in flavor, and true to the authentic taste of high-quality dates with all their natural goodness intact.",
         product_img_1: DatesV5,
         product_img_2: DatesProduct,
         customer_says:
@@ -640,7 +653,7 @@ export const PRODUCT_DATA = [
         title_desc: "",
         link: "https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
-          "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
+          "Desert Bliss dates are rich in fiber to support digestion and weight management. Naturally sweet and energy-boosting, they also contain antioxidants that promote heart health and may help reduce the risk of chronic diseases. Our promise of purity ensures every bite is naturally sweet, rich in flavor, and true to the authentic taste of high-quality dates with all their natural goodness intact.",
         product_img_1: DatesV4,
         product_img_2: DatesProduct,
         customer_says:
@@ -664,7 +677,7 @@ export const PRODUCT_DATA = [
         title_desc: "",
         link: "https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
-          "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
+          "Deseeded dates are naturally sweet, chewy fruits with their pits removed for effortless snacking, cooking, and baking. Their rich, caramel-like flavor makes them a convenient and delicious way to enjoy the goodness of dates anytime. Our promise of purity ensures every bite is naturally sweet, rich in flavor, and true to the authentic taste of high-quality dates with all their natural goodness intact.",
         product_img_1: DatesV3,
         product_img_2: DatesProduct,
         customer_says:
@@ -688,7 +701,7 @@ export const PRODUCT_DATA = [
         title_desc: "",
         link: "https://www.amazon.in/stores/page/7B382872-3B9C-4E50-A1F9-350C60467655?ingress=2&visitId=73135ed8-5e7b-427f-9312-67490fa4a319&ref_=ast_bln",
         product_desc:
-          "Purity is the essence of our dates. We carefully select only the finest dates, ensuring that each one is naturally sweet and rich in flavor. Our commitment to purity means that every bite delivers the authentic taste and texture of fresh, high-quality dates. By maintaining strict quality standards and using minimal processing, we preserve the natural goodness and nutritional benefits of our dates.",
+          "These dates are celebrated for their luscious flavor, tender texture, and natural sweetness. Rich in fiber, vitamins, and antioxidants, they offer a wholesome, nutritious, and irresistible snack. Our promise of purity ensures every bite is naturally sweet, rich in flavor, and true to the authentic taste of high-quality dates with all their natural goodness intact.",
         product_img_1: DatesV6,
         product_img_2: DatesProduct,
         customer_says:
@@ -762,7 +775,7 @@ export const PRODUCT_DATA = [
         id: 3,
         name: "Vermicelli",
         img: Vermicelli103,
-        back_img: NewBannerVermicalli,
+        back_img: VermicalliFinal,
         rect_color: "bg-[#D38030]",
         title_color: "text-[#D38030]",
         desc_color: "text-[#FCC42B]",
@@ -3649,6 +3662,17 @@ export const HEALTH_DATE = [
   },
 ];
 
+
+// export const SHAHANSAH_DATE = [
+//   {
+//     id: 1,
+//     title: "Premium Quality",
+//     name: "Benefits",
+//     desc: "Apis Shahenshah Dates are sourced from the finest date palms, ensuring top
+//     img :
+//   }
+// ]
+
 export const HEALTH_JAM = [
   {
     id: 1,
@@ -3731,37 +3755,37 @@ export const HEALTH_FLAKES = [
 export const HEALTH_VERNACALLI = [
   {
     id: 1,
-    title: "Quick and easy to cook",
+    title: "High Anti Oxidant",
     name: "Benefits",
     desc: "Vermicelli, a type of thin rice or wheat noodle, is typically low in calories, making it a suitable option for weight management. It provides a filling meal without adding excessive caloric intake.",
-    img: LowClories,
+    img: DatesNewIcons2,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
   },
   {
     id: 2,
-    title: "Low in fat",
+    title: "Anti Inflamatry",
     name: "Benefits",
     desc: "Vermicelli made from whole grains can be a good source of dietary fiber. Fiber aids digestion by promoting regular bowel movements and can help prevent constipation.",
-    img: Digestive,
+    img: DatesNewIcons1,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
   },
   {
     id: 3,
-    title: "High in carbohydrates for energy",
+    title: "High energy & Low Fat",
     name: "Benefits",
     desc: "Vermicelli provides carbohydrates, which are a primary source of energy for the body. Consuming it can help fuel physical activities and maintain energy levels throughout the day.",
-    img: EnergyBoost,
+    img: DatesNewIcons3,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
   },
   {
     id: 4,
-    title: "Versatile ingredients for various recipes",
+    title: "High Fiber",
     name: "Benefits",
     desc: "Vermicelli is a versatile ingredient that can be incorporated into various dishes, from soups to stir-fries, allowing for diverse and balanced meals. Its adaptability makes it easy to include in a healthy diet.",
-    img: Versatile,
+    img: DatesNewIcons4,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
   },

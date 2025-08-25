@@ -60,7 +60,7 @@ const MainFooter = () => {
 
       {/* Quick Links */}
       <div className="my-4 md:my-10 flex flex-col items-center md:items-start text-center md:text-left border-s border-[#000000] px-4 md:px-10 max-[800px]:border-s-0">
-        <div className="flex flex-wrap justify-center md:justify-start gap-x-6 md:gap-x-12 gap-y-2 md:gap-y-4 sm:gap-y-16">
+        {/* <div className="flex flex-wrap justify-center md:justify-start gap-x-6 md:gap-x-12 gap-y-2 md:gap-y-4 sm:gap-y-16">
           {PATH_DATA.map((path) => {
             const tabUrlWithLocale = `/${locale}${path.url}`;
             return (
@@ -73,7 +73,7 @@ const MainFooter = () => {
               </Link>
             );
           })}
-        </div>
+        </div> */}
 
         {/* Contact Info Blocks */}
         <div className="mt-6 flex flex-col gap-6 text-[#4B4B4B] text-sm md:text-base w-full">
