@@ -240,6 +240,20 @@ import HimalayaHoneyFinal from "@/assets/images/OurBrands/himalaya-honey-final.p
 import InfusedHoneyFinal from "@/assets/images/OurBrands/infused-honey-final.png";
 
 
+import VermicalliIcon1 from "@/assets/images/OurBrands/Low-Cholestrol-Vermicelli.png"
+import VermicalliIcon2 from "@/assets/images/OurBrands/Low-Iodine-Vermicelli.png"
+import VermicalliIcon3 from "@/assets/images/OurBrands/Source-of-Protein-Vermicelli.png"
+import VermicalliIcon4 from "@/assets/images/OurBrands/Source-of-Dietry-Fibre-Vermicelli.png"
+
+import vermicalliFinalFixed from "@/assets/images/OurBrands/vermicalliFinalFixed.png"
+
+import SoyaChunksFinalIcon1 from "@/assets/images/OurBrands/protein-fixed-001.png"
+import SoyaChunksFinalIcon2 from "@/assets/images/OurBrands/Zero-Fat-Soya-Chunks-002.png"
+import SoyaChunksFinalIcon3 from "@/assets/images/OurBrands/rich-icon-fixed-003.png"
+import SoyaChunksFinalIcon4 from "@/assets/images/OurBrands/easy-digest-004.png"
+
+
+
 
 
 
@@ -399,7 +413,7 @@ export const PRODUCT_DATA = [
         title_desc:
           "Discover The Purest Organic Honey From The Enchanting Valleys Of Kashmir",
         product_desc:
-          "Apis Honey with Hot Chilli Spice up your palate with this bold blend of pure honey infused with fiery red chillies. Ideal for drizzling over grilled veggies, marinades, or even pizza for an adventurous edge.Best For: Glazes, BBQs, fusion dishes",
+          "Apis Infused Honey blends the natural sweetness of pure honey with the richness of carefully chosen flavors. Whether drizzled over desserts, stirred into tea, or added to savory dishes, it brings a delightful burst of taste and goodness to every bite. Our promise of purity ensures every drop is pure, flavorful, and made to bring you the true taste of high-quality honey.",
         product_img_1: NutrashipProducts,
         product_img_2: HoneyImage11,
         product_img3: TrustSlide1,
@@ -736,7 +750,7 @@ export const PRODUCT_DATA = [
         title_desc:
           "Discover The Purest fruits flavours handpicked for apis jam creation.",
         product_desc:
-          "Just as our honey exemplifies nature's finest, our jams uphold the same unwavering commitment to quality. We carefully select the freshest fruits, ensuring that each jar delivers a burst of genuine flavor without artificial additives or preservatives. Our meticulous process preserves the natural taste and nutritional benefits of the fruit, offering a delightful and wholesome experience with every spoonful. When you choose Apis jams, you’re savoring purity in its most authentic form, making each bite a true celebration of natural goodness.",
+          "Apis Mixed Fruit Jam is made from a blend of the juiciest fruits, giving you a perfect mix of sweet and tangy in every spoonful. Spread it on bread, roll it in parathas, or add it to your snacks, making everything more delicious. Packed with fruity goodness, a treat loved by both kids and adults alike.",
         product_img_1: Jam102,
         product_img_2: NewJamBanner,
 
@@ -775,7 +789,7 @@ export const PRODUCT_DATA = [
         id: 3,
         name: "Vermicelli",
         img: Vermicelli103,
-        back_img: VermicalliFinal,
+        back_img: vermicalliFinalFixed,
         rect_color: "bg-[#D38030]",
         title_color: "text-[#D38030]",
         desc_color: "text-[#FCC42B]",
@@ -785,7 +799,7 @@ export const PRODUCT_DATA = [
         title_desc:
           "Delight in the perfect texture and taste with our premium vermicelli",
         product_desc:
-          "Apis Vermicelli is a versatile and delicious pasta, ideal for a variety of dishes from savory to sweet.",
+          "Thin, golden strands of tradition, vermicelli is one of the most loved ingredients across cuisines. From festive kheer and halwa to savory upma and stir-fries, it brings comfort, taste, and versatility to every meal. We ensure to deliver the perfect texture and flavor. Quick to cook and delicious in every form, it’s the ideal choice for both everyday meals and celebratory dishes.",
         product_img_1: vermicali102,
         product_img_2: VermiProduct,
         customer_says:
@@ -834,7 +848,7 @@ export const PRODUCT_DATA = [
         link: "https://uniqrr.com/products/apis-india-soya-chunks-50-gm",
         saysImage: Soya101,
         product_desc:
-          "Apis Soya Chunks are high-protein meat substitutes made from defatted soy flour, perfect for vegetarian and vegan diets.",
+          "Apis Soya Chunks are a rich source of plant-based protein that make everyday meals healthier and more satisfying. Soft in texture and easy to cook, they absorb flavors beautifully, turning into hearty curries, stir-fries, and snacks. Naturally low in fat and high in nutrition, they are the perfect choice for balanced eating; wholesome, versatile, and delicious in every bite",
         product_img_1: SoyaChunks102,
         product_img_2: SoyaChunks001,
         customer_says:
@@ -883,7 +897,7 @@ export const PRODUCT_DATA = [
         title_desc:
           "Elevate your dishes with the exquisite richness and vibrant color of our premium saffron",
         product_desc:
-          "Apis offers a range of essential cooking pastes, including Garlic Paste, Ginger Paste, and Ginger Garlic Paste, each crafted to bring convenience and authentic flavor to your kitchen. These pastes are made from the freshest ingredients, ensuring that your dishes are infused with the rich and aromatic taste that is the hallmark of traditional Indian and Asian cuisines.",
+          "Apis Ginger Garlic Paste is made from the freshest ingredients to bring authentic flavor and convenience to your kitchen. Its rich and aromatic taste enhances every dish, from curries and stir-fries to marinades, making your cooking effortless and delicious. Perfect for daily use, it adds the signature warmth and depth of traditional Indian and Asian cuisines to every meal.",
         product_img_1: ggpProduct,
         product_img_2: SafronProductMenu,
         customer_says:
@@ -3758,7 +3772,7 @@ export const HEALTH_VERNACALLI = [
     title: "High Anti Oxidant",
     name: "Benefits",
     desc: "Vermicelli, a type of thin rice or wheat noodle, is typically low in calories, making it a suitable option for weight management. It provides a filling meal without adding excessive caloric intake.",
-    img: DatesNewIcons2,
+    img: VermicalliIcon1,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
   },
@@ -3767,7 +3781,7 @@ export const HEALTH_VERNACALLI = [
     title: "Anti Inflamatry",
     name: "Benefits",
     desc: "Vermicelli made from whole grains can be a good source of dietary fiber. Fiber aids digestion by promoting regular bowel movements and can help prevent constipation.",
-    img: DatesNewIcons1,
+    img: VermicalliIcon2,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
   },
@@ -3776,7 +3790,7 @@ export const HEALTH_VERNACALLI = [
     title: "High energy & Low Fat",
     name: "Benefits",
     desc: "Vermicelli provides carbohydrates, which are a primary source of energy for the body. Consuming it can help fuel physical activities and maintain energy levels throughout the day.",
-    img: DatesNewIcons3,
+    img: VermicalliIcon3,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
   },
@@ -3785,7 +3799,7 @@ export const HEALTH_VERNACALLI = [
     title: "High Fiber",
     name: "Benefits",
     desc: "Vermicelli is a versatile ingredient that can be incorporated into various dishes, from soups to stir-fries, allowing for diverse and balanced meals. Its adaptability makes it easy to include in a healthy diet.",
-    img: DatesNewIcons4,
+    img: VermicalliIcon4,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
   },
@@ -3920,7 +3934,7 @@ export const SOYA_CHUNK = [
     name: "Benefits",
 
     desc: "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
-    img: ProteinSource,
+    img: SoyaChunksFinalIcon1,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
   },
@@ -3930,7 +3944,7 @@ export const SOYA_CHUNK = [
     name: "Benefits",
 
     desc: "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
-    img: Psychology,
+    img: SoyaChunksFinalIcon2,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
   },
@@ -3940,7 +3954,7 @@ export const SOYA_CHUNK = [
     name: "Benefits",
 
     desc: "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
-    img: BoneStrength,
+    img: SoyaChunksFinalIcon3,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
   },
@@ -3950,7 +3964,7 @@ export const SOYA_CHUNK = [
     name: "Benefits",
 
     desc: "Soya is an excellent plant-based protein source, providing all essential amino acids required for muscle growth, repair, and overall bodily functions. It’s a valuable alternative to animal proteins, especially for vegetarians and vegans.",
-    img: HarmoneBalance,
+    img: SoyaChunksFinalIcon4,
     shadowClass: "shadow-custom-yellow",
     color: "bg-[#FFC660]",
   },

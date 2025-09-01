@@ -2713,6 +2713,10 @@ export default function Investors() {
                   <tbody>
                     {[
                       {
+                        title: "Annual Report 2024-2025",
+                        url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual+Report+2024-25.pdf",
+                      },
+                      {
                         title: "Annual Report 2023-2024",
                         url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual+Report-2023-24_FINAL+(1).pdf",
                       },

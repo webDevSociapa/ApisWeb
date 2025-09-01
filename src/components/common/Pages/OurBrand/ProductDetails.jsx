@@ -28,6 +28,8 @@ import HimalayaHoney1kg from '@/assets/images/OurBrands/1kgHimalayaHoney.png'
  import ChilliInfusedHoney from '@/assets/images/OurBrands/ChilliinfusedHoney_Front.png';
  import GingerInfusedHoney from '@/assets/images/OurBrands/GingerInfusedHoney.png';
  import LemonInfusedHoney from '@/assets/images/OurBrands/LemonInfusedHoney.png';
+
+ import HimalayaHoneyCheckReport from "@/assets/images/OurBrands/himalayaHoneyCheck-fix.png"
  
 
 
@@ -471,7 +473,7 @@ const ProductDetails = () => {
     (selectedBrand?.id === 1 && selectedProduct?.id === 2) ? (
         <div className="w-[100%] relative">
           <Image
-            src={HimalayaHoney}
+            src={HimalayaHoneyCheckReport}
             height={340}
             className="mt-8 w-full"
             alt="Check Report Banner"
