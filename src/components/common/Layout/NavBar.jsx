@@ -17,6 +17,7 @@ import MediaMini from "@/assets/images/Media/MediaMini.png"
 import sustainabilityMini from "@/assets/images/sustainabilityMini.png"
 import ResourcesMini from "@/assets/images/resourcesMini.png"
 import ContactusMini from "@/assets/images/ContactUs/new-contact-small.png"
+import AboutusMini11 from "@/assets/images/AboutUs/about-us-dropdown-01.jpg"
 
 const NavBar = ({ className, linkClass }) => {
   const routerPath = usePathname();
@@ -187,7 +188,7 @@ const NavBar = ({ className, linkClass }) => {
                 <div className="w-full max-w-[800px] bg-white p-16" onProductClick={handleOurBrandContentClick}>
                   <div className="flex flex-row gap-6 justify-between">
                     <div className="flex flex-col">
-                      {/* <Image src={AboutusMini} width={400} height={400} /> */}
+                      <Image src={AboutusMini11} width={400} height={400} />
                     </div>
                     {/* Left Section: Image and Description */}
                     <div className="flex flex-col w-1/3 gap-4">

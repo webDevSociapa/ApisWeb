@@ -1298,7 +1298,7 @@ export default function Investors() {
                       New Delhi 110 008 India<br /><br />
                       Telephone No: +91-11-43206666<br />
                       Fax No: +91-11-43559111<br />
-                      Email: <a href="mailto:vikas.cs@apisindia.com" className="text-blue-600 underline">vikas.cs@apisindia.com</a>
+                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
                     </p>
                   </div>
 
@@ -1306,9 +1306,9 @@ export default function Investors() {
                   <div className="border-2 border-green-400 bg-green-50 rounded-lg p-5">
                     <h3 className="text-lg font-semibold">Company Secretary/Compliance Officer</h3>
                     <p>
-                      MR. Vikas Aggarwal<br />
+                      MR. Amit Anand<br />
                       Company Secretary<br />
-                      Email: <a href="mailto:vikas.cs@apisindia.com" className="text-blue-600 underline">vikas.cs@apisindia.com</a>
+                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
                     </p>
                   </div>
 
@@ -1316,11 +1316,11 @@ export default function Investors() {
                   <div className="border-2 border-blue-400 bg-blue-50 rounded-lg p-5">
                     <h3 className="text-lg font-semibold">Investor Grievances</h3>
                     <p>
-                      MR. Vikas Aggarwal<br />
+                      MR. Amit Anand<br />
                       18/32, East Patel Nagar, New Delhi<br />
                       Telephone No: +91-11-43206666<br />
                       Fax No: +91-11-43559111<br />
-                      Email: <a href="mailto:vikas.cs@apisindia.com" className="text-blue-600 underline">vikas.cs@apisindia.com</a>
+                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
                     </p>
                   </div>
 
@@ -1357,7 +1357,7 @@ export default function Investors() {
                       New Delhi 110 008 India<br /><br />
                       Telephone No: +91-11-43206666<br />
                       Fax No: +91-11-43559111<br />
-                      Email: <a href="mailto:vikas.cs@apisindia.com" className="text-blue-600 underline">vikas.cs@apisindia.com</a>
+                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
                     </p>
                   </div>
 
@@ -1365,9 +1365,9 @@ export default function Investors() {
                   <div className="border-2 border-green-400 bg-green-50 rounded-lg p-5">
                     <h3 className="text-lg font-semibold">Company Secretary/Compliance Officer</h3>
                     <p>
-                      MR. Vikas Aggarwal<br />
+                      MR. Amit Anand<br />
                       Company Secretary<br />
-                      Email: <a href="mailto:vikas.cs@apisindia.com" className="text-blue-600 underline">vikas.cs@apisindia.com</a>
+                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
                     </p>
                   </div>
 
@@ -1375,11 +1375,11 @@ export default function Investors() {
                   <div className="border-2 border-blue-400 bg-blue-50 rounded-lg p-5">
                     <h3 className="text-lg font-semibold">Investor Grievances</h3>
                     <p>
-                      MR. Vikas Aggarwal<br />
+                      MR. Amit Anand<br />
                       18/32, East Patel Nagar, New Delhi<br />
                       Telephone No: +91-11-43206666<br />
                       Fax No: +91-11-43559111<br />
-                      Email: <a href="mailto:vikas.cs@apisindia.com" className="text-blue-600 underline">vikas.cs@apisindia.com</a>
+                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
                     </p>
                   </div>
 
@@ -1422,6 +1422,16 @@ export default function Investors() {
                         </tr>
                       </thead>
                       <tbody>
+
+                         <tr>
+                          <td className="border p-2">2025-2026</td>
+                          <td className="border p-2">
+                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/Notice+of+Board+Meeting_Stock+Exchange.pdf" target="_blank" rel="noopener noreferrer">
+
+                              <Image src={pdficon1} alt="PDF" width="30" />
+                            </a>
+                          </td>
+                        </tr>
                         <tr>
                           <td className="border p-2">2024-2025</td>
                           <td className="border p-2">
@@ -1441,7 +1451,7 @@ export default function Investors() {
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2025/Outcome+of+Board+Meeting+(4).pdf" target="_blank" rel="noopener noreferrer">
+                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/Notice+of+Board+Meeting_Stock+Exchange.pdf" target="_blank" rel="noopener noreferrer">
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
@@ -1619,6 +1629,18 @@ export default function Investors() {
                         </tr>
                       </thead>
                       <tbody>
+
+
+                          <tr>
+                          <td className="border p-2">2025-2026</td>
+                          <td className="border p-2">
+                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/Outcome+of+the+Board+Meeting.pdf" target="_blank" rel="noopener noreferrer">
+
+                              <Image src={pdficon1} alt="PDF" width="30" />
+                            </a>
+                          </td>
+                          
+                        </tr>
                         <tr>
                           <td className="border p-2">2024-2025</td>
                           <td className="border p-2">
@@ -1891,6 +1913,18 @@ export default function Investors() {
                     </tr>
                   </thead>
                   <tbody>
+
+ <tr>
+                      <td className="border px-4 py-2">2025-2026</td>
+                      <td className="border px-4 py-2">
+                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/SHP-JUNE-2025.html" target="_blank" rel="noopener noreferrer">
+                          <Image src={pdficon1} alt="PDF" width="30" />
+                        </a>
+                      </td>
+                      
+                    </tr>
+
+
                     <tr>
                       <td className="border px-4 py-2">2024-2025</td>
                       <td className="border px-4 py-2">
@@ -2166,6 +2200,17 @@ export default function Investors() {
                     </tr>
                   </thead>
                   <tbody>
+
+                  
+ <tr>
+                      <td className="border px-4 py-2">2025-2026</td>
+                      <td className="border px-4 py-2">
+                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/Intimation+under+Reg.30-Newspeper+Advertisement.pdf" target="_blank" rel="noopener noreferrer">
+                          <Image src={pdficon1} alt="PDF" width="30" />
+                        </a>
+                      </td>
+                      
+                    </tr>
                     <tr>
                       <td className="border px-4 py-2">2024-2025</td>
                       <td className="border px-4 py-2">
@@ -2360,6 +2405,19 @@ export default function Investors() {
                     </tr>
                   </thead>
                   <tbody>
+
+                      <tr>
+                      <td className="border px-4 py-2">2025</td>
+                      <td className="border px-4 py-2">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/Disclosure+of+Credit+Rating.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Image src={pdficon1} alt="PDF" width="30" />
+                        </a>
+                      </td>
+                    </tr>
                     <tr>
                       <td className="border px-4 py-2">2024</td>
                       <td className="border px-4 py-2">
@@ -2531,6 +2589,11 @@ export default function Investors() {
                   </thead>
                   <tbody>
                     {[
+
+                       {
+                        year: "2025",
+                        url: "https://apisindia.s3.ap-south-1.amazonaws.com/APIS+India+Compliance+Report+2025.pdf",
+                      },
                       {
                         year: "2024",
                         url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Annual+Secretarial+Compliance+Report/Secretarial+Compliance+Report/2024/Annual+Secretarail+Compliance+Report.pdf",
@@ -2613,7 +2676,7 @@ export default function Investors() {
                       New Delhi 110 008 India<br /><br />
                       Telephone No: +91-11-43206666<br />
                       Fax No: +91-11-43559111<br />
-                      Email: <a href="mailto:vikas.cs@apisindia.com" className="text-blue-600 underline">vikas.cs@apisindia.com</a>
+                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
                     </p>
                   </div>
 
@@ -2621,9 +2684,9 @@ export default function Investors() {
                   <div className="border-2 border-green-400 bg-green-50 rounded-lg p-5">
                     <h3 className="text-lg font-semibold">Company Secretary/Compliance Officer</h3>
                     <p>
-                      MR. Vikas Aggarwal<br />
+                      MR. Amit Anand<br />
                       Company Secretary<br />
-                      Email: <a href="mailto:vikas.cs@apisindia.com" className="text-blue-600 underline">vikas.cs@apisindia.com</a>
+                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
                     </p>
                   </div>
 
@@ -2631,11 +2694,11 @@ export default function Investors() {
                   <div className="border-2 border-blue-400 bg-blue-50 rounded-lg p-5">
                     <h3 className="text-lg font-semibold">Investor Grievances</h3>
                     <p>
-                      MR. Vikas Aggarwal<br />
+                      MR. Amit Anand<br />
                       18/32, East Patel Nagar, New Delhi<br />
                       Telephone No: +91-11-43206666<br />
                       Fax No: +91-11-43559111<br />
-                      Email: <a href="mailto:vikas.cs@apisindia.com" className="text-blue-600 underline">vikas.cs@apisindia.com</a>
+                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
                     </p>
                   </div>
 
@@ -2714,7 +2777,7 @@ export default function Investors() {
                     {[
                       {
                         title: "Annual Report 2024-2025",
-                        url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual+Report+2024-25.pdf",
+                        url: "https://apisindia.s3.ap-south-1.amazonaws.com/Annual+Report+2024-25+(1).pdf",
                       },
                       {
                         title: "Annual Report 2023-2024",
@@ -2779,6 +2842,11 @@ export default function Investors() {
                   <table className="min-w-full border-collapse text-sm text-left">
                     <tbody>
                       {[
+
+                         {
+                          title: "MGT-7 2024-2025",
+                          url: "https://apisindia.s3.ap-south-1.amazonaws.com/MGT-7-AR-2024-25.pdf",
+                        },
                         {
                           title: "MGT-7 2023-2024",
                           url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReturn/MGT-7+(1).pdf",
