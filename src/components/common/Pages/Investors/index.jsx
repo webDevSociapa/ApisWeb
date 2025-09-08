@@ -1298,7 +1298,7 @@ export default function Investors() {
                       New Delhi 110 008 India<br /><br />
                       Telephone No: +91-11-43206666<br />
                       Fax No: +91-11-43559111<br />
-                      Email: <a href="mailto:vikas.cs@apisindia.com" className="text-blue-600 underline">vikas.cs@apisindia.com</a>
+                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
                     </p>
                   </div>
 
@@ -1306,9 +1306,9 @@ export default function Investors() {
                   <div className="border-2 border-green-400 bg-green-50 rounded-lg p-5">
                     <h3 className="text-lg font-semibold">Company Secretary/Compliance Officer</h3>
                     <p>
-                      MR. Vikas Aggarwal<br />
+                      MR. Amit Anand<br />
                       Company Secretary<br />
-                      Email: <a href="mailto:vikas.cs@apisindia.com" className="text-blue-600 underline">vikas.cs@apisindia.com</a>
+                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
                     </p>
                   </div>
 
@@ -1316,11 +1316,11 @@ export default function Investors() {
                   <div className="border-2 border-blue-400 bg-blue-50 rounded-lg p-5">
                     <h3 className="text-lg font-semibold">Investor Grievances</h3>
                     <p>
-                      MR. Vikas Aggarwal<br />
+                      MR. Amit Anand<br />
                       18/32, East Patel Nagar, New Delhi<br />
                       Telephone No: +91-11-43206666<br />
                       Fax No: +91-11-43559111<br />
-                      Email: <a href="mailto:vikas.cs@apisindia.com" className="text-blue-600 underline">vikas.cs@apisindia.com</a>
+                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
                     </p>
                   </div>
 
@@ -1357,7 +1357,7 @@ export default function Investors() {
                       New Delhi 110 008 India<br /><br />
                       Telephone No: +91-11-43206666<br />
                       Fax No: +91-11-43559111<br />
-                      Email: <a href="mailto:vikas.cs@apisindia.com" className="text-blue-600 underline">vikas.cs@apisindia.com</a>
+                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
                     </p>
                   </div>
 
@@ -1365,9 +1365,9 @@ export default function Investors() {
                   <div className="border-2 border-green-400 bg-green-50 rounded-lg p-5">
                     <h3 className="text-lg font-semibold">Company Secretary/Compliance Officer</h3>
                     <p>
-                      MR. Vikas Aggarwal<br />
+                      MR. Amit Anand<br />
                       Company Secretary<br />
-                      Email: <a href="mailto:vikas.cs@apisindia.com" className="text-blue-600 underline">vikas.cs@apisindia.com</a>
+                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
                     </p>
                   </div>
 
@@ -1375,11 +1375,11 @@ export default function Investors() {
                   <div className="border-2 border-blue-400 bg-blue-50 rounded-lg p-5">
                     <h3 className="text-lg font-semibold">Investor Grievances</h3>
                     <p>
-                      MR. Vikas Aggarwal<br />
+                      MR. Amit Anand<br />
                       18/32, East Patel Nagar, New Delhi<br />
                       Telephone No: +91-11-43206666<br />
                       Fax No: +91-11-43559111<br />
-                      Email: <a href="mailto:vikas.cs@apisindia.com" className="text-blue-600 underline">vikas.cs@apisindia.com</a>
+                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
                     </p>
                   </div>
 
@@ -2676,7 +2676,7 @@ export default function Investors() {
                       New Delhi 110 008 India<br /><br />
                       Telephone No: +91-11-43206666<br />
                       Fax No: +91-11-43559111<br />
-                      Email: <a href="mailto:vikas.cs@apisindia.com" className="text-blue-600 underline">vikas.cs@apisindia.com</a>
+                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
                     </p>
                   </div>
 
@@ -2684,9 +2684,9 @@ export default function Investors() {
                   <div className="border-2 border-green-400 bg-green-50 rounded-lg p-5">
                     <h3 className="text-lg font-semibold">Company Secretary/Compliance Officer</h3>
                     <p>
-                      MR. Vikas Aggarwal<br />
+                      MR. Amit Anand<br />
                       Company Secretary<br />
-                      Email: <a href="mailto:vikas.cs@apisindia.com" className="text-blue-600 underline">vikas.cs@apisindia.com</a>
+                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
                     </p>
                   </div>
 
@@ -2694,11 +2694,11 @@ export default function Investors() {
                   <div className="border-2 border-blue-400 bg-blue-50 rounded-lg p-5">
                     <h3 className="text-lg font-semibold">Investor Grievances</h3>
                     <p>
-                      MR. Vikas Aggarwal<br />
+                      MR. Amit Anand<br />
                       18/32, East Patel Nagar, New Delhi<br />
                       Telephone No: +91-11-43206666<br />
                       Fax No: +91-11-43559111<br />
-                      Email: <a href="mailto:vikas.cs@apisindia.com" className="text-blue-600 underline">vikas.cs@apisindia.com</a>
+                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
                     </p>
                   </div>
 
