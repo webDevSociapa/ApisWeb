@@ -24,9 +24,21 @@ export default function OurBrand({ onProductClick }) {
   const [hoveredProduct, setHoveredProduct] = useState(null);
 
   const handleProductClick = (brandId, productId) => {
-    router.push(`/our-brand/product-details?brand_id=${brandId}&product_id=${productId}`);
-    if (onProductClick) onProductClick();
-  };
+  const brand = PRODUCT_DATA.find((b) => b.id == brandId);
+  const product = brand?.products.find((p) => p.id == productId);
+  if (!product) return;
+
+  const productSlug = product.slug ?? slugify(product.name);
+  console.log("productSlug", productSlug);
+
+  // ✅ Correct route
+  router.push(`/en/our-brand/product-details/${productSlug}`);
+
+  if (onProductClick) onProductClick();
+};
+
+
+
 
   useEffect(() => {
     window.scrollTo(0, 0);

@@ -30,3 +30,15 @@ export const titleCase = (str) => {
     ?.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     ?.join(' ');
 };
+
+
+// utils/slugify.js
+export default function slugify(text = "") {
+  return text
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "")   // remove special chars
+    .replace(/\s+/g, "-");      // spaces -> hyphens
+}
+
