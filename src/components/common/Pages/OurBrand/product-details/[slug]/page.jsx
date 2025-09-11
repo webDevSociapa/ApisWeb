@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
-import ImageBanner from "../../Layout/Banner";
-import EmblaCarousel from "../../Carousel/Carousel";
+import ImageBanner from "@/components/common/Layout/Banner";
+import EmblaCarousel from "@/components/common/Carousel/Carousel";
 import Ring1 from "@/assets/images/OurBrands/Ring-1.png";
 import Ring2 from "@/assets/images/OurBrands/Ring-2.png";
 import Ring3 from "@/assets/images/OurBrands/Ring-3.png";
@@ -11,7 +11,7 @@ import Image from "next/image";
 import CheckReportBanner from '@/assets/images/OurBrands/ProductBanner.png'
 import HimalayaHoney from "@/assets/images/OurBrands/himalayaHoney.png"
 import { useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useParams, useSearchParams } from "next/navigation";
 import { GGP, NEWS_DATA, NUTRASHIP, PRODUCT_DATA } from "@/lib/constants";
 import Link from "next/link";
 import FlowerRun from '@/assets/images/home-banner-section/flowerRun.gif'
@@ -33,14 +33,18 @@ import axios from "axios";
 const OPTIONS = { loop: true };
 
 const ProductDetails = () => {
-  const searchParams = useSearchParams();
   const [slides, setSlides] = useState([]);
   const [selectedContent, setSelectedContent] = useState(null); // Hold the selected health benefit content
-  const selectedBrand = PRODUCT_DATA.find(
-    (itm) => itm.id == searchParams.get("brand_id")
+   const { slug } = useParams();
+
+  // brand find jisme product ka slug match kare
+  const selectedBrand = PRODUCT_DATA.find((brand) =>
+    brand.products.some((p) => p.slug === slug)
   );
-  const selectedProduct = selectedBrand.products.find(
-    (itm) => itm.id == searchParams.get("product_id")
+
+  // product find jo slug match kare
+  const selectedProduct = selectedBrand?.products.find(
+    (p) => p.slug === slug
   );
   // const [mediaSection, setMediaSection] = useState([])
   const [hoveredId, setHoveredId] = useState(false); // State to track the hovered item
