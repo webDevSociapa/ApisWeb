@@ -255,6 +255,26 @@ export default function Media() {
           </EmblaCarousel>
         </div>
       </div>
+      {/* Exhibition Highlights Section */}
+      <div className="w-full flex flex-col items-center justify-center py-6 md:py-14">
+        <p className="font-bold text-[20px] md:text-[40px] text-center text-[#9F7B49] font-literata">
+          Exhibition Highlights
+        </p>
+        <p className="text-sm w-[95%] md:text-xl md:w-[70%] md:leading-8 mt-3 md:mt-6 text-center font-jost">
+          Showcasing Apis Group's presence at global trade
+        </p>
+
+        <div className="mt-6 w-[95%] md:w-[70%] flex items-center justify-center">
+          <video
+            src="https://main.d48ln31wxsfnc.amplifyapp.com/videos/anuga.mp4"
+            controls
+            playsInline
+            // shorter on phones, larger on md+ screens
+            className="w-full h-auto max-w-[900px] max-h-[220px] md:max-h-[480px] rounded-lg shadow-lg"
+            style={{ objectFit: "contain" }}
+          />
+        </div>
+      </div>
       <div className="w-full flex py-2 md:py-6 items-center justify-center flex-col">
         <div className="relative flex items-center justify-center flex-col !w-[96%]">
           <div className="flex flex-col gap-2 md:gap-4">
