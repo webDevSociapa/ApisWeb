@@ -18,7 +18,7 @@ export default function OurBrand({ onProductClick }) {
   const [selectedBrand, setSelectedBrand] = useState(BRAND_DATA[0].id);
   const [openDropdown, setOpenDropdown] = useState(null); // NEW: track open dropdown
 
-  const TAB_DATA = ["Apis", "Misk"];
+  const TAB_DATA = ["Apis", "Misk", "Nutrasip"];
 
   const [hoveredProduct, setHoveredProduct] = useState(null);
 
@@ -109,8 +109,10 @@ export default function OurBrand({ onProductClick }) {
             const isActive = tab === activeTab;
             const baseClasses = "text-lg font-bold px-4 py-2";
             const activeClasses = "text-[#9F7B49] border-b-4 border-[#9F7B49]";
-            const inactiveClasses =
-              "text-gray-400 opacity-50 cursor-not-allowed";
+            const inactiveClasses = "text-gray-400 opacity-50";
+
+            // make both Misk and Nutrasip appear clickable
+            const isClickable = tab === "Misk" || tab === "Nutrasip";
 
             const tabContent = (
               <div
@@ -119,20 +121,28 @@ export default function OurBrand({ onProductClick }) {
                   setActiveTab(tab);
                 }}
                 className={`${baseClasses} ${isActive ? activeClasses : inactiveClasses}`}
-                style={{ cursor: tab === "Misk" ? "pointer" : "default" }}
+                style={{ cursor: isClickable ? "pointer" : "default" }}
               >
                 {tab}
               </div>
             );
 
-            // Make Misk redirect on click
-            return tab === "Misk" ? (
-              <a href="/our-brand/misk" key={index}>
-                {tabContent}
-              </a>
-            ) : (
-              tabContent
-            );
+            // Make Misk and Nutrasip redirect on click
+            if (tab === "Misk") {
+              return (
+                <a href="/our-brand/misk" key={index}>
+                  {tabContent}
+                </a>
+              );
+            }
+            if (tab === "Nutrasip") {
+              return (
+                <a href="/our-brand/nutrasip" key={index}>
+                  {tabContent}
+                </a>
+              );
+            }
+            return tabContent;
           })}
         </div>
         {/* Product Section */}
