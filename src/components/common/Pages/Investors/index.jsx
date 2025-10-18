@@ -1,7 +1,7 @@
 "use client";
 
 import PropTypes from "prop-types";
-import pdficon1 from "@/assets/images/pdfIcon1.png"
+import pdficon1 from "@/assets/images/pdfIcon1.png";
 import Image from "next/image";
 
 export default function Investors() {
@@ -31,7 +31,10 @@ export default function Investors() {
               Corporate Governance Reports
               <span className="float-right">▼</span>
             </button>
-            <div id="corporatePolicies000111" className="hidden mt-2 overflow-x-auto">
+            <div
+              id="corporatePolicies000111"
+              className="hidden mt-2 overflow-x-auto"
+            >
               <table className="w-full text-center border-collapse shadow-md rounded-md overflow-hidden">
                 <thead className="bg-gray-100 text-gray-700">
                   <tr>
@@ -108,80 +111,96 @@ export default function Investors() {
               Certificate under Reg.7(3) and Reg. 40(10)
               <span className="float-right">▼</span>
             </button>
-           <div id="corporatePolicies4" className="hidden mt-2">
-  {/* Part A: Regulation 7(3) */}
-  <h6 className="font-semibold text-gray-800 mb-2">Part A: Certificate under Regulation 7(3)</h6>
-  <table className="w-full border-collapse text-center shadow rounded-md mb-6">
-    <thead className="bg-gray-100">
-      <tr>
-        <th className="border p-2">Year</th>
-        <th className="border p-2">Download</th>
-      </tr>
-    </thead>
-    <tbody>
-      {[
-        { year: 2018, file: 'Compliance+under+regulation+7(3).pdf' },
-        { year: 2019, file: 'Covering_Letter.pdf' },
-        { year: 2020, file: 'Covering+Letter.pdf' },
-        { year: 2021, file: 'Covering_Letter-7(3).pdf' },
-        { year: 2022, file: 'Covering_Letter.pdf' },
-        { year: 2023, file: 'Certificate+and+Covering+Letter.pdf' },
-        { year: 2024, file: 'Covering+Letter.pdf' }
-      ].map(({ year, file }) => (
-        <tr key={year} className="border">
-          <td className="border p-2">{year}</td>
-          <td className="border p-2">
-            <a
-              href={`https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/7(3)+%26+40(10)/7(3)+%26+40(10)/7(3)/${year}/${file}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image src={pdficon1} alt="PDF" width={20} className="inline mr-1" />
-              Download
-            </a>
-          </td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
+            <div id="corporatePolicies4" className="hidden mt-2">
+              {/* Part A: Regulation 7(3) */}
+              <h6 className="font-semibold text-gray-800 mb-2">
+                Part A: Certificate under Regulation 7(3)
+              </h6>
+              <table className="w-full border-collapse text-center shadow rounded-md mb-6">
+                <thead className="bg-gray-100">
+                  <tr>
+                    <th className="border p-2">Year</th>
+                    <th className="border p-2">Download</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    {
+                      year: 2018,
+                      file: "Compliance+under+regulation+7(3).pdf",
+                    },
+                    { year: 2019, file: "Covering_Letter.pdf" },
+                    { year: 2020, file: "Covering+Letter.pdf" },
+                    { year: 2021, file: "Covering_Letter-7(3).pdf" },
+                    { year: 2022, file: "Covering_Letter.pdf" },
+                    { year: 2023, file: "Certificate+and+Covering+Letter.pdf" },
+                    { year: 2024, file: "Covering+Letter.pdf" },
+                  ].map(({ year, file }) => (
+                    <tr key={year} className="border">
+                      <td className="border p-2">{year}</td>
+                      <td className="border p-2">
+                        <a
+                          href={`https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/7(3)+%26+40(10)/7(3)+%26+40(10)/7(3)/${year}/${file}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Image
+                            src={pdficon1}
+                            alt="PDF"
+                            width={20}
+                            className="inline mr-1"
+                          />
+                          Download
+                        </a>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
 
-  {/* Part B: Regulation 40(10) */}
-  <h6 className="font-semibold text-gray-800 mb-2">Part B: Certificate under Regulation 40(10)</h6>
-  <table className="w-full border-collapse text-center shadow rounded-md">
-    <thead className="bg-gray-100">
-      <tr>
-        <th className="border p-2">Year</th>
-        <th className="border p-2">Download</th>
-      </tr>
-    </thead>
-    <tbody>
-      {[
-        { year: 2018, file: 'Certificate+under+Reg+40(9).pdf' },
-        { year: 2019, file: 'Covering_Letter.pdf' },
-        { year: 2020, file: 'Covering_Letter_sw.pdf' },
-        { year: 2021, file: 'Covering_Letter.pdf' },
-        { year: 2022, file: 'Covering_Letter.pdf' },
-        { year: 2023, file: 'Covring+Letter-40(10).pdf' },
-        { year: 2024, file: 'Covering+Letter.pdf' }
-      ].map(({ year, file }) => (
-        <tr key={year} className="border">
-          <td className="border p-2">{year}</td>
-          <td className="border p-2">
-            <a
-              href={`https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/7(3)+%26+40(10)/7(3)+%26+40(10)/40(10)/${year}/${file}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image src={pdficon1} alt="PDF" width={20} className="inline mr-1" />
-              Download
-            </a>
-          </td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
-          </div>
-
+              {/* Part B: Regulation 40(10) */}
+              <h6 className="font-semibold text-gray-800 mb-2">
+                Part B: Certificate under Regulation 40(10)
+              </h6>
+              <table className="w-full border-collapse text-center shadow rounded-md">
+                <thead className="bg-gray-100">
+                  <tr>
+                    <th className="border p-2">Year</th>
+                    <th className="border p-2">Download</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { year: 2018, file: "Certificate+under+Reg+40(9).pdf" },
+                    { year: 2019, file: "Covering_Letter.pdf" },
+                    { year: 2020, file: "Covering_Letter_sw.pdf" },
+                    { year: 2021, file: "Covering_Letter.pdf" },
+                    { year: 2022, file: "Covering_Letter.pdf" },
+                    { year: 2023, file: "Covring+Letter-40(10).pdf" },
+                    { year: 2024, file: "Covering+Letter.pdf" },
+                  ].map(({ year, file }) => (
+                    <tr key={year} className="border">
+                      <td className="border p-2">{year}</td>
+                      <td className="border p-2">
+                        <a
+                          href={`https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/7(3)+%26+40(10)/7(3)+%26+40(10)/40(10)/${year}/${file}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Image
+                            src={pdficon1}
+                            alt="PDF"
+                            width={20}
+                            className="inline mr-1"
+                          />
+                          Download
+                        </a>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
@@ -210,7 +229,10 @@ export default function Investors() {
               <span className="float-right">▼</span>
             </button>
 
-            <div id="CorporateGovernance201" className="hidden mt-2 overflow-x-auto">
+            <div
+              id="CorporateGovernance201"
+              className="hidden mt-2 overflow-x-auto"
+            >
               <table className="w-full text-sm border-collapse border border-gray-300">
                 <tbody>
                   {[
@@ -227,7 +249,8 @@ export default function Investors() {
                       url: "https://apisindia.com/pdf/POLICY-FOR-DETERMINING-MATERIAL-SUBSIDIARY.pdf",
                     },
                     {
-                      title: "FAMILIARISATION PROGRAMME FOR INDEPENDENT DIRECTORS",
+                      title:
+                        "FAMILIARISATION PROGRAMME FOR INDEPENDENT DIRECTORS",
                       url: "https://apisindia.com/pdf/Familiarisation-Programme-for-Independent-Directors.pdf",
                     },
                     {
@@ -274,9 +297,12 @@ export default function Investors() {
                     <tr key={index} className="border-b border-blue-900">
                       <td className="px-3 py-2">{doc.title}</td>
                       <td className="px-3 py-2 text-center">
-                        <a href={doc.url} target="_blank" rel="noopener noreferrer">
+                        <a
+                          href={doc.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
-
                         </a>
                       </td>
                     </tr>
@@ -295,7 +321,10 @@ export default function Investors() {
               Corporate Governance Reports
               <span className="float-right">▼</span>
             </button>
-            <div id="NextcorporatePolicies2" className="hidden mt-2 overflow-x-auto">
+            <div
+              id="NextcorporatePolicies2"
+              className="hidden mt-2 overflow-x-auto"
+            >
               <table className="w-full border-collapse text-center text-sm">
                 <thead className="bg-gray-200">
                   <tr>
@@ -310,17 +339,29 @@ export default function Investors() {
                   <tr>
                     <td className="border p-2">2024</td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2024/Q1/CGR-JUNE-2024-REVISED.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2024/Q1/CGR-JUNE-2024-REVISED.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2024/Q2/CGR-SEP-2024.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2024/Q2/CGR-SEP-2024.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2024/Q3/CGR-DEC-2024.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2024/Q3/CGR-DEC-2024.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
@@ -330,22 +371,38 @@ export default function Investors() {
                   <tr>
                     <td className="border p-2">2023</td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2023/Q1/CGR-APIS-JUNE-2023.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2023/Q1/CGR-APIS-JUNE-2023.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2023/Q2/CGR-APIS-SEP-2023.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2023/Q2/CGR-APIS-SEP-2023.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2023/Q3/CGR-DEC-APIS-2023.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2023/Q3/CGR-DEC-APIS-2023.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2023/Q4/CGR-APIS-MAR-2024.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2023/Q4/CGR-APIS-MAR-2024.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
@@ -354,22 +411,38 @@ export default function Investors() {
                   <tr>
                     <td className="border p-2">2022</td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2022/Q1/CGR-APIS-JUNE-2022.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2022/Q1/CGR-APIS-JUNE-2022.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2022/Q2/CGR-APIS-SEP-2022.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2022/Q2/CGR-APIS-SEP-2022.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2022/Q3/CGR-31-12-22-APIS.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2022/Q3/CGR-31-12-22-APIS.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2022/Q4/CGR-MARCH-2023-APIS.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2022/Q4/CGR-MARCH-2023-APIS.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
@@ -377,22 +450,38 @@ export default function Investors() {
                   <tr>
                     <td className="border p-2">2021</td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2021/Q1/CGR-JUNE-APIS-2021.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2021/Q1/CGR-JUNE-APIS-2021.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2021/Q2/CGR-APIS-SEP-2021.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2021/Q2/CGR-APIS-SEP-2021.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2021/Q3/CGR+DEC+APIS+DEC+2021.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2021/Q3/CGR+DEC+APIS+DEC+2021.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2021/Q4/CGR-MARCH-2022-APIS.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2021/Q4/CGR-MARCH-2022-APIS.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
@@ -400,22 +489,38 @@ export default function Investors() {
                   <tr>
                     <td className="border p-2">2020</td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2020/Q1/CGR_APIS_JUNE_2020.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2020/Q1/CGR_APIS_JUNE_2020.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2020/Q2/CGR-SEP-2020.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2020/Q2/CGR-SEP-2020.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2020/Q3/CGR-APIS-DEC-2020.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2020/Q3/CGR-APIS-DEC-2020.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q4/CGR-APIS_MARCH_2020.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q4/CGR-APIS_MARCH_2020.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
@@ -423,17 +528,29 @@ export default function Investors() {
                   <tr>
                     <td className="border p-2">2019</td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q1/CGR_REPORT_JUNE_2019.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q1/CGR_REPORT_JUNE_2019.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q2/CGR_SEPTEMBER_2019.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q2/CGR_SEPTEMBER_2019.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q3/CGR-DEC-APIS-FINAL.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q3/CGR-DEC-APIS-FINAL.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
@@ -443,29 +560,44 @@ export default function Investors() {
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
-
                   </tr>
 
                   <tr>
                     <td className="border p-2">2018</td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q1/CGR.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q1/CGR.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q2/CGR_SEP_2018_Revised.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q2/CGR_SEP_2018_Revised.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q3/CGR-DECEMBER-2018.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q3/CGR-DECEMBER-2018.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
 
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q4/CGR-MARCH-2019.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q4/CGR-MARCH-2019.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
@@ -477,14 +609,13 @@ export default function Investors() {
             </div>
           </div>
 
-
           {/* CSR Annual Action Plan */}
           <div>
             <button
               className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow"
               onClick={() => toggleCollapse("NextcorporatePolicies3")}
             >
-              Related  party Trasaction
+              Related party Trasaction
               <span className="float-right">▼</span>
             </button>
             <div id="NextcorporatePolicies3" className="hidden mt-2">
@@ -501,7 +632,11 @@ export default function Investors() {
                   <tr>
                     <td className="border p-2">2024</td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Related+Party+Transaction/Related+Party+Transaction/2024/Q1/RPT-SEP-2024.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Related+Party+Transaction/Related+Party+Transaction/2024/Q1/RPT-SEP-2024.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
@@ -509,36 +644,50 @@ export default function Investors() {
                   <tr>
                     <td className="border p-2">2023</td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Related+Party+Transaction/Related+Party+Transaction/2023/Q1/Relatd+party+transcation-30.09.2023.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Related+Party+Transaction/Related+Party+Transaction/2023/Q1/Relatd+party+transcation-30.09.2023.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
 
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Related+Party+Transaction/Related+Party+Transaction/2023/Q2/Related+Party+Transactions-March-2024.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Related+Party+Transaction/Related+Party+Transaction/2023/Q2/Related+Party+Transactions-March-2024.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
-
                   </tr>
 
                   <tr>
                     <td className="border p-2">2022</td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Related+Party+Transaction/Related+Party+Transaction/2024/Q1/RPT-SEP-2024.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Related+Party+Transaction/Related+Party+Transaction/2024/Q1/RPT-SEP-2024.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
 
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Related+Party+Transaction/Related+Party+Transaction/2022/Q2/Related+Party+Transaction+Report-APIS-March+31%2C+2023.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Related+Party+Transaction/Related+Party+Transaction/2022/Q2/Related+Party+Transaction+Report-APIS-March+31%2C+2023.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                   </tr>
                   {/* Repeat similarly for 2022 to 2018 */}
                   {/* You can map over a JSON object if needed to simplify this code */}
-
                 </tbody>
               </table>
             </div>
@@ -554,7 +703,9 @@ export default function Investors() {
               <span className="float-right">▼</span>
             </button>
             <div id="NextcorporatePolicies4" className="hidden mt-2">
-              <h6 className="font-semibold text-gray-800 mb-2">Part A: Certificate under Regulation 7(3)</h6>
+              <h6 className="font-semibold text-gray-800 mb-2">
+                Part A: Certificate under Regulation 7(3)
+              </h6>
               <table className="w-full border-collapse text-center text-sm">
                 <thead className="bg-gray-200">
                   <tr>
@@ -569,22 +720,38 @@ export default function Investors() {
                   <tr>
                     <td className="border p-2">2024</td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2024/Q1/Reconciliation+of+Share+Capital+Audit.pdf" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2024/Q1/Reconciliation+of+Share+Capital+Audit.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2024/Q2/Covering+Letter.pdf" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2024/Q2/Covering+Letter.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2024/Q3/Covering+Letter.pdf" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2024/Q3/Covering+Letter.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2024/Q4/Covering+Letter.pdf" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2024/Q4/Covering+Letter.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
@@ -593,22 +760,38 @@ export default function Investors() {
                   <tr>
                     <td className="border p-2">2023</td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2023/Q1/Covering+Letter-76.pdf" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2023/Q1/Covering+Letter-76.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2023/Q2/Covering+Letter.pdf" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2023/Q2/Covering+Letter.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2023/Q3/Covering+Letter.pdf" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2023/Q3/Covering+Letter.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2023/Q4/Covering+Letter.pdf" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2023/Q4/Covering+Letter.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
@@ -617,47 +800,78 @@ export default function Investors() {
                   <tr>
                     <td className="border p-2">2022</td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2022/Q1/Covering+Letter.pdf" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2022/Q1/Covering+Letter.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2022/Q2/Covering+Letter.pdf" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2022/Q2/Covering+Letter.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2022/Q3/Covering+Letter.pdf" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2022/Q3/Covering+Letter.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2022/Q4/Covering+Letter-76.pdf" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/Reconcilation+of+Share+Capital+Audit/Reconcilation+of+Share+Capital+Audit/2022/Q4/Covering+Letter-76.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                   </tr>
 
-
                   <tr>
                     <td className="border p-2">2021</td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2021/Q1/CGR-JUNE-APIS-2021.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2021/Q1/CGR-JUNE-APIS-2021.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2021/Q2/CGR-APIS-SEP-2021.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2021/Q2/CGR-APIS-SEP-2021.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2021/Q3/CGR+DEC+APIS+DEC+2021.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2021/Q3/CGR+DEC+APIS+DEC+2021.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2021/Q4/CGR-MARCH-2022-APIS.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2021/Q4/CGR-MARCH-2022-APIS.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
@@ -666,22 +880,38 @@ export default function Investors() {
                   <tr>
                     <td className="border p-2">2020</td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2020/Q1/CGR_APIS_JUNE_2020.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2020/Q1/CGR_APIS_JUNE_2020.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2020/Q2/CGR-SEP-2020.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2020/Q2/CGR-SEP-2020.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2020/Q3/CGR-APIS-DEC-2020.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2020/Q3/CGR-APIS-DEC-2020.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q4/CGR-APIS_MARCH_2020.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q4/CGR-APIS_MARCH_2020.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
@@ -690,17 +920,29 @@ export default function Investors() {
                   <tr>
                     <td className="border p-2">2019</td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q1/CGR_REPORT_JUNE_2019.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q1/CGR_REPORT_JUNE_2019.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q2/CGR_SEPTEMBER_2019.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q2/CGR_SEPTEMBER_2019.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q3/CGR-DEC-APIS-FINAL.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q3/CGR-DEC-APIS-FINAL.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
@@ -710,39 +952,51 @@ export default function Investors() {
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
-
                   </tr>
 
                   <tr>
                     <td className="border p-2">2018</td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q1/CGR.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q1/CGR.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q2/CGR_SEP_2018_Revised.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q2/CGR_SEP_2018_Revised.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q3/CGR-DECEMBER-2018.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q3/CGR-DECEMBER-2018.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
 
                     <td className="border p-2">
-                      <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q4/CGR-MARCH-2019.html" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q4/CGR-MARCH-2019.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image src={pdficon1} alt="PDF" width="30" />
                       </a>
                     </td>
-
                   </tr>
-
 
                   {/* Repeat similarly for 2022 to 2018 */}
                   {/* You can map over a JSON object if needed to simplify this code */}
-
                 </tbody>
               </table>
             </div>
@@ -756,9 +1010,7 @@ export default function Investors() {
           className="w-full text-left font-semibold bg-gray-100 px-4 py-2 rounded-md shadow toggle-btn flex justify-between items-center border border-[#835415]"
           onClick={() => toggleCollapse("shareholdingBtn")}
         >
-          <span>
-            Shareholder Information
-          </span>
+          <span>Shareholder Information</span>
           <div className="flex items-center gap-2">
             <span className="dropdown-icon">▼</span>
             <span className="text-sm text-[#835415]">View More</span>
@@ -776,7 +1028,10 @@ export default function Investors() {
               Shareholder notices
               <span className="float-right">▼</span>
             </button>
-            <div id="SharecorporatePolicies000222" className="hidden mt-2 overflow-x-auto">
+            <div
+              id="SharecorporatePolicies000222"
+              className="hidden mt-2 overflow-x-auto"
+            >
               <button
                 className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow mb-2"
                 onClick={() => toggleCollapse("disputecorporatePolicies000222")}
@@ -784,7 +1039,16 @@ export default function Investors() {
                 Dispute Resolution Mechanism
                 <span className="float-right">▼</span>
               </button>
-              <p id="disputecorporatePolicies000222" className="mb-4 p-4">In case the shareholders/investors have any dispute against the Company and/or its Registrar and Share Transfer Agent (RTA), as per SEBI Circular No. SEBI/HO/OIAE/OIAE_IAD-1/P/CIR/2023/131 dated July 31, 2023, read with SEBI Circular No. SEBI/HO/OIAE/OIAE_IAD-1/P/CIR/2023/135 dated August 04, 2023, they can file for Online Resolution of Disputes through Securities Market Approach for Resolution through ODR Portal [link - https://smartodr.in]</p>
+              <p id="disputecorporatePolicies000222" className="mb-4 p-4">
+                In case the shareholders/investors have any dispute against the
+                Company and/or its Registrar and Share Transfer Agent (RTA), as
+                per SEBI Circular No. SEBI/HO/OIAE/OIAE_IAD-1/P/CIR/2023/131
+                dated July 31, 2023, read with SEBI Circular No.
+                SEBI/HO/OIAE/OIAE_IAD-1/P/CIR/2023/135 dated August 04, 2023,
+                they can file for Online Resolution of Disputes through
+                Securities Market Approach for Resolution through ODR Portal
+                [link - https://smartodr.in]
+              </p>
               <button
                 className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow mb-2"
                 onClick={() => toggleCollapse("annaulGenralmeeting")}
@@ -820,40 +1084,81 @@ export default function Investors() {
                     <tr>
                       <td className="border p-2">2025</td>
                       <td className="border p-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/Postal+Ballot+Notice.pdf" target="_blank" rel="noopener noreferrer">
-                          <Image src={pdficon1} alt="PDF" width="30" />
-                        </a>
-                      </td>
-
-
-                      <td className="border p-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Term+and+condition+of+appointment+of+ID+(1).PDF" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/Postal+Ballot+Notice.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
 
                       <td className="border p-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Advertisment.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Term+and+condition+of+appointment+of+ID+(1).PDF"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
 
-<td className="border p-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Voting+Results_Signed.pdf" target="_blank" rel="noopener noreferrer">
+                      <td className="border p-2">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Advertisment.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
 
-
-
+                      <td className="border p-2">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Voting+Results_Signed.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Image src={pdficon1} alt="PDF" width="30" />
+                        </a>
+                      </td>
                     </tr>
 
+                    <tr>
+                      <td className="border p-2">2025</td>
+                      <td className="border p-2">
+                        <a
+                          href="https://main.d48ln31wxsfnc.amplifyapp.com/postal-ballots/intimation-of-board-meeting.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Image src={pdficon1} alt="PDF" width="30" />
+                        </a>
+                      </td>
 
+                      <td className="border p-2">
+                        <a
+                          href="https://main.d48ln31wxsfnc.amplifyapp.com/postal-ballots/outcome-of-board-meeting.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Image src={pdficon1} alt="PDF" width="30" />
+                        </a>
+                      </td>
 
+                      <td className="border p-2">
+                        <a
+                          href="https://main.d48ln31wxsfnc.amplifyapp.com/postal-ballots/postal-ballot-notice.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Image src={pdficon1} alt="PDF" width="30" />
+                        </a>
+                      </td>
+                    </tr>
 
                     {/* Repeat similarly for 2022 to 2018 */}
                     {/* You can map over a JSON object if needed to simplify this code */}
-
                   </tbody>
                 </table>
               </p>
@@ -921,7 +1226,6 @@ export default function Investors() {
             </a>
           </div>
 
-
           <div>
             <a
               href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareholderInformation/Form+No.+SH-14.pdf"
@@ -988,7 +1292,9 @@ export default function Investors() {
                     </td>
                   </tr>
                   <tr className="border-b-2 border-[#003366]">
-                    <td>Corporate-Annoucement <br/> Product-Launch210124</td>
+                    <td>
+                      Corporate-Annoucement <br /> Product-Launch210124
+                    </td>
                     <td>
                       <a
                         href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_announcement/Covering_Letter.pdf"
@@ -999,7 +1305,9 @@ export default function Investors() {
                     </td>
                   </tr>
                   <tr className="border-b-2 border-[#003366]">
-                    <td>Disclosure_Calender_of_Event <br/> _of_Postal_Ballot</td>
+                    <td>
+                      Disclosure_Calender_of_Event <br /> _of_Postal_Ballot
+                    </td>
                     <td>
                       <a
                         href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_announcement/Disclosure_Calender_of_Event_of_Postal_Ballot.pdf"
@@ -1010,7 +1318,9 @@ export default function Investors() {
                     </td>
                   </tr>
                   <tr className="border-b-2 border-[#003366]">
-                    <td>Intimation_for_appointment <br/> _of_Statutory_Auditor</td>
+                    <td>
+                      Intimation_for_appointment <br /> _of_Statutory_Auditor
+                    </td>
                     <td>
                       <a
                         href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_announcement/Intimation_for_appointment_of_Statutory_Auditor.pdf"
@@ -1032,7 +1342,9 @@ export default function Investors() {
                     </td>
                   </tr>
                   <tr className="border-b-2 border-[#003366]">
-                    <td>Intimation_under <br/> _Reg.30-Appointment_of_Director</td>
+                    <td>
+                      Intimation_under <br /> _Reg.30-Appointment_of_Director
+                    </td>
                     <td>
                       <a
                         href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/corporate_announcement/Intimation_under_Reg.30-Appointment_of_Director.pdf"
@@ -1084,9 +1396,7 @@ export default function Investors() {
           onClick={() => toggleCollapse("disclosure21")}
         >
           <span>
-
             Disclosures Under Regulation 46 of SEBI (LODR) Regulations, 2015
-
           </span>
           <div className="flex items-center gap-2">
             <span className="dropdown-icon">▼</span>
@@ -1102,19 +1412,36 @@ export default function Investors() {
               className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow"
               onClick={() => toggleCollapse("detailsOfBussiness")}
             >
-
               DETAILS OF BUSINESS
-
               <span className="float-right">▼</span>
             </button>
 
-            <p id="detailsOfBussiness" className="p-4 mx-4">Apis India Limited is the third generation of Entrepreneurs with extensive hands on knowledge of the trade. We hold an ISO – 22000, a certification for the documented procedures that applies to Food Safety framed by International body. We have also got ORGANIC, TUV, USFDA, KOSHER, EIC, APEDA, FMCG certification. We have won numerous industry and Government of India awards for Honey Exports. We are ISO 22000 certified by Intertek, which is a documented procedure that applies to food Safety Management System framed by International body.
-
-              Apis India is one of the leaders in the field of organized honey trade in India. With our world class in-house facilities for testing lab, we do the processing and filtration for honey. We have state-of-the-art manufacturing facilities spread over 7 acres in Rorkee, with a capacity to process over 100 tonnes of honey per day.
-
-              With a mission to make pure and natural products a part of consumers’ everyday life, our company has also forayed into several other products like tea, cookies, pickles, jam, dates & preserves. This step was taken considering the changing purchase dynamics & growing need of the quality branded packaged products.
-
-              Apis India also provides specialized honey, which comprises ginger, lemon, organic, honey with nuts, and honey with comb. This variety bagged Numerous International Industry and Government Honey Exports. Apis India products have been benchmarked to meet all European Union and other International Standards.</p>
+            <p id="detailsOfBussiness" className="p-4 mx-4">
+              Apis India Limited is the third generation of Entrepreneurs with
+              extensive hands on knowledge of the trade. We hold an ISO – 22000,
+              a certification for the documented procedures that applies to Food
+              Safety framed by International body. We have also got ORGANIC,
+              TUV, USFDA, KOSHER, EIC, APEDA, FMCG certification. We have won
+              numerous industry and Government of India awards for Honey
+              Exports. We are ISO 22000 certified by Intertek, which is a
+              documented procedure that applies to food Safety Management System
+              framed by International body. Apis India is one of the leaders in
+              the field of organized honey trade in India. With our world class
+              in-house facilities for testing lab, we do the processing and
+              filtration for honey. We have state-of-the-art manufacturing
+              facilities spread over 7 acres in Rorkee, with a capacity to
+              process over 100 tonnes of honey per day. With a mission to make
+              pure and natural products a part of consumers’ everyday life, our
+              company has also forayed into several other products like tea,
+              cookies, pickles, jam, dates & preserves. This step was taken
+              considering the changing purchase dynamics & growing need of the
+              quality branded packaged products. Apis India also provides
+              specialized honey, which comprises ginger, lemon, organic, honey
+              with nuts, and honey with comb. This variety bagged Numerous
+              International Industry and Government Honey Exports. Apis India
+              products have been benchmarked to meet all European Union and
+              other International Standards.
+            </p>
 
             <div className="mt-2">
               <a
@@ -1135,7 +1462,8 @@ export default function Investors() {
                 rel="noopener noreferrer"
                 className="block w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow hover:bg-gray-200"
               >
-                Brief profile of board of directors including directorship and full-time positions in body corporates
+                Brief profile of board of directors including directorship and
+                full-time positions in body corporates
                 <span className="float-right">▼</span>
               </a>
             </div>
@@ -1166,7 +1494,9 @@ export default function Investors() {
                       </td>
                     </tr>
                     <tr className="border-b-2 border-blue-900">
-                      <td className="py-2">Corporate Social Responsibility Committee</td>
+                      <td className="py-2">
+                        Corporate Social Responsibility Committee
+                      </td>
                       <td>
                         <a
                           href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Disclosures/CSR+Composition.pdf"
@@ -1178,7 +1508,9 @@ export default function Investors() {
                       </td>
                     </tr>
                     <tr className="border-b-2 border-blue-900">
-                      <td className="py-2">Nomination and Remuneration Committee</td>
+                      <td className="py-2">
+                        Nomination and Remuneration Committee
+                      </td>
                       <td>
                         <a
                           href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Disclosures/NRC+Composition.pdf"
@@ -1190,7 +1522,9 @@ export default function Investors() {
                       </td>
                     </tr>
                     <tr className="border-b-2 border-blue-900">
-                      <td className="py-2">Stakeholders Relationship Committee</td>
+                      <td className="py-2">
+                        Stakeholders Relationship Committee
+                      </td>
                       <td>
                         <a
                           href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Disclosures/SRC+Composition.pdf"
@@ -1212,9 +1546,8 @@ export default function Investors() {
                 rel="noopener noreferrer"
                 className="block w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow hover:bg-gray-200"
               >
-
-                CODE OF CONDUCT OF BOARD OF DIRECTORS AND SENIOR MANAGEMENT PERSONNE
-
+                CODE OF CONDUCT OF BOARD OF DIRECTORS AND SENIOR MANAGEMENT
+                PERSONNE
                 <span className="float-right">▼</span>
               </a>
             </div>
@@ -1294,42 +1627,80 @@ export default function Investors() {
                   <div className="border-2 border-red-400 bg-red-50 rounded-lg p-5">
                     <h3 className="text-lg font-semibold">Registered Office</h3>
                     <p>
-                      18/32, East Patel Nagar<br />
-                      New Delhi 110 008 India<br /><br />
-                      Telephone No: +91-11-43206666<br />
-                      Fax No: +91-11-43559111<br />
-                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
+                      18/32, East Patel Nagar
+                      <br />
+                      New Delhi 110 008 India
+                      <br />
+                      <br />
+                      Telephone No: +91-11-43206666
+                      <br />
+                      Fax No: +91-11-43559111
+                      <br />
+                      Email:{" "}
+                      <a
+                        href="mailto:amit@apisindia.com"
+                        className="text-blue-600 underline"
+                      >
+                        amit@apisindia.com
+                      </a>
                     </p>
                   </div>
 
                   {/* Box 2 */}
                   <div className="border-2 border-green-400 bg-green-50 rounded-lg p-5">
-                    <h3 className="text-lg font-semibold">Company Secretary/Compliance Officer</h3>
+                    <h3 className="text-lg font-semibold">
+                      Company Secretary/Compliance Officer
+                    </h3>
                     <p>
-                      MR. Amit Anand<br />
-                      Company Secretary<br />
-                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
+                      MR. Amit Anand
+                      <br />
+                      Company Secretary
+                      <br />
+                      Email:{" "}
+                      <a
+                        href="mailto:amit@apisindia.com"
+                        className="text-blue-600 underline"
+                      >
+                        amit@apisindia.com
+                      </a>
                     </p>
                   </div>
 
                   {/* Box 3 */}
                   <div className="border-2 border-blue-400 bg-blue-50 rounded-lg p-5">
-                    <h3 className="text-lg font-semibold">Investor Grievances</h3>
+                    <h3 className="text-lg font-semibold">
+                      Investor Grievances
+                    </h3>
                     <p>
-                      MR. Amit Anand<br />
-                      18/32, East Patel Nagar, New Delhi<br />
-                      Telephone No: +91-11-43206666<br />
-                      Fax No: +91-11-43559111<br />
-                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
+                      MR. Amit Anand
+                      <br />
+                      18/32, East Patel Nagar, New Delhi
+                      <br />
+                      Telephone No: +91-11-43206666
+                      <br />
+                      Fax No: +91-11-43559111
+                      <br />
+                      Email:{" "}
+                      <a
+                        href="mailto:amit@apisindia.com"
+                        className="text-blue-600 underline"
+                      >
+                        amit@apisindia.com
+                      </a>
                     </p>
                   </div>
 
                   {/* Box 4 */}
                   <div className="md:col-span-2 lg:col-span-1 border-2 border-blue-400 bg-blue-50 rounded-lg p-5 mt-4">
-                    <h3 className="text-lg font-semibold">Registrar and Transfer Agent Details</h3>
+                    <h3 className="text-lg font-semibold">
+                      Registrar and Transfer Agent Details
+                    </h3>
                     <p>
-                      Skyline Financial Services Pvt Ltd.<br />
-                      D-153 A, First Floor, Okhla Industrial Area, Phase-1, New Delhi-110020<br />
+                      Skyline Financial Services Pvt Ltd.
+                      <br />
+                      D-153 A, First Floor, Okhla Industrial Area, Phase-1, New
+                      Delhi-110020
+                      <br />
                       Telephone No: +91-11-43206666
                     </p>
                   </div>
@@ -1342,8 +1713,9 @@ export default function Investors() {
                 className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow mb-2"
                 onClick={() => toggleCollapse("disclousreGrienvane")}
               >
-                CONTACT INFORMATION OF THE DESIGNATED PERSONS OF THE LISTED ENTITY WHO ARE RESPONSIBLE FOR ASSISTING AND HANDLING INVESTOR GRIEVANCES
-
+                CONTACT INFORMATION OF THE DESIGNATED PERSONS OF THE LISTED
+                ENTITY WHO ARE RESPONSIBLE FOR ASSISTING AND HANDLING INVESTOR
+                GRIEVANCES
                 <span className="float-right">▼</span>
               </button>
 
@@ -1353,49 +1725,86 @@ export default function Investors() {
                   <div className="border-2 border-red-400 bg-red-50 rounded-lg p-5">
                     <h3 className="text-lg font-semibold">Registered Office</h3>
                     <p>
-                      18/32, East Patel Nagar<br />
-                      New Delhi 110 008 India<br /><br />
-                      Telephone No: +91-11-43206666<br />
-                      Fax No: +91-11-43559111<br />
-                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
+                      18/32, East Patel Nagar
+                      <br />
+                      New Delhi 110 008 India
+                      <br />
+                      <br />
+                      Telephone No: +91-11-43206666
+                      <br />
+                      Fax No: +91-11-43559111
+                      <br />
+                      Email:{" "}
+                      <a
+                        href="mailto:amit@apisindia.com"
+                        className="text-blue-600 underline"
+                      >
+                        amit@apisindia.com
+                      </a>
                     </p>
                   </div>
 
                   {/* Box 2 */}
                   <div className="border-2 border-green-400 bg-green-50 rounded-lg p-5">
-                    <h3 className="text-lg font-semibold">Company Secretary/Compliance Officer</h3>
+                    <h3 className="text-lg font-semibold">
+                      Company Secretary/Compliance Officer
+                    </h3>
                     <p>
-                      MR. Amit Anand<br />
-                      Company Secretary<br />
-                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
+                      MR. Amit Anand
+                      <br />
+                      Company Secretary
+                      <br />
+                      Email:{" "}
+                      <a
+                        href="mailto:amit@apisindia.com"
+                        className="text-blue-600 underline"
+                      >
+                        amit@apisindia.com
+                      </a>
                     </p>
                   </div>
 
                   {/* Box 3 */}
                   <div className="border-2 border-blue-400 bg-blue-50 rounded-lg p-5">
-                    <h3 className="text-lg font-semibold">Investor Grievances</h3>
+                    <h3 className="text-lg font-semibold">
+                      Investor Grievances
+                    </h3>
                     <p>
-                      MR. Amit Anand<br />
-                      18/32, East Patel Nagar, New Delhi<br />
-                      Telephone No: +91-11-43206666<br />
-                      Fax No: +91-11-43559111<br />
-                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
+                      MR. Amit Anand
+                      <br />
+                      18/32, East Patel Nagar, New Delhi
+                      <br />
+                      Telephone No: +91-11-43206666
+                      <br />
+                      Fax No: +91-11-43559111
+                      <br />
+                      Email:{" "}
+                      <a
+                        href="mailto:amit@apisindia.com"
+                        className="text-blue-600 underline"
+                      >
+                        amit@apisindia.com
+                      </a>
                     </p>
                   </div>
 
                   {/* Box 4 */}
                   <div className="md:col-span-2 lg:col-span-1 border-2 border-blue-400 bg-blue-50 rounded-lg p-5 mt-4">
-                    <h3 className="text-lg font-semibold">Registrar and Transfer Agent Details</h3>
+                    <h3 className="text-lg font-semibold">
+                      Registrar and Transfer Agent Details
+                    </h3>
                     <p>
-                      Skyline Financial Services Pvt Ltd.<br />
-                      D-153 A, First Floor, Okhla Industrial Area, Phase-1, New Delhi-110020<br />
+                      Skyline Financial Services Pvt Ltd.
+                      <br />
+                      D-153 A, First Floor, Okhla Industrial Area, Phase-1, New
+                      Delhi-110020
+                      <br />
                       Telephone No: +91-11-43206666
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-
 
             <div className="mt-2">
               <button
@@ -1407,9 +1816,11 @@ export default function Investors() {
               </button>
 
               <div id="financailInformation">
-
                 <div className="mb-4 p-2">
-                  <h5>NOTICE OF MEETING OF THE BOARD OF DIRECTORS WHERE FINANCIAL RESULTS SHALL BE DISCUSSED</h5>
+                  <h5>
+                    NOTICE OF MEETING OF THE BOARD OF DIRECTORS WHERE FINANCIAL
+                    RESULTS SHALL BE DISCUSSED
+                  </h5>
                   <div className="">
                     <table className="w-full border-collapse text-center text-sm">
                       <thead className="bg-gray-200">
@@ -1422,12 +1833,14 @@ export default function Investors() {
                         </tr>
                       </thead>
                       <tbody>
-
-                         <tr>
+                        <tr>
                           <td className="border p-2">2025-2026</td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/Notice+of+Board+Meeting_Stock+Exchange.pdf" target="_blank" rel="noopener noreferrer">
-
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/Notice+of+Board+Meeting_Stock+Exchange.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
@@ -1435,23 +1848,38 @@ export default function Investors() {
                         <tr>
                           <td className="border p-2">2024-2025</td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/NOTICE+OF+MEETING+OF+THE+BOARD/Notice+of+Board+Meeting/Notice+of+Board+Meeting/2024-25/Q1/Notice+of+Board+Meeting_Stock+Exchange.pdf" target="_blank" rel="noopener noreferrer">
-
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/NOTICE+OF+MEETING+OF+THE+BOARD/Notice+of+Board+Meeting/Notice+of+Board+Meeting/2024-25/Q1/Notice+of+Board+Meeting_Stock+Exchange.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/NOTICE+OF+MEETING+OF+THE+BOARD/Notice+of+Board+Meeting/Notice+of+Board+Meeting/2024-25/Q2/Notice+of+Board+Meeting.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/NOTICE+OF+MEETING+OF+THE+BOARD/Notice+of+Board+Meeting/Notice+of+Board+Meeting/2024-25/Q2/Notice+of+Board+Meeting.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/NOTICE+OF+MEETING+OF+THE+BOARD/Notice+of+Board+Meeting/Notice+of+Board+Meeting/2024-25/Q3/Notice+of+Board+Meeting.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/NOTICE+OF+MEETING+OF+THE+BOARD/Notice+of+Board+Meeting/Notice+of+Board+Meeting/2024-25/Q3/Notice+of+Board+Meeting.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/Notice+of+Board+Meeting_Stock+Exchange.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/Notice+of+Board+Meeting_Stock+Exchange.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
@@ -1460,22 +1888,38 @@ export default function Investors() {
                         <tr>
                           <td className="border p-2">2023-2024</td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q1+Results____.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q1+Results____.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q2+Results____.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q2+Results____.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q3+Results____.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q3+Results____.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q4+Results____.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q4+Results____.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
@@ -1484,47 +1928,78 @@ export default function Investors() {
                         <tr>
                           <td className="border p-2">2022</td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2021-2022/Q1+Results__.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2021-2022/Q1+Results__.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2021-2022/Q2+Results__.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2021-2022/Q2+Results__.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2021-2022/Q3+Results__.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2021-2022/Q3+Results__.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2021-2022/Q4+Results__.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2021-2022/Q4+Results__.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                         </tr>
 
-
                         <tr>
                           <td className="border p-2">2020-2021</td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2020-21/Q1+Results+(1).pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2020-21/Q1+Results+(1).pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2020-21/Q2+Results.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2020-21/Q2+Results.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2020-21/Q3+Results+(1).pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2020-21/Q3+Results+(1).pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q4+Results+(2).pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q4+Results+(2).pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
@@ -1533,22 +2008,38 @@ export default function Investors() {
                         <tr>
                           <td className="border p-2">2019-2020</td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q1+Results+(2).pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q1+Results+(2).pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q2+Results+(1).pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q2+Results+(1).pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q3+Results+(2).pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q3+Results+(2).pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q4+Results+(2).pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q4+Results+(2).pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
@@ -1557,66 +2048,97 @@ export default function Investors() {
                         <tr>
                           <td className="border p-2">2019</td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q1/CGR_REPORT_JUNE_2019.html" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q1/CGR_REPORT_JUNE_2019.html"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q2/CGR_SEPTEMBER_2019.html" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q2/CGR_SEPTEMBER_2019.html"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q3/CGR-DEC-APIS-FINAL.html" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2019/Q3/CGR-DEC-APIS-FINAL.html"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
 
                           <td className="border p-2">
-                            <a href="#" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="#"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
-
                         </tr>
 
                         <tr>
                           <td className="border p-2">2018</td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q1/CGR.html" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q1/CGR.html"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q2/CGR_SEP_2018_Revised.html" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q2/CGR_SEP_2018_Revised.html"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q3/CGR-DECEMBER-2018.html" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q3/CGR-DECEMBER-2018.html"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
 
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q4/CGR-MARCH-2019.html" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Quarterly+Corporate+Goverance/Quarterly+Corporate+Goverance/2018/Q4/CGR-MARCH-2019.html"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
-
                         </tr>
-
 
                         {/* Repeat similarly for 2022 to 2018 */}
                         {/* You can map over a JSON object if needed to simplify this code */}
-
                       </tbody>
                     </table>
                   </div>
                 </div>
 
                 <div className=" mb-4 p-2">
-                  <h5>FINANCIAL RESULTS, ON CONCLUSION OF THE MEETING OF THE BOARD OF DIRECTORS WHERE THE FINANCIAL RESULTS WERE APPROVED</h5>
+                  <h5>
+                    FINANCIAL RESULTS, ON CONCLUSION OF THE MEETING OF THE BOARD
+                    OF DIRECTORS WHERE THE FINANCIAL RESULTS WERE APPROVED
+                  </h5>
                   <div className="noticeOfMeetingBoard">
                     <table className="w-full border-collapse text-center text-sm">
                       <thead className="bg-gray-200">
@@ -1629,38 +2151,53 @@ export default function Investors() {
                         </tr>
                       </thead>
                       <tbody>
-
-
-                          <tr>
+                        <tr>
                           <td className="border p-2">2025-2026</td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/Outcome+of+the+Board+Meeting.pdf" target="_blank" rel="noopener noreferrer">
-
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/Outcome+of+the+Board+Meeting.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
-                          
                         </tr>
                         <tr>
                           <td className="border p-2">2024-2025</td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2025/Outcome+of+Board+Meeting+(1).pdf" target="_blank" rel="noopener noreferrer">
-
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2025/Outcome+of+Board+Meeting+(1).pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2025/Q1+Results_____.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2025/Q1+Results_____.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2025/Outcome+of+Board+Meeting.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2025/Outcome+of+Board+Meeting.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2025/Outcome+of+Board+Meeting+(4).pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2025/Outcome+of+Board+Meeting+(4).pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
@@ -1669,22 +2206,38 @@ export default function Investors() {
                         <tr>
                           <td className="border p-2">2023-2024</td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q1+Results____.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q1+Results____.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q2+Results____.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q2+Results____.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q3+Results____.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q3+Results____.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q4+Results____.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q4+Results____.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
@@ -1693,47 +2246,78 @@ export default function Investors() {
                         <tr>
                           <td className="border p-2">2022-2023</td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2022-2023/Q1+Results___.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2022-2023/Q1+Results___.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2022-2023/Q2+Results___.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2022-2023/Q2+Results___.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2022-2023/Q3+Results___.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2022-2023/Q3+Results___.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2022-2023/Q4+Results___.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2022-2023/Q4+Results___.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                         </tr>
 
-
                         <tr>
                           <td className="border p-2">2021-2022</td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2021-2022/Q1+Results__.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2021-2022/Q1+Results__.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2021-2022/Q2+Results__.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2021-2022/Q2+Results__.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2021-2022/Q3+Results__.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2021-2022/Q3+Results__.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2021-2022/Q4+Results__.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2021-2022/Q4+Results__.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
@@ -1742,22 +2326,38 @@ export default function Investors() {
                         <tr>
                           <td className="border p-2">2020-2021</td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2020-21/Q1+Results+(1).pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2020-21/Q1+Results+(1).pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2020-21/Q2+Results.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2020-21/Q2+Results.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2020-21/Q3+Results+(1).pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2020-21/Q3+Results+(1).pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2020-21/Q4+Results+(1).pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2020-21/Q4+Results+(1).pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
@@ -1766,72 +2366,99 @@ export default function Investors() {
                         <tr>
                           <td className="border p-2">2019-2020</td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q1+Results+(2).pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q1+Results+(2).pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q2+Results+(1).pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q2+Results+(1).pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q3+Results+(2).pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q3+Results+(2).pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
 
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q4+Results+(2).pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q4+Results+(2).pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
-
                         </tr>
 
                         <tr>
                           <td className="border p-2">2018-2019</td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2018-19/Outcome_of_the_Board_Meeting_final.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2018-19/Outcome_of_the_Board_Meeting_final.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2018-19/Results_December.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2018-19/Results_December.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2018-19/Results_September.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2018-19/Results_September.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
 
                           <td className="border p-2">
-                            <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2018-19/Results-June.pdf" target="_blank" rel="noopener noreferrer">
+                            <a
+                              href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2018-19/Results-June.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
-
                         </tr>
-
 
                         {/* Repeat similarly for 2022 to 2018 */}
                         {/* You can map over a JSON object if needed to simplify this code */}
-
                       </tbody>
                     </table>
                   </div>
-
-
                 </div>
 
                 {/*  */}
 
-
                 <div className="mb-4 p-2">
                   <h5 className="text-base  mb-2">
-                    COMPLETE COPY OF THE ANNUAL REPORT INCLUDING BALANCE SHEET PROFIT AND LOSS ACCOUNT, DIRECTORS REPORT, CORPORATE GOVERNANCE REPORT ETC
+                    COMPLETE COPY OF THE ANNUAL REPORT INCLUDING BALANCE SHEET
+                    PROFIT AND LOSS ACCOUNT, DIRECTORS REPORT, CORPORATE
+                    GOVERNANCE REPORT ETC
                   </h5>
 
                   <div className="noticeOfMeetingBoard overflow-x-auto">
@@ -1840,45 +2467,51 @@ export default function Investors() {
                         {[
                           {
                             year: "2023-2024",
-                            link: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual+Report-2023-24_FINAL+(1).pdf"
+                            link: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual+Report-2023-24_FINAL+(1).pdf",
                           },
                           {
                             year: "2022-2023",
-                            link: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual-Report-2023.pdf"
+                            link: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual-Report-2023.pdf",
                           },
                           {
                             year: "2021-2022",
-                            link: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual+Report+2021-22.pdf"
+                            link: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual+Report+2021-22.pdf",
                           },
                           {
                             year: "2020-2021",
-                            link: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual-Report-2020-21-Final.pdf"
+                            link: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual-Report-2020-21-Final.pdf",
                           },
                           {
                             year: "2019-2020",
-                            link: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual+Report-2020.pdf"
+                            link: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual+Report-2020.pdf",
                           },
                           {
                             year: "2018-2019",
-                            link: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual+Report+Final+2018-19.pdf"
+                            link: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual+Report+Final+2018-19.pdf",
                           },
                           {
                             year: "2017-2018",
-                            link: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual-Report-APIS-2017.pdf"
+                            link: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual-Report-APIS-2017.pdf",
                           },
                           {
                             year: "2015-2016",
-                            link: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Final-Annual-Report-2015-16-(1).pdf"
+                            link: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Final-Annual-Report-2015-16-(1).pdf",
                           },
                           {
                             year: "2014-2015",
-                            link: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual-Report-2014-15.pdf"
-                          }
+                            link: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Annual-Report-2014-15.pdf",
+                          },
                         ].map((report, index) => (
                           <tr key={index} className="border-b border-blue-900">
-                            <td className="py-2 px-4">Annual Report {report.year}</td>
                             <td className="py-2 px-4">
-                              <a href={report.link} target="_blank" rel="noopener noreferrer">
+                              Annual Report {report.year}
+                            </td>
+                            <td className="py-2 px-4">
+                              <a
+                                href={report.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
                                 <Image src={pdficon1} alt="PDF" width="30" />
                               </a>
                             </td>
@@ -1891,7 +2524,6 @@ export default function Investors() {
               </div>
             </div>
 
-
             <div className="mt-2">
               <button
                 className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow mb-2"
@@ -1901,7 +2533,10 @@ export default function Investors() {
                 <span className="float-right">▼</span>
               </button>
 
-              <div id="shareholdingPattern0210" className="hidden mb-4 p-2 overflow-x-auto">
+              <div
+                id="shareholdingPattern0210"
+                className="hidden mb-4 p-2 overflow-x-auto"
+              >
                 <table className="min-w-full border border-gray-300 text-center text-sm border-collapse">
                   <thead className="bg-gray-100">
                     <tr>
@@ -1913,63 +2548,95 @@ export default function Investors() {
                     </tr>
                   </thead>
                   <tbody>
-
- <tr>
+                    <tr>
                       <td className="border px-4 py-2">2025-2026</td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/SHP-JUNE-2025.html" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/SHP-JUNE-2025.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
-                      
                     </tr>
-
 
                     <tr>
                       <td className="border px-4 py-2">2024-2025</td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+June%2C+2024.html" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+June%2C+2024.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+Sep%2C+2024.html" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+Sep%2C+2024.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
 
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/SHP-APIS-DEC-2024.html" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/SHP-APIS-DEC-2024.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
-                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Shareholding+Pattern.html" target="_blank" rel="noopener noreferrer">
+                      <td className="border px-4 py-2">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Shareholding+Pattern.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
-                       
                     </tr>
 
                     <tr>
                       <td className="border px-4 py-2">2023-2024</td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+September%2C+2023.html" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+September%2C+2023.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q2+Results____.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2024/Q2+Results____.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+December%2C+2023.html" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+December%2C+2023.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+March%2C+2024.html" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+March%2C+2024.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
@@ -1978,184 +2645,246 @@ export default function Investors() {
                     <tr>
                       <td className="border px-4 py-2">2022-2023</td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+June%2C+2022.html" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+June%2C+2022.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding_Pattern_September_2022.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding_Pattern_September_2022.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
 
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+December%2C+2022.html" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+December%2C+2022.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
-
 
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+March%2C+2023.html" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+March%2C+2023.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
-
                     </tr>
-
 
                     <tr>
                       <td className="border px-4 py-2">2020-2021</td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+June%2C+2020.html" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+June%2C+2020.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+Sep%2C+2021.html" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+Sep%2C+2021.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
 
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+December%2C+2020.html" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+December%2C+2020.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
-
 
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern-MAR-2021.html" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern-MAR-2021.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
-
                     </tr>
 
                     <tr>
                       <td className="border px-4 py-2">2020-2019</td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+JUNE%2C+2019.html" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+JUNE%2C+2019.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2020-21/Q2+Results.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2020-21/Q2+Results.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
 
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+DEC%2C+2019.html" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+DEC%2C+2019.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
-
 
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+March%2C+2020.html" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/shareHoldingPattern/Shareholding+Pattern+for+the+Quarter+ended+March%2C+2020.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
-
                     </tr>
 
                     <tr>
                       <td className="border px-4 py-2">2019-2020</td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q1+Results+(2).pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q1+Results+(2).pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q2+Results+(1).pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q2+Results+(1).pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
 
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q3+Results+(2).pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q3+Results+(2).pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
-
 
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q4+Results+(2).pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/financial_Results/2019-20/Q4+Results+(2).pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
-
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
 
-
-
-
-
             <div className="mt-2">
               <button
                 className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow mb-2"
                 onClick={() => toggleCollapse("detailsOfAgreement")}
               >
-                DETAILS OF AGREEMENTS ENTERED INTO WITH THE MEDIA COMPANIES AND/OR THEIR ASSOCIATES
+                DETAILS OF AGREEMENTS ENTERED INTO WITH THE MEDIA COMPANIES
+                AND/OR THEIR ASSOCIATES
                 <span className="float-right">▼</span>
               </button>
 
-              <div id="detailsOfAgreement" className="hidden mb-4 p-2 overflow-x-auto">
+              <div
+                id="detailsOfAgreement"
+                className="hidden mb-4 p-2 overflow-x-auto"
+              >
                 <p>No Data</p>
               </div>
             </div>
-
 
             <div className="mt-2">
               <button
                 className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow mb-2"
                 onClick={() => toggleCollapse("analysisInstrute")}
               >
-                SCHEDULE OF ANALYSTS OR INSTITUTIONAL INVESTORS MEET AND PRESENTATIONS MADE BY THE COMPANY TO ANALYSTS OR INSTITUTIONAL
+                SCHEDULE OF ANALYSTS OR INSTITUTIONAL INVESTORS MEET AND
+                PRESENTATIONS MADE BY THE COMPANY TO ANALYSTS OR INSTITUTIONAL
                 <span className="float-right">▼</span>
               </button>
 
-              <div id="analysisInstrute" className="hidden mb-4 p-2 overflow-x-auto">
+              <div
+                id="analysisInstrute"
+                className="hidden mb-4 p-2 overflow-x-auto"
+              >
                 <p>No Data</p>
               </div>
             </div>
-
 
             <div className="mt-2">
               <button
                 className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow mb-2"
                 onClick={() => toggleCollapse("investorsErning")}
               >
-                INVESTORS AND AUDIO/VIDEO AND TRANSCRIPTS OF POST EARNINGS/QUARTERLY CALLS
+                INVESTORS AND AUDIO/VIDEO AND TRANSCRIPTS OF POST
+                EARNINGS/QUARTERLY CALLS
                 <span className="float-right">▼</span>
               </button>
 
-              <div id="investorsErning" className="hidden mb-4 p-2 overflow-x-auto">
+              <div
+                id="investorsErning"
+                className="hidden mb-4 p-2 overflow-x-auto"
+              >
                 <p>No Data</p>
               </div>
             </div>
-
 
             <div className="mt-2">
               <button
                 className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow mb-2"
                 onClick={() => toggleCollapse("newNameOldName")}
               >
-                NEW NAME AND THE OLD NAME OF THE LISTED FOR A CONTINUOUS PERIOD OF ONE YEAR, FROM THE DATE
+                NEW NAME AND THE OLD NAME OF THE LISTED FOR A CONTINUOUS PERIOD
+                OF ONE YEAR, FROM THE DATE
                 <span className="float-right">▼</span>
               </button>
 
-              <div id="newNameOldName" className="hidden mb-4 p-2 overflow-x-auto">
+              <div
+                id="newNameOldName"
+                className="hidden mb-4 p-2 overflow-x-auto"
+              >
                 <p>No Data</p>
               </div>
             </div>
-
-
 
             <div className="mt-2">
               <button
@@ -2166,10 +2895,14 @@ export default function Investors() {
                 <span className="float-right">▼</span>
               </button>
 
-              <div id="newspaperPub" className="hidden mb-4 p-2 overflow-x-auto">
+              <div
+                id="newspaperPub"
+                className="hidden mb-4 p-2 overflow-x-auto"
+              >
                 <div className="mb-4">
                   <div className="mb-2 font-semibold">
-                    NOTICE OF MEETING OF THE BOARD OF DIRECTORS WHERE FINANCIAL RESULTS SHALL BE DISCUSSED
+                    NOTICE OF MEETING OF THE BOARD OF DIRECTORS WHERE FINANCIAL
+                    RESULTS SHALL BE DISCUSSED
                   </div>
                   <select
                     id="yearSelector"
@@ -2200,36 +2933,53 @@ export default function Investors() {
                     </tr>
                   </thead>
                   <tbody>
-
-                  
- <tr>
+                    <tr>
                       <td className="border px-4 py-2">2025-2026</td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/Intimation+under+Reg.30-Newspeper+Advertisement.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/Intimation+under+Reg.30-Newspeper+Advertisement.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
-                      
                     </tr>
                     <tr>
                       <td className="border px-4 py-2">2024-2025</td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2024-25/Q1/Intimation+under+Reg.30-Newspeper+Advertisement.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2024-25/Q1/Intimation+under+Reg.30-Newspeper+Advertisement.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2024-25/Q2/Intimation+under+Reg.30-publication+of+Results.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2024-25/Q2/Intimation+under+Reg.30-publication+of+Results.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2024-25/Q3/Intimation+under+Reg.30-publication+of+Results.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2024-25/Q3/Intimation+under+Reg.30-publication+of+Results.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Intimation+under+Reg.30-Newspeper+Advertisement.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Intimation+under+Reg.30-Newspeper+Advertisement.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
@@ -2237,22 +2987,38 @@ export default function Investors() {
                     <tr>
                       <td className="border px-4 py-2">2023-2024</td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2023-24/Q1/Intimation+under+Reg.30-Newspeper+Advertisement.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2023-24/Q1/Intimation+under+Reg.30-Newspeper+Advertisement.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2023-24/Q2/Intimation+under+Reg.30-publication+of+Results.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2023-24/Q2/Intimation+under+Reg.30-publication+of+Results.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2023-24/Q3/Intimation+under+Reg.30-Newspeper+Advertisement.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2023-24/Q3/Intimation+under+Reg.30-Newspeper+Advertisement.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2023-24/Q4/Covering+Letter.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2023-24/Q4/Covering+Letter.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
@@ -2261,22 +3027,38 @@ export default function Investors() {
                     <tr>
                       <td className="border px-4 py-2">2022-2023</td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2022-23/Q1/Intimation+under+Reg.30-Newspeper+Advertisement.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2022-23/Q1/Intimation+under+Reg.30-Newspeper+Advertisement.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2022-23/Q2/Intimation+under+Reg.30-publication+of+Results.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2022-23/Q2/Intimation+under+Reg.30-publication+of+Results.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2022-23/Q3/Intimation+under+Reg.30-Newspeper+Advertisement.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2022-23/Q3/Intimation+under+Reg.30-Newspeper+Advertisement.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2022-23/Q4/Newspaper+Advertisement.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2022-23/Q4/Newspaper+Advertisement.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
@@ -2285,48 +3067,78 @@ export default function Investors() {
                     <tr>
                       <td className="border px-4 py-2">2021-2022</td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2021-22/Q1/Intimation_under_Reg.30-Newspeper_Advertisement-Results.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2021-22/Q1/Intimation_under_Reg.30-Newspeper_Advertisement-Results.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2021-22/Q2/Intimation+under+Reg.30-publication+of+Results.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2021-22/Q2/Intimation+under+Reg.30-publication+of+Results.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2021-22/Q3/Intimation+under+Reg.30-Newspeper+Advertisement.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2021-22/Q3/Intimation+under+Reg.30-Newspeper+Advertisement.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2021-22/Q4/Intimation_of_Publication_under_Reg-30_sw.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2021-22/Q4/Intimation_of_Publication_under_Reg-30_sw.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                     </tr>
 
-
-
                     <tr>
                       <td className="border px-4 py-2">2020-2021</td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2020-21/Q1/Covering+Letter.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2020-21/Q1/Covering+Letter.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2020-21/Q2/Newspaper+Publication.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2020-21/Q2/Newspaper+Publication.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2020-21/Q3/Intimation_under_Reg.30-Newspeper_Advertisement_sw.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2020-21/Q3/Intimation_under_Reg.30-Newspeper_Advertisement_sw.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2020-21/Q4/Newspaper+Publication.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2020-21/Q4/Newspaper+Publication.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
@@ -2334,47 +3146,78 @@ export default function Investors() {
                     <tr>
                       <td className="border px-4 py-2">2019-2020</td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2019-20/Q1/Intimation_under_Reg-30.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2019-20/Q1/Intimation_under_Reg-30.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2019-20/Q2/Newspaper+Publication.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2019-20/Q2/Newspaper+Publication.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2019-20/Q3/Intimation_under_Reg.30-Newspeper_Advertisement.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2019-20/Q3/Intimation_under_Reg.30-Newspeper_Advertisement.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2019-20/Q4/Newspaper+Publication.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2019-20/Q4/Newspaper+Publication.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                     </tr>
 
-
                     <tr>
                       <td className="border px-4 py-2">2018-2019</td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2018-19/Q1/Intimation_under_Reg.30-Newspeper_Advertisement_sw.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2018-19/Q1/Intimation_under_Reg.30-Newspeper_Advertisement_sw.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2018-19/Q2/Intimation_under_Reg.30-Newspeper_Advertisement_sw.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2018-19/Q2/Intimation_under_Reg.30-Newspeper_Advertisement_sw.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2018-19/Q3/Intimation_under_Reg.30-Newspeper_Advertisement_sw.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2018-19/Q3/Intimation_under_Reg.30-Newspeper_Advertisement_sw.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
                       <td className="border px-4 py-2">
-                        <a href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2018-19/Q4/Intimation_under_Reg-30.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Newspaper+Publication/2018-19/Q4/Intimation_under_Reg-30.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
@@ -2384,8 +3227,6 @@ export default function Investors() {
                 </table>
               </div>
             </div>
-
-
 
             <div className="mt-2">
               <button
@@ -2405,8 +3246,7 @@ export default function Investors() {
                     </tr>
                   </thead>
                   <tbody>
-
-                      <tr>
+                    <tr>
                       <td className="border px-4 py-2">2025</td>
                       <td className="border px-4 py-2">
                         <a
@@ -2459,7 +3299,6 @@ export default function Investors() {
               </div>
             </div>
 
-
             <div className="mt-2">
               <button
                 className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow mb-2"
@@ -2472,7 +3311,9 @@ export default function Investors() {
               <div id="authedCompany" className="hidden mt-2 overflow-x-auto">
                 {/* Anantadrishti */}
                 <div className="mb-6">
-                  <h5 className="text-lg font-semibold mb-1">APIS Subsidiary Financials - Anantadrishti</h5>
+                  <h5 className="text-lg font-semibold mb-1">
+                    APIS Subsidiary Financials - Anantadrishti
+                  </h5>
                   <p className="mb-3">Subsidiary Financials</p>
 
                   <table className="min-w-full border border-gray-300 text-sm border-collapse text-center">
@@ -2514,9 +3355,16 @@ export default function Investors() {
                         },
                       ].map(({ title, url }, index) => (
                         <tr key={index}>
-                          <td className="border px-4 py-2 text-left">{title}</td>
+                          <td className="border px-4 py-2 text-left">
+                            {title}
+                          </td>
                           <td className="border px-4 py-2">
-                            <a href={url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                            <a
+                              href={url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-600 hover:underline"
+                            >
                               View/Download
                             </a>
                           </td>
@@ -2528,7 +3376,10 @@ export default function Investors() {
 
                 {/* Nature's Family Tree Foods Private Limited */}
                 <div className="mb-6">
-                  <h5 className="text-lg font-semibold mb-1">APIS Subsidiary Financials - Nature's Family Tree Foods Private Limited</h5>
+                  <h5 className="text-lg font-semibold mb-1">
+                    APIS Subsidiary Financials - Nature's Family Tree Foods
+                    Private Limited
+                  </h5>
                   <p className="mb-3">Subsidiary Financials</p>
 
                   <table className="min-w-full border border-gray-300 text-sm border-collapse text-center">
@@ -2541,23 +3392,32 @@ export default function Investors() {
                     <tbody>
                       {[
                         {
-                          title: "Balance Sheet - 31.03.2020 - Nature's Family Tree Foods Pvt. Ltd.",
+                          title:
+                            "Balance Sheet - 31.03.2020 - Nature's Family Tree Foods Pvt. Ltd.",
                           url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/subsicidry_companies/Balance+Sheet-Nature+Family-2022.pdf",
                         },
                         {
-                          title: "Balance Sheet - 31.03.2021 - Nature's Family Tree Foods Pvt. Ltd.",
+                          title:
+                            "Balance Sheet - 31.03.2021 - Nature's Family Tree Foods Pvt. Ltd.",
                           url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/subsicidry_companies/Balance-Sheet-NFTPL-2023.pdf",
                         },
                         {
-                          title: "Balance Sheet - 31.03.2022 - Nature's Family Tree Foods Pvt. Ltd.",
+                          title:
+                            "Balance Sheet - 31.03.2022 - Nature's Family Tree Foods Pvt. Ltd.",
                           url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/subsicidry_companies/Balance+Sheet-Nature+Family+2024.pdf",
                         },
-
                       ].map(({ title, url }, index) => (
                         <tr key={index}>
-                          <td className="border px-4 py-2 text-left">{title}</td>
+                          <td className="border px-4 py-2 text-left">
+                            {title}
+                          </td>
                           <td className="border px-4 py-2">
-                            <a href={url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                            <a
+                              href={url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-600 hover:underline"
+                            >
                               View/Download
                             </a>
                           </td>
@@ -2569,17 +3429,20 @@ export default function Investors() {
               </div>
             </div>
 
-
             <div className="mt-2">
               <button
                 className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow mb-2"
                 onClick={() => toggleCollapse("secreterialComplience")}
               >
-                SECRETARIAL COMPLIANCE REPORT AS PER SUB-REGULATION (2) OF REGULATION 24A
+                SECRETARIAL COMPLIANCE REPORT AS PER SUB-REGULATION (2) OF
+                REGULATION 24A
                 <span className="float-right">▼</span>
               </button>
 
-              <div id="secreterialComplience" className="hidden mt-2 overflow-x-auto">
+              <div
+                id="secreterialComplience"
+                className="hidden mt-2 overflow-x-auto"
+              >
                 <table className="min-w-full border border-gray-300 text-sm border-collapse text-center">
                   <thead className="bg-gray-100">
                     <tr>
@@ -2589,8 +3452,7 @@ export default function Investors() {
                   </thead>
                   <tbody>
                     {[
-
-                       {
+                      {
                         year: "2025",
                         url: "https://apisindia.s3.ap-south-1.amazonaws.com/APIS+India+Compliance+Report+2025.pdf",
                       },
@@ -2628,7 +3490,8 @@ export default function Investors() {
                             rel="noopener noreferrer"
                             className="inline-block"
                           >
-                            <Image src={pdficon1}
+                            <Image
+                              src={pdficon1}
                               alt="PDF"
                               width={30}
                               className="mx-auto"
@@ -2642,8 +3505,6 @@ export default function Investors() {
               </div>
             </div>
 
-
-
             <div>
               <a
                 href="https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/Disclosures/Policy-for-Determination-of-Materiality+(1).pdf"
@@ -2656,13 +3517,15 @@ export default function Investors() {
               </a>
             </div>
 
-
             <div className="mt-2">
               <button
                 className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow mb-2"
                 onClick={() => toggleCollapse("determiningMaterility")}
               >
-                DISCLOSURE OF CONTACT DETAILS OF KEY MANAGERIAL PERSONNEL WHO ARE AUTHORIZED FOR THE PURPOSE OF <br />DETERMINING MATERIALITY OF AN EVENT OR INFORMATION AND FOR THE PURPOSE OF MAKING DISCLOSURES TO STOCK EXCHANGE(S)
+                DISCLOSURE OF CONTACT DETAILS OF KEY MANAGERIAL PERSONNEL WHO
+                ARE AUTHORIZED FOR THE PURPOSE OF <br />
+                DETERMINING MATERIALITY OF AN EVENT OR INFORMATION AND FOR THE
+                PURPOSE OF MAKING DISCLOSURES TO STOCK EXCHANGE(S)
                 <span className="float-right">▼</span>
               </button>
 
@@ -2672,42 +3535,80 @@ export default function Investors() {
                   <div className="border-2 border-red-400 bg-red-50 rounded-lg p-5">
                     <h3 className="text-lg font-semibold">Registered Office</h3>
                     <p>
-                      18/32, East Patel Nagar<br />
-                      New Delhi 110 008 India<br /><br />
-                      Telephone No: +91-11-43206666<br />
-                      Fax No: +91-11-43559111<br />
-                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
+                      18/32, East Patel Nagar
+                      <br />
+                      New Delhi 110 008 India
+                      <br />
+                      <br />
+                      Telephone No: +91-11-43206666
+                      <br />
+                      Fax No: +91-11-43559111
+                      <br />
+                      Email:{" "}
+                      <a
+                        href="mailto:amit@apisindia.com"
+                        className="text-blue-600 underline"
+                      >
+                        amit@apisindia.com
+                      </a>
                     </p>
                   </div>
 
                   {/* Box 2 */}
                   <div className="border-2 border-green-400 bg-green-50 rounded-lg p-5">
-                    <h3 className="text-lg font-semibold">Company Secretary/Compliance Officer</h3>
+                    <h3 className="text-lg font-semibold">
+                      Company Secretary/Compliance Officer
+                    </h3>
                     <p>
-                      MR. Amit Anand<br />
-                      Company Secretary<br />
-                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
+                      MR. Amit Anand
+                      <br />
+                      Company Secretary
+                      <br />
+                      Email:{" "}
+                      <a
+                        href="mailto:amit@apisindia.com"
+                        className="text-blue-600 underline"
+                      >
+                        amit@apisindia.com
+                      </a>
                     </p>
                   </div>
 
                   {/* Box 3 */}
                   <div className="border-2 border-blue-400 bg-blue-50 rounded-lg p-5">
-                    <h3 className="text-lg font-semibold">Investor Grievances</h3>
+                    <h3 className="text-lg font-semibold">
+                      Investor Grievances
+                    </h3>
                     <p>
-                      MR. Amit Anand<br />
-                      18/32, East Patel Nagar, New Delhi<br />
-                      Telephone No: +91-11-43206666<br />
-                      Fax No: +91-11-43559111<br />
-                      Email: <a href="mailto:amit@apisindia.com" className="text-blue-600 underline">amit@apisindia.com</a>
+                      MR. Amit Anand
+                      <br />
+                      18/32, East Patel Nagar, New Delhi
+                      <br />
+                      Telephone No: +91-11-43206666
+                      <br />
+                      Fax No: +91-11-43559111
+                      <br />
+                      Email:{" "}
+                      <a
+                        href="mailto:amit@apisindia.com"
+                        className="text-blue-600 underline"
+                      >
+                        amit@apisindia.com
+                      </a>
                     </p>
                   </div>
 
                   {/* Box 4 */}
                   <div className="md:col-span-2 lg:col-span-1 border-2 border-blue-400 bg-blue-50 rounded-lg p-5 mt-4">
-                    <h3 className="text-lg font-semibold">Registrar and Transfer Agent Details</h3>
+                    <h3 className="text-lg font-semibold">
+                      Registrar and Transfer Agent Details
+                    </h3>
                     <p>
-                      Skyline Financial Services Pvt Ltd.<br />
-                      D-153 A, First Floor, Okhla Industrial Area, Phase-1, New Delhi-110020<br />
+                      Skyline Financial Services Pvt Ltd.
+                      <br />
+                      D-153 A, First Floor, Okhla Industrial Area, Phase-1, New
+                      Delhi-110020
+                      <br />
                       Telephone No: +91-11-43206666
                     </p>
                   </div>
@@ -2715,14 +3616,13 @@ export default function Investors() {
               </div>
             </div>
 
-
-
             <div className="mt-2">
               <button
                 className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow mb-2"
                 onClick={() => toggleCollapse("regulation300")}
               >
-                DISCLOSURES UNDER SUB-REGULATION (8) OF REGULATION 30 OF THESE REGULATIONS
+                DISCLOSURES UNDER SUB-REGULATION (8) OF REGULATION 30 OF THESE
+                REGULATIONS
                 <span className="float-right">▼</span>
               </button>
 
@@ -2731,13 +3631,13 @@ export default function Investors() {
               </div>
             </div>
 
-
             <div className="mt-2">
               <button
                 className="w-full text-left bg-gray-100 px-4 py-2 rounded-md font-medium shadow mb-2"
                 onClick={() => toggleCollapse("DEVIATION211")}
               >
-                STATEMENTS OF DEVIATION(S) OR VARIATION(S) AS SPECIFIED IN REGULATION 32 OF THESE REGULATIONS
+                STATEMENTS OF DEVIATION(S) OR VARIATION(S) AS SPECIFIED IN
+                REGULATION 32 OF THESE REGULATIONS
                 <span className="float-right">▼</span>
               </button>
 
@@ -2745,7 +3645,6 @@ export default function Investors() {
                 <p>No Data</p>
               </div>
             </div>
-
 
             <div className="mt-2">
               <button
@@ -2756,11 +3655,13 @@ export default function Investors() {
                 <span className="float-right">▼</span>
               </button>
 
-              <div id="DISTRIBUTION2100" className="hidden mt-2 overflow-x-auto">
+              <div
+                id="DISTRIBUTION2100"
+                className="hidden mt-2 overflow-x-auto"
+              >
                 <p>No Data</p>
               </div>
             </div>
-
 
             <div className="mt-2">
               <button
@@ -2812,13 +3713,14 @@ export default function Investors() {
                         url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReport/Final-Annual-Report-2015-16-(1).pdf",
                       },
                     ].map(({ title, url }, index) => (
-                      <tr
-                        key={index}
-                        className="border-b-2 border-[#003366]"
-                      >
+                      <tr key={index} className="border-b-2 border-[#003366]">
                         <td className="px-4 py-2">{title}</td>
                         <td className="px-4 py-2">
-                          <a href={url} target="_blank" rel="noopener noreferrer">
+                          <a
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <Image src={pdficon1} alt="PDF" width="30" />
                           </a>
                         </td>
@@ -2827,7 +3729,6 @@ export default function Investors() {
                   </tbody>
                 </table>
               </div>
-
 
               <div className="mt-2">
                 <button
@@ -2842,8 +3743,7 @@ export default function Investors() {
                   <table className="min-w-full border-collapse text-sm text-left">
                     <tbody>
                       {[
-
-                         {
+                        {
                           title: "MGT-7 2024-2025",
                           url: "https://apisindia.s3.ap-south-1.amazonaws.com/MGT-7-AR-2024-25.pdf",
                         },
@@ -2860,13 +3760,14 @@ export default function Investors() {
                           url: "https://apisindia.s3.ap-south-1.amazonaws.com/apisPdf/annualReturn/MGT-7.pdf",
                         },
                       ].map(({ title, url }, index) => (
-                        <tr
-                          key={index}
-                          className="border-b-2 border-[#003366]"
-                        >
+                        <tr key={index} className="border-b-2 border-[#003366]">
                           <td className="px-4 py-2">{title}</td>
                           <td className="px-4 py-2">
-                            <a href={url} target="_blank" rel="noopener noreferrer">
+                            <a
+                              href={url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
@@ -2882,8 +3783,6 @@ export default function Investors() {
         {/*  */}
       </div>
     </div>
-
-
   );
 }
 
