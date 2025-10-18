@@ -1134,6 +1134,7 @@ export default function Investors() {
                         >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
+                        <p>Intimation Of Board Meeting</p>
                       </td>
 
                       <td className="border p-2">
@@ -1144,6 +1145,7 @@ export default function Investors() {
                         >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
+                        <p>Outcome Of Board Meeting</p>
                       </td>
 
                       <td className="border p-2">
@@ -1154,6 +1156,7 @@ export default function Investors() {
                         >
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
+                        <p>Postal Ballot Notice</p>
                       </td>
                     </tr>
 
