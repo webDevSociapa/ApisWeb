@@ -44,40 +44,41 @@ const ContactForm = () => {
       return;
     }
 
-    if (!captchaToken) {
-      setPopupMessage("Please confirm you are not a robot.");
-      setMessageInfo(true);
-      return;
-    }
+    // if (!captchaToken) {
+    //   setPopupMessage("Please confirm you are not a robot.");
+    //   setMessageInfo(true);
+    //   return;
+    // }
 
-    try {
-      const response = await axios.post(
-        "/api/sendMail",
-        { ...formData, captchaToken },
-        {
-          headers: { "Content-Type": "application/json" },
-        }
-      );
+    // try {
+    //   const response = await axios.post(
+    //     "/api/sendMail",
+    //     { ...formData, captchaToken },
+    //     {
+    //       headers: { "Content-Type": "application/json" },
+    //     }
+    //   );
 
-      if (response.data.status) {
-        setPopupMessage(
-          "Thank you! We've received your query. Our team will be in touch with you shortly!"
-        );
-        setMessageInfo(true);
-        setFormData({
-          fullName: "",
-          cityLocation: "",
-          emailAddress: "",
-          phoneNumber: "",
-          message: "",
-        });
-        setCaptchaToken(null); // Reset CAPTCHA
-      } else {
-        setPopupMessage("Failed to send query. Please try again.");
-      }
-    } catch (error) {
-      setPopupMessage("An error occurred. Please try again.");
-    }
+    //   if (response.data.status) {
+    //     setPopupMessage(
+    //       "Thank you! We've received your query. Our team will be in touch with you shortly!"
+    //     );
+    //     setMessageInfo(true);
+    //     setFormData({
+    //       fullName: "",
+    //       cityLocation: "",
+    //       emailAddress: "",
+    //       phoneNumber: "",
+    //       message: "",
+    //     });
+    //     setCaptchaToken(null); // Reset CAPTCHA
+    //   } else {
+    //     setPopupMessage("Failed to send query. Please try again.");
+    //   }
+    //   console.log(formData);
+    // } catch (error) {
+    //   setPopupMessage("An error occurred. Please try again.");
+    // }
   };
 
   useEffect(() => {
@@ -213,9 +214,9 @@ const ContactForm = () => {
             />
           </div>
 
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <ReCAPTCHA sitekey={SITE_KEY} onChange={handleCaptcha} />
-          </div>
+          </div> */}
 
           <div className="text-center">
             <button
