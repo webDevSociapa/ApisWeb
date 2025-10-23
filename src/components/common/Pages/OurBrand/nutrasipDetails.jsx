@@ -121,8 +121,42 @@ const NutrasipDetails = () => {
           />
         </div>
         {/* Benefits Section */}
-        <div className="w-full flex flex-row flex-wrap md:flex-nowrap px-4 md:px-0 -mt-[40px]">
-          {renderBenefits(benefits)}
+        <div className="w-full flex flex-wrap justify-center items-center gap-8 mt-[10px] mb-[10px]">
+          <div className="flex flex-col items-center text-center">
+            <Image
+              src="https://main.d48ln31wxsfnc.amplifyapp.com/nutrasip/green-tea-lemon/boosts-immunity.png"
+              alt="Boosts Immunity"
+              width={120}
+              height={120}
+            />
+            <p className="mt-3 text-black text-base font-medium">
+              Boosts Immunity
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center text-center">
+            <Image
+              src="https://main.d48ln31wxsfnc.amplifyapp.com/nutrasip/green-tea-lemon/detoxifies-body.png"
+              alt="Detoxifies Body"
+              width={120}
+              height={120}
+            />
+            <p className="mt-3 text-black text-base font-medium">
+              Detoxifies Body
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center text-center">
+            <Image
+              src="https://main.d48ln31wxsfnc.amplifyapp.com/nutrasip/green-tea-lemon/rich-in-antioxidants.png"
+              alt="Rich in Antioxidants"
+              width={120}
+              height={120}
+            />
+            <p className="mt-3 text-black text-base font-medium">
+              Rich in Antioxidants
+            </p>
+          </div>
         </div>
 
         <div></div>
@@ -279,6 +313,44 @@ const NutrasipDetails = () => {
             wellness embracing you from within. Every sip restores balance,
             leaving you refreshed, light, and rejuvenated.
           </p>
+          {/* Benefits Section */}
+          <div className="w-full flex flex-wrap justify-center items-center gap-8 mt-[50px] mb-[50px]">
+            <div className="flex flex-col items-center text-center">
+              <Image
+                src="https://main.d48ln31wxsfnc.amplifyapp.com/nutrasip/green-tea-detox/power-of-herbs.png"
+                alt="Power Of Herbs"
+                width={120}
+                height={120}
+              />
+              <p className="mt-3 text-black text-base font-medium">
+                Power Of Herbs
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center">
+              <Image
+                src="https://main.d48ln31wxsfnc.amplifyapp.com/nutrasip/green-tea-detox/zero-bitterness.png"
+                alt="Zero Bitterness"
+                width={120}
+                height={120}
+              />
+              <p className="mt-3 text-black text-base font-medium">
+                Zero Bitterness
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center">
+              <Image
+                src="https://main.d48ln31wxsfnc.amplifyapp.com/nutrasip/green-tea-detox/detoxifies-body.png"
+                alt="Detoxifies Body"
+                width={120}
+                height={120}
+              />
+              <p className="mt-3 text-black text-base font-medium">
+                Detoxifies Body
+              </p>
+            </div>
+          </div>
         </div>
         <div className="flex flex-col items-center justify-center px-4 md:px-0">
           <Image
