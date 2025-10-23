@@ -5,10 +5,12 @@ import { NextResponse } from "next/server";
 export async function POST(req) {
   try {
     const body = await req.json();
+    console.log("Received body:", body);
     const { fullName, cityLocation, emailAddress, phoneNumber, message } = body;
 
     // MongoDB connection
-    const uri = "mongodb+srv://webdev:2OmPVj8DUdEaU1wR@apisindia.38dfp.mongodb.net";
+    const uri =
+      "mongodb+srv://webdev:2OmPVj8DUdEaU1wR@apisindia.38dfp.mongodb.net";
     const client = new MongoClient(uri);
 
     try {
@@ -58,7 +60,6 @@ ${message}
       await client.close(); // ✅ Always close connection
     }
   } catch (error) {
-    console.error("Error handling POST request:", error);
-    return NextResponse.json({ message: error.message }, { status: 500 });
+    console.error("Error in POST /sendMail:");
   }
 }

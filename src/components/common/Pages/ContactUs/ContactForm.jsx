@@ -23,62 +23,95 @@ const ContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleCaptcha = (token) => {
-    setCaptchaToken(token);
-  };
+  // const handleCaptcha = (token) => {
+  //   setCaptchaToken(token);
+  // };
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  //   if (!emailRegex.test(formData.emailAddress)) {
+  //     setPopupMessage("Please enter a valid email address.");
+  //     setMessageInfo(true);
+  //     return;
+  //   }
+
+  //   const phoneRegex = /^[6-9]\d{9}$/;
+  //   if (!phoneRegex.test(formData.phoneNumber)) {
+  //     setPopupMessage("Please enter a valid 10-digit phone number.");
+  //     setMessageInfo(true);
+  //     return;
+  //   }
+
+  //   // if (!captchaToken) {
+  //   //   setPopupMessage("Please confirm you are not a robot.");
+  //   //   setMessageInfo(true);
+  //   //   return;
+  //   // }
+
+  //   try {
+  //     const response = await axios.post(
+  //       "/api/sendMail",
+  //       {
+  //         ...formData,
+  //         // captchaToken,
+  //       },
+  //       {
+  //         headers: { "Content-Type": "application/json" },
+  //       }
+  //     );
+
+  //     if (response.data.status) {
+  //       setPopupMessage(
+  //         "Thank you! We've received your query. Our team will be in touch with you shortly!"
+  //       );
+  //       setMessageInfo(true);
+  //       setFormData({
+  //         fullName: "",
+  //         cityLocation: "",
+  //         emailAddress: "",
+  //         phoneNumber: "",
+  //         message: "",
+  //       });
+  //       setCaptchaToken(null); // Reset CAPTCHA
+  //     } else {
+  //       setPopupMessage("Failed to send query. Please try again.");
+  //     }
+  //     // console.log(formData);
+  //   } catch (error) {
+  //     setPopupMessage("An error occurred. Please try again.");
+  //   }
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.emailAddress)) {
-      setPopupMessage("Please enter a valid email address.");
-      setMessageInfo(true);
-      return;
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setPopupMessage(data.message);
+        setFormData({
+          fullName: "",
+          cityLocation: "",
+          emailAddress: "",
+          phoneNumber: "",
+          message: "",
+        });
+      } else {
+        setPopupMessage("Failed to submit form. Try again!");
+      }
+    } catch (err) {
+      console.error("Error submitting form:", err);
+      setPopupMessage("An error occurred. Please try again.");
     }
-
-    const phoneRegex = /^[6-9]\d{9}$/;
-    if (!phoneRegex.test(formData.phoneNumber)) {
-      setPopupMessage("Please enter a valid 10-digit phone number.");
-      setMessageInfo(true);
-      return;
-    }
-
-    // if (!captchaToken) {
-    //   setPopupMessage("Please confirm you are not a robot.");
-    //   setMessageInfo(true);
-    //   return;
-    // }
-
-    // try {
-    //   const response = await axios.post(
-    //     "/api/sendMail",
-    //     { ...formData, captchaToken },
-    //     {
-    //       headers: { "Content-Type": "application/json" },
-    //     }
-    //   );
-
-    //   if (response.data.status) {
-    //     setPopupMessage(
-    //       "Thank you! We've received your query. Our team will be in touch with you shortly!"
-    //     );
-    //     setMessageInfo(true);
-    //     setFormData({
-    //       fullName: "",
-    //       cityLocation: "",
-    //       emailAddress: "",
-    //       phoneNumber: "",
-    //       message: "",
-    //     });
-    //     setCaptchaToken(null); // Reset CAPTCHA
-    //   } else {
-    //     setPopupMessage("Failed to send query. Please try again.");
-    //   }
-    //   console.log(formData);
-    // } catch (error) {
-    //   setPopupMessage("An error occurred. Please try again.");
-    // }
   };
 
   useEffect(() => {
