@@ -92,7 +92,7 @@ const NutrasipDetails = () => {
 
   return (
     <div className="relative flex flex-col items-center justify-center w-full">
-      <ImageBanner banner="https://main.d48ln31wxsfnc.amplifyapp.com/brands/nutrasip/page-banner.png" />
+      <ImageBanner banner="https://main.d48ln31wxsfnc.amplifyapp.com/nutrasip/banner/banner.png" />
 
       <div className="grid gap-4 md:gap-8 grid-cols-1 md:grid-cols-2">
         {/* Text Section */}
@@ -126,8 +126,8 @@ const NutrasipDetails = () => {
             <Image
               src="https://main.d48ln31wxsfnc.amplifyapp.com/nutrasip/green-tea-lemon/boosts-immunity.png"
               alt="Boosts Immunity"
-              width={120}
-              height={120}
+              width={100}
+              height={100}
             />
             <p className="mt-3 text-black text-base font-medium">
               Boosts Immunity
@@ -138,8 +138,8 @@ const NutrasipDetails = () => {
             <Image
               src="https://main.d48ln31wxsfnc.amplifyapp.com/nutrasip/green-tea-lemon/detoxifies-body.png"
               alt="Detoxifies Body"
-              width={120}
-              height={120}
+              width={100}
+              height={100}
             />
             <p className="mt-3 text-black text-base font-medium">
               Detoxifies Body
@@ -150,12 +150,22 @@ const NutrasipDetails = () => {
             <Image
               src="https://main.d48ln31wxsfnc.amplifyapp.com/nutrasip/green-tea-lemon/rich-in-antioxidants.png"
               alt="Rich in Antioxidants"
-              width={120}
-              height={120}
+              width={100}
+              height={100}
             />
             <p className="mt-3 text-black text-base font-medium">
               Rich in Antioxidants
             </p>
+          </div>
+
+          <div className="flex flex-col items-center text-center">
+            <Image
+              src="https://main.d48ln31wxsfnc.amplifyapp.com/nutrasip/green-tea-detox/tea-bag.png"
+              alt="10 Tea Bags"
+              width={100}
+              height={100}
+            />
+            <p className="mt-3 text-black text-base font-medium">10 Tea Bags</p>
           </div>
         </div>
 
@@ -244,6 +254,7 @@ const NutrasipDetails = () => {
                   "Rich in Antioxidants",
                   "Boosts Immunity",
                   "Detoxifies Body",
+                  "10 Tea Bags",
                 ].map((text, i) => (
                   <li
                     key={i}
@@ -317,10 +328,10 @@ const NutrasipDetails = () => {
           <div className="w-full flex flex-wrap justify-center items-center gap-8 mt-[50px] mb-[50px]">
             <div className="flex flex-col items-center text-center">
               <Image
-                src="https://main.d48ln31wxsfnc.amplifyapp.com/nutrasip/green-tea-detox/power-of-herbs.png"
+                src="https://main.d48ln31wxsfnc.amplifyapp.com/nutrasip/green-tea-detox/8herbs.png"
                 alt="Power Of 8 Herbs"
-                width={120}
-                height={120}
+                width={100}
+                height={100}
               />
               <p className="mt-3 text-black text-base font-medium">
                 Power Of 8 Herbs
@@ -329,10 +340,10 @@ const NutrasipDetails = () => {
 
             <div className="flex flex-col items-center text-center">
               <Image
-                src="https://main.d48ln31wxsfnc.amplifyapp.com/nutrasip/green-tea-detox/zero-bitterness.png"
+                src="https://main.d48ln31wxsfnc.amplifyapp.com/nutrasip/green-tea-detox/zero-new.png"
                 alt="Zero Bitterness"
-                width={120}
-                height={120}
+                width={100}
+                height={100}
               />
               <p className="mt-3 text-black text-base font-medium">
                 Zero Bitterness
@@ -341,13 +352,25 @@ const NutrasipDetails = () => {
 
             <div className="flex flex-col items-center text-center">
               <Image
-                src="https://main.d48ln31wxsfnc.amplifyapp.com/nutrasip/green-tea-detox/detoxifies-body.png"
+                src="https://main.d48ln31wxsfnc.amplifyapp.com/nutrasip/green-tea-lemon/detoxifies-body.png"
                 alt="Detoxifies Body"
-                width={120}
-                height={120}
+                width={100}
+                height={100}
               />
               <p className="mt-3 text-black text-base font-medium">
                 Detoxifies Body
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center">
+              <Image
+                src="https://main.d48ln31wxsfnc.amplifyapp.com/nutrasip/green-tea-detox/tea-bag.png"
+                alt="10 Tea Bags"
+                width={100}
+                height={100}
+              />
+              <p className="mt-3 text-black text-base font-medium">
+                10 Tea Bags
               </p>
             </div>
           </div>
@@ -466,38 +489,41 @@ const NutrasipDetails = () => {
             <div className="w-full max-w-[520px] bg-white/80 border border-[#E7DCC8] rounded-[14px] p-4 md:p-6 shadow-sm">
               <p className="sr-only">Benefits list</p>
               <ul className="flex flex-col gap-3 md:gap-4">
-                {["Power of 8 Herbs", "Zero Bitterness", "Detoxifies Body"].map(
-                  (text, i) => (
-                    <li
-                      key={i}
-                      className="flex items-start gap-3 md:gap-4 bg-[#FFF9F0] rounded-lg px-3 py-2 md:px-4 md:py-3 border border-transparent hover:border-[#E6D3B3] transition-colors"
-                    >
-                      <span className="flex-shrink-0 mt-1">
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          aria-hidden="true"
-                          className="text-[#9F7B49]"
-                        >
-                          <path
-                            d="M20 6L9 17l-5-5"
-                            stroke="#9F7B49"
-                            strokeWidth="2.2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </span>
+                {[
+                  "Power of 8 Herbs",
+                  "Zero Bitterness",
+                  "Detoxifies Body",
+                  "10 Tea Bags",
+                ].map((text, i) => (
+                  <li
+                    key={i}
+                    className="flex items-start gap-3 md:gap-4 bg-[#FFF9F0] rounded-lg px-3 py-2 md:px-4 md:py-3 border border-transparent hover:border-[#E6D3B3] transition-colors"
+                  >
+                    <span className="flex-shrink-0 mt-1">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                        className="text-[#9F7B49]"
+                      >
+                        <path
+                          d="M20 6L9 17l-5-5"
+                          stroke="#9F7B49"
+                          strokeWidth="2.2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </span>
 
-                      <span className="text-sm md:text-base text-[#454545] font-jost leading-tight">
-                        {text}
-                      </span>
-                    </li>
-                  )
-                )}
+                    <span className="text-sm md:text-base text-[#454545] font-jost leading-tight">
+                      {text}
+                    </span>
+                  </li>
+                ))}
               </ul>
             </div>
             <Image
