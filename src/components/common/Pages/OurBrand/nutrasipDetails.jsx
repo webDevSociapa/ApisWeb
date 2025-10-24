@@ -318,12 +318,12 @@ const NutrasipDetails = () => {
             <div className="flex flex-col items-center text-center">
               <Image
                 src="https://main.d48ln31wxsfnc.amplifyapp.com/nutrasip/green-tea-detox/power-of-herbs.png"
-                alt="Power Of Herbs"
+                alt="Power Of 8 Herbs"
                 width={120}
                 height={120}
               />
               <p className="mt-3 text-black text-base font-medium">
-                Power Of Herbs
+                Power Of 8 Herbs
               </p>
             </div>
 
@@ -466,7 +466,7 @@ const NutrasipDetails = () => {
             <div className="w-full max-w-[520px] bg-white/80 border border-[#E7DCC8] rounded-[14px] p-4 md:p-6 shadow-sm">
               <p className="sr-only">Benefits list</p>
               <ul className="flex flex-col gap-3 md:gap-4">
-                {["Power of Herbs", "Zero Bitterness", "Detoxifies Body"].map(
+                {["Power of 8 Herbs", "Zero Bitterness", "Detoxifies Body"].map(
                   (text, i) => (
                     <li
                       key={i}
