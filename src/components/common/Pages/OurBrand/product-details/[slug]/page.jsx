@@ -16,13 +16,13 @@ import { GGP, NEWS_DATA, NUTRASHIP, PRODUCT_DATA } from "@/lib/constants";
 import Link from "next/link";
 import FlowerRun from "@/assets/images/home-banner-section/flowerRun.gif";
 import Mockup500 from "@/assets/images/OurBrands/mockup500.png";
-import HimalayaHoney5rs from "@/assets/images/OurBrands/5rsHimalayaHoney.png";
-import HimalayaHoney500 from "@/assets/images/OurBrands/500gramHimalayaHoney.png";
+import HimalayaHoney5rs from "@/assets/images/OurBrands/himalaya_100gm_front.png";
+import HimalayaHoney500 from "@/assets/images/OurBrands/himalaya_1kg_front.png";
 import HimalayaHoney1kg from "@/assets/images/OurBrands/1kgHimalayaHoney.png";
 
 import RegularHoney1 from "@/assets/images/OurBrands/1kgRegularHoney.png";
 import RegularHoney400 from "@/assets/images/OurBrands/400gramSqueezyRegularHoney.png";
-import RegularHoney500 from "@/assets/images/OurBrands/500gramRegularHoney.png";
+import RegularHoney500 from "@/assets/images/OurBrands/regular_1kg_front.png";
 import ChilliInfusedHoney from "@/assets/images/OurBrands/ChilliinfusedHoney_Front.png";
 import GingerInfusedHoney from "@/assets/images/OurBrands/GingerInfusedHoney.png";
 import LemonInfusedHoney from "@/assets/images/OurBrands/LemonInfusedHoney.png";
@@ -256,9 +256,9 @@ const ProductDetails = () => {
                       {itm.name}
                     </p>
                     {/* <p className="text-lg text-[#454545] mt-2">{itm.desc}</p> */}
-                    <button className="border mt-4 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-8 text-xs md:text-base py-1 md:py-3 font-bold text-white">
+                    {/* <button className="border mt-4 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-8 text-xs md:text-base py-1 md:py-3 font-bold text-white">
                       View Details
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               ))}
@@ -298,9 +298,9 @@ const ProductDetails = () => {
                       {itm.name}
                     </p>
                     {/* <p className="text-lg text-[#454545] mt-2">{itm.desc}</p> */}
-                    <button className="border mt-4 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-8 text-xs md:text-base py-1 md:py-3 font-bold text-white">
+                    {/* <button className="border mt-4 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-8 text-xs md:text-base py-1 md:py-3 font-bold text-white">
                       View Details
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               ))}
@@ -386,7 +386,7 @@ const ProductDetails = () => {
               />
               <Link href={selectedProduct?.link} target="_blank">
                 <button className="border mt-8 border-[#9F7B49] bg-[#9F7B49] px-6 md:px-12 text-xs md:text-base py-2 md:py-3 font-bold text-white">
-                  Available on
+                  Available on Amazon
                 </button>
               </Link>
             </div>

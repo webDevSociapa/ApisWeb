@@ -233,8 +233,8 @@ import DatesNewIcons3 from "@/assets/images/OurBrands/High-Energy-&-Low-Fat-Date
 import DatesNewIcons4 from "@/assets/images/OurBrands/High-in-Fibre_Date_Icon.png";
 
 import VermicalliFinal from "@/assets/images/OurBrands/vermicaliFinal1.png";
-import RegularHoneyFinal from "@/assets/images/OurBrands/regular-honey-final.png";
-import HimalayaHoneyFinal from "@/assets/images/OurBrands/himalaya-honey-final.png";
+import RegularHoneyFinal from "@/assets/images/OurBrands/regular-honey-banner.png";
+import HimalayaHoneyFinal from "@/assets/images/OurBrands/himalaya-honey-banner.png";
 import InfusedHoneyFinal from "@/assets/images/OurBrands/infused-honey-final.png";
 
 import VermicalliIcon1 from "@/assets/images/OurBrands/Low-Cholestrol-Vermicelli.png";
@@ -1502,7 +1502,7 @@ export const Blog_Data = [
             </div><!-- .entry-header -->
                 <div class="entry-content">
             <p>Amla, also known as the Indian Gooseberry, is a miraculous berry that can be eaten raw, pickled, juiced, etc. According to Ayurveda, the fruit helps people balance the three doshas—Kappa, Vitta, and Pitta—if we eat it every day. In Sanskrit, this nutrient-dense superfood is also known as “Amlakhi,” which translates to “Nectar of Life.” It has the highest level of Vitamin C when compared to other Vitamin C-rich fruits.</p>
-<p>On the other hand, honey is well recognised as a natural sweetener with significant nutritional value. As the “Queen of Sweetness,” 100% pure Himalayahoney made by bees provides wonderful health advantages that can assist you with everything from shedding extra pounds to minimizing fine lines on your face.</p>
+<p>On the other hand, honey is well recognised as a natural sweetener with significant nutritional value. As the “Queen of Sweetness,” pure Himalayahoney made by bees provides wonderful health advantages that can assist you with everything from shedding extra pounds to minimizing fine lines on your face.</p>
 <p>It is now well known that amla and honey can shield us from a wide range of illnesses. They function brilliantly when combined. Additionally, soaking amla in honey lengthens its shelf life.</p>
 <p>One of the best foods you can rely on to give your body the critical nutrients it needs is honey that has been infused with amla.</p>
 <p><strong>What are the Benefits of Amla Infused Honey?</strong></p>
@@ -1528,7 +1528,7 @@ export const Blog_Data = [
 </ol>
 <p>For those with diabetes, amla and honey is the ideal combination. The combination aids in maintaining the body’s release of insulin, which helps to regulate blood pressure. Consuming amla with&nbsp;honey promotes overall wellbeing while assisting diabetic patients in maintaining their blood sugar levels. But before you decide to take it, it’s always a good idea to talk to your doctor.</p>
 <p>You can benefit from the rare pairing of amla and honey in addition to the ways listed above, and it also aids in internal cleansing, clearing, and restoration. It also functions as an effective anti-treatment that aids in slowing down skin ageing.</p>
-<p>You can rely on APIS’s 100% pure Himalaya honey to be excellent.Apishoney &nbsp;crafted with love and care so that you, your family and friends can grab the essential benefits. So, what are you waiting for?</p>
+<p>You can rely on APIS’s pure Himalaya honey to be excellent.Apishoney &nbsp;crafted with love and care so that you, your family and friends can grab the essential benefits. So, what are you waiting for?</p>
 <p>Order your honey jar now!</p>
     </div>`,
   },

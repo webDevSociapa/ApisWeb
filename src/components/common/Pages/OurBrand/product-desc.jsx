@@ -38,22 +38,31 @@ export default function ProductDesc() {
     selectedProduct.name === "HimalayaHoney"
       ? defaultDescription
       : {
-        name: selectedProduct.title || "Organic Honey",
-        description:
-          selectedProduct.product_desc ||
-          "Sourced from the beautiful Kashmir Valley, Apis Organic Honey is an allegory of organic purity. With consistent & delectable natural taste, Apis Organic Honey is patiently extracted & packaged to retain its untouched goodness and flavor!",
-        weight: selectedProduct.weight || ["250g", "500g", "1kg"],
-        nutritionalInfo: selectedProduct.nutritionalInfo || [],
-      };
+          name: selectedProduct.title || "Organic Honey",
+          description:
+            selectedProduct.product_desc ||
+            "Sourced from the beautiful Kashmir Valley, Apis Organic Honey is an allegory of organic purity. With consistent & delectable natural taste, Apis Organic Honey is patiently extracted & packaged to retain its untouched goodness and flavor!",
+          weight: selectedProduct.weight || ["250g", "500g", "1kg"],
+          nutritionalInfo: selectedProduct.nutritionalInfo || [],
+        };
 
   return (
     <div className="container mx-auto px-4 py-8 flex flex-col justify-between h-full">
       <div className="flex flex-col items-center">
-
         {selectedProduct.name === "HimalayaHoney" ? (
-          <Image src={HimalayaHoney0001} alt="Himalaya Honey" width={400} height={300} />
+          <Image
+            src={HimalayaHoney0001}
+            alt="Himalaya Honey"
+            width={400}
+            height={300}
+          />
         ) : (
-          <Image src={product_img_1?.src} alt="Product Image" width={400} height={300} />
+          <Image
+            src={product_img_1?.src}
+            alt="Product Image"
+            width={400}
+            height={300}
+          />
         )}
         <div className="mt-auto flex justify-center mb-4">
           <Link
@@ -61,12 +70,14 @@ export default function ProductDesc() {
             target="_blank"
           >
             <button className="border border-[#9F7B49] bg-[#9F7B49] px-6 md:px-12 text-xs md:text-base py-2 md:py-3 font-bold text-white">
-              Available on
+              Available on Amazon
             </button>
           </Link>
         </div>
         <h1 className="text-3xl font-semibold mt-4">{productData.name}</h1>
-        <p className="text-gray-700 text-center mt-2">{productData.description}</p>
+        <p className="text-gray-700 text-center mt-2">
+          {productData.description}
+        </p>
       </div>
 
       <div className="mt-8">
@@ -95,7 +106,9 @@ export default function ProductDesc() {
             )}
             <tr>
               <td className="border px-4 py-2">Shelf Life</td>
-              <td className="border px-4 py-2">{productData.shelfLife || "24 months"}</td>
+              <td className="border px-4 py-2">
+                {productData.shelfLife || "24 months"}
+              </td>
             </tr>
           </tbody>
         </table>
@@ -122,9 +135,6 @@ export default function ProductDesc() {
           </table>
         </div>
       )}
-
-
     </div>
-
   );
 }

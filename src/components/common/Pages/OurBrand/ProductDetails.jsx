@@ -254,9 +254,9 @@ const ProductDetails = () => {
                       {itm.name}
                     </p>
                     {/* <p className="text-lg text-[#454545] mt-2">{itm.desc}</p> */}
-                    <button className="border mt-4 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-8 text-xs md:text-base py-1 md:py-3 font-bold text-white">
+                    {/* <button className="border mt-4 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-8 text-xs md:text-base py-1 md:py-3 font-bold text-white">
                       View Details
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               ))}
@@ -296,9 +296,9 @@ const ProductDetails = () => {
                       {itm.name}
                     </p>
                     {/* <p className="text-lg text-[#454545] mt-2">{itm.desc}</p> */}
-                    <button className="border mt-4 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-8 text-xs md:text-base py-1 md:py-3 font-bold text-white">
+                    {/* <button className="border mt-4 border-[#9F7B49] bg-[#9F7B49] px-3 md:px-8 text-xs md:text-base py-1 md:py-3 font-bold text-white">
                       View Details
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               ))}
@@ -384,7 +384,7 @@ const ProductDetails = () => {
               />
               <Link href={selectedProduct?.link} target="_blank">
                 <button className="border mt-8 border-[#9F7B49] bg-[#9F7B49] px-6 md:px-12 text-xs md:text-base py-2 md:py-3 font-bold text-white">
-                  Available on
+                  Available on Amazon
                 </button>
               </Link>
             </div>
