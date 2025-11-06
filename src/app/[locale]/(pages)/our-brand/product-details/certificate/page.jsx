@@ -70,8 +70,10 @@ const page = () => {
       <div className="w-full relative h-full">
         <ImageBanner banner={Banner} className="h-full w-full" />
         <Image
-          src={GurrentyBadge}
-          className="hidden z-0 -bottom-[100px] right-0 lg:inline absolute h-[375px] w-[375px]"
+          src="https://main.d48ln31wxsfnc.amplifyapp.com/pure-stamp.png"
+          className="hidden z-0 -bottom-[100px] right-0 lg:inline absolute"
+          width={175}
+          height={175}
         />
       </div>
       <p className="font-bold text-[#84663C] md:text-[40px] text-[20px] w-[75%] capitalize text-center">
