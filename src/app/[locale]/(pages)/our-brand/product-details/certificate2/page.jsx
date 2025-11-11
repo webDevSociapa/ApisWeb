@@ -33,7 +33,8 @@ const page = () => {
       "DS02LG091",
       "DS04AH099",
       "DS13BH115",
-      "DS26HH057", // new batch number
+      "DS26HH057",
+      "DS13IH068", // new batch number
     ];
 
     // ✅ Check if entered batch number is in the allowed list
@@ -147,8 +148,8 @@ const page = () => {
               />
             </div>
             <p className="text-center text-sm md:text-xl flex-grow flex items-center justify-center">
-              Each batch of apis honey is 100% pure, free from adulterates or
-              Added sugar & passes all quality test parameters.
+              Each batch of apis honey is pure, free from adulterates or Added
+              sugar & passes all quality test parameters.
             </p>
           </div>
           <div className="w-[90%] md:w-[510px] shadow-lg p-3 md:p-6 border border-[#9F7B49] bg-[#FFFBF6] h-[300px] flex flex-col">
