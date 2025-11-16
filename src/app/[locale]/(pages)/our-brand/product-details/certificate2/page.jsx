@@ -34,7 +34,8 @@ const page = () => {
       "DS04AH099",
       "DS13BH115",
       "DS26HH057",
-      "DS13IH068", // new batch number
+      "DS13IH068",
+      "DS07JH079", // new batch number
     ];
 
     // ✅ Check if entered batch number is in the allowed list
