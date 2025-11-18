@@ -1158,6 +1158,17 @@ export default function Investors() {
                         </a>
                         <p>Postal Ballot Notice</p>
                       </td>
+
+                      <td className="border p-2">
+                        <a
+                          href="https://main.d48ln31wxsfnc.amplifyapp.com/postal-ballots/newspaper-publication.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Image src={pdficon1} alt="PDF" width="30" />
+                        </a>
+                        <p>Newspaper Publication</p>
+                      </td>
                     </tr>
 
                     {/* Repeat similarly for 2022 to 2018 */}
@@ -1847,6 +1858,16 @@ export default function Investors() {
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
+                          {/* 18-11-2025 */}
+                          <td className="border p-2">
+                            <a
+                              href="https://main.d48ln31wxsfnc.amplifyapp.com/financial-information/q2-result-notice.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <Image src={pdficon1} alt="PDF" width="30" />
+                            </a>
+                          </td>
                         </tr>
                         <tr>
                           <td className="border p-2">2024-2025</td>
@@ -2159,6 +2180,16 @@ export default function Investors() {
                           <td className="border p-2">
                             <a
                               href="https://apisindia.s3.ap-south-1.amazonaws.com/Outcome+of+the+Board+Meeting.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <Image src={pdficon1} alt="PDF" width="30" />
+                            </a>
+                          </td>
+                          {/* 18-11-2025 */}
+                          <td className="border p-2">
+                            <a
+                              href="https://main.d48ln31wxsfnc.amplifyapp.com/financial-information/q2-result.pdf"
                               target="_blank"
                               rel="noopener noreferrer"
                             >
@@ -2941,6 +2972,16 @@ export default function Investors() {
                       <td className="border px-4 py-2">
                         <a
                           href="https://apisindia.s3.ap-south-1.amazonaws.com/Intimation+under+Reg.30-Newspeper+Advertisement.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Image src={pdficon1} alt="PDF" width="30" />
+                        </a>
+                      </td>
+                      {/* 18-11-2025 */}
+                      <td className="border px-4 py-2">
+                        <a
+                          href="https://main.d48ln31wxsfnc.amplifyapp.com/newspaper-publication/q2-publication-of-results.pdf"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
