@@ -238,9 +238,9 @@ const ProductDetails = () => {
           <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
             <EmblaCarousel options={OPTIONS} autoScroll>
               {[
-                { name: "10gm", img: RegularHoney1, desc: "Sample pack" },
-                { name: "100gm", img: RegularHoney400, desc: "Medium pack" },
-                { name: "1kg", img: RegularHoney500, desc: "Family pack" },
+                { name: "10gm", img:  RegularHoney400, desc: "Sample pack" },
+                { name: "100gm", img: RegularHoney500, desc: "Medium pack" },
+                { name: "1kg", img: RegularHoney1, desc: "Family pack" },
               ].map((itm, index) => (
                 <div className="embla__slide" key={index}>
                   {/* Same fixed height for all slides */}
@@ -281,9 +281,9 @@ const ProductDetails = () => {
           <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
             <EmblaCarousel options={OPTIONS} autoScroll>
               {[
-                { name: "10gm", img: HimalayaHoney1kg, desc: "2" },
-                { name: "100gm", img: HimalayaHoney5rs, desc: "2" },
-                { name: "1kg", img: HimalayaHoney500, desc: "2" },
+                { name: "10gm", img: HimalayaHoney5rs, desc: "2" },
+                { name: "100gm", img: HimalayaHoney500, desc: "2" },
+                { name: "1kg", img: HimalayaHoney1kg, desc: "2" },
               ].map((itm, index) => (
                 <div className="embla__slide" key={index}>
                   <div className="embla__slide__number h-[350px] w-full flex flex-col items-center justify-start mt-6">

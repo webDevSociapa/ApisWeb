@@ -92,7 +92,7 @@ const NutrasipDetails = () => {
 
   return (
     <div className="relative flex flex-col items-center justify-center w-full">
-      <ImageBanner banner="https://main.d48ln31wxsfnc.amplifyapp.com/nutrasip/banner/banner.png" />
+      <ImageBanner banner="https://main.d48ln31wxsfnc.amplifyapp.com/nutrasip/banner/banner-new.jpg" />
 
       <div className="grid gap-4 md:gap-8 grid-cols-1 md:grid-cols-2">
         {/* Text Section */}
