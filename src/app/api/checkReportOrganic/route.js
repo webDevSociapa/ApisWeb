@@ -105,6 +105,14 @@ export async function POST(req) {
         report_no: "IFS-251017037",
         report_no1: "AIL/FG/5035/2025",
       },
+      {
+        "entity_id": "26",
+        "batch_number": "DS21KH103",
+        "packed_on": "Nov-25",
+        "report_no": "IFS-251124170",
+        "report_no1": "AIL/FG/5088/2025",
+        "packing_status": "PACKED"
+      }
     ];
 
     // ✅ Find batch data from hardcoded array

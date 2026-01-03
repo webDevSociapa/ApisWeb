@@ -250,7 +250,7 @@ export default function OurBrand({ onProductClick }) {
                                             Himalaya Honey
                                           </button>
                                         </li>
-                                        <li>
+                                        {/* <li>
                                           <button
                                             className="hover:underline text-left w-full"
                                             onClick={() => {
@@ -260,7 +260,7 @@ export default function OurBrand({ onProductClick }) {
                                           >
                                             Regular Honey
                                           </button>
-                                        </li>
+                                        </li> */}
                                         <li>
                                           <button
                                             className="hover:underline text-left w-full"
