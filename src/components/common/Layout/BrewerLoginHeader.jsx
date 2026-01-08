@@ -4,12 +4,13 @@ import axios from 'axios';
 
 const BrewerLoginHeader = () => {
   const [headingContent, setHeadingContent] = useState('');
+  const [stockPrice, setStockPrice] = useState(null);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-
         const response = await axios.get("/api/HomePage/heading");
-        setHeadingContent(response.data[0].headingContent || "Default Headline"); // Use the default value if not provided
+        setHeadingContent(response.data[0].headingContent || "Default Headline");
         console.log("Fetched Data:", response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -18,12 +19,32 @@ const BrewerLoginHeader = () => {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const fetchStockPrice = async () => {
+      try {
+        const response = await axios.get("/api/stockPrice");
+        if (response.data.success && response.data.price) {
+          setStockPrice(response.data.price);
+        }
+      } catch (error) {
+        console.error("Error fetching stock price:", error);
+      }
+    };
+    
+    if (typeof window !== 'undefined') {
+      fetchStockPrice();
+    }
+  }, []);
+
 
   return (
     <header className="sticky top-0 z-[100] flex w-full">
       <div className="flex w-full items-center justify-between gap-2 bg-[#FFFBF6] px-2 sm:px-8 py-4 text-xl font-bold leading-[30px] text-[#835415] h-[25px]">
         <marquee>
           <p className="HeaderMarquee text-lg">
+            {stockPrice && (
+              <span className="font-semibold">Apis India Ltd BSE Price: ₹{stockPrice} | </span>
+            )}
             {headingContent}
           </p>
         </marquee>

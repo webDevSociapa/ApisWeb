@@ -74,9 +74,9 @@ async function createPDF(batchData) {
     });
 
     const imagePaths = [
-        path.join(process.cwd(), 'public', 'apispdf03.jpg'),
-        path.join(process.cwd(), 'public', 'apispdf01.jpg'),
-        path.join(process.cwd(), 'public', 'apispdf02.jpg'),
+        path.join(process.cwd(), 'public', 'certificate_1.jpg'),
+        path.join(process.cwd(), 'public', 'certificate_2.jpg'),
+        path.join(process.cwd(), 'public', 'certificate_3.jpg'),
     ];
 
     for (let i = 0; i < imagePaths.length; i++) {
