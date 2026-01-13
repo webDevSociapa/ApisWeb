@@ -25,11 +25,16 @@ export async function GET() {
         const meta = result.meta;
         
         const price = meta.regularMarketPrice || meta.currentPrice || meta.previousClose;
+        const previousClose = meta.previousClose || meta.chartPreviousClose || price;
+        const change = meta.regularMarketChange || (price - previousClose) || 0;
+        const changePercent = meta.regularMarketChangePercent || 
+                             ((change / previousClose) * 100) || 0;
         
         if (price && price > 0) {
           return NextResponse.json({
             success: true,
             price: parseFloat(price).toFixed(2),
+            changePercent: parseFloat(changePercent).toFixed(2),
             currency: "INR",
             symbol: "APIS",
             exchange: "BSE"

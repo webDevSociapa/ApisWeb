@@ -5,6 +5,7 @@ import axios from 'axios';
 const BrewerLoginHeader = () => {
   const [headingContent, setHeadingContent] = useState('');
   const [stockPrice, setStockPrice] = useState(null);
+  const [stockChangePercent, setStockChangePercent] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,6 +26,9 @@ const BrewerLoginHeader = () => {
         const response = await axios.get("/api/stockPrice");
         if (response.data.success && response.data.price) {
           setStockPrice(response.data.price);
+          if (response.data.changePercent !== undefined) {
+            setStockChangePercent(response.data.changePercent);
+          }
         }
       } catch (error) {
         console.error("Error fetching stock price:", error);
@@ -43,7 +47,27 @@ const BrewerLoginHeader = () => {
         <marquee>
           <p className="HeaderMarquee text-lg">
             {stockPrice && (
-              <span className="font-semibold">Apis India Ltd BSE Price: ₹{stockPrice} | </span>
+              <span className="font-semibold">
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                  className="w-4 h-4 inline align-middle mr-1"
+                >
+                  <polyline points="22 6 13.5 14.5 8.5 9.5 2 16"></polyline>
+                  <polyline points="16 6 22 6 22 12"></polyline>
+                </svg>
+                Apis India Ltd BSE Price: ₹{stockPrice}
+                {stockChangePercent !== null && (
+                  <span className={parseFloat(stockChangePercent) >= 0 ? 'text-green-600' : 'text-red-600'}>
+                    ({parseFloat(stockChangePercent) >= 0 ? '+' : ''}{stockChangePercent}%)
+                  </span>
+                )} | 
+              </span>
             )}
             {headingContent}
           </p>
