@@ -41,37 +41,93 @@ const BrewerLoginHeader = () => {
   }, []);
 
 
+  const marqueeContent = (
+    <>
+      {stockPrice && (
+        <span className="font-semibold">
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="2" 
+            strokeLinecap="round" 
+            strokeLinejoin="round"
+            className="w-4 h-4 inline align-middle mr-1"
+          >
+            <polyline points="22 6 13.5 14.5 8.5 9.5 2 16"></polyline>
+            <polyline points="16 6 22 6 22 12"></polyline>
+          </svg>
+          Apis India Ltd BSE Price: ₹{stockPrice}{" "}
+          {stockChangePercent !== null && (
+            <span className={parseFloat(stockChangePercent) >= 0 ? 'text-green-600' : 'text-red-600'}>
+              ({parseFloat(stockChangePercent) >= 0 ? '+' : ''}{stockChangePercent}%)
+            </span>
+          )} | {" "}
+        </span>
+      )}
+      {headingContent}
+    </>
+  );
+
   return (
-    <header className="sticky top-0 z-[100] flex w-full">
-      <div className="flex w-full items-center justify-between gap-2 bg-[#FFFBF6] px-2 sm:px-8 py-4 text-xl font-bold leading-[30px] text-[#835415] h-[25px]">
-        <marquee>
-          <p className="HeaderMarquee text-lg">
-            {stockPrice && (
-              <span className="font-semibold">
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
-                  className="w-4 h-4 inline align-middle mr-1"
-                >
-                  <polyline points="22 6 13.5 14.5 8.5 9.5 2 16"></polyline>
-                  <polyline points="16 6 22 6 22 12"></polyline>
-                </svg>
-                Apis India Ltd BSE Price: ₹{stockPrice}
-                {stockChangePercent !== null && (
-                  <span className={parseFloat(stockChangePercent) >= 0 ? 'text-green-600' : 'text-red-600'}>
-                    ({parseFloat(stockChangePercent) >= 0 ? '+' : ''}{stockChangePercent}%)
-                  </span>
-                )} | 
+    <>
+      <style>{`
+        @keyframes infinite-scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        .marquee-infinite {
+          display: inline-flex;
+          white-space: nowrap;
+          animation: infinite-scroll 60s linear infinite;
+        }
+        .marquee-infinite:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+      <header className="sticky top-0 z-[100] flex w-full">
+        <div className="flex w-full items-center justify-between gap-2 bg-[#FFFBF6] px-2 sm:px-8 py-4 text-xl font-bold leading-[30px] text-[#835415] h-[25px]">
+          <div className="flex-1 overflow-hidden relative">
+            <div className="marquee-infinite">
+              <span className="HeaderMarquee text-lg inline-block">
+                {marqueeContent}
+                <span className="mx-4">•</span>
               </span>
-            )}
-            {headingContent}
-          </p>
-        </marquee>
+              <span className="HeaderMarquee text-lg inline-block">
+                {marqueeContent}
+                <span className="mx-4">•</span>
+              </span>
+              <span className="HeaderMarquee text-lg inline-block">
+                {marqueeContent}
+                <span className="mx-4">•</span>
+              </span>
+              <span className="HeaderMarquee text-lg inline-block">
+                {marqueeContent}
+                <span className="mx-4">•</span>
+              </span>
+              <span className="HeaderMarquee text-lg inline-block">
+                {marqueeContent}
+                <span className="mx-4">•</span>
+              </span>
+              <span className="HeaderMarquee text-lg inline-block">
+                {marqueeContent}
+                <span className="mx-4">•</span>
+              </span>
+              <span className="HeaderMarquee text-lg inline-block">
+                {marqueeContent}
+                <span className="mx-4">•</span>
+              </span>
+              <span className="HeaderMarquee text-lg inline-block">
+                {marqueeContent}
+                <span className="mx-4">•</span>
+              </span>
+            </div>
+          </div>
         <div className="flex items-center hidden lg:inline-flex justify-center gap-5">
           <a
             href="https://www.facebook.com/apisindialtd"
@@ -197,8 +253,9 @@ const BrewerLoginHeader = () => {
             </div>
           </a>
         </div>
-      </div>
-    </header>
+        </div>
+      </header>
+    </>
   )
 }
 
