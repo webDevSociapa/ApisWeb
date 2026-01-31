@@ -612,7 +612,7 @@ export default function HomePage() {
             </div>
             <Link
               href={
-                "https://www.amazon.in/s?k=apis&crid=2CJFWNXIDZI1V&sprefix=apis%2Caps%2C429&ref=nb_sb_noss_1"
+                "https://www.amazon.in/stores/ApisIndia/page/F50692CD-0862-4EDB-9961-AA9F43F48CE2?lp_asin=B0DV5987KF&ref_=ast_bln"
               }
               target="_blank"
             >
