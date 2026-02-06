@@ -26,7 +26,8 @@ const nextIntlMiddleware = createMiddleware({
 export async function middleware(request) {
   const { pathname, searchParams } = request.nextUrl;
 
-  if (pathname.startsWith('/fonts') || pathname.startsWith('/_next/static')) {
+  // Let static assets in public (e.g. PDFs) be served without locale handling
+  if (pathname.startsWith('/fonts') || pathname.startsWith('/_next/static') || /\.pdf$/i.test(pathname)) {
     return NextResponse.next();
   }
 

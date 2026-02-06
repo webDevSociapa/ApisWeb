@@ -1868,6 +1868,22 @@ export default function Investors() {
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
+                          <td className="border p-2">
+                            <a
+                              href="/investors/notice-of-board-meeting-1.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <Image src={pdficon1} alt="PDF" width="30" />
+                            </a>
+                            <a
+                              href="/investors/reschedule-notice-of-board-meeting-1.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <Image src={pdficon1} alt="PDF" width="30" />
+                            </a>
+                          </td>
                         </tr>
                         <tr>
                           <td className="border p-2">2024-2025</td>
