@@ -2212,6 +2212,15 @@ export default function Investors() {
                               <Image src={pdficon1} alt="PDF" width="30" />
                             </a>
                           </td>
+                          <td className="border p-2">
+                            <a
+                              href="/result-publication/quarterly-result/31-12-2025"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <Image src={pdficon1} alt="PDF" width="30" />
+                            </a>
+                          </td>
                         </tr>
                         <tr>
                           <td className="border p-2">2024-2025</td>
@@ -2609,6 +2618,24 @@ export default function Investors() {
                           <Image src={pdficon1} alt="PDF" width="30" />
                         </a>
                       </td>
+                      <td className="border px-4 py-2">
+                        <a
+                          href="/shareholding/SHP-APIS-SEP-2025.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Image src={pdficon1} alt="PDF" width="30" />
+                        </a>
+                      </td>
+                      <td className="border px-4 py-2">
+                        <a
+                          href="/shareholding/SHP-DEC-2025.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Image src={pdficon1} alt="PDF" width="30" />
+                        </a>
+                      </td>
                     </tr>
 
                     <tr>
@@ -2998,6 +3025,15 @@ export default function Investors() {
                       <td className="border px-4 py-2">
                         <a
                           href="https://main.d48ln31wxsfnc.amplifyapp.com/newspaper-publication/q2-publication-of-results.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Image src={pdficon1} alt="PDF" width="30" />
+                        </a>
+                      </td>
+                      <td className="border px-4 py-2">
+                        <a
+                          href="/publication/Covering-Letter-Publication.pdf"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
